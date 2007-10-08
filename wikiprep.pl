@@ -116,6 +116,7 @@ my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
 my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
+my $prescanFile = "$filePath/$fileBasename.prescan";
 
 open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
@@ -134,6 +135,8 @@ print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\
 &copyXmlFileHeader();
 &loadNamespaces();
 &prescan();
+
+&savePrescan();
 
 my $numTitles = scalar( keys(%id2title) );
 print "Loaded $numTitles titles\n";
@@ -294,7 +297,7 @@ sub encodeXmlChars(\$) {
 }
 
 sub copyXmlFileHeader() {
-  open(INF, "< $file") or die "Cannot open $file";
+  open(INF, "< $file") or die "Cannot open $file: $!";
   while (<INF>) { # copy lines up to "</siteinfo>"
     if (/^<mediawiki /) {
       # The top level element - mediawiki - contains a lot of attributes (e.g., schema)
@@ -376,6 +379,19 @@ sub loadNamespaces() {
     &normalizeNamespace(\$namespaceName);
     $namespaces{$namespaceName} = $namespaceId;
   }
+}
+
+sub savePrescan() {
+	my ($id, $title);
+
+	open(PRESCANF, "> $prescanFile") or die "Cannot open $prescanFile: $!";
+
+	foreach $id (keys(%templates)) {
+		$title=$id2title{$id};
+		print PRESCANF "<template>\n<id>$id</id>\n<title>$title</title>\n<text>\n$templates{$id}\n</text>\n</template>\n"
+	}
+
+	close(PRESCANF)
 }
 
 # build id <-> title mappings and redirection table,
@@ -683,8 +699,11 @@ sub includeTemplates(\$) {
 
   # We also require that the body of a template does not contain the template opening sequence
   # (two successive opening braces - "\{\{"). We use negative lookahead to achieve this.
+
+  # Use negative look-ahead and look-behind to make sure that we are matching agains two opening
+  # braces and not three (which may be left after unsuccessful parameter substitution
   while ( ($templateRecursionLevels < $maxTemplateRecursionLevels) &&
-          $$refToText =~ s/\{\{
+          $$refToText =~ s/(?<!\{)\{\{(?!\{)
                                 (?:\s*)        # optional whitespace before the template name is ignored
                                 (
                                   (?:
