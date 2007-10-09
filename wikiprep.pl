@@ -524,7 +524,7 @@ sub transform() {
   my $processedPageCount = 0;
   my $processedByteCount = 0;
 
-  my $startTime = time;
+  my $startTime = time-1;
 
   my $page;
   while (defined($page = $pages->page)) {
