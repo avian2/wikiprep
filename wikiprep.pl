@@ -121,6 +121,9 @@ my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 my $prescanFile = "$filePath/$fileBasename.prescan";
 my $localIDFile = "$filePath/$fileBasename.local.xml";
 
+my $totalPageCount = 0;
+my $totalByteCount = 0;
+
 open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
 open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
@@ -426,6 +429,9 @@ sub prescan() {
 
     $counter++;
 
+    $totalPageCount++;
+    $totalByteCount+=length($page->text);
+
     if ($counter % 1000 == 0) {
       my $timeStr = &getTimeAsString();
       print LOGF "[$timeStr] Prescanning page id=$id\n";
@@ -507,15 +513,25 @@ sub prescan() {
 
   my $timeStr = &getTimeAsString();
   print LOGF "[$timeStr] Prescanning complete - prescanned $counter pages\n";
+
+  print "Total $totalPageCount pages ($totalByteCount bytes)"
 }
 
 sub transform() {
   # re-open the input XML file
   my $pages = Parse::MediaWikiDump::Pages->new($file);
 
+  my $processedPageCount = 0;
+  my $processedByteCount = 0;
+
+  my $startTime = time;
+
   my $page;
   while (defined($page = $pages->page)) {
     my $id = $page->id;
+
+    $processedPageCount++;
+    $processedByteCount+=length($page->text);
 
     my $timeStr = &getTimeAsString();
     print LOGF "[$timeStr] Transforming page id=$id\n";
@@ -584,6 +600,16 @@ sub transform() {
     if ($title =~ /^Category:/) {
       &updateCategoryHierarchy($id, \@categories);
     }
+
+    my $nowTime = time;
+
+    my $bytesPerSecond = $processedByteCount/($nowTime-$startTime);
+    my $percentDone = 100.0*$processedByteCount/$totalByteCount;
+    my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
+
+    my $hoursLeft = $secondsLeft/3600;
+
+    print "At $percentDone% ($bytesPerSecond bytes/s) ETA $hoursLeft\n"
   }
 }
 
