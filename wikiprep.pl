@@ -845,11 +845,63 @@ sub instantiateTemplate($) {
   my %templateParams;
   &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
-  &computeFullyQualifiedTemplateTitle(\$templateTitle);
+  &includeParserFunction(\$templateTitle, \%templateParams, \$result);
 
-  &includeTemplateText(\$templateTitle, \%templateParams, \$result);
+  # If this wasn't a parser function call, try to include a template.
+  if ( length($result) == 0 ) {
+    &computeFullyQualifiedTemplateTitle(\$templateTitle);
+
+    &includeTemplateText(\$templateTitle, \%templateParams, \$result);
+  }
 
   $result;  # return value
+}
+
+sub includeParserFunction(\$\%\$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToResult) = @_;
+
+  # Parser functions have the same syntax as templates, except their names start with a hash
+  # and end with a colon. Everything after the first colon is the first argument.
+
+  # http://meta.wikimedia.org/wiki/Help:ParserFunctions
+  if ( $$refToTemplateTitle =~ /^\#([a-z]):\s*(.*)/ ) {
+    $functionName=$1;
+    $$refToParameterHash{'0'}=$2;
+
+    print LOGF "Evaluating parser function #$functionName";
+
+    if ( $functionName == 'if' ) {
+      
+      # The {{#if:}} function is an if-then-else construct. The applied condition is 
+      # "The condition string is non-empty". 
+      if ( length($$refToParameterHash{'0'}) > 0 ) {
+        if ( exists($$refToParameterHash{'1'}) && ( length($$refToParameterHash{'1'}) > 0 ) ) {
+          $$refToResult = $$refToParameterHash{'1'};
+        } else {
+          $$refToResult = " ";
+        }
+      } else {
+        if ( exists($$refToParameterHash{'2'}) && ( length($$refToParameterHash{'2'}) > 0 ) ) {
+          $$refToResult = $$refToParameterHash{'2'};
+        } else {
+          $$refToResult = " ";
+        }
+      }
+    } else {
+
+      print LOGF "Function #$functionName not supported";
+
+      # Unknown function -- fall back by inserting first argument, if available. This seems
+      # to be the most sensible alternative in most cases (for example in #time and #date)
+
+      if ( exists($$refToParameterHash{'1'}) && ( length($$refToParameterHash{'1'}) > 0 ) ) {
+        $$refToResult = $$refToParameterHash{'1'};
+      } else {
+        $$refToResult = " ";
+      }
+    }
+  }
+        
 }
 
 sub includeTemplateText(\$\%\$) {
