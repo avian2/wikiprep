@@ -1107,10 +1107,9 @@ sub extractInternalLinks(\$\@$$$) {
   my ($refToText, $refToInternalLinksArray, $id,
       $whetherToLogAnchorText, $whetherToRemoveDuplicates) = @_;
 
-  # For each internal link outgoing from the current article, this hash table maps
-  # the target id into the anchor text associated with it. Naturally, we only
-  # collect anchor text for links that can be resolved to a page id.
-  my %anchorTexts;
+  # For each internal link outgoing from the current article we create an entry in
+  # this list that contains target id and anchor text associated with it.
+  my @anchorTexts;
 
   # Link definitions may span over adjacent lines and therefore contain line breaks,
   # hence we use the /s modifier.
@@ -1131,7 +1130,7 @@ sub extractInternalLinks(\$\@$$$) {
                              (\w*)            # words may be glued to the end of the link,
                                               # in which case they become part of the link
                                               # e.g., "[[public transport]]ation"
-                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \%anchorTexts)/segx
+                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \@anchorTexts)/segx
           );
 
   if ($whetherToRemoveDuplicates) {
@@ -1139,12 +1138,12 @@ sub extractInternalLinks(\$\@$$$) {
   }
 
   if ($whetherToLogAnchorText) {
-    &logAnchorText(\%anchorTexts, $id);
+    &logAnchorText(\@anchorTexts, $id);
   }
 }
 
-sub logAnchorText(\%$) {
-  my ($refToAnchorTextsHash, $curPageId) = @_;
+sub logAnchorText(\@$) {
+  my ($refToAnchorTextsArray, $curPageId) = @_;
 
   # Remember that we use a hash table to associate anchor text with target page ids.
   # Therefore, if the current page has several links to another page (it happens), then we only
@@ -1153,7 +1152,12 @@ sub logAnchorText(\%$) {
   # However, we still remove the links that point from the page to itself.
   my $targetId;
   my $anchorText;
-  while ( ($targetId, $anchorText) = each(%$refToAnchorTextsHash) ) {
+  my $AnchorArrayEntry;
+
+  foreach $AnchorArrayEntry (@$refToAnchorTextsArray) {
+    $targetId = $$AnchorArrayEntry{targetId};
+    $anchorText = $$AnchorArrayEntry{anchorText};
+
     if ($targetId != $curPageId) {
       &postprocessText(\$anchorText, 0); # anchor text doesn't need escaping of XML characters,
                                          # hence the second function parameter is 0
@@ -1167,8 +1171,8 @@ sub logAnchorText(\%$) {
   }
 }
 
-sub collectInternalLink($$$\@\%) {
-  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextHash) = @_;
+sub collectInternalLink($$$\@\@) {
+  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray) = @_;
 
   my $originalLink = $link;
   my $result = "";
@@ -1261,7 +1265,7 @@ sub collectInternalLink($$$\@\%) {
   # We also perform a quick check - if the link does not start with a digit,
   # then it surely does not contain a date
   if ( ($link =~ /^\d/) && (! $alternativeTextAvailable)) {
-    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextHash);
+    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextArray);
   }
 
   # If a date (either day or day + year) was recognized, then no further processing is necessary
@@ -1294,9 +1298,7 @@ sub collectInternalLink($$$\@\%) {
     }
 
     if ( defined($targetId) ) {
-      # If the current page has several links to another page, then we only take the anchor
-      # of the last one (and override the previous ones) - we can live with it.
-      $$refToAnchorTextHash{$targetId} = $result;
+      push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result" });
     }
   }
 
@@ -1366,7 +1368,7 @@ sub resolveAndCollectInternalLink(\$\@) {
 # This function is only invoked if the link has no alternative text available, therefore,
 # we're free to override the result text.
 sub normalizeDates(\$\$\@\%) {
-  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextHash) = @_;
+  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextArray) = @_;
 
   my $dateRecognized = 0;
 
@@ -1383,7 +1385,7 @@ sub normalizeDates(\$\$\@\%) {
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
       if ( defined($targetId) ) {
-        $$refToAnchorTextHash{$targetId} = $$refToResultText;
+        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText" });
       }
     } else {
       # this doesn't look like a valid date, leave as-is
@@ -1404,7 +1406,7 @@ sub normalizeDates(\$\$\@\%) {
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            $$refToAnchorTextHash{$targetId} = $$refToResultText;
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText" });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
@@ -1431,13 +1433,13 @@ sub normalizeDates(\$\$\@\%) {
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            $$refToAnchorTextHash{$targetId} = $$refToLink;
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink" });
         }
 
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            $$refToAnchorTextHash{$targetId} = $year;
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year" });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
