@@ -110,6 +110,7 @@ my %catHierarchy;       # each category is associated with a list of its immedia
 my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
+my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
@@ -666,8 +667,14 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
+      $targetId = "local$localIDCounter";
+      $localIDCounter++;
+
+      $title2id{$targetTitle}=$targetId;
+      $id2title{$targetId}=$targetTitle;
+
       # target not found
-      print LOGF "Warning: link '$$refToTitle' cannot be matched to an id\n";
+      print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
       $targetId = undef;
     }
   } else {
