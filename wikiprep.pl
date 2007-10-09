@@ -609,7 +609,7 @@ sub transform() {
 
     my $hoursLeft = $secondsLeft/3600;
 
-    print "At $percentDone% ($bytesPerSecond bytes/s) ETA $hoursLeft\n"
+    print "At $percentDone% ($bytesPerSecond bytes/s) ETA $hoursLeft hours\n"
   }
 }
 
