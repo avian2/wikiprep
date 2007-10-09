@@ -5,3 +5,10 @@ Evgeniy Gabrilovich (gabr@cs.technion.ac.il)
 GPLv2
 
 http://www.cs.technion.ac.il/~gabr/resources/code/wikiprep
+
+
+TODO:
+
+Support more than one anchor text per link per article
+
+Include locally added title/ids into XML

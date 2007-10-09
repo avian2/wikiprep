@@ -111,6 +111,7 @@ my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
 my $localIDCounter = 1;
+my @localIDs;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
@@ -118,6 +119,7 @@ my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 my $prescanFile = "$filePath/$fileBasename.prescan";
+my $localIDFile = "$filePath/$fileBasename.local.xml";
 
 open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
@@ -151,6 +153,8 @@ print "Loaded $numTemplates templates\n";
 
 &writeStatistics();
 &writeCategoryHierarchy();
+
+&saveLocalIDs();
 
 close(LOGF);
 close(ANCHORF);
@@ -393,6 +397,19 @@ sub savePrescan() {
 	}
 
 	close(PRESCANF)
+}
+
+sub saveLocalIDs() {
+	my ($id, $title);
+
+	open(LOCALF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
+
+	foreach $id (@localIDs) {
+		$title=$id2title{$id};
+		print LOCALF "<page>\n<id>$id</id>\n<title>$title</title>\n</page>\n"
+	}
+
+	close(LOCALF)
 }
 
 # build id <-> title mappings and redirection table,
@@ -667,15 +684,22 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
-      $targetId = "local$localIDCounter";
+      # All existing pages should already be in the %id2title hash. Squeeze unexisting pages
+      # into IDs that do not exist
+
+      while ( exists($id2title{$localIDCounter}) ) {
+      	$localIDCounter++;
+      }
+      $targetId = $localIDCounter;
       $localIDCounter++;
 
       $title2id{$targetTitle}=$targetId;
       $id2title{$targetId}=$targetTitle;
 
+      push(@localIDs, $targetId);
+
       # target not found
       print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
-      $targetId = undef;
     }
   } else {
     $targetId = undef;
@@ -907,8 +931,17 @@ sub includeParserFunction(\$\%\$) {
         $$refToResult = " ";
       }
     }
+  } 
+
+  if ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
+    # This function is used in some pages to construct links
+    # http://meta.wikimedia.org/wiki/Help:URL
+
+    print LOGF "URL encoding string $1\n";
+
+    $$refToResult = $1;
+    $$refToResult =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   }
-        
 }
 
 sub includeTemplateText(\$\%\$) {
