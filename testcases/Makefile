@@ -1,3 +1,12 @@
+LOGS =	images.log \
+	urlencode.log \
+	parserfunctions.log \
+	anchors.log 
+
+all: $(LOGS)
+
+%.log: %.xml
+	perl ../wikiprep.pl -f $<
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
