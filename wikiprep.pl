@@ -864,13 +864,13 @@ sub includeParserFunction(\$\%\$) {
   # and end with a colon. Everything after the first colon is the first argument.
 
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
-  if ( $$refToTemplateTitle =~ /^\#([a-z]):\s*(.*)/ ) {
+  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*)/ ) {
     my $functionName=$1;
     $$refToParameterHash{'0'}=$2;
 
-    print LOGF "Evaluating parser function #$functionName";
+    print LOGF "Evaluating parser function #$functionName\n";
 
-    if ( $functionName == 'if' ) {
+    if ( $functionName eq 'if' ) {
       
       # The {{#if:}} function is an if-then-else construct. The applied condition is 
       # "The condition string is non-empty". 
@@ -889,7 +889,7 @@ sub includeParserFunction(\$\%\$) {
       }
     } else {
 
-      print LOGF "Function #$functionName not supported";
+      print LOGF "Function #$functionName not supported\n";
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
