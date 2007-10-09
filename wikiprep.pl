@@ -865,7 +865,7 @@ sub includeParserFunction(\$\%\$) {
 
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
   if ( $$refToTemplateTitle =~ /^\#([a-z]):\s*(.*)/ ) {
-    $functionName=$1;
+    my $functionName=$1;
     $$refToParameterHash{'0'}=$2;
 
     print LOGF "Evaluating parser function #$functionName";
