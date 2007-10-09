@@ -1067,7 +1067,7 @@ sub extractInternalLinks(\$\@$$$) {
   my ($refToText, $refToInternalLinksArray, $id,
       $whetherToLogAnchorText, $whetherToRemoveDuplicates) = @_;
 
-  # For each internal link outgoing form the current article, this hash table maps
+  # For each internal link outgoing from the current article, this hash table maps
   # the target id into the anchor text associated with it. Naturally, we only
   # collect anchor text for links that can be resolved to a page id.
   my %anchorTexts;
