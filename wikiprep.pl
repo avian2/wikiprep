@@ -430,7 +430,7 @@ sub prescan() {
     $counter++;
 
     $totalPageCount++;
-    $totalByteCount+=length($page->text);
+    $totalByteCount+=length(${$page->text});
 
     if ($counter % 1000 == 0) {
       my $timeStr = &getTimeAsString();
@@ -515,6 +515,7 @@ sub prescan() {
   print LOGF "[$timeStr] Prescanning complete - prescanned $counter pages\n";
 
   print "Total $totalPageCount pages ($totalByteCount bytes)\n"
+  print LOGF "Total $totalPageCount pages ($totalByteCount bytes)\n"
 }
 
 sub transform() {
@@ -531,7 +532,7 @@ sub transform() {
     my $id = $page->id;
 
     $processedPageCount++;
-    $processedByteCount+=length($page->text);
+    $processedByteCount+=length(${$page->text});
 
     my $timeStr = &getTimeAsString();
     print LOGF "[$timeStr] Transforming page id=$id\n";
