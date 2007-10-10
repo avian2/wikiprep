@@ -514,8 +514,8 @@ sub prescan() {
   my $timeStr = &getTimeAsString();
   print LOGF "[$timeStr] Prescanning complete - prescanned $counter pages\n";
 
-  print "Total $totalPageCount pages ($totalByteCount bytes)\n"
-  print LOGF "Total $totalPageCount pages ($totalByteCount bytes)\n"
+  print "Total $totalPageCount pages ($totalByteCount bytes)\n";
+  print LOGF "Total $totalPageCount pages ($totalByteCount bytes)\n";
 }
 
 sub transform() {
