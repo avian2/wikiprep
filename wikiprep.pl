@@ -119,6 +119,7 @@ my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 my $prescanFile = "$filePath/$fileBasename.prescan";
 my $localIDFile = "$filePath/$fileBasename.local.xml";
+my $redirFile = "$filePath/$fileBasename.redir.xml";
 
 my $totalPageCount = 0;
 my $totalByteCount = 0;
@@ -153,6 +154,7 @@ print "Loaded $numTemplates templates\n";
 &closeXmlFile();
 
 &writeStatistics();
+&writeRedirects();
 &writeCategoryHierarchy();
 
 close(LOGF);
@@ -323,6 +325,35 @@ sub closeXmlFile() {
   close(OUTF);
 }
 
+sub writeRedirects() {
+  my $fromTitle;
+  my $toTitle;
+  my $fromId;
+  my $toId;
+
+  open(REDIRF, "> $redirFile") or die "Cannot open $redirFile: $!";
+
+  foreach $fromTitle ( keys(%redir) ) {
+    $toTitle = $redir{$fromTitle};
+
+    if ( exists( $title2id{$fromTitle} ) ) {
+      $fromId = $title2id{$fromTitle};
+    } else {
+      $fromId = "unknown";
+    }
+
+    if ( exists( $title2id{$toTitle} ) ) {
+      $toId = $title2id{$toTitle};
+    } else {
+      $toId = "unknown";
+    }
+
+    print REDIRF "<redirect>\n<from>\n<id>$fromId</id>\n<title>$fromTitle</title>\n</from>\n<to>\n<id>$toId</id>\n<title>$toTitle</title>\n</to>\n</redirect>\n"
+
+  }
+	
+  close(REDIRF)
+}
 sub writeStatistics() {
   my $statCategoriesFile = "$filePath/$fileBasename.stat.categories";
   my $statIncomingLinksFile = "$filePath/$fileBasename.stat.inlinks";

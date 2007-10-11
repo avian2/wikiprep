@@ -1,7 +1,8 @@
 LOGS =	images.log \
 	urlencode.log \
 	parserfunctions.log \
-	anchors.log 
+	anchors.log \
+	redir.log
 
 all: $(LOGS)
 
