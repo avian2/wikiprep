@@ -102,7 +102,7 @@ my %namespaces;
 my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1);
 my %okNamespacesForTransforming = ('Category' => 1); # we don't use templates as concepts
 
-my %id2title;
+#my %id2title;
 my %title2id;
 my %redir;
 my %templates;          # template bodies for insertion
@@ -111,7 +111,6 @@ my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
 my $localIDCounter = 1;
-my @localIDs;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
@@ -128,6 +127,7 @@ open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
 open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
 open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile";
+open(LOCALF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
 
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
@@ -142,9 +142,7 @@ print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\
 &loadNamespaces();
 &prescan();
 
-&savePrescan();
-
-my $numTitles = scalar( keys(%id2title) );
+my $numTitles = scalar( keys(%title2id) );
 print "Loaded $numTitles titles\n";
 my $numRedirects = scalar( keys(%redir) );
 print "Loaded $numRedirects redirects\n";
@@ -157,11 +155,10 @@ print "Loaded $numTemplates templates\n";
 &writeStatistics();
 &writeCategoryHierarchy();
 
-&saveLocalIDs();
-
 close(LOGF);
 close(ANCHORF);
 close(RELATEDF);
+close(LOCALF);
 
 # Hogwarts needs the anchor text file to be sorted in the increading order of target page id.
 # The file is originally sorted by source page id (second field in each line).
@@ -389,32 +386,6 @@ sub loadNamespaces() {
   }
 }
 
-sub savePrescan() {
-	my ($id, $title);
-
-	open(PRESCANF, "> $prescanFile") or die "Cannot open $prescanFile: $!";
-
-	foreach $id (keys(%templates)) {
-		$title=$id2title{$id};
-		print PRESCANF "<template>\n<id>$id</id>\n<title>$title</title>\n<text>\n$templates{$id}\n</text>\n</template>\n"
-	}
-
-	close(PRESCANF)
-}
-
-sub saveLocalIDs() {
-	my ($id, $title);
-
-	open(LOCALF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
-
-	foreach $id (@localIDs) {
-		$title=$id2title{$id};
-		print LOCALF "<page>\n<id>$id</id>\n<title>$title</title>\n</page>\n"
-	}
-
-	close(LOCALF)
-}
-
 # build id <-> title mappings and redirection table,
 # as well as load templates
 sub prescan() {
@@ -422,10 +393,16 @@ sub prescan() {
   my $pages = Parse::MediaWikiDump::Pages->new($file);
 
   my $counter = 0;
+  
+  my %idexists;
 
   my $page;
   while (defined($page = $pages->page)) {
     my $id = $page->id;
+
+    if ($id >= $localIDCounter) {
+      $localIDCounter = $id + 1;
+    }
 
     $counter++;
 
@@ -467,7 +444,7 @@ sub prescan() {
     # if we get here, then either the page belongs to the main namespace OR
     # it belongs to one of the namespaces we're interested in
 
-    if ( exists($id2title{$id}) ) {
+    if ( exists($idexists{$id}) ) {
       print LOGF "Warning: Page id=$id already encountered before!\n";
       next;
     }
@@ -477,7 +454,7 @@ sub prescan() {
       print LOGF "Warning: Page title='$title' already encountered before!\n";
       next;
     }
-    $id2title{$id} = $title;
+    $idexists{$id} = 'x';
     $title2id{$title} = $id;
 
     if ($title =~ /^Template:/) {
@@ -714,16 +691,12 @@ sub resolveLink(\$) {
       # All existing pages should already be in the %id2title hash. Squeeze unexisting pages
       # into IDs that do not exist
 
-      while ( exists($id2title{$localIDCounter}) ) {
-      	$localIDCounter++;
-      }
       $targetId = $localIDCounter;
       $localIDCounter++;
 
       $title2id{$targetTitle}=$targetId;
-      $id2title{$targetId}=$targetTitle;
 
-      push(@localIDs, $targetId);
+      print LOCALF "<page>\n<id>$targetId</id>\n<title>$targetTitle</title>\n</page>\n";
 
       # target not found
       print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
