@@ -348,7 +348,7 @@ sub writeRedirects() {
       $toId = "unknown";
     }
 
-    print REDIRF "<redirect>\n<from>\n<id>$fromId</id>\n<title>$fromTitle</title>\n</from>\n<to>\n<id>$toId</id>\n<title>$toTitle</title>\n</to>\n</redirect>\n"
+    print REDIRF "<redirect>\n<from>\n<id>", $fromId, "</id>\n<title>", $fromTitle, "</title>\n</from>\n<to>\n<id>", $toId, "</id>\n<title>", $toTitle, "</title>\n</to>\n</redirect>\n"
 
   }
 	
@@ -727,7 +727,7 @@ sub resolveLink(\$) {
 
       $title2id{$targetTitle}=$targetId;
 
-      print LOCALF "<page>\n<id>$targetId</id>\n<title>$targetTitle</title>\n</page>\n";
+      print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $targetTitle, "</title>\n</page>\n";
 
       # target not found
       print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
