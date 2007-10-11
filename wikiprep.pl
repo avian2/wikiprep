@@ -135,6 +135,8 @@ binmode(STDERR,  ':utf8');
 binmode(OUTF,    ':utf8');
 binmode(LOGF,    ':utf8');
 binmode(ANCHORF, ':utf8');
+binmode(RELATEDF, ':utf8');
+binmode(LOCALF, ':utf8');
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
@@ -719,18 +721,20 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
-      # All existing pages should already be in the %id2title hash. Squeeze unexisting pages
-      # into IDs that do not exist
+        if ( $targetTitle =~ /^[a-zA-Z]{2,3}:/ ) {
+          # Ignore links that point to other languages.
+          print LOGF "Link '$$refToTitle' was ignored\n";
+          $targetId = undef;
+        } else {
+          $targetId = $localIDCounter;
+          $localIDCounter++;
 
-      $targetId = $localIDCounter;
-      $localIDCounter++;
+          $title2id{$targetTitle}=$targetId;
 
-      $title2id{$targetTitle}=$targetId;
+          print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $targetTitle, "</title>\n</page>\n";
 
-      print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $targetTitle, "</title>\n</page>\n";
-
-      # target not found
-      print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
+          print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
+        } 
     }
   } else {
     $targetId = undef;
