@@ -111,7 +111,7 @@ my %catHierarchy;       # each category is associated with a list of its immedia
 my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
-# Counter for IDs assigned to inexisting pages.
+# Counter for IDs assigned to nonexistent pages.
 my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
@@ -120,7 +120,7 @@ my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 
-# Information about inexisting pages and IDs that were assigned to them 
+# Information about nonexistent pages and IDs that were assigned to them 
 # (named "local" because assigned IDs are only unique within this dump and not
 # across Wikipedia) 
 my $localIDFile = "$filePath/$fileBasename.local.xml";
@@ -738,7 +738,7 @@ sub resolveLink(\$) {
         if ( $targetTitle =~ /^[a-zA-Z]{2,3}:/ ) {
           print LOGF "Link '$$refToTitle' was ignored\n";
           $targetId = undef;
-	# Assign a local ID otherwise and add the inexisting page to %title2id hash
+	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
         } else {
           $targetId = $localIDCounter;
           $localIDCounter++;
