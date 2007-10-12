@@ -102,6 +102,7 @@ my %namespaces;
 my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1);
 my %okNamespacesForTransforming = ('Category' => 1); # we don't use templates as concepts
 
+# Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
 #my %id2title;
 my %title2id;
 my %redir;
@@ -110,6 +111,7 @@ my %catHierarchy;       # each category is associated with a list of its immedia
 my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
+# Counter for IDs assigned to inexisting pages.
 my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
@@ -117,10 +119,16 @@ my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
 my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
-my $prescanFile = "$filePath/$fileBasename.prescan";
+
+# Information about inexisting pages and IDs that were assigned to them 
+# (named "local" because assigned IDs are only unique within this dump and not
+# across Wikipedia) 
 my $localIDFile = "$filePath/$fileBasename.local.xml";
+
+# Information about redirects
 my $redirFile = "$filePath/$fileBasename.redir.xml";
 
+# Needed for benchmarking and ETA calculation
 my $totalPageCount = 0;
 my $totalByteCount = 0;
 
@@ -327,6 +335,7 @@ sub closeXmlFile() {
   close(OUTF);
 }
 
+# Save information about redirects into an XML-formatted file.
 sub writeRedirects() {
   my $fromTitle;
   my $toTitle;
@@ -433,6 +442,8 @@ sub prescan() {
   while (defined($page = $pages->page)) {
     my $id = $page->id;
 
+    # During prescan set localIDCounter to be greater than any 
+    # encountered Wikipedia page ID
     if ($id >= $localIDCounter) {
       $localIDCounter = $id + 1;
     }
@@ -721,10 +732,13 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
+        # Ignore links that look like they point to an article in a different language Wikipedia
+	# We aren't interested in these links (yet), plus ignoring them significantly reduces
+	# memory usage.
         if ( $targetTitle =~ /^[a-zA-Z]{2,3}:/ ) {
-          # Ignore links that point to other languages.
           print LOGF "Link '$$refToTitle' was ignored\n";
           $targetId = undef;
+	# Assign a local ID otherwise and add the inexisting page to %title2id hash
         } else {
           $targetId = $localIDCounter;
           $localIDCounter++;
@@ -928,8 +942,8 @@ sub includeParserFunction(\$\%\$) {
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
-
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
+
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*)/ ) {
     my $functionName=$1;
     $$refToParameterHash{'0'}=$2;
@@ -966,9 +980,7 @@ sub includeParserFunction(\$\%\$) {
         $$refToResult = " ";
       }
     }
-  } 
-
-  if ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
+  } elsif ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
     # This function is used in some pages to construct links
     # http://meta.wikimedia.org/wiki/Help:URL
 
@@ -1143,7 +1155,10 @@ sub extractInternalLinks(\$\@$$$) {
       $whetherToLogAnchorText, $whetherToRemoveDuplicates) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
-  # this list that contains target id and anchor text associated with it.
+  # this list (a reference to an anonymous hash) that contains target id and anchor 
+  # text associated with it.
+  #
+  # This way we can have more than one anchor text per link
   my @anchorTexts;
 
   # Link definitions may span over adjacent lines and therefore contain line breaks,
