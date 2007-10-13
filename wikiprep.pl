@@ -148,6 +148,7 @@ binmode(LOCALF, ':utf8');
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
+print LOCALF "<pages>\n";
 
 &copyXmlFileHeader();
 &loadNamespaces();
@@ -166,6 +167,8 @@ print "Loaded $numTemplates templates\n";
 &writeStatistics();
 &writeRedirects();
 &writeCategoryHierarchy();
+
+print LOCALF "</pages>\n";
 
 close(LOGF);
 close(ANCHORF);
@@ -344,6 +347,8 @@ sub writeRedirects() {
 
   open(REDIRF, "> $redirFile") or die "Cannot open $redirFile: $!";
 
+  print REDIRF "<redirects>\n";
+
   foreach $fromTitle ( keys(%redir) ) {
     $toTitle = $redir{$fromTitle};
 
@@ -362,6 +367,8 @@ sub writeRedirects() {
     print REDIRF "<redirect>\n<from>\n<id>", $fromId, "</id>\n<title>", $fromTitle, "</title>\n</from>\n<to>\n<id>", $toId, "</id>\n<title>", $toTitle, "</title>\n</to>\n</redirect>\n"
 
   }
+
+  print REDIRF "</redirects>\n";
 	
   close(REDIRF)
 }
