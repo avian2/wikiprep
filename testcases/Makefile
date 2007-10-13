@@ -4,12 +4,14 @@ LOGS =	images.log \
 	anchors.log \
 	redir.log \
 	categories.log \
-	templates.log
+	templates.log \
+	disambig.log
 
 all: $(LOGS)
 
 %.log: %.xml
 	perl ../wikiprep.pl -f $<
+	perl ../wikiambig.pl -f $<
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
@@ -21,5 +23,7 @@ clean:
 	rm -f *.related_links
 	rm -f *.stat.categories
 	rm -f *.stat.inlinks
+	rm -f *.redir.xml
+	rm -f *.disambig
 
 .PHONY: clean

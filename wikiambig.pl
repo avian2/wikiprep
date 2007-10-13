@@ -136,17 +136,17 @@ sub transform() {
     my $title = $page->title;
     my $text = ${$page->text};
 
-    if ( $title =~ /({{disambiguation}})|
-	                  ({{disambig}})|
-            		    ({{dab}})|
-                    ({{hndis}})|
-                    ({{geodis}})|
-                    ({{schooldis}})|
-                    ({{hospitaldis}})|
-                    ({{mathdab}})/i ) {
-      &markDisambig($id);
+    if ( $text =~ /\{\{(disambiguation)|
+	               (disambig)|
+                       (dab)|
+                       (hndis)|
+                       (geodis)|
+                       (schooldis)|
+                       (hospitaldis)|
+                       (mathdab)\}\}/ix ) {
+      &markDisambig(\$id);
     } elsif ( $title =~ /\(disambiguation\)/ ) {
-      &markDisambig($id);
+      &markDisambig(\$id);
     }
 
     my $nowTime = time;
