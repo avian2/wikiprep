@@ -3,7 +3,8 @@ LOGS =	images.log \
 	parserfunctions.log \
 	anchors.log \
 	redir.log \
-	categories.log
+	categories.log \
+	templates.log
 
 all: $(LOGS)
 
