@@ -262,11 +262,13 @@ sub parseDisambig(\$\$) {
 					(\*)
 				)/ix ) {
 
+			@disambigLinks=();
+
 			&extractInternalLinks(\$line, \@disambigLinks);
+
+			&markDisambig($refToId, \@disambigLinks);
 		}
 	}
-
-	&markDisambig($refToId, \@disambigLinks);
 }
 
 sub extractInternalLinks(\$\@) {
