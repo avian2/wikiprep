@@ -370,7 +370,7 @@ sub collectInternalLink($$$\@\@) {
 sub markDisambig(\$\@) {
 	my ($refToDisambigId, $refToTitle) = @_;
 
-	my $titles = join('\t', @$refToTitle); 
+	my $titles = join("\t", @$refToTitle); 
 
 	print DISAMBIGF "$$refToDisambigId\t$titles\n";
 }
