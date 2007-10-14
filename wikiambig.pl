@@ -136,16 +136,22 @@ sub transform() {
     my $title = $page->title;
     my $text = ${$page->text};
 
-    if ( $text =~ /\{\{(disambiguation)|
-	               (disambig)|
-                       (dab)|
-                       (hndis)|
-                       (geodis)|
-                       (schooldis)|
-                       (hospitaldis)|
-                       (mathdab)\}\}/ix ) {
+    if ( $text =~ /(\{\{
+    			(?:
+    				(disambiguation)|
+	               		(disambig)|
+                       		(dab)|
+                       		(hndis)|
+                       		(geodis)|
+                       		(schooldis)|
+                       		(hospitaldis)|
+                       		(mathdab)
+			)
+		\}\})/ix ) {
+      # print "BODY $id : $title : $1\n";
       &markDisambig(\$id);
     } elsif ( $title =~ /\(disambiguation\)/ ) {
+       # print "TITLE $id : $title : $1\n";
       &markDisambig(\$id);
     }
 
@@ -165,4 +171,15 @@ sub markDisambig(\$) {
 	my ($refToid) = @_;
 
 	print DISAMBIGF "$$refToid\n";
+}
+
+sub printUsage()
+{
+  print "Wikiprep version $version, Copyright (C) 2007 Evgeniy Gabrilovich\n" .
+        "Wikiprep comes with ABSOLUTELY NO WARRANTY; for details type '$0 -license'.\n" .
+        "This is free software, and you are welcome to redistribute it\n" .
+        "under certain conditions; type '$0 -license' for details.\n" .
+        "Type '$0 -version' for version information.\n\n" .
+        "Usage: $0 -f <XML file with page dump>\n" .
+        "       e.g., $0 -f pages_articles.xml\n\n";
 }
