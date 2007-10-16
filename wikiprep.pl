@@ -180,7 +180,7 @@ close(LOCALF);
 # We now use stable (-s) numeric (-n) sort on the first field (-k 1,1).
 # This way, the resultant file will be sorted on the target page id (first field) as primary key,
 # and on the source page id (second field) as secondary key.
-system("sort -s -n -k 1,1 $anchorTextFile > $anchorTextFile.sorted");
+# system("sort -s -n -k 1,1 $anchorTextFile > $anchorTextFile.sorted");
 
 
 ##### Subroutines #####
@@ -383,8 +383,11 @@ sub writeStatistics() {
                   "\n\n";
 
   my $cat;
-  foreach $cat ( sort { $statCategories{$b} <=> $statCategories{$a} }
-                 keys(%statCategories) ) {
+#  foreach $cat ( sort { $statCategories{$b} <=> $statCategories{$a} }
+#                 keys(%statCategories) ) {
+#    print STAT_CATS "$cat\t$statCategories{$cat}\n";
+#  }
+  foreach $cat ( keys(%statCategories) ) {
     print STAT_CATS "$cat\t$statCategories{$cat}\n";
   }
   close(STAT_CATS);
@@ -393,8 +396,11 @@ sub writeStatistics() {
   print STAT_INLINKS "# Line format: <Target page id>  <Number of links to it from other pages>\n\n\n";
 
   my $destination;
-  foreach $destination ( sort { $statIncomingLinks{$b} <=> $statIncomingLinks{$a} }
-                         keys(%statIncomingLinks) ) {
+#  foreach $destination ( sort { $statIncomingLinks{$b} <=> $statIncomingLinks{$a} }
+#                         keys(%statIncomingLinks) ) {
+#    print STAT_INLINKS "$destination\t$statIncomingLinks{$destination}\n";
+#  }
+  foreach $destination ( keys(%statIncomingLinks) ) {
     print STAT_INLINKS "$destination\t$statIncomingLinks{$destination}\n";
   }
 
@@ -408,8 +414,11 @@ sub writeCategoryHierarchy() {
   print CAT_HIER "# Line format: <Category id>  <List of ids of immediate descendants>\n\n\n";
 
   my $cat;
-  foreach $cat ( sort { $catHierarchy{$a} <=> $catHierarchy{$b} }
-                 keys(%catHierarchy) ) {
+#  foreach $cat ( sort { $catHierarchy{$a} <=> $catHierarchy{$b} }
+#                 keys(%catHierarchy) ) {
+#    print CAT_HIER "$cat\t", join(" ", @{$catHierarchy{$cat}}), "\n";
+#  }
+  foreach $cat ( keys(%catHierarchy) ) {
     print CAT_HIER "$cat\t", join(" ", @{$catHierarchy{$cat}}), "\n";
   }
 
