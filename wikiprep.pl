@@ -346,6 +346,7 @@ sub writeRedirects() {
   my $toId;
 
   open(REDIRF, "> $redirFile") or die "Cannot open $redirFile: $!";
+  binmode(REDIRF, ':utf8');
 
   print REDIRF "<redirects>\n";
 
