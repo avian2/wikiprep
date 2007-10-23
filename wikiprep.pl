@@ -703,8 +703,9 @@ sub transform() {
 
     my $hoursLeft = $secondsLeft/3600;
 
-    printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours\n", $percentDone, $bytesPerSecond, $hoursLeft;
+    printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
   }
+  print "\n"
 }
 
 sub updateStatistics(\@\@) {
