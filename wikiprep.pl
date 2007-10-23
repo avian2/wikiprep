@@ -43,10 +43,12 @@ if (@ARGV < 1) {
 my $file;
 my $showLicense = 0;
 my $showVersion = 0;
+my $dontExtractUrls = 0;
 
 GetOptions('f=s' => \$file,
            'license' => \$showLicense,
-           'version' => \$showVersion);
+           'version' => \$showVersion,
+           'nourls' => \$dontExtractUrls);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -716,7 +718,10 @@ sub transform() {
     &recordRelatedArticles($id, \@relatedArticles);
 
     &extractInternalLinks(\$text, \@internalLinks, $id, 1, 1);
-    &extractUrls(\$text, \@urls);
+
+    if ( ! $dontExtractUrls ) {
+      &extractUrls(\$text, \@urls);
+    }
 
     &postprocessText(\$text, 1);
 
