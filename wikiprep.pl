@@ -743,8 +743,10 @@ sub transform() {
 
     my $hoursLeft = $secondsLeft/3600;
 
-    printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
-    STDOUT->flush();
+    if ( $processedPageCount % 100 == 0 ) {
+      printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
+      STDOUT->flush();
+    }
   }
   print "\n"
 }
@@ -1726,8 +1728,9 @@ sub postprocessText(\$$) {
   # replace <br> and <br /> directives with new paragraph
   $$refToText =~ s/<br(?:\s*)(?:[\/]?)>/\n\n/g;
 
-  # Remove tables, as they often carry a lot of noise
+  # Remove tables and math blocks, as they often carry a lot of noise
   &eliminateTables($refToText);
+  &eliminateMath($refToText);
 
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them now.
@@ -1817,6 +1820,8 @@ sub logReplacedXmlEntity($) {
 }
 
 BEGIN {
+  my $mathSequence1 = qr/<math>(?:.*?)<\/math>/ixs;
+
   # Making variables static for the function to avoid recompilation of regular expressions
   # every time the function is called.
 
@@ -1876,6 +1881,12 @@ BEGIN {
 
     $$refToText =~ s/$tableOpeningSequence1(.*?)$tableClosingSequence1/\n/sg;
     $$refToText =~ s/$tableOpeningSequence2(.*?)$tableClosingSequence2/\n/sg;
+  }
+
+  sub eliminateMath(\$) {
+    my ($refToText) = @_;
+
+    $$refToText =~ s/$mathSequence1/ /sg;
   }
 
 } # end of BEGIN block
