@@ -1,7 +1,8 @@
 ###############################################################################
+# vim:sw=2:tabstop=2:expandtab
 #
 # wikiambig.pl - Find disambiguation pages in Wikipedia XML dumps
-# Copyright (C) 2007 Zemanta
+# Copyright (C) 2007 Tomaz Solc
 # Copyright (C) 2007 Evgeniy Gabril
 # The author can be contacted by electronic mail at tomaz.solc@tablix.org
 #

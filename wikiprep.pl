@@ -1,4 +1,5 @@
 ###############################################################################
+# vim:sw=2:tabstop=2:expandtab
 #
 # wikiprep.pl - Preprocess Wikipedia XML dumps
 # Copyright (C) 2007 Evgeniy Gabrilovich
@@ -21,7 +22,6 @@
 #    <http://www.fsf.org/licensing/licenses/info/GPLv2.html>
 #
 ###############################################################################
-
 
 use strict;
 use warnings;
@@ -122,6 +122,9 @@ my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 
+# Disambiguation links
+my $disambigPagesFile = "$filePath/$fileBasename.disambig";
+
 # Information about nonexistent pages and IDs that were assigned to them 
 # (named "local" because assigned IDs are only unique within this dump and not
 # across Wikipedia) 
@@ -139,6 +142,7 @@ open(LOGF, "> $logFile") or die "Cannot open $logFile";
 open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
 open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile";
 open(LOCALF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
+open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
 
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
@@ -147,12 +151,15 @@ binmode(LOGF,    ':utf8');
 binmode(ANCHORF, ':utf8');
 binmode(RELATEDF, ':utf8');
 binmode(LOCALF, ':utf8');
+binmode(DISAMBIGF, ':utf8');
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
 
 print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 print LOCALF "<pages>\n";
+
+print DISAMBIGF  "# Line format: <Disambig page id>  <List of target page id>\n\n\n";
 
 &copyXmlFileHeader();
 &loadNamespaces();
@@ -178,6 +185,7 @@ close(LOGF);
 close(ANCHORF);
 close(RELATEDF);
 close(LOCALF);
+close(DISAMBIGF);
 
 # Hogwarts needs the anchor text file to be sorted in the increading order of target page id.
 # The file is originally sorted by source page id (second field in each line).
@@ -239,6 +247,31 @@ sub isKnownNamespace(\$) {
   my ($refToStr) = @_;
 
   defined( $namespaces{$$refToStr} );  # return value
+}
+
+sub isDisambiguation($) {
+  my ($page) = @_;
+
+  my $result = 0;
+
+  if ( ${$page->text} =~ /(\{\{
+    			                      (?:
+    				                        (disambiguation)|
+                                    (disambig)|
+                       		          (dab)|
+                       		          (hndis)|
+                       		          (geodis)|
+                       		          (schooldis)|
+                       		          (hospitaldis)|
+                       		          (mathdab)
+			                          )
+		                      \}\})/ix ) {
+    $result = 1;
+  } elsif ( $page->title =~ /\(disambiguation\)/i ) {
+    $result = 1;
+  }
+
+  return $result;
 }
 
 # The correct form to create a redirect is #REDIRECT [[ link ]],
@@ -657,6 +690,14 @@ sub transform() {
     my $isStub = 0;
     if ( $text =~ m/stub}}/i ) {
       $isStub = 1;
+    }
+
+    # Parse disambiguation pages before template substitution because disambig
+    # indicators are also templates.
+    if ( &isDisambiguation($page) ) {
+      print LOGF "Parsing disambiguation page\n";
+
+      &parseDisambig(\$id, \$text);
     }
 
     my @categories;
@@ -1619,6 +1660,41 @@ sub collectStandaloneUrl($\@) {
   push(@$refToUrlsArray, $url); # collect the URL as-is
 
   " "; # return value - replace the URL with a space
+}
+
+sub parseDisambig(\$\$) {
+	my ($refToId, $refToText) = @_;
+
+	my @disambigLinks;
+
+	my @lines = split(/\n/, $$refToText);
+	my $line;
+
+	for $line (@lines) {
+		if ( $line =~ /^\s*(?:
+					                (\*\*)|
+					                (\#\#)|
+                          (\:\#)|
+                          (\:\*)|
+                          (\#)|
+                          (\*)
+                        )/ix ) {
+
+			@disambigLinks=();
+
+			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, 0, 0);
+
+			&writeDisambig($refToId, \@disambigLinks);
+		}
+	}
+}
+
+sub writeDisambig(\$\@) {
+	my ($refToDisambigId, $refToDisambigLinks) = @_;
+
+	my $titles = join(" ", @$refToDisambigLinks); 
+
+	print DISAMBIGF "$$refToDisambigId\t$titles\n";
 }
 
 sub postprocessText(\$$) {
