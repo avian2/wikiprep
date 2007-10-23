@@ -101,6 +101,7 @@ my %namespaces;
 # we only process pages in these namespaces + the main namespace (which has an empty name)
 my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1);
 my %okNamespacesForTransforming = ('Category' => 1); # we don't use templates as concepts
+my %okNamespacesForLocalPages = ('Image' => 1);
 
 # Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
 #my %id2title;
@@ -279,6 +280,12 @@ sub isRedirect($) {
   return undef;
 }
 
+sub isNamespaceOkForLocalPages($) {
+  my ($page) = @_;
+
+  &isNamespaceOk($page, \%okNamespacesForLocalPages);
+}
+
 sub isNamespaceOkForPrescanning($) {
   my ($page) = @_;
 
@@ -310,6 +317,26 @@ sub isNamespaceOk($\%) {
   }
 
   $result; # return value
+}
+
+sub isTitleOkForLocalPages(\$) {
+  my ($refToPageTitle) = @_;
+
+  my $namespaceOk = 1;
+
+  if ($$refToPageTitle =~ /^:.*$/) {
+    # Leading colon by itself implies main namespace
+    $namespaceOk = 1;
+  } elsif ($$refToPageTitle =~ /^([^:]*):/) {
+    # colon found but not in the first position - check if it designates a known namespace
+    my $prefix = $1;
+    &normalizeNamespace(\$prefix);
+    $namespaceOk = &isNamespaceOkForLocalPages(\$prefix);
+  }
+
+  # The case when the page title does not contain a colon at all also falls here.
+
+  return $namespaceOk
 }
 
 sub encodeXmlChars(\$) {
@@ -758,10 +785,11 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
-        # Ignore links that look like they point to an article in a different language Wikipedia
-	# We aren't interested in these links (yet), plus ignoring them significantly reduces
-	# memory usage.
-        if ( $targetTitle =~ /^[a-zA-Z]{2,3}:/ ) {
+        # Among links to uninteresting namespaces this also ignores links that point to articles in 
+	# different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
+	# significantly reduces memory usage.
+
+        if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
           print LOGF "Link '$$refToTitle' was ignored\n";
           $targetId = undef;
 	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
