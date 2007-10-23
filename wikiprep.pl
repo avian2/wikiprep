@@ -73,13 +73,6 @@ if (! -e $file) {
 
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
 
-# The URL protocol (e.g., http) matched here may be in either case, hence we use the /i modifier.
-my $urlProtocols = qr/http:\/\/|https:\/\/|telnet:\/\/|gopher:\/\/|file:\/\/|wais:\/\/|ftp:\/\/|mailto:|news:/i;
-# A URL terminator may be either one of a list of characters OR end of string (that is, '$').
-# This last part is necessary to handle URLs at the very end of a string when there is no "\n"
-# or any other subsequent character.
-my $urlTerminator = qr/[\[\]\{\}\s\n\|\"<>]|$/;
-
 my $relatedWording_Standalone =
   qr/Main(?:\s+)article(?:s?)|Further(?:\s+)information|Related(?:\s+)article(?:s?)|Related(?:\s+)topic(?:s?)|See(?:\s+)main(?:\s+)article(?:s?)|See(?:\s+)article(?:s?)|See(?:\s+)also|For(?:\s+)(?:more|further)/i;
   ## For(?:\s+)more(?:\s+)(?:background|details)(?:\s+)on(?:\s+)this(?:\s+)topic,(?:\s+)see
@@ -1623,6 +1616,12 @@ sub normalizeDates(\$\$\@\%) {
 }
 
 BEGIN {
+  # The URL protocol (e.g., http) matched here may be in either case, hence we use the /i modifier.
+  my $urlProtocols = qr/http:\/\/|https:\/\/|telnet:\/\/|gopher:\/\/|file:\/\/|wais:\/\/|ftp:\/\/|mailto:|news:/i;
+  # A URL terminator may be either one of a list of characters OR end of string (that is, '$').
+  # This last part is necessary to handle URLs at the very end of a string when there is no "\n"
+  # or any other subsequent character.
+  my $urlTerminator = qr/[\[\]\{\}\s\n\|\"<>]|$/;
 
   my $urlSequence1 = qr/\[(?:\s*)($urlProtocols(?:[^\[\]]*))\]/;
   my $urlSequence2 = qr/($urlProtocols(?:.*?))$urlTerminator/;
@@ -1642,30 +1641,30 @@ BEGIN {
 
     &removeDuplicatesAndSelf($refToUrlsArray, undef);
   }
-}
 
-sub collectUrlFromBrackets($\@) {
-  my ($url, $refToUrlsArray) = @_;
+  sub collectUrlFromBrackets($\@) {
+    my ($url, $refToUrlsArray) = @_;
 
-  my $text;
-  # Assumption: leading whitespace has already been stripped
-  if ( $url =~ /^($urlProtocols(?:.*?))($urlTerminator(?:.*))$/ ) { # description available
-    push(@$refToUrlsArray, $1);
-    $text = $2;
-  } else { # no description
-    push(@$refToUrlsArray, $url);
-    $text = " ";
+    my $text;
+    # Assumption: leading whitespace has already been stripped
+    if ( $url =~ /^($urlProtocols(?:.*?))($urlTerminator(?:.*))$/ ) { # description available
+      push(@$refToUrlsArray, $1);
+      $text = $2;
+    } else { # no description
+      push(@$refToUrlsArray, $url);
+      $text = " ";
+    }
+
+    $text;  # return value
   }
 
-  $text;  # return value
-}
+  sub collectStandaloneUrl($\@) {
+    my ($url, $refToUrlsArray) = @_;
 
-sub collectStandaloneUrl($\@) {
-  my ($url, $refToUrlsArray) = @_;
+    push(@$refToUrlsArray, $url); # collect the URL as-is
 
-  push(@$refToUrlsArray, $url); # collect the URL as-is
-
-  " "; # return value - replace the URL with a space
+    " "; # return value - replace the URL with a space
+  }
 }
 
 sub parseDisambig(\$\$) {
