@@ -148,6 +148,8 @@ binmode(LOCALF, ':utf8');
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
+
+print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 print LOCALF "<pages>\n";
 
 &copyXmlFileHeader();
@@ -164,8 +166,8 @@ print "Loaded $numTemplates templates\n";
 &transform();
 &closeXmlFile();
 
-&writeStatistics();
 &writeRedirects();
+&writeStatistics();
 &writeCategoryHierarchy();
 
 print LOCALF "</pages>\n";
@@ -348,6 +350,7 @@ sub writeRedirects() {
   open(REDIRF, "> $redirFile") or die "Cannot open $redirFile: $!";
   binmode(REDIRF, ':utf8');
 
+  print REDIRF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
   print REDIRF "<redirects>\n";
 
   foreach $fromTitle ( keys(%redir) ) {
@@ -365,7 +368,13 @@ sub writeRedirects() {
       $toId = "unknown";
     }
 
-    print REDIRF "<redirect>\n<from>\n<id>", $fromId, "</id>\n<title>", $fromTitle, "</title>\n</from>\n<to>\n<id>", $toId, "</id>\n<title>", $toTitle, "</title>\n</to>\n</redirect>\n"
+    my $encodedFromTitle=$fromTitle;
+    &encodeXmlChars(\$encodedFromTitle);
+    my $encodedToTitle=$toTitle;
+    &encodeXmlChars(\$encodedToTitle);
+    
+
+    print REDIRF "<redirect>\n<from>\n<id>", $fromId, "</id>\n<title>", $encodedFromTitle, "</title>\n</from>\n<to>\n<id>", $toId, "</id>\n<title>", $encodedToTitle, "</title>\n</to>\n</redirect>\n"
 
   }
 
@@ -762,7 +771,10 @@ sub resolveLink(\$) {
 
           $title2id{$targetTitle}=$targetId;
 
-          print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $targetTitle, "</title>\n</page>\n";
+	  my $encodedTargetTitle=$targetTitle;
+	  &encodeXmlChars(\$encodedTargetTitle);
+
+          print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $encodedTargetTitle, "</title>\n</page>\n";
 
           print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
         } 
