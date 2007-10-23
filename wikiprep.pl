@@ -1827,12 +1827,22 @@ BEGIN {
 
   # Table definitions can easily span several lines, hence the "/s" modifier
 
-  my $tableOpeningSequence1 = qr{<table>                         # either just <table>
-                                 |                               # or
-                                 <table(?:\s+)(?:[^<>]*)>}ix;    # "<table" followed by at least one space
+  my $tableOpeningSequence1 = qr{<table(?:                       # either just <table>
+                                          (?:\s+)(?:[^<>]*)      # or
+                                       )?>}ix;                   # "<table" followed by at least one space
                                                                  # (to prevent "<tablexxx"), followed by
                                                                  # some optional text, e.g., table parameters
                                                                  # as in "<table border=0>"
+
+# Version above is more efficient
+#
+#  my $tableOpeningSequence1 = qr{<table>                         # either just <table>
+#                                 |                               # or
+#                                 <table(?:\s+)(?:[^<>]*)>}ix;    # "<table" followed by at least one space
+#                                                                 # (to prevent "<tablexxx"), followed by
+#                                                                 # some optional text, e.g., table parameters
+#                                                                 # as in "<table border=0>"
+
                                  # In the above definition, prohibiting '<' and '>' chars ([^<>]) ensures
                                  # that we do not consume more than necessary, so that in the example
                                  #  "<table border=0> aaa <table> bbb </table> ccc </table>"
@@ -1869,6 +1879,9 @@ BEGIN {
 #       )
 #       $tableClosingSequence2}sx;        # closing sequence
 
+  my $tableSequence1 = qr/$tableOpeningSequence1(?:.*?)$tableClosingSequence1/;
+  my $tableSequence2 = qr/$tableOpeningSequence2(?:.*?)$tableClosingSequence2/;
+
   sub eliminateTables(\$) {
     my ($refToText) = @_;
 
@@ -1879,8 +1892,8 @@ BEGIN {
 #    # For simplicity, we assume that tables of the two kinds (e.g., <table> ... </table> and {| ... |})
 #    # are not nested in one another.
 
-    $$refToText =~ s/$tableOpeningSequence1(.*?)$tableClosingSequence1/\n/sg;
-    $$refToText =~ s/$tableOpeningSequence2(.*?)$tableClosingSequence2/\n/sg;
+    $$refToText =~ s/$tableSequence1/\n/sg;
+    $$refToText =~ s/$tableSequence2/\n/sg;
   }
 
   sub eliminateMath(\$) {
