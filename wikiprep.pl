@@ -1827,6 +1827,13 @@ BEGIN {
 
   # Table definitions can easily span several lines, hence the "/s" modifier
 
+  # Examples where the eliminateTables() fails:
+  #
+  # 1) Table block opened with <table> and closed with |} or vice versa
+  # 2) Table block opened and never closed because it is:
+  #        a) The last thing on the page and the author didn't bother to close it
+  #        b) Closed automatically by a === heading or some other markup
+
   my $tableOpeningSequence1 = qr{<table(?:                       # either just <table>
                                           (?:\s+)(?:[^<>]*)      # or
                                        )?>}ix;                   # "<table" followed by at least one space
