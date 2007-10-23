@@ -1622,20 +1622,26 @@ sub normalizeDates(\$\$\@\%) {
   $dateRecognized;  # return value
 }
 
-sub extractUrls(\$\@) {
-  my ($refToText, $refToUrlsArray) = @_;
+BEGIN {
 
-  # First we handle the case of URLs enclosed in single brackets, with or without the description,
-  # and with optional leading and/or trailing whitespace
-  # Examples: [http://www.cnn.com], [ http://www.cnn.com  ], [http://www.cnn.com  CNN Web site]
-  $$refToText =~ s/\[(?:\s*)($urlProtocols(?:[^\[\]]*))\]/&collectUrlFromBrackets($1, $refToUrlsArray)/eg;
+  my $urlSequence1 = qr/\[(?:\s*)($urlProtocols(?:[^\[\]]*))\]/;
+  my $urlSequence2 = qr/($urlProtocols(?:.*?))$urlTerminator/;
 
-  # Now we handle standalone URLs (those not enclosed in brackets)
-  # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
-  # the terminator symbol itself, but rather only the URL.
-  $$refToText =~ s/($urlProtocols(?:.*?))$urlTerminator/&collectStandaloneUrl($1, $refToUrlsArray)/eg;
+  sub extractUrls(\$\@) {
+    my ($refToText, $refToUrlsArray) = @_;
 
-  &removeDuplicatesAndSelf($refToUrlsArray, undef);
+    # First we handle the case of URLs enclosed in single brackets, with or without the description,
+    # and with optional leading and/or trailing whitespace
+    # Examples: [http://www.cnn.com], [ http://www.cnn.com  ], [http://www.cnn.com  CNN Web site]
+    $$refToText =~ s/$urlSequence1/&collectUrlFromBrackets($1, $refToUrlsArray)/eg;
+
+    # Now we handle standalone URLs (those not enclosed in brackets)
+    # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
+    # the terminator symbol itself, but rather only the URL.
+    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray)/eg;
+
+    &removeDuplicatesAndSelf($refToUrlsArray, undef);
+  }
 }
 
 sub collectUrlFromBrackets($\@) {
