@@ -1879,8 +1879,8 @@ BEGIN {
 #       )
 #       $tableClosingSequence2}sx;        # closing sequence
 
-  my $tableSequence1 = qr/$tableOpeningSequence1(?:.*?)$tableClosingSequence1/;
-  my $tableSequence2 = qr/$tableOpeningSequence2(?:.*?)$tableClosingSequence2/;
+  my $tableSequence1 = qr/$tableOpeningSequence1(?:.*?)$tableClosingSequence1/s;
+  my $tableSequence2 = qr/$tableOpeningSequence2(?:.*?)$tableClosingSequence2/s;
 
   sub eliminateTables(\$) {
     my ($refToText) = @_;
@@ -1892,8 +1892,8 @@ BEGIN {
 #    # For simplicity, we assume that tables of the two kinds (e.g., <table> ... </table> and {| ... |})
 #    # are not nested in one another.
 
-    $$refToText =~ s/$tableSequence1/\n/sg;
-    $$refToText =~ s/$tableSequence2/\n/sg;
+    $$refToText =~ s/$tableSequence1/\n/g;
+    $$refToText =~ s/$tableSequence2/\n/g;
   }
 
   sub eliminateMath(\$) {
