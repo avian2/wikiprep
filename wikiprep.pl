@@ -280,10 +280,29 @@ sub isRedirect($) {
   return undef;
 }
 
-sub isNamespaceOkForLocalPages($) {
-  my ($page) = @_;
+sub isNamespaceOkForLocalPages(\$) {
+  my ($refToNamespace) = @_;
 
-  &isNamespaceOk($page, \%okNamespacesForLocalPages);
+  my $result = 1;
+
+  # main namespace is OK, so we only check pages that belong to other namespaces
+
+  if ($$refToNamespace ne '') {
+    if ( &isKnownNamespace($refToNamespace) ) {
+      $result = defined( $okNamespacesForLocalPages{$$refToNamespace} );
+    } else {
+      # A simple way to recognize most namespaces that link to translated articles. A better way would
+      # be to store these namespaces in a hash.
+      if ( length($$refToNamespace) < 4 ) {
+        $result = 0
+      }
+
+      # the prefix before ":" in the page title is not a known namespace,
+      # therefore, the page belongs to the main namespace and is OK
+    }
+  }
+
+  $result; # return value
 }
 
 sub isNamespaceOkForPrescanning($) {
