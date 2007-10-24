@@ -125,7 +125,11 @@ my $disambigPagesFile = "$filePath/$fileBasename.disambig";
 # Information about nonexistent pages and IDs that were assigned to them 
 # (named "local" because assigned IDs are only unique within this dump and not
 # across Wikipedia) 
-my $localIDFile = "$filePath/$fileBasename.local.xml";
+my $localPagesFile = "$filePath/$fileBasename.local.xml";
+
+# File containing the lowest local ID number (all pages with IDs larger than this
+# are local)
+my $localIDFile = "$filePath/$fileBasename.min_local_id";
 
 # Information about redirects
 my $redirFile = "$filePath/$fileBasename.redir.xml";
@@ -138,8 +142,9 @@ open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
 open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
 open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile";
-open(LOCALF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
+open(LOCALF, "> $localPagesFile") or die "Cannot open $localPagesFile: $!";
 open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
+open(LOCALIDF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
 
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
@@ -149,6 +154,7 @@ binmode(ANCHORF, ':utf8');
 binmode(RELATEDF, ':utf8');
 binmode(LOCALF, ':utf8');
 binmode(DISAMBIGF, ':utf8');
+binmode(LOCALIDF, ':utf8');
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
@@ -161,6 +167,9 @@ print DISAMBIGF  "# Line format: <Disambig page id>  <List of target page id>\n\
 &copyXmlFileHeader();
 &loadNamespaces();
 &prescan();
+
+print LOCALIDF "$localIDCounter\n";
+close(LOCALIDF);
 
 my $numTitles = scalar( keys(%title2id) );
 print "Loaded $numTitles titles\n";
@@ -314,16 +323,15 @@ sub isRedirect($) {
 sub isNamespaceOkForLocalPages(\$) {
   my ($refToNamespace) = @_;
 
-  my $result = 1;
-
-  # main namespace is OK, so we only check pages that belong to other namespaces
+  # We are only interested in image links, so main namespace is not OK.
+  my $result = 0;
 
   if ($$refToNamespace ne '') {
     if ( &isKnownNamespace($refToNamespace) ) {
       $result = defined( $okNamespacesForLocalPages{$$refToNamespace} );
     } else {
-      # A simple way to recognize most namespaces that link to translated articles. A better way would
-      # be to store these namespaces in a hash.
+      # A simple way to recognize most namespaces that link to translated articles. A better 
+      # way would be to store these namespaces in a hash.
       if ( length($$refToNamespace) < 4 ) {
         $result = 0
       }
@@ -372,11 +380,11 @@ sub isNamespaceOk($\%) {
 sub isTitleOkForLocalPages(\$) {
   my ($refToPageTitle) = @_;
 
-  my $namespaceOk = 1;
+  my $namespaceOk = 0;
 
   if ($$refToPageTitle =~ /^:.*$/) {
     # Leading colon by itself implies main namespace
-    $namespaceOk = 1;
+    $namespaceOk = 0;
   } elsif ($$refToPageTitle =~ /^([^:]*):/) {
     # colon found but not in the first position - check if it designates a known namespace
     my $prefix = $1;
