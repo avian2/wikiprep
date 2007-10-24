@@ -21,6 +21,8 @@
 #    or see <http://www.gnu.org/licenses/> and
 #    <http://www.fsf.org/licensing/licenses/info/GPLv2.html>
 #
+# Modifications by Tomaz Solc (tomaz.solc@tablix.org)
+#
 ###############################################################################
 
 use strict;
@@ -33,7 +35,7 @@ use Time::localtime;
 use Parse::MediaWikiDump;
 
 my $licenseFile = "COPYING";
-my $version = "2.02";
+my $version = "2.02.tomaz.1";
 
 if (@ARGV < 1) {
   &printUsage();
@@ -2071,11 +2073,22 @@ sub recordRelatedArticles($\@) {
 
 sub printUsage()
 {
-  print "Wikiprep version $version, Copyright (C) 2007 Evgeniy Gabrilovich\n" .
-        "Wikiprep comes with ABSOLUTELY NO WARRANTY; for details type '$0 -license'.\n" .
-        "This is free software, and you are welcome to redistribute it\n" .
-        "under certain conditions; type '$0 -license' for details.\n" .
-        "Type '$0 -version' for version information.\n\n" .
-        "Usage: $0 -f <XML file with page dump>\n" .
-        "       e.g., $0 -f pages_articles.xml\n\n";
+  print <<END
+Wikiprep version $version, Copyright (C) 2007 Evgeniy Gabrilovich
+
+Wikiprep comes with ABSOLUTELY NO WARRANTY; for details type 
+'$0 -license'.
+
+This is free software, and you are welcome to redistribute it
+under certain conditions; type '$0 -license' for details.
+
+Type '$0 -version' for version information.
+
+USAGE: $0 <options> -f <XML file with page dump>
+       e.g., $0 -f pages_articles.xml
+
+Available options:
+  -nourls        Don't extract external links (URLs) from pages. 
+                 Reduces run-time by approximately one half
+END
 }
