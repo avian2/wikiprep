@@ -12,7 +12,6 @@ all: $(LOGS)
 
 %.log: %.xml
 	perl ../wikiprep.pl -f $<
-	perl ../wikiambig.pl -f $<
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
