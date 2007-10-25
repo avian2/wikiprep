@@ -46,11 +46,13 @@ my $file;
 my $showLicense = 0;
 my $showVersion = 0;
 my $dontExtractUrls = 0;
+my $doWriteLog = 0;
 
 GetOptions('f=s' => \$file,
            'license' => \$showLicense,
            'version' => \$showVersion,
-           'nourls' => \$dontExtractUrls);
+           'nourls' => \$dontExtractUrls,
+           'log' => \$doWriteLog);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -115,7 +117,10 @@ my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
-my $logFile = "$filePath/$fileBasename.log";
+my $logFile = "/dev/null";
+if ($doWriteLog) {
+  $logFile = "$filePath/$fileBasename.log";
+}
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 
@@ -2097,6 +2102,9 @@ USAGE: $0 <options> -f <XML file with page dump>
 
 Available options:
   -nourls        Don't extract external links (URLs) from pages. 
-                 Reduces run-time by approximately one half
+                 Reduces run-time by approximately one half.
+  -log           Write a large log file with debug information.
+                 Log can get approximately 3-4 times larger than
+                 the XML dump.
 END
 }

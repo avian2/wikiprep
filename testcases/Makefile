@@ -11,7 +11,7 @@ LOGS =	images.log \
 all: $(LOGS)
 
 %.log: %.xml
-	perl ../wikiprep.pl -f $<
+	perl ../wikiprep.pl -log -f $<
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
