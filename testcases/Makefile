@@ -5,7 +5,8 @@ LOGS =	images.log \
 	redir.log \
 	categories.log \
 	templates.log \
-	disambig.log
+	disambig.log \
+	order.log
 
 all: $(LOGS)
 
