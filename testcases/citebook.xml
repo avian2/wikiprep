@@ -1,0 +1,193 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Cite book</title>
+    <id>2</id>
+    <revision>
+      <id>146421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">
+&lt;includeonly&gt;&lt;cite class="book" style="font-style:normal" {{
+  #if: {{{ref|}}}
+  |{{#ifeq:{{{ref}}}|none||id="{{{ref}}}"}}
+  |{{#if:{{{last|}}} | {{#if:{{{year|}}} | id="Reference-{{{last}}}-{{{year}}}" }} }}
+}}&gt;{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{
+    #if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|gguu}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{ #if: {{{coauthors|}}} | &lt;nowiki&gt;;&lt;/nowiki&gt;&#32;{{{coauthors}}} }}
+}}{{
+  #if: {{{origdate|}}}
+  | &#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origdate}}}]
+  | {{
+    #if: {{{origyear|}}}
+    | {{
+      #if: {{{origmonth|}}}
+      | &#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origmonth}}} {{{origyear}}}]
+      | &#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origyear}}}]
+    }}
+  }}
+}}{{
+  #if: {{{date|}}}
+  | &#32;({{{date}}})
+  | {{
+    #if: {{{year|}}}
+    | {{
+      #if: {{{month|}}}
+      | &#32;({{{month}}} {{{year}}})
+      | &#32;({{{year}}})
+    }}
+  }}
+}}{{ #if: {{{author|}}}{{{last|}}} | .
+}}{{
+  #if: {{{chapter|}}}
+  | &#32;"{{
+    #if: {{{chapterurl|}}}
+    | [{{{chapterurl}}} {{{chapter}}}]
+    | {{{chapter}}}
+}}",}}{{
+  #if: {{{editor|}}}
+  | &#32;in {{{editor}}}:[[Template:Cite book/editor| ]]
+}} &lt;i&gt;{{
+  #if: {{{url|}}} | [{{{url}}} {{{title}}}] | {{{title}}}
+}}&lt;/i&gt;{{
+  #if: {{{format|}}} | &#32;({{{format}}})
+}}{{
+  #if: {{{others|}}} | , {{{others}}}
+}}{{
+  #if: {{{edition|}}} | , {{{edition}}}
+}}{{
+  #if: {{{series|}}} | , {{{series}}}
+}}{{
+  #if: {{{language|}}} | &#32;(in {{{language}}})
+}}{{
+  #if: {{{publisher|}}}
+  | {{#if: {{{format|}}}{{{others|}}}{{{edition|}}} | ,&#32; | .&#32; }}{{ 
+    #if: {{{location|}}} 
+    | {{{location}}}:&#32;
+  }}{{{publisher}}}
+}}{{
+  #if: {{{pages|{{{page|}}}}}} | ,&#32;{{{pages|{{{page}}}}}}
+}}{{
+  #if: {{{doi|}}} | . [[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{
+  #if: {{{id|}}} | . {{{id}}}
+}}{{
+  #if: {{{isbn|}}} | . ISBN {{{isbn}}}
+}}{{
+  #if: {{{oclc|}}} | . [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{
+  #if: {{{url|}}} | {{
+  #if: {{{accessdate|}}} | 
+  . Retrieved on [[{{{accessdate}}}]]
+  | {{
+    #if: {{{accessyear|}}}
+    | . Retrieved {{
+      #if: {{{accessmonth|}}}
+      | on [[{{{accessmonth}}} {{{accessyear}}}]]
+      | during [[{{{accessyear}}}]]
+  }}}}
+  }}
+}}.{{ #if: {{{quote|}}} | &amp;nbsp;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class="Z3988" title="ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:book}}&lt;!--                   Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:book
+  --&gt;&amp;rft.genre=book&lt;!--                                                        book: a publication that is complete in one part or a designated finite number of parts, often identified with an ISBN.  (genre could also be bookitem, conference, proceeding, report, document, or unknown)
+  --&gt;&amp;rft.btitle={{urlencode:{{{title|}}}}}&lt;!--                                 The title of the book. This can also be expressed as title, for compatibility with version 0.1. "moby dick or the white whale"
+  --&gt;{{#if: {{{chapter|}}}   | &amp;rft.atitle={{urlencode:{{{chapter}}}}}   }}&lt;!-- Chapter title. Chapter title is included if it is a distinct title, e.g. "The Push Westward."
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... e.g. Smith, Fred James is recorded as "aulast=smith"
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, e.g. "Fred F", "Fred James"
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, e.g. "Smith, Fred M", "Harry S. Truman".
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}&lt;!--
+  --&gt;{{#if: {{{year|}}}      | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. Book dates are assumed to be a single year. (or ISO 8601)
+  --&gt;{{#if: {{{edition|}}}   | &amp;rft.edition={{urlencode:{{{edition}}}}}  }}&lt;!-- Statement of the edition of the book. This will usually be a phrase, with or without numbers, but may be a single number, e.g. "First edition", "4th ed."
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.pub={{urlencode:{{{publisher}}}}}    }}&lt;!-- Publisher name. "Harper and Row"
+  --&gt;{{#if: {{{location|}}}  | &amp;rft.place={{urlencode:{{{location}}}}}   }}&lt;!-- Place of publication. "New York"
+  --&gt;{{#if: {{{pages|{{{page|}}}}}}     | &amp;rft.pages={{urlencode:{{{pages|{{{page}}}}}}}}      }}&lt;!-- Start and end pages for parts of a book, e.g. "124-147" ... This data element includes the OpenURL 0.1 definition of "pages".
+  --&gt;{{#if: {{{series|}}}    | &amp;rft.series={{urlencode:{{{series}}}}}    }}&lt;!-- The title of a series in which the book or document was issued. There may also be an ISSN associated with the series.
+  --&gt;{{#if: {{{isbn|}}}      | &amp;rft.isbn={{{isbn}}}                      }}&lt;!-- International Standard Book Number (ISBN) ... i.e. "057117678X" but it may contain hyphens, e.g. "1-878067-73-7"
+  --&gt;{{#if: {{{oclc|}}}      | &amp;rft_id=info:oclcnum/{{{oclc}}}           }}&lt;!-- 
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- 
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- 
+  --&gt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{template doc}}&lt;/noinclude&gt;
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Dielo Trouda</title>
+    <id>3</id>
+    <revision>
+      <id>136421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">
+	      Blah
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Gu</title>
+    <id>1</id>
+    <revision>
+      <id>136421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">{{cite book | last = LAST | authorlink = Dielo Trouda| title = TITLE | origyear = ORIGYEAR | url = URL | accessdate = 2006-10-24 | year = 2006 | publisher = FdCA | location = Italy}}</text>
+    </revision>
+  </page>
+</mediawiki>
