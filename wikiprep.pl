@@ -940,6 +940,10 @@ sub includeTemplates(\$) {
                            \}\}
                           /&instantiateTemplate($1)/segx
         ) {
+    # print LOGF "Finished with templates level $templateRecursionLevels\n";
+    # print LOGF "#########\n\n";
+    # print LOGF "$$refToText";
+    # print LOGF "#########\n\n";
     $templateRecursionLevels++;
   }
 
@@ -998,6 +1002,7 @@ BEGIN {
       # ordinal position (1, 2, 3, ...).
 
       my $unnamedParameterCounter = 0;
+      my $parameterCounter = 0;
 
       # It's legal for unnamed parameters to be skipped, in which case they will get default
       # values (if available) during actual instantiation. That is {{template_name|a||c}} means
@@ -1005,6 +1010,25 @@ BEGIN {
       # This case is correctly handled by function 'split', and does not require any special handling.
       my $param;
       foreach $param (@parameters) {
+
+        # if the value does not contain a link, we can later trim whitespace
+        my $doesNotContainLink = 0;
+        if ($param !~ /\]\]/) {
+          $doesNotContainLink = 1; 
+        }
+
+        # For parser functions we need unmodified parameters by position. For example:
+        # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
+        # hash. Note that the key of the hash can't be generated any other way (parameter names can't 
+        # include '=' characters)
+        $parameterCounter++;
+
+        my $unexpandedParam = $param;
+        if ($doesNotContainLink) {
+          &trimWhitespaceBothSides(\$unexpandedParam);
+        }
+        $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
+
         # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
         # a link (to prevent possible gluing the link to the following text after template substitution)
 
@@ -1023,7 +1047,7 @@ BEGIN {
           my $parameterValue = $2;
 
           &trimWhitespaceBothSides(\$parameterName);
-          if ($parameterValue !~ /\]\]/) { # if the value does not contain a link, trim whitespace
+          if ($doesNotContainLink) { # if the value does not contain a link, trim whitespace
             &trimWhitespaceBothSides(\$parameterValue);
           }
 
@@ -1032,11 +1056,7 @@ BEGIN {
           # this is an unnamed parameter
           $unnamedParameterCounter++;
 
-          if ($param !~ /\]\]/) { # if the value does not contain a link, trim whitespace
-            &trimWhitespaceBothSides(\$param);
-          }
-
-          $$refToParameterHash{$unnamedParameterCounter} = $param;
+          $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
         }
       }
     } else {
@@ -1081,23 +1101,35 @@ sub includeParserFunction(\$\%\$) {
 
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*)/ ) {
     my $functionName=$1;
-    $$refToParameterHash{'0'}=$2;
+    $$refToParameterHash{'=0='}=$2;
 
     print LOGF "Evaluating parser function #$functionName\n";
 
     if ( $functionName eq 'if' ) {
 
+      my $valueIfTrue = $$refToParameterHash{'=1='};
+      my $valueIfFalse = $$refToParameterHash{'=2='};
+
+      # print LOGF "If condition: $2\n";
+      # if ( defined($valueIfTrue) ) {
+      #   print LOGF "If true: $valueIfTrue\n";
+      # }
+      # if ( defined($valueIfFalse) ) {
+      #   print LOGF "If false: $valueIfFalse\n";
+      # }
+
       # The {{#if:}} function is an if-then-else construct. The applied condition is 
       # "The condition string is non-empty". 
-      if ( length($$refToParameterHash{'0'}) > 0 ) {
-        if ( exists($$refToParameterHash{'1'}) && ( length($$refToParameterHash{'1'}) > 0 ) ) {
-          $$refToResult = $$refToParameterHash{'1'};
+      if ( length($$refToParameterHash{'=0='}) > 0 ) {
+
+        if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
+          $$refToResult = $valueIfTrue;
         } else {
           $$refToResult = " ";
         }
       } else {
-        if ( exists($$refToParameterHash{'2'}) && ( length($$refToParameterHash{'2'}) > 0 ) ) {
-          $$refToResult = $$refToParameterHash{'2'};
+        if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
+          $$refToResult = $valueIfFalse;
         } else {
           $$refToResult = " ";
         }
@@ -1115,6 +1147,9 @@ sub includeParserFunction(\$\%\$) {
         $$refToResult = " ";
       }
     }
+
+    # print LOGF "Function returned: $$refToResult\n";
+
   } elsif ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
     # This function is used in some pages to construct links
     # http://meta.wikimedia.org/wiki/Help:URL
@@ -1208,7 +1243,12 @@ sub substituteParameter($\%) {
       # Parameter not specified in template invocation and does not have a default value -
       # do not perform substitution and keep the parameter in 3 braces
       # (these are Wiki rules for templates, see  http://meta.wikimedia.org/wiki/Help:Template ).
-      $result = "{{{$parameter}}}";
+
+      # $result = "{{{$parameter}}}";
+
+      # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
+      # practice we get a lot less noise in the output if we expand them to zero-length strings.
+      $result = "";
     }
   }
 
@@ -1776,11 +1816,14 @@ sub postprocessText(\$$) {
                             \}\}
                            / /sgx);
 
+  # Remove comments (<!-- ... -->) from the text. This must be performed before removing other tags,
+  # because some comments appear inside other tags (e.g. "<span <!-- comment --> class=...>"). They 
+  # can easily span several lines, so we use the "/s" modifier.
+  $$refToText =~ s/<!--(?:.*?)-->/ /sg;
+
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text
   # from being glued together).
-  # Comments (<!-- ... -->) also fall into this category, and since they can easily span several lines,
-  # we use the "/s" modifier.
   $$refToText =~ s/<(?:.*?)>/ /sg;
 
   # Change markup on bold/italics emphasis. We probably don't need to distinguish
