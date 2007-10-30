@@ -1086,7 +1086,7 @@ sub includeParserFunction(\$\%\$) {
     print LOGF "Evaluating parser function #$functionName\n";
 
     if ( $functionName eq 'if' ) {
-      
+
       # The {{#if:}} function is an if-then-else construct. The applied condition is 
       # "The condition string is non-empty". 
       if ( length($$refToParameterHash{'0'}) > 0 ) {
@@ -1397,9 +1397,7 @@ sub collectInternalLink($$$\@\@) {
   # It seems that the extra pipeline symbols are parameters, so we just eliminate them.
   if ($link =~ /^(.*)\|([^|]*)$/s) { # first, extract the link up to the last pipeline symbol
     $link = $1;    # the part before the last pipeline
-    $result = $2;  # the part  after the last pipeline, this is usually an alternative text for this link
-
-    $alternativeTextAvailable = 1; # pipeline found, see comment above
+    $result = $2;  # the part after the last pipeline, this is usually an alternative text for this link
 
     # Now check if there are pipeline symbols remaining.
     # Note that this time we're looking for the shortest match,
@@ -1409,17 +1407,25 @@ sub collectInternalLink($$$\@\@) {
       # $2 contains the parameters, which we don't really need
     }
 
-    if (length($result) == 0) {
-      if ($link !~ /\#/) {
-        # If the "|" symbol is not followed by some text, then it masks the namespace
-        # as well as any text in parentheses at the end of the link title.
-        # However, pipeline masking is only invoked if the link does not contain an anchor,
-        # hence the additional condition in the 'if' statement.
-        &performPipelineMasking(\$link, \$result);
-      } else {
-        # If the link contains an anchor, then masking is not invoked, and we take the entire link
-        $result = $link;
-      }
+    # If the part after the last pipeline contains a text like "250x250px" or "250px" it is interpreted
+    # as a size specification in an image link and not as an anchor text, so ignore this case
+    if ($result =~ /^\s*[0-9x]+px\s*$/) {
+      $result = "";
+    } else {
+      $alternativeTextAvailable = 1; # pipeline found, see comment above
+
+      if (length($result) == 0) {
+        if ($link !~ /\#/) {
+          # If the "|" symbol is not followed by some text, then it masks the namespace
+          # as well as any text in parentheses at the end of the link title.
+          # However, pipeline masking is only invoked if the link does not contain an anchor,
+          # hence the additional condition in the 'if' statement.
+          &performPipelineMasking(\$link, \$result);
+        } else {
+          # If the link contains an anchor, then masking is not invoked, and we take the entire link
+          $result = $link;
+        }
+      }  
     }
   } else {
     # the link text does not contain the pipeline, so take it as-is
