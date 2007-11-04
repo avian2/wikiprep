@@ -274,7 +274,8 @@ sub isDisambiguation($) {
                        		          (geodis)|
                        		          (schooldis)|
                        		          (hospitaldis)|
-                       		          (mathdab)
+                       		          (mathdab)|
+                                    (numberdis)
 			                          )
 		                      \}\})/ix ) {
     $result = 1;
