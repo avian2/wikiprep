@@ -1,4 +1,4 @@
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+<mediawiki>
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
@@ -27,28 +27,34 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-  <page>
-    <title>Gu</title>
-    <id>2</id>
-    <revision>
-      <text xml:space="preserve">Something.</text>
-    </revision>
-  </page>
-  <page>
-    <title>AlgeriA</title>
-    <id>5</id>
-    <revision>
-	    <text xml:space="preserve">
-		    [[Image:Hello.jpg|This is a cool image]]
+<page id="2" orglength="10" newlength="10" stub="0" categories="0" outlinks="0" urls="0">
+<title>Gu</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Something.
+</text>
+</page>
+<page id="5" orglength="216" newlength="69" stub="0" categories="0" outlinks="4" urls="0">
+<title>AlgeriA</title>
+<categories></categories>
+<links>6 2 7 8</links>
+<urls>
+</urls>
+<text>
 
-		    [[Image:Hello.jpg|Another cool image|100px]]
+		    This is a cool image
 
-		    [[Image:Hello.jpg|100px|Arg|left]]
+Another cool image
 
-		    [[Image:Juhu.jpg|100px|[[Gu]]|right]]
+Arg
 
-		    [[Image:J.jpg|]]
-	    </text>
-    </revision>
-  </page>
+Gu
+
+J.jpg
+	    
+</text>
+</page>
 </mediawiki>

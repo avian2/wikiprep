@@ -9,7 +9,7 @@ LOGS =	images.log \
 	order.log \
 	citebook.log
 
-all: $(LOGS)
+all: $(LOGS) compare
 
 %.log: %.xml
 	perl ../wikiprep.pl -log -f $<
@@ -26,5 +26,9 @@ clean:
 	rm -f *.stat.inlinks
 	rm -f *.redir.xml
 	rm -f *.disambig
+	rm -f *.min_local_id
 
-.PHONY: clean
+compare:
+	./compare
+
+.PHONY: clean compare

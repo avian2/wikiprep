@@ -1,0 +1,9 @@
+# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>
+
+
+6	5	This is a cool image
+6	5	Another cool image
+6	5	Arg
+2	5	Gu
+7	5	J.jpg
+8	5	Gu
