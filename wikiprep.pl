@@ -265,7 +265,8 @@ sub isDisambiguation($) {
 
   my $result = 0;
 
-  if ( ${$page->text} =~ /(\{\{
+  if ( ${$page->text} =~ /(\{\{ 
+                                (?:\s*)
     			                      (?:
     				                        (disambiguation)|
                                     (disambig)|
@@ -277,6 +278,9 @@ sub isDisambiguation($) {
                        		          (mathdab)|
                                     (numberdis)
 			                          )
+                                (?:\s*)
+                                (?:\|.*)?
+                                (?:\s*)
 		                      \}\})/ix ) {
     $result = 1;
   } elsif ( $page->title =~ /\(disambiguation\)/i ) {
