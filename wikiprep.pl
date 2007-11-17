@@ -34,8 +34,13 @@ use Getopt::Long;
 use Time::localtime;
 use Parse::MediaWikiDump;
 
+use FindBin;
+use lib "$FindBin::Bin";
+
+use images;
+
 my $licenseFile = "COPYING";
-my $version = "2.02.tomaz.1";
+my $version = "2.02.tomaz.2";
 
 if (@ARGV < 1) {
   &printUsage();
@@ -1437,41 +1442,39 @@ sub collectInternalLink($$$\@\@) {
   # the pipeline symbol is present.
   my $alternativeTextAvailable = 0;
 
-  # Some links contain several pipeline symbols, e.g.,
-  # [[Image:Zerzan.jpeg|thumb|right|[[John Zerzan]]]]
-  # It seems that the extra pipeline symbols are parameters, so we just eliminate them.
-  if ($link =~ /^(.*)\|([^|]*)$/s) { # first, extract the link up to the last pipeline symbol
-    $link = $1;    # the part before the last pipeline
-    $result = $2;  # the part after the last pipeline, this is usually an alternative text for this link
+  # First extract everything before the first pipeline symbol.
+  if ($link =~ /^([^|]*)(\|.*)$/s) {
+    $link = $1;
+    $result = $2;
 
-    # Now check if there are pipeline symbols remaining.
-    # Note that this time we're looking for the shortest match,
-    # to take the part of the text up to the first pipeline symbol.
-    if ($link =~ /^([^|]*)\|(.*)$/s) {
-      $link = $1;
-      # $2 contains the parameters, which we don't really need
-    }
+    if ($link =~ /^Image:/) {
+      # Image links have to parsed separately, because anchors can contain parameters (size, type, etc.)
+      # which we exclude in a separate function.
 
-    # If the part after the last pipeline contains a text like "250x250px" or "250px" it is interpreted
-    # as a size specification in an image link and not as an anchor text, so ignore this case
-    if ($result =~ /^\s*[0-9x]+px\s*$/) {
-      $result = "";
+      $result = &images::parseImageParameters($result);
     } else {
-      $alternativeTextAvailable = 1; # pipeline found, see comment above
+      # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
+      # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
+      # all text before the last pipeline.
+      if ($result =~ /^(.*)\|([^|]*)$/s) {
+        $result = $2;
+      }
 
-      if (length($result) == 0) {
-        if ($link !~ /\#/) {
-          # If the "|" symbol is not followed by some text, then it masks the namespace
-          # as well as any text in parentheses at the end of the link title.
-          # However, pipeline masking is only invoked if the link does not contain an anchor,
-          # hence the additional condition in the 'if' statement.
-          &performPipelineMasking(\$link, \$result);
-        } else {
-          # If the link contains an anchor, then masking is not invoked, and we take the entire link
-          $result = $link;
-        }
-      }  
+      $alternativeTextAvailable = 1; # pipeline found, see comment above
     }
+
+    if (length($result) == 0) {
+      if ($link !~ /\#/) {
+        # If the "|" symbol is not followed by some text, then it masks the namespace
+        # as well as any text in parentheses at the end of the link title.
+        # However, pipeline masking is only invoked if the link does not contain an anchor,
+        # hence the additional condition in the 'if' statement.
+        &performPipelineMasking(\$link, \$result);
+      } else {
+        # If the link contains an anchor, then masking is not invoked, and we take the entire link
+        $result = $link;
+      }
+    }  
   } else {
     # the link text does not contain the pipeline, so take it as-is
     $result = $link;
