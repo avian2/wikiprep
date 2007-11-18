@@ -38,7 +38,7 @@
         <id>1</id>
       </contributor>
       <comment></comment>
-      <text xml:space="preserve">[[Image:Hello1.jpg|Lepa slika]] nekaj teksta in se ena [[Image:Hello1.jpg|druga slika]]. Pa se en link kar tako [[Image:Hello2.jpg|right|krneki]]</text>
+      <text xml:space="preserve">[[Image:Hello1.jpg|Lepa slika]] nekaj teksta in se ena [[Image:Hello1.jpg|druga slika]]. Pa se en link kar tako [[Image:Hello2.jpg|right|krneki]]. Pa se en link na [[Ga]] brez anchorja. [[Image:Hello1.jpg]]</text>
     </revision>
   </page>
   <page>

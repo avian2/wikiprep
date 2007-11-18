@@ -742,6 +742,9 @@ sub transform() {
     &removeElements(\@relatedArticles, \@categories);
     &recordRelatedArticles($id, \@relatedArticles);
 
+    &images::convertGalleryToLink(\$text);
+    &images::convertImagemapToLink(\$text);
+
     &extractInternalLinks(\$text, \@internalLinks, $id, 1, 1);
 
     if ( ! $dontExtractUrls ) {

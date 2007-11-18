@@ -7,7 +7,8 @@ LOGS =	images.log \
 	templates.log \
 	disambig.log \
 	order.log \
-	citebook.log
+	citebook.log \
+	gallery.log
 
 all: $(LOGS) compare
 
