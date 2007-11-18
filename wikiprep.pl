@@ -1368,7 +1368,8 @@ sub extractInternalLinks(\$\@$$$) {
                              (\w*)            # words may be glued to the end of the link,
                                               # in which case they become part of the link
                                               # e.g., "[[public transport]]ation"
-                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \@anchorTexts)/segx
+                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \@anchorTexts, 
+                                                  pos($$refToText))/segx
           );
 
   if ($whetherToRemoveDuplicates) {
@@ -1391,10 +1392,12 @@ sub logAnchorText(\@$) {
   my $targetId;
   my $anchorText;
   my $AnchorArrayEntry;
+  my $linkLocation;
 
   foreach $AnchorArrayEntry (@$refToAnchorTextsArray) {
     $targetId = $$AnchorArrayEntry{targetId};
     $anchorText = $$AnchorArrayEntry{anchorText};
+    $linkLocation = $$AnchorArrayEntry{linkLocation};
 
     if ($targetId != $curPageId) {
       &postprocessText(\$anchorText, 0); # anchor text doesn't need escaping of XML characters,
@@ -1403,14 +1406,14 @@ sub logAnchorText(\@$) {
 
       # make sure that something is left of anchor text after postprocessing
       if (length($anchorText) > 0) {
-        print ANCHORF "$targetId\t$curPageId\t$anchorText\n";
+        print ANCHORF "$targetId\t$curPageId\t$linkLocation\t$anchorText\n";
       }
     }
   }
 }
 
 sub collectInternalLink($$$\@\@) {
-  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray) = @_;
+  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
 
   my $originalLink = $link;
   my $result = "";
@@ -1507,7 +1510,7 @@ sub collectInternalLink($$$\@\@) {
   # We also perform a quick check - if the link does not start with a digit,
   # then it surely does not contain a date
   if ( ($link =~ /^\d/) && (! $alternativeTextAvailable)) {
-    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextArray);
+    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
   }
 
   # If a date (either day or day + year) was recognized, then no further processing is necessary
@@ -1540,7 +1543,8 @@ sub collectInternalLink($$$\@\@) {
     }
 
     if ( defined($targetId) ) {
-      push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result" });
+      push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
+                                     linkLocation => "$linkLocation" });
     }
   }
 
@@ -1610,7 +1614,7 @@ sub resolveAndCollectInternalLink(\$\@) {
 # This function is only invoked if the link has no alternative text available, therefore,
 # we're free to override the result text.
 sub normalizeDates(\$\$\@\%) {
-  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextArray) = @_;
+  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
 
   my $dateRecognized = 0;
 
@@ -1627,7 +1631,8 @@ sub normalizeDates(\$\$\@\%) {
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
       if ( defined($targetId) ) {
-        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText" });
+        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
+                                       linkLocation => "$linkLocation" });
       }
     } else {
       # this doesn't look like a valid date, leave as-is
@@ -1648,7 +1653,8 @@ sub normalizeDates(\$\$\@\%) {
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText" });
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
+                                           linkLocation => "$linkLocation" });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
@@ -1675,13 +1681,15 @@ sub normalizeDates(\$\$\@\%) {
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink" });
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink",
+                                           linkLocation => "$linkLocation" });
         }
 
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
         if ( defined($targetId) ) {
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year" });
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year",
+                                           linkLocation => "$linkLocation" });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
