@@ -1,0 +1,11 @@
+# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>
+
+
+3	1	Lepa slika
+3	1	druga slika
+4	1	krneki
+2	1	Ga
+3	1	Image:Hello1.jpg
+3	2	grda slika
+3	2	prva slika
+4	2	krneki
