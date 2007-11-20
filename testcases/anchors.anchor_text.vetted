@@ -1,4 +1,4 @@
-# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>
+# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
 3	1	0	Lepa slika

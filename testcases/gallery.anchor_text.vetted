@@ -1,16 +1,16 @@
-# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>
+# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
 6	5	91	Image:Flevoland-Position.png
 1	5	155	Friesland
-7	5	184	Image:Gelderland-Position.png 
+7	5	184	Image:Gelderland-Position.png
 8	5	219	Image:Groningen-Position.png
 9	5	252	Image:Limburg-Position.png
-10	5	283	Image:Noord_Brabant-Position.png 
+10	5	283	Image:Noord_Brabant-Position.png
 11	5	321	Image:Noord_Holland-Position.png
 12	5	358	Image:Overijssel-Position.png
 13	5	489	Image:Utrecht-Position.png
 14	5	520	Image:Zeeland-Position.png
-15	5	7	Drenthe, the least crowded province   
+15	5	7	Drenthe, the least crowded province
 16	5	106	Friesland is beautiful
 17	5	346	South Holland, the most crowded province

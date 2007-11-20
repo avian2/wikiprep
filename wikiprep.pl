@@ -1405,6 +1405,9 @@ sub logAnchorText(\@$) {
                                          # hence the second function parameter is 0
       $anchorText =~ s/\n/ /g;  # replace all newlines with spaces
 
+      $anchorText =~ s/^\s*//g;  # remove leading and trainling whitespace
+      $anchorText =~ s/\s*$//g;
+
       # make sure that something is left of anchor text after postprocessing
       if (length($anchorText) > 0) {
         print ANCHORF "$targetId\t$curPageId\t$linkLocation\t$anchorText\n";
