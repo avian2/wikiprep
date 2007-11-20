@@ -11,7 +11,8 @@ LOGS =	images.log \
 	gallery.log \
 	unicode.log \
 	anchorspace.log \
-	citeweb.log
+	citeweb.log \
+	missinganchors.log
 
 all: $(LOGS) compare
 

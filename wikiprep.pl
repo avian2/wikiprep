@@ -1409,9 +1409,9 @@ sub logAnchorText(\@$) {
       $anchorText =~ s/\s*$//g;
 
       # make sure that something is left of anchor text after postprocessing
-      if (length($anchorText) > 0) {
-        print ANCHORF "$targetId\t$curPageId\t$linkLocation\t$anchorText\n";
-      }
+      #if (length($anchorText) > 0) {
+      print ANCHORF "$targetId\t$curPageId\t$linkLocation\t$anchorText\n";
+      #}
     }
   }
 }

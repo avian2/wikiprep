@@ -35,6 +35,14 @@ $t = "Image:Blah1";
 $r = &images::parseImageParameters($t);
 die($r) if ($r ne "");
 
+$t = "Image:Blah1|10px|";
+$r = &images::parseImageParameters($t);
+die($r) if ($r ne "");
+
+$t = "Image:Blah1|10px| ";
+$r = &images::parseImageParameters($t);
+die($r) if ($r ne " ");
+
 $t = <<END
 Some text
 <gallery>
