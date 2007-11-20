@@ -1,0 +1,60 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="3" orglength="19" newlength="19" stub="0" categories="0" outlinks="0" urls="0">
+<title>Dielo Trouda</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+	      Blah
+      
+</text>
+</page>
+<page id="1" orglength="757" newlength="169" stub="0" categories="0" outlinks="0" urls="2">
+<title>Gu</title>
+<categories></categories>
+<links></links>
+<urls>
+http://www.eonline.com/news/article/index.jsp?uuid=4de684ae-62eb-4b23-984c-d07ce72ea5e2
+http://seattletimes.nwsource.com/html/nationworld/2003829996_pearljam10.html?syndication=rss
+</urls>
+<text>
+
+
+Grossberg, Josh  (2007-10-09).   AT&amp;T&apos;s Pearl Jamming?      .
+
+ROBERTS, MICHELLE  (2007-10-10).   AT&amp;T: Pearl Jam edit a mistake    . Associated Press .
+
+
+</text>
+</page>
+</mediawiki>

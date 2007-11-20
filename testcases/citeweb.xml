@@ -1,0 +1,179 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Cite web</title>
+    <id>2</id>
+    <revision>
+      <id>146421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">
+	      &lt;includeonly&gt;{{
+		      #if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+		        ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+			{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+			}}{{
+			#if: {{{archiveurl|}}}{{{archivedate|}}} 
+			  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+			      ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+			      {{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+			      }}
+			      }}{{#if: {{{author|}}}{{{last|}}}
+			        | {{#if: {{{authorlink|}}}
+				    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+				          | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+					        | {{{author}}}
+						    }}]]
+						        | {{#if: {{{last|}}}
+							      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+							            | {{{author}}}
+								        }}
+									  }}
+									  }}{{#if: {{{author|}}}{{{last|}}}
+									    | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+									    }}{{#if: {{{author|}}}{{{last|}}}|
+									        {{#if: {{{date|}}}
+										    | &amp;#32;({{{date}}})
+										        | {{#if: {{{year|}}}
+											      | {{#if: {{{month|}}}
+											              | &amp;#32;({{{month}}} {{{year}}})
+												              | &amp;#32;({{{year}}})
+													            }}
+														        }}
+															  |}}
+															  }}{{#if: {{{last|}}}{{{author|}}}
+															    | .&amp;#32;}}{{
+															      #if: {{{editor|}}}
+															        | &amp;#32;{{{editor}}}: 
+																}}{{#if: {{{archiveurl|}}}
+																    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+																        | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+																	}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+																	}}{{#if: {{{language|}}} | &amp;#32;&lt;span style="color:#555;"&gt;({{{language}}})&lt;/span&gt; 
+																	}}{{#if: {{{work|}}}
+																	  | .&amp;#32;''{{{work}}}''
+																	  }}{{#if: {{{pages|}}}
+																	    | &amp;#32;{{{pages}}}
+																	    }}{{#if: {{{publisher|}}}
+																	      | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+																	          | 
+																		      | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+																		        }}
+																			}}{{#if: {{{author|}}}{{{last|}}}
+																			  ||{{#if: {{{date|}}}
+																			      | &amp;#32;({{{date}}})
+																			          | {{#if: {{{year|}}}
+																				        | {{#if: {{{month|}}}
+																					        | &amp;#32;({{{month}}} {{{year}}})
+																						        | &amp;#32;({{{year}}})
+																							      }}
+																							          }}
+																								    }}
+																								    }}.{{#if: {{{archivedate|}}}
+																								      | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+																								      }}{{#if: {{{doi|}}} 
+																								        | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+																									}}{{#if: {{{accessdate|}}}
+																									  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+																									  }}{{#if: {{{accessmonthday|}}}
+																									    | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}.
+																									    }}{{#if: {{{accessdaymonth|}}}
+																									      | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}.
+																									      }}{{#if: {{{quote|}}} 
+																									        | &amp;nbsp;“{{{quote}}}”
+																										}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Dielo Trouda</title>
+    <id>3</id>
+    <revision>
+      <id>136421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">
+	      Blah
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Gu</title>
+    <id>1</id>
+    <revision>
+      <id>136421847</id>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <contributor>
+        <username>Cwschimpff</username>
+        <id>4581842</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
+      <text xml:space="preserve">
+	      
+     {{cite web
+        | last = Grossberg
+	  | first = Josh 
+		    | authorlink =
+		      | coauthors =
+		        | title = AT&amp;T's Pearl Jamming?
+			  | work =
+			    | publisher =
+			      | date = 2007-10-09
+			        | url = http://www.eonline.com/news/article/index.jsp?uuid=4de684ae-62eb-4b23-984c-d07ce72ea5e2
+				  | format =
+				    | doi =
+				    | accessdate =  }} 
+
+&lt;ref&gt;{{cite web
+  | last = ROBERTS
+  | first = MICHELLE 
+  | authorlink =
+  | coauthors =
+  | title = AT&amp;T: Pearl Jam edit a mistake
+  | work =
+  | publisher = Associated Press
+  | date = 2007-10-10
+  | url = http://seattletimes.nwsource.com/html/nationworld/2003829996_pearljam10.html?syndication=rss
+  | format =
+  | doi =
+  | accessdate =  }}&lt;/ref&gt;
+				    
+			    </text>
+    </revision>
+  </page>
+</mediawiki>

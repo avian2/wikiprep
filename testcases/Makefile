@@ -10,7 +10,8 @@ LOGS =	images.log \
 	citebook.log \
 	gallery.log \
 	unicode.log \
-	anchorspace.log
+	anchorspace.log \
+	citeweb.log
 
 all: $(LOGS) compare
 
