@@ -166,7 +166,7 @@ binmode(LOCALF, ':utf8');
 binmode(DISAMBIGF, ':utf8');
 binmode(LOCALIDF, ':utf8');
 
-print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor text (up to the end of the line)>\n\n\n";
+print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
 
 print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
@@ -277,6 +277,7 @@ sub isDisambiguation($) {
                                     (disambig)|
                        		          (dab)|
                        		          (hndis)|
+                                    (surname)|
                        		          (geodis)|
                        		          (schooldis)|
                        		          (hospitaldis)|
@@ -1369,7 +1370,7 @@ sub extractInternalLinks(\$\@$$$) {
                                               # in which case they become part of the link
                                               # e.g., "[[public transport]]ation"
                             /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \@anchorTexts, 
-                                                  pos($$refToText))/segx
+                                                  $-[0])/segx
           );
 
   if ($whetherToRemoveDuplicates) {
