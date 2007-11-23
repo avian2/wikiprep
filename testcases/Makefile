@@ -32,6 +32,7 @@ clean:
 	rm -f *.redir.xml
 	rm -f *.disambig
 	rm -f *.min_local_id
+	rm -rf *.templates
 
 compare:
 	./compare

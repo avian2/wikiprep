@@ -144,6 +144,9 @@ my $localIDFile = "$filePath/$fileBasename.min_local_id";
 # Information about redirects
 my $redirFile = "$filePath/$fileBasename.redir.xml";
 
+# Information about template inclusion
+my $templateIncDir = "$filePath/$fileBasename.templates";
+
 # Needed for benchmarking and ETA calculation
 my $totalPageCount = 0;
 my $totalByteCount = 0;
@@ -165,6 +168,14 @@ binmode(RELATEDF, ':utf8');
 binmode(LOCALF, ':utf8');
 binmode(DISAMBIGF, ':utf8');
 binmode(LOCALIDF, ':utf8');
+
+mkdir($templateIncDir);
+
+if( opendir(TEMPD, "$templateIncDir") ) {
+  my @dirContents = readdir(TEMPD);
+  unlink @dirContents;
+  closedir(TEMPD);
+}
 
 print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
@@ -725,7 +736,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
-    &includeTemplates(\$text);
+    &includeTemplates(\$id, \$text);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
@@ -906,8 +917,8 @@ sub resolveLink(\$) {
   $targetId; # return value
 }
 
-sub includeTemplates(\$) {
-  my ($refToText) = @_;
+sub includeTemplates(\$\$) {
+  my ($refToId, $refToText) = @_;
 
   # Using the while loop forces templates to be included recursively
   # (i.e., includes the body of templates that themselves were included
@@ -952,7 +963,7 @@ sub includeTemplates(\$) {
 #                                               # hence "[^\{]" (any char except opening brace).
 # END OF OLD code and comments
                            \}\}
-                          /&instantiateTemplate($1)/segx
+                          /&instantiateTemplate($1, $refToId)/segx
         ) {
     # print LOGF "Finished with templates level $templateRecursionLevels\n";
     # print LOGF "#########\n\n";
@@ -1083,8 +1094,8 @@ BEGIN {
 } # end of BEGIN block
 
 
-sub instantiateTemplate($) {
-  my ($templateInvocation) = @_;
+sub instantiateTemplate($\$) {
+  my ($templateInvocation, $refToId) = @_;
 
   my $result = "";
 
@@ -1100,7 +1111,7 @@ sub instantiateTemplate($) {
   if ( length($result) == 0 ) {
     &computeFullyQualifiedTemplateTitle(\$templateTitle);
 
-    &includeTemplateText(\$templateTitle, \%templateParams, \$result);
+    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result);
   }
 
   $result;  # return value
@@ -1175,14 +1186,34 @@ sub includeParserFunction(\$\%\$) {
   }
 }
 
-sub includeTemplateText(\$\%\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToResult) = @_;
+sub logTemplateInclude(\$\$\%) {
+  my ($refToTemplateId, $refToPageId, $refToParameterHash) = @_;
+
+  open(TEMPF, ">>$templateIncDir/$$refToTemplateId");
+
+  print TEMPF "Page $$refToPageId\n";
+
+  foreach my $parameter ( keys(%$refToParameterHash) ) {
+    if($parameter !~ /^=/) {
+      my $value = $$refToParameterHash{$parameter};
+      print TEMPF "$parameter = $value\n";
+    }
+  }
+  print TEMPF "End\n";
+
+  close(TEMPF);
+}
+
+sub includeTemplateText(\$\%\$\$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult) = @_;
 
   &normalizeTitle($refToTemplateTitle);
   my $includedPageId = &resolveLink($refToTemplateTitle);
 
   if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
     # OK, perform the actual inclusion with parameter substitution
+
+    &logTemplateInclude(\$includedPageId, $refToId, $refToParameterHash);
 
     $$refToResult = $templates{$includedPageId};
 
