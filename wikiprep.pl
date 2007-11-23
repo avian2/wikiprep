@@ -1190,6 +1190,7 @@ sub logTemplateInclude(\$\$\%) {
   my ($refToTemplateId, $refToPageId, $refToParameterHash) = @_;
 
   open(TEMPF, ">>$templateIncDir/$$refToTemplateId");
+  binmode(TEMPF,  ':utf8');
 
   print TEMPF "Page $$refToPageId\n";
 
