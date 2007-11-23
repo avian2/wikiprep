@@ -577,6 +577,12 @@ sub prescan() {
   my %idexists;
 
   my $page;
+
+  open(TEMPINDEX, "> $templateIncDir/index");
+  binmode(TEMPINDEX,  ':utf8');
+
+  print TEMPINDEX "# Line format: <Template page id>  <Template name>\n";
+
   while (defined($page = $pages->page)) {
     my $id = $page->id;
 
@@ -642,6 +648,8 @@ sub prescan() {
     if ($title =~ /^Template:/) {
       my $text = ${$page->text};
 
+      print TEMPINDEX "$id\t$title\n";
+
       # We're storing template text for future inclusion, therefore,
       # remove all <noinclude> text and keep all <includeonly> text
       # (but eliminate <includeonly> tags per se).
@@ -669,6 +677,8 @@ sub prescan() {
       $templates{$id} = $text;
     }
   }
+
+  close(TEMPINDEX);
 
   my $timeStr = &getTimeAsString();
   print LOGF "[$timeStr] Prescanning complete - prescanned $counter pages\n";
