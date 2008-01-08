@@ -1,0 +1,142 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Infobox Protected area</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {| class="infobox vcard" style="width:{{{width|300}}}px; font-size:90%;"
+		    !colspan="2" style="font-size:larger; text-align:center" class="fn org"| {{{name}}}
+
+		    |- style="text-align:center;"
+		    {{#if:{{{iucn_category&lt;includeonly&gt;|&lt;/includeonly&gt;}}}  |&lt;!--then:--&gt;
+		    {{!}}colspan="2" {{Infobox protected area/IUCN {{{iucn_category}}} }}
+		    }}
+
+		    |-
+		    {{#if:{{{image&lt;includeonly&gt;|&lt;/includeonly&gt;}}}          |&lt;!--then:--&gt;
+		    {{!}}colspan="2" style="line-height:1.2;"{{!}} &lt;div align="center" style="border:1px solid #ccc;"&gt;&lt;!--
+			    --&gt;{{Superimpose
+			       |base          = {{{image}}}
+			          |base_width    = {{{base_width|288}}}px
+				     |base_caption  = {{{caption&lt;includeonly&gt;|&lt;/includeonly&gt;}}}
+				        |float         = Red_pog.svg
+					   |float_width   = 9px
+					      |float_caption = {{{name}}}
+					         |x             = {{{locator_x|}}}
+						    |y             = {{{locator_y|}}}
+						       }}&lt;/div&gt; &lt;center&gt;&lt;small&gt;{{{caption&lt;includeonly&gt;|&lt;/includeonly&gt;}}}&lt;/small&gt;&lt;/center&gt;
+					       }}
+
+					       |- style="vertical-align:top;" class="adr"
+					       {{#if:{{{location&lt;includeonly&gt;|&lt;/includeonly&gt;}}}       |&lt;!--then:--&gt;
+					       {{!}} '''Location'''
+					       {{!}}style="line-height:11pt;"{{!}} &lt;span class="region"&gt;{{{location}}}&lt;/span&gt;
+					       }}
+					       |- style="vertical-align:top;"
+					       {{#if:{{{nearest_city&lt;includeonly&gt;|&lt;/includeonly&gt;}}}   |&lt;!--then:--&gt;
+					       {{!}} '''Nearest city'''
+					       {{!}}style="line-height:11pt;"{{!}} {{{nearest_city}}}
+					       }}
+					       |- style="vertical-align:top;"
+					       {{#if:{{{lat_degrees&lt;includeonly&gt;|&lt;/includeonly&gt;}}}    |&lt;!--then:--&gt;
+					       {{!}} '''Coordinates'''
+					       {{!}} {{Coord|{{{lat_degrees|}}}|{{{lat_minutes|}}}|{{{lat_seconds|}}}|{{{lat_direction|}}}&lt;!--
+					       --&gt;|{{{long_degrees|}}}|{{{long_minutes|}}}|{{{long_seconds|}}}|{{{long_direction|}}}&lt;!--
+					       --&gt;|display=inline|}}
+					       }}
+
+					       |- style="vertical-align:top;"
+					       {{#if:{{{area&lt;includeonly&gt;|&lt;/includeonly&gt;}}}           |&lt;!--then:--&gt;
+					       {{!}} '''Area'''
+					       {{!}} {{{area}}}
+					       }}
+
+					       |- style="vertical-align:top;" class="note"
+					       {{#if:{{{established&lt;includeonly&gt;|&lt;/includeonly&gt;}}}    |&lt;!--then:--&gt;
+					       {{!}} '''Established'''
+					       {{!}}style="line-height:11pt;"{{!}} {{{established}}}
+					       }}
+
+					       |- style="vertical-align:top"
+					       {{#if:{{{visitation_num&lt;includeonly&gt;|&lt;/includeonly&gt;}}} |&lt;!--then:--&gt;
+					       {{!}} '''Visitors'''
+					       {{!}}style="line-height:11pt;"{{!}} {{{visitation_num}}} (in&amp;nbsp;{{{visitation_year}}})
+					       }}
+
+					       |- style="vertical-align:top;"
+					       {{#if:{{{governing_body&lt;includeonly&gt;|&lt;/includeonly&gt;}}} |&lt;!--then:--&gt;
+					       {{!}}style="white-space:nowrap;"{{!}} '''Governing body'''
+					       {{!}}style="line-height:11pt;"  {{!}} {{{governing_body}}}
+					       }}
+
+					       |- style="vertical-align:top;"
+					       {{#if:{{{world_heritage_site&lt;includeonly&gt;|&lt;/includeonly&gt;}}} |&lt;!--then:--&gt;
+					       {{!}}style="white-space:nowrap;"{{!}} '''World Heritage Site'''
+					       {{!}}style="line-height:11pt;"  {{!}} {{{world_heritage_site}}}
+					       }}
+
+					       |}&lt;noinclude&gt;
+						       &lt;!--
+						           PLEASE DO NOT ADD DOCUMENTATION/CATEGORIES/INTERWIKIS HERE
+							   --&gt;
+							   {{Documentation, template}}
+							   &lt;!--
+							       MAKE ADDITIONS TO THE /doc SUBPAGE INSTEAD, THANKS
+							       --&gt;
+						       &lt;/noinclude&gt;
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Statue of Liberty</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{Infobox Protected area
+		    | name = Statue of Liberty National Monument
+		    | iucn_category = III
+		    | image = Liberty_2005_3.jpg
+		    | caption = Statue of Liberty
+		    | locator_x = 
+		    | locator_y =
+		    | location = [[Liberty Island]], [[New York]], [[United States|USA]]
+		    | nearest_city = [[Jersey City, New Jersey]]
+		    | area = 12 acres (49,000m²)
+		    | overall height = 92.99 m
+		    | established = Statue dedicated [[October 28]] [[1886]]; National Monument established [[October 15]] [[1924]]
+		    | visitation_num = 4,235,595 (includes [[Ellis Island|Ellis Island NM]])
+		    | visitation_year = 2005
+		    | governing_body = [[National Park Service]]
+		    }}
+	    </text>
+    </revision>
+  </page>
+</mediawiki>

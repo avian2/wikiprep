@@ -12,7 +12,8 @@ LOGS =	images.log \
 	unicode.log \
 	anchorspace.log \
 	citeweb.log \
-	missinganchors.log
+	missinganchors.log \
+	infobox.log
 
 all: $(LOGS) compare
 
