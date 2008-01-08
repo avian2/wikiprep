@@ -104,8 +104,8 @@ my $maxParameterRecursionLevels = 5;
 
 my %namespaces;
 # we only process pages in these namespaces + the main namespace (which has an empty name)
-my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1);
-my %okNamespacesForTransforming = ('Category' => 1); # we don't use templates as concepts
+my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1, 'Image' => 1);
+my %okNamespacesForTransforming = ('Category' => 1, 'Image' => 1); # we don't use templates as concepts
 my %okNamespacesForLocalPages = ('Image' => 1);
 
 # Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
