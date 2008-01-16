@@ -16,10 +16,12 @@ LOGS =	images.log \
 	infobox.log \
 	nowiki.log
 
-all: $(LOGS) compare
+all: test
+
+test: clean $(LOGS) compare
 
 %.log: %.xml
-	perl ../wikiprep.pl -log -f $<
+	perl ../wikiprep.pl -log -f $< >/dev/null
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
@@ -39,4 +41,4 @@ clean:
 compare:
 	./compare
 
-.PHONY: clean compare
+.PHONY: clean compare test all
