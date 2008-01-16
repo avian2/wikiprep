@@ -1,14 +1,20 @@
+Original source
+===============
+
 Wikipedia Preprocessor (WikiPrep)
-
 Evgeniy Gabrilovich (gabr@cs.technion.ac.il)
-
 GPLv2
 
 http://www.cs.technion.ac.il/~gabr/resources/code/wikiprep
 
+Testing
+=======
 
-TODO:
+$ make test
 
-Support more than one anchor text per link per article
+Usage
+=====
 
-Include locally added title/ids into XML
+Run the following to get a list of available options:
+
+$ perl wikiprep.pl
