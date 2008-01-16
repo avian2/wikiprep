@@ -1,47 +1,49 @@
-use strict;
-
-use FindBin;
-use lib "$FindBin::Bin";
-
+use Test::Simple tests => 12;
 use images;
 
 my ($t, $r);
 
 $t = "Image:Blah1|short|longer|the longest anchor text";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "the longest anchor text");
+
+ok($r eq "the longest anchor text");
 
 $t = "Image:Blah1|240x240px|anchor text";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "anchor text");
+
+ok($r eq "anchor text");
 
 $t = "Image:Blah1|100px|left|an";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "an");
+
+ok($r eq "an");
 
 $t = "Image:Blah1|100PX|Left|An";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "An");
+
+ok($r eq "An");
 
 $t = "Image:Blah1|100PX|Left|";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "");
+
+ok($r eq "");
 
 $t = "Image:Blah1|100PX|Left";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "");
+
+ok($r eq "");
 
 $t = "Image:Blah1";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "");
+ok($r eq "");
 
 $t = "Image:Blah1|10px|";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne "");
+ok($r eq "");
 
 $t = "Image:Blah1|10px| ";
 $r = &images::parseImageParameters($t);
-die($r) if ($r ne " ");
+ok($r eq " ");
 
 $t = <<END
 Some text
@@ -60,7 +62,7 @@ Some text here
 END
 ;
 &images::convertGalleryToLink(\$t);
-die($t) if ($t ne $r);
+ok($r eq $t);
 
 $t = <<END
 Some text
@@ -84,7 +86,7 @@ Some text here
 END
 ;
 &images::convertGalleryToLink(\$t);
-die($t) if ($t ne $r);
+ok($r eq $t);
 
 $t = <<END
 <imagemap>
@@ -119,40 +121,4 @@ $r = <<END
 END
 ;
 &images::convertImagemapToLink(\$t);
-die($t) if ($t ne $r);
-
-use nowiki;
-
-print "Generated unique strings:\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
-
-
-$t = <<END
-hello<nowiki>, world!</nowiki>
-END
-;
-$r = $t;
-
-my %tok;
-&nowiki::extractTags("(<nowiki>.*?</nowiki>)", \$t, \%tok);
-&nowiki::replaceTags(\$t, \%tok);
-
-$t = <<END
-hello<nowiki>, 
-world!</nowiki> nice day
-<nowiki>[[not a link]]</nowiki>
-\x7fUNIQ1234567812345678
-END
-;
-$r = $t;
-
-%tok = {};
-
-&nowiki::extractTags("(<nowiki>.*?</nowiki>)", \$t, \%tok);
-die unless ($t =~ /nice day/);
-&nowiki::replaceTags(\$t, \%tok);
-
-die($t) if ($t ne $r);
+ok($r eq $t);

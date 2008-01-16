@@ -30,7 +30,7 @@ sub convertOneGallery($) {
   # Simply enclose each line that starts with Image: in [[ ... ]] and leave the links to be collected by
   # collectInternalLink()
 
-  $galleryText =~ s/^\s*(Image:.*)\s*$/[[\1]]/mig;
+  $galleryText =~ s/^\s*(Image:.*)\s*$/[[$1]]/mig;
 
   return $galleryText;
 }
@@ -71,13 +71,13 @@ sub convertOneImagemap($) {
   my ($imagemapText) = @_;
 
   # Convert image specification to a link
-  $imagemapText =~ s/^\s*(Image:.*)\s*$/[[\1]]/mig;
+  $imagemapText =~ s/^\s*(Image:.*)\s*$/[[$1]]/mig;
 
   # Remove comments
   $imagemapText =~ s/^\s*#.*$//mig;
 
   # Remove location specifications
-  $imagemapText =~ s/^.*(\[\[.*\]\])\s*$/\1/mig;
+  $imagemapText =~ s/^.*(\[\[.*\]\])\s*$/$1/mig;
 
   return $imagemapText;
 }
