@@ -1,0 +1,74 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+      <text xml:space="preserve">
+      &lt;!-- NOTE TO EDITORS: Beware ... you are editing a "Template", This means that if you edit this section then it will appear in all the Gunpowder Plot articles. The good news is that good changes will be seen a large number of times. The bad news is that you can wreck other articles. Do go and look at other articles to check your change has not caused grief - If in doubt then discuss your proposed changes first on the talk pages. --&gt;
+&lt;imagemap&gt;
+Image:Gunpow1.jpg|thumb|320px|A contemporary sketch of the conspirators. The Dutch artist, Crispijn van de Passe the Elder, probably never met any of the conspirators, but the sketch has become well-known nonetheless.|left
+
+poly 1379 85 1548 90 1555 261 1647 332 1602 432 1661 500 1700 962 1163 964 1142 757 1193 595 1121 589 1149 531 1082 556 1236 470 1160 630 [[Robert Catesby|Robert Catesby]]
+poly 1028 301 1225 67 1332 71 1313 230 1237 298 1276 335 1265 387 1227 499 1054 559 1163 651 1136 734 1091 859 986 483 [[Guy Fawkes|Guido Fawkes]]
+poly 1603 292 1684 152 1693 34 1812 33 1826 276 1862 307 1862 969 1791 968 [[Thomas Wintour|Thomas Winter]]
+poly 802 308 861 264 886 71 1024 77 991 252 1058 261 1016 328 986 482 841 727 814 730 812 614 764 521 [[Thomas Percy (plotter)|Thomas Percy]]
+poly 679 216 679 112 696 50 729 11 795 11 862 100 862 232 852 276 791 313 833 322 830 394 777 431 707 398 682 347 681 280 731 276 738 260 [[John Wright (Gunpowder Plot)|John Wright]]
+poly 485 233 470 73 401 54 401 2 590 3 569 70 585 101 629 122 637 208 734 262 713 279 662 281 665 379 691 372 718 412 775 451 759 481 760 516 757 574 793 645 801 722 722 706 654 613 654 554 632 508 500 459 496 404 558 380 508 328 432 303 417 257 488 259 [[Christopher Wright|Christopher Wright]]
+poly 174 129 172 53 314 56 323 135 480 218 478 253 405 254 421 305 553 376 477 411 494 466 626 516 650 558 649 623 713 716 856 739 871 744 1016 641 1060 757 1032 803 976 791 976 791 917 806 929 969 359 969 203 813 166 661 171 570 210 507 [[Robert Wintour|Robert Winter]]
+poly 2 188 112 206 189 363 203 503 156 591 159 683 156 754 237 935 223 966 3 967 [[Thomas Bates (Gunpowder plot)|Thomas Bates]]
+
+desc none
+&lt;/imagemap&gt;
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Robert Catesby</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">A</text>
+    </revision>
+  </page>
+  <page>
+    <title>Guy Fawkes</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">A</text>
+    </revision>
+  </page>
+  <page>
+    <title>Thomas Wintour</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">A</text>
+    </revision>
+  </page>
+</mediawiki>

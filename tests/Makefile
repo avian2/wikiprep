@@ -14,7 +14,8 @@ LOGS =	images.log \
 	citeweb.log \
 	missinganchors.log \
 	infobox.log \
-	nowiki.log
+	nowiki.log \
+	imagemap.log
 
 all: test
 
