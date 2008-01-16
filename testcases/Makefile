@@ -13,7 +13,8 @@ LOGS =	images.log \
 	anchorspace.log \
 	citeweb.log \
 	missinganchors.log \
-	infobox.log
+	infobox.log \
+	nowiki.log
 
 all: $(LOGS) compare
 

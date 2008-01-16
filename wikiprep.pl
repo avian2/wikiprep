@@ -38,6 +38,7 @@ use FindBin;
 use lib "$FindBin::Bin";
 
 use images;
+use nowiki;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.2";
@@ -927,6 +928,10 @@ sub resolveLink(\$) {
   $targetId; # return value
 }
 
+BEGIN {
+
+my $nowikiRegex = qr/(<nowiki>.*?<\/nowiki>)/;
+
 sub includeTemplates(\$\$) {
   my ($refToId, $refToText) = @_;
 
@@ -952,8 +957,14 @@ sub includeTemplates(\$\$) {
 
   # Use negative look-ahead and look-behind to make sure that we are matching agains two opening
   # braces and not three (which may be left after unsuccessful parameter substitution
-  while ( ($templateRecursionLevels < $maxTemplateRecursionLevels) &&
-          $$refToText =~ s/(?<!\{)\{\{(?!\{)
+  while ($templateRecursionLevels < $maxTemplateRecursionLevels) {
+    my %ChunksReplaced = ();
+
+    # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
+    # infinite loops if templates include an example invocation in <nowiki> tags.
+    &nowiki::extractTags($nowikiRegex, $refToText, \%ChunksReplaced);
+
+    my $r = $$refToText =~ s/(?<!\{)\{\{(?!\{)
                                 (?:\s*)        # optional whitespace before the template name is ignored
                                 (
                                   (?:
@@ -972,9 +983,13 @@ sub includeTemplates(\$\$) {
 #                                               # template name does not include opening braces,
 #                                               # hence "[^\{]" (any char except opening brace).
 # END OF OLD code and comments
-                           \}\}
-                          /&instantiateTemplate($1, $refToId)/segx
-        ) {
+                             \}\}
+                            /&instantiateTemplate($1, $refToId)/segx;
+
+    &nowiki::replaceTags($refToText, \%ChunksReplaced);
+
+    last unless ($r);
+
     # print LOGF "Finished with templates level $templateRecursionLevels\n";
     # print LOGF "#########\n\n";
     # print LOGF "$$refToText";
@@ -985,6 +1000,8 @@ sub includeTemplates(\$\$) {
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them - however, we do so
   # later, in function 'postprocessText()', after extracting categories, links and URLs.
+}
+
 }
 
 BEGIN {
