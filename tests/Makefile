@@ -15,7 +15,8 @@ LOGS =	images.log \
 	missinganchors.log \
 	infobox.log \
 	nowiki.log \
-	imagemap.log
+	imagemap.log \
+	enwiki-20080103-pages-articles.log
 
 all: test
 
@@ -37,6 +38,7 @@ clean:
 	rm -f *.redir.xml
 	rm -f *.disambig
 	rm -f *.min_local_id
+	rm -f *.version
 	rm -rf *.templates
 
 compare:

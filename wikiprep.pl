@@ -39,6 +39,7 @@ use lib "$FindBin::Bin";
 
 use images;
 use nowiki;
+use revision;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.2";
@@ -149,9 +150,14 @@ my $redirFile = "$filePath/$fileBasename.redir.xml";
 # Information about template inclusion
 my $templateIncDir = "$filePath/$fileBasename.templates";
 
+# Information about dump and wikiprep versions
+my $versionFile = "$filePath/$fileBasename.version";
+
 # Needed for benchmarking and ETA calculation
 my $totalPageCount = 0;
 my $totalByteCount = 0;
+
+&revision::writeVersion($versionFile, $file);
 
 open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
 open(LOGF, "> $logFile") or die "Cannot open $logFile";

@@ -1,5 +1,6 @@
 TESTS = images.pl \
-	nowiki.pl
+	nowiki.pl \
+	revision.pl
 
 all: test
 
