@@ -18,7 +18,8 @@ LOGS =	images.log \
 	imagemap.log \
 	enwiki-20080103-pages-articles.log \
 	xmlcomments.log \
-	nestedtables.log
+	nestedtables.log \
+	div.log
 
 all: test
 

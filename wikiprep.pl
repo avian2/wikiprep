@@ -2026,7 +2026,7 @@ BEGIN {
   my $tableOpeningSequence2 = qr/\{\|/;
 # We must take care that the closing sequence doesn't match any template parameters inside a table 
 # (example " {{{footnotes|}}}). So we only match on a single closing brace.
-  my $tableClosingSequence2 = qr/\|\}([^}]|$)/;
+  my $tableClosingSequence2 = qr/\|\}(?!\})/;
 #  my $nonNestedTableRegex2 =
 #    qr{$tableOpeningSequence2            # opening sequence
 #       (
@@ -2065,7 +2065,7 @@ BEGIN {
 
     while ( ($tableRecursionLevels < $maxTableRecursionLevels) &&
             $$refToText =~ s/$tableSequence2/\n/g ) {
-
+    
       $tableRecursionLevels++;
     }
   }
