@@ -4,4 +4,7 @@ test:
 	make -wC tests-perl test
 	make -wC tests test
 
-.PHONY: all test
+clean:
+	make -wC tests clean
+
+.PHONY: all test clean

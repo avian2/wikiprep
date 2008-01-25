@@ -101,6 +101,7 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
 
 my $maxTemplateRecursionLevels = 5;
 my $maxParameterRecursionLevels = 5;
+my $maxTableRecursionLevels = 5;
 
 ##### Global variables #####
 
@@ -2040,20 +2041,33 @@ BEGIN {
 #       $tableClosingSequence2}sx;        # closing sequence
 
   my $tableSequence1 = qr/$tableOpeningSequence1(?:.*?)$tableClosingSequence1/s;
-  my $tableSequence2 = qr/$tableOpeningSequence2(?:.*?)$tableClosingSequence2/s;
+  my $tableSequence2 = qr/$tableOpeningSequence2(?:
+                                                      (?:
+                                                            (?!\{\|)          # Don't match nested tables
+                                                            .
+                                                      )*?
+                                                )$tableClosingSequence2/sx;
 
   sub eliminateTables(\$) {
     my ($refToText) = @_;
 
-# Sadly, these patterns became too complex and cause segmentation fault,
-# hence we fall back to only handling non-nested tables :(
-#    # Sometimes, tables are nested, therefore we use a while loop to eliminate them
-#    # recursively, while requiring that any table we eliminate does not contain nested tables.
-#    # For simplicity, we assume that tables of the two kinds (e.g., <table> ... </table> and {| ... |})
-#    # are not nested in one another.
+    # Sometimes, tables are nested, therefore we use a while loop to eliminate them
+    # recursively, while requiring that any table we eliminate does not contain nested tables.
+    # For simplicity, we assume that tables of the two kinds (e.g., <table> ... </table> and {| ... |})
+    # are not nested in one another.
+
+    my $tableRecursionLevels = 0;
 
     $$refToText =~ s/$tableSequence1/\n/g;
-    $$refToText =~ s/$tableSequence2/\n/g;
+
+    # We only resolve nesting {| ... |} style tables, which are often nested in infoboxes and similar
+    # templates.
+
+    while ( ($tableRecursionLevels < $maxTableRecursionLevels) &&
+            $$refToText =~ s/$tableSequence2/\n/g ) {
+
+      $tableRecursionLevels++;
+    }
   }
 
   sub eliminateMath(\$) {
