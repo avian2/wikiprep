@@ -1,0 +1,111 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+	    {{Citations missing|article|date=January 2008}}
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Citations missing</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+	    &lt;!--{{Citations missing}} begin--&gt;{{ambox
+	    | type  = content
+	    | text  = '''This {{{1|article or section}}} is missing [[Wikipedia:Citing sources|citations]] or needs [[Wikipedia:Footnotes|footnotes]].'''&lt;br/&gt;&lt;small&gt;Using [[Wikipedia:inline citations|inline citations]] helps guard against copyright violations and factual inaccuracies. {{#if:{{{date|}}}| ''({{{date}}})''|}}&lt;/small&gt;
+	    }}&lt;includeonly&gt;{{#if:{{{date|}}}|{{{category|[[Category:Articles with unsourced statements since {{{date}}}]]}}}|{{{category|[[Category:Articles with unsourced statements]]}}}}}{{{category|[[Category:All articles with unsourced statements]]}}}&lt;/includeonly&gt;&lt;!--{{Citations missing}} end--&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ambox</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">
+	    &lt;table style="{{{style|}}}" class="metadata plainlinks ambox {{#switch:{{{type|}}}
+	      | serious  = ambox-serious
+	        | content  = ambox-content
+		  | style    = ambox-style
+		    | merge    = ambox-merge
+		      | notice   = ambox-notice
+		        | #default = ambox-notice
+	    }}"&gt;
+	    &lt;tr&gt;
+	    &lt;td class="ambox-image"&gt;
+	    {{#ifeq:{{{image}}}|none
+	      | &lt;!-- no image cell; empty cell necessary for text cell to have 100% width --&gt;
+	        | &lt;div style="width:52px;"&gt; {{#switch:{{{image|{{{type|}}}}}}
+		    | serious  = [[Image:Stop hand nuvola.svg|40px]]
+		        | content  = [[Image:Emblem-important.svg|40px]]
+			    | style    = [[Image:Broom icon.svg|40px]]
+			        | merge    = [[Image:Merge-split-transwiki default.svg]]
+				    | notice   = [[Image:Info non-talk.png|40px]]
+				        | blank    = [[Image:No image.svg]]
+					    | #default = {{{image|[[Image:Info non-talk.png|40px]]}}}
+					      }}&lt;/div&gt;
+	    }}&lt;/td&gt;
+	    &lt;td class="ambox-text"&gt;{{{text}}}&lt;/td&gt;
+	    {{#if:{{{imageright|}}}|
+	      &lt;td class="ambox-imageright"&gt;&lt;div style="width:52px;"&gt; {{{imageright}}} &lt;/div&gt;&lt;/td&gt;
+	    }}
+	    &lt;/tr&gt;
+	    &lt;/table&gt;&lt;noinclude&gt;
+	    {{template doc}}
+	    &lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+	    &lt;/noinclude&gt;
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>B</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">
+	    &lt;!--{{Citations missing}} begin--&gt;{{ambox
+	    | type  = content
+	    | text  = '''This {{{1|article or section}}} is missing [[Wikipedia:Citing sources|citations]] or needs [[Wikipedia:Footnotes|footnotes]].'''&lt;br/&gt;&lt;small&gt;Using [[Wikipedia:inline citations|inline citations]] helps guard against copyright violations and factual inaccuracies. {{#if:{{{date|}}}| ''({{{date}}})''|}}&lt;/small&gt;
+	    }}
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>C</title>
+    <id>5</id>
+    <revision>
+	    <text xml:space="preserve">
+	    &lt;!-- &lt;!-- blah --&gt; end --&gt;
+	    </text>
+    </revision>
+  </page>
+</mediawiki>

@@ -16,7 +16,8 @@ LOGS =	images.log \
 	infobox.log \
 	nowiki.log \
 	imagemap.log \
-	enwiki-20080103-pages-articles.log
+	enwiki-20080103-pages-articles.log \
+	xmlcomments.log
 
 all: test
 
