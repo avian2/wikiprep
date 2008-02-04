@@ -8,4 +8,4 @@ $wikirev = revision::getDumpDate("/var/wikipedia/enwiki-20080103-pages-articles.
 ok($wikirev eq "20080103");
 
 $wikirev = revision::getDumpDate("bogus");
-ok(not defined($wikirev));
+ok($wikirev eq "unknown");
