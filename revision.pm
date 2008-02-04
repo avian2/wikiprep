@@ -1,24 +1,26 @@
 # vim:sw=2:tabstop=2:expandtab
 
 use strict;
+use FindBin;
 
 package revision;
 
 sub getWikiprepRevision() {
-  my $svnrev = '$Rev$';
+  open(VERSION, "svnversion $FindBin::Bin|");
+  my $version = <VERSION>;
+  chomp($version);
+  close(VERSION);
 
-  $svnrev =~ s/.*: ([0-9]+).*/$1/;
-
-  return $svnrev;
+  return $version;
 }
 
 sub getDumpDate($) {
   my ($dumpFile) = @_;
 
-  if($dumpFile =~ /enwiki-([0-9]+)-pages-articles.xml$/) {
+  if($dumpFile =~ /[a-z]+-([0-9]+)-pages-articles.xml$/) {
     return $1;
   } else {
-    return undef;
+    return "unknown";
   }
 }
 
