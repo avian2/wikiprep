@@ -1,0 +1,115 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+	    {{en|A picture of [[:en:Black hairy tongue|black tongue]].}}
+
+	    {{#language:be}}
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:en</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+{{description|1=en|2={{{1|}}}|3=English|inline={{{inline|}}}}}&lt;noinclude&gt;
+&lt;div class="description en"&gt;
+== Usage ==
+Usage: 
+* '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''English translation'''''&lt;nowiki&gt;}}&lt;/nowiki&gt;'''
+* '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''English translation'''''&lt;nowiki&gt;|inline=yes}}&lt;/nowiki&gt;'''
+
+Result: {{en|English translation}} or {{en|English translation|inline=yes}}.
+
+See also [[Commons:Multilinguality]]
+&lt;/div&gt;
+&lt;div class="description fr"&gt;
+== Utilisation ==
+Utilisation : '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''Version anglophone'''''&lt;nowiki&gt;}}&lt;/nowiki&gt;'''
+
+Résultat : {{en|Version anglophone}}
+
+Voir aussi le multilinguisme à ''[[Commons:Multilinguality]]''
+&lt;/div&gt;
+&lt;div class="description de"&gt;
+== Verwendung ==
+Verwendung: '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''Englische Übersetzung'''''&lt;nowiki&gt;}}&lt;/nowiki&gt;'''
+
+Resultat: {{en|Englische Übersetzung}}
+
+Siehe auch [[Commons:Multilinguality]]
+&lt;/div&gt;
+&lt;div class="description ksh"&gt;
+== Aanwände ==
+Aanwände: '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''Övversaz op änglesh'''''&lt;nowiki&gt;}}&lt;/nowiki&gt;'''
+
+Erruß kütt: {{en|Övversaz op änglesh}}
+
+Siehe auch [[Commons:Multilinguality]]
+&lt;/div&gt;
+&lt;div class="description nl"&gt;
+== Gebruik ==
+Gebruik: '''&lt;nowiki&gt;{{&lt;/nowiki&gt;en|'''''Engelse vertaling'''''&lt;nowiki&gt;}}&lt;/nowiki&gt;'''
+
+Resultaat: {{en|Englise vertaling}}
+
+Zie ook [[Commons:Multilinguality]]
+&lt;/div&gt;
+[[Category:Internationalization templates|{{PAGENAME}}]]&lt;/noinclude&gt;
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Description</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">
+&lt;includeonly&gt;{{#if:{{{inline|}}}|&lt;span class="description {{{1}}}" lang="{{{4|{{{1}}}}}}"&gt;|&lt;div class="description {{{1}}}" lang="{{{4|{{{1}}}}}}"&gt;}}&lt;span class="language {{{1}}}" title="{{{name|{{{3|}}}}}}"&gt;'''{{#language:{{{1}}}}}{{{5|}}}:'''&lt;/span&gt; {{{2|}}}{{#if:{{{inline|}}}|&lt;/span&gt;|&lt;/div&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+----
+Parameters:
+*1=wikicode for the language and name of the CSS formating class (mandatory)
+*2=description text (optional, default is empty)
+*3=title for tooltip (optional, default is empty)
+**name=alternative parameter name for parameter 3
+*4=standard code for lang tag in HTML (optional, default is same as parameter 1)
+*5=extension text shown after the language name before colon (optional, default is empty)
+*inline=optional, default is empty string. When set to any value different from an empty string, forces the template to be displayed inline, so that it does not break the current paragraph (i.e. that makes possible to put several descriptions side by side on a single line)
+
+[[Category:Internationalization templates]]
+&lt;/noinclude&gt;
+		</text>
+	</revision>
+	</page>
+</mediawiki>
+

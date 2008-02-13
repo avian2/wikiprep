@@ -40,6 +40,7 @@ use lib "$FindBin::Bin";
 use images;
 use nowiki;
 use revision;
+use languages;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.2";
@@ -1194,6 +1195,11 @@ sub includeParserFunction(\$\%\$) {
           $$refToResult = " ";
         }
       }
+    } elsif ( $functionName eq 'language' ) {
+
+      my $code = $$refToParameterHash{'=0='};
+
+      $$refToResult = &languages::languageName($code);
     } else {
 
       print LOGF "Function #$functionName not supported\n";

@@ -19,7 +19,8 @@ LOGS =	images.log \
 	enwiki-20080103-pages-articles.log \
 	xmlcomments.log \
 	nestedtables.log \
-	div.log
+	div.log \
+	languages.log
 
 all: test
 
