@@ -24,16 +24,27 @@ sub getDumpDate($) {
   }
 }
 
+sub getDatabaseName($) {
+  my ($dumpFile) = @_;
+
+  if($dumpFile =~ /([a-z]+)-[0-9]+-pages-articles.xml$/) {
+    return $1;
+  } else {
+    return "unknown";
+  }
+}
+
 sub writeVersion($$) {
   my ($versionFile, $dumpFile) = @_;
 
   open(VERSIONF, "> $versionFile") or die "Cannot open $versionFile: $!";
 
   my $dumpDate = &getDumpDate($dumpFile);
+  my $dumpName = &getDatabaseName($dumpFile);
   my $svnrev = &getWikiprepRevision();
 
-  print(VERSIONF "mediawiki-dump-date: $dumpDate\n");
-  print(VERSIONF "wikiprep-revision: $svnrev\n");
+  print(VERSIONF "$dumpName-mediawiki-dump-date: $dumpDate\n");
+  print(VERSIONF "$dumpName-wikiprep-revision: $svnrev\n");
 
   close(VERSIONF);
 }
