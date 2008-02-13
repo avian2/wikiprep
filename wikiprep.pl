@@ -1179,9 +1179,9 @@ sub includeParserFunction(\$\%\$) {
       #   print LOGF "If false: $valueIfFalse\n";
       # }
 
-      # The {{#if:}} function is an if-then-else construct. The applied condition is 
-      # "The condition string is non-empty". 
       if ( length($$refToParameterHash{'=0='}) > 0 ) {
+        # The {{#if:}} function is an if-then-else construct. The applied condition is 
+        # "The condition string is non-empty". 
 
         if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
           $$refToResult = $valueIfTrue;
@@ -1196,6 +1196,8 @@ sub includeParserFunction(\$\%\$) {
         }
       }
     } elsif ( $functionName eq 'language' ) {
+      # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
+      # otherwise it returns the input value as is.
 
       my $code = $$refToParameterHash{'=0='};
 
