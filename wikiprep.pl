@@ -1537,6 +1537,7 @@ sub collectInternalLink($$$\@\@) {
       # which we exclude in a separate function.
 
       $result = &images::parseImageParameters($result);
+      $alternativeTextAvailable = 1;
     } else {
       # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
       # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
@@ -1621,7 +1622,7 @@ sub collectInternalLink($$$\@\@) {
       $result = $prefix . $result . $suffix;
     }
 
-    if ( defined($targetId) ) {
+    if ( defined($targetId) && $alternativeTextAvailable ) {
       push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
                                      linkLocation => "$linkLocation" });
     }
