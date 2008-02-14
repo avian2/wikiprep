@@ -1527,6 +1527,8 @@ sub collectInternalLink($$$\@\@) {
   # the pipeline symbol is present.
   my $alternativeTextAvailable = 0;
 
+  my $isImageLink = 0;
+
   # First extract everything before the first pipeline symbol.
   if ($link =~ /^([^|]*)(\|.*)$/s) {
     $link = $1;
@@ -1538,6 +1540,7 @@ sub collectInternalLink($$$\@\@) {
 
       $result = &images::parseImageParameters($result);
       $alternativeTextAvailable = 1;
+      $isImageLink = 1;
     } else {
       # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
       # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
@@ -1619,7 +1622,12 @@ sub collectInternalLink($$$\@\@) {
       # finally, add the text originally attached to the left and/or to the right of the link
       # (if the link represents a date, then it has not text glued to it, so it's OK to only
       # use the prefix and suffix here)
-      $result = $prefix . $result . $suffix;
+
+      # But we only do this if it's not an image link. Anchor text for image links is used as
+      # image caption.
+      if ( ! $isImageLink ) {
+        $result = $prefix . $result . $suffix;
+      }
     }
 
     if ( defined($targetId) && $alternativeTextAvailable ) {
