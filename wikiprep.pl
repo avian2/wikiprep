@@ -1528,19 +1528,21 @@ sub collectInternalLink($$$\@\@) {
   my $alternativeTextAvailable = 0;
 
   my $isImageLink = 0;
+  if ($link =~ /^Image:/) {
+    $isImageLink = 1;
+  }
 
   # First extract everything before the first pipeline symbol.
   if ($link =~ /^([^|]*)(\|.*)$/s) {
     $link = $1;
     $result = $2;
 
-    if ($link =~ /^Image:/) {
+    if ($isImageLink) {
       # Image links have to parsed separately, because anchors can contain parameters (size, type, etc.)
       # which we exclude in a separate function.
 
       $result = &images::parseImageParameters($result);
       $alternativeTextAvailable = 1;
-      $isImageLink = 1;
     } else {
       # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
       # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
@@ -1553,20 +1555,29 @@ sub collectInternalLink($$$\@\@) {
     }
 
     if (length($result) == 0) {
-      if ($link !~ /\#/) {
-        # If the "|" symbol is not followed by some text, then it masks the namespace
-        # as well as any text in parentheses at the end of the link title.
-        # However, pipeline masking is only invoked if the link does not contain an anchor,
-        # hence the additional condition in the 'if' statement.
-        &performPipelineMasking(\$link, \$result);
+      if ($isImageLink) {
+        $alternativeTextAvailable = 0;
       } else {
-        # If the link contains an anchor, then masking is not invoked, and we take the entire link
-        $result = $link;
+        if ($link !~ /\#/) {
+          # If the "|" symbol is not followed by some text, then it masks the namespace
+          # as well as any text in parentheses at the end of the link title.
+          # However, pipeline masking is only invoked if the link does not contain an anchor,
+          # hence the additional condition in the 'if' statement.
+          &performPipelineMasking(\$link, \$result);
+        } else {
+          # If the link contains an anchor, then masking is not invoked, and we take the entire link
+          $result = $link;
+        }
       }
     }  
   } else {
-    # the link text does not contain the pipeline, so take it as-is
-    $result = $link;
+    if ($isImageLink) {
+      # Nothing is displayed for images without anchors
+      $result = "";
+    } else {
+      # the link text does not contain the pipeline, so take it as-is
+      $result = $link;
+    }
   }
 
   if ($link =~ /^(.*)\#(.*)$/s) {
@@ -1630,7 +1641,13 @@ sub collectInternalLink($$$\@\@) {
       }
     }
 
-    if ( defined($targetId) && $alternativeTextAvailable ) {
+    # We log anchor text only if it would be visible in the web browser. This means that for an
+    # link to an ordinary page we log the anchor whether an alternative text was available or not
+    # (in which case Wikipedia shows just the name of the page). For a link to an image we log
+    # the anchor only if alternative text was given, because on the other case Wikipedia shows
+    # the image without any description.
+
+    if ( defined($targetId) && ( ( ! $isImageLink ) || $alternativeTextAvailable ) ) {
       push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
                                      linkLocation => "$linkLocation" });
     }
