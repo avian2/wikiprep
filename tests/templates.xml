@@ -69,4 +69,26 @@
       <text xml:space="preserve">&gt;div class="notice metadata plainlinks" id="disambig"&lt; {|style="background:none" |style="vertical-align:middle;"|[[Image:Disambig gray.svg|30px]] |style="vertical-align:middle;"|''This [[Wikipedia:Disambiguation|disambiguation]] page lists articles associated with the same title. If &gt;!-- you are viewing this online as opposed to as a [[hard copy]] and --&lt;an [{{fullurl:Special:Whatlinkshere/{{FULLPAGENAME}}|namespace=0}} internal link] led you here, you may wish to change the link to point directly to the intended article.'' |}&gt;/div&lt;&gt;includeonly&lt;[[Category:Disambiguation]]&gt;/includeonly&lt;&gt;noinclude&lt; {{/doc}} &gt;/noinclude&lt;</text>
     </revision>
   </page>
+  <page>
+    <title>Template:Hello</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">This is hello template</text>
+    </revision>
+  </page>
+  <page>
+    <title>Something</title>
+    <id>5</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{Template:Hello}}
+		    {{Hello}}
+
+		    [[Template:Hello]]
+		    [[Template:Hello|See this]]
+		    [[Hello]]
+		    [[Hello|See this]]
+	    </text>
+    </revision>
+  </page>
 </mediawiki>

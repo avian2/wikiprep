@@ -1694,7 +1694,12 @@ sub resolveAndCollectInternalLink(\$\@) {
 
   my $targetId = &resolveLink($refToLink);
   if ( defined($targetId) ) {
-    push(@$refToInternalLinksArray, $targetId);
+    if ( ! exists($templates{$targetId}) ) { 
+      push(@$refToInternalLinksArray, $targetId);
+    } else {
+      print LOGF "Ignoring link to a template '$$refToLink'\n";
+      $targetId = undef;
+    }
   } else {
     # Some cases in this category that obviously won't be resolved to legal ids:
     # - Links to namespaces that we don't currently handle

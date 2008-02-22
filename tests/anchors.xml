@@ -64,4 +64,14 @@
       </text>
     </revision>
   </page>
+  <page>
+    <title>Test2</title>
+    <id>4</id>
+    <revision>
+      <text xml:space="preserve">
+	      [[Dummy]]
+	      [[Dummy|Dummy2]]
+      </text>
+    </revision>
+  </page>
 </mediawiki>

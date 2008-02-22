@@ -1,0 +1,75 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="1" orglength="206" newlength="113" stub="0" categories="0" outlinks="3" urls="0">
+<title>Gu</title>
+<categories></categories>
+<links>5 6 2</links>
+<urls>
+</urls>
+<text>
+Lepa slika nekaj teksta in se ena druga slika. Pa se en link kar tako krneki. Pa se en link na Ga brez anchorja. 
+</text>
+</page>
+<page id="2" orglength="144" newlength="75" stub="0" categories="0" outlinks="2" urls="0">
+<title>Ga</title>
+<categories></categories>
+<links>5 6</links>
+<urls>
+</urls>
+<text>
+grda slika nekaj teksta in se ena prva slika. Pa se en link kar tako krneki
+</text>
+</page>
+<page id="3" orglength="140" newlength="88" stub="0" categories="0" outlinks="2" urls="0">
+<title>Sony</title>
+<categories></categories>
+<links>7 2</links>
+<urls>
+</urls>
+<text>
+
+      A Sony Vaio FJ series without webcam is expanding the... gulpgagluedanchor
+      
+</text>
+</page>
+<page id="4" orglength="48" newlength="34" stub="0" categories="0" outlinks="0" urls="0">
+<title>Test2</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+	      Dummy
+	      Dummy2
+      
+</text>
+</page>
+</mediawiki>
