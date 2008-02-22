@@ -1610,6 +1610,7 @@ sub collectInternalLink($$$\@\@) {
   # If a date (either day or day + year) was recognized, then no further processing is necessary
   if (! $dateRecognized) {
     &normalizeTitle(\$link);
+
     my $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
 
     # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
@@ -1688,6 +1689,9 @@ sub performPipelineMasking(\$\$) {
     $$refToResult = $1; # discard the text in parentheses at the end of the string
   }
 }
+
+# Collects only links that do not point to a template (which besides normal and local pages
+# also have an ID in %title2id hash.
 
 sub resolveAndCollectInternalLink(\$\@) {
   my ($refToLink, $refToInternalLinksArray) = @_;
