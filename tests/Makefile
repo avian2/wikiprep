@@ -20,7 +20,10 @@ LOGS =	images.log \
 	xmlcomments.log \
 	nestedtables.log \
 	div.log \
-	languages.log
+	languages.log \
+	barzilla.log \
+	pagename.log \
+	ifeq.log
 
 all: test
 

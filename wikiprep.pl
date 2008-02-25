@@ -756,7 +756,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
-    &includeTemplates(\$id, \$text);
+    &includeTemplates(\$id, \$title, \$text);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
@@ -941,8 +941,8 @@ BEGIN {
 
 my $nowikiRegex = qr/((?:<nowiki>.*?<\/nowiki>)|(?:<!--.*?-->))/;
 
-sub includeTemplates(\$\$) {
-  my ($refToId, $refToText) = @_;
+sub includeTemplates(\$\$\$) {
+  my ($refToId, $refToTitle, $refToText) = @_;
 
   # Using the while loop forces templates to be included recursively
   # (i.e., includes the body of templates that themselves were included
@@ -993,7 +993,7 @@ sub includeTemplates(\$\$) {
 #                                               # hence "[^\{]" (any char except opening brace).
 # END OF OLD code and comments
                              \}\}
-                            /&instantiateTemplate($1, $refToId)/segx;
+                            /&instantiateTemplate($1, $refToId, $refToTitle)/segx;
 
     &nowiki::replaceTags($refToText, \%ChunksReplaced);
 
@@ -1005,6 +1005,8 @@ sub includeTemplates(\$\$) {
     # print LOGF "#########\n\n";
     $templateRecursionLevels++;
   }
+
+  print "$$refToText\n"
 
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them - however, we do so
@@ -1130,8 +1132,8 @@ BEGIN {
 } # end of BEGIN block
 
 
-sub instantiateTemplate($\$) {
-  my ($templateInvocation, $refToId) = @_;
+sub instantiateTemplate($\$\$) {
+  my ($templateInvocation, $refToId, $refToTopPageTitle) = @_;
 
   my $result = "";
 
@@ -1141,7 +1143,7 @@ sub instantiateTemplate($\$) {
   my %templateParams;
   &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
-  &includeParserFunction(\$templateTitle, \%templateParams, \$result);
+  &includeParserFunction(\$templateTitle, \%templateParams, $refToTopPageTitle, \$result);
 
   # If this wasn't a parser function call, try to include a template.
   if ( length($result) == 0 ) {
@@ -1153,8 +1155,8 @@ sub instantiateTemplate($\$) {
   $result;  # return value
 }
 
-sub includeParserFunction(\$\%\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToResult) = @_;
+sub includeParserFunction(\$\%\$\$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToTopPageTitle, $refToResult) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
@@ -1182,6 +1184,34 @@ sub includeParserFunction(\$\%\$) {
       if ( length($$refToParameterHash{'=0='}) > 0 ) {
         # The {{#if:}} function is an if-then-else construct. The applied condition is 
         # "The condition string is non-empty". 
+
+        if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
+          $$refToResult = $valueIfTrue;
+        } else {
+          $$refToResult = " ";
+        }
+      } else {
+        if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
+          $$refToResult = $valueIfFalse;
+        } else {
+          $$refToResult = " ";
+        }
+      }
+    } elsif ( $functionName eq 'ifeq' ) {
+
+      my $valueIfTrue = $$refToParameterHash{'=2='};
+      my $valueIfFalse = $$refToParameterHash{'=3='};
+
+      my $lvalue = $$refToParameterHash{'=0='};
+      my $rvalue = $$refToParameterHash{'=1='};
+
+      &trimWhitespaceBothSides(\$lvalue);
+      &trimWhitespaceBothSides(\$rvalue);
+
+      if ( $lvalue eq $rvalue ) {
+        # The {{#ifeq:}} function is an if-then-else construct. The applied condition is 
+        # "is rvalue equal to lvalue". Note that this does only string comparison while MediaWiki
+        # implementation also supports numerical comparissons.
 
         if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
           $$refToResult = $valueIfTrue;
@@ -1226,6 +1256,8 @@ sub includeParserFunction(\$\%\$) {
 
     $$refToResult = $1;
     $$refToResult =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
+  } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
+    $$refToResult = $$refToTopPageTitle;
   }
 }
 
