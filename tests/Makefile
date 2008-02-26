@@ -23,7 +23,9 @@ LOGS =	images.log \
 	languages.log \
 	barzilla.log \
 	pagename.log \
-	ifeq.log
+	ifeq.log \
+	asse.log \
+	hurt.log
 
 all: test
 

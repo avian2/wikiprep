@@ -1,0 +1,490 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+    <page>
+    <title>Template:Col-begin</title>
+    <id>3218295</id>
+
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>177731710</id>
+      <timestamp>2007-12-13T20:35:17Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+
+      </contributor>
+      <comment>some setup for a script i'm planning</comment>
+      <text xml:space="preserve">{| cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;{{{class|}}} multicol&quot; style=&quot;background:{{{bgColor|transparent}}}; width:{{{width|100%}}};&quot;&lt;noinclude&gt;
+
+|}
+{{protected template}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+
+    <page>
+    <title>Template:Col-end</title>
+    <id>3218301</id>
+
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>165838975</id>
+      <timestamp>2007-10-20T14:12:14Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+
+      </contributor>
+      <minor/>
+      <comment>add parameter to template doc</comment>
+      <text xml:space="preserve">&lt;p&gt;&lt;/p&gt;
+|}&lt;noinclude&gt;{{protected template}}
+{{template doc|Col-begin/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+
+  </page>
+   <page>
+    <title>Template:Col-2</title>
+    <id>3218306</id>
+
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>165838941</id>
+      <timestamp>2007-10-20T14:11:57Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+
+      </contributor>
+      <minor/>
+      <comment>hmm, it does need the parameter...</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{hprotected}}&lt;/noinclude&gt;&lt;p&gt;&lt;/p&gt;
+| width=&quot;50%&quot; align=&quot;{{{align|left}}}&quot; valign=&quot;{{{valign|top}}}&quot; |&lt;noinclude&gt;{{template doc|Col-begin/doc}}&lt;/noinclude&gt;</text>
+
+    </revision>
+  </page>
+    <page>
+    <title>Template:Infobox Single</title>
+    <id>1866794</id>
+
+    <revision>
+      <id>191310776</id>
+      <timestamp>2008-02-14T00:49:48Z</timestamp>
+      <contributor>
+        <username>Euro Mok</username>
+        <id>5842009</id>
+      </contributor>
+
+      <text xml:space="preserve">&lt;includeonly&gt;{| class=&quot;infobox vevent&quot; style=&quot;width: 20em;&quot;
+|-
+! colspan=&quot;3&quot; scope=&quot;col&quot; class=&quot;summary&quot; style=&quot;background: khaki;&quot; | “{{{Name}}}”
+|-
+| colspan=&quot;3&quot; style=&quot;text-align:center;&quot; | {{#if:{{{Cover|}}}|
+{{#ifeq:{{{Cover}}}|none| |[[Image:{{{Cover}}}|{{min|200|{{{Cover size|}}}}}px|{{#ifeq:{{{Border|}}}|yes|border{{!}}}}“{{{Name}}}” cover]]}}| }}
+{{#if:{{{Caption|}}} | &lt;div style=&quot;font-size: 0.8em; line-height: 1.4em;&quot;&gt;{{{Caption}}}&lt;/div&gt;
+
+}}
+|-
+! colspan=&quot;3&quot; scope=&quot;col&quot; class=&quot;description&quot; style=&quot;background: khaki;&quot; | [[Single (music)|Single]] by {{{Artist}}}{{#if:{{{Album|}}}{{{from Album|}}} | &lt;br&gt;from the album ''{{{Album|}}}{{{from Album|}}}''}}
+|-
+{{#if:{{{A-side|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[A-side and B-side|A-side]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{A-side}}}
+{{!}}-
+}}
+{{#if:{{{B-side|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[A-side and B-side|B-side]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{B-side}}}
+{{!}}-
+}}
+{{#if:{{{Released|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} Released
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Released}}}
+{{!}}-
+}}
+{{#if:{{{Format|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} Format
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Format}}}
+{{!}}-
+}}
+{{#if:{{{Recorded|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} Recorded
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Recorded}}}
+{{!}}-
+}}
+{{#if:{{{Genre|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[Music genre|Genre]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Genre}}}
+{{!}}-
+}}
+{{#if:{{{Length|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} Length
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Length}}}
+{{!}}-
+}}
+{{#if:{{{Label|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[Record label|Label]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Label}}}
+{{!}}-
+}}
+{{#if:{{{Writer|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[Songwriter|Writer(s)]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Writer|}}}
+{{!}}-
+}}
+{{#if:{{{Producer|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[Record producer|Producer]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Producer}}}
+{{!}}-
+}}
+{{#ifeq: {{{Clip requested?|}}} |yes|[[Category:Song articles missing an audio sample]]|}}
+|-
+{{#if:{{{Certification|}}} |
+! scope=&quot;row&quot; style=&quot;width: 5.2em; text-align: left;&quot; {{!}} [[Music recording sales certification|Certification]]
+{{!}} colspan=&quot;2&quot; style=&quot;width: 14em;&quot; {{!}} {{{Certification}}}
+{{!}}-
+}}
+{{#if:{{{Last single|}}}{{{Next single|}}} |
+! colspan=&quot;3&quot; scope=&quot;col&quot; style=&quot;background: khaki;&quot; {{!}} {{#if:{{{Chronology|}}} | {{{Chronology}}} | {{{Artist}}}&amp;#32;singles}}&amp;#32;chronology
+{{!}}-
+{{!}} colspan=&quot;3&quot; {{!}}
+{{{!}} cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot; style=&quot;background: transparent;&quot;
+
+{{!}}- style=&quot;text-align: center; font-size: 0.8em; line-height: 1.4em;&quot;
+{{!}} style=&quot;width: 33%; vertical-align: top; padding: 0.2em 0.1em 0.2em 0;&quot; {{!}} {{{Last single|}}}
+{{!}} style=&quot;width: 33%; vertical-align: top; padding: 0.2em 0.1em 0.2em 0.1em;&quot; {{!}} {{{This single|}}}
+{{!}} style=&quot;width: 33%; vertical-align: top; padding: 0.2em 0 0.2em 0.1em;&quot; {{!}} {{{Next single|}}}
+{{!}}}
+{{!}}-
+}}
+{{{Misc|}}}
+|}{{#if:{{{Chart position|}}}|[[Category:Single articles with infobox field chart position]]}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{#ifeq:{{FULLPAGENAME}}|Template:Infobox Single/sandbox|{{Template sandbox notice}}|{{documentation}}}}
+{{#ifeq:{{FULLPAGENAME}}|Template:Infobox Single|{{pp-semi-template|small=yes}}}}&lt;!--
+Add cats and interwikis to the /doc subpage, not here!
+--&gt;&lt;/noinclude&gt;</text>
+
+    </revision>
+  </page>
+  <page>
+    <title>Hurt (Christina Aguilera song)</title>
+    <id>6485175</id>
+    <revision>
+      <id>192624102</id>
+      <timestamp>2008-02-19T19:46:35Z</timestamp>
+      <contributor>
+        <username>Funk Junkie</username>
+        <id>2059168</id>
+      </contributor>
+      <comment>[[WP:UNDO|Undid]] revision 192401464 by [[Special:Contributions/87.196.79.27|87.196.79.27]] ([[User talk:87.196.79.27|talk]])</comment>
+      <text xml:space="preserve">{{Infobox Single
+| Cover = Hurt.jpg
+| Name = Hurt
+| Artist = [[Christina Aguilera]]
+| from Album = [[Back to Basics (Christina Aguilera album)|Back to Basics]]
+| Released = [[September 18]] [[2006]] &lt;small&gt;([[U.S.]])&lt;/small&gt;&lt;br /&gt;[[November 4]] [[2006]] &lt;small&gt;([[Australia|AUS]])&lt;/small&gt;&lt;br /&gt;[[November 13]] [[2006]] &lt;small&gt;([[UK]])&lt;/small&gt;
+| Format = [[CD single]], [[digital download]]
+| Recorded = 2006 
+| Genre = [[pop music|Pop]]
+| Length = 4:03
+| Label = [[RCA Records|RCA]]
+| Writer = Christina Aguilera, [[Linda Perry]], [[Mark Ronson]] 
+| Producer = Linda Perry
+| Certification  = Platinum &lt;small&gt; ([[CRIA]]) &lt;/small&gt; Gold &lt;small&gt;([[RIAA]])&lt;/small&gt;, &lt;small&gt;([[IFPI]])&lt;/small&gt;
+| Last single = &quot;[[Ain't No Other Man]]&quot; &lt;br&gt;(2006)
+| This single = &quot;[[Hurt (Christina Aguilera song)|Hurt]]&quot; &lt;br&gt; (2006)
+| Next single = &quot;[[Tell Me (Diddy song)|Tell Me]]&quot; &lt;br&gt; (2006)
+| Misc        = {{Audiosample
+  | Upper caption = Audio sample
+  | Audio file= HurtSample.ogg
+}}
+}}
+&quot;'''Hurt'''&quot; is the second single written by [[Christina Aguilera]], [[Linda Perry]] and [[Mark Ronson]] for Aguilera's third album ''[[Back to Basics (Christina Aguilera album)|Back to Basics]]'' (2006). The song's lyrical content describes how one deals with the loss of a loved one, and it has received praise from pop music critics. Aguilera premiered the song at the [[2006 MTV Video Music Awards]] and was released as the album's second [[single (music)|single]] in late 2006 (see [[2006 in music]]).
+
+==Music and structure==
+&quot;Hurt&quot; is a [[ballad]] song set in the key of [[E minor]].&lt;ref name=&quot;Mnotes&quot;&gt;{{Cite web |last= |first= |title=Christina Aguilera Digital Sheet Music: Hurt |url=http://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0054284 |publisher=Musicnotes, Inc. |date= |accessdate=2007-12-26}}&lt;/ref&gt; Its slow melody is paced at 72 [[beats per minute]] and set in [[common time]].&lt;ref name=&quot;Mnotes&quot;/&gt; Aguilera's voice range spans from G&lt;sub&gt;3&lt;/sub&gt; to E&lt;sub&gt;5&lt;/sub&gt;.&lt;ref name=&quot;Mnotes&quot;/&gt; Its instrumentation comes from [[bass (instrument)|bass]], [[cello]], [[contrabass]], [[drums]], [[guitar]], [[piano]], [[viola]] and [[violin]].&lt;ref name=&quot;BtoB&quot;&gt;{{Citation |last= |first= |title=Back to Basics-Cd Booklet |url= |publisher=RCA Records |date=2006 |accessdate=}}&lt;/ref&gt; [[String instruments]] used in the [[melody]] were arranged by Eric Gorfain.&lt;ref name=&quot;BtoB&quot;/&gt;
+
+==Release==
+Originally Aguilera did not want &quot;Hurt&quot; to be the second single from ''Back to Basics''. Prior to this decision, &quot;[[Candyman (Christina Aguilera song)|Candyman]]&quot; was planned as the second single and even was confirmed by Aguilera during several different interviews. However, [[RCA]] felt that, with the holiday season coming up, it would be safer to release &quot;Hurt&quot;, as it would become a big holiday [[power ballad]], comparable to how Aguilera's &quot;[[Beautiful (Christina Aguilera song)|Beautiful]]&quot; performed commercially back in late 2002. There was also debate that &quot;Candyman&quot; was too similar to the first single, &quot;[[Ain't No Other Man]]&quot;, both in theme and in sound. 
+
+&quot;Hurt&quot; was released to radio airplay in the [[United States]] on [[September 18]] [[2006]]. The single debuted on the Billboard Hot 100 at #100 in the October 14, 2006 edition.  The single would peak on the Hot 100 at #19 in mid-December.  &quot;Hurt&quot; had its biggest success on Adult Contemporary radio, where it reached #6 on the Billboard Adult Contemporary chart.   Aguilera promoted the single during the holidays by performing on the TV special ''Christmas at Rockefeller Center'', on [[November 29]], [[2006]] on NBC.
+
+==Critical reception==
+[[Image:VMA 06.jpg|thumb|left|250px|Aguilera performing &quot;Hurt&quot; during 2006 [[MTV Video Music Awards]].]]
+&quot;Hurt&quot; was generally very well-received by contemporary pop music critics. ''[[Billboard magazine|Billboard]]'' commented that Aguilera's &quot;[vocals] relate the pain of moving past a relationship in ruins is daunting&quot;, and that &quot;this potential [[Grammy Award]] contender&quot; has &quot;a melody and lush production that carries [the song] into the clouds.&lt;ref&gt;[http://www.billboard.com/bbcom/reviews/single_review_display.jsp?vnu_content_id=1003122613 http://www.billboard.com/bbcom/reviews/single_review_display.jsp?vnu_content_id=1003122613] ''Billboard.com'' &lt;/ref&gt; Blogcritics claims that song's &quot;slow opening to a soft [[piano]] all the way to the spine-tingling bridge&quot; is &quot;one weeper of a ballad&quot;, and that Aguilera's &quot;power-belting&quot; vocals were &quot;better than ever&quot;. [[Top 40]] reviewer Bill Lamb gave the song five stars, saying &quot;a single piano with the backing of strings gives way to one of the most technically stunning voices in pop music singing words of pain, guilt, and grief in the loss of a loved one.&quot; He continues on, predicting the song would edge near to &quot;the top of the pop singles chart by Christmas 2006.&quot;&lt;ref&gt;[http://top40.about.com/od/singles/gr/caguilerahurt.htm http://top40.about.com/od/singles/gr/caguilerahurt.htm] ''Top40.about.com'' &lt;/ref&gt; Some reviews, however, were slightly less positive. In the ''[[Rolling Stone Magazine|Rolling Stone]]'' magazine review for ''Back to Basics'', the reviewer, [[Jenny Eliscu]], called &quot;Hurt&quot; an &quot;incongruous schmaltzfest&quot;.&lt;ref&gt;[http://www.rollingstone.com/artists/christinaaguilera/albums/album/11107200/review/11111609/back_to_basics http://www.rollingstone.com/artists/christinaaguilera/albums/album/11107200/review/11111609/back_to_basics] ''Rollingstone.com'' &lt;/ref&gt;
+
+It was performed live at the 2006 [[MTV Video Music Awards]] on [[August 31]], [[2006]].
+
+== Chart performance ==
+The single debuted on the [[Billboard Hot 100|''Billboard'' Hot 100]] chart on [[October 5]] [[2006]] at number 100. The single peaked at #19 in its 10th week. 
+
+Hurt reached #11 on the [[UK Singles Chart]], and astonishingly re-entered the Top 40 at #39 in [[December]] [[2007]], over one year after the single's initial release. This is more than likely due to the song being performed by Hope, contestants on popular talent show, The X Factor, a few weeks before.
+
+The song had moderate success in the U.S. peaking at #19. The song became a huge hit across Europe and achieved gold status in the U.S. On the overall Top 200 Europe chart (which calculates sales and airplay from all European countries), 'Hurt' reached #1 on that chart.&lt;ref&gt;[http://www.apcchart.com/ http://www.apcchart.com/]&lt;/ref&gt; It had also reached #1 in Switzerland, Portugal and Indonesia for 2 weeks and peaked at #3 in France, where it became her highest peaking song since &quot;Genie In A Bottle&quot;. It also went top 3 in Germany, Sweden, Netherlands, Austria, Greece and Belgium, making her biggest hit in Europe since 2002's ballad 'Beautiful'. Also, in Canada, 'Hurt' has remained within the top 50 for nearly eight months, and peaked at #6 in January.
+
+It received gold certification in the US (more than 600,000 digital downloads), Germany (150.000 copies shipped),&lt;ref&gt;[http://www.christinaaguilera.de http://www.christinaaguilera.de]&lt;/ref&gt; in Austria (15.000 copies shipped),&lt;ref&gt;[http://www.ifpi.at http://www.ifpi.at]&lt;/ref&gt; in Australia (35.000 copies shipped),&lt;ref&gt;[http://www.http://www.ariacharts.com.au/pages/charts_display.asp?chart=1U50 http://www.http://www.ariacharts.com.au/pages/charts_display.asp?chart=1U50]&lt;/ref&gt; Belgium (20.000 copies sold),&lt;ref&gt;[http://entertainment.skynet.be/index.html?l1=entertainment&amp;l2=ultratop&amp;l3=charts&amp;chartid=4&amp;new_lang=nl http://entertainment.skynet.be/index.html?l1=entertainment&amp;l2=ultratop&amp;l3=charts&amp;chartid=4&amp;new_lang=nl]&lt;/ref&gt; Switzerland (15.000),&lt;ref&gt;[http://www.swisscharts.com/awards.asp?year=2007 The Official Swiss Charts and Music Community&lt;!-- Bot generated title --&gt;]&lt;/ref&gt; double platinum worldwide (4 million points) and in Canada (10.000 digital downloads).&lt;ref&gt;[http://www.cria.ca/cert_db_search.php Canadian Recording Industry Association (CRIA): Certification Results&lt;!-- Bot generated title --&gt;]&lt;/ref&gt;
+Additionally, Hurt was certified silver in France, with 100,000 copies sold.&lt;ref&gt;[http://www.disqueenfrance.com/certifications/single.asp?forme_certif=6&amp;annee=25]&lt;/ref&gt;
+
+==Music video==
+[[Image:HurtVideo.png|thumb|left|Aguilera in the music video.]]
+
+During MTV's red-carpet pre-show, Aguilera revealed that she would co-direct the music video alongside [[Floria Sigismondi]], who worked on &quot;[[Fighter (song)|Fighter]]&quot; (2003). The [[circus]]-themed video for &quot;Hurt&quot; was shot over five days in September and the video premiered on [[October 17]] on ''[[Total Request Live|TRL]]''. It is the first video Aguilera has directed. The video reached number one on ''TRL'' fourteen times and retired at number 1 on January 11, 2007. It's her eighth video to retire on that show. Furthermore, the video swept the 2007 MVPA awards winning Best Video and Best Direction of a Female Artist. 
+
+The video begins with the ending instrumental to &quot;Enter the circus&quot;/&quot;Welcome&quot;, over which a carnival barker (voiced by [[Linda Perry]]) introduces a spectacular circus, and begins in black and white. The transition to colour begins when Aguilera appears in an old fashioned dressing room, receiving flowers and then an important telegram. A flashback then shows young Aguilera, played by Laci Kay, with her father, played by Timothy V. Murphy, raptured by the sight of the tightrope walker, played by Elizabeth Glassco. With her father's encouragement, Aguilera begins to train herself to do the same. When the video switches to older Aguilera, we see her descending from the top of a circus tent on a rope, onto the back of an elephant, with her father watching adoringly in the audience. She later attempts to greet him but is pulled away by fans and photographers keen to meet the star. The content of the telegram is then revealed to be a message of her father's death, and as Aguilera realises that she was too wrapped up in her stardom to deal with what matters, she races through the circus in a belated attempt to find her father. The video ends with a shot of Aguilera sitting on a circus box, singing and crying, before fading out to Aguilera's grief-stricken form on the ground outside the circus tent.
+
+==Formats and track listings==
+These are the formats and track listings of major single releases of &quot;Hurt&quot;.
+
+*'''CD Single (Basic)'''
+&lt;small&gt;Released [[November 10]], [[2006]]&lt;/small&gt; &lt;br&gt;
+{| class=&quot;wikitable&quot;
+! # !! width=&quot;270&quot; | Title !!  	
+|-
+| 1. || &quot;Hurt&quot; || 4:03
+|-
+| 2. || &quot;Ain't No Other Man&quot; &lt;small&gt;(Shapeshifters Mixshow Mix)&lt;/small&gt; || 5:24
+|}
+
+*'''CD Maxi-Single (Premium)'''
+&lt;small&gt;Released [[November 10]], [[2006]]&lt;/small&gt; &lt;br&gt;
+{| class=&quot;wikitable&quot;
+! # !! width=&quot;270&quot; | Title !!  	
+|-
+| 1. || &quot;Hurt&quot; || 4:03
+|-
+| 2. || &quot;Hurt&quot; &lt;small&gt;(Jake Ridley remix)&lt;/small&gt; || 5:47
+|-
+| 3. || &quot;Ain't No Other Man&quot; &lt;small&gt;(Shapeshifters Mixshow Mix)&lt;/small&gt; || 5:24
+|-
+| 4. || &quot;Ain't No Other Man&quot; &lt;small&gt;(Video)&lt;/small&gt; || 4:53
+|}
+
+*'''iTunes Maxi-Single'''
+{| class=&quot;wikitable&quot;
+! # !! width=&quot;270&quot; | Title !!  	
+|-
+| 1. || &quot;Hurt&quot; &lt;small&gt;(Deeper-Mindset Tight Mix)&lt;/small&gt; || 7:04
+|-
+| 2. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Edit)&lt;/small&gt; || 7:02
+|-
+| 3. || &quot;Hurt&quot; &lt;small&gt;(Chris Cox Club Mix)&lt;/small&gt; || 9:56
+|-
+| 4. || &quot;Hurt&quot; &lt;small&gt;(JP &amp; BSOD Electro Mix)&lt;/small&gt; || 6:01
+|-
+| 5. || &quot;Hurt&quot; &lt;small&gt;(Jonathan Peters Classic Mix)&lt;/small&gt; || 9:30
+|-
+| 6. || &quot;Hurt&quot; &lt;small&gt;(Jake Ridley Chillout Club)&lt;/small&gt; || 5:47
+|}
+
+*'''Promotional Maxi-Single'''
+{| class=&quot;wikitable&quot;
+! # !! width=&quot;265&quot; | Title !!  	
+|-
+| 1. || &quot;Hurt&quot; &lt;small&gt;(Deeper-Mindset Mixshow)&lt;/small&gt; || 5:54
+|-
+| 2. || &quot;Hurt&quot; &lt;small&gt;(Deeper-Mindset Tight Mix)&lt;/small&gt; || 7:04
+|-
+| 3. || &quot;Hurt&quot; &lt;small&gt;(Deeper-Mindset Full On Club Mix)&lt;/small&gt; || 9:30
+|-
+| 4. || &quot;Hurt&quot; &lt;small&gt;(Deeper-Mindset Pad a Pella)&lt;/small&gt; || 7:16
+|-
+| 5. || &quot;Hurt&quot; &lt;small&gt;(J.P. &amp; BSOD Electro Mix)&lt;/small&gt; || 6:01
+|-
+| 6. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Mixshow)&lt;/small&gt; || 5:41
+|-
+| 7. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Main)&lt;/small&gt; || 7:02
+|-
+| 8. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Extended)&lt;/small&gt; || 8:30
+|-
+| 9. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Dub)&lt;/small&gt; || 6:32
+|-
+| 10. || &quot;Hurt&quot; &lt;small&gt;(Jack Shaft Dub a Pella)&lt;/small&gt; || 1:53
+|-
+|}
+
+== Charts==
+{{col-begin}}
+{{col-2}}
+{| class=&quot;wikitable sortable&quot;
+!align=&quot;left&quot;|Charts (2006)&lt;ref&gt;Chart peak positions:
+*[http://www.allmusic.com/cg/amg.dll?p=amg&amp;sql=11:gcfoxqyjldje~T51]
+*[http://acharts.us/song/11131]
+*[http://top40-charts.com/songs/full.php?sid=18132&amp;sort=chartid http://top40-charts.com/songs/full.php?sid=18132&amp;sort=chartid]
+*[http://www.apcchart.com]
+*[http://www.christinamultimedia.com/statistics/index.php Christina's statistics]&lt;/ref&gt;
+!align=&quot;left&quot;|Peak&lt;br&gt;position
+|-
+|align=&quot;left&quot;|[[United World Chart]]
+|align=&quot;center&quot;|4 &lt;small&gt;(5)&lt;/small&gt;
+|-
+|align=&quot;left&quot;|[[ARIA Charts|Australian ARIA Singles Chart]]
+|align=&quot;center&quot;|8
+|-
+|align=&quot;left&quot;|[[Austrian Singles Chart]]
+|align=&quot;center&quot;|2
+|-
+|align=&quot;left&quot;|Austrian Airplay Chart
+|align=&quot;center&quot;|3
+|-
+|align=&quot;left&quot;|[[Jam!|Canadian BDS Airplay Chart]]
+|align=&quot;center&quot;|6
+|-
+|align=&quot;left&quot;|[[Canadian Hot 100]]
+|align=&quot;center&quot;|28
+|-
+|align=&quot;left&quot;|[[Dutch Singles Chart]]
+|align=&quot;center&quot;|2 &lt;small&gt;(2)&lt;/small&gt;
+|-
+|align=&quot;left&quot;|Dutch Airplay Chart
+|align=&quot;center&quot;|9
+|-
+|align=&quot;left&quot;|[[Eurochart Hot 100 Singles|Euro 200 Singles &amp; Tracks]]&lt;ref&gt;[http://www.apcchart.com/ Euro 200]&lt;/ref&gt;
+|align=&quot;center&quot;|1
+|-
+|align=&quot;left&quot;|French Singles Chart
+|align=&quot;center&quot;|3 &lt;small&gt;(2)&lt;/small&gt;
+|-
+|align=&quot;left&quot;|French Airplay Chart
+|align=&quot;center&quot;|4
+|-
+|align=&quot;left&quot;|French Downloads Chart
+|align=&quot;center&quot;|3
+|-
+|align=&quot;left&quot;|German Singles Chart
+|align=&quot;center&quot;|2
+|-
+|align=&quot;left&quot;|German Airplay Chart
+|align=&quot;center&quot;|1
+|-
+|align=&quot;left&quot;|[[Irish Singles Chart]]
+|align=&quot;center&quot;|6
+|-
+|align=&quot;left&quot;|Irish Downloads Chart
+|align=&quot;center&quot;|12
+|-
+|align=&quot;left&quot;|Swedish Singles Chart
+|align=&quot;center&quot;|2
+|-
+|align=&quot;left&quot;|Swiss Singles Chart
+|align=&quot;center&quot;|1
+|-
+|align=&quot;left&quot;|UK Downloads Chart
+|align=&quot;center&quot;|15
+|-
+|align=&quot;left&quot;|[[UK Singles Chart]]
+|align=&quot;center&quot;|11 &lt;small&gt;(2)&lt;/small&gt;
+|-
+|align=&quot;left&quot;|U.S. [[Billboard Hot 100|''Billboard'' Hot 100]]
+|align=&quot;center&quot;|19
+|-
+|align=&quot;left&quot;|U.S. ''Billboard'' [[Pop 100]]
+|align=&quot;center&quot;|9
+|-
+|align=&quot;left&quot;|U.S. ''Billboard'' [[Top 40 Mainstream]]
+|align=&quot;center&quot;|10
+|-
+|align=&quot;left&quot;|U.S. ''Billboard'' [[Hot Dance Club Play]]
+|align=&quot;center&quot;|1
+|-
+|align=&quot;left&quot;|U.S. ''Billboard'' [[Hot Adult Contemporary Tracks]]
+|align=&quot;center&quot;|6
+|}
+{{col-2}}
+{| class=&quot;wikitable&quot;
+!align=&quot;left&quot;|Country
+!align=&quot;left&quot;|Certification
+!align=&quot;left&quot;|Sales/shipments
+|-
+|align=&quot;left&quot;|Australia
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|35,000
+|-
+|align=&quot;left&quot;|Austria
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|15,000
+|-
+|align=&quot;left&quot;|Belgium
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|20,000
+|-
+|align=&quot;left&quot;|Canada
+|align=&quot;center&quot;|Platinum
+|align=&quot;center&quot;|10,000
+|-
+|align=&quot;left&quot;|France
+|align=&quot;center&quot;|Silver
+|align=&quot;center&quot;|100,000
+|-
+|align=&quot;left&quot;|Germany
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|150,000
+|-
+|align=&quot;left&quot;|Switzerland
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|15,000
+|-
+|align=&quot;left&quot;|United World Chart
+|align=&quot;center&quot;|Platinum
+|align=&quot;center&quot;|3,924,000 
+|-
+|align=&quot;left&quot;|UK
+|align=&quot;center&quot;|
+|align=&quot;center&quot;|87,000+
+|-
+|align=&quot;left&quot;|US
+|align=&quot;center&quot;|Gold
+|align=&quot;center&quot;|620,000+
+|}
+{{col-end}}
+
+== References ==
+{{reflist|1}}
+
+{{Christina Aguilera}}
+
+*{{Unreferencedsection|date=June 2007}}
+
+[[Category:2006 singles]]
+[[Category:Ballads]]
+[[Category:Billboard Hot Dance Club Play number-one singles]]
+[[Category:Christina Aguilera songs]]
+[[Category:Music videos directed by Floria Sigismondi]]
+
+[[es:Hurt (canción de Christina Aguilera)]]
+[[id:Hurt]]
+[[he:Hurt]]
+[[nl:Hurt (Christina Aguilera)]]
+[[pl:Hurt (singel)]]
+[[pt:Hurt (canção de Christina Aguilera)]]
+[[sv:Hurt]]</text>
+    </revision>
+  </page>
+</mediawiki>
