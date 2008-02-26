@@ -1,0 +1,213 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Asse</title>
+    <id>157503</id>
+    <revision>
+      <id>169016924</id>
+      <timestamp>2007-11-03T21:12:45Z</timestamp>
+      <contributor>
+        <username>BotMultichill</username>
+        <id>4080734</id>
+      </contributor>
+      <minor/>
+      <comment>robot  Modifying: [[fr:Asse (Ville)]]</comment>
+      <text xml:space="preserve">{{dablink|For the municipality in Germany see [[Asse (Samtgemeinde)]].}}
+{{Infobox Belgium Municipality
+|name=Asse
+|picture=Assemartinuskerk.jpg
+|picture-width=260px
+|picture-legend=Sint-Martinuskerk
+|map=AsseLocatie.png
+|map-legend=Asse in the Province of [[Flemish Brabant]]
+|arms=Asse.jpg
+|flag=Flag of Asse.svg
+|region={{BE-REG-FLE}}
+|community={{BE-NL}}
+|province={{BE-PROV-VB}}
+|arrondissement=[[Halle-Vilvoorde administrative Arrondissement|Halle-Vilvoorde]]
+|nis=23002
+|pyramid-date=01/01/2006
+|0-19=23.09
+|20-64=59.22
+|65=17.68
+|foreigners=4.80
+|foreigners-date=01/07/2005
+|mayor=Koen Van Elsen ([[Christian Democratic &amp; Flemish|CD&amp;V]])
+|majority=[[Christian Democratic and Flemish|CD&amp;V]], [[Flemish Liberals and Democrats|VLD]], [[Socialist Party – Different|SP.A]]
+|postal-codes=1730, 1731
+|telephone-area=052 - 02
+|web=[http://www.asse.be/ www.asse.be]
+|lat_deg=50
+|lat_min=54
+|lon_deg=04
+|lon_min=12
+}}
+
+'''Asse''' is a [[municipality]] located in the [[Belgium|Belgian]] province of [[Flemish Brabant]]. The municipality comprises the towns of Asse proper, [[Bekkerzeel]], [[Kobbegem]], [[Mollem]], [[Relegem]] and [[Zellik]]. On [[January 1]] [[2006]] Asse had a total population of 29,191. The total area is 49.64 [[square kilometre|km²]] which gives a [[population density]] of 588 inhabitants per km².
+
+The Hopduvel (Hopdevil) represents the storm that hit Asse-Ternat at the end of the month of August, 1970.  The [[Hop (plant)|hop vine]] crop, which was almost ready for harvest, was severely damaged when the hop vines were knocked to the ground. The ' hopduvel ' was invented by the hop farmers and was formalized by the founder of the “Hopduvelfeesten” (Hop Devil Festival), Eugeen Van den Broeck. Every year the Hopduvelfeesten is organised after the hop harvest in order to have a good harvest in the following years. This is symbolically done by burning the hopduvels that have been assembled by the local farmers and for which a contest is organised to elect the best (ugliest) Hopduvel.
+
+== External links ==
+* [http://www.asse.be Official website ] - Available only in [[Dutch language|Dutch]]
+* [http://joan-of-arc-studies.org/index.php?Gazetteer-Asse Gazetteer Entry for Asse]
+
+{{FlemishBrabant-geo-stub}}
+{{Flemish Brabant}}
+
+[[Category:Municipalities of Flemish Brabant]]
+
+[[de:Asse (Belgien)]]
+[[eo:Asse (Belgio)]]
+[[fr:Asse (Ville)]]
+[[nl:Asse]]
+[[pt:Asse (Bélgica)]]
+[[vo:Asse]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox Belgium Municipality</title>
+    <id>5623267</id>
+
+    <revision>
+      <id>182278472</id>
+      <timestamp>2008-01-05T09:29:28Z</timestamp>
+      <contributor>
+        <username>Stephane.dohet</username>
+        <id>1761361</id>
+      </contributor>
+
+      <comment>Map of Belgium provinces 2.png</comment>
+      <text xml:space="preserve">{| class=&quot;infobox geography vcard&quot; width=&quot;30em;&quot; rules=&quot;all&quot; border=&quot;0&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;  style=&quot;margin: 0 0 1em 1em; border: 1px solid #999; border-right-width: 2px; border-bottom-width: 2px; background-color:white; align:right;&quot;
+
+|-----
+! style=&quot;background-color: #FFFFBB; font-size:102%;&quot; colspan=&quot;2&quot; align=&quot;center&quot; |{{#if: {{{flag|}}} |[[Image:{{{flag}}}|33px|Municipal flag]]|&amp;nbsp;}} &lt;span class=&quot;fn org&quot;&gt;{{{name|(unknown)}}}&lt;/span&gt;
+|-----
+{{#if: {{{picture|}}}|{{!}}colspan=&quot;2&quot; align=&quot;center&quot; {{!}} [[Image:{{{picture|Placeholder.png}}}|260x200px|{{{picture-legend}}}]] 
+{{!}}-----
+}}
+|colspan=&quot;2&quot; align=&quot;center&quot;| 
+{{#if: {{{lat_deg|}}} | {{Lageplan
+|marker     = reddot.svg
+|markersize = 7
+|markertext = &amp;nbsp;
+|pos_y      = {{#expr: (51.55 - {{{lat_deg|50}}} - {{{lat_min|0}}} / 60) * 100 / 2.11}} 
+|pos_x      = {{#expr: ({{{lon_deg|4}}} + {{{lon_min|0}}} / 60 - 2.52) * 100 / 3.95}} 
+|map        = Map of Belgium provinces 2.png
+|mapsize_x  = 200
+|mapsize_y  = 168
+|maptext    = Location on map of Belgium 
+|warning    = [[Image:Unknown_location_in_Belgium.png|200px|Coordinates out of range]]
+}} | [[Image:Unknown_location_in_Belgium.png|200px|No coordinates given]] }}
+|-----
+! align=&quot;center&quot; style=&quot;vertical-align: middle&quot;|[[Image:{{#if:{{{arms|}}}|{{{arms}}}|Sin escudo.svg}}|100px|Coat of arms]]
+! align=&quot;center&quot; style=&quot;vertical-align: middle&quot;|[[Image:{{#if:{{{map|}}}|{{{map}}}|Unknown_location_in_Belgium.png}}|160x160px|{{{map-legend|}}}]]
+|-----
+! style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; | Geography
+|-----
+|'''[[List of countries|Country]]''' || [[Image:Flag of Belgium (civil).svg|27px]] [[Belgium]]
+|-----
+|'''[[Regions of Belgium|Region]]''' || {{{region|(unknown)}}}
+|-----
+|'''[[Communities of Belgium|Community]]''' || {{{community|(unknown)}}}
+|----- class=&quot;label&quot;
+
+{{#if: {{{province}}}|{{!}} '''[[Provinces of Belgium|Province]]'''
+{{!}}{{{province|(unknown)}}}  
+{{!}}-----
+}}
+|'''[[Arrondissements of Belgium#Administrative|Arrondissement]]''' || {{{arrondissement|(unknown)}}}
+|-----
+|'''[[Geographic coordinate system|Coordinates]]'''
+|&lt;noinclude&gt;&lt;nowiki&gt;(geographical data)&lt;/nowiki&gt;&lt;/noinclude&gt;{{coord|{{{lat_deg|}}}|{{{lat_min|}}}|N|{{{lon_deg|}}}|{{{lon_min|}}}|E|region:BE_type:city|display=inline,title}}
+|-----
+|'''[[Area]]'''
+|{{Infobox Belgium Municipality/Geography|Geography={{{nis}}}}} [[Square kilometer|km²]]
+|-----
+! style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; | [[Population]] (Source: [[Statistics Belgium|NIS]])
+|-----
+|'''[[Population]]'''&lt;br&gt;– Males&lt;br&gt;– Females&lt;br&gt;- [[Population density|Density]]
+|&lt;noinclude&gt;&lt;nowiki&gt;(Population data)&lt;/nowiki&gt;&lt;/noinclude&gt;{{Infobox Belgium Municipality/Population|Population={{{nis}}}}}
+|-----
+{{#if: {{{0-19}}}|{{!}} '''[[Population pyramid|Age distribution]]'''&lt;br&gt;0–19 years&lt;br&gt;20–64 years&lt;br&gt;65+ years
+{{!}}''&lt;small&gt;({{{pyramid-date}}})&lt;/small&gt;''&lt;br&gt;{{{0-19}}}%&lt;br&gt;{{{20-64}}}%&lt;br&gt;{{{65}}}%
+{{!}}-----
+}}
+{{#if: {{{foreigners}}}|{{!}} '''[[Immigration|Foreigners]]'''
+{{!}}{{{foreigners}}}% ''&lt;small&gt;({{{foreigners-date}}})&lt;/small&gt;'' 
+{{!}}-----
+}}
+| style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; |'''Economy'''
+|-----
+|&lt;noinclude&gt;&lt;nowiki&gt;(Economic data)&lt;/nowiki&gt;&lt;/noinclude&gt;{{Infobox Belgium Municipality/Economy|Economy={{{nis}}}}}
+|-----
+| style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; |'''Government'''
+|-----
+{{#if: {{{mayor}}}|{{!}} {{#if:{{{list_of_mayors|}}}|[[{{{list_of_mayors}}}|'''Mayor''' (list)]]|'''[[Mayor]]'''}}
+{{!}}{{{mayor}}} 
+{{!}}-----
+}}
+{{#if: {{{majority}}}|{{!}} '''[[Coalition|Governing parties]]'''
+{{!}}{{{majority}}} 
+{{!}}-----
+}}
+
+&lt;!--
+|-----
+| Seats&lt;br /&gt;{{{parties}}} || {{{seats}}}
+| style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; |Commune's sections
+|-----
+|[[Postal code]] || Sections
+|-----
+|{{{sections-postal|(unknown)}}}
+|{{{sections-name|(unknown)}}}
+|-----
+--&gt;
+| style=&quot;background-color: #FFFFBB;&quot; colspan=&quot;2&quot; align=&quot;center&quot; |'''Other information'''
+|-----
+{{#if: {{{postal-codes}}}|{{!}} '''[[List of postal codes in Belgium|Postal codes]]'''
+{{!}}{{{postal-codes}}} 
+{{!}}-----
+}}
+{{#if: {{{telephone-area}}}|{{!}} '''[[Telephone numbering plan|Area codes]]'''
+{{!}}{{{telephone-area}}} 
+{{!}}-----
+}}
+{{#if: {{{web}}}|{{!}} '''[[Website|Web address]]'''
+{{!}}{{{web}}} 
+{{!}}-----
+}}
+|}&lt;noinclude&gt;
+
+{{Documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

@@ -104,6 +104,16 @@ my $maxTemplateRecursionLevels = 5;
 my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
+# We use a different (and faster) way of recursively including templates than MediaWiki. In most
+# cases this produces satisfactory results, however certain templates break our parser by resolving
+# to meta characters like {{ and |. These templates are used as hacks around escaping issues in 
+# Mediawiki and mostly concern wiki table syntax. Since we ignore content in tables we can safely
+# ignore these templates.
+#
+# See http://meta.wikimedia.org/wiki/Template:!
+my %overrideTemplates = ('Template:!' => ' ', 'Template:!!' => ' ', 'Template:!-' => ' ',
+                         'Template:-!' => ' ');
+
 ##### Global variables #####
 
 my %namespaces;
@@ -1148,6 +1158,12 @@ sub instantiateTemplate($\$\$) {
   # If this wasn't a parser function call, try to include a template.
   if ( length($result) == 0 ) {
     &computeFullyQualifiedTemplateTitle(\$templateTitle);
+
+    my $overrideResult = $overrideTemplates{$templateTitle};
+    if(defined $overrideResult) {
+      print LOGF "Overriding template $templateTitle\n";
+      return $overrideResult;
+    }
 
     &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result);
   }
