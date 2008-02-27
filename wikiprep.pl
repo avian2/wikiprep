@@ -1016,8 +1016,6 @@ sub includeTemplates(\$\$\$) {
     $templateRecursionLevels++;
   }
 
-  print "$$refToText\n"
-
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them - however, we do so
   # later, in function 'postprocessText()', after extracting categories, links and URLs.
