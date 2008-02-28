@@ -1176,7 +1176,7 @@ sub includeParserFunction(\$\%\$\$) {
   # and end with a colon. Everything after the first colon is the first argument.
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
 
-  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*)/ ) {
+  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/ ) {
     my $functionName=$1;
     $$refToParameterHash{'=0='}=$2;
 
@@ -1219,10 +1219,8 @@ sub includeParserFunction(\$\%\$\$) {
       my $lvalue = $$refToParameterHash{'=0='};
       my $rvalue = $$refToParameterHash{'=1='};
 
-      &trimWhitespaceBothSides(\$lvalue);
-      &trimWhitespaceBothSides(\$rvalue);
-
-      if ( $lvalue eq $rvalue ) {
+      # lvalue is always defined
+      if ( defined($rvalue) and ($lvalue eq $rvalue) ) {
         # The {{#ifeq:}} function is an if-then-else construct. The applied condition is 
         # "is rvalue equal to lvalue". Note that this does only string comparison while MediaWiki
         # implementation also supports numerical comparissons.

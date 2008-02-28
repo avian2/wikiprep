@@ -36,6 +36,9 @@
 		    {{#ifeq:a|b|true|false}}
 		    {{#ifeq:a| a||false}}
 		    {{#ifeq:a| b |true}}
+		    {{#ifeq:a|}}
+		    {{#ifeq:   }}
+		    {{#ifeq:}}
 	    </text>
     </revision>
   </page>
