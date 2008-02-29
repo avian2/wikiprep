@@ -91,4 +91,28 @@
 	    </text>
     </revision>
   </page>
+
+  <page>
+    <title>Template:Template with some spaces</title>
+    <id>6</id>
+    <revision>
+	    <text xml:space="preserve">X</text>
+    </revision>
+  </page>
+  <page>
+    <title>7</title>
+    <id>7</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{Template:Template with some spaces}}
+		    {{Template:Template_with_some_spaces}}
+		    {{Template:template with some spaces}}
+		    {{Template:template_with_some_spaces}}
+		    {{Template with some spaces}}
+		    {{template with some spaces}}
+		    {{Template_with_some_spaces}}
+		    {{template_with_some_spaces}}
+	    </text>
+    </revision>
+  </page>
 </mediawiki>

@@ -1,0 +1,2410 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Microsoft</title>
+    <id>19001</id>
+    <revision>
+      <id>194264655</id>
+      <timestamp>2008-02-26T21:50:28Z</timestamp>
+      <contributor>
+        <username>SchmuckyTheCat</username>
+        <id>31197</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted to revision 193632237 by [[Special:Contributions/Inclusivedisjunction|Inclusivedisjunction]]; spam spam spam. ([[WP:TW|TW]])</comment>
+      <text xml:space="preserve">{{Infobox_Company
+|company_name = Microsoft Corporation
+|company_logo = [[Image:Microsoft logo.svg|200px|]]
+|company_type = [[Public company|Public]] ({{nasdaq2|MSFT}})
+|foundation = [[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&lt;ref name=&quot;bbc-timeline&quot;&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/business/5085630.stm|title=Bill Gates: A timeline|work=news.bbc.co.uk|publisher=[[BBC News]]| date=2006-06-15|accessdate=2007-08-15}}&lt;/ref&gt;
+|location_city = [[Redmond, Washington]]
+|location_country = [[United States]]
+|key_people = [[Bill Gates]], &lt;small&gt;[[Entrepreneur|Co-founder]] and [[Chairman#Types|Executive Chairman]][http://www.microsoft.com/presspass/exec/billg/bio.mspx]&lt;/small&gt;; &lt;br /&gt; [[Paul Allen]], &lt;small&gt;[[Entrepreneur|Co-founder]]&lt;/small&gt;;&lt;br /&gt; [[Steve Ballmer]], &lt;small&gt;[[Chief executive officer|CEO]]&lt;/small&gt;; &lt;br /&gt; [[Ray Ozzie]], &lt;small&gt;[[Software Architecture|Chief Software Architect]]&lt;/small&gt;
+|industry = [[Computer software]] &lt;br /&gt; [[Publishing]] &lt;br /&gt; [[Research and development]] &lt;br /&gt; [[Computer hardware]] &lt;br /&gt; [[Console game|Video games]]
+|products = [[Microsoft Windows]] &lt;br /&gt; [[Microsoft Office]] &lt;br /&gt; [[Microsoft Servers]] &lt;br /&gt; [[Microsoft Visual Studio|Developer Tools]] &lt;br /&gt; [[Microsoft Dynamics|Business Solutions]] &lt;br /&gt; [[Microsoft Game Studios|Games]] &amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp; [http://www.microsoft.com/games/] &lt;br /&gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;mkt=en-us] &lt;br /&gt; [[Windows Mobile]] &lt;br /&gt; [[Zune]][http://www.zune.net/en-US/]
+|revenue={{profit}} [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&lt;ref name=&quot;2007financials&quot;&gt;{{cite web|author=MSFT Investor Relations|date=2007-07-19|url=http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx|title =&quot;Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion&quot;|work=microsoft.com| publisher=Microsoft|accessdate=2007-08-15}}&lt;/ref&gt;
+|operating_income = {{profit}} US $18.52 billion (2007)&lt;ref name=&quot;2007financials&quot; /&gt; 
+|net_income = {{profit}} US $14.06 billion (2007)&lt;ref name=&quot;2007financials&quot; /&gt;
+|num_employees = 79,000 (2007)&lt;ref name=&quot;fastfacts&quot;&gt;{{cite web|date=2007-08-01|url= http://www.microsoft.com/presspass/inside_ms.mspx|title=&quot;Fast Facts About Microsoft&quot;|work=microsoft.com|publisher=Microsoft| accessdate=2007-08-15}}&lt;/ref&gt;
+|slogan = ''Your potential. Our passion.''
+|homepage = [http://www.microsoft.com/worldwide/ www.microsoft.com]
+}}
+
+'''Microsoft Corporation''' ({{nasdaq|MSFT}}) ({{hkex|4338}}), or often just '''MS''',&lt;ref&gt;{{cite news |author=David Armstrong |title=Special meaning for 'MS' |work=[[The Press]] |date=1998-07-28|page=23 |quote=MS, known to millions worldwide as the trademark for Bill Gates's Microsoft empire, has a dual meaning for retired Christchurch journalist John Brown.}}&lt;/ref&gt; is an [[United States|American]] [[multinational corporation|multinational]] [[computer]] technology [[corporation]] with 79,000 employees in 102 countries and global annual [[revenue]] of [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] as of 2007.&lt;ref name=&quot;2007financials&quot; /&gt; It develops, manufactures, licenses, and supports a wide range of [[computer software|software]] products for computing devices.&lt;ref name=&quot;2005annual&quot;&gt;{{cite web | title= Microsoft Corporation Annual Report 2005 | url= http://www.microsoft.com/msft/ar05/downloads/MS_2005_AR.doc | publisher = Microsoft | format = doc | accessdate=2005-10-01}}&lt;/ref&gt;&lt;ref name=&quot;fastfacts&quot; /&gt; Headquartered in [[Redmond, Washington]], [[United States|USA]], its best selling products are the [[Microsoft Windows]] [[operating system]] and the [[Microsoft Office]] suite of productivity software. These products have prominent positions in the [[desktop computer]] market, with [[market share]] estimates as high as 90% or more as of 2003 for Microsoft Office and 2006 for Microsoft Windows. One of [[Bill Gates]]' key visions is &quot;to get a workstation running our software onto every desk and eventually in every home&quot;.&lt;ref&gt;Quote from ComputerWorld 1985 (7/22); there is as yet no documented use of this vision statement prior to 1985. Gates' official bio asserts that he was 'Guided by a belief that the computer would be a valuable tool on every office desktop and in every home'.&lt;/ref&gt;&lt;ref name=&quot;Bishop2004-09-23&quot;&gt;{{cite news | url= http://blog.seattlepi.nwsource.com/microsoft/archives/003469.html | title= The rest of the motto | date= [[September 23]], [[2004]] | accessdate= 2007-01-22 | publisher= [[Seattle Post-Intelligencer]]| first= Todd | last= Bishop | work= Todd Bishop's Microsoft Blog}}&lt;/ref&gt;&lt;ref name=&quot;findingsoffact&quot;&gt;{{cite web | author = Thomas Penfield Jackson, U.S. District Judge | url= http://www.usdoj.gov/atr/cases/f3800/msjudgex.htm | title= U.S. vs. Microsoft findings of fact | publisher = U.S. Department of Justice | date = [[1999-11-05]] | accessdate=2006-05-18}}&lt;/ref&gt;&lt;ref name=&quot;Fordahl2005-08-05&quot;&gt;{{cite web | url=http://seattlepi.nwsource.com/business/235169_vistatest04.html | title=Beta version of Microsoft's Vista shows a lot of potential | publisher=Associated Press | author=Matthew Fordahl | date=[[2005-08-05]] | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;Wakabayashi2006-12-01&quot;&gt;{{cite web | url=http://in.tech.yahoo.com/061130/137/69vp5.html | title=Microsoft launches Vista version of Windows | publisher=Reuters | author=Daisuke Wakabayashi | date=[[2006-12-01]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name=&quot;Kanellos2006-01-18&quot;&gt;{{cite web | url=http://news.com.com/PC+market+surged+in+2005,+will+settle+in+2006/2100-1003_3-6028454.html | title=PC market surged in 2005, will settle in 2006 | author=Michael Kanellos | publisher=CNET News.com | date=[[2006-01-18]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name=&quot;Bishop2003-10-20&quot;&gt;{{cite web | url=http://seattlepi.nwsource.com/business/144528_msftoffice20.html | title=Microsoft unveils Office 2003 | publisher=Seattle Post-Intelligencer Reporter | author=Todd Bishop | date=[[2003-10-20]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name=&quot;Thibodeau2002-05-02&quot;&gt;{{cite web|url=http://www.pcworld.com/article/id,98003-page,1/article.html|title=Can StarOffice Steal Users From Microsoft?|publisher=PC World|author=Patrick Thibodeau|date=[[2002-05-02]]|accessdate=2007-07-11}}&lt;/ref&gt;
+
+Founded to develop and sell [[BASIC programming language|BASIC]] [[interpreter (computer software)|interpreters]] for the [[Altair 8800]], Microsoft rose to dominate the [[home computer]] operating system market with [[MS-DOS]] in the mid-1980s. The company released an [[IPO|initial public offering (IPO)]] in the [[stock market]], which, due to the ensuing rise of the stock price, has made four [[billionaires]] and an estimated 12,000 [[millionaires]] from Microsoft employees.&lt;ref name=&quot;Chapman&quot;&gt;Chapman, Merrill R., ''In search of stupidity: over 20 years of high-tech marketing disasters'' (2nd Edition), Apress, ISBN 1-59059-721-4&lt;/ref&gt;&lt;ref name=&quot;stockrich&quot;&gt;{{cite news | url=http://www.nytimes.com/2005/05/29/business/yourmoney/29millionaire.html?ex=1275019200&amp;en=de3d71cbbb7e06f8&amp;ei=5090&amp;partner=rssuserland&amp;emc=rss | title=The Microsoft Millionaires Come of Age | author= Julie Bick | date=[[2005-05-29]] | publisher= [[The New York Times]] | accessdate=2006-07-03}}&lt;/ref&gt;&lt;ref name=&quot;MVP&quot;&gt;{{cite web | url=http://www.boston.com/business/globe/articles/2005/06/13/somehow_usenet_lumbers_on/ | title=Somehow, Usenet lumbers on | author=Hiawatha Bray | date=[[2005-06-13]] | accessdate=2006-07-03 | publisher=[[The Boston Globe]]}}&lt;br/&gt;* {{cite web | url= http://mvp.support.microsoft.com/mvpfaqs | title= Microsoft Frequently Asked Questions | publisher = Microsoft (Most Valued Professional) | accessdate=2006-07-01}}&lt;/ref&gt; Throughout its history the company has been the target of criticism for various reasons, including [[monopoly|monopolistic]] business practices—both the [[United States Department of Justice|U.S. Justice Department]] and the [[European Commission]], among others, brought Microsoft to court for [[antitrust]] violations and software bundling.&lt;ref name=&quot;usvms&quot;&gt;{{cite web | title= United States v. Microsoft | url= http://www.usdoj.gov/atr/cases/ms_index.htm | publisher = U.S. Department of Justice | accessdate= August 5 | accessyear=2005 }} homepage at the [[United States Department of Justice]]&lt;/ref&gt;&lt;ref name=&quot;Europa&quot;&gt;[http://europa.eu/rapid/pressReleasesAction.do?reference=IP/04/382&amp;format=HTML&amp;aged=1&amp;language=EN&amp;guiLanguage=en EUROPA - Rapid - Press Releases&lt;!-- Bot generated title --&gt;]&lt;/ref&gt; 
+
+Microsoft has footholds in other markets besides operating systems and office suites, with assets such as the [[MSNBC]] [[cable television]] network, the [[MSN]] [[Web portal|Internet portal]], and the [[Encarta|Microsoft Encarta]] multimedia encyclopedia. The company also markets both [[computer hardware]] products such as the [[IntelliMouse|Microsoft mouse]] and [[home entertainment]] products such as the [[Xbox]], [[Xbox 360]], [[Zune]] and [[MSN TV]].&lt;ref name=&quot;2005annual&quot; /&gt; Known for what is generally described as a developer-centric business culture, Microsoft has historically given customer support over [[Usenet]] newsgroups and the [[World Wide Web]], and awards [[Microsoft MVP]] status to volunteers who are deemed helpful in assisting the company's customers.&lt;ref name=&quot;bb&quot;&gt;{{cite journal | first=John | last=Charles | title= Indecent proposal? Doing Business With Microsoft | journal= IEEE Software | issue= January/February 1998 | pages=113–117}}&lt;br/&gt;* {{cite book | author=Jennifer Edstrom | coauthors=[[Marlin Eller]] | title= Barbarians Led by Bill Gates: Microsoft from inside | year=1998 | publisher=N.Y. Holt | id=ISBN 0-8050-5754-4}}&lt;br/&gt;* {{cite book | author=Fred Moody | title=I Sing the Body Electronic: A Year With Microsoft on the Multimedia Frontier | publisher=Viking | year=1995 | id=ISBN 0-670-84875-1}}&lt;br/&gt;* {{cite book | author=Michael A. Cusumano | coauthors=Richard W. Selby | title=Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages People | publisher=Free Press | year=1995 | id=ISBN 0-684-85531-3}}&lt;/ref&gt;&lt;ref name=&quot;MVP&quot;/&gt; &lt;!-- BOOK SOURCES Need Page numbers --&gt;The company's official website is one of the most visited on the Internet, receiving more than 2.4 million unique page views per day according to Alexa.com, who ranked the site 18th amongst all websites for traffic rank on [[September 12]], [[2007]].&lt;ref name=&quot;Alexa-MS&quot;&gt;{{cite web | url= http://www.alexa.com/data/details/main?url=Microsoft.com | title= Related info for: Microsoft.com | publisher = Alexa.com | accessdate=2007-09-12}}&lt;/ref&gt;
+
+== History ==
+
+{{main|History of Microsoft}}
+
+{{seealso | History of Microsoft Windows}}
+
+=== 1975–1985: Founding ===
+
+&lt;!--  Commented out because image may not have an adequate rationale for use here, solvable by expanding upon the rationale for use in this specific page: [[Image:Microsoft-Staff-1978.jpg|thumb|335px|right|'''Microsoft staff photo''' from Dec 7, 1978. From left to right: &lt;br /&gt; &lt;small&gt;'''Top:''' [[Steve Wood (entrepreneur)|Steve Wood]], [[Bob Wallace]], [[Jim Lane (Microsoft)|Jim Lane]]. &lt;br /&gt; '''Middle:''' [[Bob O'Rear]], [[Bob Greenberg]], [[Marc McDonald]], [[Gordon Letwin]]. &lt;br /&gt; '''Bottom:''' [[Bill Gates]], [[Andrea Lewis (Microsoft)|Andrea Lewis]], [[Marla Wood]], [[Paul Allen]].&lt;/small&gt;]] --&gt;
+
+Following the launch of the [[Altair 8800]], [[Bill Gates]] called the creators of the new [[microcomputer]], [[Micro Instrumentation and Telemetry Systems]] (MITS), offering to demonstrate an implementation of the [[BASIC programming language]] for the system. After the demonstration, MITS agreed to distribute [[Altair BASIC]].&lt;ref name=&quot;keyevents&quot;&gt;{{cite web | title= Information for Students: Key Events In Microsoft History | url= http://www.microsoft.com/visitorcenter/student.mspx | publisher=Microsoft Visitor Center Student Information | accessdate=1 October | accessyear=2005 | format=doc}}&lt;/ref&gt; [[Bill Gates|Gates]] left [[Harvard University]], moved to [[Albuquerque, New Mexico]] where MITS was located, and founded Microsoft there.  The company's first international office was founded on [[November 1]], [[1978]], in Japan, entitled &quot;[[ASCII]] Microsoft&quot; (now called &quot;[[Microsoft Japan]]&quot;).&lt;ref name=&quot;keyevents&quot; /&gt; On [[January 1]], [[1979]], the company moved from Albuquerque to a new home in [[Bellevue, Washington]].&lt;ref name=&quot;keyevents&quot; /&gt; [[Steve Ballmer]] joined the company on [[June 11]], [[1980]], and later succeeded Bill Gates as [[CEO]].&lt;ref name=&quot;keyevents&quot; /&gt;
+
+[[DOS]] ([[Disk storage|Disk]] Operating System) was the operating system that brought the company its first real success. On [[August 12]], [[1981]], after negotiations with [[Digital Research]] failed, [[International Business Machines|IBM]] awarded a contract to Microsoft to provide a version of the [[CP/M]] operating system, which was set to be used in the upcoming [[IBM Personal Computer]] (PC). For this deal, Microsoft purchased a [[CP/M]] clone called [[86-DOS]] from [[Seattle Computer Products]], which IBM renamed to [[PC-DOS]]. Later, the market saw a flood of IBM PC clones after [[Columbia Data Products]] successfully cloned the IBM [[BIOS]], and by aggressively marketing [[MS-DOS]] to manufacturers of IBM-PC clones, Microsoft rose from a small player to one of the major software vendors in the home computer industry.&lt;ref name=&quot;Smart-Close&quot;&gt;{{cite web | url= http://www.smartcomputing.com/editorial/article.asp?article=articles/archive/r0304/09r04/09r04.asp&amp;guid= | title= Booting Your PC: Getting Up Close &amp; Personal With A Computer’s BIOS | publisher= Smart Computing | date=November 1999 | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;Smart-WhatBIOS&quot;&gt;{{cite web | url=http://www.smartcomputing.com/editorial/article.asp?article=articles/1994/july94/pcn0713/pcn0713.asp&amp;articleid=5360&amp;guid= | title=What Is The BIOS? | date=July 1994 | publisher=Smart Computing | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;Lemley-BIOS&quot;&gt;{{cite web | url= http://www.extremetech.com/article2/0,1697,1151907,00.asp | title= Everything You Want or Need to Know About Your BIOS | publisher=Extreme Tech | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;Lemley-IP&quot;&gt;{{cite book |last = Lemley | first = Mark | coauthors = Peter S. Menell and Robert P. Merges | title= Intellectual Property in the New Technological Age | chapter= Appendix B: Introduction to Computer Technology | publisher = Aspen Publishers | chapterurl= http://www.law.berkeley.edu/institutes/bclt/pubs/ipnta/appenb.pdf | format=PDF | id=ISBN 0-7355-3652-X | date = 2006 | location = New York | edition = 4th | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;Lexikon&quot;&gt;{{cite web | url=http://www.computermuseum.li/Testpage/MSDOS-PCDOS.htm | title=MS DOS and PC DOS | work=Lexikon's History of Computing | accessdate=2006-07-05}}&lt;/ref&gt;&lt;ref name=&quot;Smart-DOSChoice&quot;&gt;{{cite news | url= http://www.smartcomputing.com/editorial/article.asp?article=articles/1994/june94/pcn0608/pcn0608.asp&amp;articleid=5103&amp;guid= | title= When It Comes To DOS, You Now Have A Choice | publisher=Smart Computing | date=June 1994 | accessdate=2006-07-05}}&lt;/ref&gt;&lt;ref name=&quot;Smart-Microsoft&quot;&gt;{{cite news | url= http://www.smartcomputing.com/editorial/article.asp?article=articles/archive/r0603/09r03/09r03.asp | title=Microsoft to Microsoft disk operating system (MS-DOS) | publisher=Smart Computing | date=March 2002 | accessdate=2006-07-05}}&lt;/ref&gt; The company expanded into new markets with the release of the ''Microsoft Mouse'' in 1983, as well as a publishing division named [[Microsoft Press]].&lt;ref name=&quot;keyevents&quot; /&gt;
+
+=== 1985–1995: OS/2 and Windows ===
+
+In August 1985, Microsoft and IBM partnered in the development of a different operating system called [[OS/2]].&lt;ref name=&quot;Dubash&quot;&gt;{{cite web | author= Manek Dubash | title= Techworld Article:OS/2 users must look elsewhere | work= Techworld |publisher= [[IDG]] | url= http://www.techworld.com/applications/features/index.cfm?featureid=1603&amp;Page=1&amp;pagePos=5 | date = [[2005-07-19]] | accessdate= 2005-07-05}}&lt;/ref&gt;  On [[November 20]], [[1985]], Microsoft released its first retail version of [[Microsoft Windows]], originally a graphical extension for its MS-DOS operating system.&lt;ref name=&quot;keyevents&quot; /&gt;  On [[March 13]], [[1986]] the company went public with an IPO, with a starting initial offering price of $21.00 and ending at the first day of trading as at US $28.00. In 1987, Microsoft eventually released their first version of OS/2 to [[Original equipment manufacturer|OEMs]].&lt;ref name=&quot;MSJ-index&quot;&gt;{{cite web | title= Microsoft Systems Journal — 1986–1994 Index | publisher=Microsoft |url= http://www.microsoft.com/msj/backissues86.aspx | accessdate=2007-03-31}} See May 1987 releases.&lt;/ref&gt;
+
+[[Image:Microsoft sign closeup.jpg|left|thumb|200px|The sign at a main entrance to the Microsoft corporate campus. The Redmond Microsoft campus today includes more than 8 million square feet (approx. 750,000&amp;nbsp;m²) and over 30,000 employees.&lt;ref name=&quot;SPI-MSexpansion&quot;&gt;{{cite news |url= http://seattlepi.nwsource.com/local/224768_microsoft18.html |title= Redmond council OKs Microsoft expansion |publisher= Seattle Post-Intelligencer |author= Seattle Post-Intelligencer Staff |date=[[2005-05-18]] | accessdate=2006-07-04}}&lt;/ref&gt;]]
+
+In 1989, Microsoft introduced its flagship [[office suite]], [[Microsoft Office]]. This was a bundle of separate office productivity applications, such as [[Microsoft Word]] and [[Microsoft Excel]].&lt;ref name=&quot;keyevents&quot; /&gt; On [[May 22]], [[1990]] Microsoft launched [[Windows 3.0]].&lt;ref name=&quot;MSPR-Win3&quot;&gt;{{cite press release | title= Windows 3.0 is Here |format=PDF | publisher= Microsoft | url=http://www.windows-now.com/files/folders/21092/download.aspx | date = 1990 | accessdate=2007-03-31}}&lt;/ref&gt; The new version of Microsoft's operating system boasted such new features as streamlined [[user interface]] graphics and improved [[protected mode]] capability for the [[Intel 80386|Intel 386]] processor; it sold over 100,000 copies in two weeks.&lt;ref name=&quot;MS-WinHistory&quot;&gt;{{cite web | url= http://www.microsoft.com/windows/WinHistoryDesktop.mspx | title= Windows History |publisher= Microsoft | date = [[2002-06-30]] | accessdate=2006-07-03}}&lt;/ref&gt; Windows at the time generated more revenue for Microsoft than OS/2, and the company decided to move more resources from OS/2 to Windows.&lt;ref name=&quot;OS/2 history&quot;&gt;{{cite web | author = David Both | url= http://www.os2bbs.com/os2news/OS2History.html | title= OS/2 History | publisher = OS/2 VOICE | accessdate=2006-07-03}}&lt;/ref&gt; In the ensuing years, the popularity of OS/2 declined, and Windows quickly became the favored PC platform. 
+
+During the transition from MS-DOS to Windows, the success of Microsoft's product [[Microsoft Office]] allowed the company to gain ground on application-software competitors, such as [[WordPerfect]] and [[Lotus 1-2-3]].&lt;ref name=&quot;thocp2&quot;&gt;{{cite web | title= Microsoft Company 15 September 1975 | publisher = The History of Computing Project | url= http://www.thocp.net/companies/microsoft/microsoft_company_part2.htm | accessdate=August 11 | accessyear=2005 }}&lt;/ref&gt;&lt;ref name=&quot;Masters&quot;&gt;{{cite web | url=http://www.vnunet.com/computing/analysis/2073923/behind-pearly-gates |author= Steve Masters| publisher= [[VNU]] Business Publications |date= [[1998-02-13]] | title= Behind the Pearly Gates | accessdate=2006-07-04}}&lt;/ref&gt; According to [[The Register]], Novell, an owner of WordPerfect for a time, alleged that Microsoft used its inside knowledge of the DOS and Windows kernels and of undocumented [[Application Programming Interface]] features to make Office perform better than its competitors.&lt;ref name=&quot;Orlowski2004-11-16&quot;&gt;{{cite web | author = Andrew Orlowski | url= http://www.theregister.co.uk/2004/11/16/novell_microsoft_wordperfect_analysis/ | title= Novell's MS complaint: we wuz robbed | work=[[The Register]] |publisher= Situation Publishing Ltd | date = [[2004-11-16]] | accessdate=2006-07-04}}&lt;/ref&gt; Eventually, Microsoft Office became the dominant business suite, with a [[market share]] far exceeding that of its competitors.&lt;ref name=&quot;McCracken&quot;&gt;{{cite news | url= http://www.pcworld.com/news/article/0,aid,18462,pg,1,00.asp | title= A Peek at Office Upgrade | publisher= PCWorld.com | date= 2000-09-13 | last= McCracken | first= Harry | accessdate=2006-07-04}}&lt;/ref&gt; 
+
+In 1993, Microsoft released [[Windows NT 3.1]], a business operating system with the Windows 3.1 user interface but an entirely different kernel.&lt;ref name=&quot;thocp2&quot; /&gt; In 1995, Microsoft released [[Windows 95]], a new version of the company's flagship operating system which featured a completely new user interface, including a novel [[Start menu|start button]]; more than a million copies of Microsoft Windows 95 were sold in the first four days after its release.&lt;ref name=&quot;thocp2&quot; /&gt; The company also released its [[web browser]], [[Internet Explorer]], with the Windows 95 Plus! Pack in August 1995 and subsequent Windows versions.&lt;ref name=&quot;Hardmeier&quot;&gt;{{cite web| author = Sandi Hardmeier | date = [[2005-08-25]] | url= http://www.microsoft.com/windows/ie/community/columns/historyofie.mspx| publisher= Microsoft| title= Microsoft - The History of Internet Explorer| accessdate= 2007-02-06}}&lt;/ref&gt;
+
+=== 1995–2005: Internet and legal issues ===
+In the mid-90s, Microsoft began to expand its product line into [[computer network]]ing and the [[World Wide Web]]. On [[August 24]] [[1995]], it launched a major [[online service]], [[MSN]] (Microsoft Network), as a direct competitor to [[AOL]]. MSN became an umbrella service for Microsoft's online services.&lt;ref name=&quot;keyevents&quot; /&gt;&lt;ref name=&quot;thocp2&quot; /&gt;&lt;ref name=&quot;MSN-Timeline&quot;&gt;{{cite web | url= http://www.microsoft.com/presspass/press/2002/nov02/11-08MSN8GlobalTimeLine.mspx | title= MSN Historical Timeline:  A brief history of milestone events in the life of MSN from the past ten years | publisher= Microsoft | date = June 2005 | accessdate=2006-07-03}}&lt;/ref&gt; The company continued to branch out into new markets in 1996, starting with a joint venture with [[NBC]] to create a new 24/7 cable news station, [[MSNBC]].&lt;ref name=&quot;thocp2&quot; /&gt;&lt;ref name=&quot;APM-NewsArchives&quot;&gt;{{cite web | url= http://marketplace.publicradio.org/shows/1996/07/15_mpp.html | title= Marketplace: News Archives for July 15, 1996 | publisher = American Public Media | accessdate= 2006-07-03}}&lt;/ref&gt; Microsoft entered the personal digital assistant (PDA) market in November with [[Windows CE 1.0]], a new built-from-scratch version of their flagship operating system, specifically designed to run on low-memory, low-performance machines, such as handhelds and other small computers.&lt;ref name=&quot;cehistory&quot;&gt;{{cite web | url= http://www.hpcfactor.com/qlink/?linkID=20 | title= The History of Microsoft Windows CS | publisher = HPC:Factor | accessdate= 2006-07-03}}&lt;/ref&gt; Later in 1997, [[Internet Explorer 4.0]] was released for both [[Mac OS]] and Windows, marking the beginning of the takeover of the browser market from rival [[Netscape]]. In October, the Justice Department filed a motion in the Federal [[District court|District Court]] in which they stated that Microsoft had violated an agreement signed in 1994, and asked the court to stop the bundling of Internet Explorer with Windows.&lt;ref name=&quot;keyevents&quot; /&gt;
+
+The year 1998 was significant in Microsoft's history, with Bill Gates appointing [[Steve Ballmer]] as president of Microsoft but remaining as Chair and CEO himself.&lt;ref name=&quot;keyevents&quot; /&gt; The company released [[Windows 98]], an update to Windows 95 that incorporated a number of Internet-focused features and support for new types of devices.&lt;ref name=&quot;keyevents&quot; /&gt; On [[April 3]] [[2000]], a judgment was handed down in the case of [[United States v. Microsoft]],&lt;ref name=&quot;usvms&quot; /&gt; calling the company an &quot;abusive monopoly&quot;&lt;ref name=&quot;findingsoffact&quot; /&gt; and forcing the company to split into two separate units. Part of this ruling was later overturned by a federal [[Appeal|appeals court]], and eventually settled with the U.S. Department of Justice in 2001.
+
+In 2001, Microsoft released [[Windows XP]], the first version that encompassed the features of both its business and home product lines. XP introduced a new [[graphical user interface]], the first such change since Windows 95.&lt;ref name=&quot;keyevents&quot; /&gt;&lt;ref name=&quot;MS-XPProFeatures&quot;&gt;{{cite web | date = [[2004-08-25]] | url= http://www.microsoft.com/windowsxp/pro/evaluation/features.mspx | title= Windows XP Professional Features | publisher= Microsoft | accessdate= 2006-07-03}}&lt;/ref&gt; Later, with the release of the [[Xbox]] Microsoft entered the multi-billion-dollar [[game console]] market dominated by [[Sony]] and [[Nintendo]].&lt;ref name=&quot;keyevents&quot; /&gt; Microsoft encountered more turmoil in March 2004 when antitrust legal action was brought against it by the [[European Union]] for abusing its market dominance (see [[European Union Microsoft antitrust case]]), eventually resulting in a judgement to produce new versions of its Windows XP platform—called Windows XP Home Edition N and Windows XP Professional N—that did not include its [[Windows Media Player]].&lt;ref name=&quot;CNN-MSfine&quot;&gt;{{cite news | url= http://www.cnn.com/2004/BUSINESS/03/24/microsoft.eu/ | title= Microsoft hit by record EU fine | publisher=[[CNN]] | date=[[2004-03-25]] | accessdate= 2006-05-19}}&lt;/ref&gt;&lt;ref name=&quot;euantitrust&quot;&gt;{{cite web | title= Commission Decision of 24.03.2004 relating to a proceeding under Article 82 of the EC Treaty (Case COMP/C-3/37.792 Microsoft) | publisher = Commission of the European Communities | url= http://ec.europa.eu/comm/competition/antitrust/cases/decisions/37792/en.pdf | date = [[2004-04-21]] | accessdate=August 5 | accessyear=2005 | format=[[PDF]]}} (from the official EU website)&lt;/ref&gt;
+
+=== 2006–present: Vista and other transitions ===
+
+&lt;!-- remember - DESCRIPTION OF FUTURE EVENTS IS NOT ENCYCLOPEDIC --&gt;
+
+In 2006, Bill Gates announced a two year transition period from his role as Chief [[Software architect|Software Architect]], which would be taken by [[Ray Ozzie]], and planned to remain the company's chairman, head of the Board of Directors and act as an adviser on key projects.&lt;ref name=&quot;MSPR-GatesTransition&quot;&gt;{{cite press release | url= http://www.microsoft.com/presspass/press/2006/jun06/06-15CorpNewsPR.mspx | title= Microsoft Announces Plans for July 2008 Transition for Bill Gates | publisher= Microsoft | date = [[2006-06-15]]| accessdate=2006-06-16}}&lt;/ref&gt; As of December 2007, [[Windows Vista]], released in January 2007, is Microsoft's latest operating system. [[Microsoft Office 2007]] was released at the same time; its &quot;[[Ribbon (computing)|Ribbon]]&quot; user interface is a significant departure from its predecessors.
+On 1st February, 2008, Microsoft made an unsolicited bid to purchase the fully diluted outstanding shares of [[Yahoo]] for up to $44.6 billion,&lt;ref&gt;[http://money.cnn.com/news/newsfeeds/articles/djf500/200802011107DOWJONESDJONLINE000664_FORTUNE5.htm 5th UPDATE: Microsoft Offers To Buy Yahoo For $44.6 Billion]&lt;/ref&gt; though this offer was later rejected on February 10. Microsoft is not privately haggling with Yahoo over the software maker's rejected $31-per-share buyout offer for the Internet pioneer, [[Bill Gates]] said on [[February 19]] [[2008]].&lt;ref&gt;[http://edition.cnn.com/2008/BUSINESS/02/19/gates.yahoo.ap/index.html Microsoft won't haggle with Yahoo]&lt;/ref&gt;Microsoft Corp. told on [[February 21]] [[2008]] it will share more information about its products and technology. The company wants to make it easier for developers to create software that works with its products.&lt;ref&gt;[http://edition.cnn.com/2008/TECH/ptech/02/21/microsoft.sharing.ap/index.html Microsoft offers to share some secrets]&lt;/ref&gt;
+
+== Product divisions ==
+
+&lt;!-- Generally we stick to products that are in the current annual report here - if you wish to add one that is not you probably need to provide a reference for it --&gt;
+
+To be more precise in tracking performance of each unit and delegating responsibility, Microsoft reorganized into seven core business groups—each an independent financial entity—in April 2002. Later, on [[September 20]] [[2005]], Microsoft announced a rationalization of its original seven business groups into the three core divisions that exist today: the Windows Client, MSN and Server and Tool groups were merged into the ''Microsoft Platform Products and Services Division''; the Information Worker and Microsoft Business Solutions groups were merged into the ''Microsoft Business Division''; and the [[mobile computing|Mobile and Embedded Devices]] and Home and Entertainment groups were merged into the ''Microsoft Entertainment and Devices Division''.&lt;ref name=&quot;MS-Commitment&quot;&gt;{{cite web | title= Our Commitment to Our Customers: Microsoft's Business| url= http://www.microsoft.com/mscorp/articles/business.asp | publisher= Microsoft | date = [[2005-09-20]] | accessdate=2007-03-31 }}&lt;/ref&gt;&lt;ref name=&quot;MSPR-AllchinRetire&quot;&gt;{{cite press release | title= Microsoft Realigns for Next Wave of Innovation and Growth: CEO Ballmer appoints presidents of three core divisions; Allchin announces retirement plan | url= http://www.microsoft.com/presspass/press/2005/sep05/09-20ExecChangesPR.mspx | date = [[2005-09-20]] | accessdate=September 26 | publisher= Microsoft | accessyear=2005 }}&lt;/ref&gt;
+
+=== Platform Products and Services Division ===
+
+[[Image:Windows logo.png|thumb|The current logo of [[Microsoft Windows]], one of the company's best-known products.]]
+
+This division produces Microsoft's [[flagship]] product, the Windows operating system. It has been produced in many versions, including [[Windows 3.1]], [[Windows 95]], [[Windows 98]], [[Windows 2000]], [[Windows Me]], [[Windows Server 2003]], [[Windows XP]] and [[Windows Vista]]. Almost all [[IBM PC compatible|IBM compatible]] [[personal computers]] come with Windows preinstalled. The current desktop version of Windows is Windows Vista. The [[online service]] MSN, the cable television station [[MSNBC]] and the Microsoft online magazine ''Slate'' are all part of this division. (''Slate'' was acquired by ''[[The Washington Post]]'' on [[December 21]], [[2004]].) At the end of 1997, Microsoft acquired [[Hotmail]], the most popular [[webmail]] service, which it rebranded as &quot;MSN Hotmail&quot;. In 1999, Microsoft introduced [[MSN Messenger]], an [[instant messaging]] client, to compete with the popular [[AOL Instant Messenger]]. Along with Windows Vista, MSN Messenger became [[Windows Live Messenger]].&lt;ref name=&quot;2005annual&quot; /&gt;
+
+[[Microsoft Visual Studio]] is the company's set of [[programming]] tools and [[compilers]]. The software product is GUI-oriented and links easily with the [[Windows API]]s, but must be specially configured if used with non-Microsoft libraries. The current version is [[Visual Studio 2008]]. The previous version, [[Visual Studio 2005]] was a major improvement over its predecessor, Visual Studio.Net 2003, named after the .NET initiative, a Microsoft marketing initiative covering a number of technologies. Microsoft's definition of .NET continues to evolve. As of 2004, .NET aims to ease the development of Microsoft Windows-based applications that use the Internet, by deploying a new Microsoft communications system, ''Indigo'' (now renamed [[Windows Communication Foundation]]). This is intended to address some issues previously introduced by Microsoft's DLL design, which made it difficult, even impossible in some situations, to manage, install multiple versions of complex [[software package]]s on the same system (see [[DLL-hell]]), and provide a more consistent development platform for all Windows applications (see [[Common Language Infrastructure]]). In addition, the Company established a set of certification programs to recognize individuals who have expertise in its software and solutions. Similar to offerings from [[Cisco Systems|Cisco]], [[Sun Microsystems]], [[Novell]], IBM, and [[Oracle Corporation]], these tests are designed to identify a minimal set of proficiencies in a specific role; this includes developers ([[Microsoft Certified Professional|&quot;Microsoft Certified Solution Developer&quot;]]), system/network analysts ([[MCSE|&quot;Microsoft Certified Systems Engineer&quot;]]), trainers (&quot;[[Microsoft Certified Professional|Microsoft Certified Trainers]]&quot;) and administrators ([[MCSA|&quot;Microsoft Certified Systems Administrator&quot;]] and [[MCDBA|&quot;Microsoft Certified Database Administrator&quot;]]).&lt;ref name=&quot;2005annual&quot; /&gt;
+
+Microsoft offers a suite of [[Server (computing)|server]] software, entitled [[Windows Server System]]. [[Windows Server 2003]], an operating system for network servers, is the core of the Windows Server System line. Another server product, [[Systems Management Server]], is a collection of tools providing remote-control abilities, patch management, software distribution and a hardware/software inventory. Other server products include:
+* [[Microsoft SQL Server]], a [[relational database]] management system;
+* [[Microsoft Exchange Server]], for certain business-oriented [[e-mail]] features;
+* [[Small Business Server]], for messaging and other small business-oriented features; and
+* [[Microsoft BizTalk Server]], for employee integration assistance and other functions.&lt;ref name=&quot;2005annual&quot; /&gt;
+
+=== Business Division ===
+
+[[Image:Microsoft building 17 front door.jpg|thumb|245px|left|Front entrance to building 17 on the main campus of the company's Redmond campus.]]
+
+The Microsoft Business Division produces [[Microsoft Office]], which is the company's line of office software. The software product includes [[Microsoft Office Word|Word]] (a word processor), [[Microsoft Access|Access]] (a personal relational database application), [[Microsoft Excel|Excel]] (a [[spreadsheet]] program), [[Microsoft Office Outlook|Outlook]] (Windows-only [[collaborative software|groupware]], frequently used with [[Microsoft Exchange Server|Exchange Server]]), [[Microsoft PowerPoint|PowerPoint]] (presentation software), and [[Microsoft Publisher|Publisher]] ([[desktop publishing software]]). A number of other products were added later with the release of Office 2003 including [[Microsoft Visio|Visio]], [[Microsoft Project|Project]], [[Microsoft MapPoint|MapPoint]], [[Microsoft InfoPath|InfoPath]] and [[Microsoft Office OneNote|OneNote]].&lt;ref name=&quot;2005annual&quot; /&gt;
+
+The division focuses on developing financial and business management software for companies. These products include products formerly produced by the Business Solutions Group, which was created in April 2001 with the acquisition of [[Great Plains (accounting)|Great Plains]]. Subsequently, [[Microsoft Navision|Navision]] was acquired to provide a similar entry into the European market, resulting in the planned release of [[Microsoft Dynamics NAV]] in 2006. The group markets [[Axapta]] and Solomon, catering to similar markets, which is scheduled to be combined with the Navision and Great Plains lines into a common platform called [[Microsoft Dynamics]].&lt;ref name=&quot;2005annual&quot; /&gt;
+
+=== Entertainment and Devices Division ===
+
+[[Image:Xbox360.png|thumb|right|The [[Xbox 360]], Microsoft's second system in the gaming console market.]]
+
+Microsoft has attempted to expand the Windows brand into many other markets, with products such as [[Windows CE]] for [[Personal Digital Assistant|PDAs]] and its &quot;Windows-powered&quot; Smartphone products. Microsoft initially entered the mobile market through Windows CE for [[handheld device]]s, which today has developed into [[Windows Mobile]] 6. The focus of the operating system is on devices where the OS may not directly be visible to the end user, in particular, appliances and cars. The company produces [[MSN TV]], formerly [[WebTV]], a television-based [[Internet appliance]]. Microsoft used to sell a set-top [[Digital Video Recorder]] (DVR) called the [[Microsoft TV|UltimateTV]], which allowed users to record up to 35 hours of television programming from a [[Direct-To-Home|direct-to-home]] [[satellite television]] provider [[DirecTV]]. This was the main competition in the UK for [[British Sky Broadcasting]]'s (BSkyB) SKY + service, owned by [[Rupert Murdoch]]. UltimateTV has since been discontinued, with DirecTV instead opting to market DVRs from [[TiVo]] Inc. before later switching to their own [[Digital video recorder|DVR]] brand.&lt;ref name=&quot;2005annual&quot; /&gt;
+
+Microsoft sells [[computer games]] that run on Windows PCs, including titles such as ''[[Age of Empires]]'', ''[[Halo (video game series)|Halo]]'' and the ''[[Microsoft Flight Simulator]]'' series. It produces a line of [[reference work]]s that include [[encyclopedia]]s and [[atlas (cartography)|atlases]], under the name Encarta. [[Microsoft Zone]] hosts free premium and retail games where players can compete against each other and in tournaments. Microsoft entered the multi-billion-dollar [[game console]] market dominated by [[Sony]] and [[Nintendo]] in late 2001,&lt;ref name=&quot;BizWire-2001Ent&quot;&gt;{{cite web | title = NPD Reports Annual 2001 U.S. Interactive Entertainment Sales Shatter Industry Record | publisher = Business Wire | date = [[February 7]] [[2002]] | url = http://www.findarticles.com/p/articles/mi_m0EIN/is_2002_Feb_7/ai_82604922 | accessdate = 2007-03-31}}&lt;/ref&gt; with the release of the [[Xbox]]. The company develops and publishes its own video games for this console, with the help of its [[Microsoft Game Studios]] subsidiary, in addition to [[third-party developer|third-party]] Xbox [[video game publisher]]s such as [[Electronic Arts]] and [[Activision]], who pay a license fee to publish games for the system. The Xbox also has a successor in the [[Xbox 360]], released on [[2005-11-22]] in [[North America]] and other countries.&lt;ref name=&quot;Wolfe&quot;&gt;{{cite web | author = Alexander Wolfe | url=http://informationweek.com/story/showArticle.jhtml?articleID=174401045 | work= Information Week | publisher=[[CMP Media]] | title= Midnight Madness Hypes Xbox 360 Launch | date = [[November 22]] [[2005]] | accessdate=2006-07-03}}&lt;/ref&gt;&lt;ref name=&quot;BBC-Xbox360&quot;&gt;{{cite web | date = [[December 2]] [[2005]] | url= http://news.bbc.co.uk/2/hi/technology/4491804.stm | title= Xbox 360 sells out within hours | publisher=[[BBC]] | accessdate=2006-07-03}}&lt;/ref&gt; With the [[Xbox 360]], Microsoft hopes to compensate for the losses incurred with the original [[Xbox]]. However, Microsoft made some decisions considered controversial in the video [[Gaming Community|gaming community]], such as releasing the console with high [[Xbox 360 technical problems|failure rates]], selling two different versions of the system, one without the [[HDD]] and providing limited [[backward compatibility]] with only particular Xbox titles.&lt;ref name=&quot;Thorsen-360play&quot;&gt;{{cite web | url= http://www.gamespot.com/news/6139702.html | title= 360 to play 200-plus Xbox games | author= Tor Thorsen | publisher= GameSpot | date= [[2005-11-11]] | accessdate=2006-07-14}}&lt;/ref&gt;&lt;ref name=&quot;Thorsen-360compat&quot;&gt;{{cite web | url= http://www.gamespot.com/news/6140998.html | title=360 backward-compatibility update rereleased | author=Tor Thorsen | publisher=GameSpot | date=[[2005-12-09]] | accessdate=2006-07-14}}&lt;/ref&gt; . In addition to the Xbox line of products, Microsoft also markets a number of other computing-related hardware products as well, including [[computer mouse|mice]], [[Computer keyboard|keyboards]], [[joystick]]s, and [[gamepad]]s, along with other [[game controller]]s, the production of which is outsourced in most cases.
+As of 15 November 2007, Microsoft announced the purchase of Musiwave, [[Openwave]]'s mobile phone music sales business.&lt;ref&gt;{{cite web | url= http://www.musiwave.net/MW_press_release_details.php?idrelease=87 | title=Musiwave acquisition | date=[[2007-11-15]] | accessdate=2007-12-13}}&lt;/ref&gt;
+
+== Business culture ==
+
+[[Image:Cafeteria Way at Redmond West.jpg‎|left|thumbnail|300px|Photo of Microsoft's RedWest campus.]]
+
+[[Image:RedWest Waterfall.jpg‎|left|thumbnail|300px|Landscaping at Microsoft's RedWest campus]]
+
+Microsoft has often been described as having a developer-centric business culture. A great deal of time and money is spent each year on recruiting young university-trained [[software developer]]s and on keeping them in the company. For example, while many software companies often place an entry-level software developer in a cubicle desk within a large office space filled with other cubicles, Microsoft assigns a private or semiprivate closed office to every developer or pair of developers. In addition, key [[decision making|decision makers]] at every level are either developers or former developers. In a sense, the software developers at Microsoft are considered the &quot;stars&quot; of the company in the same way that the sales staff at IBM are considered the &quot;stars&quot; of their company.&lt;ref name=&quot;bb&quot; /&gt;
+
+Within Microsoft the expression [[eat one's own dog food|&quot;eating our own dog food&quot;]] is used to describe the policy of using the latest Microsoft products inside the company in an effort to test them in &quot;real-world&quot; situations. Only prerelease and beta versions of products are considered dog food.&lt;ref name=&quot;dogfood&quot;&gt;{{cite web | author=CNET News.com Staff | title=Microsoft tests its own 'dog food' | url=http://news.zdnet.com/2100-3513_22-5047467.html | date=[[2003-07-21]] | work=ZDNet| publisher=[[CNET Networks]] |accessdate=2005-10-09 }}&lt;/ref&gt; This is usually shortened to just &quot;dogfood&quot; and is used as noun, verb, and adjective. The company is also known for their hiring process, dubbed the &quot;[[Microsoft interview]]&quot;, which is notorious for off-the-wall questions such as &quot;Why is a [[manhole cover]] round?&quot; and is a process often mimicked in other organizations, although these types of questions are rarer now than they were in the past.&lt;ref name=&quot;Poundstone&quot;&gt;{{cite web | author=William Poundstone | date=[[2003-05-21]] | url=http://www.g4tv.com/screensavers/features/6282/Square_Manhole_Covers_and_Crazy_Questions.html | title=Square Manhole Covers and Crazy Questions | work=G4TV| publisher=[[G4 Media]] | accessdate=2006-07-01}}&lt;/ref&gt; For fun, Microsoft also hosts the [[Microsoft Puzzle Hunt]], an annual [[puzzle hunt]] (a live puzzle game where teams compete to solve a series of puzzles) held at the Redmond campus. 
+
+As of 2006, Microsoft employees, not including Bill Gates, have given over $2.5 billion dollars to [[non-profit organization]]s worldwide, making Microsoft the worldwide top company in per-employee donations.&lt;ref name=&quot;MSPR-Charity&quot;&gt;{{cite press release | title=Microsoft and Its Employees Surpass $2.5 Billion Mark Through Charitable Donations: Culture of volunteerism and philanthropy encourages company and 70,000 employees to make a difference | url= http://www.microsoft.com/presspass/press/2006/sep06/09-21CharitableDonationsPR.mspx | publisher= Microsoft | date = [[September 21]] [[2006]] |  accessdate= 2006-09-22 }}&lt;/ref&gt; In January 2007, the Harris Interactive/The Wall Street Journal Reputation Quotient survey concluded that Microsoft had the world's best corporate reputation, citing strong financial performance, vision &amp; leadership, workplace environment rankings, and the charitable deeds of the [[Bill &amp; Melinda Gates Foundation]].&lt;ref name=&quot;Alsop&quot;&gt;{{cite news | title= How Boss's Deeds Buff a Firm's Reputation | url= http://online.wsj.com/article_print/SB117019715069692873.html | author= Ron Alsop | publisher=The Wall Street Journal | date=[[2007-01-31]] | accessdate=2007-01-31}}&lt;/ref&gt;
+
+== User culture ==
+
+&lt;!-- Note that we could really use more here about the user culture as the expected bahaviur - i.e. how apple tends to generate advocates while Microsoft users mainly see its products as tools, for example --&gt;
+
+Technical reference for developers and articles for various Microsoft magazines such as ''Microsoft Systems Journal'' (or MSJ) are available through the Microsoft Developer Network, often called [[MSDN]]. MSDN also offers subscriptions for companies and individuals, and the more expensive subscriptions usually offer access to pre-release beta versions of Microsoft software.&lt;ref name=&quot;MSDN-SubscribeFAQ&quot;&gt;{{cite web | url= http://msdn.microsoft.com/subscriptions/faq/default.aspx | publisher=Microsoft| title= MSDN Subscription FAQ |accessdate=2006-07-03}}&lt;/ref&gt;&lt;ref name=&quot;MSJ-home&quot;&gt;{{cite web | url= http://www.microsoft.com/msj/ | title= Microsoft Systems Journal Homepage | publisher= Microsoft| date = [[April 15]] [[2004]] | accessdate=2006-07-03}}&lt;/ref&gt; In recent years, Microsoft launched a community site for developers and users, entitled [[Channel9]], which provides many modern features such as a [[wiki]] and an [[Internet forum]].&lt;ref name=&quot;Hobson&quot;&gt;{{cite web | author = Neville Hobson | url= http://www.webpronews.com/news/webdevelopmentnews/wpn-42-20050411MicrosoftsChannel9andCulturalRules.html | title= Microsoft's Channel 9 And Cultural Rules | work= WebProNews |publisher=[[iEntry Inc]] | date = [[2005-04-11]] | accessdate=2006-07-03}}&lt;/ref&gt; Another community site that provides daily [[videocast]]s and other services, ''On10.net'', launched on March 3, 2006.&lt;ref name=&quot;On10-home&quot;&gt;{{cite web | url= http://www.On10.net | title= On10.net homepage | accessdate= 2006-05-04}}&lt;/ref&gt;
+
+Most free technical support available through Microsoft is provided through online [[Usenet]] [[newsgroups]] (in the early days it was also provided on [[CompuServe]]). There are several of these newsgroups for nearly every product Microsoft provides, and often they are monitored by Microsoft employees. People who are helpful on the newsgroups can be elected by other peers or Microsoft employees for [[Microsoft Most Valuable Professional]] (MVP) status, which entitles people to a sort of special social status, in addition to possibilities for awards and other benefits.&lt;ref name=&quot;MVP&quot; /&gt;
+
+By 2005, the city of [[Seattle]] in the state of [[Washington (state)|Washington]] had 2,500 users who owned smartphone and desktop computer versions of the JamBayes Traffic Forecasting Service, developed by researchers at Microsoft and the [[University of Washington]].&lt;ref&gt;{{cite web|title=Prediction, Expectation, and Surprise: Methods, Designs,
+and Study of a Deployed Traffic Forecasting Service|author=Horvitz, Eric, Johnson Apacible, Raman Sarin, and Lin Liao|format=PDF|publisher=Microsoft Research (research.microsoft.com/~horvitz)|url=http://research.microsoft.com/~horvitz/horvitz_traffic_uai2005.pdf|date=|accessdate=2007-12-18}}&lt;/ref&gt; [[Kleiner Perkins Caufield &amp; Byers]], [[Sequoia Capital]], [[Skymoon Ventures]], [[Crescendo Ventures]], [[ZenShin Capital Partners]], [[Artis Capital]], [[Gold Hill Capital]], and several individuals gave Dash [[United States dollar|USD$]]45 million for [[Dash Express]] which ''[[Wired News]]'' says &quot;learns from its users&quot;. &quot;If a Dash owner is moving 5 miles per hour in a {{convert|45|mi/h|km/h|abbr=on}} zone, Dash servers will realize he's in traffic and warn other Dash drivers to choose faster routes&quot;.&lt;ref&gt;{{cite news|author=Sloane, Julie|title=Top 10 Startups Worth Watching in 2008|url=http://www.wired.com/techbiz/startups/news/2007/12/YE_10_startups|date=[[December 24]], [[2007]]|work=Wired.com|accessdate=2007-12-24}}&lt;/ref&gt;
+
+== Corporate affairs ==
+=== Corporate structure ===
+
+The company is run by a Board of Directors consisting of ten people, made up of mostly company outsiders (as is customary for [[publicly traded]] companies). Current members of the [[board of directors]] are: [[Steve Ballmer]], [[James Cash, Jr.]], [[Dina Dublon]], [[Bill Gates]], [[Raymond Gilmartin]], [[Reed Hastings]], [[David Marquardt]], [[Charles Noski]], [[Helmut Panke]], and [[Jon Shirley]].&lt;ref name=&quot;MSPR-Board&quot;&gt;{{cite press release |url= http://www.microsoft.com/presspass/bod/default.mspx| title= Microsoft Board of Directors| work=PressPass| publisher=Microsoft |accessdate=2007-03-26}}&lt;/ref&gt; The ten board members are elected every year at the annual [[shareholder]]s' meeting, and those who do not get a majority of votes must submit a [[resignation]] to the board, which will subsequently choose whether or not to accept the resignation. There are five committees within the board which oversee more specific matters. These committees include the Audit Committee, which handles accounting issues with the company including auditing and reporting; the Compensation Committee, which approves compensation for the CEO and other employees of the company; the Finance Committee, which handles [[financial]] matters such as proposing mergers and acquisitions; the Governance and Nominating Committee, which handles various corporate matters including nomination of the board; and the Antitrust Compliance Committee, which attempts to prevent company practices from violating [[antitrust]] laws.&lt;ref name=&quot;MS-Govern&quot;&gt;{{cite web | title=Microsoft Corporation Corporate Governance Guidelines | url= http://www.microsoft.com/mscorp/governance/guidelines.mspx | publisher=Microsoft |accessdate=9 October | accessyear=2005 }}&lt;/ref&gt;&lt;ref name=&quot;MS-ProxyStmt&quot;&gt;{{cite web | title= Microsoft 2005 Proxy Statement |publisher= Microsoft |url= http://www.microsoft.com/msft/reports/proxy2005.mspx | accessdate=2006-07-03 }}&lt;/ref&gt;
+
+There are several other aspects to the corporate structure of Microsoft. For worldwide matters there is the Executive Team, made up of sixteen company officers across the globe, which is charged with various duties including making sure employees understand Microsoft's culture of business. The sixteen officers of the Executive Team include the Chairman and [[Software architecture|Chief Software Architect]], the CEO, the [[General Counsel]] and Secretary, the [[CFO]], senior and group vice presidents from the business units, the CEO of the Europe, the Middle East and Africa regions; and the heads of Worldwide Sales, Marketing and Services; [[Human resources|Human Resources]]; and Corporate Marketing. In addition to the Executive Team there is also the Corporate Staff Council, which handles all major staff functions of the company, including approving corporate policies. The Corporate Staff Council is made up of employees from the Law and Corporate Affairs, Finance, Human Resources, Corporate Marketing, and Advanced Strategy and Policy groups at Microsoft. Other [[Executive Officers]] include the Presidents and Vice Presidents of the various product divisions, leaders of the marketing section, and the [[Chief technical officer|CTO]], among others.&lt;ref name=&quot;MS-Citizenship&quot;&gt;{{cite web | title= Microsoft 2004 Citizenship Report | url= http://www.microsoft.com/citizenship/default.mspx | publisher= Microsoft| accessdate=9 October | accessyear=2005 }}&lt;/ref&gt;&lt;!-- The previous source link is out of date, but it did verify the text as if the access date; needs to be updated or link fixed though--&gt;&lt;ref name=&quot;2005annual&quot; /&gt;
+
+=== Stock ===
+
+When the company debuted its [[IPO]] in [[March 13]], [[1986]], the [[stock]] price was US $21.&lt;ref name=&quot;stockfaq&quot;&gt;{{cite web | title= Microsoft Stock and Shareholder Frequently Asked Questions
+| url= http://www.microsoft.com/msft/FAQ/stock.mspx | publisher = Microsoft | accessdate=2006-07-03 }}&lt;/ref&gt;&lt;ref name=&quot;stocksheet&quot;&gt;{{cite web | title= Microsoft stock price spreadsheet from Microsoft investor relations | url= http://download.microsoft.com/download/d/a/7/da7e8eca-4410-4475-a211-03327408b655/msftpricehist.xls | publisher = Microsoft | accessdate=2006-07-04 }} ([[Microsoft Excel]] format)&lt;/ref&gt; By the close of the first [[trading day]], the stock had closed at $28, equivalent to 9.7 cents when adjusted for the company's first nine [[stock split|splits]].&lt;ref name=&quot;stocksheet&quot; /&gt; The initial close and ensuing rise in subsequent years made several Microsoft employees millions.&lt;ref name=&quot;stockrich&quot; /&gt; The stock price peaked in 1999 at around US $119 (US $60.928 adjusting for splits).&lt;ref name=&quot;stocksheet&quot; /&gt; While the company has had nine stock splits, the first of which was in [[September 18]] [[1987]], the company did not start offering a [[dividend]] until [[January 16]] [[2003]].&lt;ref name=&quot;stocksheet&quot; /&gt;&lt;ref name=&quot;dividendfaq&quot;&gt;{{cite web | title= Dividend Frequently Asked Questions | url= http://www.microsoft.com/msft/FAQ/dividend.mspx | publisher = Microsoft | accessdate= 2006-07-03 }}&lt;/ref&gt; The dividend for the 2003 [[fiscal year]] was eight cents per [[share (finance)|share]], followed by a dividend of sixteen cents per share the subsequent year.&lt;ref name=&quot;dividendfaq&quot; /&gt; The company switched from yearly to quarterly dividends in 2005, for eight cents a share per quarter with a [[Special dividend|special one-time payout]] of three dollars per share for the second quarter of the fiscal year.&lt;ref name=&quot;dividendfaq&quot; /&gt;
+
+Around 2003 the stock price began a slow descent. Despite the company's ninth split on [[February 2]] [[2003]] and subsequent increases in dividend payouts, the price of Microsoft's stock continued to fall for the next several years.&lt;ref name=&quot;dividendfaq&quot; /&gt;&lt;ref name=&quot;Yahoo-MSFTchart&quot;&gt;{{cite web | title=Yahoo MSFT stock chart | url= http://finance.yahoo.com/q/bc?s=MSFT&amp;t=my | publisher = Yahoo Finance | accessdate=9 October | accessyear=2005 }}&lt;br/&gt;* {{cite web | title= MSN Money MSFT chart with dividend and split info | url=http://moneycentral.msn.com/investor/charts/chartdl.asp?Symbol=MSFT&amp;CP=0&amp;PT=8&amp;C5=10&amp;C6=2005&amp;C7=10&amp;C8=2005&amp;C9=2&amp;CE=0&amp;CompSyms=&amp;CF=1&amp;D9=1&amp;D0=1&amp;D4=1&amp;D5=0&amp;D7=&amp;D6=&amp;D3=0&amp;ShowChtBt=Refresh+Chart | publisher = MSN Money | accessdate=9 October | accessyear=2005 }}&lt;br/&gt;* {{cite web | author = Ina Fried and Scott Ard | url=http://news.zdnet.com/2100-9595_22-6084396.html?tag=st.prev | title= Gates stepping down from full-time Microsoft role, page 2 | date = [[June 15]] [[2006]] | publisher = ZDNet News | accessdate= 2006-07-04}}&lt;/ref&gt;
+
+=== Diversity ===
+
+In 2005, Microsoft received a 100% rating in the Corporate Equality Index from the [[Human Rights Campaign]], a ranking of companies by how progressive the organization deems their policies concerning [[LGBT]] ([[lesbian]], [[homosexuality|gay]], [[bisexuality|bisexual]] and [[transsexual]]) employees. Partly through the work of the [[Gay and Lesbian Employees at Microsoft]] (GLEAM) group, Microsoft added [[gender expression]] to its anti-discrimination policies in April 2005, and the Human Rights Campaign upgraded Microsoft's Corporate Equality Index from its 86% rating in 2004 to its current 100% rating.&lt;ref name=&quot;HumanRights-EqIndex&quot;&gt;{{cite web | title= Corporate Equality Index: A Report Card on Gay, Lesbian, Bisexual and Transgender Equality in Corporate America | date = 2005 | url= http://www.hrc.org/TemplateRedirect.cfm?Template=/ContentManagement/ContentDisplay.cfm&amp;ContentID=28841 | publisher= Human Rights Campaign Foundation | accessdate= October 13 | accessyear=2005 | format=PDF }} &lt;/ref&gt;&lt;ref name=&quot;MS-GLEAM&quot;&gt;{{cite web | title= Gay and Lesbian Employees at Microsoft (GLEAM) | url= http://www.microsoft.com/citizenship/diversity/inside/dac/gleam.asp | publisher= Microsoft | accessdate=2006-06-26}}&lt;/ref&gt;
+
+In April 2005, Microsoft received wide criticism for withdrawing support from Washington state's H.B. 1515 bill that would have extended the state's current anti-discrimination laws to people with alternate [[sexual orientation]]s.&lt;ref name=&quot;HumanRights-HB1515&quot;&gt;{{cite press release | title=  HRC Expresses profound disappointment with Microsoft's withdrawal of support for H.B. 1515 | url= http://www.hrc.org/Template.cfm?Section=Press_Room&amp;CONTENTID=26588&amp;TEMPLATE=/ContentManagement/ContentDisplay.cfm | publisher= Human Rights Campaign Foundation | date = [[April 22]] [[2005]] | accessdate=August 11 | accessyear=2005 }}&lt;/ref&gt; Microsoft was accused of bowing to pressure from local evangelical pastor [[Ken Hutcherson]] who met with a senior Microsoft executive and threatened a national boycott of Microsoft's products.  &lt;ref name=&quot;Kaushik&quot;&gt;[http://www.thestranger.com/seattle/Content?oid=21105 Microsoft Caves on Gay Rights]&lt;/ref&gt; Microsoft also revealed they were paying evangelical conservative [[Ralph Reed]]'s company Century Strategies a $20,000 monthly fee.&lt;ref name=&quot;Jamieson&quot;&gt;[http://seattlepi.nwsource.com/jamieson/221805_robert27.html Payments to Reed Sully Microsoft]&lt;/ref&gt; Over 2,000 employees signed a petition asking Microsoft to reinstate support for the bill. &lt;ref name=&quot;changemind&quot;&gt;{{cite news | url= http://www.businessweek.com/technology/content/may2005/tc20050512_7358_tc024.htm | title= How Microsoft Changed Its Mind | publisher=[[BusinessWeek]] | date=[[2005-05-12]] | accessdate=2006-07-01}}&lt;/ref&gt; Under harsh criticism from both outside and inside the company's walls, Microsoft decided to support the bill again in May 2005.&lt;ref name=&quot;HumanRights-MSDecision&quot;&gt;{{cite press release | title= Microsoft makes right decision renewing support for workplace fairness | url= http://www.hrc.org/Template.cfm?Section=Press_Room&amp;CONTENTID=26803&amp;TEMPLATE=/ContentManagement/ContentDisplay.cfm | publisher= Human Rights Campaign Foundation | date = [[May 6]] [[2005]] | accessdate=August 11 | accessyear=2005 }}&lt;/ref&gt;&lt;ref name=&quot;changemind&quot; /&gt;
+
+Microsoft hires many foreign workers as well as domestic ones, and is an outspoken opponent of the cap on [[H1B visa]]s, which allow companies in the United States to employ certain foreign workers. Bill Gates claims the cap on H1B visas make it difficult to hire employees for the company, stating &quot;I'd certainly get rid of the H1B cap.&quot;&lt;ref name=&quot;MarkRoy&quot;&gt;{{cite web |url= http://www.internetnews.com/bus-news/article.php/3500986 |title= Gates Rakes Congress on H1B Visa Cap| author= Roy Mark |publisher= internetnews.com| date= [[2005-04-27]] | accessdate= 2007-02-26}}&lt;/ref&gt;
+
+=== Logos and slogans ===
+
+In 1987, Microsoft adopted its current logo, the so-called &quot;[[Pacman]] Logo&quot; designed by [[Scott Baker (Microsoft)|Scott Baker]]. According to the March 1987 ''Computer Reseller News Magazine'', &quot;The new logo, in Helvetica italic typeface, has a slash between the ''o'' and ''s&amp;nbsp;'' to emphasize the &quot;soft&quot; part of the name and convey motion and speed.&quot; Dave Norris, a Microsoft employee, ran an internal joke campaign to save the old logo, which was green, in all uppercase, and featured a fanciful letter ''O'', nicknamed the ''blibbet'', but it was discarded.&lt;ref name=&quot;Osterman2005-07-14&quot;&gt;{{cite web | url= http://blogs.msdn.com/larryosterman/archive/2005/07/14/438777.aspx | title= Remember the blibbet | publisher= Larry Osterman's WebLog | author=Larry Osterman | date= [[July 14]] [[2005]] | accessdate= 2006-07-04}}&lt;/ref&gt;
+
+Microsoft's logo with the &quot;''Your potential. Our passion.''&quot; tagline below the main corporate name, is based on the slogan Microsoft had as of 2008. In 2002, the company started using the logo in the United States and eventually started a TV campaign with the slogan, changed from the previous tagline of ''&quot;Where do you want to go today?.&quot;''&lt;ref name=&quot;wherego1&quot; /&gt;&lt;ref name=&quot;potentialpassion1&quot; /&gt;&lt;ref name=&quot;Reimer&quot;&gt;{{cite web | url= http://arstechnica.com/news.ars/post/20060123-6031.html | title= Microsoft set to launch new marketing campaign | publisher= Ars Technica | author= Jeremy Reimer | date=[[2006-01-23]] | accessdate= 2006-09-02}}&lt;/ref&gt; 
+
+&lt;div align=&quot;center&quot;&gt;
+&lt;gallery&gt;
+Image:Mslogohistorical.png|Microsoft &quot;blibbet&quot; logo, used until 1987.
+Image:Microsoft - Where do you want to go today.svg|Microsoft &quot;[[Pacman]]&quot; logo, designed by [[Scott Baker (Microsoft)|Scott Baker]] and used since 1987, with the 1994–2002 slogan ''&quot;Where do you want to go today?&quot;''&lt;ref name=&quot;wherego1&quot;&gt;{{cite web|url=http://www.wired.com/wired/archive/6.12/redmond.html|title=The Rise and Rise of the Redmond Empire|publisher=Wired|date=December 1998|accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name=&quot;potentialpassion1&quot;&gt;{{cite news|url=http://www.vnuemedia.com/aw/login/login_subscribe.jsp?id=zf1eaW8N0UQ6/I7ScH8pMBa0vvBdIda7Co4SD6hXb+3YurLHGiElVKfMCKLSDvhMfcWYNjLTbIp5AaUu4URhUaFftYJBpPT7jwY6KH8vjzYvjVSV2x+gdxcTLL4+tmQ2Z5tb84fvTveHEbebObdFah1P+29WbIGTxFtp+/aekDByqf0fbIC4bPDrIVMwdstxi+4MyyvXbRwq0uaWMzTesw7be966TpBoUMjnkuRLrNTx2p8wkW6SQ83Q+90D6V4q4ClrnGOk7MloSfykn7IREg==|title=McCann Thinks Local for Global Microsoft|author=Randi Schmelzer|publisher=[[Adweek]] | date=[[2006-01-09]] | accessdate=2006-05-18}}&lt;/ref&gt;
+Image:Microsoft logo slogan.png|Microsoft logo as of 2008, with the current slogan ''&quot;Your potential. Our passion.&quot;''&lt;ref name=&quot;potentialpassion1&quot; /&gt;
+&lt;/gallery&gt;
+&lt;/div&gt;
+
+== Criticism ==
+
+{{main article | Criticism of Microsoft}}
+&lt;!-- PLEASE DISCUSS WITH OTHERS BEFORE ADDING STUFF HERE - THIS IS MEANT TO BE A SUMMARY OF THE MAIN ARTICLE --&gt;
+
+=== Corporate ===
+
+Since the 1980s, Microsoft has been the focus of much controversy in the computer industry. The majority of criticism has been for its business tactics, often described with the motto &quot;[[embrace, extend and extinguish]]&quot;. Microsoft initially embraces a competing standard or product, then extends it to produce their own incompatible version of the software or standard, which in time extinguishes competition that does not or cannot use Microsoft's new version.&lt;ref name=&quot;eee&quot;&gt;{{cite web | url= http://news.zdnet.com/2100-9595_22-512681.html | title=Intel exec: MS wanted to 'extend, embrace and extinguish' competition | author= Will Rodger | publisher=[[ZDNet]] News | date=[[1998-11-08]] | accessdate=2006-05-18}}&lt;/ref&gt; These and other tactics have led to various companies and governments filing lawsuits against Microsoft.&lt;ref name=&quot;Orlowski2004-03-05&quot;&gt;{{cite press release | url= http://www.burst.com/new/newsevents/pressrelease007.htm | title= Microsoft Corp. Licenses Burst.com Patents &amp; Settles Suit | publisher= Burst.com Inc. | date = [[March 11]] [[2005]] | accessdate=2006-05-18}}&lt;br/&gt;* {{cite web | author= Andrew Orlowski | date= [[2004-03-05]] | publisher= theregister.co.uk | url= http://www.theregister.co.uk/2004/03/05/eolas_web_patent_nullified/ | title= Eolas' web patent nullified | accessdate=2006-05-18}}&lt;br/&gt;* {{cite web | author= Tony Dennis | url= http://www.theinquirer.net/?article=6905 | title= Sendo &amp; Microsoft — it all ends in tears | date= [[2002-12-24]] | publisher= TheInquirer.net | accessdate=2006-05-18}}&lt;br/&gt;* {{cite news | url= http://www.infoworld.com/article/05/12/07/HNmicrosoftfined_1.html | title= Update: Microsoft fined $32M by South Korea | author=Dan Nystedt | publisher= IDG News Service | date=[[2005-12-07]] | accessdate= 2006-05-19}}&lt;/ref&gt;&lt;ref name=&quot;euantitrust&quot; /&gt;&lt;ref name=&quot;usvms&quot; /&gt; Microsoft has been called a &quot;velvet sweatshop&quot; in reference to allegations of the company working its employees to the point where it might be bad for their health. The first instance of &quot;velvet sweatshop&quot; in reference to Microsoft originated from a ''[[Seattle Times]]'' article in 1989, and later became used to describe the company by some of Microsoft's own employees.&lt;ref name=&quot;Andrews1989=04-23&quot;&gt;{{cite news | last=Andrews | first=Paul | title=A 'Velvet Sweatshop' or a High-Tech Heaven? | date=[[23 April]] [[1989]] | publisher= The Seattle Times | url= http://www.krsaborio.net/research/1980s/89/890423.htm | accessdate= 2007-03-30}}&lt;/ref&gt;&lt;ref name=&quot;MSJ-EdNote&quot;&gt;{{cite web | title= Editor's note |date=August 1997 | publisher= Microsoft Systems Journal | url= http://www.microsoft.com/msj/0897/ednote0897.aspx | accessdate= September 27 | accessyear=2005 }}&lt;/ref&gt;
+
+[[Free software]] proponents point to the company's joining of the [[Trusted Computing Platform Alliance]] (TCPA) as a cause of concern. A group of companies that seek to implement an initiative called [[Trusted Computing]] (which is claimed to set out to increase security and privacy in a user's computer), the TCPA is decried by critics as a means to allow software developers to enforce any sort of restriction they wish over their software.
+
+{{&quot;|Large media corporations, together with computer companies such as Microsoft and [[Intel]], are planning to make your computer obey them instead of you|[[Richard Stallman]], founder of the [[Free Software Foundation]]&lt;ref name=&quot;Lemos&quot;&gt; {{cite web |url= http://news.com.com/2009-1001-964628.html |title= Trust or treachery? Security technologies could backfire against consumers |publisher= [[CNet]] [[news.com]] |author= Robert Lemos |date= [[2002-11-07]] |accessdate= 2006-05-18}}&lt;/ref&gt;}}
+
+Advocates of free software also take issue with Microsoft's promotion of [[Digital Rights Management]] (DRM) and [[total cost of ownership]] (TCO) comparisons with its &quot;Get the facts&quot; campaign. Digital Rights Management is a technology that allows content providers to impose restrictions on the methods by which their products are used on consumer hardware; and subsequently, detractors contend that such technology is an infringement on [[fair use]] and other rights, especially given that it inhibits legal activities such as re-mixing or reproduction of material for use in slide shows.&lt;ref name=&quot;Chisnall&quot;&gt;{{cite web |url= http://www.informit.com/articles/article.asp?p=465447 |publisher= Informit.com | title=
+DRM: Digital Rights or Digital Restrictions? | author= David Chisnall |date= [[2006-05-04]] | accessdate= 2006-05-18}}&lt;/ref&gt; The &quot;Get the facts&quot; campaign argues that Windows Server has a lower TCO than Linux and lists a variety of studies in order to prove its case.&lt;ref name=&quot;MS-GetFacts&quot;&gt;{{cite web | url= http://www.microsoft.com/windowsserversystem/facts/default.mspx | title= Get the facts home | publisher= Microsoft | accessdate=2006-05-19}}&lt;/ref&gt; Proponents of Linux unveiled their own study arguing that, contrary to one of Microsoft's claims, Linux has lower management costs than Windows Server.&lt;ref name=&quot;Jaques&quot;&gt;{{cite web | url= http://www.vnunet.com/vnunet/news/2150210/linux-fans-hit-back-microsoft | title= Linux fans hit back at Microsoft TCO claims | author= Robert Jaques | publisher= vnunet.com | date=[[2006-02-13]] | accessdate=2006-05-19}}&lt;/ref&gt; Another study by the [[Yankee Group]] claims that upgrading from one version of Windows Server to another costs less than switching from Windows Server to Linux.&lt;ref name=&quot;Foley&quot;&gt;{{cite news | url= http://www.eweek.com/article2/0,1895,1553727,00.asp | title= Yankee Independently Pits Windows TCO vs. Linux TCO | author= Mary Jo Foley | publisher= eWeek.com | date=[[2004-03-24]] | accessdate=2006-05-19}}&lt;/ref&gt;
+
+=== Products ===
+
+*For criticism of [[Windows Vista]], see '''[[Criticism of Windows Vista]]'''
+*For criticism of [[Windows XP]], see '''[[Criticism of Windows XP]]'''
+*For criticism of [[Windows 2000]], see '''[[Windows 2000#Security criticisms|the criticism section]]''' of the [[Windows 2000]] article
+*For criticism of [[Windows Me]], see '''[[Windows Me#Criticisms|the criticism section]]''' of the [[Windows Me]] article
+*For criticism of [[Windows 9x]], see '''[[Windows 9x#Criticism|the criticism section]]''' of the [[Windows 9x]] article
+*For criticism of [[Internet Explorer]], see '''[[Criticism of Internet Explorer]]'''
+*For criticism of [[Microsoft Office]], see '''[[Microsoft Office#Criticisms|the criticism section]]''' of the [[Microsoft Office]] article
+
+== See also ==
+
+&lt;!-- Please do not turn these bullets into headers! They expand the TOC and make the FAC people rather unhappy --&gt;
+
+{{portal}}
+
+{{Portal|Companies|Factory.svg}}
+
+'''General'''
+* ''[[Pirates of Silicon Valley]]'' − A movie based on the rise of Apple and Microsoft.
+
+'''Microsoft'''
+* [[Actimates]] − Set of toys developed by Microsoft.
+* [[PCsafety]] − Part of Microsoft's technical support that deals with malware and virus issues.
+* [[Trustworthy Computing]] − Microsoft's initiative for increasing security and reliability on PCs.
+* [[Ultra Mobile PC]] − Joint specification by Microsoft and others for a small form factor [[tablet PC]].
+* [[Microsoft Studios]] − A division responsible for the creation of video content for Microsoft and its partners.
+* [[Microsoft Research]] − A division responsible for the research of computer sciences.
+* [[Studies related to Microsoft]]
+
+'''Lists'''
+* [[List of assets owned by Microsoft Corporation]]
+* [[List of companies acquired by Microsoft Corporation]]
+* [[List of Microsoft software applications]]
+* [[List of Microsoft topics]]
+
+== Notes and references ==
+{{citations broken|article|date=November 2007}}
+
+{{reflist|2}}
+
+== External links ==
+
+&lt;!---
+Please
+1) Follow the [[WP:EL]] guideline if you can, and consider discussing on the talk page
+2) Do not turn these bullets into headers! They expand the TOC and make the FAC people rather unhappy
+--&gt;
+
+{{Sisterlinks|Microsoft}}
+
+* [http://www.microsoft.com/ Microsoft] — ''Official website''
+
+{{Microsoft products}}
+{{IT giants}}
+{{DJIA}}
+{{NASDAQ-100}}
+{{Seattle Corporations}}
+{{featured article}}
+{{sprotect2}}
+
+&lt;!-- Categorization, interwiki stuff.
+!!!!!!!!!!!!!DO NOT ADD ANY CATEGORIES HERE!!!!!!!!!!
+!!!!!!!!!!!!!ADD THEM TO THE MICROSOFT CATEGORY INSTEAD!!!!!!!!!
+--&gt;
+[[Category:Microsoft| ]]
+[[Category:Companies based in Redmond, Washington]]
+
+{{Link FA|he}}
+
+[[als:Microsoft]]
+[[am:ማይክሮሶፍት]]
+[[ang:Microsoft]]
+[[ar:مايكروسوفت]]
+[[ast:Microsoft]]
+[[bn:মাইক্রোসফট কর্পোরেশন]]
+[[zh-min-nan:Microsoft]]
+[[be:Microsoft]]
+[[be-x-old:Microsoft]]
+[[bs:Microsoft]]
+[[bg:Майкрософт]]
+[[ca:Microsoft]]
+[[cs:Microsoft]]
+[[cy:Microsoft]]
+[[da:Microsoft]]
+[[de:Microsoft]]
+[[et:Microsoft]]
+[[el:Microsoft]]
+[[es:Microsoft]]
+[[eo:Mikrosofto]]
+[[eu:Microsoft]]
+[[fa:مایکروسافت]]
+[[fr:Microsoft]]
+[[gl:Microsoft Corporation]]
+[[ko:마이크로소프트]]
+[[hy:Microsoft]]
+[[hi:माइक्रोसॉफ्ट]]
+[[hr:Microsoft]]
+[[ilo:Microsoft]]
+[[id:Microsoft Corporation]]
+[[ia:Microsoft Corporation]]
+[[is:Microsoft]]
+[[it:Microsoft]]
+[[he:מיקרוסופט]]
+[[ka:მაიკროსოფტი]]
+[[kk:Microsoft]]
+[[ku:Microsoft]]
+[[la:Microsoft]]
+[[lv:Microsoft]]
+[[lt:Microsoft]]
+[[jbo:mikrosoft]]
+[[hu:Microsoft]]
+[[ml:മൈക്രോസോഫ്റ്റ്]]
+[[mr:मायक्रोसॉफ्ट]]
+[[ms:Microsoft]]
+[[nl:Microsoft]]
+[[ja:マイクロソフト]]
+[[no:Microsoft]]
+[[nn:Microsoft]]
+[[uz:Microsoft]]
+[[nds:Microsoft]]
+[[pl:Microsoft Corporation]]
+[[pt:Microsoft]]
+[[ro:Microsoft]]
+[[qu:Microsoft]]
+[[ru:Microsoft]]
+[[sq:Microsoft]]
+[[simple:Microsoft]]
+[[sk:Microsoft Corporation]]
+[[sl:Microsoft]]
+[[sr:Мајкрософт]]
+[[sh:Microsoft]]
+[[fi:Microsoft]]
+[[sv:Microsoft]]
+[[tl:Microsoft]]
+[[ta:மைக்ரோசாப்ட்]]
+[[te:మైక్రో సాఫ్ట్]]
+[[th:ไมโครซอฟท์]]
+[[vi:Microsoft]]
+[[tg:Microsoft]]
+[[tr:Microsoft]]
+[[uk:Microsoft]]
+[[ur:مائکروسافٹ]]
+[[wa:Microsoft]]
+[[yi:מייקראסאפט]]
+[[zh-yue:微軟]]
+[[zh:微软]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox/core</title>
+    <id>12774496</id>
+    <revision>
+      <id>190914505</id>
+      <timestamp>2008-02-12T15:45:04Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Fix for double inclusion of &quot;background:white;&quot;</comment>
+      <text xml:space="preserve">&lt;table class=&quot;navbox {{#ifeq:{{{state|}}}|plain||collapsible {{{state|autocollapse}}}}} nowraplinks&quot; style=&quot;margin:auto; {{#ifeq:{{{nogroups|}}}|true|{{#if:{{{l1|}}}|{{#if:{{{l2|}}}|background:white;}}}}|background:white;}} {{{bodystyle|}}}&quot;&gt;&lt;!--
+
+---Titlebar---
+--&gt;&lt;tr&gt;&lt;th colspan=&quot;{{{span|1}}}&quot; style=&quot;text-align:center;width:100%;{{{titlestyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#ifeq:{{{navbar|}}}|plain||&lt;div style=&quot;float:left; width:6em; text-align:left;&quot;&gt;{{Tnavbar| {{{name&lt;noinclude&gt;|Navbox&lt;/noinclude&gt;}}}|fontstyle={{{titlestyle|}}};border:none;|mini=1}}&lt;/div&gt;}}&lt;span style=&quot;font-size:110%;&quot;&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;!--
+
+---Above (optional)---
+--&gt;{{#if:{{{above|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{abovestyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{above|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---First group and image(s)---
+--&gt;{{#if:{{{l1|}}}|&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|{{#ifeq:{{{nogroups|}}}|true|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-right:7px; width:0%;&quot;&gt;{{{imageleft}}}&lt;/td&gt;}}}}&lt;!--
+
+--&gt;{{#if:{{{g1|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g1|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g1|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g1|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l1|}}}&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-left:7px; width:0%;&quot;&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+---Remaining groups---
+--&gt;{{#if:{{{l2|}}}|&lt;tr&gt;{{#if:{{{g2|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g2|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g2|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g2|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l2|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l3|}}}|&lt;tr&gt;{{#if:{{{g3|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g3|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g3|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g3|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l3|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l4|}}}|&lt;tr&gt;{{#if:{{{g4|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g4|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g4|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g4|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l4|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l5|}}}|&lt;tr&gt;{{#if:{{{g5|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g5|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g5|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g5|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l5|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l6|}}}|&lt;tr&gt;{{#if:{{{g6|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g6|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g6|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g6|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l6|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l7|}}}|&lt;tr&gt;{{#if:{{{g7|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g7|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g7|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g7|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l7|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l8|}}}|&lt;tr&gt;{{#if:{{{g8|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g8|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g8|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g8|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l8|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l9|}}}|&lt;tr&gt;{{#if:{{{g9|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g9|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g9|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g9|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l9|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l10|}}}|&lt;tr&gt;{{#if:{{{g10|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g10|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g10|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g10|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l10|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l11|}}}|&lt;tr&gt;{{#if:{{{g11|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g11|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g11|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g11|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l11|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l12|}}}|&lt;tr&gt;{{#if:{{{g12|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g12|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g12|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g12|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l12|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l13|}}}|&lt;tr&gt;{{#if:{{{g13|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g13|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g13|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g13|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l13|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l14|}}}|&lt;tr&gt;{{#if:{{{g14|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g14|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g14|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g14|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l14|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l15|}}}|&lt;tr&gt;{{#if:{{{g15|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g15|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g15|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g15|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l15|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l16|}}}|&lt;tr&gt;{{#if:{{{g16|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g16|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g16|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g16|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l16|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l17|}}}|&lt;tr&gt;{{#if:{{{g17|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g17|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g17|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g17|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l17|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l18|}}}|&lt;tr&gt;{{#if:{{{g18|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g18|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g18|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g18|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l18|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l19|}}}|&lt;tr&gt;{{#if:{{{g19|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g19|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g19|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g19|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l19|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l20|}}}|&lt;tr&gt;{{#if:{{{g20|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g20|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g20|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g20|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l20|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---Below (optional)---
+--&gt;{{#if:{{{below|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{belowstyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{below|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;&lt;/table&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/+</title>
+    <id>13373928</id>
+    <revision>
+      <id>193154131</id>
+      <timestamp>2008-02-21T23:54:01Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#ifeq:{{#expr:{{{3}}}*0}}|0|{{{3}}}|{{#expr:{{{1}}}round{{{2}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>173220873</id>
+      <timestamp>2007-11-23T04:02:39Z</timestamp>
+      <contributor>
+        <username>Coren</username>
+        <id>12013</id>
+      </contributor>
+      <comment>As requested on the talk page; fix for wikilinks of dates</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag</title>
+    <id>11656899</id>
+    <revision>
+      <id>192780947</id>
+      <timestamp>2008-02-20T11:45:13Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>{{[[template:documentation|documentation]]}}</comment>
+      <text xml:space="preserve">{{Ordomag/+|{{#ifexpr:{{{1}}}&lt;0|-}}{{{1}}}}}&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap</title>
+    <id>1627975</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>178534669</id>
+      <timestamp>2007-12-17T17:23:07Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>shorten per talk</comment>
+      <text xml:space="preserve">&lt;span style=&quot;white-space:nowrap&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;!--interwikis/categories go inside doc--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ambox</title>
+    <id>13179742</id>
+    <revision>
+      <id>170296614</id>
+      <timestamp>2007-11-09T10:07:17Z</timestamp>
+      <contributor>
+        <username>David Levy</username>
+        <id>197557</id>
+      </contributor>
+      <comment>Reverted.  Apart from making the icon smaller and switching to a hue that doesn't match the template as well, what did that accomplish?</comment>
+      <text xml:space="preserve">&lt;table style=&quot;{{{style|}}}&quot; class=&quot;metadata plainlinks ambox {{#switch:{{{type|}}}
+  | serious  = ambox-serious
+  | content  = ambox-content
+  | style    = ambox-style
+  | merge    = ambox-merge
+  | notice   = ambox-notice
+  | #default = ambox-notice
+}}&quot;&gt;
+&lt;tr&gt;
+&lt;td class=&quot;ambox-image&quot;&gt;
+{{#ifeq:{{{image}}}|none
+  | &lt;!-- no image cell; empty cell necessary for text cell to have 100% width --&gt;
+  | &lt;div style=&quot;width:52px;&quot;&gt; {{#switch:{{{image|{{{type|}}}}}}
+    | serious  = [[Image:Stop hand nuvola.svg|40px]]
+    | content  = [[Image:Emblem-important.svg|40px]]
+    | style    = [[Image:Broom icon.svg|40px]]
+    | merge    = [[Image:Merge-split-transwiki default.svg]]
+    | notice   = [[Image:Info non-talk.png|40px]]
+    | blank    = [[Image:No image.svg]]
+    | #default = {{{image|[[Image:Info non-talk.png|40px]]}}}
+  }}&lt;/div&gt;
+}}&lt;/td&gt;
+&lt;td class=&quot;ambox-text&quot;&gt;{{{text}}}&lt;/td&gt;
+{{#if:{{{imageright|}}}|
+  &lt;td class=&quot;ambox-imageright&quot;&gt;&lt;div style=&quot;width:52px;&quot;&gt; {{{imageright}}} &lt;/div&gt;&lt;/td&gt;
+}}
+&lt;/tr&gt;
+&lt;/table&gt;&lt;noinclude&gt;
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-semi-protected</title>
+    <id>10226602</id>
+    <revision>
+      <id>165851443</id>
+      <timestamp>2007-10-20T15:23:37Z</timestamp>
+      <contributor>
+        <username>Centrx</username>
+        <id>37878</id>
+      </contributor>
+      <minor/>
+      <comment>The example doesn't need this text</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{pp-template|small=yes}}
+&lt;/noinclude&gt;&lt;includeonly&gt;{{pp-meta
+|smalltext={{#ifeq:{{{small|no}}}|yes|&lt;imagemap&gt;
+Image:Padlock-silver-medium.svg|20px
+default [[Wikipedia:Protection policy|This page has been semi-protected from editing.]]
+desc none
+&lt;/imagemap&gt;|}}
+|demospace={{{demospace|}}}
+|image=[[Image:Padlock-silver-medium.svg|45px| ]]
+|text='''Editing of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} by unregistered or newly registered users is currently [[Wikipedia:Semi-protection policy|disabled]]{{#if:{{{expiry|}}}|&amp;#32;until {{#time:[[F j]], [[Y]]|{{{expiry}}}}} &lt;small&gt;(UTC)&lt;/small&gt;}}{{#if:{{{reason|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;because&lt;nowiki&gt; &lt;/nowiki&gt;}}{{lcfirst:{{{reason|}}}}}.''' {{howtoeditsemi}}
+|categories={{{categories|[[Category:Semi-protected|{{PAGENAME}}]]{{#ifexpr:{{#if:{{{expiry|}}}|{{#time:U|today}}&gt;{{#time:U|{{{expiry}}}}}|0}}|[[Category:Protected pages with expiry expired|{{PAGENAME}}]]}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-semi-protected|categories=no|demospace=main|reason=of a reason}}
+
+----
+* Use {{tlx|{{lc:{{PAGENAME}}}}}} for the normal template
+* Use {{tlx|{{lc:{{PAGENAME}}}}|reason&amp;#61;text}} for applying a specific reason
+* Use {{tlx|{{lc:{{PAGENAME}}}}|expiry&amp;#61;{{#time:F j, Y|+1 month}}}} for a specific expiration date
+* Use {{tlx|{{lc:{{PAGENAME}}}}|small&amp;#61;yes}} for just an icon at the top
+* Use {{tlx|{{lc:{{PAGENAME}}}}|expiry&amp;#61;&lt;nowiki&gt;{{subst:#time:F j, Y|+7 days}}&lt;/nowiki&gt;}} for a specific expiration time period
+
+Note that ''(UTC)'' will be added automatically.
+
+This template is not to be used as a bluff. '''''Only use it on SEMI-PROTECTED pages.''''' Please note that only [[Wikipedia:Administrators|administrators]] can protect pages.
+
+{{protection templates}}
+{{in category|Semi-protected|Protected pages with expiry expired}}
+[[Category:Protection templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite book</title>
+    <id>4086375</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>192770787</id>
+      <timestamp>2008-02-20T10:14:32Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite class=&quot;book&quot; style=&quot;font-style:normal&quot; {{
+  #if: {{{ref|}}}
+  |{{#ifeq:{{{ref}}}|none||id=&quot;{{{ref}}}&quot;}}
+  |{{#if:{{{last|}}} | {{#if:{{{year|}}} | id=&quot;Reference-{{{last}}}-{{{year}}}&quot; }} }}
+}}&gt;{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{
+    #if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{ #if: {{{coauthors|}}} | &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{
+  #if: {{{origdate|}}}
+  | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origdate}}}]
+  | {{
+    #if: {{{origyear|}}}
+    | {{
+      #if: {{{origmonth|}}}
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origmonth}}} {{{origyear}}}]
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origyear}}}]
+    }}
+  }}
+}}{{
+  #if: {{{date|}}}
+  | &amp;#32;({{{date}}})
+  | {{
+    #if: {{{year|}}}
+    | {{
+      #if: {{{month|}}}
+      | &amp;#32;({{{month}}} {{{year}}})
+      | &amp;#32;({{{year}}})
+    }}
+  }}
+}}{{ #if: {{{author|}}}{{{last|}}} | .
+}}{{
+  #if: {{{chapter|}}}
+  | &amp;#32;&quot;{{
+    #if: {{{chapterurl|}}}
+    | [{{{chapterurl}}} {{{chapter}}}]
+    | {{{chapter}}}
+}}&quot;,}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;in {{{editor}}}: 
+}} &lt;i&gt;{{
+  #if: {{{url|}}} | [{{{url}}} {{{title}}}] | {{{title}}}
+}}&lt;/i&gt;{{
+  #if: {{{format|}}} | &amp;#32;({{{format}}})
+}}{{
+  #if: {{{others|}}} | , {{{others}}}
+}}{{
+  #if: {{{edition|}}} | , {{{edition}}}
+}}{{
+  #if: {{{series|}}} | , {{{series}}}
+}}{{
+  #if: {{{language|}}} | &amp;#32;(in {{{language}}})
+}}{{
+  #if: {{{publisher|}}}
+  | {{#if: {{{format|}}}{{{others|}}}{{{edition|}}} | ,&amp;#32; | .&amp;#32; }}{{ 
+    #if: {{{location|}}} 
+    | {{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{
+  #if: {{{pages|{{{page|}}}}}} | ,&amp;#32;{{{pages|{{{page}}}}}}
+}}{{
+  #if: {{{doi|}}} | . [[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{
+  #if: {{{id|}}} | . {{{id}}}
+}}{{
+  #if: {{{isbn|}}} | . ISBN {{{isbn}}}
+}}{{
+  #if: {{{oclc|}}} | . [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{
+  #if: {{{url|}}} | {{
+  #if: {{{accessdate|}}} | 
+  . Retrieved on [[{{{accessdate}}}]]
+  | {{
+    #if: {{{accessyear|}}}
+    | . Retrieved {{
+      #if: {{{accessmonth|}}}
+      | on [[{{{accessmonth}}} {{{accessyear}}}]]
+      | during [[{{{accessyear}}}]]
+  }}}}
+  }}
+}}.{{ #if: {{{quote|}}} | &amp;nbsp;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:book}}&lt;!--                   Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:book
+  --&gt;&amp;rft.genre=book&lt;!--                                                        book: a publication that is complete in one part or a designated finite number of parts, often identified with an ISBN.  (genre could also be bookitem, conference, proceeding, report, document, or unknown)
+  --&gt;&amp;rft.btitle={{urlencode:{{{title|}}}}}&lt;!--                                 The title of the book. This can also be expressed as title, for compatibility with version 0.1. &quot;moby dick or the white whale&quot;
+  --&gt;{{#if: {{{chapter|}}}   | &amp;rft.atitle={{urlencode:{{{chapter}}}}}   }}&lt;!-- Chapter title. Chapter title is included if it is a distinct title, e.g. &quot;The Push Westward.&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... e.g. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, e.g. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, e.g. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}&lt;!--
+  --&gt;{{#if: {{{year|}}}      | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. Book dates are assumed to be a single year. (or ISO 8601)
+  --&gt;{{#if: {{{edition|}}}   | &amp;rft.edition={{urlencode:{{{edition}}}}}  }}&lt;!-- Statement of the edition of the book. This will usually be a phrase, with or without numbers, but may be a single number, e.g. &quot;First edition&quot;, &quot;4th ed.&quot;
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.pub={{urlencode:{{{publisher}}}}}    }}&lt;!-- Publisher name. &quot;Harper and Row&quot;
+  --&gt;{{#if: {{{location|}}}  | &amp;rft.place={{urlencode:{{{location}}}}}   }}&lt;!-- Place of publication. &quot;New York&quot;
+  --&gt;{{#if: {{{pages|{{{page|}}}}}}     | &amp;rft.pages={{urlencode:{{{pages|{{{page}}}}}}}}      }}&lt;!-- Start and end pages for parts of a book, e.g. &quot;124-147&quot; ... This data element includes the OpenURL 0.1 definition of &quot;pages&quot;.
+  --&gt;{{#if: {{{series|}}}    | &amp;rft.series={{urlencode:{{{series}}}}}    }}&lt;!-- The title of a series in which the book or document was issued. There may also be an ISSN associated with the series.
+  --&gt;{{#if: {{{isbn|}}}      | &amp;rft.isbn={{{isbn}}}                      }}&lt;!-- International Standard Book Number (ISBN) ... i.e. &quot;057117678X&quot; but it may contain hyphens, e.g. &quot;1-878067-73-7&quot;
+  --&gt;{{#if: {{{oclc|}}}      | &amp;rft_id=info:oclcnum/{{{oclc}}}           }}&lt;!-- 
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- 
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- 
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sprotected2</title>
+    <id>7896691</id>
+    <restrictions>edit=autoconfirmed:move=sysop</restrictions>
+    <revision>
+      <id>158234288</id>
+      <timestamp>2007-09-16T08:02:52Z</timestamp>
+      <contributor>
+        <username>Wybot</username>
+        <id>712009</id>
+      </contributor>
+      <minor/>
+      <comment>robot  Adding: [[ko:틀:준보호2]], [[sk:Šablóna:Dlhodobo polozamknutá]]</comment>
+      <text xml:space="preserve">{{pp-semi-protected|small=yes}}&lt;noinclude&gt;
+
+'''Note: This template is not blank, see the top right corner of the protected page'''
+
+This template is normally used for pages that are semi-protected for longer periods of time, and in particular for [[Wikipedia:Biographies of living persons|BLPs]] (e.g., [[George W. Bush]]).
+
+This template categorizes pages into [[:Category:Semi-protected]]. For talk pages that are semi-protected, use [[Template:pp-semi-vandalism]].
+
+'''Adding this template to an article does not protect it.''' Protection can only be applied by [[Wikipedia:Administrators|administrators]], and can be requested at [[Wikipedia:Requests for page protection]].
+
+==See also==
+* {{tl|pp-semi-protected}}: the original semi-protection template
+* {{tl|pp-semi-vandalism}}: for talk pages that are semi-protected
+* {{tl|high-traffic}}
+
+[[Category:Protection templates|{{PAGENAME}}]]
+[[Category:Templates using ParserFunctions|{{PAGENAME}}]]
+[[Category:Title templates|{{PAGENAME}}]]
+
+[[cs:Šablona:Dlouhodobě polozamčeno]]
+[[ko:틀:준보호2]]
+[[sk:Šablóna:Dlhodobo polozamknutá]]
+[[th:แม่แบบ:กึ่งล็อก2]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country data United States</title>
+    <id>8953176</id>
+    <revision>
+      <id>177509884</id>
+      <timestamp>2007-12-12T21:05:46Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>remove unnecessary protection template already in [[Template:Country showdata]]  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{ {{{1&lt;noinclude&gt;|country showdata&lt;/noinclude&gt;}}}
+| alias = United States
+| flag alias = Flag of the United States.svg
+| alt attribute = Flag of the United States
+| flag alias-1776 = Grand Union Flag.svg
+| flag alias-1777 = US flag 13 stars – Betsy Ross.svg
+| flag alias-1795 = US flag 15 stars.svg
+| flag alias-1818 = US flag 20 stars.svg
+| flag alias-1819 = US flag 21 stars.svg
+| flag alias-1820 = US flag 23 stars.svg
+| flag alias-1822 = US flag 24 stars.svg
+| flag alias-1836 = US flag 25 stars.svg
+| flag alias-1837 = US flag 26 stars.svg
+| flag alias-1845 = US flag 27 stars.svg
+| flag alias-1846 = US flag 28 stars.svg
+| flag alias-1847 = US flag 29 stars.svg
+| flag alias-1848 = US flag 30 stars.svg
+| flag alias-1851 = US flag 31 stars.svg
+| flag alias-1858 = US flag 32 stars.svg
+| flag alias-1859 = US flag 33 stars.svg
+| flag alias-1861 = US flag 34 stars.svg
+| flag alias-1863 = US flag 35 stars.svg
+| flag alias-1865 = US flag 36 stars.svg
+| flag alias-1867 = US flag 37 stars.svg
+| flag alias-1877 = US flag 38 stars.svg
+| flag alias-1890 = US flag 43 stars.svg
+| flag alias-1891 = US flag 44 stars.svg
+| flag alias-1896 = US flag 45 stars.svg
+| flag alias-1908 = US flag 46 stars.svg
+| flag alias-1912 = US flag 48 stars.svg
+| flag alias-1959 = US flag 49 stars.svg
+| flag alias-air force = Flag of the United States Air Force.png
+| name alias-football = USA
+| link alias-football = United States {{{mw|men's}}} national soccer team
+| name alias-basketball = USA
+| link alias-basketball = United States {{{mw|men's}}} national basketball team
+| link alias-field hockey = United States {{{mw|men's}}} national field hockey team
+| link alias-ice hockey = United States national {{{mw|men's}}} ice hockey team
+| size = {{{size|}}}
+| name = {{{name|}}}
+| altlink = {{{altlink|}}}
+| altvar = {{{altvar|}}}
+| variant = {{{variant|}}}
+&lt;noinclude&gt;
+| var1 = 1912
+| var2 = 1959
+| redir1 = USA
+| redir2 = US
+| redir3 = United States of America
+| redir4 = U.S.
+&lt;/noinclude&gt;
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/mph</title>
+    <id>13752073</id>
+    <revision>
+      <id>170179746</id>
+      <timestamp>2007-11-08T21:25:47Z</timestamp>
+      <contributor>
+        <username>Detroiterbot</username>
+        <id>5478189</id>
+      </contributor>
+      <minor/>
+      <comment>adding category  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{convert/{{{d}}}|{{{1}}}|{{{2|}}}|{{{3|}}}|{{{4|}}}|s={{{s|}}}|r={{{r}}}
+|u=mph
+|n=mile per hour
+|h=mile-per-hour
+|l=miles per hour
+|t=miles per hour
+|o=km/h
+|b=0.44704
+|j=-0.349653616-{{{j|0}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sprotect2</title>
+    <id>8167142</id>
+    <revision>
+      <id>122621757</id>
+      <timestamp>2007-04-13T23:24:32Z</timestamp>
+      <contributor>
+        <username>Gurch</username>
+        <id>241822</id>
+      </contributor>
+      <minor/>
+      <comment>[[Category:Semi-protected redirects]]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Sprotected2]]
+
+[[Category:Semi-protected redirects]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nasdaq</title>
+    <id>1192333</id>
+    <revision>
+      <id>175631011</id>
+      <timestamp>2007-12-04T02:34:04Z</timestamp>
+      <contributor>
+        <username>Pegasus</username>
+        <id>295955</id>
+      </contributor>
+      <minor/>
+      <comment>category param</comment>
+      <text xml:space="preserve">&lt;onlyinclude&gt;[[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol={{{1}}}&amp;selected={{{1}}} {{{1}}}]&lt;includeonly&gt;{{{category|[[Category:Companies listed on NASDAQ]]}}}&lt;/includeonly&gt;&lt;/onlyinclude&gt;
+
+[[Category:Ticker symbol templates|Nasdaq]]
+
+[[fr:Modèle:Nasdaq]]
+[[ko:틀:Nasdaq]]
+[[ms:Templat:Nasdaq]]
+[[no:Mal:Nasdaq]]
+[[ro:Format:Nasdaq]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·</title>
+    <id>7599646</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>151123393</id>
+      <timestamp>2007-08-14T07:10:35Z</timestamp>
+      <contributor>
+        <username>TKD</username>
+        <id>636163</id>
+      </contributor>
+      <comment>probably safe to remove the nowrap if we're using &amp;nbsp; in the meantime</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;font-weight:bold;&quot;&gt;&amp;nbsp;·&lt;/span&gt; &lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nasdaq2</title>
+    <id>1199795</id>
+    <revision>
+      <id>141334039</id>
+      <timestamp>2007-06-29T05:44:04Z</timestamp>
+      <contributor>
+        <username>Rsocol</username>
+        <id>1657775</id>
+      </contributor>
+      <minor/>
+      <comment>link to romanian wiki</comment>
+      <text xml:space="preserve">[[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol={{{1}}}&amp;selected={{{1}}} {{{1}}}]&lt;noinclude&gt;
+[[Category:Ticker symbol templates|Nasdaq2]]
+[[ro:Format:Nasdaq2]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/0</title>
+    <id>13563842</id>
+    <revision>
+      <id>193153745</id>
+      <timestamp>2008-02-21T23:52:12Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:({{{1}}}/1{{{3}}})round{{{2}}}}}{{{3}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/00</title>
+    <id>13548946</id>
+    <revision>
+      <id>179606481</id>
+      <timestamp>2007-12-22T16:28:19Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/00: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;-({{{1}}}={{{1}}}round-5)-({{{1}}}={{{1}}}round-4)-({{{1}}}={{{1}}}round-3)-({{{1}}}={{{1}}}round-2)-({{{1}}}={{{1}}}round-1)&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Microsoft products</title>
+    <id>7497635</id>
+    <revision>
+      <id>82170079</id>
+      <timestamp>2006-10-18T08:14:44Z</timestamp>
+      <contributor>
+        <username>123wiki123</username>
+        <id>2475816</id>
+      </contributor>
+      <comment>moved [[Template:Microsoft products]] to [[Template:Microsoft]]: More logical naming</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Microsoft]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main article</title>
+    <id>1065736</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>97822231</id>
+      <timestamp>2007-01-01T23:46:01Z</timestamp>
+      <contributor>
+        <username>Ligulem</username>
+        <id>216352</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Main article: matching protection of target [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Main]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Increase</title>
+    <id>4197969</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>188946037</id>
+      <timestamp>2008-02-04T02:59:15Z</timestamp>
+      <contributor>
+        <username>Denelson83</username>
+        <id>23958</id>
+      </contributor>
+      <minor/>
+      <comment>Changing over to Unicode</comment>
+      <text xml:space="preserve">&lt;span style=&quot;color: #0c0; font-size: larger;&quot;&gt;▲&lt;/span&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{{{FULLPAGENAME}}/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite news</title>
+    <id>4321630</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176437851</id>
+      <timestamp>2007-12-07T20:50:54Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||&lt;div style=&quot;border:1px solid red; background-color:#ffdab9; display:table;&quot;&gt; 
+You must specify '''''archiveurl=''''' and '''''archivedate=''' when using {{tl|cite news}}. Available parameters:
+{{Cite news/doc/parameterlist}}
+&lt;/div&gt;{{
+    #if: {{NAMESPACE}}||
+      [[Category:Articles with broken citations]]
+    }}
+}}
+}}{{#if: {{{title|}}}
+  |{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{authorlink|}}}
+      | [[{{{authorlink}}}|{{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}]]
+      | {{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}
+    }}
+  }}{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{coauthors|}}} | &amp;#59;&amp;#32;{{{coauthors}}} }}.&amp;#32;
+  }}{{#if: {{{curly|}}}|“|&quot;
+  }}{{#if: {{{archiveurl|}}}
+    | [{{{archiveurl}}} {{{title}}}] 
+    | {{#if: {{{url|}}} 
+      | [{{{url}}} {{{title}}}] 
+      | {{{title}}}
+    }}
+  }}{{#if: {{{curly|}}}|”|&quot;}}{{#if: {{{format|}}} | &amp;#32;({{{format}}}) 
+    }}{{#if: {{{work|}}}
+    | , ''{{{work}}}''}}{{#if: {{{publisher|}}}
+    | , {{#if: {{{location|}}} |{{{location}}}:&amp;#32;}}{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    | , {{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}
+  }}{{#if: {{{pages|}}}
+    | , pp.&amp;nbsp;{{{pages}}}
+    |{{#if: {{{page|}}}
+      | , p.&amp;nbsp;{{{page}}}
+    }}
+  }}{{#if: {{{id|}}} 
+    | . {{{id}}}
+  }}{{#if: {{{accessdate|}}}  
+  | .&amp;#32;Retrieved on [[{{{accessdate}}}]]
+  }}.{{#if: {{{language|}}}
+  | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+  }}{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;&quot;{{{quote}}}&quot;
+  }}|Template error: argument '''title''' is required.}}&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:dc}}&lt;!--                     Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:dc
+  --&gt;&amp;rft.type=newspaperArticle&lt;!--                                             The nature or genre of the content of the resource.  (newspaperArticle chosen purely because it is recognized by Zotero.)
+  --&gt;&amp;rft.subject=News&lt;!--                                                      A topic of the content of the resource. Typically expressed as keywords, key phrases or classification codes...
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}       }}&lt;!-- First author's given name or names or initials... may contain multiple words and punctuation, i.e. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}         }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}           }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;&amp;rft.title={{urlencode:{{{title|}}}}}&lt;!--                                     A name given to the resource.
+  --&gt;{{#if: {{{url|}}}       | &amp;rft.identifier={{urlencode:{{{url}}}}}      }}&lt;!-- URL 
+  --&gt;{{#if: {{{format|}}}    | &amp;rft.format={{urlencode:{{{format}}}}}       }}&lt;!-- The physical or digital manifestation of the resource... may include the media-type or dimensions of the resource.
+  --&gt;{{#if: {{{work|}}}      | &amp;rft.source={{urlencode:{{{work}}}}}         }}&lt;!-- A Reference to a resource from which the present resource is derived. 
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.publisher={{urlencode:{{{publisher}}}}} }}&lt;!-- An entity responsible for making the resource available... person, an organization, or a service.
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}         }}&lt;!-- Start and end pages for parts (of a book), i.e. &quot;124-147&quot;
+  --&gt;{{#if: {{{page|}}}      | &amp;rft.spage={{urlencode:{{{page}}}}}         }}&lt;!-- Start page for parts (of a book), i.e. &quot;124&quot;
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}           }}&lt;!-- A date of an event in the lifecycle of the resource... typically the creation or availability of the resource. (ISO 8601)
+  --&gt;{{#if: {{{language|}}}  | &amp;rft.language={{urlencode:{{{language}}}}}   }}&lt;!-- A language of the intellectual content of the resource. Recommended best practice is to use RFC 3066... in conjunction with ISO639
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/LoffAonSoff</title>
+    <id>13726371</id>
+    <revision>
+      <id>192769353</id>
+      <timestamp>2008-02-20T10:01:16Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{convert/{{#if:{{{4|}}}|s}}{{#if:{{{3|}}}|p}}round|{{{1}}}|{{{2}}}/{{{b}}}|{{{3}}}|{{{4}}}|{{{j}}}}}&amp;nbsp;{{{u}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/round</title>
+    <id>13725624</id>
+    <revision>
+      <id>192765520</id>
+      <timestamp>2008-02-20T09:23:03Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{#ifexpr:{{{2}}}=0|0|{{formatnum:{{rnd|{{{2}}}|({{max/2|{{precision/+|1{{{1}}}}}+({{{5}}}-0.1989700043)round0|1-{{ordomag|{{{2}}}}}}})}}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Max/2</title>
+    <id>13505276</id>
+    <revision>
+      <id>179606829</id>
+      <timestamp>2007-12-22T16:30:28Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Max/2: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#ifexpr:{{{1}}}&lt;{{{2}}}|{{{2}}}|{{{1}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}2-parameter version&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Citations broken</title>
+    <id>9659311</id>
+    <revision>
+      <id>168406645</id>
+      <timestamp>2007-10-31T23:41:46Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <comment>/* Redorects */</comment>
+      <text xml:space="preserve">{{ambox
+| type  = content
+| image = [[Image:Text document with red question mark.svg|50px]]
+| text  = '''This {{{1|article or section}}} uses [[Wikipedia:Citing sources|citations]] that are either [[Dead link|broken]] or outdated.'''&lt;br /&gt;&lt;small&gt;This {{{1|article or section}}} uses citations that link to broken or outdated sources, and are deemed unreliable. Please {{plainlink|url={{SERVER}}{{localurl:{{PAGENAME}}|action=edit}} improve the article}} or discuss this issue on the [[{{TALKPAGENAME}}|talk page]]. [[Wikipedia:Footnotes#How to use|Help]] on using footnotes is available. {{#if:{{{date|}}}|This article has been tagged since '''{{{date}}}'''.}}&lt;/small&gt;
+}}&lt;includeonly&gt;{{#if:{{{date|}}}|{{{category|[[Category:Articles with broken or outdated citations from {{{date}}}]]}}}|{{{category|[[Category:Articles with broken or outdated citations]]}}}}}{{{category|[[Category:All articles with broken or outdated citations]]}}}&lt;/includeonly&gt;&lt;!-- End citations broken --&gt;&lt;noinclude&gt;
+
+
+This template may be placed at the top of an article, if the article's sourcing problems are severe, or at the top of the &quot;References&quot; section of the article if minor cleanup in this regard is needed.  In a long article, it can also be placed at the top of a prose section or passage in need of such cleanup, when the rest of the article is otherwise unaffected.
+
+This template will categorise tagged articles into [[:Category:All articles with broken or outdated citations]] and either [[:Category:Articles with broken or outdated citations]] or a monthly category like [[:Category:Articles with broken or outdated citations from {{CURRENTMONTHNAME}} {{CURRENTYEAR}}]], if a date is supplied.
+
+The simplest way to add this template to an article is to copy and paste {{tlx|citations broken|section|date&amp;#61;{{CURRENTMONTHNAME}} {{CURRENTYEAR}}}} at the top of the reference section in an article.
+
+* This [[WP:TM|template]] is a [[WP:SELF|self-reference]].
+* Please do not [[WP:SUB|subst:]] this template.
+
+==Redirects==
+*{{Tl|Citations Broken}}
+*{{Tl|Broken citations}}
+
+==See also==
+* [[Wikipedia:WikiProject Citation cleanup|WikiProject Citation cleanup]]
+* [[Wikipedia:Template messages/Sources of articles]]
+* [[Wikipedia:Template messages/Cleanup]]
+
+[[Category:Citation and verifiability maintenance templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main</title>
+    <id>1208356</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>172617823</id>
+      <timestamp>2007-11-20T02:17:26Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>Adding CSS class names</comment>
+      <text xml:space="preserve">:&lt;div class=&quot;noprint relarticle mainarticle&quot;&gt;''Main article{{#if:{{{2|}}}|s}}: [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&amp;#32;|&amp;#32;and&amp;#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, and [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}''{{#if:{{{11| }}}|&amp;#32; (too many parameters in &amp;#123;&amp;#123;[[Template:main|main]]&amp;#125;&amp;#125;)}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country flagicon2</title>
+    <id>2048255</id>
+    <revision>
+      <id>186844952</id>
+      <timestamp>2008-01-25T17:24:41Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>span icon image with CSS class; remove whitespace to reduce template size (even a few bytes helps for pages with hundreds of transclusions)</comment>
+      <text xml:space="preserve">&lt;span class=&quot;flagicon&quot;&gt;[[Image:{{#if:{{{variant|}}}|{{{flag alias-{{{variant}}}}}}|{{{flag alias}}}}}|{{#if:{{{size|}}}|{{{size}}}|22x20px}}|border|{{{alt attribute|Flag of {{{alias}}}}}}]]&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/km/h</title>
+    <id>13751947</id>
+    <revision>
+      <id>170177872</id>
+      <timestamp>2007-11-08T21:17:12Z</timestamp>
+      <contributor>
+        <username>Detroiterbot</username>
+        <id>5478189</id>
+      </contributor>
+      <minor/>
+      <comment>adding category  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{convert/{{{d}}}|{{{1}}}|{{{2|}}}|{{{3|}}}|{{{4|}}}|s={{{s|}}}|r={{{r}}}
+|u=km/h
+|n=kilomet{{{r}}} per hour
+|h=kilomet{{{r}}}-per-hour
+|l=kilomet{{{r}}}s per hour
+|t=kilometres per hour
+|o=mph
+|b=(5/18)
+|j=-0.556302501-{{{j|0}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:IT giants</title>
+    <id>5362729</id>
+    <revision>
+      <id>194403890</id>
+      <timestamp>2008-02-27T12:59:24Z</timestamp>
+      <contributor>
+        <ip>192.171.3.126</ip>
+      </contributor>
+      <comment>LogicaCMG is now just Logica</comment>
+      <text xml:space="preserve">{{navbox
+| name    = IT giants
+| title   = Major [[computing]] companies
+&lt;includeonly&gt;| state   = {{{state|collapsed}}}&lt;/includeonly&gt;
+| groupstyle = vertical-align: middle;
+| group1  = [[Cellular network|Cellular hardware]]
+| list1   = [[High Tech Computer Corporation|HTC]]{{·}} [[Motorola]]{{·}} [[Nokia]]{{·}} [[Palm, Inc.|Palm]]{{·}} [[Qualcomm]]{{·}} [[Research In Motion|RIM]]{{·}} [[SAGEM]]{{·}} [[Sony Ericsson]]
+| group2  = [[Conglomerate (company)|Conglomerates]]
+| list2   = [[General Electric|GE]]{{·}} [[Hindustan Computers Limited|HCL]]{{·}} [[Hitachi, Ltd.|Hitachi]]{{·}} [[LG Electronics|LG]]{{·}} [[Matsushita Electric Industrial Co.|Matsushita]]{{·}} [[NCR Corporation|NCR]]{{·}} [[Philips]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Siemens AG|Siemens]]{{·}} [[Sony]]{{·}} [[Thomson SA|Thomson]]{{·}} [[Toshiba]]
+| group3  = [[Computer hardware]]
+| list3   = [[Acer Inc.|Acer]]{{·}} [[Asus]]{{·}} [[Dell]]{{·}} [[Fujitsu Siemens Computers|Fujitsu Siemens]]{{·}} [[Lenovo Group|Lenovo]]{{·}} [[Quanta Computer|Quanta]]
+| group4  = [[Computer network]]s
+| list4   = [[3Com]]{{·}} [[Alcatel-Lucent]]{{·}} [[Allied Telesis]]{{·}} [[Avaya]]{{·}} [[Cisco Systems|Cisco]]{{·}} [[Ericsson]]{{·}} [[Foundry Networks|Foundry]]{{·}} [[Huawei]]{{·}} [[Juniper Networks|Juniper]]{{·}} [[Nokia Siemens Networks|Nokia Siemens]]{{·}} [[Nortel]]{{·}} [[ZTE]]
+| group5  = [[Dot-com company|Dot-com]]/[[web service]]s
+| list5   = [[Amazon.com]]{{·}} [[AOL]]{{·}} [[eBay]]{{·}} [[Google]]{{·}} [[Windows Live|Microsoft]]{{·}} [[Yahoo!]]
+| group6  = [[Electronics manufacturing services|Electronics manufacturers]]
+| list6   = [[Celestica]]{{·}} [[Elcoteq]]{{·}} [[Flextronics]]{{·}} [[Foxconn]]{{·}} [[Jabil Circuit|Jabil]]{{·}} [[Kimball International|Kimball]]{{·}} [[Plexus Corporation|Plexus]]{{·}} [[Quanta Computer|Quanta]]{{·}} [[Sanmina-SCI Corporation|Sanmina-SCI]]{{·}} [[SMTC Corporation|SMTC]]{{·}} [[Solectron]]
+| group7  = [[Information technology|IT]] [[Information technology consulting|consulting]]
+| list7   = [[Accenture]]{{·}} [[Affiliated Computer Services|ACS]]{{·}} [[Atos Origin]]{{·}} [[Avanade]]{{·}} [[BearingPoint]]{{·}} [[Booz Allen Hamilton]]{{·}} [[BT Group|BT]]{{·}} [[Capgemini]]{{·}} [[CGI Group|CGI]]{{·}} [[Cognizant Technology Solutions|Cognizant]]{{·}} [[Computer Sciences Corporation|CSC]]{{·}} [[Deloitte Touche Tohmatsu|Deloitte.]]{{·}} [[Electronic Data Systems|EDS]]{{·}} [[First Data]]{{·}} [[Fujitsu Consulting|Fujitsu]]{{·}} [[Getronics]]{{·}} [[HCL Technologies|HCL Tech]]{{·}} [[HP Technology Solutions Group|HP TSG]]{{·}} [[IBM Global Services]]{{·}} [[i-flex Solutions|i-flex]]{{·}} [[Indra Sistemas|Indra]]{{·}} [[Infosys]]{{·}} [[Keane (company)|Keane]]{{·}} [[Logica]]{{·}} [[Orange Business Services]]{{·}} [[PA Consulting Group|PA]]{{·}} [[Perot Systems|Perot]]{{·}} [[Science Applications International Corporation|SAIC]]{{·}} [[Sapient (company)|Sapient]]{{·}} [[Satyam Computer Services Ltd.|Satyam]]{{·}} [[Tata Consultancy Services|TCS]]{{·}} [[TietoEnator]]{{·}} [[Titan Corp.|Titan]]{{·}} [[Unisys]]{{·}} [[Wipro Technologies|Wipro]]
+| group8  = [[Computer storage|Storage]]
+| list8   = [[EMC Corporation|EMC]]{{·}} [[Fujitsu]]{{·}} [[Maxtor]]{{·}} [[Network Appliance|NetApp]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Seagate Technology|Seagate]]{{·}} [[Hitachi Global Storage Technologies|Hitachi]]{{·}} [[Western Digital]]
+| group9  = [[Semiconductor]]s
+| list9   = [[Advanced Micro Devices|AMD]]{{·}} [[Broadcom]]{{·}} [[Elpida Memory|Elpida]]{{·}} [[Fairchild Semiconductor|Fairchild]]{{·}} [[Freescale Semiconductor|Freescale]]{{·}} [[Hynix]]{{·}} [[Infineon Technologies|Infineon]]{{·}} [[Intel Corporation|Intel]]{{·}} [[Micron Technology|Micron]]{{·}} [[National Semiconductor|National]]{{·}} [[Nvidia]]{{·}} [[NXP Semiconductors|NXP]]{{·}} [[Qimonda]]{{·}} [[Renesas Technology|Renesas]]{{·}} [[Rohm]]{{·}} [[Sharp Corporation|Sharp]]{{·}} [[STMicroelectronics]]{{·}} [[Texas Instruments|TI]]{{·}} [[TSMC]]{{·}} [[VIA Technologies|VIA]]
+| group10  = [[Computer software|Software]]
+| list10   = [[Adobe Systems|Adobe]]{{·}} [[CA, Inc.|CA]]{{·}} [[Electronic Arts|EA]]{{·}} [[Intuit]]{{·}} [[McAfee]]{{·}} [[Microsoft]]{{·}} [[Nintendo]]{{·}} [[Novell]]{{·}} [[Oracle Corporation|Oracle]]{{·}} [[Red Hat]]{{·}} [[SAP AG|SAP]]{{·}} [[Symantec]]
+| group11  = [[Telecommunication|Telecom]]
+| list11   = [[3 (telecommunications)|3]]{{·}} [[América Móvil]]{{·}} [[AT&amp;T]]{{·}} [[Bharti Airtel]]{{·}} [[Bharat Sanchar Nigam Limited|BSNL]]{{·}} [[BT Group|BT]]{{·}} [[Cablevision]]{{·}} [[Comcast]]{{·}} [[Deutsche Telekom]]{{·}} [[EarthLink]]{{·}} [[France Télécom]]{{·}} [[KT (telecommunication company)|KT]]{{·}} [[Nippon Telegraph and Telephone|NTT]]{{·}} [[Qwest]]{{·}} [[RCN Corporation|RCN]]{{·}} [[Rogers Communications|Rogers]]{{·}} [[SK Telecom]]{{·}} [[Sprint Nextel]]{{·}} [[Swisscom]]{{·}}  [[Telecom Italia]]{{·}} [[Telefónica]]{{·}} [[Telmex]]{{·}} [[Time Warner]]{{·}} [[Verizon Communications|Verizon]]{{·}} [[Virgin Media|Virgin]]{{·}} [[Vodafone]]
+| group12  = [[Vertical integration|Vertically integrated&lt;br /&gt;manufacturers]]
+| list12   = [[Apple Inc.|Apple]]{{·}} [[Hewlett-Packard|HP]]{{·}} [[IBM]]{{·}} [[NEC]]{{·}} [[Sun Microsystems|Sun]]
+}}&lt;noinclude&gt;[[Category:Computer company navigational boxes|{{PAGENAME}}]]
+[[fr:Modèle:Géants IT]]
+[[hu:Sablon:IT nagyok]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-meta</title>
+    <id>13371038</id>
+    <revision>
+      <id>191755055</id>
+      <timestamp>2008-02-16T00:13:10Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>missing td class</comment>
+      <text xml:space="preserve">{{#if:{{{smalltext|}}}
+| &lt;!--Smalltext--&gt;
+  &lt;div class=&quot;metadata plainlinks&quot; id=&quot;administrator&quot; style=&quot;position:absolute; z-index:100; right:55px; top:9px;&quot;&gt;{{{smalltext}}}
+  &lt;/div&gt;
+
+| &lt;!--No smalltext--&gt;
+  {{#switch:
+    {{lc:{{#if:{{{demospace|}}}
+    | {{{demospace}}}
+    | X{{NAMESPACE}}
+    }}}}
+  | main
+  | x = &lt;!--Main (article) space--&gt;
+    &lt;table class=&quot;ambox ambox-protection metadata plainlinks&quot;&gt;
+    &lt;tr&gt;
+    &lt;td class=&quot;ambox-image&quot;&gt;{{{image}}}
+    &lt;td class=&quot;ambox-text&quot;&gt;{{{text}}}
+    &lt;/table&gt;
+
+  | talk
+  | xtalk
+  | xuser talk
+  | ximage talk
+  | xtemplate talk
+  | xhelp talk
+  | xcategory talk = &lt;!--Any talk space--&gt;
+    &lt;table class=&quot;messagebox standard-talk metadata plainlinks&quot;&gt;
+    &lt;tr&gt;
+    &lt;td&gt;{{{image}}}
+    &lt;td&gt;{{{text}}}
+    &lt;/table&gt;
+
+  | #default = &lt;!--Other space--&gt;
+    &lt;table class=&quot;messagebox protected metadata plainlinks&quot; style=&quot;border:2px solid #99B; padding:0px; font-size:0.9em;&quot;&gt;
+    &lt;tr&gt;
+    &lt;td&gt;{{{image}}}
+    &lt;td&gt;{{{text}}}
+    &lt;/table&gt;
+
+  }}&lt;!--End switch--&gt;
+}}&lt;!--End if smalltext--&gt;&lt;includeonly&gt;{{#ifeq:{{{categories|no}}}|no||{{{categories|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd</title>
+    <id>13373859</id>
+    <revision>
+      <id>189233633</id>
+      <timestamp>2008-02-05T10:45:11Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>Moving documentation to subpage - reasin for protection doesn't apply to dicumentation</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{rnd/+|{{{1}}}|{{{2}}}|{{rnd/0{{#expr:{{{2}}}&gt;0}}|{{{1}}}|{{{2}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Hkex</title>
+    <id>1462795</id>
+    <revision>
+      <id>164212723</id>
+      <timestamp>2007-10-13T04:59:23Z</timestamp>
+      <contributor>
+        <ip>83.217.236.8</ip>
+      </contributor>
+      <comment>interwiki link added</comment>
+      <text xml:space="preserve">[[Hong Kong Stock Exchange|SEHK]]: [http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID={{{1}}}&amp;WidCoAbbName=&amp;Month=&amp;langcode=e {{{1}}}]&lt;includeonly&gt;[[Category:Companies listed on the Hong Kong Stock Exchange]]&lt;/includeonly&gt;&lt;noinclude&gt;[[Category:Ticker symbol templates|HKEx]]
+[[fi:Malline:Sehk]][[fr:Modèle:Sehk]][[zh:Template:hkex]][[hy:Կաղապար:Hkex]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Seealso</title>
+    <id>1866967</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>192767645</id>
+      <timestamp>2008-02-20T09:44:40Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>+ cat</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:See also]]
+[[Category:Protected redirects]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Seattle Corporations</title>
+    <id>8714950</id>
+    <revision>
+      <id>189597532</id>
+      <timestamp>2008-02-06T22:19:11Z</timestamp>
+      <contributor>
+        <username>Lukobe</username>
+        <id>10642</id>
+      </contributor>
+      <text xml:space="preserve">{{Navbox
+|name = Seattle Corporations
+|title = [[List of companies based in Seattle|Seattle-based Corporations]] &lt;small&gt;(within the [[Seattle metropolitan area]])&lt;/small&gt;
+|titlestyle = background:#ffc920;
+|list1 = 
+'''[[Seattle]]-based [[Fortune 500]] Corporations (by size)''':&lt;br /&gt;[[Washington Mutual]] • [[Amazon.com]] • [[Nordstrom]] • [[Starbucks]] • [[Safeco]]&lt;br /&gt;
+&lt;br /&gt;
+'''[[Seattle]]-based [[Fortune 1000]] Corporations (by size)''':&lt;br /&gt;Companies listed above, plus: [[Alaska Airlines]] • [[Expeditors International]] • [[Plum Creek Timber]]&lt;br /&gt;
+&lt;br /&gt;
+'''[[Puget Sound]]-based [[Fortune 1000]] Corporations (by size)''':&lt;br/&gt;Companies listed above, plus: [[Costco|Costco Wholesale]] • [[Microsoft]] • [[Weyerhaeuser]] • [[Paccar]] • [[Puget Sound Energy]]&lt;br /&gt;
+&lt;br /&gt;
+'''Major [[Seattle]]- and [[Puget Sound]]-based non-public or externally owned corporations''':&lt;br /&gt;[[Nintendo|Nintendo of America]] • [[R.E.I.]] • [[T-Mobile (USA)|T-Mobile USA]] • [[WestFarm Foods]]
+}}&lt;noinclude&gt;
+[[Category:Companies based in Seattle, Washington]]
+[[Category:Companies based in Washington]]
+[[Category:Seattle templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox Company</title>
+    <id>1192206</id>
+    <revision>
+      <id>187719436</id>
+      <timestamp>2008-01-29T16:57:40Z</timestamp>
+      <contributor>
+        <username>Geniac</username>
+        <id>1839933</id>
+      </contributor>
+      <minor/>
+      <comment>removed unwanted vertical whitespace</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{| class=&quot;infobox vcard&quot; style=&quot;font-size:90%; width:23em;&quot;
+|-
+! class=&quot;fn n org&quot; style=&quot;text-align:center; font-size:120%;&quot; colspan=&quot;2&quot; | {{{name|{{{company_name|{{PAGENAME}}}}}}}}&lt;!----&gt;
+|-
+{{#if:{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt; | &lt;tr class=&quot;logo&quot;&gt;&lt;td colspan=&quot;2&quot; style=&quot;text-align:center; padding:16px 0 16px 0;&quot;&gt;{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}
+|-
+&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[:Category:Types of companies|Type]]&lt;/th&gt;&lt;td&gt;{{{type|}}}&lt;!--deprecated:--&gt;{{{company_type|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{genre|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Genre]]&lt;/th&gt;&lt;td&gt;{{{genre}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Founded&lt;/th&gt;&lt;td&gt;{{{foundation}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{founder|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Entrepreneur|Founder]]&lt;/th&gt;&lt;td&gt;{{{founder}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;!--deprecated:--&gt;{{#if:{{{dissolved|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Dissolved&lt;/th&gt;&lt;td&gt;{{{dissolved}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!----&gt;&lt;!--
+--&gt;&lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Headquarters&lt;/th&gt;&lt;td class=&quot;adr&quot;&gt;{{#if:{{{location_city|}}} | &lt;span class=&quot;locality&quot;&gt;{{{location_city}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location_country|}}} |, &lt;span class=&quot;country-name&quot;&gt;{{{location_country}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location|}}} | {{{location}}}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{locations|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;No.&amp;nbsp;of locations&lt;/th&gt;&lt;td&gt;{{{locations}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{area_served|}}}     | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Area&amp;nbsp;served&lt;/th&gt;&lt;td&gt;{{{area_served}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{key_people|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Key&amp;nbsp;people&lt;/th&gt;&lt;td&gt;{{{key_people}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{industry|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Industry]]&lt;/th&gt;&lt;td&gt;{{{industry}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{products|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Product (business)|Products]]&lt;/th&gt;&lt;td&gt;{{{products}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{services|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Service (economics)|Services]]&lt;/th&gt;&lt;td&gt;{{{services}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{revenue|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Revenue]]&lt;/th&gt;&lt;td&gt;{{{revenue}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{operating_income|}}}| &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Earnings before interest and taxes|Operating income]]&lt;/th&gt;&lt;td&gt;{{{operating_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{net_income|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;{{#ifeq:{{{intl|}}}|yes|[[Net income|Profit]]|[[Net income]]}}&lt;/th&gt;&lt;td&gt;{{{net_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{assets|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Assets|Total assets]]&lt;/th&gt;&lt;td&gt;{{{assets}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{equity|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Ownership equity|Total equity]]&lt;/th&gt;&lt;td&gt;{{{equity}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{owner|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Owner]]&lt;/th&gt;&lt;td&gt;{{{owner}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{num_employees|}}}   | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Employment|Employee]]s&lt;/th&gt;&lt;td&gt;{{{num_employees}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{parent|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Holding company|Parent]]&lt;/th&gt;&lt;td&gt;{{{parent}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{divisions|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Division (business)|Divisions]]&lt;/th&gt;&lt;td&gt;{{{divisions}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{subsid|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Subsidiary|Subsidiaries]]&lt;/th&gt;&lt;td&gt;{{{subsid}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt; | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Slogan]]&lt;/th&gt;&lt;td&gt;{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{homepage|}}}        | &lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Website]]&lt;/th&gt;&lt;td class=&quot;url&quot;&gt;{{{homepage}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{footnotes|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;td colspan=&quot;2&quot; class=&quot;note&quot;&gt;{{{footnotes}}}&lt;/td&gt;&lt;/tr&gt;}}
+|}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+{{pp-template}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/00</title>
+    <id>13563807</id>
+    <revision>
+      <id>193069191</id>
+      <timestamp>2008-02-21T17:15:34Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <comment>rm newline</comment>
+      <text xml:space="preserve">{{rnd/{{#expr:{{{2}}}&lt;-2}}|{{{1}}}|{{{2}}}|}}&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/0</title>
+    <id>13551870</id>
+    <revision>
+      <id>179606315</id>
+      <timestamp>2007-12-22T16:27:24Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/0: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{precision/0{{#expr:{{{1}}}={{{1}}}round-6}}|1{{{1}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterlinks</title>
+    <id>2226074</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>187203488</id>
+      <timestamp>2008-01-27T07:05:19Z</timestamp>
+      <contributor>
+        <username>SebastianHelm</username>
+        <id>7250</id>
+      </contributor>
+      <comment>adding parameter for each of the sisters per request</comment>
+      <text xml:space="preserve">{| class=&quot;infobox sisterproject&quot; style=&quot;width:235px; line-height:2.25em; font-size:90%;&quot;
+|- style=&quot;line-height:1.3em;&quot;
+!colspan=&quot;2&quot; align=&quot;center&quot;| Find more about {{{1|{{PAGENAME}}}}} on Wikipedia's sister projects:
+|-
+!width=&quot;37px&quot;| [[Image:Wiktionary-logo-en.png|25x27px| ]]&lt;/span&gt;
+| &lt;span title=&quot;Wiktionary&quot;&gt;[[wikt:Special:Search/{{{wikt|{{{1|{{PAGENAME}}}}}}}}|Dictionary definitions]]
+|-
+! [[Image:Wikibooks-logo.svg|27px| ]]
+| [[b:Special:Search/{{{b|{{{1|{{PAGENAME}}}}}}}}|Textbooks]]
+|-
+! [[Image:Wikiquote-logo.svg|23x27px| ]]
+| [[q:Special:Search/{{{q|{{{1|{{PAGENAME}}}}}}}}|Quotations]]
+|-
+! [[Image:Wikisource-logo.svg|26x27px| ]]
+| [[s:Special:Search/{{{s|{{{1|{{PAGENAME}}}}}}}}|Source texts]]
+|-
+! &lt;span title=&quot;Commons&quot;&gt;[[Image:Commons-logo.svg|19x25px| ]]
+| [[commons:Special:Search/{{{commons|{{{1|{{PAGENAME}}}}}}}}|Images and media]]
+|-
+! {{lower|6px|[[Image:Wikinews-logo.svg|27px| ]]}}
+| [[n:Special:Search/{{{n|{{{1|{{PAGENAME}}}}}}}}|News stories]]
+|-
+! [[Image:Wikiversity-logo-Snorky.svg|27px| ]]
+| [[v:Special:Search/{{{v|{{{1|{{PAGENAME}}}}}}}}|Learning resources]]
+|-
+&lt;!--! &lt;span title=&quot;Wikispecies&quot;&gt;[[Image:Wikispecies-logo.svg|23x27px| ]]
+--&gt;
+|}&lt;noinclude&gt;
+{{clear}}
+&lt;br/&gt;&lt;hr/&gt;
+&lt;br/&gt;{{protected template}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/mi/h</title>
+    <id>13752109</id>
+    <revision>
+      <id>165628398</id>
+      <timestamp>2007-10-19T14:00:41Z</timestamp>
+      <contributor>
+        <username>R'n'B</username>
+        <id>2300502</id>
+      </contributor>
+      <minor/>
+      <comment>fix broken redirect</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Convert/mph]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:NASDAQ-100</title>
+    <id>12217826</id>
+    <revision>
+      <id>191045838</id>
+      <timestamp>2008-02-13T01:57:48Z</timestamp>
+      <contributor>
+        <username>Ief</username>
+        <id>404186</id>
+      </contributor>
+      <text xml:space="preserve">{{navbox
+|name = NASDAQ-100
+|title = Companies of the [[NASDAQ-100]] index&lt;small&gt; (As of [[January 2]] [[2008]])&lt;/small&gt;
+|titlestyle = background:lightsteelblue;
+|list1 =&lt;div&gt;
+[[Activision]]{{·}}
+[[Adobe Systems]]{{·}}
+[[Akamai Technologies]]{{·}}
+[[Altera]]{{·}}
+[[Amazon.com]]{{·}}
+[[Amgen]]{{·}}
+[[Amylin Pharmaceuticals]]{{·}}
+[[Apollo Group]]{{·}}
+[[Apple Inc.]]{{·}}
+[[Applied Materials]]{{·}}
+[[Autodesk]]{{·}}
+[[Baidu]]{{·}}
+[[BEA Systems]]{{·}}
+[[Bed Bath &amp; Beyond]]{{·}}
+[[Biogen Idec]]{{·}}
+[[Broadcom]]{{·}}
+[[C. H. Robinson Worldwide]]{{·}}
+[[Cadence Design Systems]]{{·}}
+[[Celgene]]{{·}}
+[[Cephalon]]{{·}}
+[[Check Point]]{{·}}
+[[Cintas]]{{·}}
+[[Cisco Systems]]{{·}}
+[[Citrix Systems]]{{·}}
+[[Cognizant Technology Solutions]]{{·}}
+[[Comcast]]{{·}}
+[[Costco]]{{·}}
+[[Dell]]{{·}}
+[[DENTSPLY International]]{{·}}
+[[Discovery Holding Company]]{{·}}
+[[Dish Network Corporation]]{{·}}
+[[eBay]]{{·}}
+[[Electronic Arts]]{{·}}
+[[Expedia, Inc.]]{{·}}
+[[Expeditors International]]{{·}}
+[[Express Scripts]]{{·}}
+[[Fastenal]]{{·}}
+[[Fiserv]]{{·}}
+[[Flextronics]]{{·}}
+[[Focus Media Holding]]{{·}}
+[[Foster Wheeler Corporation]]{{·}}
+[[Garmin]]{{·}}
+[[Genzyme]]{{·}}
+[[Gilead Sciences]]{{·}}
+[[Google]]{{·}}
+[[Hansen Natural]]{{·}}
+[[Henry Schein]]{{·}}
+[[Hologic]]{{·}}
+[[IAC/InterActiveCorp]]{{·}}
+[[Infosys]]{{·}}
+[[Intel Corporation]]{{·}}
+[[Intuit]]{{·}}
+[[Intuitive Surgical]]{{·}}
+[[Joy Global]]{{·}}
+[[Juniper Networks]]{{·}}
+[[KLA Tencor|KLA-Tencor]]{{·}}
+[[Lam Research]]{{·}}
+[[Lamar Advertising Company]]{{·}}
+[[Leap Wireless|Leap Wireless International]]{{·}}
+[[Level 3 Communications]]{{·}}
+[[Liberty Global]]{{·}}
+[[Liberty Media|Liberty Media Corporation]]{{·}}
+[[Linear Technology]]{{·}}
+[[Logitech]]{{·}}
+[[Marvell Technology Group]]{{·}}
+[[Microchip Technology]]{{·}}
+[[Microsoft]]{{·}}
+[[Millicom|Millicom International Cellular]]{{·}}
+[[Monster Worldwide]]{{·}}
+[[Network Appliance]]{{·}}
+[[NII Holdings, Inc.]]{{·}}
+[[Nvidia]]{{·}}
+[[Oracle Corporation]]{{·}}
+[[PACCAR]]{{·}}
+[[Patterson Dental|Patterson Companies]]{{·}}
+[[Paychex]]{{·}}
+[[PetSmart]]{{·}}
+[[Qualcomm]]{{·}}
+[[Research In Motion]]{{·}}
+[[Ryanair]]{{·}}
+[[SanDisk]]{{·}}
+[[Sears Holdings Corporation]]{{·}}
+[[Sigma-Aldrich]]{{·}}
+[[Sirius Satellite Radio]]{{·}}
+[[Staples Inc.]]{{·}}
+[[Starbucks]]{{·}}
+[[Steel Dynamics]]{{·}}
+[[Stericycle]]{{·}}
+[[Sun Microsystems]]{{·}}
+[[Symantec]]{{·}}
+[[Tellabs]]{{·}}
+[[Teva Pharmaceutical Industries]]{{·}}
+[[UAL Corporation]]{{·}}
+[[VeriSign]]{{·}}
+[[Vertex Pharmaceuticals]]{{·}}
+[[Virgin Media]]{{·}}
+[[Whole Foods Market]]{{·}}
+[[Wynn Resorts]]{{·}}
+[[Xilinx]]{{·}}
+[[Yahoo!]]
+&lt;/div&gt;
+|category=[[Category:Companies in the NASDAQ-100 Index]]
+}}&lt;noinclude&gt;{{DEFAULTSORT:{{PAGENAME}}}}
+[[Category:Stock market indices templates]]
+[[ca:Plantilla:NASDAQ-100]]
+[[fr:Modèle:NASDAQ-100]]
+[[it:Template:NASDAQ-100]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite press release</title>
+    <id>4821205</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>180229825</id>
+      <timestamp>2007-12-26T10:01:38Z</timestamp>
+      <contributor>
+        <username>Gimmetrow</username>
+        <id>1368726</id>
+      </contributor>
+      <comment>per talk</comment>
+      <text xml:space="preserve">{{#if: {{{title|}}}
+  |{{#if: {{{publisher|}}}
+    |{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    |&amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}). 
+    |{{#if: {{{publisher|}}}|. |}}
+  }}&amp;#32;&quot;{{#if: {{{url|}}}|[{{{url}}} {{{title}}}]|{{{title}}} }}&quot;{{#if: {{{format|}}}
+  | &amp;#32;({{{format}}})
+  }}{{#if: {{{language|}}}
+  | &amp;#32;(in {{{language}}})
+  }}. [[News release|Press release]]. {{#if: {{{accessdate|}}}
+    |&amp;#32;Retrieved on [[{{{accessdate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;“{{{quote}}}”
+  }}
+  |Error on call to [[Template:cite press release]]: Parameter '''title''' must be specified
+}}&lt;noinclude&gt;
+{{protected template}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:See also</title>
+    <id>1721254</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161961086</id>
+      <timestamp>2007-10-03T06:09:15Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}, moved some content to subpage</comment>
+      <text xml:space="preserve">:&lt;span class=&quot;boilerplate seealso&quot;&gt;''See also: {{#if:{{{1|}}} |&lt;!--then:--&gt;[[:{{{1}}}|{{{l1|{{{1}}}}}}]] |&lt;!--else:--&gt;'''Error: [[Template:See also|Template must be given at least one article name]]''' 
+}}{{#if:{{{2|}}}|{{#if:{{{3|}}}|, |&amp;nbsp;and }} [[:{{{2}}}|{{{l2|{{{2}}}}}}]]
+}}{{#if:{{{3|}}}|{{#if:{{{4|}}}|, |,&amp;nbsp;and }} [[:{{{3}}}|{{{l3|{{{3}}}}}}]]
+}}{{#if:{{{4|}}}|{{#if:{{{5|}}}|, |,&amp;nbsp;and }} [[:{{{4}}}|{{{l4|{{{4}}}}}}]]
+}}{{#if:{{{5|}}}|{{#if:{{{6|}}}|, |,&amp;nbsp;and }} [[:{{{5}}}|{{{l5|{{{5}}}}}}]]
+}}{{#if:{{{6|}}}|{{#if:{{{7|}}}|, |,&amp;nbsp;and }} [[:{{{6}}}|{{{l6|{{{6}}}}}}]]
+}}{{#if:{{{7|}}}|{{#if:{{{8|}}}|, |,&amp;nbsp;and }} [[:{{{7}}}|{{{l7|{{{7}}}}}}]]
+}}{{#if:{{{8|}}}|{{#if:{{{9|}}}|, |,&amp;nbsp;and }} [[:{{{8}}}|{{{l8|{{{8}}}}}}]]
+}}{{#if:{{{9|}}}|{{#if:{{{10|}}}|, |,&amp;nbsp;and }} [[:{{{9}}}|{{{l9|{{{9}}}}}}]]
+}}{{#if:{{{10|}}}|{{#if:{{{11|}}}|, |,&amp;nbsp;and }} [[:{{{10}}}|{{{l10|{{{10}}}}}}]]
+}}{{#if:{{{11|}}}|{{#if:{{{12|}}}|, |,&amp;nbsp;and }} [[:{{{11}}}|{{{l11|{{{11}}}}}}]]
+}}{{#if:{{{12|}}}|{{#if:{{{13|}}}|, |,&amp;nbsp;and }} [[:{{{12}}}|{{{l12|{{{12}}}}}}]]
+}}{{#if:{{{13|}}}|{{#if:{{{14|}}}|, |,&amp;nbsp;and }} [[:{{{13}}}|{{{l13|{{{13}}}}}}]]
+}}{{#if:{{{14|}}}|{{#if:{{{15|}}}|, |,&amp;nbsp;and }} [[:{{{14}}}|{{{l14|{{{14}}}}}}]]
+}}{{#if:{{{15|}}}|,&amp;nbsp;and [[:{{{15}}}|{{{l15|{{{15}}}}}}]]
+}}{{#if:{{{16|}}}| &amp;mdash; '''&lt;br/&gt;Error: [[Template:See also|Too many links specified (maximum is 15)]]'''
+}}''&lt;/span&gt;&lt;noinclude&gt;
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/+</title>
+    <id>13548869</id>
+    <revision>
+      <id>179606122</id>
+      <timestamp>2007-12-22T16:26:07Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/+: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{precision/{{#expr:3*{{{1}}}&gt;{{{1}}}0}}|{{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>169409860</id>
+      <timestamp>2007-11-05T17:22:36Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Removing VDEcolor parameter; titlestyle now works on VDE links.</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{Navbox/core
+|name = {{{name&lt;noinclude&gt;|{{FULLPAGENAME}}&lt;/noinclude&gt;}}}
+|navbar = {{{navbar|}}}
+|state = {{{state|autocollapse}}}
+|title = {{{title|}}}
+|image = {{{image|}}}
+|imageleft = {{{imageleft|}}}
+
+|imagespan = {{#expr:{{#if:{{{body|}}}{{{list1|}}}|1|0}} +{{#if:{{{list2|}}}|1|0}} +{{#if:{{{list3|}}}|1|0}} +{{#if:{{{list4|}}}|1|0}} +{{#if:{{{list5|}}}|1|0}} +{{#if:{{{list6|}}}|1|0}} +{{#if:{{{list7|}}}|1|0}} +{{#if:{{{list8|}}}|1|0}} +{{#if:{{{list9|}}}|1|0}} +{{#if:{{{list10|}}}|1|0}} +{{#if:{{{list11|}}}|1|0}} +{{#if:{{{list12|}}}|1|0}} +{{#if:{{{list13|}}}|1|0}} +{{#if:{{{list14|}}}|1|0}} +{{#if:{{{list15|}}}|1|0}} +{{#if:{{{list16|}}}|1|0}} +{{#if:{{{list17|}}}|1|0}} +{{#if:{{{list18|}}}|1|0}} +{{#if:{{{list19|}}}|1|0}} +{{#if:{{{list20|}}}|1|0}}}}
+
+|span = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}{{{imageleft|}}}|{{#if:{{{image|}}}|3|2}}|{{#if:{{{image|}}}|2|1}}}}
+
+|nogroups = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}|false|true}}
+
+|bodystyle = {{{style|}}}{{{bodystyle|}}}
+|titlestyle = {{{titlestyle|}}}
+|abovestyle = background:#ddddff;{{{abovestyle|}}}
+|belowstyle = background:#ddddff;{{{belowstyle|}}}
+
+|above = {{{above|}}}
+|below = {{{below|}}}
+
+|gs = white-space:nowrap;background:#ddddff;text-align:right;{{{groupstyle|}}}
+|os = width:100%;font-size:95%;{{{liststyle|}}}{{{oddstyle|}}}
+|es = width:100%;font-size:95%;background:#f7f7f7;{{{liststyle|}}}{{{evenstyle|}}}
+
+|g1 = {{{group1|}}}
+|g2 = {{{group2|}}}
+|g3 = {{{group3|}}}
+|g4 = {{{group4|}}}
+|g5 = {{{group5|}}}
+|g6 = {{{group6|}}}
+|g7 = {{{group7|}}}
+|g8 = {{{group8|}}}
+|g9 = {{{group9|}}}
+|g10 = {{{group10|}}}
+|g11 = {{{group11|}}}
+|g12 = {{{group12|}}}
+|g13 = {{{group13|}}}
+|g14 = {{{group14|}}}
+|g15 = {{{group15|}}}
+|g16 = {{{group16|}}}
+|g17 = {{{group17|}}}
+|g18 = {{{group18|}}}
+|g19 = {{{group19|}}}
+|g20 = {{{group20|}}}
+
+|l1 = {{{body|}}}{{{list1|}}}{{{category|}}}
+|l2 = {{{list2|}}}
+|l3 = {{{list3|}}}
+|l4 = {{{list4|}}}
+|l5 = {{{list5|}}}
+|l6 = {{{list6|}}}
+|l7 = {{{list7|}}}
+|l8 = {{{list8|}}}
+|l9 = {{{list9|}}}
+|l10 = {{{list10|}}}
+|l11 = {{{list11|}}}
+|l12 = {{{list12|}}}
+|l13 = {{{list13|}}}
+|l14 = {{{list14|}}}
+|l15 = {{{list15|}}}
+|l16 = {{{list16|}}}
+|l17 = {{{list17|}}}
+|l18 = {{{list18|}}}
+|l19 = {{{list19|}}}
+|l20 = {{{list20|}}}
+
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Portal</title>
+    <id>1780010</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172639014</id>
+      <timestamp>2007-11-20T04:30:10Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>CSS class portal</comment>
+      <text xml:space="preserve">&lt;div class=&quot;{{#ifeq:{{{left|no}}}|yes|tleft|tright}} portal&quot; style=&quot;border:solid #aaa 1px; background:#f9f9f9; margin:0.5em 0 0.5em 0.5em; font-size:85%;&quot;&gt;
+{| style=&quot;background:transparent;&quot; width={{{boxsize|{{{4|0}}}}}}
+| &lt;div style=&quot;position:relative; width:{{{size|{{{3|32}}}}}}px; height:28px; overflow:hidden&quot;&gt;&lt;div style=&quot;position:absolute; top:0px; left:0px; z-index:2;&quot;&gt; [[Image:{{{image|{{{2|Portal.svg}}}}}}|{{{size|{{{3|32}}}}}}x28px]]&lt;/div&gt;&lt;/div&gt;
+| '''''[[Portal:{{{name|{{{1|{{PAGENAME}}}}}}}}|{{{name|{{{1|{{PAGENAME}}}}}}}}{{#ifeq:{{{break|}}}|yes|&lt;br /&gt;|&amp;#32;}}Portal]]'''''
+|}&lt;/div&gt;&lt;noinclude&gt;
+{{documentation}}&lt;!--Please add any interwiki links etc on the /doc page, not here - thanks!--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172964235</id>
+      <timestamp>2007-11-21T19:45:44Z</timestamp>
+      <contributor>
+        <username>Trödel</username>
+        <id>171039</id>
+      </contributor>
+      <comment>use new template [[:Template:documentation]]</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; -webkit-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; -webkit-column-count:{{{1}}}; column-count:{{{1}}} }};&quot; |}}&gt;
+&lt;references /&gt;&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite journal</title>
+    <id>4740319</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>193730702</id>
+      <timestamp>2008-02-24T17:37:33Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>fix per editprotected</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite style=&quot;font-style:normal&quot;&gt;{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{authorlink|}}}
+    |[[{{{authorlink}}}|{{#if:
+      {{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}]]
+    |{{#if:{{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}
+  }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{coauthors|}}}
+    | &lt;nowiki&gt;;&lt;/nowiki&gt; {{{coauthors}}}
+  }}
+}}{{#if:{{{date|}}}
+  |&amp;#32;({{{date}}})
+  |{{#if:{{{year|}}}
+    |{{#if:{{{month|}}}
+      |&amp;#32;({{{month}}} {{{year}}})
+      |&amp;#32;({{{year}}})
+     }}
+   }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  | .
+}}{{#if:{{{author|}}}{{{last|}}}{{{year|}}}{{{date|}}}
+  | &amp;#32;
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if: {{{curly|}}}|“|&quot;}} 
+ }}{{#if:{{{url|}}}
+  |[{{{url}}} {{{title}}}]
+  |{{{title}}}
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if:{{{curly|}}}|”|&quot;}} 
+ }}{{#if:{{{language|}}} 
+  | &amp;#32;(in {{{language}}})
+}}{{#if:{{{format|}}}
+  | &amp;#32;({{{format}}})
+}}{{#if:{{{journal|}}}
+  |. ''{{{journal}}}''
+}}{{#if:{{{volume|}}}
+  |&amp;#32;{{{volume}}}
+}}{{#if:{{{issue|}}}
+  |&amp;#32;({{{issue}}})
+}}{{#if:{{{pages|}}}
+  |&lt;nowiki&gt;:&lt;/nowiki&gt; {{{pages}}}
+}}{{#if:{{{publisher|}}}
+  |.&amp;#32;{{#if:{{{location|}}} 
+    |{{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{#if:{{{doi|}}} 
+  |. [[Digital object identifier|doi]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{#if:{{{issn|}}}
+  |. [[International Standard Serial Number|ISSN]] [http://worldcat.org/issn/{{{issn}}} {{{issn}}}]
+}}{{#if:{{{pmid|}}}
+  |. PMID {{{pmid}}}
+}}{{#if:{{{bibcode|}}}
+  |. [[Bibcode]]:&amp;nbsp;[http://adsabs.harvard.edu/abs/{{{bibcode}}} {{{bibcode}}}]
+}}{{#if:{{{oclc|}}} 
+  |. [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{#if:{{{id|}}}
+  |. {{{id}}}
+}}{{#if:{{{accessdate|}}}
+  |. Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}
+}}{{#if:{{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}
+}}{{#if:{{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}
+}}{{#if:{{{laysummary|}}}
+  |. [{{{laysummary}}} Lay summary]{{#if: {{{laysource|}}}|&amp;nbsp;&amp;ndash;&amp;nbsp;''{{{laysource}}}''}}
+}}{{#if:{{{laydate|}}}
+  | &amp;#32;([[{{{laydate}}}]])
+}}.{{#if:{{{quote|}}}
+  | &amp;#32;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:journal}}&lt;!--                Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:journal
+  --&gt;&amp;rft.genre=article&lt;!--                                                     article: a document published in a journal. (genre could also be (the entire) journal, issue, conference, proceeding, preprint, or unknown)
+  --&gt;{{#if: {{{title|}}}     | &amp;rft.atitle={{urlencode:{{{title}}}}}     }}&lt;!-- Article title.
+  --&gt;{{#if: {{{journal|}}}   | &amp;rft.jtitle={{urlencode:{{{journal}}}}}   }}&lt;!-- Journal title. Use the most complete title available ... &quot;journal of the american medical association&quot;
+  --&gt;{{#if: {{{date|}}} 
+       | &amp;rft.date={{urlencode:{{{date}}}}}
+       | {{#if: {{{year|}}}  | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. (ISO 8601)
+  --&gt;{{#if: {{{volume|}}}    | &amp;rft.volume={{urlencode:{{{volume}}}}}    }}&lt;!-- Volume designation usually expressed as a number but could be roman numerals or non-numeric, i.e. &quot;124&quot;, or &quot;VI&quot;.
+  --&gt;{{#if: {{{issue|}}}     | &amp;rft.issue={{urlencode:{{{issue}}}}}      }}&lt;!-- This is the designation of the published issue of a journal ... could be non-numeric
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, i.e, &quot;Fred James&quot;
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}      }}&lt;!-- Start and end pages, i.e. &quot;53-58&quot;. This can also be used for an unstructured pagination statement when data relating to pagination cannot be interpreted as a start-end pair, i.e. &quot;A7, C4-9&quot;, &quot;1-3,6&quot;.
+  --&gt;{{#if: {{{issn|}}}      | &amp;rft.issn={{urlencode:{{{issn}}}}}        }}&lt;!-- International Standard Serials Number (ISSN). The issn may contain a hyphen, i.e. &quot;1041-5653&quot;
+  --&gt;{{#if: {{{pmid|}}}      | &amp;rft_id=info:pmid/{{urlencode:{{{pmid}}}}}}}&lt;!-- PubMed ID
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- DOI
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- URL
+  --&gt;&quot;&gt;&amp;#8202;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+&lt;!--
+    PLEASE DO NOT ADD DOCUMENTATION/CATEGORIES/INTERWIKIS HERE
+--&gt;
+{{pp-template|small=yes}}
+{{Template doc}}
+&lt;!--
+    MAKE ADDITIONS TO THE /doc SUBPAGE INSTEAD, THANKS
+--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Flagicon</title>
+    <id>2075417</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176578634</id>
+      <timestamp>2007-12-08T15:48:27Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>default to [[Template:Country data]] if no parameter specified, remove all whitespace to reduce template size a few bytes (to minimum)</comment>
+      <text xml:space="preserve">{{country data {{{1|}}}|country flagicon2|variant={{{variant|{{{2|}}}}}}|size={{{size|}}}}}&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag/0</title>
+    <id>13532720</id>
+    <revision>
+      <id>179607127</id>
+      <timestamp>2007-12-22T16:32:44Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Ordomag/0: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;5-({{{1}}}&lt;100000)-({{{1}}}&lt;10000)-({{{1}}}&lt;1000)-({{{1}}}&lt;100)-({{{1}}}&lt;10)&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Microsoft</title>
+    <id>3452631</id>
+    <revision>
+      <id>194736690</id>
+      <timestamp>2008-02-28T20:53:13Z</timestamp>
+      <contributor>
+        <username>Titan602</username>
+        <id>2800022</id>
+      </contributor>
+      <comment>We now know that the telescope is part of MS Research</comment>
+      <text xml:space="preserve">{{Navbox
+|name    = Microsoft
+|title   = [[Microsoft]]
+|state = {{{state|&lt;includeonly&gt;autocollapse&lt;/includeonly&gt;&lt;noinclude&gt;expanded&lt;/noinclude&gt;}}}
+|groupstyle = line-height:2em;
+|liststyle  = line-height:1.4em;
+
+|group1 = [[List of Microsoft software applications|Desktop software]]
+|list1  = {{nowrap|[[Microsoft Windows|Windows]] ([[List of Microsoft Windows components|components]])}}{{·}} [[Microsoft Office|Office]]{{·}} [[Microsoft Visual Studio|Visual Studio]]{{·}} [[Microsoft Expression Studio|Expression]]{{·}} [[Microsoft Dynamics|Dynamics]]{{·}} [[Microsoft Money|Money]]{{·}} [[Encarta]]{{·}} [[Microsoft Student|Student]]{{·}} [[Microsoft Works|Works]]{{·}} [[Microsoft MapPoint|MapPoint]]{{·}} [[Microsoft Virtual PC|Virtual PC]]
+
+|group2 = [[Microsoft Servers|Server software]]
+|list2  = [[Windows Server]]{{·}} [[Microsoft SQL Server|SQL Server]]{{·}} [[Internet Information Services|IIS]]{{·}} [[Microsoft Exchange Server|Exchange]]{{·}} [[Microsoft BizTalk Server|BizTalk]]{{·}} [[Microsoft Commerce Server|Commerce]]{{·}} [[ISA Server]]{{·}} [[Microsoft System Center|System Center]]{{·}} [[Windows Home Server|Home Server]]{{·}} [[SharePoint]]{{·}} [[Microsoft Office Communications Server|OCS]]{{·}} [[Terminal Services]]
+
+|group3 = [[List of Microsoft Windows components|Technology]]
+|list3  = [[Active Directory]]{{·}} [[DirectX]]{{·}} [[Microsoft .NET|.NET]]{{·}} [[Windows Media]]{{·}} [[Microsoft PlaysForSure|PlaysForSure]]{{·}} [[Microsoft Application Virtualization|Application Virtualization]]{{·}} [[Hyper-V]] {{·}} [[Silverlight]]{{·}} [[Windows Mobile]]{{·}} [[Windows Embedded]]
+
+|group4 = Web properties
+|list4  = [[Windows Live]]{{·}} [[Microsoft Office Live|Office Live]]{{·}} [[MSNBC]]{{·}} [[msnbc.com]]{{·}} [[ninemsn]]{{·}} [[MSN]]{{·}} [[Hotmail]]{{·}} [[Windows Live Messenger|Live Messenger]]{{·}} [[Windows Live Spaces|Spaces]]{{·}} [[MSN Groups|Groups]]{{·}} [[Windows Live ID|Live ID]]{{·}} [[Microsoft Ignition|Ignition]]{{·}} [[CodePlex]]{{·}} [[Microsoft HealthVault|HealthVault]]
+
+|group5 = Gaming
+|list5  = [[Microsoft Game Studios]]{{·}} [[MSN Games|Zone]]{{·}} [[Microsoft XNA|XNA]]{{·}} [[Xbox]]{{·}} [[Xbox 360]]{{·}} {{nowrap|[[Xbox Live]] ([[Xbox Live Arcade|Arcade]]}}{{·}} [[Xbox Live Marketplace|Marketplace]]){{·}} {{nowrap|[[Games for Windows]] ([[Games for Windows - Live|LIVE]]}}{{·}} [[Tray and Play]]){{·}} [[Live Anywhere]]
+
+|group6 = Hardware
+|list6  = [[Microsoft Surface|Surface]]{{·}} {{nowrap|[[Zune]] ([[Zune 4, 8|4 / 8]]}}{{·}} [[Zune 30|30]]{{·}} [[Zune 80|80]]){{·}} [[MSN TV]]{{·}} [[Microsoft Natural keyboard|Natural Keyboard]]{{·}} [[IntelliType|Keyboard]]{{·}} [[IntelliPoint|Mouse]]{{·}} [[LifeCam]]{{·}} [[LifeChat]]{{·}} [[Microsoft SideWinder|SideWinder]]{{·}} [[Ultra-Mobile PC]]{{·}} [[Microsoft Fingerprint Reader|Fingerprint]]{{·}} [[Digital Sound System 80|Audio System]]{{·}} [[Microsoft Cordless Phone System|Cordless Phone]]{{·}} [[Pocket PC]]{{·}} [[Microsoft RoundTable|RoundTable]]{{·}} [[Microsoft Response Point|Response Point]]
+
+|group7 = &lt;div style=&quot;line-height:1.1em;&quot;&gt;Education and&lt;br/&gt;recognition&lt;/div&gt;
+|list7  = [[Microsoft Certified Professional|MCP]]s{{·}} [[Microsoft Developer Network|MSDN]]{{·}} [[Microsoft Technet|Technet]]{{·}} [[MSDN Academic Alliance|MSDNAA]]{{·}} [[Microsoft Campus Agreement|MSCA]]{{·}} [[Microsoft Press]]{{·}} [[Microsoft Most Valuable Professional|Microsoft MVP]]{{·}} [[Microsoft Student Partners|Student Partners]]{{·}} [[Microsoft Research|Research]]{{·}} [[Studies related to Microsoft]]
+
+|group8 = Licensing
+|list8  = [[Client Access License]]{{·}} [[Shared Source]]{{·}} [[Microsoft Software Licensing and Protection Services|Licensing Services]]
+
+|group9 = Legal issues
+|list9  = [[United States v. Microsoft]]{{·}} [[European Union v. Microsoft]]
+
+|group10 = [[Board of directors]]
+|list10  = [[Steve Ballmer]]{{·}} [[James Cash, Jr.]]{{·}} [[Dina Dublon]]{{·}} [[Bill Gates]]{{·}} [[Raymond Gilmartin]]{{·}} [[Reed Hastings]]{{·}} [[David Marquardt]]{{·}} [[Charles Noski]]{{·}} [[Helmut Panke]]{{·}} [[Jon Shirley]]
+}}&lt;noinclude&gt;&lt;!--
+
+--&gt;{{Documentation, template|Template:Microsoft/doc}}
+{{/footer}} &lt;!-- interwikis and categories --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Lower</title>
+    <id>8871184</id>
+    <revision>
+      <id>133458331</id>
+      <timestamp>2007-05-25T17:41:44Z</timestamp>
+      <contributor>
+        <username>David Kernow</username>
+        <id>445578</id>
+      </contributor>
+      <minor/>
+      <comment>proportional units</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{2|}}} |&lt;!--then:(offset specified)--&gt;&lt;span style=&quot;position:relative; top:{{{1}}};&quot;&gt;{{{2|}}}&lt;/span&gt;|&lt;!--else:(offset not specified; use default)--&gt;&lt;span style=&quot;position:relative; top:0.6em;&quot;&gt;{{{1|}}}&lt;/span&gt;&lt;!--end #if:--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{/doc}}
+&lt;!--Please add interwiki links on the /doc page, not here - thanks!--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Profit</title>
+    <id>9319325</id>
+    <revision>
+      <id>123802311</id>
+      <timestamp>2007-04-18T13:24:27Z</timestamp>
+      <contributor>
+        <username>CBM</username>
+        <id>1108292</id>
+      </contributor>
+      <comment>use pp-template</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Increase]]
+{{pp-template|small=yes}}
+
+&lt;!--Categories--&gt;
+[[Category:Finance templates|Profit]]&lt;!--Please retain despite this page being a redirect; &quot;Profit&quot; makes more sense in a financial context. Thank you.--&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Plainlink</title>
+    <id>4651605</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>157527149</id>
+      <timestamp>2007-09-13T02:42:13Z</timestamp>
+      <contributor>
+        <username>Jreferee</username>
+        <id>2467184</id>
+      </contributor>
+      <comment>[[WP:UNDO|Undid]] revision 157526984 by [[Special:Contributions/Jreferee|Jreferee]] ([[User talk:Jreferee|talk]])</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span class=&quot;plainlinks&quot;&gt;[{{{1|{{{url|}}}}}}]&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag/+</title>
+    <id>11656942</id>
+    <revision>
+      <id>179607036</id>
+      <timestamp>2007-12-22T16:32:00Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Ordomag/+: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{Ordomag/{{#expr:({{{1}}}&gt;=1000000)-(1&gt;{{{1}}})}}|{{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tnavbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>171324865</id>
+      <timestamp>2007-11-14T00:23:38Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&amp;nbsp;&lt;span class=&quot;noprint plainlinksneverexpand&quot; style=&quot;white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;|&lt;!--else:
+--&gt;&lt;div class=&quot;noprint plainlinksneverexpand&quot; style=&quot;background-color:transparent; padding:0; white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{mini|}}}{{{miniv|}}}{{{plain|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;|&lt;!--else:
+--&gt;This box:&amp;nbsp;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{miniv|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{viewplain|}}}|view|v}}&lt;/span&gt;]]|&lt;!--else:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[Template talk:{{{1}}}|&lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;Discussion about this template&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{ns:10}}:{{{1}}}|action=edit}} &lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;You can edit this template. Please use the preview button before saving.&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;&lt;!--
+--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+&lt;hr/&gt;&lt;center&gt;'''{{purge}}''' the Wikipedia cache of this template.&lt;hr/&gt;&lt;/center&gt;&lt;br/&gt;
+{{documentation}} 
+&lt;!--Note: Metadata (interwiki links, etc) for this template should be put on [[Template:Tnavbar/doc]]--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Link FA</title>
+    <id>2658806</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>162984175</id>
+      <timestamp>2007-10-08T00:54:54Z</timestamp>
+      <contributor>
+        <username>Trevor MacInnis</username>
+        <id>73333</id>
+      </contributor>
+      <minor/>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;span id=&quot;interwiki-{{{1}}}-fa&quot; /&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert</title>
+    <id>8387047</id>
+    <revision>
+      <id>177558670</id>
+      <timestamp>2007-12-13T01:08:56Z</timestamp>
+      <contributor>
+        <username>TomTheHand</username>
+        <id>165715</id>
+      </contributor>
+      <comment>updated code per Jimp</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{convert/{{{2}}}|{{{1}}}|{{#ifeq:{{#expr:{{{3|0}}}*0}}|0|0}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|r={{#ifeq:{{{sp}}}|us|er|re}}|d=L{{{lk|off}}}A{{{abbr|off}}}D{{{disp|b}}}S{{{adj|{{{sing|off}}}}}}|s={{{sigfig|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{esoteric}}
+{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Featured article</title>
+    <id>3851900</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>193674206</id>
+      <timestamp>2008-02-24T10:27:03Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>moving documentation to subpage</comment>
+      <text xml:space="preserve">&lt;div style=&quot;right:10px; display:none;&quot; class=&quot;metadata topicon&quot; id=&quot;featured-star&quot;&gt;
+&lt;imagemap&gt;
+Image:LinkFA-star.png|14px
+rect 0 0 14 14 [[Wikipedia:Featured articles|This is a featured article. Click here for more information.]]
+desc none
+&lt;/imagemap&gt;
+&lt;/div&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:DJIA</title>
+    <id>3533924</id>
+    <revision>
+      <id>193818182</id>
+      <timestamp>2008-02-25T00:39:12Z</timestamp>
+      <contributor>
+        <username>UnitedStatesian</username>
+        <id>3461395</id>
+      </contributor>
+      <comment>added</comment>
+      <text xml:space="preserve">{{Navbox
+|name = DJIA
+|title = {{flagicon|United States}} [[Dow Jones Industrial Average]] companies
+|titlestyle = background:lightsteelblue
+|groupstyle = background:lightsteelblue
+|group1 = Current stocks
+|list1 = [[3M]]{{·}}[[Alcoa]]{{·}}{{nowrap|[[American Express]]}}{{·}}{{nowrap|[[American International Group]]}}{{·}}[[AT&amp;T]]{{·}}{{nowrap|[[Bank of America]]}}{{·}}[[Boeing]]{{·}}[[Caterpillar Inc.|Caterpillar]]{{·}}{{nowrap|[[Chevron Corporation|Chevron]]}}{{·}}[[Citigroup]]{{·}}{{nowrap|[[The Coca-Cola Company]]}}{{·}}[[DuPont]]{{·}}[[ExxonMobil]]{{·}}{{nowrap|[[General Electric]]}}{{·}}{{nowrap|[[General Motors]]}}{{·}}[[Hewlett-Packard]]{{·}}{{nowrap|[[The Home Depot]]}}{{·}}[[Intel Corporation|Intel]]{{·}}[[IBM]]{{·}}[[Johnson &amp; Johnson]]{{·}}{{nowrap|[[JPMorgan Chase]]}}{{·}}
+[[McDonald's]]{{·}}[[Merck &amp; Co.]]{{·}}[[Microsoft]]{{·}}[[Pfizer]]{{·}}[[Procter &amp; Gamble]]{{·}}{{nowrap|[[United Technologies Corporation|United Technologies]]}}{{·}}[[Verizon Communications|Verizon]]{{·}}[[Wal-Mart]]{{·}}{{nowrap|[[The Walt Disney Company]]}}
+
+|group2 = Selected former stocks
+|list2 = [[Altria Group]]{{·}} [[American Telephone &amp; Telegraph]]{{·}} [[American Tobacco Company]]{{·}} [[Bethlehem Steel]]{{·}} [[Colorado Fuel and Iron]]{{·}} [[Eastman Kodak]]{{·}} [[General Foods]]{{·}} [[Goodyear Tire and Rubber Company]]{{·}} [[Honeywell]]{{·}} [[International Paper]]{{·}} [[Johns-Manville]]{{·}} [[Nash Motors]]{{·}} [[Navistar International]]{{·}} [[North American Company]]{{·}} [[Sears, Roebuck and Company|Sears Roebuck]]{{·}} [[Union Carbide]]{{·}} [[United States Rubber Company]]{{·}} [[F. W. Woolworth Company|Woolworth's]] 
+ 
+}}&lt;includeonly&gt;
+[[Category:Dow Jones Industrial Average]]
+&lt;/includeonly&gt;&lt;noinclude&gt;
+[[Category:Stock market indices templates|DJIA]]
+[[Category:United States navigational boxes|DJIA]]
+
+[[fr:Modèle:DJIA]]
+[[it:Template:Dow Jones Industrial Average]]
+[[ja:Template:ダウ平均株価]]
+[[pt:Predefinição:Dow Jones Industrial Average]]
+[[zh:Template:DJIA]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/LoffAonDbSoff</title>
+    <id>13731375</id>
+    <revision>
+      <id>192694420</id>
+      <timestamp>2008-02-20T00:54:48Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{formatnum:{{{1}}}}}&amp;nbsp;{{{u}}} ({{convert/{{#if:{{{2|}}}|{{{o}}}|{{{3}}}}}|{{{1}}}|{{{1}}}*{{{b}}}|{{#if:{{{2|}}}|{{{3|}}}|{{{4|}}}}}|{{{s|}}}|r={{{r}}}|j={{{j}}}|d=LoffAonSoff}})&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]] {{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

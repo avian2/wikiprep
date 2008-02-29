@@ -1,0 +1,2128 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Microsoft</title>
+    <id>19001</id>
+    <revision>
+      <id>194264655</id>
+      <timestamp>2008-02-26T21:50:28Z</timestamp>
+      <contributor>
+        <username>SchmuckyTheCat</username>
+        <id>31197</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted to revision 193632237 by [[Special:Contributions/Inclusivedisjunction|Inclusivedisjunction]]; spam spam spam. ([[WP:TW|TW]])</comment>
+      <text xml:space="preserve">
+	      {{Infobox_Company
+|company_name = Microsoft Corporation
+|company_logo = [[Image:Microsoft wordmark.svg|220px|]]
+|company_type = [[Public company|Public]] ({{nasdaq2|MSFT}})
+|foundation = [[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&lt;ref name="bbc-timeline"&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/business/5085630.stm|title=Bill Gates: A timeline|work=news.bbc.co.uk|publisher=[[BBC News]]| date=2006-06-15|accessdate=2007-08-15}}&lt;/ref&gt;
+|location_city = [[Redmond, Washington]]
+|location_country = [[United States]]
+|key_people = [[Bill Gates]], &lt;small&gt;[[Entrepreneur|Co-founder]] and [[Chairman#Types|Executive Chairman]][http://www.microsoft.com/presspass/exec/billg/bio.mspx]&lt;/small&gt;; &lt;br /&gt; [[Paul Allen]], &lt;small&gt;[[Entrepreneur|Co-founder]]&lt;/small&gt;;&lt;br /&gt; [[Steve Ballmer]], &lt;small&gt;[[Chief executive officer|CEO]]&lt;/small&gt;; &lt;br /&gt; [[Ray Ozzie]], &lt;small&gt;[[Software Architecture|Chief Software Architect]]&lt;/small&gt;
+|industry = [[Computer software]] &lt;br /&gt; [[Publishing]] &lt;br /&gt; [[Research and development]] &lt;br /&gt; [[Computer hardware]] &lt;br /&gt; [[Console game|Video games]]
+|products = [[Microsoft Windows]] &lt;br /&gt; [[Microsoft Office]] &lt;br /&gt; [[Microsoft Servers]] &lt;br /&gt; [[Microsoft Visual Studio|Developer Tools]] &lt;br /&gt; [[Microsoft Dynamics|Business Solutions]] &lt;br /&gt; [[Microsoft Game Studios|Games]] &amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp; [http://www.microsoft.com/games/] &lt;br /&gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;mkt=en-us] &lt;br /&gt; [[Windows Mobile]] &lt;br /&gt; [[Zune]][http://www.zune.net/en-US/]
+|revenue={{profit}} [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&lt;ref name="2007financials"&gt;{{cite web|author=MSFT Investor Relations|date=2007-07-19|url=http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx|title ="Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"|work=microsoft.com| publisher=Microsoft|accessdate=2007-08-15}}&lt;/ref&gt;
+|operating_income = {{profit}} US $18.52 billion (2007)&lt;ref name="2007financials" /&gt; 
+|net_income = {{profit}} US $14.06 billion (2007)&lt;ref name="2007financials" /&gt;
+|num_employees = 79,000 (2007)&lt;ref name="fastfacts"&gt;{{cite web|date=2007-08-01|url= http://www.microsoft.com/presspass/inside_ms.mspx|title="Fast Facts About Microsoft"|work=microsoft.com|publisher=Microsoft| accessdate=2007-08-15}}&lt;/ref&gt;
+|slogan = ''Your potential. Our passion.''
+|homepage = [http://www.microsoft.com/worldwide/ www.microsoft.com]
+}}
+
+'''Microsoft Corporation''' ({{nasdaq|MSFT}}) ({{hkex|4338}}), or often just '''MS''',&lt;ref&gt;{{cite news |author=David Armstrong |title=Special meaning for 'MS' |work=[[The Press]] |date=1998-07-28|page=23 |quote=MS, known to millions worldwide as the trademark for Bill Gates's Microsoft empire, has a dual meaning for retired Christchurch journalist John Brown.}}&lt;/ref&gt; is an [[United States|American]] [[multinational corporation|multinational]] [[computer]] technology [[corporation]] with 79,000 employees in 102 countries and global annual [[revenue]] of [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] as of 2007.&lt;ref name="2007financials" /&gt; It develops, manufactures, licenses and supports a wide range of [[computer software|software]] products for computing devices.&lt;ref name="2005annual"&gt;{{cite web | title= Microsoft Corporation Annual Report 2005 | url= http://www.microsoft.com/msft/ar05/downloads/MS_2005_AR.doc | publisher = Microsoft | format = doc | accessdate=2005-10-01}}&lt;/ref&gt;&lt;ref name="fastfacts" /&gt; Headquartered in [[Redmond, Washington]], [[United States|USA]], its best selling products are the [[Microsoft Windows]] [[operating system]] and the [[Microsoft Office]] suite of productivity software. These products have prominent positions in the [[desktop computer]] market, with [[market share]] estimates as high as 90% or more as of 2003 for Microsoft Office and 2006 for Microsoft Windows. One of [[Bill Gates]]' key visions is "to get a workstation running our software onto every desk and eventually in every home".&lt;ref&gt;Quote from ComputerWorld 1985 (7/22); there is as yet no documented use of this vision statement prior to 1985. Gates' official bio asserts that he was 'Guided by a belief that the computer would be a valuable tool on every office desktop and in every home'.&lt;/ref&gt;&lt;ref name="Bishop2004-09-23"&gt;{{cite news | url= http://blog.seattlepi.nwsource.com/microsoft/archives/003469.html | title= The rest of the motto | date= [[September 23]], [[2004]] | accessdate= 2007-01-22 | publisher= [[Seattle Post-Intelligencer]]| first= Todd | last= Bishop | work= Todd Bishop's Microsoft Blog}}&lt;/ref&gt;&lt;ref name="findingsoffact"&gt;{{cite web | author = Thomas Penfield Jackson, U.S. District Judge | url= http://www.usdoj.gov/atr/cases/f3800/msjudgex.htm | title= U.S. vs. Microsoft findings of fact | publisher = U.S. Department of Justice | date = [[1999-11-05]] | accessdate=2006-05-18}}&lt;/ref&gt;&lt;ref name="Fordahl2005-08-05"&gt;{{cite web | url=http://seattlepi.nwsource.com/business/235169_vistatest04.html | title=Beta version of Microsoft's Vista shows a lot of potential | publisher=Associated Press | author=Matthew Fordahl | date=[[2005-08-05]] | accessdate=2006-09-02}}&lt;/ref&gt;&lt;ref name="Wakabayashi2006-12-01"&gt;{{cite web | url=http://in.tech.yahoo.com/061130/137/69vp5.html | title=Microsoft launches Vista version of Windows | publisher=Reuters | author=Daisuke Wakabayashi | date=[[2006-12-01]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name="Kanellos2006-01-18"&gt;{{cite web | url=http://news.com.com/PC+market+surged+in+2005,+will+settle+in+2006/2100-1003_3-6028454.html | title=PC market surged in 2005, will settle in 2006 | author=Michael Kanellos | publisher=CNET News.com | date=[[2006-01-18]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name="Bishop2003-10-20"&gt;{{cite web | url=http://seattlepi.nwsource.com/business/144528_msftoffice20.html | title=Microsoft unveils Office 2003 | publisher=Seattle Post-Intelligencer Reporter | author=Todd Bishop | date=[[2003-10-20]] | accessdate=2007-07-11}}&lt;/ref&gt;&lt;ref name="Thibodeau2002-05-02"&gt;{{cite web|url=http://www.pcworld.com/article/id,98003-page,1/article.html|title=Can StarOffice Steal Users From Microsoft?|publisher=PC World|author=Patrick Thibodeau|date=[[2002-05-02]]|accessdate=2007-07-11}}&lt;/ref&gt;
+
+Founded to develop and sell [[BASIC programming language|BASIC]] [[interpreter (computer software)|interpreters]] for the [[Altair 8800]], Microsoft rose to dominate the [[home computer]] operating system market with [[MS-DOS]] in the mid-1980s. The company released an [[IPO|initial public offering (IPO)]] in the [[stock market]], which, due to the ensuing rise of the stock price, has made four [[billionaires]] and an estimated 12,000 [[millionaires]] from Microsoft employees.&lt;ref name="Chapman"&gt;Chapman, Merrill R., ''In search of stupidity: over 20 years of high-tech marketing disasters'' (2nd Edition), Apress, ISBN 1-59059-721-4&lt;/ref&gt;&lt;ref name="stockrich"&gt;{{cite news | url=http://www.nytimes.com/2005/05/29/business/yourmoney/29millionaire.html?ex=1275019200&amp;en=de3d71cbbb7e06f8&amp;ei=5090&amp;partner=rssuserland&amp;emc=rss | title=The Microsoft Millionaires Come of Age | author= Julie Bick | date=[[2005-05-29]] | publisher= [[The New York Times]] | accessdate=2006-07-03}}&lt;/ref&gt;&lt;ref name="MVP"&gt;{{cite web | url=http://www.boston.com/business/globe/articles/2005/06/13/somehow_usenet_lumbers_on/ | title=Somehow, Usenet lumbers on | author=Hiawatha Bray | date=[[2005-06-13]] | accessdate=2006-07-03 | publisher=[[The Boston Globe]]}}&lt;br/&gt;* {{cite web | url= http://mvp.support.microsoft.com/mvpfaqs | title= Microsoft Frequently Asked Questions | publisher = Microsoft (Most Valued Professional) | accessdate=2006-07-01}}&lt;/ref&gt; Throughout its history the company has been the target of criticism for various reasons, including [[monopoly|monopolistic]] business practices—both the [[United States Department of Justice|U.S. Justice Department]] and the [[European Commission]], among others, brought Microsoft to court for [[antitrust]] violations and software bundling.&lt;ref name="usvms"&gt;{{cite web | title= United States v. Microsoft | url= http://www.usdoj.gov/atr/cases/ms_index.htm | publisher = U.S. Department of Justice | accessdate= August 5 | accessyear=2005 }} homepage at the [[United States Department of Justice]]&lt;/ref&gt;&lt;ref name="Europa"&gt;http://europa.eu/rapid/pressReleasesAction.do?reference=IP/04/382&amp;format=HTML&amp;aged=1&amp;language=EN&amp;guiLanguage=en&lt;/ref&gt; 
+
+Microsoft has footholds in other markets besides operating systems and office suites, with assets such as the [[MSNBC]] [[cable television]] network, the [[MSN]] [[Web portal|Internet portal]], and the [[Encarta|Microsoft Encarta]] multimedia encyclopedia. The company also markets both [[computer hardware]] products such as the [[IntelliMouse|Microsoft mouse]] and [[home entertainment]] products such as the [[Xbox]], [[Xbox 360]], [[Zune]] and [[MSN TV]].&lt;ref name="2005annual" /&gt; Known for what is generally described as a developer-centric business culture, Microsoft has historically given customer support over [[Usenet]] newsgroups and the [[World Wide Web]], and awards [[Microsoft MVP]] status to volunteers who are deemed helpful in assisting the company's customers.&lt;ref name="bb"&gt;{{cite journal | first=John | last=Charles | title= Indecent pro	      {{Infobox_Company
+|company_name = Microsoft Corporation
+|company_logo = [[Image:Microsoft logo.svg|200px|]]
+|company_type = [[Public company|Public]] ({{nasdaq2|MSFT}})
+|foundation = [[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&amp;lt;ref name=&amp;quot;bbc-timeline&amp;quot;&amp;gt;{{cite news| url=http://news.bbc.co.uk/2/hi/business/5085630.stm|title=Bill Gates: A timeline|work=news.bbc.co.uk|publisher=[[BBC News]]| date=2006-06-15|accessdate=2007-08-15}}&amp;lt;/ref&amp;gt;
+|location_city = [[Redmond, Washington]]
+|location_country = [[United States]]
+|key_people = [[Bill Gates]], &amp;lt;small&amp;gt;[[Entrepreneur|Co-founder]] and [[Chairman#Types|Executive Chairman]][http://www.microsoft.com/presspass/exec/billg/bio.mspx]&amp;lt;/small&amp;gt;; &amp;lt;br /&amp;gt; [[Paul Allen]], &amp;lt;small&amp;gt;[[Entrepreneur|Co-founder]]&amp;lt;/small&amp;gt;;&amp;lt;br /&amp;gt; [[Steve Ballmer]], &amp;lt;small&amp;gt;[[Chief executive officer|CEO]]&amp;lt;/small&amp;gt;; &amp;lt;br /&amp;gt; [[Ray Ozzie]], &amp;lt;small&amp;gt;[[Software Architecture|Chief Software Architect]]&amp;lt;/small&amp;gt;
+|industry = [[Computer software]] &amp;lt;br /&amp;gt; [[Publishing]] &amp;lt;br /&amp;gt; [[Research and development]] &amp;lt;br /&amp;gt; [[Computer hardware]] &amp;lt;br /&amp;gt; [[Console game|Video games]]
+|products = [[Microsoft Windows]] &amp;lt;br /&amp;gt; [[Microsoft Office]] &amp;lt;br /&amp;gt; [[Microsoft Servers]] &amp;lt;br /&amp;gt; [[Microsoft Visual Studio|Developer Tools]] &amp;lt;br /&amp;gt; [[Microsoft Dynamics|Business Solutions]] &amp;lt;br /&amp;gt; [[Microsoft Game Studios|Games]] &amp;amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp;amp; [http://www.microsoft.com/games/] &amp;lt;br /&amp;gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;amp;mkt=en-us] &amp;lt;br /&amp;gt; [[Windows Mobile]] &amp;lt;br /&amp;gt; [[Zune]][http://www.zune.net/en-US/]
+|revenue={{profit}} [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&amp;lt;ref name=&amp;quot;2007financials&amp;quot;&amp;gt;{{cite web|author=MSFT Investor Relations|date=2007-07-19|url=http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx|title =&amp;quot;Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion&amp;quot;|work=microsoft.com| publisher=Microsoft|accessdate=2007-08-15}}&amp;lt;/ref&amp;gt;
+|operating_income = {{profit}} US $18.52 billion (2007)&amp;lt;ref name=&amp;quot;2007financials&amp;quot; /&amp;gt; 
+|net_income = {{profit}} US $14.06 billion (2007)&amp;lt;ref name=&amp;quot;2007financials&amp;quot; /&amp;gt;
+|num_employees = 79,000 (2007)&amp;lt;ref name=&amp;quot;fastfacts&amp;quot;&amp;gt;{{cite web|date=2007-08-01|url= http://www.microsoft.com/presspass/inside_ms.mspx|title=&amp;quot;Fast Facts About Microsoft&amp;quot;|work=microsoft.com|publisher=Microsoft| accessdate=2007-08-15}}&amp;lt;/ref&amp;gt;
+|slogan = ''Your potential. Our passion.''
+|homepage = [http://www.microsoft.com/worldwide/ www.microsoft.com]
+}}
+</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox/core</title>
+    <id>12774496</id>
+    <revision>
+      <id>190914505</id>
+      <timestamp>2008-02-12T15:45:04Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Fix for double inclusion of &quot;background:white;&quot;</comment>
+      <text xml:space="preserve">&lt;table class=&quot;navbox {{#ifeq:{{{state|}}}|plain||collapsible {{{state|autocollapse}}}}} nowraplinks&quot; style=&quot;margin:auto; {{#ifeq:{{{nogroups|}}}|true|{{#if:{{{l1|}}}|{{#if:{{{l2|}}}|background:white;}}}}|background:white;}} {{{bodystyle|}}}&quot;&gt;&lt;!--
+
+---Titlebar---
+--&gt;&lt;tr&gt;&lt;th colspan=&quot;{{{span|1}}}&quot; style=&quot;text-align:center;width:100%;{{{titlestyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#ifeq:{{{navbar|}}}|plain||&lt;div style=&quot;float:left; width:6em; text-align:left;&quot;&gt;{{Tnavbar| {{{name&lt;noinclude&gt;|Navbox&lt;/noinclude&gt;}}}|fontstyle={{{titlestyle|}}};border:none;|mini=1}}&lt;/div&gt;}}&lt;span style=&quot;font-size:110%;&quot;&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;!--
+
+---Above (optional)---
+--&gt;{{#if:{{{above|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{abovestyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{above|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---First group and image(s)---
+--&gt;{{#if:{{{l1|}}}|&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|{{#ifeq:{{{nogroups|}}}|true|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-right:7px; width:0%;&quot;&gt;{{{imageleft}}}&lt;/td&gt;}}}}&lt;!--
+
+--&gt;{{#if:{{{g1|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g1|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g1|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g1|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l1|}}}&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-left:7px; width:0%;&quot;&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+---Remaining groups---
+--&gt;{{#if:{{{l2|}}}|&lt;tr&gt;{{#if:{{{g2|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g2|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g2|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g2|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l2|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l3|}}}|&lt;tr&gt;{{#if:{{{g3|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g3|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g3|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g3|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l3|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l4|}}}|&lt;tr&gt;{{#if:{{{g4|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g4|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g4|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g4|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l4|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l5|}}}|&lt;tr&gt;{{#if:{{{g5|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g5|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g5|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g5|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l5|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l6|}}}|&lt;tr&gt;{{#if:{{{g6|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g6|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g6|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g6|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l6|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l7|}}}|&lt;tr&gt;{{#if:{{{g7|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g7|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g7|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g7|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l7|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l8|}}}|&lt;tr&gt;{{#if:{{{g8|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g8|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g8|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g8|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l8|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l9|}}}|&lt;tr&gt;{{#if:{{{g9|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g9|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g9|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g9|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l9|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l10|}}}|&lt;tr&gt;{{#if:{{{g10|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g10|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g10|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g10|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l10|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l11|}}}|&lt;tr&gt;{{#if:{{{g11|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g11|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g11|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g11|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l11|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l12|}}}|&lt;tr&gt;{{#if:{{{g12|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g12|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g12|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g12|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l12|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l13|}}}|&lt;tr&gt;{{#if:{{{g13|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g13|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g13|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g13|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l13|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l14|}}}|&lt;tr&gt;{{#if:{{{g14|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g14|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g14|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g14|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l14|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l15|}}}|&lt;tr&gt;{{#if:{{{g15|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g15|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g15|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g15|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l15|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l16|}}}|&lt;tr&gt;{{#if:{{{g16|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g16|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g16|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g16|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l16|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l17|}}}|&lt;tr&gt;{{#if:{{{g17|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g17|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g17|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g17|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l17|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l18|}}}|&lt;tr&gt;{{#if:{{{g18|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g18|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g18|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g18|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l18|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l19|}}}|&lt;tr&gt;{{#if:{{{g19|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g19|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g19|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g19|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l19|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l20|}}}|&lt;tr&gt;{{#if:{{{g20|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g20|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g20|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g20|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l20|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---Below (optional)---
+--&gt;{{#if:{{{below|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{belowstyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{below|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;&lt;/table&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/+</title>
+    <id>13373928</id>
+    <revision>
+      <id>193154131</id>
+      <timestamp>2008-02-21T23:54:01Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#ifeq:{{#expr:{{{3}}}*0}}|0|{{{3}}}|{{#expr:{{{1}}}round{{{2}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>173220873</id>
+      <timestamp>2007-11-23T04:02:39Z</timestamp>
+      <contributor>
+        <username>Coren</username>
+        <id>12013</id>
+      </contributor>
+      <comment>As requested on the talk page; fix for wikilinks of dates</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag</title>
+    <id>11656899</id>
+    <revision>
+      <id>192780947</id>
+      <timestamp>2008-02-20T11:45:13Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>{{[[template:documentation|documentation]]}}</comment>
+      <text xml:space="preserve">{{Ordomag/+|{{#ifexpr:{{{1}}}&lt;0|-}}{{{1}}}}}&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap</title>
+    <id>1627975</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>178534669</id>
+      <timestamp>2007-12-17T17:23:07Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>shorten per talk</comment>
+      <text xml:space="preserve">&lt;span style=&quot;white-space:nowrap&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;!--interwikis/categories go inside doc--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ambox</title>
+    <id>13179742</id>
+    <revision>
+      <id>170296614</id>
+      <timestamp>2007-11-09T10:07:17Z</timestamp>
+      <contributor>
+        <username>David Levy</username>
+        <id>197557</id>
+      </contributor>
+      <comment>Reverted.  Apart from making the icon smaller and switching to a hue that doesn't match the template as well, what did that accomplish?</comment>
+      <text xml:space="preserve">&lt;table style=&quot;{{{style|}}}&quot; class=&quot;metadata plainlinks ambox {{#switch:{{{type|}}}
+  | serious  = ambox-serious
+  | content  = ambox-content
+  | style    = ambox-style
+  | merge    = ambox-merge
+  | notice   = ambox-notice
+  | #default = ambox-notice
+}}&quot;&gt;
+&lt;tr&gt;
+&lt;td class=&quot;ambox-image&quot;&gt;
+{{#ifeq:{{{image}}}|none
+  | &lt;!-- no image cell; empty cell necessary for text cell to have 100% width --&gt;
+  | &lt;div style=&quot;width:52px;&quot;&gt; {{#switch:{{{image|{{{type|}}}}}}
+    | serious  = [[Image:Stop hand nuvola.svg|40px]]
+    | content  = [[Image:Emblem-important.svg|40px]]
+    | style    = [[Image:Broom icon.svg|40px]]
+    | merge    = [[Image:Merge-split-transwiki default.svg]]
+    | notice   = [[Image:Info non-talk.png|40px]]
+    | blank    = [[Image:No image.svg]]
+    | #default = {{{image|[[Image:Info non-talk.png|40px]]}}}
+  }}&lt;/div&gt;
+}}&lt;/td&gt;
+&lt;td class=&quot;ambox-text&quot;&gt;{{{text}}}&lt;/td&gt;
+{{#if:{{{imageright|}}}|
+  &lt;td class=&quot;ambox-imageright&quot;&gt;&lt;div style=&quot;width:52px;&quot;&gt; {{{imageright}}} &lt;/div&gt;&lt;/td&gt;
+}}
+&lt;/tr&gt;
+&lt;/table&gt;&lt;noinclude&gt;
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-semi-protected</title>
+    <id>10226602</id>
+    <revision>
+      <id>165851443</id>
+      <timestamp>2007-10-20T15:23:37Z</timestamp>
+      <contributor>
+        <username>Centrx</username>
+        <id>37878</id>
+      </contributor>
+      <minor/>
+      <comment>The example doesn't need this text</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{pp-template|small=yes}}
+&lt;/noinclude&gt;&lt;includeonly&gt;{{pp-meta
+|smalltext={{#ifeq:{{{small|no}}}|yes|&lt;imagemap&gt;
+Image:Padlock-silver-medium.svg|20px
+default [[Wikipedia:Protection policy|This page has been semi-protected from editing.]]
+desc none
+&lt;/imagemap&gt;|}}
+|demospace={{{demospace|}}}
+|image=[[Image:Padlock-silver-medium.svg|45px| ]]
+|text='''Editing of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} by unregistered or newly registered users is currently [[Wikipedia:Semi-protection policy|disabled]]{{#if:{{{expiry|}}}|&amp;#32;until {{#time:[[F j]], [[Y]]|{{{expiry}}}}} &lt;small&gt;(UTC)&lt;/small&gt;}}{{#if:{{{reason|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;because&lt;nowiki&gt; &lt;/nowiki&gt;}}{{lcfirst:{{{reason|}}}}}.''' {{howtoeditsemi}}
+|categories={{{categories|[[Category:Semi-protected|{{PAGENAME}}]]{{#ifexpr:{{#if:{{{expiry|}}}|{{#time:U|today}}&gt;{{#time:U|{{{expiry}}}}}|0}}|[[Category:Protected pages with expiry expired|{{PAGENAME}}]]}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-semi-protected|categories=no|demospace=main|reason=of a reason}}
+
+----
+* Use {{tlx|{{lc:{{PAGENAME}}}}}} for the normal template
+* Use {{tlx|{{lc:{{PAGENAME}}}}|reason&amp;#61;text}} for applying a specific reason
+* Use {{tlx|{{lc:{{PAGENAME}}}}|expiry&amp;#61;{{#time:F j, Y|+1 month}}}} for a specific expiration date
+* Use {{tlx|{{lc:{{PAGENAME}}}}|small&amp;#61;yes}} for just an icon at the top
+* Use {{tlx|{{lc:{{PAGENAME}}}}|expiry&amp;#61;&lt;nowiki&gt;{{subst:#time:F j, Y|+7 days}}&lt;/nowiki&gt;}} for a specific expiration time period
+
+Note that ''(UTC)'' will be added automatically.
+
+This template is not to be used as a bluff. '''''Only use it on SEMI-PROTECTED pages.''''' Please note that only [[Wikipedia:Administrators|administrators]] can protect pages.
+
+{{protection templates}}
+{{in category|Semi-protected|Protected pages with expiry expired}}
+[[Category:Protection templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite book</title>
+    <id>4086375</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>192770787</id>
+      <timestamp>2008-02-20T10:14:32Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite class=&quot;book&quot; style=&quot;font-style:normal&quot; {{
+  #if: {{{ref|}}}
+  |{{#ifeq:{{{ref}}}|none||id=&quot;{{{ref}}}&quot;}}
+  |{{#if:{{{last|}}} | {{#if:{{{year|}}} | id=&quot;Reference-{{{last}}}-{{{year}}}&quot; }} }}
+}}&gt;{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{
+    #if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{ #if: {{{coauthors|}}} | &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{
+  #if: {{{origdate|}}}
+  | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origdate}}}]
+  | {{
+    #if: {{{origyear|}}}
+    | {{
+      #if: {{{origmonth|}}}
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origmonth}}} {{{origyear}}}]
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origyear}}}]
+    }}
+  }}
+}}{{
+  #if: {{{date|}}}
+  | &amp;#32;({{{date}}})
+  | {{
+    #if: {{{year|}}}
+    | {{
+      #if: {{{month|}}}
+      | &amp;#32;({{{month}}} {{{year}}})
+      | &amp;#32;({{{year}}})
+    }}
+  }}
+}}{{ #if: {{{author|}}}{{{last|}}} | .
+}}{{
+  #if: {{{chapter|}}}
+  | &amp;#32;&quot;{{
+    #if: {{{chapterurl|}}}
+    | [{{{chapterurl}}} {{{chapter}}}]
+    | {{{chapter}}}
+}}&quot;,}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;in {{{editor}}}: 
+}} &lt;i&gt;{{
+  #if: {{{url|}}} | [{{{url}}} {{{title}}}] | {{{title}}}
+}}&lt;/i&gt;{{
+  #if: {{{format|}}} | &amp;#32;({{{format}}})
+}}{{
+  #if: {{{others|}}} | , {{{others}}}
+}}{{
+  #if: {{{edition|}}} | , {{{edition}}}
+}}{{
+  #if: {{{series|}}} | , {{{series}}}
+}}{{
+  #if: {{{language|}}} | &amp;#32;(in {{{language}}})
+}}{{
+  #if: {{{publisher|}}}
+  | {{#if: {{{format|}}}{{{others|}}}{{{edition|}}} | ,&amp;#32; | .&amp;#32; }}{{ 
+    #if: {{{location|}}} 
+    | {{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{
+  #if: {{{pages|{{{page|}}}}}} | ,&amp;#32;{{{pages|{{{page}}}}}}
+}}{{
+  #if: {{{doi|}}} | . [[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{
+  #if: {{{id|}}} | . {{{id}}}
+}}{{
+  #if: {{{isbn|}}} | . ISBN {{{isbn}}}
+}}{{
+  #if: {{{oclc|}}} | . [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{
+  #if: {{{url|}}} | {{
+  #if: {{{accessdate|}}} | 
+  . Retrieved on [[{{{accessdate}}}]]
+  | {{
+    #if: {{{accessyear|}}}
+    | . Retrieved {{
+      #if: {{{accessmonth|}}}
+      | on [[{{{accessmonth}}} {{{accessyear}}}]]
+      | during [[{{{accessyear}}}]]
+  }}}}
+  }}
+}}.{{ #if: {{{quote|}}} | &amp;nbsp;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:book}}&lt;!--                   Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:book
+  --&gt;&amp;rft.genre=book&lt;!--                                                        book: a publication that is complete in one part or a designated finite number of parts, often identified with an ISBN.  (genre could also be bookitem, conference, proceeding, report, document, or unknown)
+  --&gt;&amp;rft.btitle={{urlencode:{{{title|}}}}}&lt;!--                                 The title of the book. This can also be expressed as title, for compatibility with version 0.1. &quot;moby dick or the white whale&quot;
+  --&gt;{{#if: {{{chapter|}}}   | &amp;rft.atitle={{urlencode:{{{chapter}}}}}   }}&lt;!-- Chapter title. Chapter title is included if it is a distinct title, e.g. &quot;The Push Westward.&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... e.g. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, e.g. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, e.g. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}&lt;!--
+  --&gt;{{#if: {{{year|}}}      | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. Book dates are assumed to be a single year. (or ISO 8601)
+  --&gt;{{#if: {{{edition|}}}   | &amp;rft.edition={{urlencode:{{{edition}}}}}  }}&lt;!-- Statement of the edition of the book. This will usually be a phrase, with or without numbers, but may be a single number, e.g. &quot;First edition&quot;, &quot;4th ed.&quot;
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.pub={{urlencode:{{{publisher}}}}}    }}&lt;!-- Publisher name. &quot;Harper and Row&quot;
+  --&gt;{{#if: {{{location|}}}  | &amp;rft.place={{urlencode:{{{location}}}}}   }}&lt;!-- Place of publication. &quot;New York&quot;
+  --&gt;{{#if: {{{pages|{{{page|}}}}}}     | &amp;rft.pages={{urlencode:{{{pages|{{{page}}}}}}}}      }}&lt;!-- Start and end pages for parts of a book, e.g. &quot;124-147&quot; ... This data element includes the OpenURL 0.1 definition of &quot;pages&quot;.
+  --&gt;{{#if: {{{series|}}}    | &amp;rft.series={{urlencode:{{{series}}}}}    }}&lt;!-- The title of a series in which the book or document was issued. There may also be an ISSN associated with the series.
+  --&gt;{{#if: {{{isbn|}}}      | &amp;rft.isbn={{{isbn}}}                      }}&lt;!-- International Standard Book Number (ISBN) ... i.e. &quot;057117678X&quot; but it may contain hyphens, e.g. &quot;1-878067-73-7&quot;
+  --&gt;{{#if: {{{oclc|}}}      | &amp;rft_id=info:oclcnum/{{{oclc}}}           }}&lt;!-- 
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- 
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- 
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sprotected2</title>
+    <id>7896691</id>
+    <restrictions>edit=autoconfirmed:move=sysop</restrictions>
+    <revision>
+      <id>158234288</id>
+      <timestamp>2007-09-16T08:02:52Z</timestamp>
+      <contributor>
+        <username>Wybot</username>
+        <id>712009</id>
+      </contributor>
+      <minor/>
+      <comment>robot  Adding: [[ko:틀:준보호2]], [[sk:Šablóna:Dlhodobo polozamknutá]]</comment>
+      <text xml:space="preserve">{{pp-semi-protected|small=yes}}&lt;noinclude&gt;
+
+'''Note: This template is not blank, see the top right corner of the protected page'''
+
+This template is normally used for pages that are semi-protected for longer periods of time, and in particular for [[Wikipedia:Biographies of living persons|BLPs]] (e.g., [[George W. Bush]]).
+
+This template categorizes pages into [[:Category:Semi-protected]]. For talk pages that are semi-protected, use [[Template:pp-semi-vandalism]].
+
+'''Adding this template to an article does not protect it.''' Protection can only be applied by [[Wikipedia:Administrators|administrators]], and can be requested at [[Wikipedia:Requests for page protection]].
+
+==See also==
+* {{tl|pp-semi-protected}}: the original semi-protection template
+* {{tl|pp-semi-vandalism}}: for talk pages that are semi-protected
+* {{tl|high-traffic}}
+
+[[Category:Protection templates|{{PAGENAME}}]]
+[[Category:Templates using ParserFunctions|{{PAGENAME}}]]
+[[Category:Title templates|{{PAGENAME}}]]
+
+[[cs:Šablona:Dlouhodobě polozamčeno]]
+[[ko:틀:준보호2]]
+[[sk:Šablóna:Dlhodobo polozamknutá]]
+[[th:แม่แบบ:กึ่งล็อก2]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country data United States</title>
+    <id>8953176</id>
+    <revision>
+      <id>177509884</id>
+      <timestamp>2007-12-12T21:05:46Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>remove unnecessary protection template already in [[Template:Country showdata]]  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{ {{{1&lt;noinclude&gt;|country showdata&lt;/noinclude&gt;}}}
+| alias = United States
+| flag alias = Flag of the United States.svg
+| alt attribute = Flag of the United States
+| flag alias-1776 = Grand Union Flag.svg
+| flag alias-1777 = US flag 13 stars – Betsy Ross.svg
+| flag alias-1795 = US flag 15 stars.svg
+| flag alias-1818 = US flag 20 stars.svg
+| flag alias-1819 = US flag 21 stars.svg
+| flag alias-1820 = US flag 23 stars.svg
+| flag alias-1822 = US flag 24 stars.svg
+| flag alias-1836 = US flag 25 stars.svg
+| flag alias-1837 = US flag 26 stars.svg
+| flag alias-1845 = US flag 27 stars.svg
+| flag alias-1846 = US flag 28 stars.svg
+| flag alias-1847 = US flag 29 stars.svg
+| flag alias-1848 = US flag 30 stars.svg
+| flag alias-1851 = US flag 31 stars.svg
+| flag alias-1858 = US flag 32 stars.svg
+| flag alias-1859 = US flag 33 stars.svg
+| flag alias-1861 = US flag 34 stars.svg
+| flag alias-1863 = US flag 35 stars.svg
+| flag alias-1865 = US flag 36 stars.svg
+| flag alias-1867 = US flag 37 stars.svg
+| flag alias-1877 = US flag 38 stars.svg
+| flag alias-1890 = US flag 43 stars.svg
+| flag alias-1891 = US flag 44 stars.svg
+| flag alias-1896 = US flag 45 stars.svg
+| flag alias-1908 = US flag 46 stars.svg
+| flag alias-1912 = US flag 48 stars.svg
+| flag alias-1959 = US flag 49 stars.svg
+| flag alias-air force = Flag of the United States Air Force.png
+| name alias-football = USA
+| link alias-football = United States {{{mw|men's}}} national soccer team
+| name alias-basketball = USA
+| link alias-basketball = United States {{{mw|men's}}} national basketball team
+| link alias-field hockey = United States {{{mw|men's}}} national field hockey team
+| link alias-ice hockey = United States national {{{mw|men's}}} ice hockey team
+| size = {{{size|}}}
+| name = {{{name|}}}
+| altlink = {{{altlink|}}}
+| altvar = {{{altvar|}}}
+| variant = {{{variant|}}}
+&lt;noinclude&gt;
+| var1 = 1912
+| var2 = 1959
+| redir1 = USA
+| redir2 = US
+| redir3 = United States of America
+| redir4 = U.S.
+&lt;/noinclude&gt;
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/mph</title>
+    <id>13752073</id>
+    <revision>
+      <id>170179746</id>
+      <timestamp>2007-11-08T21:25:47Z</timestamp>
+      <contributor>
+        <username>Detroiterbot</username>
+        <id>5478189</id>
+      </contributor>
+      <minor/>
+      <comment>adding category  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{convert/{{{d}}}|{{{1}}}|{{{2|}}}|{{{3|}}}|{{{4|}}}|s={{{s|}}}|r={{{r}}}
+|u=mph
+|n=mile per hour
+|h=mile-per-hour
+|l=miles per hour
+|t=miles per hour
+|o=km/h
+|b=0.44704
+|j=-0.349653616-{{{j|0}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sprotect2</title>
+    <id>8167142</id>
+    <revision>
+      <id>122621757</id>
+      <timestamp>2007-04-13T23:24:32Z</timestamp>
+      <contributor>
+        <username>Gurch</username>
+        <id>241822</id>
+      </contributor>
+      <minor/>
+      <comment>[[Category:Semi-protected redirects]]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Sprotected2]]
+
+[[Category:Semi-protected redirects]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nasdaq</title>
+    <id>1192333</id>
+    <revision>
+      <id>175631011</id>
+      <timestamp>2007-12-04T02:34:04Z</timestamp>
+      <contributor>
+        <username>Pegasus</username>
+        <id>295955</id>
+      </contributor>
+      <minor/>
+      <comment>category param</comment>
+      <text xml:space="preserve">&lt;onlyinclude&gt;[[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol={{{1}}}&amp;selected={{{1}}} {{{1}}}]&lt;includeonly&gt;{{{category|[[Category:Companies listed on NASDAQ]]}}}&lt;/includeonly&gt;&lt;/onlyinclude&gt;
+
+[[Category:Ticker symbol templates|Nasdaq]]
+
+[[fr:Modèle:Nasdaq]]
+[[ko:틀:Nasdaq]]
+[[ms:Templat:Nasdaq]]
+[[no:Mal:Nasdaq]]
+[[ro:Format:Nasdaq]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·</title>
+    <id>7599646</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>151123393</id>
+      <timestamp>2007-08-14T07:10:35Z</timestamp>
+      <contributor>
+        <username>TKD</username>
+        <id>636163</id>
+      </contributor>
+      <comment>probably safe to remove the nowrap if we're using &amp;nbsp; in the meantime</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;font-weight:bold;&quot;&gt;&amp;nbsp;·&lt;/span&gt; &lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nasdaq2</title>
+    <id>1199795</id>
+    <revision>
+      <id>141334039</id>
+      <timestamp>2007-06-29T05:44:04Z</timestamp>
+      <contributor>
+        <username>Rsocol</username>
+        <id>1657775</id>
+      </contributor>
+      <minor/>
+      <comment>link to romanian wiki</comment>
+      <text xml:space="preserve">[[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol={{{1}}}&amp;selected={{{1}}} {{{1}}}]&lt;noinclude&gt;
+[[Category:Ticker symbol templates|Nasdaq2]]
+[[ro:Format:Nasdaq2]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/0</title>
+    <id>13563842</id>
+    <revision>
+      <id>193153745</id>
+      <timestamp>2008-02-21T23:52:12Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:({{{1}}}/1{{{3}}})round{{{2}}}}}{{{3}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/00</title>
+    <id>13548946</id>
+    <revision>
+      <id>179606481</id>
+      <timestamp>2007-12-22T16:28:19Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/00: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;-({{{1}}}={{{1}}}round-5)-({{{1}}}={{{1}}}round-4)-({{{1}}}={{{1}}}round-3)-({{{1}}}={{{1}}}round-2)-({{{1}}}={{{1}}}round-1)&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Microsoft products</title>
+    <id>7497635</id>
+    <revision>
+      <id>82170079</id>
+      <timestamp>2006-10-18T08:14:44Z</timestamp>
+      <contributor>
+        <username>123wiki123</username>
+        <id>2475816</id>
+      </contributor>
+      <comment>moved [[Template:Microsoft products]] to [[Template:Microsoft]]: More logical naming</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Microsoft]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main article</title>
+    <id>1065736</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>97822231</id>
+      <timestamp>2007-01-01T23:46:01Z</timestamp>
+      <contributor>
+        <username>Ligulem</username>
+        <id>216352</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Main article: matching protection of target [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Main]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Increase</title>
+    <id>4197969</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>188946037</id>
+      <timestamp>2008-02-04T02:59:15Z</timestamp>
+      <contributor>
+        <username>Denelson83</username>
+        <id>23958</id>
+      </contributor>
+      <minor/>
+      <comment>Changing over to Unicode</comment>
+      <text xml:space="preserve">&lt;span style=&quot;color: #0c0; font-size: larger;&quot;&gt;▲&lt;/span&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{{{FULLPAGENAME}}/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite news</title>
+    <id>4321630</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176437851</id>
+      <timestamp>2007-12-07T20:50:54Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||&lt;div style=&quot;border:1px solid red; background-color:#ffdab9; display:table;&quot;&gt; 
+You must specify '''''archiveurl=''''' and '''''archivedate=''' when using {{tl|cite news}}. Available parameters:
+{{Cite news/doc/parameterlist}}
+&lt;/div&gt;{{
+    #if: {{NAMESPACE}}||
+      [[Category:Articles with broken citations]]
+    }}
+}}
+}}{{#if: {{{title|}}}
+  |{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{authorlink|}}}
+      | [[{{{authorlink}}}|{{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}]]
+      | {{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}
+    }}
+  }}{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{coauthors|}}} | &amp;#59;&amp;#32;{{{coauthors}}} }}.&amp;#32;
+  }}{{#if: {{{curly|}}}|“|&quot;
+  }}{{#if: {{{archiveurl|}}}
+    | [{{{archiveurl}}} {{{title}}}] 
+    | {{#if: {{{url|}}} 
+      | [{{{url}}} {{{title}}}] 
+      | {{{title}}}
+    }}
+  }}{{#if: {{{curly|}}}|”|&quot;}}{{#if: {{{format|}}} | &amp;#32;({{{format}}}) 
+    }}{{#if: {{{work|}}}
+    | , ''{{{work}}}''}}{{#if: {{{publisher|}}}
+    | , {{#if: {{{location|}}} |{{{location}}}:&amp;#32;}}{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    | , {{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}
+  }}{{#if: {{{pages|}}}
+    | , pp.&amp;nbsp;{{{pages}}}
+    |{{#if: {{{page|}}}
+      | , p.&amp;nbsp;{{{page}}}
+    }}
+  }}{{#if: {{{id|}}} 
+    | . {{{id}}}
+  }}{{#if: {{{accessdate|}}}  
+  | .&amp;#32;Retrieved on [[{{{accessdate}}}]]
+  }}.{{#if: {{{language|}}}
+  | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+  }}{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;&quot;{{{quote}}}&quot;
+  }}|Template error: argument '''title''' is required.}}&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:dc}}&lt;!--                     Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:dc
+  --&gt;&amp;rft.type=newspaperArticle&lt;!--                                             The nature or genre of the content of the resource.  (newspaperArticle chosen purely because it is recognized by Zotero.)
+  --&gt;&amp;rft.subject=News&lt;!--                                                      A topic of the content of the resource. Typically expressed as keywords, key phrases or classification codes...
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}       }}&lt;!-- First author's given name or names or initials... may contain multiple words and punctuation, i.e. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}         }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}           }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;&amp;rft.title={{urlencode:{{{title|}}}}}&lt;!--                                     A name given to the resource.
+  --&gt;{{#if: {{{url|}}}       | &amp;rft.identifier={{urlencode:{{{url}}}}}      }}&lt;!-- URL 
+  --&gt;{{#if: {{{format|}}}    | &amp;rft.format={{urlencode:{{{format}}}}}       }}&lt;!-- The physical or digital manifestation of the resource... may include the media-type or dimensions of the resource.
+  --&gt;{{#if: {{{work|}}}      | &amp;rft.source={{urlencode:{{{work}}}}}         }}&lt;!-- A Reference to a resource from which the present resource is derived. 
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.publisher={{urlencode:{{{publisher}}}}} }}&lt;!-- An entity responsible for making the resource available... person, an organization, or a service.
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}         }}&lt;!-- Start and end pages for parts (of a book), i.e. &quot;124-147&quot;
+  --&gt;{{#if: {{{page|}}}      | &amp;rft.spage={{urlencode:{{{page}}}}}         }}&lt;!-- Start page for parts (of a book), i.e. &quot;124&quot;
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}           }}&lt;!-- A date of an event in the lifecycle of the resource... typically the creation or availability of the resource. (ISO 8601)
+  --&gt;{{#if: {{{language|}}}  | &amp;rft.language={{urlencode:{{{language}}}}}   }}&lt;!-- A language of the intellectual content of the resource. Recommended best practice is to use RFC 3066... in conjunction with ISO639
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/LoffAonSoff</title>
+    <id>13726371</id>
+    <revision>
+      <id>192769353</id>
+      <timestamp>2008-02-20T10:01:16Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{convert/{{#if:{{{4|}}}|s}}{{#if:{{{3|}}}|p}}round|{{{1}}}|{{{2}}}/{{{b}}}|{{{3}}}|{{{4}}}|{{{j}}}}}&amp;nbsp;{{{u}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/round</title>
+    <id>13725624</id>
+    <revision>
+      <id>192765520</id>
+      <timestamp>2008-02-20T09:23:03Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{#ifexpr:{{{2}}}=0|0|{{formatnum:{{rnd|{{{2}}}|({{max/2|{{precision/+|1{{{1}}}}}+({{{5}}}-0.1989700043)round0|1-{{ordomag|{{{2}}}}}}})}}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Max/2</title>
+    <id>13505276</id>
+    <revision>
+      <id>179606829</id>
+      <timestamp>2007-12-22T16:30:28Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Max/2: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#ifexpr:{{{1}}}&lt;{{{2}}}|{{{2}}}|{{{1}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}2-parameter version&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Citations broken</title>
+    <id>9659311</id>
+    <revision>
+      <id>168406645</id>
+      <timestamp>2007-10-31T23:41:46Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <comment>/* Redorects */</comment>
+      <text xml:space="preserve">{{ambox
+| type  = content
+| image = [[Image:Text document with red question mark.svg|50px]]
+| text  = '''This {{{1|article or section}}} uses [[Wikipedia:Citing sources|citations]] that are either [[Dead link|broken]] or outdated.'''&lt;br /&gt;&lt;small&gt;This {{{1|article or section}}} uses citations that link to broken or outdated sources, and are deemed unreliable. Please {{plainlink|url={{SERVER}}{{localurl:{{PAGENAME}}|action=edit}} improve the article}} or discuss this issue on the [[{{TALKPAGENAME}}|talk page]]. [[Wikipedia:Footnotes#How to use|Help]] on using footnotes is available. {{#if:{{{date|}}}|This article has been tagged since '''{{{date}}}'''.}}&lt;/small&gt;
+}}&lt;includeonly&gt;{{#if:{{{date|}}}|{{{category|[[Category:Articles with broken or outdated citations from {{{date}}}]]}}}|{{{category|[[Category:Articles with broken or outdated citations]]}}}}}{{{category|[[Category:All articles with broken or outdated citations]]}}}&lt;/includeonly&gt;&lt;!-- End citations broken --&gt;&lt;noinclude&gt;
+
+
+This template may be placed at the top of an article, if the article's sourcing problems are severe, or at the top of the &quot;References&quot; section of the article if minor cleanup in this regard is needed.  In a long article, it can also be placed at the top of a prose section or passage in need of such cleanup, when the rest of the article is otherwise unaffected.
+
+This template will categorise tagged articles into [[:Category:All articles with broken or outdated citations]] and either [[:Category:Articles with broken or outdated citations]] or a monthly category like [[:Category:Articles with broken or outdated citations from {{CURRENTMONTHNAME}} {{CURRENTYEAR}}]], if a date is supplied.
+
+The simplest way to add this template to an article is to copy and paste {{tlx|citations broken|section|date&amp;#61;{{CURRENTMONTHNAME}} {{CURRENTYEAR}}}} at the top of the reference section in an article.
+
+* This [[WP:TM|template]] is a [[WP:SELF|self-reference]].
+* Please do not [[WP:SUB|subst:]] this template.
+
+==Redirects==
+*{{Tl|Citations Broken}}
+*{{Tl|Broken citations}}
+
+==See also==
+* [[Wikipedia:WikiProject Citation cleanup|WikiProject Citation cleanup]]
+* [[Wikipedia:Template messages/Sources of articles]]
+* [[Wikipedia:Template messages/Cleanup]]
+
+[[Category:Citation and verifiability maintenance templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main</title>
+    <id>1208356</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>172617823</id>
+      <timestamp>2007-11-20T02:17:26Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>Adding CSS class names</comment>
+      <text xml:space="preserve">:&lt;div class=&quot;noprint relarticle mainarticle&quot;&gt;''Main article{{#if:{{{2|}}}|s}}: [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&amp;#32;|&amp;#32;and&amp;#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, and [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}''{{#if:{{{11| }}}|&amp;#32; (too many parameters in &amp;#123;&amp;#123;[[Template:main|main]]&amp;#125;&amp;#125;)}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country flagicon2</title>
+    <id>2048255</id>
+    <revision>
+      <id>186844952</id>
+      <timestamp>2008-01-25T17:24:41Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>span icon image with CSS class; remove whitespace to reduce template size (even a few bytes helps for pages with hundreds of transclusions)</comment>
+      <text xml:space="preserve">&lt;span class=&quot;flagicon&quot;&gt;[[Image:{{#if:{{{variant|}}}|{{{flag alias-{{{variant}}}}}}|{{{flag alias}}}}}|{{#if:{{{size|}}}|{{{size}}}|22x20px}}|border|{{{alt attribute|Flag of {{{alias}}}}}}]]&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/km/h</title>
+    <id>13751947</id>
+    <revision>
+      <id>170177872</id>
+      <timestamp>2007-11-08T21:17:12Z</timestamp>
+      <contributor>
+        <username>Detroiterbot</username>
+        <id>5478189</id>
+      </contributor>
+      <minor/>
+      <comment>adding category  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{convert/{{{d}}}|{{{1}}}|{{{2|}}}|{{{3|}}}|{{{4|}}}|s={{{s|}}}|r={{{r}}}
+|u=km/h
+|n=kilomet{{{r}}} per hour
+|h=kilomet{{{r}}}-per-hour
+|l=kilomet{{{r}}}s per hour
+|t=kilometres per hour
+|o=mph
+|b=(5/18)
+|j=-0.556302501-{{{j|0}}}}}&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:IT giants</title>
+    <id>5362729</id>
+    <revision>
+      <id>194403890</id>
+      <timestamp>2008-02-27T12:59:24Z</timestamp>
+      <contributor>
+        <ip>192.171.3.126</ip>
+      </contributor>
+      <comment>LogicaCMG is now just Logica</comment>
+      <text xml:space="preserve">{{navbox
+| name    = IT giants
+| title   = Major [[computing]] companies
+&lt;includeonly&gt;| state   = {{{state|collapsed}}}&lt;/includeonly&gt;
+| groupstyle = vertical-align: middle;
+| group1  = [[Cellular network|Cellular hardware]]
+| list1   = [[High Tech Computer Corporation|HTC]]{{·}} [[Motorola]]{{·}} [[Nokia]]{{·}} [[Palm, Inc.|Palm]]{{·}} [[Qualcomm]]{{·}} [[Research In Motion|RIM]]{{·}} [[SAGEM]]{{·}} [[Sony Ericsson]]
+| group2  = [[Conglomerate (company)|Conglomerates]]
+| list2   = [[General Electric|GE]]{{·}} [[Hindustan Computers Limited|HCL]]{{·}} [[Hitachi, Ltd.|Hitachi]]{{·}} [[LG Electronics|LG]]{{·}} [[Matsushita Electric Industrial Co.|Matsushita]]{{·}} [[NCR Corporation|NCR]]{{·}} [[Philips]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Siemens AG|Siemens]]{{·}} [[Sony]]{{·}} [[Thomson SA|Thomson]]{{·}} [[Toshiba]]
+| group3  = [[Computer hardware]]
+| list3   = [[Acer Inc.|Acer]]{{·}} [[Asus]]{{·}} [[Dell]]{{·}} [[Fujitsu Siemens Computers|Fujitsu Siemens]]{{·}} [[Lenovo Group|Lenovo]]{{·}} [[Quanta Computer|Quanta]]
+| group4  = [[Computer network]]s
+| list4   = [[3Com]]{{·}} [[Alcatel-Lucent]]{{·}} [[Allied Telesis]]{{·}} [[Avaya]]{{·}} [[Cisco Systems|Cisco]]{{·}} [[Ericsson]]{{·}} [[Foundry Networks|Foundry]]{{·}} [[Huawei]]{{·}} [[Juniper Networks|Juniper]]{{·}} [[Nokia Siemens Networks|Nokia Siemens]]{{·}} [[Nortel]]{{·}} [[ZTE]]
+| group5  = [[Dot-com company|Dot-com]]/[[web service]]s
+| list5   = [[Amazon.com]]{{·}} [[AOL]]{{·}} [[eBay]]{{·}} [[Google]]{{·}} [[Windows Live|Microsoft]]{{·}} [[Yahoo!]]
+| group6  = [[Electronics manufacturing services|Electronics manufacturers]]
+| list6   = [[Celestica]]{{·}} [[Elcoteq]]{{·}} [[Flextronics]]{{·}} [[Foxconn]]{{·}} [[Jabil Circuit|Jabil]]{{·}} [[Kimball International|Kimball]]{{·}} [[Plexus Corporation|Plexus]]{{·}} [[Quanta Computer|Quanta]]{{·}} [[Sanmina-SCI Corporation|Sanmina-SCI]]{{·}} [[SMTC Corporation|SMTC]]{{·}} [[Solectron]]
+| group7  = [[Information technology|IT]] [[Information technology consulting|consulting]]
+| list7   = [[Accenture]]{{·}} [[Affiliated Computer Services|ACS]]{{·}} [[Atos Origin]]{{·}} [[Avanade]]{{·}} [[BearingPoint]]{{·}} [[Booz Allen Hamilton]]{{·}} [[BT Group|BT]]{{·}} [[Capgemini]]{{·}} [[CGI Group|CGI]]{{·}} [[Cognizant Technology Solutions|Cognizant]]{{·}} [[Computer Sciences Corporation|CSC]]{{·}} [[Deloitte Touche Tohmatsu|Deloitte.]]{{·}} [[Electronic Data Systems|EDS]]{{·}} [[First Data]]{{·}} [[Fujitsu Consulting|Fujitsu]]{{·}} [[Getronics]]{{·}} [[HCL Technologies|HCL Tech]]{{·}} [[HP Technology Solutions Group|HP TSG]]{{·}} [[IBM Global Services]]{{·}} [[i-flex Solutions|i-flex]]{{·}} [[Indra Sistemas|Indra]]{{·}} [[Infosys]]{{·}} [[Keane (company)|Keane]]{{·}} [[Logica]]{{·}} [[Orange Business Services]]{{·}} [[PA Consulting Group|PA]]{{·}} [[Perot Systems|Perot]]{{·}} [[Science Applications International Corporation|SAIC]]{{·}} [[Sapient (company)|Sapient]]{{·}} [[Satyam Computer Services Ltd.|Satyam]]{{·}} [[Tata Consultancy Services|TCS]]{{·}} [[TietoEnator]]{{·}} [[Titan Corp.|Titan]]{{·}} [[Unisys]]{{·}} [[Wipro Technologies|Wipro]]
+| group8  = [[Computer storage|Storage]]
+| list8   = [[EMC Corporation|EMC]]{{·}} [[Fujitsu]]{{·}} [[Maxtor]]{{·}} [[Network Appliance|NetApp]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Seagate Technology|Seagate]]{{·}} [[Hitachi Global Storage Technologies|Hitachi]]{{·}} [[Western Digital]]
+| group9  = [[Semiconductor]]s
+| list9   = [[Advanced Micro Devices|AMD]]{{·}} [[Broadcom]]{{·}} [[Elpida Memory|Elpida]]{{·}} [[Fairchild Semiconductor|Fairchild]]{{·}} [[Freescale Semiconductor|Freescale]]{{·}} [[Hynix]]{{·}} [[Infineon Technologies|Infineon]]{{·}} [[Intel Corporation|Intel]]{{·}} [[Micron Technology|Micron]]{{·}} [[National Semiconductor|National]]{{·}} [[Nvidia]]{{·}} [[NXP Semiconductors|NXP]]{{·}} [[Qimonda]]{{·}} [[Renesas Technology|Renesas]]{{·}} [[Rohm]]{{·}} [[Sharp Corporation|Sharp]]{{·}} [[STMicroelectronics]]{{·}} [[Texas Instruments|TI]]{{·}} [[TSMC]]{{·}} [[VIA Technologies|VIA]]
+| group10  = [[Computer software|Software]]
+| list10   = [[Adobe Systems|Adobe]]{{·}} [[CA, Inc.|CA]]{{·}} [[Electronic Arts|EA]]{{·}} [[Intuit]]{{·}} [[McAfee]]{{·}} [[Microsoft]]{{·}} [[Nintendo]]{{·}} [[Novell]]{{·}} [[Oracle Corporation|Oracle]]{{·}} [[Red Hat]]{{·}} [[SAP AG|SAP]]{{·}} [[Symantec]]
+| group11  = [[Telecommunication|Telecom]]
+| list11   = [[3 (telecommunications)|3]]{{·}} [[América Móvil]]{{·}} [[AT&amp;T]]{{·}} [[Bharti Airtel]]{{·}} [[Bharat Sanchar Nigam Limited|BSNL]]{{·}} [[BT Group|BT]]{{·}} [[Cablevision]]{{·}} [[Comcast]]{{·}} [[Deutsche Telekom]]{{·}} [[EarthLink]]{{·}} [[France Télécom]]{{·}} [[KT (telecommunication company)|KT]]{{·}} [[Nippon Telegraph and Telephone|NTT]]{{·}} [[Qwest]]{{·}} [[RCN Corporation|RCN]]{{·}} [[Rogers Communications|Rogers]]{{·}} [[SK Telecom]]{{·}} [[Sprint Nextel]]{{·}} [[Swisscom]]{{·}}  [[Telecom Italia]]{{·}} [[Telefónica]]{{·}} [[Telmex]]{{·}} [[Time Warner]]{{·}} [[Verizon Communications|Verizon]]{{·}} [[Virgin Media|Virgin]]{{·}} [[Vodafone]]
+| group12  = [[Vertical integration|Vertically integrated&lt;br /&gt;manufacturers]]
+| list12   = [[Apple Inc.|Apple]]{{·}} [[Hewlett-Packard|HP]]{{·}} [[IBM]]{{·}} [[NEC]]{{·}} [[Sun Microsystems|Sun]]
+}}&lt;noinclude&gt;[[Category:Computer company navigational boxes|{{PAGENAME}}]]
+[[fr:Modèle:Géants IT]]
+[[hu:Sablon:IT nagyok]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-meta</title>
+    <id>13371038</id>
+    <revision>
+      <id>191755055</id>
+      <timestamp>2008-02-16T00:13:10Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>missing td class</comment>
+      <text xml:space="preserve">{{#if:{{{smalltext|}}}
+| &lt;!--Smalltext--&gt;
+  &lt;div class=&quot;metadata plainlinks&quot; id=&quot;administrator&quot; style=&quot;position:absolute; z-index:100; right:55px; top:9px;&quot;&gt;{{{smalltext}}}
+  &lt;/div&gt;
+
+| &lt;!--No smalltext--&gt;
+  {{#switch:
+    {{lc:{{#if:{{{demospace|}}}
+    | {{{demospace}}}
+    | X{{NAMESPACE}}
+    }}}}
+  | main
+  | x = &lt;!--Main (article) space--&gt;
+    &lt;table class=&quot;ambox ambox-protection metadata plainlinks&quot;&gt;
+    &lt;tr&gt;
+    &lt;td class=&quot;ambox-image&quot;&gt;{{{image}}}
+    &lt;td class=&quot;ambox-text&quot;&gt;{{{text}}}
+    &lt;/table&gt;
+
+  | talk
+  | xtalk
+  | xuser talk
+  | ximage talk
+  | xtemplate talk
+  | xhelp talk
+  | xcategory talk = &lt;!--Any talk space--&gt;
+    &lt;table class=&quot;messagebox standard-talk metadata plainlinks&quot;&gt;
+    &lt;tr&gt;
+    &lt;td&gt;{{{image}}}
+    &lt;td&gt;{{{text}}}
+    &lt;/table&gt;
+
+  | #default = &lt;!--Other space--&gt;
+    &lt;table class=&quot;messagebox protected metadata plainlinks&quot; style=&quot;border:2px solid #99B; padding:0px; font-size:0.9em;&quot;&gt;
+    &lt;tr&gt;
+    &lt;td&gt;{{{image}}}
+    &lt;td&gt;{{{text}}}
+    &lt;/table&gt;
+
+  }}&lt;!--End switch--&gt;
+}}&lt;!--End if smalltext--&gt;&lt;includeonly&gt;{{#ifeq:{{{categories|no}}}|no||{{{categories|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd</title>
+    <id>13373859</id>
+    <revision>
+      <id>189233633</id>
+      <timestamp>2008-02-05T10:45:11Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>Moving documentation to subpage - reasin for protection doesn't apply to dicumentation</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{rnd/+|{{{1}}}|{{{2}}}|{{rnd/0{{#expr:{{{2}}}&gt;0}}|{{{1}}}|{{{2}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Hkex</title>
+    <id>1462795</id>
+    <revision>
+      <id>164212723</id>
+      <timestamp>2007-10-13T04:59:23Z</timestamp>
+      <contributor>
+        <ip>83.217.236.8</ip>
+      </contributor>
+      <comment>interwiki link added</comment>
+      <text xml:space="preserve">[[Hong Kong Stock Exchange|SEHK]]: [http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID={{{1}}}&amp;WidCoAbbName=&amp;Month=&amp;langcode=e {{{1}}}]&lt;includeonly&gt;[[Category:Companies listed on the Hong Kong Stock Exchange]]&lt;/includeonly&gt;&lt;noinclude&gt;[[Category:Ticker symbol templates|HKEx]]
+[[fi:Malline:Sehk]][[fr:Modèle:Sehk]][[zh:Template:hkex]][[hy:Կաղապար:Hkex]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Seealso</title>
+    <id>1866967</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>192767645</id>
+      <timestamp>2008-02-20T09:44:40Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>+ cat</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:See also]]
+[[Category:Protected redirects]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Seattle Corporations</title>
+    <id>8714950</id>
+    <revision>
+      <id>189597532</id>
+      <timestamp>2008-02-06T22:19:11Z</timestamp>
+      <contributor>
+        <username>Lukobe</username>
+        <id>10642</id>
+      </contributor>
+      <text xml:space="preserve">{{Navbox
+|name = Seattle Corporations
+|title = [[List of companies based in Seattle|Seattle-based Corporations]] &lt;small&gt;(within the [[Seattle metropolitan area]])&lt;/small&gt;
+|titlestyle = background:#ffc920;
+|list1 = 
+'''[[Seattle]]-based [[Fortune 500]] Corporations (by size)''':&lt;br /&gt;[[Washington Mutual]] • [[Amazon.com]] • [[Nordstrom]] • [[Starbucks]] • [[Safeco]]&lt;br /&gt;
+&lt;br /&gt;
+'''[[Seattle]]-based [[Fortune 1000]] Corporations (by size)''':&lt;br /&gt;Companies listed above, plus: [[Alaska Airlines]] • [[Expeditors International]] • [[Plum Creek Timber]]&lt;br /&gt;
+&lt;br /&gt;
+'''[[Puget Sound]]-based [[Fortune 1000]] Corporations (by size)''':&lt;br/&gt;Companies listed above, plus: [[Costco|Costco Wholesale]] • [[Microsoft]] • [[Weyerhaeuser]] • [[Paccar]] • [[Puget Sound Energy]]&lt;br /&gt;
+&lt;br /&gt;
+'''Major [[Seattle]]- and [[Puget Sound]]-based non-public or externally owned corporations''':&lt;br /&gt;[[Nintendo|Nintendo of America]] • [[R.E.I.]] • [[T-Mobile (USA)|T-Mobile USA]] • [[WestFarm Foods]]
+}}&lt;noinclude&gt;
+[[Category:Companies based in Seattle, Washington]]
+[[Category:Companies based in Washington]]
+[[Category:Seattle templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox Company</title>
+    <id>1192206</id>
+    <revision>
+      <id>187719436</id>
+      <timestamp>2008-01-29T16:57:40Z</timestamp>
+      <contributor>
+        <username>Geniac</username>
+        <id>1839933</id>
+      </contributor>
+      <minor/>
+      <comment>removed unwanted vertical whitespace</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{| class=&quot;infobox vcard&quot; style=&quot;font-size:90%; width:23em;&quot;
+|-
+! class=&quot;fn n org&quot; style=&quot;text-align:center; font-size:120%;&quot; colspan=&quot;2&quot; | {{{name|{{{company_name|{{PAGENAME}}}}}}}}&lt;!----&gt;
+|-
+{{#if:{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt; | &lt;tr class=&quot;logo&quot;&gt;&lt;td colspan=&quot;2&quot; style=&quot;text-align:center; padding:16px 0 16px 0;&quot;&gt;{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}
+|-
+&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[:Category:Types of companies|Type]]&lt;/th&gt;&lt;td&gt;{{{type|}}}&lt;!--deprecated:--&gt;{{{company_type|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{genre|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Genre]]&lt;/th&gt;&lt;td&gt;{{{genre}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Founded&lt;/th&gt;&lt;td&gt;{{{foundation}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{founder|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Entrepreneur|Founder]]&lt;/th&gt;&lt;td&gt;{{{founder}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;!--deprecated:--&gt;{{#if:{{{dissolved|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Dissolved&lt;/th&gt;&lt;td&gt;{{{dissolved}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!----&gt;&lt;!--
+--&gt;&lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Headquarters&lt;/th&gt;&lt;td class=&quot;adr&quot;&gt;{{#if:{{{location_city|}}} | &lt;span class=&quot;locality&quot;&gt;{{{location_city}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location_country|}}} |, &lt;span class=&quot;country-name&quot;&gt;{{{location_country}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location|}}} | {{{location}}}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{locations|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;No.&amp;nbsp;of locations&lt;/th&gt;&lt;td&gt;{{{locations}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{area_served|}}}     | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Area&amp;nbsp;served&lt;/th&gt;&lt;td&gt;{{{area_served}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{key_people|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Key&amp;nbsp;people&lt;/th&gt;&lt;td&gt;{{{key_people}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{industry|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Industry]]&lt;/th&gt;&lt;td&gt;{{{industry}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{products|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Product (business)|Products]]&lt;/th&gt;&lt;td&gt;{{{products}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{services|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Service (economics)|Services]]&lt;/th&gt;&lt;td&gt;{{{services}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{revenue|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Revenue]]&lt;/th&gt;&lt;td&gt;{{{revenue}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{operating_income|}}}| &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Earnings before interest and taxes|Operating income]]&lt;/th&gt;&lt;td&gt;{{{operating_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{net_income|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;{{#ifeq:{{{intl|}}}|yes|[[Net income|Profit]]|[[Net income]]}}&lt;/th&gt;&lt;td&gt;{{{net_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{assets|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Assets|Total assets]]&lt;/th&gt;&lt;td&gt;{{{assets}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{equity|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Ownership equity|Total equity]]&lt;/th&gt;&lt;td&gt;{{{equity}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{owner|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Owner]]&lt;/th&gt;&lt;td&gt;{{{owner}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{num_employees|}}}   | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Employment|Employee]]s&lt;/th&gt;&lt;td&gt;{{{num_employees}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{parent|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Holding company|Parent]]&lt;/th&gt;&lt;td&gt;{{{parent}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{divisions|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Division (business)|Divisions]]&lt;/th&gt;&lt;td&gt;{{{divisions}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{subsid|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Subsidiary|Subsidiaries]]&lt;/th&gt;&lt;td&gt;{{{subsid}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt; | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Slogan]]&lt;/th&gt;&lt;td&gt;{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{homepage|}}}        | &lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Website]]&lt;/th&gt;&lt;td class=&quot;url&quot;&gt;{{{homepage}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{footnotes|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;td colspan=&quot;2&quot; class=&quot;note&quot;&gt;{{{footnotes}}}&lt;/td&gt;&lt;/tr&gt;}}
+|}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+{{pp-template}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rnd/00</title>
+    <id>13563807</id>
+    <revision>
+      <id>193069191</id>
+      <timestamp>2008-02-21T17:15:34Z</timestamp>
+      <contributor>
+        <username>Patrick</username>
+        <id>4388</id>
+      </contributor>
+      <comment>rm newline</comment>
+      <text xml:space="preserve">{{rnd/{{#expr:{{{2}}}&lt;-2}}|{{{1}}}|{{{2}}}|}}&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/0</title>
+    <id>13551870</id>
+    <revision>
+      <id>179606315</id>
+      <timestamp>2007-12-22T16:27:24Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/0: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{precision/0{{#expr:{{{1}}}={{{1}}}round-6}}|1{{{1}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterlinks</title>
+    <id>2226074</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>187203488</id>
+      <timestamp>2008-01-27T07:05:19Z</timestamp>
+      <contributor>
+        <username>SebastianHelm</username>
+        <id>7250</id>
+      </contributor>
+      <comment>adding parameter for each of the sisters per request</comment>
+      <text xml:space="preserve">{| class=&quot;infobox sisterproject&quot; style=&quot;width:235px; line-height:2.25em; font-size:90%;&quot;
+|- style=&quot;line-height:1.3em;&quot;
+!colspan=&quot;2&quot; align=&quot;center&quot;| Find more about {{{1|{{PAGENAME}}}}} on Wikipedia's sister projects:
+|-
+!width=&quot;37px&quot;| [[Image:Wiktionary-logo-en.png|25x27px| ]]&lt;/span&gt;
+| &lt;span title=&quot;Wiktionary&quot;&gt;[[wikt:Special:Search/{{{wikt|{{{1|{{PAGENAME}}}}}}}}|Dictionary definitions]]
+|-
+! [[Image:Wikibooks-logo.svg|27px| ]]
+| [[b:Special:Search/{{{b|{{{1|{{PAGENAME}}}}}}}}|Textbooks]]
+|-
+! [[Image:Wikiquote-logo.svg|23x27px| ]]
+| [[q:Special:Search/{{{q|{{{1|{{PAGENAME}}}}}}}}|Quotations]]
+|-
+! [[Image:Wikisource-logo.svg|26x27px| ]]
+| [[s:Special:Search/{{{s|{{{1|{{PAGENAME}}}}}}}}|Source texts]]
+|-
+! &lt;span title=&quot;Commons&quot;&gt;[[Image:Commons-logo.svg|19x25px| ]]
+| [[commons:Special:Search/{{{commons|{{{1|{{PAGENAME}}}}}}}}|Images and media]]
+|-
+! {{lower|6px|[[Image:Wikinews-logo.svg|27px| ]]}}
+| [[n:Special:Search/{{{n|{{{1|{{PAGENAME}}}}}}}}|News stories]]
+|-
+! [[Image:Wikiversity-logo-Snorky.svg|27px| ]]
+| [[v:Special:Search/{{{v|{{{1|{{PAGENAME}}}}}}}}|Learning resources]]
+|-
+&lt;!--! &lt;span title=&quot;Wikispecies&quot;&gt;[[Image:Wikispecies-logo.svg|23x27px| ]]
+--&gt;
+|}&lt;noinclude&gt;
+{{clear}}
+&lt;br/&gt;&lt;hr/&gt;
+&lt;br/&gt;{{protected template}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/mi/h</title>
+    <id>13752109</id>
+    <revision>
+      <id>165628398</id>
+      <timestamp>2007-10-19T14:00:41Z</timestamp>
+      <contributor>
+        <username>R'n'B</username>
+        <id>2300502</id>
+      </contributor>
+      <minor/>
+      <comment>fix broken redirect</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Convert/mph]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:NASDAQ-100</title>
+    <id>12217826</id>
+    <revision>
+      <id>191045838</id>
+      <timestamp>2008-02-13T01:57:48Z</timestamp>
+      <contributor>
+        <username>Ief</username>
+        <id>404186</id>
+      </contributor>
+      <text xml:space="preserve">{{navbox
+|name = NASDAQ-100
+|title = Companies of the [[NASDAQ-100]] index&lt;small&gt; (As of [[January 2]] [[2008]])&lt;/small&gt;
+|titlestyle = background:lightsteelblue;
+|list1 =&lt;div&gt;
+[[Activision]]{{·}}
+[[Adobe Systems]]{{·}}
+[[Akamai Technologies]]{{·}}
+[[Altera]]{{·}}
+[[Amazon.com]]{{·}}
+[[Amgen]]{{·}}
+[[Amylin Pharmaceuticals]]{{·}}
+[[Apollo Group]]{{·}}
+[[Apple Inc.]]{{·}}
+[[Applied Materials]]{{·}}
+[[Autodesk]]{{·}}
+[[Baidu]]{{·}}
+[[BEA Systems]]{{·}}
+[[Bed Bath &amp; Beyond]]{{·}}
+[[Biogen Idec]]{{·}}
+[[Broadcom]]{{·}}
+[[C. H. Robinson Worldwide]]{{·}}
+[[Cadence Design Systems]]{{·}}
+[[Celgene]]{{·}}
+[[Cephalon]]{{·}}
+[[Check Point]]{{·}}
+[[Cintas]]{{·}}
+[[Cisco Systems]]{{·}}
+[[Citrix Systems]]{{·}}
+[[Cognizant Technology Solutions]]{{·}}
+[[Comcast]]{{·}}
+[[Costco]]{{·}}
+[[Dell]]{{·}}
+[[DENTSPLY International]]{{·}}
+[[Discovery Holding Company]]{{·}}
+[[Dish Network Corporation]]{{·}}
+[[eBay]]{{·}}
+[[Electronic Arts]]{{·}}
+[[Expedia, Inc.]]{{·}}
+[[Expeditors International]]{{·}}
+[[Express Scripts]]{{·}}
+[[Fastenal]]{{·}}
+[[Fiserv]]{{·}}
+[[Flextronics]]{{·}}
+[[Focus Media Holding]]{{·}}
+[[Foster Wheeler Corporation]]{{·}}
+[[Garmin]]{{·}}
+[[Genzyme]]{{·}}
+[[Gilead Sciences]]{{·}}
+[[Google]]{{·}}
+[[Hansen Natural]]{{·}}
+[[Henry Schein]]{{·}}
+[[Hologic]]{{·}}
+[[IAC/InterActiveCorp]]{{·}}
+[[Infosys]]{{·}}
+[[Intel Corporation]]{{·}}
+[[Intuit]]{{·}}
+[[Intuitive Surgical]]{{·}}
+[[Joy Global]]{{·}}
+[[Juniper Networks]]{{·}}
+[[KLA Tencor|KLA-Tencor]]{{·}}
+[[Lam Research]]{{·}}
+[[Lamar Advertising Company]]{{·}}
+[[Leap Wireless|Leap Wireless International]]{{·}}
+[[Level 3 Communications]]{{·}}
+[[Liberty Global]]{{·}}
+[[Liberty Media|Liberty Media Corporation]]{{·}}
+[[Linear Technology]]{{·}}
+[[Logitech]]{{·}}
+[[Marvell Technology Group]]{{·}}
+[[Microchip Technology]]{{·}}
+[[Microsoft]]{{·}}
+[[Millicom|Millicom International Cellular]]{{·}}
+[[Monster Worldwide]]{{·}}
+[[Network Appliance]]{{·}}
+[[NII Holdings, Inc.]]{{·}}
+[[Nvidia]]{{·}}
+[[Oracle Corporation]]{{·}}
+[[PACCAR]]{{·}}
+[[Patterson Dental|Patterson Companies]]{{·}}
+[[Paychex]]{{·}}
+[[PetSmart]]{{·}}
+[[Qualcomm]]{{·}}
+[[Research In Motion]]{{·}}
+[[Ryanair]]{{·}}
+[[SanDisk]]{{·}}
+[[Sears Holdings Corporation]]{{·}}
+[[Sigma-Aldrich]]{{·}}
+[[Sirius Satellite Radio]]{{·}}
+[[Staples Inc.]]{{·}}
+[[Starbucks]]{{·}}
+[[Steel Dynamics]]{{·}}
+[[Stericycle]]{{·}}
+[[Sun Microsystems]]{{·}}
+[[Symantec]]{{·}}
+[[Tellabs]]{{·}}
+[[Teva Pharmaceutical Industries]]{{·}}
+[[UAL Corporation]]{{·}}
+[[VeriSign]]{{·}}
+[[Vertex Pharmaceuticals]]{{·}}
+[[Virgin Media]]{{·}}
+[[Whole Foods Market]]{{·}}
+[[Wynn Resorts]]{{·}}
+[[Xilinx]]{{·}}
+[[Yahoo!]]
+&lt;/div&gt;
+|category=[[Category:Companies in the NASDAQ-100 Index]]
+}}&lt;noinclude&gt;{{DEFAULTSORT:{{PAGENAME}}}}
+[[Category:Stock market indices templates]]
+[[ca:Plantilla:NASDAQ-100]]
+[[fr:Modèle:NASDAQ-100]]
+[[it:Template:NASDAQ-100]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite press release</title>
+    <id>4821205</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>180229825</id>
+      <timestamp>2007-12-26T10:01:38Z</timestamp>
+      <contributor>
+        <username>Gimmetrow</username>
+        <id>1368726</id>
+      </contributor>
+      <comment>per talk</comment>
+      <text xml:space="preserve">{{#if: {{{title|}}}
+  |{{#if: {{{publisher|}}}
+    |{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    |&amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}). 
+    |{{#if: {{{publisher|}}}|. |}}
+  }}&amp;#32;&quot;{{#if: {{{url|}}}|[{{{url}}} {{{title}}}]|{{{title}}} }}&quot;{{#if: {{{format|}}}
+  | &amp;#32;({{{format}}})
+  }}{{#if: {{{language|}}}
+  | &amp;#32;(in {{{language}}})
+  }}. [[News release|Press release]]. {{#if: {{{accessdate|}}}
+    |&amp;#32;Retrieved on [[{{{accessdate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;“{{{quote}}}”
+  }}
+  |Error on call to [[Template:cite press release]]: Parameter '''title''' must be specified
+}}&lt;noinclude&gt;
+{{protected template}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:See also</title>
+    <id>1721254</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161961086</id>
+      <timestamp>2007-10-03T06:09:15Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}, moved some content to subpage</comment>
+      <text xml:space="preserve">:&lt;span class=&quot;boilerplate seealso&quot;&gt;''See also: {{#if:{{{1|}}} |&lt;!--then:--&gt;[[:{{{1}}}|{{{l1|{{{1}}}}}}]] |&lt;!--else:--&gt;'''Error: [[Template:See also|Template must be given at least one article name]]''' 
+}}{{#if:{{{2|}}}|{{#if:{{{3|}}}|, |&amp;nbsp;and }} [[:{{{2}}}|{{{l2|{{{2}}}}}}]]
+}}{{#if:{{{3|}}}|{{#if:{{{4|}}}|, |,&amp;nbsp;and }} [[:{{{3}}}|{{{l3|{{{3}}}}}}]]
+}}{{#if:{{{4|}}}|{{#if:{{{5|}}}|, |,&amp;nbsp;and }} [[:{{{4}}}|{{{l4|{{{4}}}}}}]]
+}}{{#if:{{{5|}}}|{{#if:{{{6|}}}|, |,&amp;nbsp;and }} [[:{{{5}}}|{{{l5|{{{5}}}}}}]]
+}}{{#if:{{{6|}}}|{{#if:{{{7|}}}|, |,&amp;nbsp;and }} [[:{{{6}}}|{{{l6|{{{6}}}}}}]]
+}}{{#if:{{{7|}}}|{{#if:{{{8|}}}|, |,&amp;nbsp;and }} [[:{{{7}}}|{{{l7|{{{7}}}}}}]]
+}}{{#if:{{{8|}}}|{{#if:{{{9|}}}|, |,&amp;nbsp;and }} [[:{{{8}}}|{{{l8|{{{8}}}}}}]]
+}}{{#if:{{{9|}}}|{{#if:{{{10|}}}|, |,&amp;nbsp;and }} [[:{{{9}}}|{{{l9|{{{9}}}}}}]]
+}}{{#if:{{{10|}}}|{{#if:{{{11|}}}|, |,&amp;nbsp;and }} [[:{{{10}}}|{{{l10|{{{10}}}}}}]]
+}}{{#if:{{{11|}}}|{{#if:{{{12|}}}|, |,&amp;nbsp;and }} [[:{{{11}}}|{{{l11|{{{11}}}}}}]]
+}}{{#if:{{{12|}}}|{{#if:{{{13|}}}|, |,&amp;nbsp;and }} [[:{{{12}}}|{{{l12|{{{12}}}}}}]]
+}}{{#if:{{{13|}}}|{{#if:{{{14|}}}|, |,&amp;nbsp;and }} [[:{{{13}}}|{{{l13|{{{13}}}}}}]]
+}}{{#if:{{{14|}}}|{{#if:{{{15|}}}|, |,&amp;nbsp;and }} [[:{{{14}}}|{{{l14|{{{14}}}}}}]]
+}}{{#if:{{{15|}}}|,&amp;nbsp;and [[:{{{15}}}|{{{l15|{{{15}}}}}}]]
+}}{{#if:{{{16|}}}| &amp;mdash; '''&lt;br/&gt;Error: [[Template:See also|Too many links specified (maximum is 15)]]'''
+}}''&lt;/span&gt;&lt;noinclude&gt;
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/+</title>
+    <id>13548869</id>
+    <revision>
+      <id>179606122</id>
+      <timestamp>2007-12-22T16:26:07Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Precision/+: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{precision/{{#expr:3*{{{1}}}&gt;{{{1}}}0}}|{{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>169409860</id>
+      <timestamp>2007-11-05T17:22:36Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Removing VDEcolor parameter; titlestyle now works on VDE links.</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{Navbox/core
+|name = {{{name&lt;noinclude&gt;|{{FULLPAGENAME}}&lt;/noinclude&gt;}}}
+|navbar = {{{navbar|}}}
+|state = {{{state|autocollapse}}}
+|title = {{{title|}}}
+|image = {{{image|}}}
+|imageleft = {{{imageleft|}}}
+
+|imagespan = {{#expr:{{#if:{{{body|}}}{{{list1|}}}|1|0}} +{{#if:{{{list2|}}}|1|0}} +{{#if:{{{list3|}}}|1|0}} +{{#if:{{{list4|}}}|1|0}} +{{#if:{{{list5|}}}|1|0}} +{{#if:{{{list6|}}}|1|0}} +{{#if:{{{list7|}}}|1|0}} +{{#if:{{{list8|}}}|1|0}} +{{#if:{{{list9|}}}|1|0}} +{{#if:{{{list10|}}}|1|0}} +{{#if:{{{list11|}}}|1|0}} +{{#if:{{{list12|}}}|1|0}} +{{#if:{{{list13|}}}|1|0}} +{{#if:{{{list14|}}}|1|0}} +{{#if:{{{list15|}}}|1|0}} +{{#if:{{{list16|}}}|1|0}} +{{#if:{{{list17|}}}|1|0}} +{{#if:{{{list18|}}}|1|0}} +{{#if:{{{list19|}}}|1|0}} +{{#if:{{{list20|}}}|1|0}}}}
+
+|span = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}{{{imageleft|}}}|{{#if:{{{image|}}}|3|2}}|{{#if:{{{image|}}}|2|1}}}}
+
+|nogroups = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}|false|true}}
+
+|bodystyle = {{{style|}}}{{{bodystyle|}}}
+|titlestyle = {{{titlestyle|}}}
+|abovestyle = background:#ddddff;{{{abovestyle|}}}
+|belowstyle = background:#ddddff;{{{belowstyle|}}}
+
+|above = {{{above|}}}
+|below = {{{below|}}}
+
+|gs = white-space:nowrap;background:#ddddff;text-align:right;{{{groupstyle|}}}
+|os = width:100%;font-size:95%;{{{liststyle|}}}{{{oddstyle|}}}
+|es = width:100%;font-size:95%;background:#f7f7f7;{{{liststyle|}}}{{{evenstyle|}}}
+
+|g1 = {{{group1|}}}
+|g2 = {{{group2|}}}
+|g3 = {{{group3|}}}
+|g4 = {{{group4|}}}
+|g5 = {{{group5|}}}
+|g6 = {{{group6|}}}
+|g7 = {{{group7|}}}
+|g8 = {{{group8|}}}
+|g9 = {{{group9|}}}
+|g10 = {{{group10|}}}
+|g11 = {{{group11|}}}
+|g12 = {{{group12|}}}
+|g13 = {{{group13|}}}
+|g14 = {{{group14|}}}
+|g15 = {{{group15|}}}
+|g16 = {{{group16|}}}
+|g17 = {{{group17|}}}
+|g18 = {{{group18|}}}
+|g19 = {{{group19|}}}
+|g20 = {{{group20|}}}
+
+|l1 = {{{body|}}}{{{list1|}}}{{{category|}}}
+|l2 = {{{list2|}}}
+|l3 = {{{list3|}}}
+|l4 = {{{list4|}}}
+|l5 = {{{list5|}}}
+|l6 = {{{list6|}}}
+|l7 = {{{list7|}}}
+|l8 = {{{list8|}}}
+|l9 = {{{list9|}}}
+|l10 = {{{list10|}}}
+|l11 = {{{list11|}}}
+|l12 = {{{list12|}}}
+|l13 = {{{list13|}}}
+|l14 = {{{list14|}}}
+|l15 = {{{list15|}}}
+|l16 = {{{list16|}}}
+|l17 = {{{list17|}}}
+|l18 = {{{list18|}}}
+|l19 = {{{list19|}}}
+|l20 = {{{list20|}}}
+
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Portal</title>
+    <id>1780010</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172639014</id>
+      <timestamp>2007-11-20T04:30:10Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>CSS class portal</comment>
+      <text xml:space="preserve">&lt;div class=&quot;{{#ifeq:{{{left|no}}}|yes|tleft|tright}} portal&quot; style=&quot;border:solid #aaa 1px; background:#f9f9f9; margin:0.5em 0 0.5em 0.5em; font-size:85%;&quot;&gt;
+{| style=&quot;background:transparent;&quot; width={{{boxsize|{{{4|0}}}}}}
+| &lt;div style=&quot;position:relative; width:{{{size|{{{3|32}}}}}}px; height:28px; overflow:hidden&quot;&gt;&lt;div style=&quot;position:absolute; top:0px; left:0px; z-index:2;&quot;&gt; [[Image:{{{image|{{{2|Portal.svg}}}}}}|{{{size|{{{3|32}}}}}}x28px]]&lt;/div&gt;&lt;/div&gt;
+| '''''[[Portal:{{{name|{{{1|{{PAGENAME}}}}}}}}|{{{name|{{{1|{{PAGENAME}}}}}}}}{{#ifeq:{{{break|}}}|yes|&lt;br /&gt;|&amp;#32;}}Portal]]'''''
+|}&lt;/div&gt;&lt;noinclude&gt;
+{{documentation}}&lt;!--Please add any interwiki links etc on the /doc page, not here - thanks!--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172964235</id>
+      <timestamp>2007-11-21T19:45:44Z</timestamp>
+      <contributor>
+        <username>Trödel</username>
+        <id>171039</id>
+      </contributor>
+      <comment>use new template [[:Template:documentation]]</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; -webkit-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; -webkit-column-count:{{{1}}}; column-count:{{{1}}} }};&quot; |}}&gt;
+&lt;references /&gt;&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite journal</title>
+    <id>4740319</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>193730702</id>
+      <timestamp>2008-02-24T17:37:33Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>fix per editprotected</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite style=&quot;font-style:normal&quot;&gt;{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{authorlink|}}}
+    |[[{{{authorlink}}}|{{#if:
+      {{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}]]
+    |{{#if:{{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}
+  }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{coauthors|}}}
+    | &lt;nowiki&gt;;&lt;/nowiki&gt; {{{coauthors}}}
+  }}
+}}{{#if:{{{date|}}}
+  |&amp;#32;({{{date}}})
+  |{{#if:{{{year|}}}
+    |{{#if:{{{month|}}}
+      |&amp;#32;({{{month}}} {{{year}}})
+      |&amp;#32;({{{year}}})
+     }}
+   }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  | .
+}}{{#if:{{{author|}}}{{{last|}}}{{{year|}}}{{{date|}}}
+  | &amp;#32;
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if: {{{curly|}}}|“|&quot;}} 
+ }}{{#if:{{{url|}}}
+  |[{{{url}}} {{{title}}}]
+  |{{{title}}}
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if:{{{curly|}}}|”|&quot;}} 
+ }}{{#if:{{{language|}}} 
+  | &amp;#32;(in {{{language}}})
+}}{{#if:{{{format|}}}
+  | &amp;#32;({{{format}}})
+}}{{#if:{{{journal|}}}
+  |. ''{{{journal}}}''
+}}{{#if:{{{volume|}}}
+  |&amp;#32;{{{volume}}}
+}}{{#if:{{{issue|}}}
+  |&amp;#32;({{{issue}}})
+}}{{#if:{{{pages|}}}
+  |&lt;nowiki&gt;:&lt;/nowiki&gt; {{{pages}}}
+}}{{#if:{{{publisher|}}}
+  |.&amp;#32;{{#if:{{{location|}}} 
+    |{{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{#if:{{{doi|}}} 
+  |. [[Digital object identifier|doi]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{#if:{{{issn|}}}
+  |. [[International Standard Serial Number|ISSN]] [http://worldcat.org/issn/{{{issn}}} {{{issn}}}]
+}}{{#if:{{{pmid|}}}
+  |. PMID {{{pmid}}}
+}}{{#if:{{{bibcode|}}}
+  |. [[Bibcode]]:&amp;nbsp;[http://adsabs.harvard.edu/abs/{{{bibcode}}} {{{bibcode}}}]
+}}{{#if:{{{oclc|}}} 
+  |. [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{#if:{{{id|}}}
+  |. {{{id}}}
+}}{{#if:{{{accessdate|}}}
+  |. Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}
+}}{{#if:{{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}
+}}{{#if:{{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}
+}}{{#if:{{{laysummary|}}}
+  |. [{{{laysummary}}} Lay summary]{{#if: {{{laysource|}}}|&amp;nbsp;&amp;ndash;&amp;nbsp;''{{{laysource}}}''}}
+}}{{#if:{{{laydate|}}}
+  | &amp;#32;([[{{{laydate}}}]])
+}}.{{#if:{{{quote|}}}
+  | &amp;#32;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:journal}}&lt;!--                Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:journal
+  --&gt;&amp;rft.genre=article&lt;!--                                                     article: a document published in a journal. (genre could also be (the entire) journal, issue, conference, proceeding, preprint, or unknown)
+  --&gt;{{#if: {{{title|}}}     | &amp;rft.atitle={{urlencode:{{{title}}}}}     }}&lt;!-- Article title.
+  --&gt;{{#if: {{{journal|}}}   | &amp;rft.jtitle={{urlencode:{{{journal}}}}}   }}&lt;!-- Journal title. Use the most complete title available ... &quot;journal of the american medical association&quot;
+  --&gt;{{#if: {{{date|}}} 
+       | &amp;rft.date={{urlencode:{{{date}}}}}
+       | {{#if: {{{year|}}}  | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. (ISO 8601)
+  --&gt;{{#if: {{{volume|}}}    | &amp;rft.volume={{urlencode:{{{volume}}}}}    }}&lt;!-- Volume designation usually expressed as a number but could be roman numerals or non-numeric, i.e. &quot;124&quot;, or &quot;VI&quot;.
+  --&gt;{{#if: {{{issue|}}}     | &amp;rft.issue={{urlencode:{{{issue}}}}}      }}&lt;!-- This is the designation of the published issue of a journal ... could be non-numeric
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, i.e, &quot;Fred James&quot;
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}      }}&lt;!-- Start and end pages, i.e. &quot;53-58&quot;. This can also be used for an unstructured pagination statement when data relating to pagination cannot be interpreted as a start-end pair, i.e. &quot;A7, C4-9&quot;, &quot;1-3,6&quot;.
+  --&gt;{{#if: {{{issn|}}}      | &amp;rft.issn={{urlencode:{{{issn}}}}}        }}&lt;!-- International Standard Serials Number (ISSN). The issn may contain a hyphen, i.e. &quot;1041-5653&quot;
+  --&gt;{{#if: {{{pmid|}}}      | &amp;rft_id=info:pmid/{{urlencode:{{{pmid}}}}}}}&lt;!-- PubMed ID
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- DOI
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- URL
+  --&gt;&quot;&gt;&amp;#8202;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+&lt;!--
+    PLEASE DO NOT ADD DOCUMENTATION/CATEGORIES/INTERWIKIS HERE
+--&gt;
+{{pp-template|small=yes}}
+{{Template doc}}
+&lt;!--
+    MAKE ADDITIONS TO THE /doc SUBPAGE INSTEAD, THANKS
+--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Flagicon</title>
+    <id>2075417</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176578634</id>
+      <timestamp>2007-12-08T15:48:27Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>default to [[Template:Country data]] if no parameter specified, remove all whitespace to reduce template size a few bytes (to minimum)</comment>
+      <text xml:space="preserve">{{country data {{{1|}}}|country flagicon2|variant={{{variant|{{{2|}}}}}}|size={{{size|}}}}}&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag/0</title>
+    <id>13532720</id>
+    <revision>
+      <id>179607127</id>
+      <timestamp>2007-12-22T16:32:44Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Ordomag/0: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;5-({{{1}}}&lt;100000)-({{{1}}}&lt;10000)-({{{1}}}&lt;1000)-({{{1}}}&lt;100)-({{{1}}}&lt;10)&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Microsoft</title>
+    <id>3452631</id>
+    <revision>
+      <id>194736690</id>
+      <timestamp>2008-02-28T20:53:13Z</timestamp>
+      <contributor>
+        <username>Titan602</username>
+        <id>2800022</id>
+      </contributor>
+      <comment>We now know that the telescope is part of MS Research</comment>
+      <text xml:space="preserve">{{Navbox
+|name    = Microsoft
+|title   = [[Microsoft]]
+|state = {{{state|&lt;includeonly&gt;autocollapse&lt;/includeonly&gt;&lt;noinclude&gt;expanded&lt;/noinclude&gt;}}}
+|groupstyle = line-height:2em;
+|liststyle  = line-height:1.4em;
+
+|group1 = [[List of Microsoft software applications|Desktop software]]
+|list1  = {{nowrap|[[Microsoft Windows|Windows]] ([[List of Microsoft Windows components|components]])}}{{·}} [[Microsoft Office|Office]]{{·}} [[Microsoft Visual Studio|Visual Studio]]{{·}} [[Microsoft Expression Studio|Expression]]{{·}} [[Microsoft Dynamics|Dynamics]]{{·}} [[Microsoft Money|Money]]{{·}} [[Encarta]]{{·}} [[Microsoft Student|Student]]{{·}} [[Microsoft Works|Works]]{{·}} [[Microsoft MapPoint|MapPoint]]{{·}} [[Microsoft Virtual PC|Virtual PC]]
+
+|group2 = [[Microsoft Servers|Server software]]
+|list2  = [[Windows Server]]{{·}} [[Microsoft SQL Server|SQL Server]]{{·}} [[Internet Information Services|IIS]]{{·}} [[Microsoft Exchange Server|Exchange]]{{·}} [[Microsoft BizTalk Server|BizTalk]]{{·}} [[Microsoft Commerce Server|Commerce]]{{·}} [[ISA Server]]{{·}} [[Microsoft System Center|System Center]]{{·}} [[Windows Home Server|Home Server]]{{·}} [[SharePoint]]{{·}} [[Microsoft Office Communications Server|OCS]]{{·}} [[Terminal Services]]
+
+|group3 = [[List of Microsoft Windows components|Technology]]
+|list3  = [[Active Directory]]{{·}} [[DirectX]]{{·}} [[Microsoft .NET|.NET]]{{·}} [[Windows Media]]{{·}} [[Microsoft PlaysForSure|PlaysForSure]]{{·}} [[Microsoft Application Virtualization|Application Virtualization]]{{·}} [[Hyper-V]] {{·}} [[Silverlight]]{{·}} [[Windows Mobile]]{{·}} [[Windows Embedded]]
+
+|group4 = Web properties
+|list4  = [[Windows Live]]{{·}} [[Microsoft Office Live|Office Live]]{{·}} [[MSNBC]]{{·}} [[msnbc.com]]{{·}} [[ninemsn]]{{·}} [[MSN]]{{·}} [[Hotmail]]{{·}} [[Windows Live Messenger|Live Messenger]]{{·}} [[Windows Live Spaces|Spaces]]{{·}} [[MSN Groups|Groups]]{{·}} [[Windows Live ID|Live ID]]{{·}} [[Microsoft Ignition|Ignition]]{{·}} [[CodePlex]]{{·}} [[Microsoft HealthVault|HealthVault]]
+
+|group5 = Gaming
+|list5  = [[Microsoft Game Studios]]{{·}} [[MSN Games|Zone]]{{·}} [[Microsoft XNA|XNA]]{{·}} [[Xbox]]{{·}} [[Xbox 360]]{{·}} {{nowrap|[[Xbox Live]] ([[Xbox Live Arcade|Arcade]]}}{{·}} [[Xbox Live Marketplace|Marketplace]]){{·}} {{nowrap|[[Games for Windows]] ([[Games for Windows - Live|LIVE]]}}{{·}} [[Tray and Play]]){{·}} [[Live Anywhere]]
+
+|group6 = Hardware
+|list6  = [[Microsoft Surface|Surface]]{{·}} {{nowrap|[[Zune]] ([[Zune 4, 8|4 / 8]]}}{{·}} [[Zune 30|30]]{{·}} [[Zune 80|80]]){{·}} [[MSN TV]]{{·}} [[Microsoft Natural keyboard|Natural Keyboard]]{{·}} [[IntelliType|Keyboard]]{{·}} [[IntelliPoint|Mouse]]{{·}} [[LifeCam]]{{·}} [[LifeChat]]{{·}} [[Microsoft SideWinder|SideWinder]]{{·}} [[Ultra-Mobile PC]]{{·}} [[Microsoft Fingerprint Reader|Fingerprint]]{{·}} [[Digital Sound System 80|Audio System]]{{·}} [[Microsoft Cordless Phone System|Cordless Phone]]{{·}} [[Pocket PC]]{{·}} [[Microsoft RoundTable|RoundTable]]{{·}} [[Microsoft Response Point|Response Point]]
+
+|group7 = &lt;div style=&quot;line-height:1.1em;&quot;&gt;Education and&lt;br/&gt;recognition&lt;/div&gt;
+|list7  = [[Microsoft Certified Professional|MCP]]s{{·}} [[Microsoft Developer Network|MSDN]]{{·}} [[Microsoft Technet|Technet]]{{·}} [[MSDN Academic Alliance|MSDNAA]]{{·}} [[Microsoft Campus Agreement|MSCA]]{{·}} [[Microsoft Press]]{{·}} [[Microsoft Most Valuable Professional|Microsoft MVP]]{{·}} [[Microsoft Student Partners|Student Partners]]{{·}} [[Microsoft Research|Research]]{{·}} [[Studies related to Microsoft]]
+
+|group8 = Licensing
+|list8  = [[Client Access License]]{{·}} [[Shared Source]]{{·}} [[Microsoft Software Licensing and Protection Services|Licensing Services]]
+
+|group9 = Legal issues
+|list9  = [[United States v. Microsoft]]{{·}} [[European Union v. Microsoft]]
+
+|group10 = [[Board of directors]]
+|list10  = [[Steve Ballmer]]{{·}} [[James Cash, Jr.]]{{·}} [[Dina Dublon]]{{·}} [[Bill Gates]]{{·}} [[Raymond Gilmartin]]{{·}} [[Reed Hastings]]{{·}} [[David Marquardt]]{{·}} [[Charles Noski]]{{·}} [[Helmut Panke]]{{·}} [[Jon Shirley]]
+}}&lt;noinclude&gt;&lt;!--
+
+--&gt;{{Documentation, template|Template:Microsoft/doc}}
+{{/footer}} &lt;!-- interwikis and categories --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Lower</title>
+    <id>8871184</id>
+    <revision>
+      <id>133458331</id>
+      <timestamp>2007-05-25T17:41:44Z</timestamp>
+      <contributor>
+        <username>David Kernow</username>
+        <id>445578</id>
+      </contributor>
+      <minor/>
+      <comment>proportional units</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{2|}}} |&lt;!--then:(offset specified)--&gt;&lt;span style=&quot;position:relative; top:{{{1}}};&quot;&gt;{{{2|}}}&lt;/span&gt;|&lt;!--else:(offset not specified; use default)--&gt;&lt;span style=&quot;position:relative; top:0.6em;&quot;&gt;{{{1|}}}&lt;/span&gt;&lt;!--end #if:--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{/doc}}
+&lt;!--Please add interwiki links on the /doc page, not here - thanks!--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Profit</title>
+    <id>9319325</id>
+    <revision>
+      <id>123802311</id>
+      <timestamp>2007-04-18T13:24:27Z</timestamp>
+      <contributor>
+        <username>CBM</username>
+        <id>1108292</id>
+      </contributor>
+      <comment>use pp-template</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Increase]]
+{{pp-template|small=yes}}
+
+&lt;!--Categories--&gt;
+[[Category:Finance templates|Profit]]&lt;!--Please retain despite this page being a redirect; &quot;Profit&quot; makes more sense in a financial context. Thank you.--&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Plainlink</title>
+    <id>4651605</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>157527149</id>
+      <timestamp>2007-09-13T02:42:13Z</timestamp>
+      <contributor>
+        <username>Jreferee</username>
+        <id>2467184</id>
+      </contributor>
+      <comment>[[WP:UNDO|Undid]] revision 157526984 by [[Special:Contributions/Jreferee|Jreferee]] ([[User talk:Jreferee|talk]])</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span class=&quot;plainlinks&quot;&gt;[{{{1|{{{url|}}}}}}]&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ordomag/+</title>
+    <id>11656942</id>
+    <revision>
+      <id>179607036</id>
+      <timestamp>2007-12-22T16:32:00Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Ordomag/+: [[Wikipedia:High-risk templates|High risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{Ordomag/{{#expr:({{{1}}}&gt;=1000000)-(1&gt;{{{1}}})}}|{{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tnavbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>171324865</id>
+      <timestamp>2007-11-14T00:23:38Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&amp;nbsp;&lt;span class=&quot;noprint plainlinksneverexpand&quot; style=&quot;white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;|&lt;!--else:
+--&gt;&lt;div class=&quot;noprint plainlinksneverexpand&quot; style=&quot;background-color:transparent; padding:0; white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{mini|}}}{{{miniv|}}}{{{plain|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;|&lt;!--else:
+--&gt;This box:&amp;nbsp;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{miniv|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{viewplain|}}}|view|v}}&lt;/span&gt;]]|&lt;!--else:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[Template talk:{{{1}}}|&lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;Discussion about this template&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{ns:10}}:{{{1}}}|action=edit}} &lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;You can edit this template. Please use the preview button before saving.&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;&lt;!--
+--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+&lt;hr/&gt;&lt;center&gt;'''{{purge}}''' the Wikipedia cache of this template.&lt;hr/&gt;&lt;/center&gt;&lt;br/&gt;
+{{documentation}} 
+&lt;!--Note: Metadata (interwiki links, etc) for this template should be put on [[Template:Tnavbar/doc]]--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Link FA</title>
+    <id>2658806</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>162984175</id>
+      <timestamp>2007-10-08T00:54:54Z</timestamp>
+      <contributor>
+        <username>Trevor MacInnis</username>
+        <id>73333</id>
+      </contributor>
+      <minor/>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;span id=&quot;interwiki-{{{1}}}-fa&quot; /&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert</title>
+    <id>8387047</id>
+    <revision>
+      <id>177558670</id>
+      <timestamp>2007-12-13T01:08:56Z</timestamp>
+      <contributor>
+        <username>TomTheHand</username>
+        <id>165715</id>
+      </contributor>
+      <comment>updated code per Jimp</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{convert/{{{2}}}|{{{1}}}|{{#ifeq:{{#expr:{{{3|0}}}*0}}|0|0}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|r={{#ifeq:{{{sp}}}|us|er|re}}|d=L{{{lk|off}}}A{{{abbr|off}}}D{{{disp|b}}}S{{{adj|{{{sing|off}}}}}}|s={{{sigfig|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{esoteric}}
+{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Featured article</title>
+    <id>3851900</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>193674206</id>
+      <timestamp>2008-02-24T10:27:03Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>moving documentation to subpage</comment>
+      <text xml:space="preserve">&lt;div style=&quot;right:10px; display:none;&quot; class=&quot;metadata topicon&quot; id=&quot;featured-star&quot;&gt;
+&lt;imagemap&gt;
+Image:LinkFA-star.png|14px
+rect 0 0 14 14 [[Wikipedia:Featured articles|This is a featured article. Click here for more information.]]
+desc none
+&lt;/imagemap&gt;
+&lt;/div&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:DJIA</title>
+    <id>3533924</id>
+    <revision>
+      <id>193818182</id>
+      <timestamp>2008-02-25T00:39:12Z</timestamp>
+      <contributor>
+        <username>UnitedStatesian</username>
+        <id>3461395</id>
+      </contributor>
+      <comment>added</comment>
+      <text xml:space="preserve">{{Navbox
+|name = DJIA
+|title = {{flagicon|United States}} [[Dow Jones Industrial Average]] companies
+|titlestyle = background:lightsteelblue
+|groupstyle = background:lightsteelblue
+|group1 = Current stocks
+|list1 = [[3M]]{{·}}[[Alcoa]]{{·}}{{nowrap|[[American Express]]}}{{·}}{{nowrap|[[American International Group]]}}{{·}}[[AT&amp;T]]{{·}}{{nowrap|[[Bank of America]]}}{{·}}[[Boeing]]{{·}}[[Caterpillar Inc.|Caterpillar]]{{·}}{{nowrap|[[Chevron Corporation|Chevron]]}}{{·}}[[Citigroup]]{{·}}{{nowrap|[[The Coca-Cola Company]]}}{{·}}[[DuPont]]{{·}}[[ExxonMobil]]{{·}}{{nowrap|[[General Electric]]}}{{·}}{{nowrap|[[General Motors]]}}{{·}}[[Hewlett-Packard]]{{·}}{{nowrap|[[The Home Depot]]}}{{·}}[[Intel Corporation|Intel]]{{·}}[[IBM]]{{·}}[[Johnson &amp; Johnson]]{{·}}{{nowrap|[[JPMorgan Chase]]}}{{·}}
+[[McDonald's]]{{·}}[[Merck &amp; Co.]]{{·}}[[Microsoft]]{{·}}[[Pfizer]]{{·}}[[Procter &amp; Gamble]]{{·}}{{nowrap|[[United Technologies Corporation|United Technologies]]}}{{·}}[[Verizon Communications|Verizon]]{{·}}[[Wal-Mart]]{{·}}{{nowrap|[[The Walt Disney Company]]}}
+
+|group2 = Selected former stocks
+|list2 = [[Altria Group]]{{·}} [[American Telephone &amp; Telegraph]]{{·}} [[American Tobacco Company]]{{·}} [[Bethlehem Steel]]{{·}} [[Colorado Fuel and Iron]]{{·}} [[Eastman Kodak]]{{·}} [[General Foods]]{{·}} [[Goodyear Tire and Rubber Company]]{{·}} [[Honeywell]]{{·}} [[International Paper]]{{·}} [[Johns-Manville]]{{·}} [[Nash Motors]]{{·}} [[Navistar International]]{{·}} [[North American Company]]{{·}} [[Sears, Roebuck and Company|Sears Roebuck]]{{·}} [[Union Carbide]]{{·}} [[United States Rubber Company]]{{·}} [[F. W. Woolworth Company|Woolworth's]] 
+ 
+}}&lt;includeonly&gt;
+[[Category:Dow Jones Industrial Average]]
+&lt;/includeonly&gt;&lt;noinclude&gt;
+[[Category:Stock market indices templates|DJIA]]
+[[Category:United States navigational boxes|DJIA]]
+
+[[fr:Modèle:DJIA]]
+[[it:Template:Dow Jones Industrial Average]]
+[[ja:Template:ダウ平均株価]]
+[[pt:Predefinição:Dow Jones Industrial Average]]
+[[zh:Template:DJIA]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Convert/LoffAonDbSoff</title>
+    <id>13731375</id>
+    <revision>
+      <id>192694420</id>
+      <timestamp>2008-02-20T00:54:48Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{formatnum:{{{1}}}}}&amp;nbsp;{{{u}}} ({{convert/{{#if:{{{2|}}}|{{{o}}}|{{{3}}}}}|{{{1}}}|{{{1}}}*{{{b}}}|{{#if:{{{2|}}}|{{{3|}}}|{{{4|}}}}}|{{{s|}}}|r={{{r}}}|j={{{j}}}|d=LoffAonSoff}})&lt;noinclude&gt;
+[[Category:Subtemplates of Template Convert]] {{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

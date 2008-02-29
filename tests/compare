@@ -6,6 +6,8 @@ good=0
 for vettedfile in *.vetted; do
 	basefile=`basename "$vettedfile" .vetted`
 
+	basefile=`echo "$basefile" | sed -e 's/\!/\//'`
+
 	all=$(($all+1))
 
 	if diff -u "$vettedfile" "$basefile"; then

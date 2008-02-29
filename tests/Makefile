@@ -25,7 +25,9 @@ LOGS =	images.log \
 	pagename.log \
 	ifeq.log \
 	asse.log \
-	hurt.log
+	hurt.log \
+	microsoft.log \
+	microsoft2.log
 
 all: test
 
