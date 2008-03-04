@@ -100,8 +100,8 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
                      5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
                      9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
 
-my $maxTemplateRecursionLevels = 10;
-my $maxParameterRecursionLevels = 10;
+my $maxTemplateRecursionLevels = 5;
+my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
 # We use a different (and faster) way of recursively including templates than MediaWiki. In most
