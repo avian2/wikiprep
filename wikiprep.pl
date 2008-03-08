@@ -203,7 +203,7 @@ print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\
 print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 print LOCALF "<pages>\n";
 
-print DISAMBIGF  "# Line format: <Disambig page id>  <List of target page id>\n\n\n";
+print DISAMBIGF  "# Line format: <Disambig page id>  <Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
 
 &copyXmlFileHeader();
 &loadNamespaces();
@@ -787,7 +787,11 @@ sub transform() {
     &images::convertGalleryToLink(\$text);
     &images::convertImagemapToLink(\$text);
 
-    &extractInternalLinks(\$text, \@internalLinks, $id, 1, 1);
+    my @anchorTexts;
+
+    &extractInternalLinks(\$text, \@internalLinks, $id, \@anchorTexts, 1, 0);
+
+    &logAnchorText(\@anchorTexts, $id);
 
     if ( ! $dontExtractUrls ) {
       &extractUrls(\$text, \@urls);
@@ -1458,16 +1462,15 @@ sub collectCategory($\@) {
   " ";
 }
 
-sub extractInternalLinks(\$\@$$$) {
+sub extractInternalLinks(\$\@$\@$$) {
   my ($refToText, $refToInternalLinksArray, $id,
-      $whetherToLogAnchorText, $whetherToRemoveDuplicates) = @_;
+      $refToAnchorTextArray, $whetherToRemoveDuplicates, $logUnknownLinks ) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
-  # this list (a reference to an anonymous hash) that contains target id and anchor 
+  # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
   # text associated with it.
   #
   # This way we can have more than one anchor text per link
-  my @anchorTexts;
 
   # Link definitions may span over adjacent lines and therefore contain line breaks,
   # hence we use the /s modifier.
@@ -1488,17 +1491,15 @@ sub extractInternalLinks(\$\@$$$) {
                              (\w*)            # words may be glued to the end of the link,
                                               # in which case they become part of the link
                                               # e.g., "[[public transport]]ation"
-                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, \@anchorTexts, 
-                                                  $-[0])/segx
+                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, 
+                                                  $refToAnchorTextArray,
+                                                  $-[0], $logUnknownLinks)/segx
           );
 
   if ($whetherToRemoveDuplicates) {
     &removeDuplicatesAndSelf($refToInternalLinksArray, $id);
   }
 
-  if ($whetherToLogAnchorText) {
-    &logAnchorText(\@anchorTexts, $id);
-  }
 }
 
 sub logAnchorText(\@$) {
@@ -1535,8 +1536,9 @@ sub logAnchorText(\@$) {
   }
 }
 
-sub collectInternalLink($$$\@\@) {
-  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
+sub collectInternalLink($$$\@\@$$) {
+  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, 
+      $linkLocation, $logUnknownLinks) = @_;
 
   my $originalLink = $link;
   my $result = "";
@@ -1692,10 +1694,18 @@ sub collectInternalLink($$$\@\@) {
     # the anchor only if alternative text was given, because on the other case Wikipedia shows
     # the image without any description.
 
-    if ( defined($targetId) && ( ( ! $isImageLink ) || $alternativeTextAvailable ) ) {
-      push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
-                                     linkLocation => "$linkLocation" });
+    if ( defined($refToAnchorTextArray) ) {
+      if ( ( ! $isImageLink ) || $alternativeTextAvailable ) {
+        if ( defined($targetId) ) {
+          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
+                                         linkLocation => "$linkLocation" });
+        } elsif ($logUnknownLinks) {
+          push(@$refToAnchorTextArray, { targetId => "undef", anchorText => "$result", 
+                                         linkLocation => "$linkLocation" });
+        }
+      }
     }
+
   }
 
   $result;  #return value
@@ -1788,7 +1798,7 @@ sub normalizeDates(\$\$\@\%) {
       $$refToResultText = "$month $day";
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-      if ( defined($targetId) ) {
+      if ( defined($targetId) && defined($refToAnchorTextArray) ) {
         push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                        linkLocation => "$linkLocation" });
       }
@@ -1810,7 +1820,7 @@ sub normalizeDates(\$\$\@\%) {
         $$refToResultText = " $month $day";
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-        if ( defined($targetId) ) {
+        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                            linkLocation => "$linkLocation" });
         }
@@ -1838,14 +1848,14 @@ sub normalizeDates(\$\$\@\%) {
 
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-        if ( defined($targetId) ) {
+        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink",
                                            linkLocation => "$linkLocation" });
         }
 
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
-        if ( defined($targetId) ) {
+        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year",
                                            linkLocation => "$linkLocation" });
         }
@@ -1915,12 +1925,9 @@ BEGIN {
 sub parseDisambig(\$\$) {
 	my ($refToId, $refToText) = @_;
 
-	my @disambigLinks;
-
 	my @lines = split(/\n/, $$refToText);
-	my $line;
 
-	for $line (@lines) {
+	for my $line (@lines) {
 		if ( $line =~ /^\s*(?:
 					                (\*\*)|
 					                (\#\#)|
@@ -1930,21 +1937,26 @@ sub parseDisambig(\$\$) {
                           (\*)
                         )/ix ) {
 
-			@disambigLinks=();
+	    my @disambigLinks;
+      my @anchorTexts;
 
-			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, 0, 0);
+			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, 0, 1);
 
-			&writeDisambig($refToId, \@disambigLinks);
+			&writeDisambig($refToId, \@anchorTexts);
 		}
 	}
 }
 
 sub writeDisambig(\$\@) {
-	my ($refToDisambigId, $refToDisambigLinks) = @_;
+	my ($refToDisambigId, $refToAnchorTextArray) = @_;
 
-	my $titles = join(" ", @$refToDisambigLinks); 
+	print DISAMBIGF "$$refToDisambigId";
 
-	print DISAMBIGF "$$refToDisambigId\t$titles\n";
+  for my $anchor (@$refToAnchorTextArray) {
+    print DISAMBIGF "\t$$anchor{'targetId'}\t$$anchor{'anchorText'}"
+  }
+
+	print DISAMBIGF "\n";
 }
 
 sub postprocessText(\$$) {
@@ -2263,7 +2275,7 @@ sub identifyRelatedArticles(\$\@$) {
     if ($line =~ /^(?:.{0,5})(${relatedWording_Standalone}.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       print LOGF "Related(S): $id => $str\n";
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, 0, 0);
+      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
       print LOGF "Related(S): $id ==> @$refToRelatedArticles\n";
     }
   }
@@ -2273,7 +2285,7 @@ sub identifyRelatedArticles(\$\@$) {
     while ($line =~ /\((?:\s*)(${relatedWording_Inline}.*?)\)/g) {
       my $str = $1;
       print LOGF "Related(I): $id => $str\n";
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, 0, 0);
+      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
       print LOGF "Related(I): $id ==> @$refToRelatedArticles\n";
     }
   }
@@ -2290,7 +2302,7 @@ sub identifyRelatedArticles(\$\@$) {
         print LOGF "Related(N): $id => $line\n";
         # 'extractInternalLinks' may mofidy its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $refToRelatedArticles, $id, 0, 0);
+        &extractInternalLinks(\$line, $refToRelatedArticles, $id, undef, 0, 0);
         print LOGF "Related(N): $id ==> @$refToRelatedArticles\n";
       }
     } else { # we haven't yet found the related section

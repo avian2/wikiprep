@@ -27,7 +27,8 @@ LOGS =	images.log \
 	asse.log \
 	hurt.log \
 	microsoft.log \
-	microsoft2.log
+	microsoft2.log \
+	window.log
 
 all: test
 
