@@ -1703,6 +1703,14 @@ sub collectInternalLink($$$\@\@$$) {
           push(@$refToAnchorTextArray, { targetId => "undef", anchorText => "$result", 
                                          linkLocation => "$linkLocation" });
         }
+      } else {
+        # This "if" is probably unnecessary
+
+        # For image links without an anchor, we save only the link location
+        if ( defined($targetId) ) {
+          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "__location_only__", 
+                                         linkLocation => "$linkLocation" });
+        }
       }
     }
 
