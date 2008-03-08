@@ -1690,27 +1690,18 @@ sub collectInternalLink($$$\@\@$$) {
 
     # We log anchor text only if it would be visible in the web browser. This means that for an
     # link to an ordinary page we log the anchor whether an alternative text was available or not
-    # (in which case Wikipedia shows just the name of the page). For a link to an image we log
-    # the anchor only if alternative text was given, because on the other case Wikipedia shows
-    # the image without any description.
+    # (in which case Wikipedia shows just the name of the page).
+    #
+    # Note that for a link to an image that has no alternative text, we log an empty string.
+    # This is important because otherwise the linkLocation wouldn't get stored.
 
     if ( defined($refToAnchorTextArray) ) {
-      if ( ( ! $isImageLink ) || $alternativeTextAvailable ) {
-        if ( defined($targetId) ) {
-          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
-                                         linkLocation => "$linkLocation" });
-        } elsif ($logUnknownLinks) {
-          push(@$refToAnchorTextArray, { targetId => "undef", anchorText => "$result", 
-                                         linkLocation => "$linkLocation" });
-        }
-      } else {
-        # This "if" is probably unnecessary
-
-        # For image links without an anchor, we save only the link location
-        if ( defined($targetId) ) {
-          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "__location_only__", 
-                                         linkLocation => "$linkLocation" });
-        }
+      if ( defined($targetId) ) {
+        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
+                                       linkLocation => "$linkLocation" });
+      } elsif ($logUnknownLinks) {
+        push(@$refToAnchorTextArray, { targetId => "undef", anchorText => "$result", 
+                                       linkLocation => "$linkLocation" });
       }
     }
 
