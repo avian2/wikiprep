@@ -1,0 +1,233 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Window (disambiguation)</title>
+    <id>1374065</id>
+    <revision>
+      <id>196008183</id>
+      <timestamp>2008-03-05T09:59:56Z</timestamp>
+      <contributor>
+        <username>Rifleman 82</username>
+        <id>1255637</id>
+      </contributor>
+      <comment>/* Other uses */ literally window in german</comment>
+      <text xml:space="preserve">{{wiktionarypar|window}}
+A '''[[window]]''' is an opening in an otherwise solid, opaque surface, through which light can pass.
+
+'''Window''' may also refer to:
+
+==Business==
+* [[Video window]], the delay between a movie's theatrical and DVD release
+
+==Computing==
+* [[Window (computing)]], a display rectangle used by a graphical user interface (GUI)
+* The [[X Window System]], an underlying protocol for creating GUI windows
+* A window in [[computer networking]], a data transmission period 
+
+==People==
+* [[Window Snyder]], Mozilla Corporation security expert
+
+==Music==
+*&quot;Window&quot;, a song by Fiona Apple from her album ''[[Extraordinary Machine]]''
+* &quot;Window&quot;, a song by [[The Album Leaf]]
+* [[Window (album)|''Window'' (album)]], an album released by The Microphones in 2000
+
+==Atmosphere==
+* [[Astronomical window]], an astronomical term
+* [[Radio window]], the range of electromagnetic radiation frequencies that the earth's atmosphere lets through
+* [[Atmospheric window]], those parts of the electromagnetic spectrum that are not absorbed by the earth's atmosphere
+* [[Optical window]], that portion of the electromagnetic spectrum that passes through the atmosphere to the ground
+
+==Other uses==
+* [[Chaff (radar countermeasure)|Window, radar countermeasure]], during [[World War II]], the dropping of aluminium foil by aircraft to deceive radar installations
+* [[Window function]], in signal processing, a function that is zero-valued outside of some chosen interval
+* [[Window (geology)|Window]] or &quot;fenster&quot; (lit. &quot;window&quot; in German) in [[geology]], a hole in a thrust sheet through which the underlying rocks crop out
+* [[Oval window]] and [[Round window|round window]], two membranes between middle and inner ear
+* [[Launch window]], in aerospace, a time period in which a particular rocket must be launched
+* [[Window period]], in medicine, the time between first infection and when a test can detect that infection
+* ''[[Window (film)]]'', a 2005 film starring [[Louis Gossett, Jr.]]
+
+==See also==
+* [[Windows (disambiguation)]]
+
+{{disambig}}
+
+[[bg:Windows]]
+[[de:Windows (Begriffsklärung)]]
+[[es:Ventana (desambiguación)]]
+[[fr:Windows (homonymie)]]
+[[ko:윈도]]
+[[it:Windows (disambigua)]]
+[[nl:Venster]]
+[[pl:Okno]]
+[[ru:Окно (значения)]]
+[[simple:Windows]]
+[[sr:Прозор (вишезначна одредница)]]
+[[vi:Windows (định hướng)]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Disambig</title>
+    <id>9950598</id>
+    <revision>
+      <id>192341512</id>
+      <timestamp>2008-02-18T17:35:00Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>adding workaround for [[***]]</comment>
+      <text xml:space="preserve">&lt;div class=&quot;notice metadata plainlinks&quot; id=&quot;disambig&quot;&gt;
+{|style=&quot;background:none&quot;
+|style=&quot;vertical-align:middle;&quot;|[[Image:Disambig gray.svg|30px|Disambiguation notice]]
+|style=&quot;vertical-align:middle;&quot;|''This [[Wikipedia:Disambiguation|disambiguation]] page lists articles associated with the same title. If &lt;!-- you are viewing this online as opposed to as a [[hard copy]] and --&gt;an [{{fullurl:Special:Whatlinkshere/{{{page-title|{{FULLPAGENAME}}}}}|namespace=0}} internal link] led you here, you may wish to change the link to point directly to the intended article.''
+|}&lt;/div&gt;&lt;includeonly&gt;[[Category:Disambiguation]]&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Wiktionarypar</title>
+    <id>1167761</id>
+    <revision>
+      <id>109614348</id>
+      <timestamp>2007-02-20T18:53:53Z</timestamp>
+      <contributor>
+        <username>Persian Poet Gal</username>
+        <id>538346</id>
+      </contributor>
+      <minor/>
+      <comment>fufilling protected edit request</comment>
+      <text xml:space="preserve">&lt;div class=&quot;infobox sisterproject&quot;&gt;
+&lt;div style=&quot;float: left;&quot;&gt;[[Image:Wiktionary-logo-en.png|50px|none|Wiktionary|]]&lt;/div&gt;
+&lt;div style=&quot;margin-left: 60px;&quot;&gt;Look up '''''[[wiktionary:{{{1}}}|{{{1}}}]]'''{{#if:{{{2|}}}|, '''[[wiktionary:{{{2}}}|{{{2}}}]]'''}}{{#if:{{{3|}}}|, '''[[wiktionary:{{{3}}}|{{{3}}}]]'''}}{{#if:{{{4|}}}|, '''[[wiktionary:{{{4}}}|{{{4}}}]]'''}}{{#if:{{{5|}}}|, '''[[wiktionary:{{{5}}}|{{{5}}}]]'''}}'' in [[Wiktionary]], the free dictionary.&lt;/div&gt;
+&lt;/div&gt;&lt;noinclude&gt;
+----
+This [[Wikipedia:Template|template]] is a [[Wikipedia:Avoid self-references|self-reference]] and so is part of the Wikipedia project rather than the encyclopaedic content.
+
+Usage: &lt;code&gt;{&amp;#123;Wiktionarypar|1st|2nd|...|5th&amp;#125;}&lt;/code&gt; (one up to five parameters)
+
+See also:
+* {{Lt|wiktionary}}
+* {{Lt|wiktionarypar}}
+* {{Lt|wiktionaryleft}}
+* {{Lt|wiktionarycat}}
+
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Templates using ParserFunctions|{{PAGENAME}}]]
+
+[[sl:predloga:wikislovar]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+    <page>
+	        <title>Chaff (radar countermeasure)</title>
+		    <id>1550386</id>
+
+		        <revision>
+				      <id>188650128</id>
+				            <timestamp>2008-02-02T19:40:35Z</timestamp>
+					          <contributor>
+							          <ip>82.0.173.47</ip>
+								        </contributor>
+									      <text xml:space="preserve">[[Image:Usnchaff.jpg|right|thumb|Modern US Navy RR-129 and RR-124 chaff countermeasures and containers]]
+										      '''Chaff''', originally called '''Window''' by the [[United Kingdom|British]], and '''''Düppel''''' by the [[World War II]] era [[Germany|German]] [[Luftwaffe]], is a [[radar]] [[countermeasure]] in which aircraft or other targets spread a cloud of small, thin pieces of [[aluminium]], metallised glass fibre or [[plastic]], which either appears as a cluster of secondary targets on [[radar]] screens or swamps the screen with multiple returns. 
+
+										      Modern armed forces use chaff (in naval applications, for instance, using short-range [[Mark 36 SRBOC|SRBOC]] rockets) to distract radar-guided [[missile]]s from their targets. Most military aircraft and warships have chaff dispensing systems for self-defense. An [[intercontinental ballistic missile]] may release in its midcourse phase several independent warheads, a large number of [[flare (countermeasure)|decoys]], and chaff.
+
+										      Chaff can also be used to [[distress signal|signal distress]] by an [[aircraft]] when [[communication]]s are not functional. This has the same effect as an SOS, and can be picked up on radar. It is done by dropping chaff every 2 minutes.
+
+										      ==World War II==
+										      The idea of using chaff was independently developed in the [[United Kingdom|UK]] and [[Germany]]. 
+
+										      As far back as [[1937]], [[R. V. Jones]] had suggested that a piece of metal foil falling through the air might create radar echoes. In early [[1942]], a [[Telecommunications Research Establishment|TRE]] researcher named [[Joan Curran]] had investigated the idea and come up with a scheme for dumping packets of [[aluminum]] strips from aircraft to generate a cloud of false echoes.&lt;ref name=GregGoebel&gt;Goebel, Greg; ''[http://www.vectorsite.net/ttwiz_08.html#m3 The wisard war: The British begin countermeasures]&lt;/ref&gt; The British referred to the idea as Window. Meanwhile in Germany, similar research had led to the development of Düppel. Once the idea had been passed to the US, [[Fred Whipple]] developed a system (according to [[Harvard]] Gazette Archives) for dispensing strips for the [[United States Army Air Forces|USAAF]], but it is not known if this was ever used.
+
+										      [[Image:Window - Lancaster Dropping Window.jpg|thumb|right|A [[Avro Lancaster|Lancaster]] dropping chaff (the crescent-shaped white cloud on the left of the picture)]]
+										      The systems were all essentially identical in concept, small [[aluminum]] strips cut to one-half of the target radar's wavelength. When dropped, the strips would give a strong echo, appearing as an aircraft on radar screens. Opposing defenses would find it almost impossible to pick out the &quot;real&quot; aircraft from the false echos. Other radar-confusing techniques included [[Mandrel (codename)|Mandrel]], [[Piperack]], and [[Jostle]].
+
+										      However, unaware of the opposing air force's knowledge of the chaff concept, planners felt that using it was even more dangerous than not: as soon as it was used the enemy could easily duplicate it and use it against them. In particular the British government's leading scientific adviser, [[Frederick Lindemann, 1st Viscount Cherwell|Professor Lindemann]], balefully pointed out that if the [[Royal Air Force|RAF]] used it against the Germans, the [[Luftwaffe]] would quickly copy it and could launch a new [[the Blitz|Blitz]]. This caused panic in [[Fighter Command]] and [[Anti-Aircraft Command]], who managed to suppress the use of Window until July [[1943]].
+
+										      Examination of the [[Würzburg radar]] equipment brought back to the UK during [[Operation Biting]] and subsequent reconnaissance revealed to the British that all German radars were operating in no more than three major frequency ranges, and thus were prone to [[Radio jamming|jamming]].  [[Arthur Harris|&quot;''Bomber''&quot; Harris]], Commander-in-Chief (C-in-C) of [[RAF Bomber Command]], finally got approval to use Window as part of [[Operation Gomorrah]], the raids against [[Hamburg]]. 
+
+										      The first to use it were [[No. 76 Squadron RAF|76 squadron]]. Twenty-four crews were briefed on how to drop the bundles of [[aluminum|aluminised]]-paper strips (treated-paper was used to minimise the weight and maximise the time that the strips would remain in the air, prolonging the effect), one every minute through the flare chute, using a stopwatch to time them. The results were spectacular. The radar guided master searchlights wandered aimlessly across the sky. The AA guns fired randomly or not at all and the night fighters utterly failed to find the bomber stream. A vast area of Hamburg was devastated with the loss of only 12 bombers. Squadron Commanders quickly had special chutes fitted to their bombers to make the deployment even easier. Seeing this as a development that made it safer to go on ops, many crews got in as many trips as they could before the Germans found a countermeasure.
+
+										      [[Image:Giant Wurzburg Display - Window Effect.jpg|thumb|left|The effect of chaff on the display of a [[Würzburg radar|Giant Würzburg radar]]]]
+										      Although the metal strips puzzled the German civilians at first (many thought they were [[radioactive]] or carrying [[anthrax]], or some other disease), the German scientists knew exactly what they were because they had developed Düppel themselves and refrained from using it for exactly the same reasons as Lindemann had pointed out to the British.
+
+										      The use of Window rendered the ground-controlled 'Himmelbett' fighters of the [[Kammhuber Line]] unable to track their targets in the night sky and left radar-guided [[flak|guns]] and [[spotlights]] useless. In response to this, a new tactic, called 'Wild Boar', was developed to cope with the lack of accurate ground guidance. Ground operators would direct night fighters to areas where the concentrations of chaff were greatest (which would indicate the source of the chaff), and allow the night fighters to visually acquire their targets. 
+
+										      A lesser known fact is that Luftwaffe used this technology just six weeks after the above mentioned Hamburg raid. In a series of raids in 1943, and a larger series known as [[Operation Steinbock]] between February and May 1944, Düppel allowed German bombers to once again return to [[London]]. Although theoretically effective, the small number of bombers, notably in relation to the RAF's now-large [[night fighter]] force, doomed the effort from the start. The British fighters were able to go aloft in large numbers and often found the German bombers in spite of their Düppel.
+
+										      ==Falklands War==
+
+										      Chaff was heavily used by British warships in the [[Falklands War]]. The absence of chaff launchers on the ''[[Atlantic Conveyor]]'', while used by all other [[Royal Navy]] ships in the group, may have led to the ship's sinking by an [[Exocet]] missile — although given the vessel's large radar cross section, it is unlikely that chaff would have been effective.
+
+										      ==See also==
+										      *[[Countermeasure]]
+										      *[[Infrared countermeasures]]
+										      *[[Flare (countermeasure)]]
+										      *[[Electronic countermeasures]]
+										      *[[Anti-aircraft]]
+										      *[[Anti-ballistic missile]]
+
+										      {{RAF WWII Strategic Bombing}}
+
+										      ==External links==
+										      * [http://www.bbc.co.uk/dna/h2g2/brunel/A591545 BBC: The History of Radar]
+										      * Obituary of [[Joan Curran]] in [http://findarticles.com/p/articles/mi_qn4158/is_19990219/ai_n14214115 The Independent, Feb 19, 1999  by Tam Dalyell]
+										      * [http://forum.keypublishing.co.uk/showthread.php?p=457050  Chief of Chaff dies]
+
+										      ==Footnotes==
+
+										      &lt;references/&gt;
+
+										      [[Category:World War II British electronics]]
+										      [[Category:World War II Allied electronics]]
+										      [[Category:Military technology]]
+										      [[Category:Weapons countermeasures]]
+
+										      [[da:Chaff]]
+										      [[de:Düppel (Radartäuschung)]]
+										      [[fa:خاشه]]
+										      [[fr:Paillette (armée)]]
+										      [[id:Chaff]]
+										      [[it:Chaff]]
+										      [[he:מוץ]]
+										      [[nl:Antiradarsneeuw]]
+										      [[ja:チャフ]]
+										      [[no:Chaff]]
+										      [[pt:Chaff]]
+										      [[ru:Дипольные отражатели]]
+										      [[sv:Remsor (motmedel)]]</text>
+									          </revision>
+										    </page>
+</mediawiki>
