@@ -432,7 +432,11 @@ sub isTitleOkForLocalPages(\$) {
   if ($$refToPageTitle =~ /^:.*$/) {
     # Leading colon by itself implies main namespace
     $namespaceOk = 0;
-  } elsif ($$refToPageTitle =~ /^([^:]*):/) {
+
+  # Note that there must be at least one non-space character following the namespace specification
+  # for the page title to be valid.
+
+  } elsif ($$refToPageTitle =~ /^([^:]*):\s*\S/) {
     # colon found but not in the first position - check if it designates a known namespace
     my $prefix = $1;
     &normalizeNamespace(\$prefix);
