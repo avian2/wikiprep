@@ -434,7 +434,8 @@ sub isTitleOkForLocalPages(\$) {
     $namespaceOk = 0;
 
   # Note that there must be at least one non-space character following the namespace specification
-  # for the page title to be valid.
+  # for the page title to be valid. If there is none, then the link is considered to point to a
+  # page in the main namespace.
 
   } elsif ($$refToPageTitle =~ /^([^:]*):\s*\S/) {
     # colon found but not in the first position - check if it designates a known namespace
