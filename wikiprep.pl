@@ -100,7 +100,7 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
                      5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
                      9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
 
-my $maxTemplateRecursionLevels = 5;
+my $maxTemplateRecursionLevels = 10;
 my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
@@ -685,6 +685,16 @@ sub prescan() {
       # enclosing all the rest of the template body in <noinclude> tags.
       # These definitions can easily span several lines, hence the "/s" modifiers.
 
+      # Remove comments (<!-- ... -->) from template text. This is best done as early as possible so
+      # that it doesn't slow down the rest of the code.
+      
+      # Note that comments must be removed before removing other XML tags,
+      # because some comments appear inside other tags (e.g. "<span <!-- comment --> class=...>"). 
+      
+      # Comments can easily span several lines, so we use the "/s" modifier.
+
+      $text =~ s/<!--(?:.*?)-->/ /sg;
+
       my $onlyincludeAccumulator;
       while ($text =~ /<onlyinclude>(.*?)<\/onlyinclude>/sg) {
         my $onlyincludeFragment = $1;
@@ -751,6 +761,13 @@ sub transform() {
     my $text = ${$page->text};
 
     my $orgLength = length($text);  # text length BEFORE any transformations
+
+    # Remove comments (<!-- ... -->) from text. This is best done as early as possible so
+    # that it doesn't slow down the rest of the code.
+      
+    # Comments can easily span several lines, so we use the "/s" modifier.
+
+    $text =~ s/<!--(?:.*?)-->/ /sg;
 
     # The check for stub must be done BEFORE any further processing,
     # because stubs indicators are templates, and templates are substituted.
@@ -958,7 +975,7 @@ sub resolveLink(\$) {
 
 BEGIN {
 
-my $nowikiRegex = qr/((?:<nowiki>.*?<\/nowiki>)|(?:<!--.*?-->))/;
+my $nowikiRegex = qr/(<nowiki>.*?<\/nowiki>)/;
 
 sub includeTemplates(\$\$\$) {
   my ($refToId, $refToTitle, $refToText) = @_;
@@ -990,7 +1007,7 @@ sub includeTemplates(\$\$\$) {
 
     # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
     # infinite loops if templates include an example invocation in <nowiki> tags.
-    &nowiki::extractTags($nowikiRegex, $refToText, \%ChunksReplaced);
+    &nowiki::extractTags(\$nowikiRegex, $refToText, \%ChunksReplaced);
 
     my $r = $$refToText =~ s/(?<!\{)\{\{(?!\{)
                                 (?:\s*)        # optional whitespace before the template name is ignored
@@ -1023,6 +1040,10 @@ sub includeTemplates(\$\$\$) {
     # print LOGF "$$refToText";
     # print LOGF "#########\n\n";
     $templateRecursionLevels++;
+  }
+
+  if($templateRecursionLevels >= $maxTemplateRecursionLevels) {
+    print LOGF "Maximum template recursion level reached\n"
   }
 
   # Since we limit the number of levels of template recursion, we might end up with several
@@ -1351,6 +1372,11 @@ sub includeTemplateText(\$\%\$\$) {
           ) {
       $parameterRecursionLevels++;
     }
+
+    if($parameterRecursionLevels >= $maxParameterRecursionLevels) {
+      print LOGF "Maximum template parameter recursion level reached\n"
+    }
+
   } else {
     # The page being included cannot be identified - perhaps we skipped it (because currently
     # we only allow for inclusion of pages in the Template namespace), or perhaps it's
@@ -2008,11 +2034,6 @@ sub postprocessText(\$$) {
                                  )
                             \}\}
                            / /sgx);
-
-  # Remove comments (<!-- ... -->) from the text. This must be performed before removing other tags,
-  # because some comments appear inside other tags (e.g. "<span <!-- comment --> class=...>"). They 
-  # can easily span several lines, so we use the "/s" modifier.
-  $$refToText =~ s/<!--(?:.*?)-->/ /sg;
 
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text

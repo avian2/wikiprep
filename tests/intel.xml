@@ -1,0 +1,1841 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Intel Corporation</title>
+    <id>14617</id>
+    <revision>
+      <id>196554811</id>
+      <timestamp>2008-03-07T16:20:09Z</timestamp>
+      <contributor>
+        <username>Japco</username>
+        <id>1049301</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">{{Dablink|&quot;Intel&quot; redirects here. For other uses, see [[Intel (disambiguation)]] and [[Intelligence (disambiguation)]].}}
+{{Globalize}} {{Infobox_Company |
+  company_name     = Intel Corporation |
+  company_logo     = [[Image:Intel-logo.svg|100px]] |
+  company_type     = [[Public company|Public]] ({{nasdaq|INTC}}, {{hkex|4335}}) |
+  slogan           = ''Leap Ahead'' |
+  foundation       = [[1968]] &lt;sup&gt;1&lt;/sup&gt; |
+  location         = [[Santa Clara, California]] &lt;br/&gt; {{USA}} |
+  key_people       = [[Paul S. Otellini]], CEO &lt;br&gt;[[Craig Barrett (Intel Chairman)|Craig Barrett]], Chairman |
+  founders         = Gordon E. Moore and Robert Noyce |
+  num_employees    = 86,300 (2007)&lt;ref name='CNNmoney 2007-10-17'&gt; {{cite web|url=http://money.cnn.com/quote/snapshot/snapshot.html?symb=INTC |title=INTC - Intel Corporation Company profile - CNNMoney |accessdate=2007-10-17 |work=money.cnn.com |publisher=Cable News Network }}&lt;/ref&gt; |
+  industry         = [[Semiconductors]] |
+  products         = [[Microprocessor]]s&lt;br&gt;[[Flash memory]]&lt;br&gt;[[Motherboard]] [[Chipsets]]&lt;br&gt;[[Network Interface Card]]&lt;br&gt;[[Bluetooth]] [[Chipsets]] |
+  revenue          = {{gain}} $38.3 billion [[United States dollar|USD]] (2007)&lt;ref&gt;
+{{cite web
+ | url = http://www.edn.com/article/CA6424781.html
+ | title = AMD wins 2006 revenue battle with Intel, iSuppli says
+ | accessdate = 2007-11-05
+}}&lt;/ref&gt;&lt;ref&gt;
+{{cite web
+ | url = http://www.informationweek.com/news/showArticle.jhtml?articleID=198001312
+ | title = Chipmaker Report: Intel's Revenue Sank In 2006 
+ | accessdate = 2007-11-05
+}}&lt;/ref&gt; |
+  operating_income = {{gain}} $8.2 billion [[United States dollar|USD]] (2007) | 
+  net_income       = {{gain}} $7.0 billion [[United States dollar|USD]] (2007) | 
+  homepage         = [http://www.intel.com/ www.intel.com] |
+  footnotes        = '''&lt;sup&gt;1&lt;/sup&gt;'''&lt;small&gt;[[Incorporation (business)|Incorporated]] in [[California]] in [[1968]], reincorporated in Delaware in [[1989]].&lt;ref name='SEC-filing'&gt; {{cite web|url=http://secfilings.nasdaq.com/edgar_conv_html%2f2006%2f02%2f27%2f0000891618-06-000089.html#FIS_BUSINESS |title=INTEL CORP (Form: 10-K, Received: 02/27/2006 06:02:42) |accessdate=2007-07-05 |date=2005-12-31 |work=[[United States Securities and Exchange Commission]] }}&lt;/ref&gt;&lt;/small&gt;
+}}
+'''Intel Corporation''' ({{nasdaq|INTC}}; {{hkex|4335}}) is the world's largest [[semiconductor]] company and the inventor of the [[X86 architecture|x86]] series of microprocessors, the processors found in most [[personal computers]].   Founded in 1968 as '''Int'''egrated '''El'''ectronics Corporation and based in [[Santa Clara, California]], [[United States|USA]], Intel also makes [[motherboard]] chipsets, [[network card]]s and ICs, [[flash memory]], graphic chips, embedded processors, and other devices related to communications and computing.  Founded by semiconductor pioneers [[Robert Noyce]] and [[Gordon Moore]], and widely associated with the executive leadership and vision of [[Andrew Grove]], Intel combines advanced chip design capability with a leading-edge manufacturing capability.  Originally known primarily to engineers and technologists, Intel's successful &quot;Intel Inside&quot; advertising campaign of the 1990s made it and its [[Pentium]] processor household names. 
+
+Intel was an early developer of [[Static random access memory|SRAM]] and [[Dynamic random access memory|DRAM]] memory chips, and this represented the majority of its business until the early 1990s.{{Fact|date=July 2007}}  While Intel created the first commercial microprocessor chip in 1971, it was not until the creation of the [[personal computer]] (PC) that this became their primary business.  During the 1990s, Intel invested heavily in new microprocessor designs and in fostering the rapid growth of the PC industry.  During this period Intel became the dominant supplier of microprocessors for PCs, and was known for aggressive and sometimes controversial tactics in defense of its market position, as well as a struggle with [[Microsoft]] for control over the direction of the PC industry.&lt;ref name='CNET 1998-09-23'&gt;{{cite news | first=Dan | last=Goodin | coauthors= | title=Microsoft's holy war on Java | date=[[1998-09-23]] | publisher=CNET News.com | url =http://www.news.com/2009-1001-215854.html | work =news.com | pages = | accessdate = 2008-01-07 | language = }}&lt;/ref&gt;&lt;ref name='BBC 1998-12-14'&gt;{{cite news | first=Lea | last=Graham | coauthors= | title=USA versus Microsoft: the fourth week | date=[[1998-12-14]] | publisher=The [[BBC]] | url =http://news.bbc.co.uk/1/hi/special_report/1998/04/98/microsoft/215645.stm | work =news.bbc.co.uk | pages = | accessdate = 2008-01-07 | language = }}&lt;/ref&gt;
+The 2007 rankings of the world's 100 most powerful brands published by [[Millward Brown|Millward Brown Optimor]] showed the company's brand value falling 10 places – from number 15 to number 25.&lt;ref name='Brandz 2007'&gt; {{cite web|url=http://www.millwardbrown.com/Sites/optimor/Content/KnowledgeCenter/BrandzRanking2007.aspx |title=Brandz Ranking 2007 |accessdate=2007-07-28 |date=2007 |publisher=[[Millward Brown|Millward Brown Optimor]] }}&lt;/ref&gt;
+
+== Corporate history ==
+[[Image:Intelheadquarters.jpg|thumb|Intel headquarters in Santa Clara]]
+
+Intel was founded in 1968 by [[Gordon E. Moore]] (a [[chemist]] and [[physicist]]) and [[Robert Noyce]] (a physicist and co-inventor of the [[integrated circuit]]) when they left [[Fairchild Semiconductor]].  A number of other Fairchild employees also went on to participate in other [[Silicon Valley]] companies. Intel's third employee  was [[Andrew Grove|Andy Grove]],&lt;ref&gt;The [[Andrew Grove]] article explains how a clerical error exchanged the employee ID numbers of Grove and the fourth employee, Leslie Vadasz, whom Grove had hired.&lt;/ref&gt; (a [[chemical engineer]]), who ran the company through much of the 1980s and the high-growth 1990s.  Grove is now remembered as the company's key business and strategic leader. By the end of the 1990s, Intel was one of the largest and most successful businesses in the world.{{Fact|September 2007 |Some statistics needed|date=September 2007}}
+
+===Origin of the name===
+At its founding, Gordon Moore and Robert Noyce wanted to name their new company &quot;Moore Noyce&quot;. This name, however, sounded remarkably similar to &quot;more noise&quot; &amp;mdash; an ill-suited name for an [[electronics]] company, since noise is typically associated with bad [[interference]].  They then used the name NM Electronics for almost a year, before deciding to call their company '''INT'''egrated '''EL'''ectronics or &quot;Intel&quot; for short. However, Intel was already trademarked by a [[hotel]] chain, so they had to buy the rights for that name at the beginning.&lt;ref&gt;{{web cite |url=http://www.theinquirer.net/default.aspx?article=42469 |title=Secret of Intel name revealed |publisher=The Inquirer |author=Theo Valich |date=2007-09-19 |accessdate=2007-09-19}}&lt;/ref&gt;
+
+===Company's evolution===
+Intel has grown through several distinct phases. At its founding, Intel was distinguished simply by its ability to make semiconductors, and its primary product were [[static random access memory]] (SRAM) chips.  Intel's business grew during the 1970s as it expanded and improved its manufacturing processes and produced a wider range of products, still dominated by various memory devices. 
+
+While Intel created the [[Intel 4004|first microprocessor]] in 1971 and one of the first [[microcomputer]]s in 1972,&lt;ref name='Intellec-1973'&gt; {{cite web|url=http://www.old-computers.com/MUSEUM/computer.asp?c=754&amp;st=1 |title=Intel Intellec Series |accessdate=2007-07-31 |last=Silberhorn |first=Gottfried |coauthors=Colin Douglas Howell |work=old-computers.com |publisher=OLD-COMPUTERS.COM }}&lt;/ref&gt;&lt;ref name='Intel-Product-Timeline'&gt; {{cite web|url=http://download.intel.com/museum/research/arc_collect/timeline/TimelineDateSort7_05.pdf |title=A chronological list of Intel products. The products are sorted by date. |accessdate=2007-07-31 |date=2005-07 |format=PDF |work=Intel museum |publisher=Intel Corporation }}&lt;/ref&gt; by the early 1980s its business was dominated by [[dynamic random access memory]] chips.  However, increased competition from [[Japan]]ese semiconductor manufacturers had by 1983 dramatically reduced the profitability of this market, and the sudden success of the [[IBM]] [[personal computer]] convinced then-CEO Grove to shift the company's focus to microprocessors and to change fundamental aspects of that business model.  By the end of the 1980s this decision had proven successful, and Intel embarked on a 10-year period of unprecedented growth as the primary (and most profitable) hardware supplier to the PC industry. 
+
+After 2000, growth in demand for high-end microprocessors slowed and competitors garnered significant market share, initially in low-end and mid-range processors but ultimately across the product range, and Intel's dominant position was reduced.  In the early 2000s then-CEO Craig Barrett attempted to diversify the company's business beyond semiconductors, but few of these activities were ultimately successful. 
+
+In 2005, CEO Paul Otellini reorganized the company to refocus its core processor and chipset business on platforms (enterprise, digital home, digital health, and mobility) which led to the hiring of over 20,000 new employees. In September of 2006 due to falling profits, the company announced a restructuring that resulted in layoffs of 10,500 employees or about 10 percent of its workforce by July of 2006. Its research lab located at Cambridge University was closed at the end of 2006.
+
+===Sale of XScale processor business===
+On June 27, 2006, the sale of Intel's [[XScale]] assets was announced.  Intel agreed to sell the XScale processor business to [[Marvell Technology Group]] for an estimated $600 million in cash and the assumption of unspecified liabilities. The move is intended to permit Intel to focus its resources on its core x86 and server businesses. The acquisition was completed on November 9, 2006.&lt;ref name='XScale'&gt;{{cite news | first= | last= | coauthors= | title=Marvell buys Intel's handheld processor unit for $600 million | date=[[2006-06-27]] | publisher=CMP Media LLC. | url =http://www.eetimes.com/news/latest/showArticle.jhtml?articleID=189601851 | work =eetimes.com | pages = | accessdate = 2007-07-12 | language = }}&lt;/ref&gt;
+
+==Market history==
+===SRAMS and the microprocessor===
+&lt;!-- Commented out because image was deleted: [[Image:L Intel-C4004 (gray traces).jpg|thumb|right|160px|Intel C4004, the world's first single-chip microprocessor. The &quot;gold and white with gray traces&quot; specimen shown belongs to the initial [[CERDIP]] type series manufactured in 1971.]]--&gt;
+The company's first products were [[shift register]] memory and random-access [[Primary storage|memory]] integrated circuits, and Intel grew to be a leader in the fiercely competitive [[Dynamic random access memory|DRAM]], [[Static random access memory|SRAM]], and [[Read-only memory|ROM]] markets throughout the 1970s.  Concurrently, Intel engineers [[Marcian Hoff]], [[Federico Faggin]], Stanley Mazor and [[Masatoshi Shima]] invented the first [[microprocessor]].  Originally developed for the Japanese company [[Busicom]] to replace a number of [[Application-specific integrated circuit|ASIC]]s in a  calculator already produced by Busicom, the [[Intel 4004]] was introduced to the mass market on [[November 15]], [[1971]], though the microprocessor did not become the core of Intel's business until the mid-1980s. (Note: Intel is usually given credit with [[Texas Instruments]] for the almost-simultaneous invention of the microprocessor.)
+
+===From DRAM to microprocessors===
+In 1983, at the dawn of the [[personal computer]] era, Intel's profits came under increased pressure from [[Japan]]ese memory-chip manufacturers, and then-President Andy Grove drove the company into a focus on microprocessors. Grove described this transition in the book ''[[Only the Paranoid Survive]]''.  A key element of his plan was the notion, then considered radical, of becoming the single source for successors to the popular [[Intel 8086|8086]] microprocessor.
+
+Until then, manufacture of complex integrated circuits was not reliable enough for customers to depend on a single supplier, but Grove began producing processors in three geographically distinct factories, and ceased licensing the chip designs to competitors such as [[Zilog]] and [[AMD]].  When the PC industry exploded in the late 1980s and 1990s, Intel was one of the primary beneficiaries.
+
+===Intel, x86 processors, and the IBM PC===
+Despite the ultimate importance of the microprocessor, the [[4004]] and its successors the [[8008]] and the [[8080]] were never major revenue contributors at Intel.  As the next processor, the [[8086]] (and its variant the [[8088]]) was completed in 1978, Intel embarked on a major marketing and sales campaign for that chip nicknamed &quot;Operation Crush&quot;, and intended to win as many customers for the processor as possible.  One design win was the newly-created [[IBM PC]] division, though the importance of this was not fully realized at the time.  
+
+IBM introduced its personal computer in 1981, and it was rapidly successful.  In 1982, Intel created the [[80286]] microprocessor, which, two years later, was used in the IBM PC/AT.  [[Compaq]], the first IBM PC &quot;clone&quot; manufacturer, in 1985 produced a desktop system based on the faster [[80286]] processor and in 1986 quickly followed with the first [[80386]]-based system, beating IBM and establishing a competitive market for PC-compatible systems and setting up Intel as a key component supplier.
+
+In 1975 the company had started a project to develop a highly-advanced 32-bit microprocessor, finally released in 1981 as the  [[Intel iAPX 432]]. The project was too ambitious and the processor was never able to meet its performance objectives, and it failed in the marketplace. Intel extended the x86 architecture to 32 bits instead.&lt;ref&gt;{{cite web
+  | last = Maliniak
+  | first = Lisa 
+  | title = Ten Notable Flops: Learning From Mistakes
+  | work = Electronic Design Online
+  | date = October 21, 2002  
+  | url = http://electronicdesign.com/Articles/Index.cfm?AD=1&amp;ArticleID=2839
+  | accessdate = 2007-11-27
+}}&lt;/ref&gt;&lt;ref&gt;{{cite web
+  | last = Dvorak
+  | first = John C.
+  | authorlink = John C. Dvorak
+  | title = What Ever Happened to... Intel's Dream Chip?
+  | work = 
+  | date = February 1997
+  | url = http://www.brouhaha.com/~eric/retrocomputing/intel/iapx432/dreamchip.html
+  | accessdate =  2007-11-27
+}}&lt;/ref&gt;
+
+====386 microprocessor====
+During this period Andy Grove dramatically redirected the company, closing much of its [[DRAM]] business and directing resources to the microprocessor business.  Of perhaps greater importance was his decision to &quot;single-source&quot; the 386 microprocessor.  Prior to this, microprocessor manufacturing was in its infancy, and manufacturing problems frequently reduced or stopped production, interrupting supplies to customers.  To mitigate this risk, these customers typically insisted that multiple manufacturers produce chips they could use to ensure a consistent supply.  The 8080 and 8086-series microprocessors were produced by several companies, notably [[Zilog]] and [[AMD]].  Grove made the decision not to license the 386 design to other manufacturers, instead producing it in three geographically distinct factories in Santa Clara, CA; Hillsboro, OR; and the Phoenix, Arizona suburb of Chandler; and convincing customers that this would ensure consistent delivery.  As the success of Compaq's Deskpro 386 established the 386 as the dominant CPU choice, Intel achieved a position of near-exclusive dominance as its supplier.  Profits from this funded rapid development of both higher-performance chip designs and higher-performance manufacturing capabilities, propelling Intel to a position of unquestioned leadership by the early 1990s.
+
+====486, Pentium, and Itanium====
+&lt;!--  Commented out because image was deleted: [[Image:Intel4.jpg|thumb|Intel Pentium 4 Processor]] --&gt;
+
+Intel introduced the [[Intel 80486|486]] microprocessor in 1989, and in 1990 formally established a second design team, designing the processors code-named &quot;P5&quot; and &quot;P6&quot; in parallel and committing to a major new processor every two years, versus the four or more years such designs had previously taken.  The P5 was introduced in 1993 as the Intel [[Pentium]], substituting a trademarked name for the former part number (numbers, like 486, cannot be trademarked). The P6 followed in 1995 as the [[Pentium Pro]] and improved into the [[Pentium II]] in 1997.  New architectures were developed alternately in [[Santa Clara, California]] and [[Hillsboro, Oregon]]. 
+
+The Santa Clara design team embarked in 1993 on a successor to the x86 architecture, codenamed &quot;P7&quot;.  The first attempt was dropped a year later, but quickly revived in a cooperative program with [[Hewlett-Packard]] engineers, though Intel soon took over primary design responsibility.  The resulting implementation of the [[Itanium|IA-64]] 64-bit architecture was the [[Itanium]], finally introduced in June 2001.  The Itanium's performance running legacy x86 code did not achieve expectations, and it failed to effectively compete with 64-bit extensions to the original x86 architecture, first from AMD (the [[AMD64]]), then from Intel itself (the [[Intel 64]] architecture, formerly known as EM64T).  As of November 2007, Intel continues to develop and deploy the Itanium.
+
+The Hillsboro team designed the [[Pentium 4#Willamette|Willamette]] processor (code-named P67 and P68) which was marketed as the Pentium 4, and later developed the 64-bit extensions to the x86 architecture, present in some versions of the Pentium 4 and in the [[Intel Core 2]] chips. Many chip variants were developed at an office in [[Haifa, Israel]].
+
+====Pentium flaw====
+{{main|Pentium FDIV bug}}
+In June 1994, Intel engineers discovered a flaw in the floating-point math subsection of the Pentium microprocessor.  Under certain data dependent conditions, low order bits of the result of floating-point division operations would be incorrect, an error that can quickly compound in floating-point operations to much larger errors in subsequent calculations. Intel corrected the error in a future chip revision, but nonetheless declined to disclose it.{{Fact|date=July 2007}}
+
+In October 1994, Dr. Thomas Nicely, Professor of Mathematics at [[Lynchburg College]] independently discovered the bug, and upon receiving no response from his inquiry to Intel, on October 30 posted a message on the Internet.&lt;ref name='Nicely-email'&gt; {{cite web|url=http://www.emery.com/bizstuff/nicely.htm |title=Dr. Thomas Nicely's Pentium email |accessdate=2007-07-12 |last=Nicely |first=Dr. Thomas R. |date=1994-10-30 |publisher=Vince Emery Productions }}&lt;/ref&gt; Word of the bug spread quickly on the Internet and then to the industry  press. Because the bug was easy to replicate by an average user (there was a sequence of numbers one could enter into the OS calculator to show the error), Intel's statements that it was minor and &quot;not even an erratum&quot; were not accepted by many computer users.  During Thanksgiving 1994, the [[New York Times]] ran a piece by journalist [[John Markoff]] spotlighting the error.  Intel changed its position and offered to replace every chip, quickly putting in place a large end-user support organization. This resulted in a $500 million charge against Intel's 1994 revenue.
+
+Ironically, the &quot;Pentium flaw&quot; incident, Intel's response to it, and the surrounding media coverage propelled Intel from being a technology supplier generally unknown to most computer users to a household name. Dovetailing with an uptick in the &quot;Intel Inside&quot; campaign, the episode is considered by some to have been a positive event for Intel, changing some of its business practices to be more end-user focused and generating substantial public awareness, while avoiding (for most users) a lasting negative impression.{{Fact|date=July 2007}}
+
+====Intel Inside, Intel Systems Division, and Intel Architecture Labs====
+During this period, Intel undertook two major supporting programs that helped guarantee their processor's success.  The first is widely-known: the 1990 &quot;[[Intel#Advertising and brand management|Intel Inside]]&quot; marketing and branding campaign.  This campaign established Intel, which had been a component supplier little-known outside the PC industry, as a household name.  The second program is little-known: Intel's Systems Group began, in the early 1990s, manufacturing PC &quot;[[motherboards]]&quot;, the main board component of a personal computer, and the one into which the processor (CPU) and memory (RAM) chips are plugged.  Shortly after, Intel began manufacturing fully-configured &quot;white box&quot; systems for the dozens of PC clone companies that rapidly sprang up.  At its peak in the mid-1990s, Intel manufactured over 15% of all PCs, making it the third-largest supplier at the time.  By manufacturing leading-edge PC motherboards systems, Intel enabled smaller manufacturers to compete with larger manufacturers, accelerating the adoption of the newest microprocessors and system architecture, including the [[Peripheral Component Interconnect|PCI]] bus, [[USB]] and other innovations.  This led to more rapid adoption of each of its new processors in turn.{{Fact|date=July 2007}}
+
+During the 1990s, Intel's [[Intel Architecture Labs|Architecture Lab]] (IAL) was responsible for many of the hardware innovations of the [[personal computer]], including the [[Peripheral Component Interconnect|PCI]] Bus, the [[PCI Express]] (PCIe) bus, the [[Universal Serial Bus]] (USB), [[Bluetooth]] wireless interconnect, and the now-dominant architecture for multiprocessor servers.  IAL's software efforts met with a more mixed fate; its video and graphics software was important in the development of software digital video, but later its efforts were largely overshadowed by competition from [[Microsoft]].  The competition between Intel and Microsoft was revealed in testimony by IAL Vice-President [[Steven McGeady]] at the [[Microsoft anti-trust case|Microsoft antitrust trial]].
+
+Another factor contributing to rapid adoption of Intel's processors during this period were the successive release of [[Microsoft Windows]] operating systems, each requiring significantly greater processor resources.  The releases of [[Windows 95]], [[Windows 98]], and [[Windows 2000]] provided impetus for successive generations of hardware.
+
+===Competition, antitrust and espionage===
+Two factors combined to end this dominance: the slowing of PC demand growth beginning in 2000 and the rise of the low-cost PC.  By the end of the 1990s, microprocessor performance had outstripped software demand for that CPU power.  Aside from high-end server systems and software, demand for which dropped with the end of the &quot;[[dot-com bubble]]&quot;, consumer systems ran effectively on increasingly low-cost systems after 2000.  Intel's strategy of producing ever-more-powerful processors and obsoleting their predecessors stumbled, leaving an opportunity for rapid gains by competitors, notably AMD.  This in turn lowered the profitability of the processor line and ended an era of unprecedented dominance of the PC hardware by Intel.{{Fact|date=July 2007}}
+
+Intel's dominance in the [[x86]] microprocessor market led to numerous charges of [[antitrust]] violations over the years, including [[Federal Trade Commission|FTC]] investigations in both the late 1980s and in 1999, and civil actions such as the 1997 suit by [[Digital Equipment Corporation]] (DEC) and a patent suit by [[Intergraph]].  Intel's market dominance (at one time it controlled over 85% of the market for 32-bit PC microprocessors) combined with Intel's own hardball legal tactics (such as its infamous 338 patent suit versus PC manufacturers)&lt;ref&gt;{{cite news | first=Richard | last=McCausland | coauthors= | title=Counterpunch: Amx86 buyers get 'legal aid.' - Advanced Micro Devices offers legal aid to manufactures of Amx86-based machines warned by Intel Corp. to take out patent licenses | date=[[1993-05-24]] | publisher=LookSmart Ltd. | url =http://findarticles.com/p/articles/mi_m0EKF/is_n1964_v39/ai_13901771 | work =FindArticles | pages = | accessdate = 2007-07-12 | language = }}&lt;/ref&gt; made it an attractive target for litigation, but few of the lawsuits ever amounted to anything.
+
+A case of [[industrial espionage]] arose in 1995 that involved both Intel and AMD.  Guillermo Gaede, an [[Argentina|Argentine]] formerly employed both at [[AMD]] and at Intel's [[Chandler, Arizona|Arizona]] plant, was arrested for attempting in 1993 to sell the [[i486]] and [[Pentium]] designs to AMD and to certain foreign powers.&lt;ref name='intel-spy'&gt;{{cite news | first= | last= | coauthors= | title= Worker Pleads Not Guilty in Intel Spy Case | date=1995-10-20 | publisher=The New York Times Company | url =http://query.nytimes.com/gst/fullpage.html?res=990CE7D81239F933A15753C1A963958260 | work =The New York Times | pages = | accessdate = 2007-07-12 | language = }}&lt;/ref&gt; Gaede videotaped data from his computer screen at Intel and mailed it to AMD, which alerted Intel and authorities, resulting in Gaede's arrest. Gaede was convicted and sentenced to 33 months in prison in June of 1996.&lt;ref name='Guillermo Gaede'&gt;{{cite news | first= | last= | coauthors= | title= Ex-Intel Engineer Sentenced to Prison Term | date=1996-06-25 | publisher=The New York Times Company | url =http://query.nytimes.com/gst/fullpage.html?res=9E01E0DE1239F936A15755C0A960958260 | work =The New York Times | pages = | accessdate = 2007-07-12 | language = }}&lt;/ref&gt;&lt;ref name='Guilty'&gt;{{cite news | first= | last= | coauthors= | title=Ex-Intel employee pleads guilty - Guillermo Gaede pleads guilty to stealing Intel trade secrets - Industry Legal Issue | date=1996-03-25 | publisher=LookSmart, Ltd. | url =http://findarticles.com/p/articles/mi_m0EKF/is_n2109_v42/ai_18135525 | work =findarticles.com | pages = | accessdate = 2007-07-12 | language = }}&lt;/ref&gt;
+
+===Partnership with Apple===
+[[Image:Apple Intel transition WWDC.jpg|thumb|[[Steve Jobs]] confirms the rumors of the transition at the 2005 [[Worldwide Developers Conference|WWDC]]. The lowered &quot;e&quot; is a humorous reference to Intel's former logo.]]
+&lt;!--Please rewrite from Intel's perspective. This only says the advantages for Apple (Amply written about in its own articles), not Intel--&gt;
+{{details|Apple Intel transition}}
+
+On [[June 6]] [[2005]], [[Apple Inc.|Apple]] CEO [[Steve Jobs]] announced that Apple would be transitioning from its long favored [[PowerPC]] architecture to the Intel [[x86 architecture]], because the future PowerPC road map was unable to satisfy Apple's needs. The first Apple computers containing Intel CPUs were announced on [[January 10]], [[2006]]. Apple initially planned to put Intel chips in all of their computers by the end of [[2007]], and later announced that it would be complete by the end of 2006&lt;ref name=apple&gt;{{cite web|url=http://www.apple.com/pr/library/2005/jun/06intel.html |title=Apple to Use Intel Microprocessors Beginning in 2006 |accessdate=2007-07-12 |date=[[2005-06-06]] |work=Apple press release |publisher=[[Apple Inc.]] }}&lt;/ref&gt;, but Apple managed to have its entire consumer product line running on Intel processors by early August 2006. The Apple Xserve server was updated to Intel [[Xeon]] processors from November 2006 and is offered in a configuration similar to Apple's Mac Pro.&lt;ref name=newmacs&gt;[http://news.com.com/Jobs+New+Intel+Macs+are+screamers/2100-7354_3-6025409.html Jobs: New Intel Macs are 'screamers'] news.com&lt;/ref&gt;
+
+===Core Duo advertisement controversy===
+
+&lt;!-- Image with unknown copyright status removed: [[Image:Coreintelad.jpg|thumb|right|200px|Controversial Core 2 Duo print advertisement.]] --&gt;
+
+In &lt;!--August (cannot be in August, since Nancy Bhagat's apology was filed in July, so the ad must be from earlier)--&gt; 2007, the company released a print advertisement for its Core Duo processor featuring six African American runners appearing to bow down to a Caucasian male inside of an office setting (due to the posture taken by runners on starting blocks). According to Nancy Bhagat, Vice President of Intel Corporate Marketing, the general public found the ad to be &quot;insensitive and insulting&quot;.&lt;ref name='Intel-ad blog'&gt; {{cite web|url=http://blogs.intel.com/views/2007/07/sprinter_ad.html |title=Views@Intel - Sprinter Ad (Blog post) |accessdate=2007-08-09 |last=Bhagat |first=Nancy |date=2007-07-31 |work=blogs.intel.com |publisher=Intel Corporation }}&lt;/ref&gt; The campaign was quickly pulled and several Intel executives made public apologies on the corporate website.&lt;ref name='Intel-ad 2007-08'&gt; {{cite web|url=http://www.intel.com/news/sprintad.htm?iid=search |title=Apologies from Intel for Sprinter Ad |accessdate=2007-08-09 |last=MacDonald |first=Don |work=intel.com |publisher=Intel Corporation }}&lt;/ref&gt;
+
+==Corporate affairs==
+In September 2006, Intel had nearly 100,000 employees and 200 facilities world wide. Its 2005 revenues were $38.8 billion and its [[Fortune 500]] ranking was 49th. Its stock symbol is INTC, listed on the [[NASDAQ]].
+
+===Leadership and corporate structure===
+[[Robert Noyce]] was Intel's [[Chief executive officer|CEO]] at its founding in 1968, followed by co-founder [[Gordon Moore]] in 1975.  [[Andy Grove]] became the company's [[President]] in 1979 and added the CEO title in 1987 when Moore became Chairman.  In 1997 Grove succeeded Moore as [[Chairman]], and [[Craig Barrett (Intel President)|Craig Barrett]], already company [[president]], took over.  On [[May 18]] [[2005]], Barrett handed the reins of the company over to [[Paul Otellini]], who previously was the company president and was responsible for Intel's design win in the original [[IBM PC]]. The [[board of directors]] elected Otellini CEO, and Barrett replaced Grove as [[Board of directors|Chairman of the Board]].  Grove stepped down as Chairman, but will be retained as a special adviser.
+
+Current members of the [[board of directors]] of Intel are Craig Barrett, [[Charlene Barshefsky]], [[Susan Decker]], James Guzy, [[Reed Hundt]], Paul Otellini, James Plummer, David Pottruck, Jane Shaw, John Thornton, and  David Yoffie.&lt;ref&gt;{{cite web |url=http://www.intel.com/pressroom/bod.htm |title=Intel Board of Directors |accessdate=2007-09-15}}&lt;/ref&gt;
+
+===Employment===
+Intel is not typical of its Silicon Valley counterparts. Its culture is not as relaxed and informal as companies such as [[Google]] or [[Sun Microsystems]]. It has a fairly strict meritocracy that rewards work generously and does not keep underrated employees around for very long.&lt;ref name='iWon'&gt; {{cite web|url=http://www1.iwon.com/home/careers/company_profile/0,15623,1221,00.html |title=iWon company profiles: Intel |accessdate=2007-07-28 |work=iWon.com |publisher=IAC Search &amp; Media }}&lt;/ref&gt;&lt;ref name='Intel layoff 2006'&gt;{{cite news | first=Andy | last=Patrizio | coauthors= | title=Big Intel Layoffs Could Come Next Week | date=[[2006-08-31]] | publisher=Jupitermedia Corporation | url =http://www.internetnews.com/bus-news/article.php/3629861 | work =internetnews.com | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt;
+
+The firm promotes very heavily from within, most notably in its executive suite. The company has resisted the trend toward outsider CEOs. Paul Otellini was a 30-year veteran of the company when he assumed the role of CEO. All of his top lieutenants have risen through the ranks after many years with the firm. In many cases, Intel's top executives have spent their entire working careers with Intel, a very rare occurrence in volatile Silicon Valley. 
+
+Intel has a mandatory retirement policy for its CEO when they reach age 65, but only one CEO, Barrett, has actually retired at 65. Previous CEOs all retired before reaching that age; Grove retired at 62, while both Robert Noyce and Gordon Moore retired at 58. At 57, Otellini has a long career at the helm ahead of him, assuming he goes until age 65 and performs satisfactorily. 
+
+No one has an office; everyone, even Otellini, sits in a [[cubicle]]. This is designed to promote [[egalitarianism]] among employees, but some new hires have difficulty adjusting to this change. Intel is not alone in this policy. [[Hewlett-Packard]] has a similar no-office policy.
+
+Outside of California, the company has facilities in [[China]], Costa Rica, Israel, [[Ireland]], India, [[Philippines]], and Russia internationally. In the U.S. Intel employs significant numbers of people in [[Colorado]], Massachusetts, [[Arizona]], New Mexico, [[Oregon]], Texas, [[Washington]], and Utah.&lt;ref&gt;[http://www.intel.com/community/selectacommunity.htm?iid=intel_comm+comm_select Intel Communities.] Intel. Retrieved on [[January 23]] [[2008]].&lt;/ref&gt; In Oregon, Intel is the state's largest employer with over 16,000 employees, primarily in Hillsboro.&lt;ref name=businessprofile&gt;Suh, Elizabeth. [http://www.oregonlive.com/special/oregonian/index.ssf?/base/news/1192589730189230.xml&amp;coll=7 Home of Oregon's largest employer and much more.] ''[[The Oregonian]]'', [[October 28]] [[2007]].&lt;/ref&gt; The company is the largest industrial employer in [[New Mexico]] while in Arizona the company has over 10,000 employees.
+
+====Diversity Initiative====
+Intel has a Diversity Initiative, including employee diversity groups as well as supplier diversity programs.&lt;ref name='Intel Diversity'&gt; {{cite web|url=http://www.intel.com/jobs/diversity/index.htm |title=Jobs at Intel - Diversity |accessdate=2007-07-28 |work=intel.com |publisher=Intel Corporation }}&lt;/ref&gt; Like many companies with employee diversity groups, they include groups based on race and nationality as well as sexual identity and religion.  In 1994, Intel sanctioned one of the earliest corporate Gay, Lesbian, Bisexual, and Transgender employee groups,&lt;ref name=gay&gt;[http://www.intelglbt.org/ Intel Gay, Lesbian, Bisexual or Transgender Employees Home Page]&lt;/ref&gt; and supports a Muslim employees group,&lt;ref name='IMEG'&gt; {{cite web|url=http://www.intel.com/jobs/diversity/people/emplgroups.htm?grp=13 |title=Jobs at Intel - Diversity, Employee Groups (Intel Muslim Employee Group) |accessdate=2007-07-28 |work=intel.com |publisher=Intel Corporation }}&lt;/ref&gt; a Jewish employees group,&lt;ref name='IJC'&gt; {{cite web|url=http://www.intel.com/jobs/diversity/people/emplgroups.htm?grp=11 |title=Jobs at Intel - Diversity, Employee Groups (Intel Jewish Community) |accessdate=2007-07-28 |work=intel.com |publisher=Intel Corporation }}&lt;/ref&gt; and a Bible-based Christian group.&lt;ref name='IBCN'&gt; {{cite web|url=http://www.intel.com/jobs/diversity/people/emplgroups.htm?grp=7 |title=Jobs at Intel - Diversity, Employee Groups (Intel Bible-Based Christian Network) |accessdate=2007-07-28 |work=intel.com |publisher=Intel Corporation }}&lt;/ref&gt;&lt;ref name='IBCN website'&gt;[http://ibcn.org/ Intel Bible-Based Christian Network (IBCN) website]&lt;/ref&gt;
+
+Intel received a 100% rating on the first Corporate Equality Index released by the [[Human Rights Campaign]] in 2002.  It has maintained this rating in 2003 and 2004.  In addition, the company was named one of the 100 Best Companies for Working Mothers in 2005 by Working Mother magazine.  However, Intel's working practices still face criticism, most notably from Ken Hamidi,&lt;ref name='FACE'&gt; {{cite web|url=http://www.faceintel.com/ |title=FACE Intel Index |accessdate=2007-07-28 |last=Hamidi |first=Ken |work=faceintel.com }}&lt;/ref&gt; a former employee who has been subject to multiple unsuccessful lawsuits from Intel.
+
+===Finances===
+[[Image:Intc-hist-price-1986-2006.png|left|300px|thumb|Intel stock price, Nov 1986 - Nov 2006]]
+Intel's [[market capitalization]] is $153.42 billion (October 31, 2007). It publicly trades on [[NASDAQ]] with the symbol INTC, and is a member of the following indices: [[Dow Jones Industrial Average]], [[S&amp;P 500]], [[NASDAQ-100]], [[PHLX Semiconductor Sector|SOX]] (PHLX Semiconductor Sector), and [[GSTI Software Index]].
+
+INTC is a widely-held stock, with almost 5.85 billion shares outstanding.  Institutional investors and mutual funds hold 60% of this stock, and corporate insiders, including Gordon Moore and Andy Grove, hold only about 3%.  Intel achieved its all-time high closing stock price on August 31, 2000 at $74.87.  Since then, it reached a low closing price of $14.62 on September 23, 2002.  As of late October 2007, the stock price was trading in a range between $25.50 and $26.50.
+&lt;br clear=&quot;all&quot; /&gt;
+
+===Advertising and brand management===&lt;!-- This section is linked from [[X86 architecture]] --&gt;
+{{copypaste}}
+Intel has become one of the world's most recognizable computer brands following its long-running &quot;Intel Inside&quot; campaign. The campaign, which started in 1990, was created by Intel marketing manager Dennis Carter.&lt;ref name=&gt;[http://www.intel.com/pressroom/intel_inside.htm Anatomy of a Brand Campaign] www.intel.com&lt;/ref&gt; The five-note jingle was introduced the following year and by its tenth anniversary was being heard in 130 countries around the world.
+[[Image:Intel Logo.svg|right|140px|thumb|Intel's old logo &lt;br&gt;(1968&amp;ndash;December 2005)]]
+[[Image:Intel Inside Logo.svg|right|140px|thumb|The well known &lt;br&gt;''Intel Inside'' slogan &lt;br&gt;(1990&amp;ndash;2003)]]
+[[Image:Intelinsidemodified.PNG|right|140px|thumb|Before its demise, the 'Intel Inside' logo was modified to resemble the original Intel logo by lowering the Intel 'e' and changing the typeface.]]
+[[Image:Intel 4c 100tag.svg|right|140px|thumb|Intel's new logo and slogan &lt;br&gt;(December 2005&amp;ndash;Present)]]
+
+The ''Intel Inside'' program was very lucrative for advertisers and further served to broaden the company's awareness as a key ingredient inside PCs.  Intel paid half the advertising costs for any ad that used the &quot;Intel Inside&quot; logo. If the ads didn't meet these requirements, Intel did not pay half the cost, and the advertiser was prohibited from using the &quot;Intel Inside&quot; logo. PC companies advertising products containing Intel chips are required to include the jingle in their film and television advertisements in order to receive the reimbursement.
+
+The [[Centrino]] advertising campaign has been hugely successful, leading to the ability to access wireless internet from a laptop becoming linked in consumers' minds to Intel chips.{{Fact|date=July 2007}} In the UK this has caused some controversy, as the [[Advertising Standards Authority|ASA]] upheld complaints that this was a misleading advert.&lt;ref name='Register 2005-11-29'&gt;{{cite news | first=Tony | last=Smith | coauthors= | title=PC World notebook ad 'misleading', ASA rules | date=[[2005-11-29]] | publisher=The Register | url =http://www.theregister.co.uk/2005/11/29/asa_misleading_pcworld_ad/ | work =theregister.co.uk | pages = | accessdate = 2008-01-07 | language = }}&lt;/ref&gt;
+
+In December 2005, Intel phased out the &quot;Intel Inside&quot; campaign in favor of a new logo and the slogan, &quot;Leap ahead&quot;. The new logo is clearly inspired by the &quot;Intel Inside&quot; logo.
+
+In 2006, Intel expanded its promotion of open specification platforms beyond Centrino, to include the [[Viiv]] media centre PC and the business desktop [[Intel vPro]].
+
+In mid January 2006, Intel announced that they were dropping the long running ''Pentium'' name from its processors.  The Pentium name was first used to refer to the P5 core Intel processors (Pent refers to the 5 in P5,) and was done to circumvent court rulings that prevent the trademarking of a string of numbers, so competitors could not just call their processor the same name, as had been done with the prior 386 and 486 processors. (Both of which had copies manufactured by both IBM and AMD). They phased out the Pentium names from mobile processors first, when the new [[Yonah]] chips, branded [[Intel Core|Core]] Solo and Core Duo, were released.  The desktop processors changed when the Core 2 line of processors were released.  
+
+In March 2007, the Intel logo was shown briefly in one of the scenes of the movie, &quot;The Last Mimzy.&quot;
+
+Though some{{Who?|date=October 2007}} in the Macintosh community were concerned that Intel's branding, including the [[decal]]s and [[jingle]], would be used with the new Intel-based Macintoshes (see [[Apple Intel transition]]), this has not occurred.
+
+As from 2008, Intel plans to shift the emphasis of its &quot;Intel Inside&quot; campaign from traditional media such as television and print to newer media such as the Internet. Intel will require that a minimum of 35% of the money it provides to the companies in its co-op program be used for online marketing.&lt;ref name='IHT 2007-10-11'&gt;{{cite news | first=Stuart | last=Elliott | coauthors= | title='Intel inside' ad campaign shifts focus to the Web | date=[[2007-10-11]] | publisher=[[International Herald Tribune]] | url =http://www.iht.com/articles/2007/10/11/business/adco.php?WT.mc_id=atomtechnology | work =iht.com | pages = | accessdate = 2007-10-12 | language = }}&lt;/ref&gt;
+
+Intel's &quot;Intel Inside&quot; campaign has generally been considered to be world class marketing.  However, over the years there have been several plays on the Intel branding scheme which have appeared on the web.  While such jabs at Intel are obviously beyond the company's ability to control, they do tend to show that not everyone believes that Intel's programs and policies are always world class.  For example, there is the popular &quot;evil inside&quot; logo,&lt;ref&gt;[http://www.stickergiant.com/Merchant2/merchant.mvc?Screen=PROD&amp;Product_Code=rst105 Evil Inside Stickers : Vinyl Sticker&lt;!-- Bot generated title --&gt;]&lt;/ref&gt; the ubiquitous picture of a tombstone with &quot;R.I.P Intel Inside&quot; &lt;ref name='Inquirer 2006-04-11'&gt;{{cite news | first= | last= | coauthors= | title=IBM leads semiconductor plot against Intel | date=[[2006-04-11]] | publisher=The [[Inquirer]] | url =http://www.theinquirer.net/?article=30912 | work =theinquirer.net | pages = | accessdate = 2008-01-07 | language = }}&lt;/ref&gt;
+
+====Sonic logo====
+The famous &quot;D♭&amp;nbsp; D♭&amp;nbsp; G♭&amp;nbsp; D♭&amp;nbsp; A♭&quot; [[jingle]], sonic logo, tag, audio [[mnemonic]] ''([http://www.uspto.gov/go/kids/soundex/75332744.mp3 MP3 file of sonic logo])'' was written by  [[Walter Werzowa]] from the Austrian 1980s sampling band [[Edelweiss (band)|Edelweiss]].&lt;ref name=jingle&gt;[http://observer.guardian.co.uk/print/0,3858,4774366-111639,00.html Paul Morley on the Intel Pentium ad jingle] Guardian Online&lt;/ref&gt;
+
+=== Open source support ===
+Intel has a significant participation in the [[open source]] communities. For example, in 2006 Intel released [[MIT licence|MIT-licensed]] [[X.org]] drivers for their integrated graphics cards of the i965 family of chipsets. On other occasions, Intel released [[FreeBSD]] drivers for some networking cards,&lt;ref&gt; {{cite web|url=http://www.freebsd.org/cgi/man.cgi?query=em |title=FreeBSD Kernel Interfaces Manual |accessdate=2007-08-05 |date=2005-11-27 |work=freebsd.org |publisher=The FreeBSD Project }}&lt;/ref&gt; available under a BSD-compatible licence, which were also ported to [[OpenBSD]]. Intel also released its [[EFI]] core named as EDK under a BSD-compatible licence.
+
+{{misleading|section|Talk:Intel Corporation#Misleading part in 'Open source support'}}
+{{update}}
+
+However, after the release of the wireless products called Intel Pro/Wireless 2100, 2200BG/2225BG/2915ABG and 3945ABG in 2005, Intel was criticized for not granting free redistribution rights for the firmwares that are necessary to be included in the operating systems for the wireless devices to operate.&lt;ref&gt;{{cite news | first=Sam | last=Varghese | coauthors= | title=OpenBSD to support more wireless chipsets | date=[[2005-03-01]] | publisher=The Age Company Ltd | url =http://www.theage.com.au/articles/2005/03/01/1109546842718.html | work =theage.com.au | pages = | accessdate = 2007-08-05 | language = }}&lt;/ref&gt; As a result of this, Intel became a target of campaigns to allow free operating systems to include binary firmwares on terms acceptable to the open source community.  [[Linspire]]-[[Linux]] creator [[Michael Robertson]] outlined the difficult position that Intel was in releasing to Open Source, as Intel did not want to upset their large customer [[Microsoft]].&lt;ref name='M.Robertson'&gt; {{cite web|url=http://www.michaelrobertson.com/archive.php?minute_id=56 |title=Is Intel's &quot;Centrino&quot; Techno-Latin for &quot;No Linux?&quot; |accessdate=2007-08-05 |last=Robertson |first=Michael |date=2003-03-19 |work=michaelrobertson.com }}&lt;/ref&gt; [[Theo de Raadt]] of [[OpenBSD]] also claimed that Intel is being &quot;an Open Source fraud&quot; after an Intel employee presented a distorted view of the situation on an open-source conference.&lt;ref name='Theo'&gt; {{cite web|url=http://www.undeadly.org/cgi?action=article&amp;sid=20060930232710&amp;mode=expanded |title= Intel: Only &quot;Open&quot; for Business |accessdate=2007-08-05 |first=Theo de Raadt |date=2006-09-30 |work=undeadly.org |publisher=OpenBSD Journal }}&lt;/ref&gt; In spite of the significant negative attention Intel received as a result of the wireless dealings, the binary firmware &lt;!--, as of (please add the date),--&gt; still has not gained a license compatible with free software principles.
+
+==Competition==
+During the 1980s, Intel was among the top ten worldwide semiconductor sales leaders (10th in 1987), dominated by Japanese chip makers. In 1991, Intel achieved the number one ranking and has held it ever since.  Other top semiconductor companies include [[AMD]], [[Samsung]], [[Texas Instruments]], [[Toshiba]] and [[STMicroelectronics]]. {{see|Semiconductor sales leaders by year}}
+
+Competitors in PC chipsets include [[VIA Technologies]], [[Silicon Integrated Systems|SiS]], [[ATI]], and [[Nvidia]].  Intel's competitors in networking include [[Freescale]], [[Infineon]], [[Broadcom]], [[Marvell Technology Group]] and [[Applied Micro Circuits Corporation|AMCC]], and its competitors in flash memory include [[Spansion]], [[Samsung]], [[Qimonda]], [[Toshiba]], [[STMicroelectronics]], and [[Hynix]].
+
+The only major competitor to Intel on the [[x86]] processor market is [[Advanced Micro Devices]] (AMD), with which Intel has had full cross-licensing agreements since 1976: each partner can use the other's [[patent]]ed technological innovations without charge after a certain time.&lt;ref name='Intel-AMD deal 2001'&gt;{{cite news | first=Ian | last=Fried | coauthors= | title=Intel, AMD sign new licensing deal | date=[[2001-04-04]] | publisher=CNET Networks, Inc | url =http://news.com.com/2100-1040-257059.html | work =news.com.com | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; However, the cross-licensing agreement is canceled in the event of an AMD bankruptcy or takeover.&lt;ref name='Patent Cross License Agreement'&gt;{{cite news | title=Patent Cross License Agreement - Advanced Micro Devices Inc. and Intel Corp. | publisher=Findlaws, Inc | url =http://contracts.corporate.findlaw.com/agreements/amd/intel.license.2001.01.01.html | pages = | accessdate = 2007-09-15 | language = }}&lt;/ref&gt; Some smaller competitors such as [[VIA Technologies|VIA]] and [[Transmeta]] produce [[low-power]] processors for small factor computers and portable equipment.
+
+===Lawsuits===
+In September 2005, Intel filed its response to an [[wikinews:AMD files antitrust lawsuit against Intel in US federal district court|AMD lawsuit]],&lt;ref name='Intel response 2005-09-01'&gt;{{cite news | first= | last= | coauthors= | title=Intel Files Response To AMD Complaint | date=[[2005-09-01]] | publisher=Intel Corporation | url =http://www.intel.com/pressroom/archive/releases/20050901corp.htm | work =intel.com (Press release) | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; disputing AMD's claims, and stating that its business practices are fair and lawful. In its rebuttal, Intel laid out the skeleton of its legal defense, which included a deconstruction of AMD's offensive strategy and levied the charge that AMD's long-struggling market position is largely a result of bad business decisions and management incompetence, including underinvestment in essential manufacturing capacity and over-reliance on contracting out chip foundries.&lt;ref name='Forbes 2005-09-02'&gt;{{cite news | first=David | last=Whelan | coauthors= | title=Intel's Legal Strategy Takes Shape | date=[[2005-09-02]] | publisher=Forbes.com Inc | url =http://www.forbes.com/technology/2005/09/02/intel-amd-antitrust-cz_dw_0902intel.html | work =forbes.com | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt;
+
+Legal experts predict the lawsuit will most likely drag out for a number of years, since Intel's response indicates they are not likely to try to settle with AMD.&lt;ref&gt; {{cite web|url=http://www.amd.com/us-en/assets/content_type/DownloadableAssets/AMD_Intel_Battle.pdf |title=AMD, Intel Battle Wages On As EU Decision Nears |accessdate=2008-01-07 |date=2006-03-20 |format=PDF |work=amd.com |publisher=Portfolio Media, Inc }}&lt;/ref&gt;&lt;ref name='InfoWorld 2005-09-01'&gt;{{cite news | first=Tom | last=Krazit | coauthors= | title=Update: Intel issues formal response to AMD's antitrust lawsuit | date=[[2005-09-01]] | publisher=IDG News Service | url =http://www.infoworld.com/article/05/09/01/HNintelresponse_1.html | work =infoworld.com | pages = | accessdate = 2008-01-07 | language = }}&lt;/ref&gt;
+
+In October 2006, a [[Transmeta#Lawsuit against Intel Corporation|Transmeta lawsuit]] was filed against Intel for patent infringement covering computer architecture and power efficiency technologies.&lt;ref name='Transmeta lawsuit 2006'&gt;{{cite news | first= | last= | coauthors= | title=Transmeta Announces Patent Infringement Lawsuit Against Intel Corporation | date=[[2006-10-11]] | publisher=Transmeta Corporation | url =http://investor.transmeta.com/ReleaseDetail.cfm?ReleaseID=214275 | work =investor.transmeta.com (Press release) | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; In October 2007, the Transmeta-Intel lawsuit was settled, with Intel agreeing to pay an initial US$150 million and US$20 million per year for the next 5 years. Both companies agreed to drop lawsuits against each other while Intel was granted a perpetual non-exclusive license to use current and future patented Transmeta technologies in its chips for 10 years.&lt;ref name='Reuters 2007-10-24'&gt;{{cite news | first= | last= | coauthors= | title=Transmeta settles patent suit with Intel | date=[[2007-10-24]] | publisher=[[Reuters]] | url =http://www.reuters.com/article/technology-media-telco-SP/idUSWNAS782620071024 | work =reuters.com | pages = | accessdate = 2007-10-25 | language = }}&lt;/ref&gt;
+
+===Anti-competitive allegations by regulatory bodies===
+In July 2007, the [[European Commission]] formally accused Intel of anti-competitive practices, mostly against its main competitor [[Advanced Micro Devices|AMD]].&lt;ref name='Europa Memo 2007-07-27'&gt;{{cite news | first= | last= | coauthors= | title=Competition: Commission confirms sending of Statement of Objections to Intel | date=[[2007-07-27]] | publisher= | url =http://europa.eu/rapid/pressReleasesAction.do?reference=MEMO/07/314&amp; | work =europa.eu (Press release) | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; The allegations, going back to 2003, include giving preferential prices to computer makers getting most or all CPU chips from Intel, paying computer makers to delay or cancel the launch of products using AMD chips and providing CPU chips at below cost to governments and educational institutions.&lt;ref name='Reuters 2007-07-27'&gt;{{cite news | first=David | last=Lawsky | coauthors= | title=UPDATE 4-EU says Intel tried to squeeze out Advanced Micro Devices| date=[[2007-07-27]] | publisher=[[Reuters]] | url =http://www.reuters.com/article/governmentFilingsNews/idUSL2783620520070727?sp=true | work =reuters.com | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; Intel responded that the allegations were unfounded and instead qualified its market behavior as consumer-friendly.&lt;ref name='BBC Intel 2007-07-27'/&gt; General counsel Bruce Sewell also responded that the Commission had misunderstood some factual assumptions concerning price and manufacturing costs.&lt;ref name='Reuters 2007-07-27 (2)'&gt;{{cite news | first=David | last=Lawsky | coauthors= | title=Intel says EU made errors in antitrust charges | date=[[2007-07-27]] | publisher=[[Reuters]] | url =http://www.reuters.com/article/technology-media-telco-SP/idUSL2788098920070727?sp=true | work =reuters.com | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt;
+
+In February 2008, a spokesman for the company announced that Intel's office in Munich had been &quot;raided&quot; by European Union competition regulators investigating its business practices. Intel reported that it was cooperating with investigators.&lt;ref&gt;{{cite news | url=http://news.bbc.co.uk/2/hi/business/7241022.stm | date=2008-02-12 | accessdate=2008-02-12 | publisher=[[BBC News]] | title=EU regulator raids Intel offices}}&lt;/ref&gt;
+
+If found guilty of stifling competition, Intel could be fined up to 10% of its annual revenue.&lt;ref name='BBC Intel 2007-07-27'&gt;{{cite news | first= | last= | coauthors= | title=EU outlines Intel 'market abuse' | date=[[2007-07-27]] | publisher=The BBC | url =http://news.bbc.co.uk/1/hi/business/6918975.stm | work =news.bbc.co.uk | pages = | accessdate = 2007-07-28 | language = }}&lt;/ref&gt; Rival AMD also subsequently launched a website focusing on these allegations.&lt;ref&gt;{{cite news | first=Peter | last=Clarke | coauthors= | title=AMD sets up website to tell &quot;the truth about Intel&quot; | date=[[2007-08-08]] | publisher=CMP Media LLC | url =http://www.eetimes.com/news/latest/showArticle.jhtml?articleID=201303681 | work =eetimes.com | pages = | accessdate = 2007-08-09 | language = }}&lt;/ref&gt;&lt;ref&gt; {{cite web|url=http://breakfree.amd.com/en-us/default.aspx |title=AMD Break Free |accessdate=2007-08-09 |date=2007-07-31 |work=breakfree.amd.com |publisher=Advanced Micro Devices, Inc. }}&lt;/ref&gt;
+
+In September 2007, [[South Korea]]n regulators formally accused Intel of breaking antitrust law. The inquiry began in February 2006 when officials raided Intel's South Korean offices. If found guilty, the company risks being fined up to 3% of its annual sales.&lt;ref name='iht 2007-09-11'&gt;{{cite news | first= | last= | coauthors= | title=Intel facing antitrust complaint in Korea | date=[[2007-09-11]] | publisher=[[International Herald Tribune]] | url =http://www.iht.com/articles/2007/09/11/business/chip.php?WT.mc_id=atomtechnology | work =iht.com | pages = | accessdate = 2007-09-13 | language = }}&lt;/ref&gt;
+
+==Quotes==
+{{Copy section to Wikiquote}}
+
+{{quote|Bad companies are destroyed by crisis, Good companies survive them, Great companies are improved by them|Andy Grove, after the Pentium Processor flaw in December 1994}}
+
+== See also ==
+{{col-begin}}
+{{col-2}}
+*[[Advanced Micro Devices]] (AMD)
+*[[Transmeta]]
+*[[Intel graphics media accelerator]]
+*[[Comparison of Nvidia graphics processing units]]
+*[[Comparison of ATI Graphics Processing Units]]
+*[[Intel Science Talent Search]]
+*[[ASCI Red]] 
+*[[Justin Rattner]]
+*[[List of Intel microprocessors]]
+*[[List of Intel chipsets]]
+{{col-2}}
+*[[List of Intel Pentium 4 microprocessors]]
+*[[List of Intel Pentium D microprocessors]]
+*[[List of Intel Celeron microprocessors]]
+*[[List of Intel Pentium M microprocessors]]
+*[[List of Intel Pentium Dual-Core microprocessors]]
+*[[List of Intel Xeon microprocessors]]
+*[[List of Intel Core microprocessors]]
+*[[List of Intel Core 2 microprocessors]]
+*[[List of Intel codenames]]
+&lt;!--*[[List of Intel fabrication facilities]]--&gt;
+{{col-end}}
+
+== References ==
+{{reflist|2}}
+
+== External links ==
+*[http://www.intel.com/ Intel website]
+*[http://blogs.intel.com/ blogs.intel.com]
+*[http://iinnovate.blogspot.com/2007/03/andy-grove-former-ceo-and-chairman-of.html Andy Grove interview by iinnovatecast]
+*[http://www.youtube.com/channelintel YouTube Intel Channel]
+*{{dmoz|Computers/Companies/Product_Support/Intel/}}
+
+{{Finance links
+| name = INTEL CORP.
+| symbol = INTC
+| sec_cik = 50863
+| hoovers = 13787
+}}
+
+{{Intel processors}}
+{{DJIA}}
+{{NASDAQ-100}}
+{{IT giants}}
+
+[[Category:Companies established in 1968]]
+[[Category:Multinational companies]]
+[[Category:Motherboard companies]]
+[[Category:Intel|*]]
+[[Category:Semiconductor companies]]
+
+[[af:Intel]]
+[[ar:إنتل]]
+[[bn:ইন্টেল কর্পোরেশন]]
+[[bs:Intel]]
+[[bg:Интел]]
+[[ca:Intel]]
+[[cs:Intel]]
+[[da:Intel]]
+[[de:Intel Corporation]]
+[[es:Intel Corporation]]
+[[eo:Intel]]
+[[fa:اینتل]]
+[[fr:Intel Corporation]]
+[[gl:Intel Corporation]]
+[[ko:인텔]]
+[[hy:Intel]]
+[[hi:इंटेल]]
+[[hr:Intel]]
+[[id:Intel Corporation]]
+[[is:Intel Corporation]]
+[[it:Intel]]
+[[he:אינטל]]
+[[ka:ინტელი]]
+[[lv:Intel Corporation]]
+[[lt:Intel Corporation]]
+[[hu:Intel]]
+[[ms:Intel Corporation]]
+[[nl:Intel]]
+[[ja:インテル]]
+[[no:Intel]]
+[[uz:Intel]]
+[[pl:Intel]]
+[[pt:Intel Corporation]]
+[[ru:Intel]]
+[[simple:Intel]]
+[[sk:Intel]]
+[[sl:Intel]]
+[[sr:Интел]]
+[[sh:Intel]]
+[[fi:Intel]]
+[[sv:Intel]]
+[[th:อินเทล]]
+[[vi:Intel]]
+[[tr:Intel]]
+[[uk:Intel]]
+[[zh:英特尔]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox/core</title>
+    <id>12774496</id>
+    <revision>
+      <id>190914505</id>
+      <timestamp>2008-02-12T15:45:04Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Fix for double inclusion of &quot;background:white;&quot;</comment>
+      <text xml:space="preserve">&lt;table class=&quot;navbox {{#ifeq:{{{state|}}}|plain||collapsible {{{state|autocollapse}}}}} nowraplinks&quot; style=&quot;margin:auto; {{#ifeq:{{{nogroups|}}}|true|{{#if:{{{l1|}}}|{{#if:{{{l2|}}}|background:white;}}}}|background:white;}} {{{bodystyle|}}}&quot;&gt;&lt;!--
+
+---Titlebar---
+--&gt;&lt;tr&gt;&lt;th colspan=&quot;{{{span|1}}}&quot; style=&quot;text-align:center;width:100%;{{{titlestyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#ifeq:{{{navbar|}}}|plain||&lt;div style=&quot;float:left; width:6em; text-align:left;&quot;&gt;{{Tnavbar| {{{name&lt;noinclude&gt;|Navbox&lt;/noinclude&gt;}}}|fontstyle={{{titlestyle|}}};border:none;|mini=1}}&lt;/div&gt;}}&lt;span style=&quot;font-size:110%;&quot;&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;!--
+
+---Above (optional)---
+--&gt;{{#if:{{{above|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{abovestyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{above|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---First group and image(s)---
+--&gt;{{#if:{{{l1|}}}|&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|{{#ifeq:{{{nogroups|}}}|true|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-right:7px; width:0%;&quot;&gt;{{{imageleft}}}&lt;/td&gt;}}}}&lt;!--
+
+--&gt;{{#if:{{{g1|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g1|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g1|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g1|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l1|}}}&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-left:7px; width:0%;&quot;&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+---Remaining groups---
+--&gt;{{#if:{{{l2|}}}|&lt;tr&gt;{{#if:{{{g2|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g2|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g2|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g2|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l2|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l3|}}}|&lt;tr&gt;{{#if:{{{g3|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g3|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g3|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g3|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l3|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l4|}}}|&lt;tr&gt;{{#if:{{{g4|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g4|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g4|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g4|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l4|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l5|}}}|&lt;tr&gt;{{#if:{{{g5|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g5|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g5|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g5|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l5|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l6|}}}|&lt;tr&gt;{{#if:{{{g6|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g6|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g6|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g6|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l6|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l7|}}}|&lt;tr&gt;{{#if:{{{g7|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g7|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g7|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g7|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l7|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l8|}}}|&lt;tr&gt;{{#if:{{{g8|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g8|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g8|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g8|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l8|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l9|}}}|&lt;tr&gt;{{#if:{{{g9|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g9|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g9|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g9|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l9|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l10|}}}|&lt;tr&gt;{{#if:{{{g10|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g10|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g10|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g10|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l10|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l11|}}}|&lt;tr&gt;{{#if:{{{g11|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g11|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g11|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g11|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l11|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l12|}}}|&lt;tr&gt;{{#if:{{{g12|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g12|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g12|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g12|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l12|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l13|}}}|&lt;tr&gt;{{#if:{{{g13|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g13|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g13|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g13|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l13|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l14|}}}|&lt;tr&gt;{{#if:{{{g14|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g14|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g14|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g14|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l14|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l15|}}}|&lt;tr&gt;{{#if:{{{g15|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g15|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g15|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g15|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l15|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l16|}}}|&lt;tr&gt;{{#if:{{{g16|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g16|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g16|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g16|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l16|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l17|}}}|&lt;tr&gt;{{#if:{{{g17|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g17|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g17|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g17|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l17|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l18|}}}|&lt;tr&gt;{{#if:{{{g18|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g18|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g18|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g18|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l18|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l19|}}}|&lt;tr&gt;{{#if:{{{g19|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g19|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g19|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g19|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l19|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l20|}}}|&lt;tr&gt;{{#if:{{{g20|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g20|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g20|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g20|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l20|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---Below (optional)---
+--&gt;{{#if:{{{below|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{belowstyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{below|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;&lt;/table&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>173220873</id>
+      <timestamp>2007-11-23T04:02:39Z</timestamp>
+      <contributor>
+        <username>Coren</username>
+        <id>12013</id>
+      </contributor>
+      <comment>As requested on the talk page; fix for wikilinks of dates</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Globalize</title>
+    <id>1058710</id>
+    <revision>
+      <id>196474412</id>
+      <timestamp>2008-03-07T05:28:04Z</timestamp>
+      <contributor>
+        <username>Lady Aleena</username>
+        <id>239144</id>
+      </contributor>
+      <comment>Removed country-centric categorization per [[Template talk:Globalize|talk]] page discussion.</comment>
+      <text xml:space="preserve">{{ambox
+|type=content
+|image=[[Image:Gnome-globe.svg|39px|Globe icon]]
+|text=The examples and perspective in this {{#switch:{{{1|}}}|a=article|s=section|article or section}} {{#if:{{{2|}}}{{{3|}}}{{{4|}}}|deals primarily with {{#if:{{{4|}}}|[[{{{2}}}]], [[{{{3}}}]], and [[{{{4}}}]]|{{#if:{{{3|}}}|[[{{{2}}}]] and [[{{{3}}}]]|[[{{{2}}}]]}}}} and does|may}} not represent a '''[[Wikipedia:WikiProject Countering systemic bias|worldwide view]]''' of the subject.&lt;br /&gt;&lt;small&gt;Please [{{fullurl:{{FULLPAGENAME}}|action=edit}} improve this article] or discuss the issue on the [[{{TALKPAGENAME}}|talk page]].&lt;/small&gt;
+}}&lt;includeonly&gt;[[Category:Articles with limited geographic scope|{{PAGENAME}}]]
+&lt;/includeonly&gt;&lt;noinclude&gt;&lt;br/&gt;
+{{documentation}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+
+
+[[ar:قالب:تعميم]]
+[[cs:Šablona:Globalizovat]]
+[[de:Vorlage:Deutschlandlastig]]
+[[es:Plantilla:Localismo]]
+[[fr:Modèle:Internationaliser]]
+[[ko:틀:세계화]]
+[[ja:Template:国際化]]
+[[no:Mal:Geografisk omfang]]
+[[ru:Шаблон:Глобализировать]]
+[[sr:Шаблон:Глобализуј]]
+[[sv:Mall:Global]]
+[[zh-yue:Template:環球]]
+[[zh:Template:Globalize]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Finance links</title>
+    <id>6936928</id>
+    <revision>
+      <id>75068694</id>
+      <timestamp>2006-09-11T09:50:56Z</timestamp>
+      <contributor>
+        <username>Bungopolis</username>
+        <id>37259</id>
+      </contributor>
+      <comment>=== -&gt; ;</comment>
+      <text xml:space="preserve">;Business data
+{{
+  #if: {{{google|}}} |
+* [http://finance.google.com/finance?cid={{{google}}} {{{name}}}] at [[Google Finance]]}}{{
+  #if: {{{symbol|}}} |
+* [http://finance.google.com/finance?q={{{symbol}}} {{{name}}}] at [[Google Finance]]}}{{
+  #if: {{{yahoo|}}} |
+* [http://biz.yahoo.com/ic/{{{yahoo}}}.html {{{name}}}] at [[Yahoo!|Yahoo Finance]]}}{{
+  #if: {{{symbol|}}} |
+* [http://finance.yahoo.com/q?s={{{symbol}}} {{{name}}}] at [[Yahoo!|Yahoo Finance]]}}{{
+  #if: {{{hoovers|}}} |
+* [http://www.hoovers.com//--ID__{{{hoovers}}}--/free-co-factsheet.xhtml {{{name}}}] at [[Hoover's]]}}{{
+  #if: {{{symbol|}}} |
+* [http://www.investor.reuters.wallst.com/stocks/company-profile.asp?ticker={{{symbol}}} {{{name}}}] at [[Reuters]]
+* [http://google.brand.edgar-online.com/?sym={{{symbol}}} {{{name}}}] [[SEC filings|SEC filings]] at [[EDGAR|EDGAR Online]]}}{{
+  #if: {{{sec_cik|}}} |
+* [http://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK={{{sec_cik}}} {{{name}}}] [[SEC filings|SEC filings]] at the [[United States Securities and Exchange Commission|Securities and Exchange Commission]]}}&lt;noinclude&gt;
+
+== Usage ==
+Please see the [[Template_talk:Finance_links#Documentation|documentation]] on the talk page for usage and examples.
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Copypaste</title>
+    <id>7784304</id>
+    <revision>
+      <id>177936041</id>
+      <timestamp>2007-12-14T19:41:24Z</timestamp>
+      <contributor>
+        <username>Dispenser</username>
+        <id>2551723</id>
+      </contributor>
+      <minor/>
+      <comment>[[WP:DOC]]</comment>
+      <text xml:space="preserve">{{ambox
+| type  = content
+| image = [[Image:Copyright-problem paste.svg|50px]]
+| text  = '''This {{{2|article or section}}} appears to have been [[Cut, copy, and paste|copied and pasted]] from {{#if:{{{url|}}}|{{{url}}}|a source}}, ''possibly'' in violation of a copyright.'''&lt;br /&gt;&lt;small&gt;Please edit this article to remove any copyrighted text and to be an original source, following the [[Wikipedia:Guide to layout|Guide to layout]] and the [[Wikipedia:Manual of Style|Manual of Style]]. Remove this template after editing. {{#if:{{{1|}}}|This article has been tagged since '''{{{1}}}'''.}}&lt;/small&gt;
+}}&lt;includeonly&gt;{{{category|[[Category:Copied and pasted articles and sections]]}}}
+{{#if:{{{url|}}}|{{{category|[[Category:Copied and pasted articles and sections with url provided]]}}}{{{category|[[Category:Possible copyright violations]]}}}|}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ambox</title>
+    <id>13179742</id>
+    <revision>
+      <id>170296614</id>
+      <timestamp>2007-11-09T10:07:17Z</timestamp>
+      <contributor>
+        <username>David Levy</username>
+        <id>197557</id>
+      </contributor>
+      <comment>Reverted.  Apart from making the icon smaller and switching to a hue that doesn't match the template as well, what did that accomplish?</comment>
+      <text xml:space="preserve">&lt;table style=&quot;{{{style|}}}&quot; class=&quot;metadata plainlinks ambox {{#switch:{{{type|}}}
+  | serious  = ambox-serious
+  | content  = ambox-content
+  | style    = ambox-style
+  | merge    = ambox-merge
+  | notice   = ambox-notice
+  | #default = ambox-notice
+}}&quot;&gt;
+&lt;tr&gt;
+&lt;td class=&quot;ambox-image&quot;&gt;
+{{#ifeq:{{{image}}}|none
+  | &lt;!-- no image cell; empty cell necessary for text cell to have 100% width --&gt;
+  | &lt;div style=&quot;width:52px;&quot;&gt; {{#switch:{{{image|{{{type|}}}}}}
+    | serious  = [[Image:Stop hand nuvola.svg|40px]]
+    | content  = [[Image:Emblem-important.svg|40px]]
+    | style    = [[Image:Broom icon.svg|40px]]
+    | merge    = [[Image:Merge-split-transwiki default.svg]]
+    | notice   = [[Image:Info non-talk.png|40px]]
+    | blank    = [[Image:No image.svg]]
+    | #default = {{{image|[[Image:Info non-talk.png|40px]]}}}
+  }}&lt;/div&gt;
+}}&lt;/td&gt;
+&lt;td class=&quot;ambox-text&quot;&gt;{{{text}}}&lt;/td&gt;
+{{#if:{{{imageright|}}}|
+  &lt;td class=&quot;ambox-imageright&quot;&gt;&lt;div style=&quot;width:52px;&quot;&gt; {{{imageright}}} &lt;/div&gt;&lt;/td&gt;
+}}
+&lt;/tr&gt;
+&lt;/table&gt;&lt;noinclude&gt;
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>169409860</id>
+      <timestamp>2007-11-05T17:22:36Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Removing VDEcolor parameter; titlestyle now works on VDE links.</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{Navbox/core
+|name = {{{name&lt;noinclude&gt;|{{FULLPAGENAME}}&lt;/noinclude&gt;}}}
+|navbar = {{{navbar|}}}
+|state = {{{state|autocollapse}}}
+|title = {{{title|}}}
+|image = {{{image|}}}
+|imageleft = {{{imageleft|}}}
+
+|imagespan = {{#expr:{{#if:{{{body|}}}{{{list1|}}}|1|0}} +{{#if:{{{list2|}}}|1|0}} +{{#if:{{{list3|}}}|1|0}} +{{#if:{{{list4|}}}|1|0}} +{{#if:{{{list5|}}}|1|0}} +{{#if:{{{list6|}}}|1|0}} +{{#if:{{{list7|}}}|1|0}} +{{#if:{{{list8|}}}|1|0}} +{{#if:{{{list9|}}}|1|0}} +{{#if:{{{list10|}}}|1|0}} +{{#if:{{{list11|}}}|1|0}} +{{#if:{{{list12|}}}|1|0}} +{{#if:{{{list13|}}}|1|0}} +{{#if:{{{list14|}}}|1|0}} +{{#if:{{{list15|}}}|1|0}} +{{#if:{{{list16|}}}|1|0}} +{{#if:{{{list17|}}}|1|0}} +{{#if:{{{list18|}}}|1|0}} +{{#if:{{{list19|}}}|1|0}} +{{#if:{{{list20|}}}|1|0}}}}
+
+|span = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}{{{imageleft|}}}|{{#if:{{{image|}}}|3|2}}|{{#if:{{{image|}}}|2|1}}}}
+
+|nogroups = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}|false|true}}
+
+|bodystyle = {{{style|}}}{{{bodystyle|}}}
+|titlestyle = {{{titlestyle|}}}
+|abovestyle = background:#ddddff;{{{abovestyle|}}}
+|belowstyle = background:#ddddff;{{{belowstyle|}}}
+
+|above = {{{above|}}}
+|below = {{{below|}}}
+
+|gs = white-space:nowrap;background:#ddddff;text-align:right;{{{groupstyle|}}}
+|os = width:100%;font-size:95%;{{{liststyle|}}}{{{oddstyle|}}}
+|es = width:100%;font-size:95%;background:#f7f7f7;{{{liststyle|}}}{{{evenstyle|}}}
+
+|g1 = {{{group1|}}}
+|g2 = {{{group2|}}}
+|g3 = {{{group3|}}}
+|g4 = {{{group4|}}}
+|g5 = {{{group5|}}}
+|g6 = {{{group6|}}}
+|g7 = {{{group7|}}}
+|g8 = {{{group8|}}}
+|g9 = {{{group9|}}}
+|g10 = {{{group10|}}}
+|g11 = {{{group11|}}}
+|g12 = {{{group12|}}}
+|g13 = {{{group13|}}}
+|g14 = {{{group14|}}}
+|g15 = {{{group15|}}}
+|g16 = {{{group16|}}}
+|g17 = {{{group17|}}}
+|g18 = {{{group18|}}}
+|g19 = {{{group19|}}}
+|g20 = {{{group20|}}}
+
+|l1 = {{{body|}}}{{{list1|}}}{{{category|}}}
+|l2 = {{{list2|}}}
+|l3 = {{{list3|}}}
+|l4 = {{{list4|}}}
+|l5 = {{{list5|}}}
+|l6 = {{{list6|}}}
+|l7 = {{{list7|}}}
+|l8 = {{{list8|}}}
+|l9 = {{{list9|}}}
+|l10 = {{{list10|}}}
+|l11 = {{{list11|}}}
+|l12 = {{{list12|}}}
+|l13 = {{{list13|}}}
+|l14 = {{{list14|}}}
+|l15 = {{{list15|}}}
+|l16 = {{{list16|}}}
+|l17 = {{{list17|}}}
+|l18 = {{{list18|}}}
+|l19 = {{{list19|}}}
+|l20 = {{{list20|}}}
+
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country data United States</title>
+    <id>8953176</id>
+    <revision>
+      <id>177509884</id>
+      <timestamp>2007-12-12T21:05:46Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>remove unnecessary protection template already in [[Template:Country showdata]]  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{ {{{1&lt;noinclude&gt;|country showdata&lt;/noinclude&gt;}}}
+| alias = United States
+| flag alias = Flag of the United States.svg
+| alt attribute = Flag of the United States
+| flag alias-1776 = Grand Union Flag.svg
+| flag alias-1777 = US flag 13 stars – Betsy Ross.svg
+| flag alias-1795 = US flag 15 stars.svg
+| flag alias-1818 = US flag 20 stars.svg
+| flag alias-1819 = US flag 21 stars.svg
+| flag alias-1820 = US flag 23 stars.svg
+| flag alias-1822 = US flag 24 stars.svg
+| flag alias-1836 = US flag 25 stars.svg
+| flag alias-1837 = US flag 26 stars.svg
+| flag alias-1845 = US flag 27 stars.svg
+| flag alias-1846 = US flag 28 stars.svg
+| flag alias-1847 = US flag 29 stars.svg
+| flag alias-1848 = US flag 30 stars.svg
+| flag alias-1851 = US flag 31 stars.svg
+| flag alias-1858 = US flag 32 stars.svg
+| flag alias-1859 = US flag 33 stars.svg
+| flag alias-1861 = US flag 34 stars.svg
+| flag alias-1863 = US flag 35 stars.svg
+| flag alias-1865 = US flag 36 stars.svg
+| flag alias-1867 = US flag 37 stars.svg
+| flag alias-1877 = US flag 38 stars.svg
+| flag alias-1890 = US flag 43 stars.svg
+| flag alias-1891 = US flag 44 stars.svg
+| flag alias-1896 = US flag 45 stars.svg
+| flag alias-1908 = US flag 46 stars.svg
+| flag alias-1912 = US flag 48 stars.svg
+| flag alias-1959 = US flag 49 stars.svg
+| flag alias-air force = Flag of the United States Air Force.png
+| name alias-football = USA
+| link alias-football = United States {{{mw|men's}}} national soccer team
+| name alias-basketball = USA
+| link alias-basketball = United States {{{mw|men's}}} national basketball team
+| link alias-field hockey = United States {{{mw|men's}}} national field hockey team
+| link alias-ice hockey = United States national {{{mw|men's}}} ice hockey team
+| size = {{{size|}}}
+| name = {{{name|}}}
+| altlink = {{{altlink|}}}
+| altvar = {{{altvar|}}}
+| variant = {{{variant|}}}
+&lt;noinclude&gt;
+| var1 = 1912
+| var2 = 1959
+| redir1 = USA
+| redir2 = US
+| redir3 = United States of America
+| redir4 = U.S.
+&lt;/noinclude&gt;
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:USA</title>
+    <id>1651565</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>192772764</id>
+      <timestamp>2008-02-20T10:32:35Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">{{flag|United States}}&lt;noinclude&gt;{{pp-template|small=yes}}
+[[Category:Flag templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·</title>
+    <id>7599646</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>151123393</id>
+      <timestamp>2007-08-14T07:10:35Z</timestamp>
+      <contributor>
+        <username>TKD</username>
+        <id>636163</id>
+      </contributor>
+      <comment>probably safe to remove the nowrap if we're using &amp;nbsp; in the meantime</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;font-weight:bold;&quot;&gt;&amp;nbsp;·&lt;/span&gt; &lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nasdaq</title>
+    <id>1192333</id>
+    <revision>
+      <id>175631011</id>
+      <timestamp>2007-12-04T02:34:04Z</timestamp>
+      <contributor>
+        <username>Pegasus</username>
+        <id>295955</id>
+      </contributor>
+      <minor/>
+      <comment>category param</comment>
+      <text xml:space="preserve">&lt;onlyinclude&gt;[[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol={{{1}}}&amp;selected={{{1}}} {{{1}}}]&lt;includeonly&gt;{{{category|[[Category:Companies listed on NASDAQ]]}}}&lt;/includeonly&gt;&lt;/onlyinclude&gt;
+
+[[Category:Ticker symbol templates|Nasdaq]]
+
+[[fr:Modèle:Nasdaq]]
+[[ko:틀:Nasdaq]]
+[[ms:Templat:Nasdaq]]
+[[no:Mal:Nasdaq]]
+[[ro:Format:Nasdaq]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:See</title>
+    <id>1721317</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>150874840</id>
+      <timestamp>2007-08-13T02:01:19Z</timestamp>
+      <contributor>
+        <username>MZMcBride</username>
+        <id>212624</id>
+      </contributor>
+      <comment>minor code edits</comment>
+      <text xml:space="preserve">:''Further information: [[{{{1|[[Example]]}}}]]{{#if: {{{3|}}}|,}}{{#if: {{{2{{{3|}}}|}}}|&amp;nbsp;and}}{{#if: {{{2|}}}|&amp;nbsp;[[{{{2|}}}]]}}{{#if: {{{3|}}}|,}}{{#if: {{{3{{{4|}}}|}}}|&amp;nbsp;and}}{{#if: {{{3|}}}|&amp;nbsp;[[{{{3|}}}]]}}{{#if: {{{4|}}}|,}}{{#if: {{{4{{{5|}}}|}}}|&amp;nbsp;and}}{{#if: {{{4|}}}|&amp;nbsp;[[{{{4|}}}]]}}{{#if: {{{5|}}}|,}}{{#if: {{{5{{{6|}}}|}}}|&amp;nbsp;and}}{{#if: {{{5|}}}|&amp;nbsp;[[{{{5|}}}]]}}{{#if: {{{6|}}}|,}}{{#if: {{{6{{{7|}}}|}}}|&amp;nbsp;and}}{{#if: {{{6|}}}|&amp;nbsp;[[{{{6|}}}]]}}{{#if: {{{7|}}}|,}}{{#if: {{{7{{{8|}}}|}}}|&amp;nbsp;and}}{{#if: {{{7|}}}|&amp;nbsp;[[{{{7|}}}]]}}{{#if: {{{8|}}}|,}}{{#if: {{{8{{{9|}}}|}}}|&amp;nbsp;and}}{{#if: {{{8|}}}|&amp;nbsp;[[{{{8|}}}]]}}{{#if: {{{9|}}}|,&amp;nbsp;and&amp;nbsp;[[{{{9|}}}]]}}''&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Details</title>
+    <id>1988383</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>193261945</id>
+      <timestamp>2008-02-22T13:04:13Z</timestamp>
+      <contributor>
+        <username>Lucasbfr</username>
+        <id>422965</id>
+      </contributor>
+      <comment>Proposal to merge with [[Template:further]]</comment>
+      <text xml:space="preserve">:&lt;div class=&quot;boilerplate seealso&quot;&gt;''For more details on {{{2|this topic}}}, see [[{{{1}}}]].''&lt;/div&gt;&lt;noinclude&gt;{{mergefrom|further}}
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Fix</title>
+    <id>5632010</id>
+    <revision>
+      <id>176973821</id>
+      <timestamp>2007-12-10T12:11:27Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{NAMESPACE}}||{{{cat|[[Category:All pages needing cleanup]]}}}{{#if:{{{cat-date|}}}|[[{{{cat-date}}} {{#if:{{{date|}}}|{{#if:{{{from|}}}|from|since}} {{{date}}}}}]]}}}}{{#if:{{{text|}}}|&lt;sup class=&quot;{{{class|noprint Inline-Template}}}&quot;&gt;&lt;span title=&quot;{{{title|}}}{{#if:{{{date|}}}|&amp;nbsp;{{#if:{{{from|}}}|from|since}} {{{date}}}}}&quot; style=&quot;white-space: nowrap;&quot;&gt;&amp;#91;''{{{pre-text|}}}[[{{{link|Wikipedia:Cleanup}}}|{{{text|}}}]]{{{post-text|}}}''&amp;#93;&lt;/span&gt;&lt;/sup&gt;|{{{special|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Increase</title>
+    <id>4197969</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>188946037</id>
+      <timestamp>2008-02-04T02:59:15Z</timestamp>
+      <contributor>
+        <username>Denelson83</username>
+        <id>23958</id>
+      </contributor>
+      <minor/>
+      <comment>Changing over to Unicode</comment>
+      <text xml:space="preserve">&lt;span style=&quot;color: #0c0; font-size: larger;&quot;&gt;▲&lt;/span&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{{{FULLPAGENAME}}/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite news</title>
+    <id>4321630</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176437851</id>
+      <timestamp>2007-12-07T20:50:54Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||&lt;div style=&quot;border:1px solid red; background-color:#ffdab9; display:table;&quot;&gt; 
+You must specify '''''archiveurl=''''' and '''''archivedate=''' when using {{tl|cite news}}. Available parameters:
+{{Cite news/doc/parameterlist}}
+&lt;/div&gt;{{
+    #if: {{NAMESPACE}}||
+      [[Category:Articles with broken citations]]
+    }}
+}}
+}}{{#if: {{{title|}}}
+  |{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{authorlink|}}}
+      | [[{{{authorlink}}}|{{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}]]
+      | {{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}
+    }}
+  }}{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{coauthors|}}} | &amp;#59;&amp;#32;{{{coauthors}}} }}.&amp;#32;
+  }}{{#if: {{{curly|}}}|“|&quot;
+  }}{{#if: {{{archiveurl|}}}
+    | [{{{archiveurl}}} {{{title}}}] 
+    | {{#if: {{{url|}}} 
+      | [{{{url}}} {{{title}}}] 
+      | {{{title}}}
+    }}
+  }}{{#if: {{{curly|}}}|”|&quot;}}{{#if: {{{format|}}} | &amp;#32;({{{format}}}) 
+    }}{{#if: {{{work|}}}
+    | , ''{{{work}}}''}}{{#if: {{{publisher|}}}
+    | , {{#if: {{{location|}}} |{{{location}}}:&amp;#32;}}{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    | , {{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}
+  }}{{#if: {{{pages|}}}
+    | , pp.&amp;nbsp;{{{pages}}}
+    |{{#if: {{{page|}}}
+      | , p.&amp;nbsp;{{{page}}}
+    }}
+  }}{{#if: {{{id|}}} 
+    | . {{{id}}}
+  }}{{#if: {{{accessdate|}}}  
+  | .&amp;#32;Retrieved on [[{{{accessdate}}}]]
+  }}.{{#if: {{{language|}}}
+  | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+  }}{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;&quot;{{{quote}}}&quot;
+  }}|Template error: argument '''title''' is required.}}&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:dc}}&lt;!--                     Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:dc
+  --&gt;&amp;rft.type=newspaperArticle&lt;!--                                             The nature or genre of the content of the resource.  (newspaperArticle chosen purely because it is recognized by Zotero.)
+  --&gt;&amp;rft.subject=News&lt;!--                                                      A topic of the content of the resource. Typically expressed as keywords, key phrases or classification codes...
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}       }}&lt;!-- First author's given name or names or initials... may contain multiple words and punctuation, i.e. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}         }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}           }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;&amp;rft.title={{urlencode:{{{title|}}}}}&lt;!--                                     A name given to the resource.
+  --&gt;{{#if: {{{url|}}}       | &amp;rft.identifier={{urlencode:{{{url}}}}}      }}&lt;!-- URL 
+  --&gt;{{#if: {{{format|}}}    | &amp;rft.format={{urlencode:{{{format}}}}}       }}&lt;!-- The physical or digital manifestation of the resource... may include the media-type or dimensions of the resource.
+  --&gt;{{#if: {{{work|}}}      | &amp;rft.source={{urlencode:{{{work}}}}}         }}&lt;!-- A Reference to a resource from which the present resource is derived. 
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.publisher={{urlencode:{{{publisher}}}}} }}&lt;!-- An entity responsible for making the resource available... person, an organization, or a service.
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}         }}&lt;!-- Start and end pages for parts (of a book), i.e. &quot;124-147&quot;
+  --&gt;{{#if: {{{page|}}}      | &amp;rft.spage={{urlencode:{{{page}}}}}         }}&lt;!-- Start page for parts (of a book), i.e. &quot;124&quot;
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}           }}&lt;!-- A date of an event in the lifecycle of the resource... typically the creation or availability of the resource. (ISO 8601)
+  --&gt;{{#if: {{{language|}}}  | &amp;rft.language={{urlencode:{{{language}}}}}   }}&lt;!-- A language of the intellectual content of the resource. Recommended best practice is to use RFC 3066... in conjunction with ISO639
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dablink</title>
+    <id>945764</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>161709751</id>
+      <timestamp>2007-10-02T02:43:39Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;div class=&quot;dablink&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main</title>
+    <id>1208356</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>172617823</id>
+      <timestamp>2007-11-20T02:17:26Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>Adding CSS class names</comment>
+      <text xml:space="preserve">:&lt;div class=&quot;noprint relarticle mainarticle&quot;&gt;''Main article{{#if:{{{2|}}}|s}}: [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&amp;#32;|&amp;#32;and&amp;#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, and [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}''{{#if:{{{11| }}}|&amp;#32; (too many parameters in &amp;#123;&amp;#123;[[Template:main|main]]&amp;#125;&amp;#125;)}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dmoz</title>
+    <id>2559871</id>
+    <revision>
+      <id>189480842</id>
+      <timestamp>2008-02-06T12:04:49Z</timestamp>
+      <contributor>
+        <username>Wiikipedian</username>
+        <id>3366904</id>
+      </contributor>
+      <comment>Other languages already listed in [[Template:Dmoz/Doc]].</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{Pp-semi-protected|small=yes}}&lt;/noinclude&gt;{{#switch: {{{3|}}}
+|#default=[http://www.dmoz.org/{{{1}}}/ {{{2|{{PAGENAME}}}}}] at the [[Open Directory Project]]
+|user=[http://www.dmoz.org/profiles/{{{1}}}.html {{{2|{{PAGENAME}}}}}] at the [[Open Directory Project]]
+}}&lt;noinclude&gt;{{Documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Intel processors</title>
+    <id>645718</id>
+    <revision>
+      <id>196672047</id>
+      <timestamp>2008-03-08T02:09:57Z</timestamp>
+      <contributor>
+        <username>Fernvale</username>
+        <id>1042518</id>
+      </contributor>
+      <comment>add Intel codenames</comment>
+      <text xml:space="preserve">{{ navbox
+| name       = Intel processors
+| title      = [[Intel Corporation|Intel]] [[List of Intel microprocessors|processors]]
+
+| group1 = Discontinued
+| list1  = ''[[Intel 4004|4004]]''{{·}} ''[[Intel 4040|4040]]''{{·}} ''[[Intel 8008|8008]]''{{·}} ''[[Intel 8080|8080]]''{{·}} ''[[Intel 8085|8085]]''{{·}} ''[[Intel iAPX 432|iAPX 432]]''{{·}} ''[[Intel i860|i860]]''{{·}} ''[[Intel i960|i960]]''{{·}} [[Intel 8086|8086]]{{·}} [[Intel 8088|8088]]{{·}} [[Intel 80186|80186]]{{·}} [[Intel 80188|80188]]{{·}} [[Intel 80286|80286]]{{·}} [[Intel 80386|80386]]{{·}} [[Intel 80486|80486]]{{·}} [[Pentium]]{{·}} [[Pentium Pro]]{{·}} [[Pentium II]]{{·}} [[Pentium III]]{{·}} ''[[Itanium|Itanium]]''{{·}} [[Pentium D#Pentium Extreme Edition|Pentium Extreme Edition]]{{·}}[[Pentium M]]{{·}}[[Pentium D]]{{·}}
+
+| group2 = Current
+| list2  = [[Pentium 4]]{{·}}[[Intel Core|Core]]{{·}}[[Intel Pentium Dual-Core|Pentium Dual-Core]]{{·}} [[Intel Core 2|Core 2]]{{·}} [[Celeron]]{{·}} [[Intel A100|A100]]{{·}} [[Xeon]]{{·}} ''[[XScale|XScale]]''{{·}} ''[[Itanium|Itanium 2]]'' {{·}}[[Intel Atom|Atom]]
+
+| group3 = Lists
+| list3 = [[CPU socket#Intel Sockets|Intel CPU slots and sockets]]{{·}} [[List of Intel chipsets|Intel chipsets]]{{·}} [[List of Intel microprocessors|Intel processors]]{{·}} [[List of Intel codenames|Intel codenames]]{{·}} [[List of Intel Celeron microprocessors|Celeron]]{{·}} [[List of Intel Core microprocessors|Core]]{{·}} [[List of Intel Core 2 microprocessors|Core 2]]{{·}} [[List of Intel Pentium 4 microprocessors|Pentium 4]]{{·}} [[List of Intel Pentium D microprocessors|Pentium D]]{{·}} [[List of Intel Pentium Dual-Core microprocessors|Pentium Dual-Core]]{{·}} [[List of Intel Pentium M microprocessors|Pentium M]]{{·}} [[List of Intel Xeon microprocessors|Xeon]]
+
+| group4 = Lists of Speculated
+| list4 = [[List of future Intel Celeron microprocessors|Celeron]]{{·}} [[List of future Intel Core 2 microprocessors|Core 2]]{{·}} 
+[[List of future Intel Pentium Dual-Core microprocessors|Pentium Dual-Core]]{{·}} [[List of future Intel Xeon microprocessors|Xeon]]
+| below = Italics indicate non-[[x86 architecture|x86]] processors
+}}
+&lt;noinclude&gt;
+
+[[Category:Computing navigational boxes|{{PAGENAME}}]]
+
+[[ar:قالب:معالجات إنتل]]
+[[ca:Plantilla:Processadors Intel]]
+[[fr:Modèle:Microprocesseurs Intel]]
+[[hu:Sablon:Intel processzorok]]
+[[ja:Template:Intel processors]]
+[[pt:Predefinição:Processadores Intel]]
+[[vi:Tiêu bản:Vi xử lý Intel]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Col-begin</title>
+    <id>3218295</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>177731710</id>
+      <timestamp>2007-12-13T20:35:17Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>some setup for a script i'm planning</comment>
+      <text xml:space="preserve">{| cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;{{{class|}}} multicol&quot; style=&quot;background:{{{bgColor|transparent}}}; width:{{{width|100%}}};&quot;&lt;noinclude&gt;
+
+|}
+{{protected template}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country flagicon2</title>
+    <id>2048255</id>
+    <revision>
+      <id>186844952</id>
+      <timestamp>2008-01-25T17:24:41Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>span icon image with CSS class; remove whitespace to reduce template size (even a few bytes helps for pages with hundreds of transclusions)</comment>
+      <text xml:space="preserve">&lt;span class=&quot;flagicon&quot;&gt;[[Image:{{#if:{{{variant|}}}|{{{flag alias-{{{variant}}}}}}|{{{flag alias}}}}}|{{#if:{{{size|}}}|{{{size}}}|22x20px}}|border|{{{alt attribute|Flag of {{{alias}}}}}}]]&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:IT giants</title>
+    <id>5362729</id>
+    <revision>
+      <id>196995252</id>
+      <timestamp>2008-03-09T13:23:19Z</timestamp>
+      <contributor>
+        <username>Vantey</username>
+        <id>4280397</id>
+      </contributor>
+      <minor/>
+      <comment>Modifying: fr</comment>
+      <text xml:space="preserve">{{navbox
+| name    = IT giants
+| title   = Major [[computing]] companies
+&lt;includeonly&gt;| state   = {{{state|collapsed}}}&lt;/includeonly&gt;
+| groupstyle = vertical-align: middle;
+| group1  = [[Cellular network|Cellular hardware]]
+| list1   = [[High Tech Computer Corporation|HTC]]{{·}} [[Motorola]]{{·}} [[Nokia]]{{·}} [[Palm, Inc.|Palm]]{{·}} [[Qualcomm]]{{·}} [[Research In Motion|RIM]]{{·}} [[SAGEM]]{{·}} [[Sony Ericsson]]
+| group2  = [[Conglomerate (company)|Conglomerates]]
+| list2   = [[General Electric|GE]]{{·}} [[Hindustan Computers Limited|HCL]]{{·}} [[Hitachi, Ltd.|Hitachi]]{{·}} [[LG Electronics|LG]]{{·}} [[Matsushita Electric Industrial Co.|Matsushita]]{{·}} [[NCR Corporation|NCR]]{{·}} [[Philips]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Siemens AG|Siemens]]{{·}} [[Sony]]{{·}} [[Thomson SA|Thomson]]{{·}} [[Toshiba]]
+| group3  = [[Computer hardware]]
+| list3   = [[Acer Inc.|Acer]]{{·}} [[Asus]]{{·}} [[Dell]]{{·}} [[Fujitsu Siemens Computers|Fujitsu Siemens]]{{·}} [[Lenovo Group|Lenovo]]{{·}} [[Quanta Computer|Quanta]]
+| group4  = [[Computer network]]s
+| list4   = [[3Com]]{{·}} [[Alcatel-Lucent]]{{·}} [[Allied Telesis]]{{·}} [[Avaya]]{{·}} [[Cisco Systems|Cisco]]{{·}} [[Ericsson]]{{·}} [[Foundry Networks|Foundry]]{{·}} [[Huawei]]{{·}} [[Juniper Networks|Juniper]]{{·}} [[Nokia Siemens Networks|Nokia Siemens]]{{·}} [[Nortel]]{{·}} [[ZTE]]
+| group5  = [[Dot-com company|Dot-com]]/[[web service]]s
+| list5   = [[Amazon.com]]{{·}} [[AOL]]{{·}} [[eBay]]{{·}} [[Google]]{{·}} [[IAC/InterActiveCorp]]{{·}} [[Windows Live|Microsoft]]{{·}} [[Yahoo!]]
+| group6  = [[Electronics manufacturing services|Electronics manufacturers]]
+| list6   = [[Celestica]]{{·}} [[Elcoteq]]{{·}} [[Flextronics]]{{·}} [[Foxconn]]{{·}} [[Jabil Circuit|Jabil]]{{·}} [[Kimball International|Kimball]]{{·}} [[Plexus Corporation|Plexus]]{{·}} [[Quanta Computer|Quanta]]{{·}} [[Sanmina-SCI Corporation|Sanmina-SCI]]{{·}} [[SMTC Corporation|SMTC]]{{·}} [[Solectron]]
+| group7  = [[Information technology|IT]] [[Information technology consulting|consulting]]
+| list7   = [[Accenture]]{{·}} [[Affiliated Computer Services|ACS]]{{·}} [[Atos Origin]]{{·}} [[Avanade]]{{·}} [[BearingPoint]]{{·}} [[Booz Allen Hamilton]]{{·}} [[BT Group|BT]]{{·}} [[Capgemini]]{{·}} [[CGI Group|CGI]]{{·}} [[Cognizant Technology Solutions|Cognizant]]{{·}} [[Computer Sciences Corporation|CSC]]{{·}} [[Deloitte Touche Tohmatsu|Deloitte]]{{·}} [[Electronic Data Systems|EDS]]{{·}} [[First Data]]{{·}} [[Fujitsu Consulting|Fujitsu]]{{·}} [[Getronics]]{{·}} [[HCL Technologies|HCL Tech]]{{·}} [[HP Technology Solutions Group|HP TSG]]{{·}} [[IBM Global Services]]{{·}} [[i-flex Solutions|i-flex]]{{·}} [[Indra Sistemas|Indra]]{{·}} [[Infosys]]{{·}} [[Keane (company)|Keane]]{{·}} [[Logica]]{{·}} [[Orange Business Services]]{{·}} [[PA Consulting Group|PA]]{{·}} [[Perot Systems|Perot]]{{·}} [[Science Applications International Corporation|SAIC]]{{·}} [[Sapient (company)|Sapient]]{{·}} [[Satyam Computer Services Ltd.|Satyam]]{{·}} [[Tata Consultancy Services|TCS]]{{·}} [[TietoEnator]]{{·}} [[Titan Corp.|Titan]]{{·}} [[Unisys]]{{·}} [[Wipro Technologies|Wipro]]
+| group8  = [[Computer storage|Storage]]
+| list8   = [[EMC Corporation|EMC]]{{·}} [[Fujitsu]]{{·}} [[Maxtor]]{{·}} [[Network Appliance|NetApp]]{{·}} [[Samsung Electronics|Samsung]]{{·}} [[Seagate Technology|Seagate]]{{·}} [[Hitachi Global Storage Technologies|Hitachi]]{{·}} [[Western Digital]]
+| group9  = [[Semiconductor]]s
+| list9   = [[Advanced Micro Devices|AMD]]{{·}} [[Broadcom]]{{·}} [[Elpida Memory|Elpida]]{{·}} [[Fairchild Semiconductor|Fairchild]]{{·}} [[Freescale Semiconductor|Freescale]]{{·}} [[Hynix]]{{·}} [[Infineon Technologies|Infineon]]{{·}} [[Intel Corporation|Intel]]{{·}} [[Micron Technology|Micron]]{{·}} [[National Semiconductor|National]]{{·}} [[Nvidia]]{{·}} [[NXP Semiconductors|NXP]]{{·}} [[Qimonda]]{{·}} [[Renesas Technology|Renesas]]{{·}} [[Rohm]]{{·}} [[Sharp Corporation|Sharp]]{{·}} [[STMicroelectronics]]{{·}} [[Texas Instruments|TI]]{{·}} [[TSMC]]{{·}} [[VIA Technologies|VIA]]
+| group10  = [[Computer software|Software]]
+| list10   = [[Adobe Systems|Adobe]]{{·}} [[CA, Inc.|CA]]{{·}} [[Electronic Arts|EA]]{{·}} [[Intuit]]{{·}} [[McAfee]]{{·}} [[Microsoft]]{{·}} [[Nintendo]]{{·}} [[Novell]]{{·}} [[Oracle Corporation|Oracle]]{{·}} [[Red Hat]]{{·}} [[SAP AG|SAP]]{{·}} [[Symantec]]
+| group11  = [[Telecommunication|Telecom]]
+| list11   = [[3 (telecommunications)|3]]{{·}} [[América Móvil]]{{·}} [[AT&amp;T]]{{·}} [[Bharti Airtel]]{{·}} [[Bharat Sanchar Nigam Limited|BSNL]]{{·}} [[BT Group|BT]]{{·}} [[Cablevision]]{{·}} [[Comcast]]{{·}} [[Deutsche Telekom]]{{·}} [[EarthLink]]{{·}} [[France Télécom]]{{·}} [[KT (telecommunication company)|KT]]{{·}} [[Nippon Telegraph and Telephone|NTT]]{{·}} [[Qwest]]{{·}} [[RCN Corporation|RCN]]{{·}} [[Rogers Communications|Rogers]]{{·}} [[SK Telecom]]{{·}} [[Sprint Nextel]]{{·}} [[Swisscom]]{{·}}  [[Telecom Italia]]{{·}} [[Telefónica]]{{·}} [[Telmex]]{{·}} [[Time Warner]]{{·}} [[Verizon Communications|Verizon]]{{·}} [[Virgin Media|Virgin]]{{·}} [[Vodafone]]
+| group12  = [[Vertical integration|Vertically integrated&lt;br /&gt;manufacturers]]
+| list12   = [[Apple Inc.|Apple]]{{·}} [[Hewlett-Packard|HP]]{{·}} [[IBM]]{{·}} [[NEC]]{{·}} [[Sun Microsystems|Sun]]
+}}&lt;noinclude&gt;
+[[Category:Computer company navigational boxes|{{PAGENAME}}]]
+[[fr:Modèle:Palette Géants IT]]
+[[hu:Sablon:IT nagyok]]
+[[ja:Template:IT giants]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Quote</title>
+    <id>994397</id>
+    <revision>
+      <id>171937731</id>
+      <timestamp>2007-11-16T19:09:16Z</timestamp>
+      <contributor>
+        <username>VSimonian</username>
+        <id>2968626</id>
+      </contributor>
+      <text xml:space="preserve">&lt;noinclude&gt;{{pp-semi-protected|small=yes}}
+{{For|linking a subject to a collection of quotations on [[Wikiquote]]|Template:Wikiquote}}{{-}}{{{{FULLPAGENAME}}|{{lorem ipsum}}|[[Someone's full name|Someone]]|''Source''}}
+&lt;/noinclude&gt;&lt;includeonly&gt;&lt;blockquote class=&quot;templatequote&quot;&gt;&lt;div&gt;
+{{{1|Insert the text of the quote here, without quotation marks.}}}
+&lt;/div&gt;{{#if:{{{2|}}}|&lt;div class=&quot;templatequotecite&quot;&gt;&amp;#8212;&lt;cite&gt;{{{2}}}{{#if:{{{3|}}}|,&amp;nbsp;{{{3}}}}}&lt;/cite&gt;&lt;/div &gt;}}&lt;/blockquote&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Update</title>
+    <id>1721338</id>
+    <revision>
+      <id>192673849</id>
+      <timestamp>2008-02-19T23:16:08Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-semi-protected|small=yes}}</comment>
+      <text xml:space="preserve">{{ambox
+| type  = content
+| image = [[Image:Gnome globe current event.svg|40px]]
+| text  = '''This article or section needs to be updated.'''&lt;!--
+--&gt;&lt;small&gt;&lt;!--
+--&gt;{{{{{subst|}}}#if:{{{1|}}}|&lt;br/&gt;Parts of this article or section (those related to '''{{{1|}}}''') are no longer up to date.&lt;br/&gt;All other information should be current.}}&lt;!--
+--&gt;&lt;br/&gt;Please update the article to reflect recent events, and remove this template when finished.&lt;!--
+--&gt;{{{{{subst|}}}#if:{{{2|}}}|&lt;br/&gt;Last update: {{{2}}}}}
+&lt;/small&gt;
+}}&lt;includeonly&gt;{{{category|[[Category:Wikipedia articles in need of updating]]}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-semi-protected|small=yes}}
+{{Documentation, template}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:NASDAQ-100</title>
+    <id>12217826</id>
+    <revision>
+      <id>191045838</id>
+      <timestamp>2008-02-13T01:57:48Z</timestamp>
+      <contributor>
+        <username>Ief</username>
+        <id>404186</id>
+      </contributor>
+      <text xml:space="preserve">{{navbox
+|name = NASDAQ-100
+|title = Companies of the [[NASDAQ-100]] index&lt;small&gt; (As of [[January 2]] [[2008]])&lt;/small&gt;
+|titlestyle = background:lightsteelblue;
+|list1 =&lt;div&gt;
+[[Activision]]{{·}}
+[[Adobe Systems]]{{·}}
+[[Akamai Technologies]]{{·}}
+[[Altera]]{{·}}
+[[Amazon.com]]{{·}}
+[[Amgen]]{{·}}
+[[Amylin Pharmaceuticals]]{{·}}
+[[Apollo Group]]{{·}}
+[[Apple Inc.]]{{·}}
+[[Applied Materials]]{{·}}
+[[Autodesk]]{{·}}
+[[Baidu]]{{·}}
+[[BEA Systems]]{{·}}
+[[Bed Bath &amp; Beyond]]{{·}}
+[[Biogen Idec]]{{·}}
+[[Broadcom]]{{·}}
+[[C. H. Robinson Worldwide]]{{·}}
+[[Cadence Design Systems]]{{·}}
+[[Celgene]]{{·}}
+[[Cephalon]]{{·}}
+[[Check Point]]{{·}}
+[[Cintas]]{{·}}
+[[Cisco Systems]]{{·}}
+[[Citrix Systems]]{{·}}
+[[Cognizant Technology Solutions]]{{·}}
+[[Comcast]]{{·}}
+[[Costco]]{{·}}
+[[Dell]]{{·}}
+[[DENTSPLY International]]{{·}}
+[[Discovery Holding Company]]{{·}}
+[[Dish Network Corporation]]{{·}}
+[[eBay]]{{·}}
+[[Electronic Arts]]{{·}}
+[[Expedia, Inc.]]{{·}}
+[[Expeditors International]]{{·}}
+[[Express Scripts]]{{·}}
+[[Fastenal]]{{·}}
+[[Fiserv]]{{·}}
+[[Flextronics]]{{·}}
+[[Focus Media Holding]]{{·}}
+[[Foster Wheeler Corporation]]{{·}}
+[[Garmin]]{{·}}
+[[Genzyme]]{{·}}
+[[Gilead Sciences]]{{·}}
+[[Google]]{{·}}
+[[Hansen Natural]]{{·}}
+[[Henry Schein]]{{·}}
+[[Hologic]]{{·}}
+[[IAC/InterActiveCorp]]{{·}}
+[[Infosys]]{{·}}
+[[Intel Corporation]]{{·}}
+[[Intuit]]{{·}}
+[[Intuitive Surgical]]{{·}}
+[[Joy Global]]{{·}}
+[[Juniper Networks]]{{·}}
+[[KLA Tencor|KLA-Tencor]]{{·}}
+[[Lam Research]]{{·}}
+[[Lamar Advertising Company]]{{·}}
+[[Leap Wireless|Leap Wireless International]]{{·}}
+[[Level 3 Communications]]{{·}}
+[[Liberty Global]]{{·}}
+[[Liberty Media|Liberty Media Corporation]]{{·}}
+[[Linear Technology]]{{·}}
+[[Logitech]]{{·}}
+[[Marvell Technology Group]]{{·}}
+[[Microchip Technology]]{{·}}
+[[Microsoft]]{{·}}
+[[Millicom|Millicom International Cellular]]{{·}}
+[[Monster Worldwide]]{{·}}
+[[Network Appliance]]{{·}}
+[[NII Holdings, Inc.]]{{·}}
+[[Nvidia]]{{·}}
+[[Oracle Corporation]]{{·}}
+[[PACCAR]]{{·}}
+[[Patterson Dental|Patterson Companies]]{{·}}
+[[Paychex]]{{·}}
+[[PetSmart]]{{·}}
+[[Qualcomm]]{{·}}
+[[Research In Motion]]{{·}}
+[[Ryanair]]{{·}}
+[[SanDisk]]{{·}}
+[[Sears Holdings Corporation]]{{·}}
+[[Sigma-Aldrich]]{{·}}
+[[Sirius Satellite Radio]]{{·}}
+[[Staples Inc.]]{{·}}
+[[Starbucks]]{{·}}
+[[Steel Dynamics]]{{·}}
+[[Stericycle]]{{·}}
+[[Sun Microsystems]]{{·}}
+[[Symantec]]{{·}}
+[[Tellabs]]{{·}}
+[[Teva Pharmaceutical Industries]]{{·}}
+[[UAL Corporation]]{{·}}
+[[VeriSign]]{{·}}
+[[Vertex Pharmaceuticals]]{{·}}
+[[Virgin Media]]{{·}}
+[[Whole Foods Market]]{{·}}
+[[Wynn Resorts]]{{·}}
+[[Xilinx]]{{·}}
+[[Yahoo!]]
+&lt;/div&gt;
+|category=[[Category:Companies in the NASDAQ-100 Index]]
+}}&lt;noinclude&gt;{{DEFAULTSORT:{{PAGENAME}}}}
+[[Category:Stock market indices templates]]
+[[ca:Plantilla:NASDAQ-100]]
+[[fr:Modèle:NASDAQ-100]]
+[[it:Template:NASDAQ-100]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox Company</title>
+    <id>1192206</id>
+    <revision>
+      <id>187719436</id>
+      <timestamp>2008-01-29T16:57:40Z</timestamp>
+      <contributor>
+        <username>Geniac</username>
+        <id>1839933</id>
+      </contributor>
+      <minor/>
+      <comment>removed unwanted vertical whitespace</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{| class=&quot;infobox vcard&quot; style=&quot;font-size:90%; width:23em;&quot;
+|-
+! class=&quot;fn n org&quot; style=&quot;text-align:center; font-size:120%;&quot; colspan=&quot;2&quot; | {{{name|{{{company_name|{{PAGENAME}}}}}}}}&lt;!----&gt;
+|-
+{{#if:{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt; | &lt;tr class=&quot;logo&quot;&gt;&lt;td colspan=&quot;2&quot; style=&quot;text-align:center; padding:16px 0 16px 0;&quot;&gt;{{{logo|}}}&lt;!--deprecated:--&gt;{{{company_logo|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}
+|-
+&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[:Category:Types of companies|Type]]&lt;/th&gt;&lt;td&gt;{{{type|}}}&lt;!--deprecated:--&gt;{{{company_type|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{genre|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Genre]]&lt;/th&gt;&lt;td&gt;{{{genre}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Founded&lt;/th&gt;&lt;td&gt;{{{foundation}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{founder|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Entrepreneur|Founder]]&lt;/th&gt;&lt;td&gt;{{{founder}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;&lt;!--deprecated:--&gt;{{#if:{{{dissolved|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Dissolved&lt;/th&gt;&lt;td&gt;{{{dissolved}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!----&gt;&lt;!--
+--&gt;&lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Headquarters&lt;/th&gt;&lt;td class=&quot;adr&quot;&gt;{{#if:{{{location_city|}}} | &lt;span class=&quot;locality&quot;&gt;{{{location_city}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location_country|}}} |, &lt;span class=&quot;country-name&quot;&gt;{{{location_country}}}}}&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{location|}}} | {{{location}}}}}&lt;/td&gt;&lt;/tr&gt;&lt;!--
+--&gt;{{#if:{{{locations|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;No.&amp;nbsp;of locations&lt;/th&gt;&lt;td&gt;{{{locations}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{area_served|}}}     | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Area&amp;nbsp;served&lt;/th&gt;&lt;td&gt;{{{area_served}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{key_people|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;Key&amp;nbsp;people&lt;/th&gt;&lt;td&gt;{{{key_people}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{industry|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Industry]]&lt;/th&gt;&lt;td&gt;{{{industry}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{products|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Product (business)|Products]]&lt;/th&gt;&lt;td&gt;{{{products}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{services|}}}        | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Service (economics)|Services]]&lt;/th&gt;&lt;td&gt;{{{services}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{revenue|}}}         | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Revenue]]&lt;/th&gt;&lt;td&gt;{{{revenue}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{operating_income|}}}| &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Earnings before interest and taxes|Operating income]]&lt;/th&gt;&lt;td&gt;{{{operating_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{net_income|}}}      | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;{{#ifeq:{{{intl|}}}|yes|[[Net income|Profit]]|[[Net income]]}}&lt;/th&gt;&lt;td&gt;{{{net_income}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{assets|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Assets|Total assets]]&lt;/th&gt;&lt;td&gt;{{{assets}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{equity|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Ownership equity|Total equity]]&lt;/th&gt;&lt;td&gt;{{{equity}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{owner|}}}           | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Owner]]&lt;/th&gt;&lt;td&gt;{{{owner}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{num_employees|}}}   | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Employment|Employee]]s&lt;/th&gt;&lt;td&gt;{{{num_employees}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{parent|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Holding company|Parent]]&lt;/th&gt;&lt;td&gt;{{{parent}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{divisions|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Division (business)|Divisions]]&lt;/th&gt;&lt;td&gt;{{{divisions}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{subsid|}}}          | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Subsidiary|Subsidiaries]]&lt;/th&gt;&lt;td&gt;{{{subsid}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt; | &lt;tr class=&quot;note&quot;&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Slogan]]&lt;/th&gt;&lt;td&gt;{{{slogan|}}}&lt;!--deprecated:--&gt;{{{company_slogan|}}}&lt;!----&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{homepage|}}}        | &lt;tr&gt;&lt;th style=&quot;text-align:right; padding-right:0.75em;&quot;&gt;[[Website]]&lt;/th&gt;&lt;td class=&quot;url&quot;&gt;{{{homepage}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+--&gt;{{#if:{{{footnotes|}}}       | &lt;tr class=&quot;note&quot;&gt;&lt;td colspan=&quot;2&quot; class=&quot;note&quot;&gt;{{{footnotes}}}&lt;/td&gt;&lt;/tr&gt;}}
+|}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+{{pp-template}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Copy section to Wikiquote</title>
+    <id>6323699</id>
+    <revision>
+      <id>158783011</id>
+      <timestamp>2007-09-18T18:51:25Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Changed to colour matched image, see [[Wikipedia talk:Article message boxes/Archive 1#The article message box meta template|article message boxes]] standardisation project.</comment>
+      <text xml:space="preserve">{{ambox
+| type  = merge
+| image = [[Image:Edit-copy purple.svg|40px|Copy icon]]
+| text  = '''This section is a candidate to be [[m:transwiki|copied]] to [[Wikiquote]] using the [[Wikipedia:Transwiki log|Transwiki]] process.'''&lt;br /&gt;&lt;small&gt;If the content can be [[Wikipedia:How to edit a page|changed]] to be more encyclopedic rather than just a list of quotes, please do so and remove this message. Otherwise, you can help by formatting it per the [[wikiquote:Help:Contents|Wikiquote guidelines]] in preparation for the duplication.&lt;/small&gt;
+}}&lt;includeonly&gt;{{{category|[[Category:Copy to Wikiquote]]}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+[[Category:Transwiki templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Who?</title>
+    <id>9602563</id>
+    <revision>
+      <id>182926696</id>
+      <timestamp>2008-01-08T10:46:49Z</timestamp>
+      <contributor>
+        <username>Ddxc</username>
+        <id>4424591</id>
+      </contributor>
+      <comment>redirect to {{who}} per [[Template_talk:Who#Merge]]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Who]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Flagicon</title>
+    <id>2075417</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176578634</id>
+      <timestamp>2007-12-08T15:48:27Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>default to [[Template:Country data]] if no parameter specified, remove all whitespace to reduce template size a few bytes (to minimum)</comment>
+      <text xml:space="preserve">{{country data {{{1|}}}|country flagicon2|variant={{{variant|{{{2|}}}}}}|size={{{size|}}}}}&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Flag</title>
+    <id>1695548</id>
+    <revision>
+      <id>162374644</id>
+      <timestamp>2007-10-05T01:50:54Z</timestamp>
+      <contributor>
+        <username>MJCdetroit</username>
+        <id>627347</id>
+      </contributor>
+      <minor/>
+      <comment>RV my edit</comment>
+      <text xml:space="preserve">{{country data {{{1|}}}
+| country flag2
+| name = {{{name|{{{1|}}}}}}
+| variant = {{{variant|{{{2|}}}}}}
+| size = {{{size|}}}
+}}&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Gain</title>
+    <id>4625334</id>
+    <revision>
+      <id>188946363</id>
+      <timestamp>2008-02-04T03:01:50Z</timestamp>
+      <contributor>
+        <username>Denelson83</username>
+        <id>23958</id>
+      </contributor>
+      <comment>Redirecting to {{increase}}</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Increase]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Col-end</title>
+    <id>3218301</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>165838975</id>
+      <timestamp>2007-10-20T14:12:14Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <minor/>
+      <comment>add parameter to template doc</comment>
+      <text xml:space="preserve">&lt;p&gt;&lt;/p&gt;
+|}&lt;noinclude&gt;{{protected template}}
+{{template doc|Col-begin/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Hkex</title>
+    <id>1462795</id>
+    <revision>
+      <id>164212723</id>
+      <timestamp>2007-10-13T04:59:23Z</timestamp>
+      <contributor>
+        <ip>83.217.236.8</ip>
+      </contributor>
+      <comment>interwiki link added</comment>
+      <text xml:space="preserve">[[Hong Kong Stock Exchange|SEHK]]: [http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID={{{1}}}&amp;WidCoAbbName=&amp;Month=&amp;langcode=e {{{1}}}]&lt;includeonly&gt;[[Category:Companies listed on the Hong Kong Stock Exchange]]&lt;/includeonly&gt;&lt;noinclude&gt;[[Category:Ticker symbol templates|HKEx]]
+[[fi:Malline:Sehk]][[fr:Modèle:Sehk]][[zh:Template:hkex]][[hy:Կաղապար:Hkex]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Who</title>
+    <id>5666292</id>
+    <revision>
+      <id>194840890</id>
+      <timestamp>2008-02-29T05:54:49Z</timestamp>
+      <contributor>
+        <username>Carlosguitar</username>
+        <id>409564</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted 1 edit by [[Special:Contributions/75.10.121.168|75.10.121.168]]; Huh? seems to be a test. using [[WP:TW]]</comment>
+      <text xml:space="preserve">{{fix
+|link=Wikipedia:Avoid weasel words
+|text=attribution needed
+|title=The material in the vicinity of this tag may use weasel words or too-vague attribution.
+|date={{{date|}}}
+|cat=[[Category:Articles with specifically-marked weasel-worded phrases]]}}&lt;noinclude&gt;
+
+&lt;!-- TEMPLATE END. The text below has been &lt;noinclude&gt;'d and will not appear in the template when used on pages --&gt;
+
+----
+
+This tag is for placement after descriptions of a group of persons, such as &quot;serious scholars / scientists / researchers,&quot; &quot;historians / philosophers / scientists,&quot; &quot;some / many people,&quot; and the like.
+
+Use it when no specific examples of identifiable individuals from that group are named who could be used to verify the statements or beliefs attributed to the group.  Preferably the offending statement should be made more specific by identifying particular individuals and then either cited or tagged for needing citation. Similarly, the statement should be deleted if the claim about the group is sufficiently vague as to be unsupportable.
+
+This tag will categorize tagged articles into [[:Category:Articles with specifically-marked weasel-worded phrases]], but not this template itself. This [[Wikipedia:Template|template]] is a [[Wikipedia:Avoid self-references|self-reference]] and is part of the [[Wikipedia:WikiProject|Wikipedia project]] rather than the [[Encyclopedia|encyclopedic]] content.
+
+==Redirects==
+&lt;!--regex |Attrib|Attribute|Attribution(?: |_)+needed|By(?: |_)+who?|Views(?: |_)+needing(?: |_)+attribution|Weasel-name|Weasel(?: |_)+word|Weasel-word|Who|Who(?: |_)+says|Whom|Whosaid|Says(?: |_)+who --&gt;
+#{{Tl|Att}}
+#{{Tl|Attrib}}
+#{{Tl|Attribute}}
+#{{Tl|Attribution needed}}
+#{{Tl|By who?}}
+#{{Tl|Views needing attribution}}
+#{{Tl|Weasel-name}}
+#{{Tl|Weasel word}}
+#{{Tl|Weasel-word}}
+#{{Tl|Who?}}
+#{{Tl|Who says}}
+#{{Tl|Whom}}
+#{{Tl|Whosaid}}
+#{{Tl|Says who}}
+[[Category:Citation and verifiability maintenance templates|{{PAGENAME}}]]
+[[Category:Inline templates|{{PAGENAME}}]]
+
+[[fr:Modèle:Précision nécessaire]]
+[[ja:Template:誰]]
+[[ru:Шаблон:Кто]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Country flag2</title>
+    <id>1938204</id>
+    <revision>
+      <id>186844123</id>
+      <timestamp>2008-01-25T17:20:07Z</timestamp>
+      <contributor>
+        <username>Andrwsc</username>
+        <id>898126</id>
+      </contributor>
+      <comment>span icon image with CSS class; remove whitespace to reduce template size (even a few bytes helps for pages with hundreds of transclusions)</comment>
+      <text xml:space="preserve">&lt;span class=&quot;flagicon&quot;&gt;[[Image:{{#if:{{{variant|}}}|{{{flag alias-{{{variant}}}}}}|{{{flag alias}}}}}|{{#if:{{{size|}}}|{{{size}}}|22x20px}}|border|{{{alt attribute|Flag of {{{alias}}}}}}]]&amp;nbsp;&lt;/span&gt;[[{{{alias}}}|{{{name}}}]]&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Misleading</title>
+    <id>10015655</id>
+    <revision>
+      <id>159910420</id>
+      <timestamp>2007-09-24T00:27:40Z</timestamp>
+      <contributor>
+        <username>Splash</username>
+        <id>285145</id>
+      </contributor>
+      <comment>tighten phrasing generally per talk page</comment>
+      <text xml:space="preserve">{{ambox
+| type  = content
+| text  = '''Some statements in this {{#ifeq:{{{1|}}}|section|section|article}} may be misleading'''.&lt;br /&gt;&lt;small&gt;Please help [{{fullurl:{{FULLPAGENAME}}|action=edit}} clarify this article]. Suggestions may be on the [[{{TALKPAGENAME}}|talk page]].&lt;/small&gt;
+}}&lt;includeonly&gt;{{{category|[[Category:Misleading articles]]}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+----
+This template will categorize tagged articles into [[:Category:Misleading articles]].
+
+* This [[Wikipedia:Template|template]] is a [[Wikipedia:Avoid self-references|self-reference]].
+* This template is not useful for [[Wikipedia:Subst]].
+
+There is one optional parameter: 
+*section. Example of use: &lt;nowiki&gt;{{Misleading|section}}&lt;/nowiki&gt; This allows this template to be used for sections.
+*article. Example of use: &lt;nowiki&gt;{{Misleading|article}}&lt;/nowiki&gt; This allows this template to be used for articles.
+*default. Example of use: &lt;nowiki&gt;{{Misleading}}&lt;/nowiki&gt; This allows this template to be used for both articles and sections.
+
+==See also==
+* [[Wikipedia:Template messages/Cleanup]]
+[[Category:Cleanup templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap</title>
+    <id>1627975</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>178534669</id>
+      <timestamp>2007-12-17T17:23:07Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>shorten per talk</comment>
+      <text xml:space="preserve">&lt;span style=&quot;white-space:nowrap&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;!--interwikis/categories go inside doc--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tnavbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>171324865</id>
+      <timestamp>2007-11-14T00:23:38Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&amp;nbsp;&lt;span class=&quot;noprint plainlinksneverexpand&quot; style=&quot;white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;|&lt;!--else:
+--&gt;&lt;div class=&quot;noprint plainlinksneverexpand&quot; style=&quot;background-color:transparent; padding:0; white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{mini|}}}{{{miniv|}}}{{{plain|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;|&lt;!--else:
+--&gt;This box:&amp;nbsp;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{miniv|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{viewplain|}}}|view|v}}&lt;/span&gt;]]|&lt;!--else:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[Template talk:{{{1}}}|&lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;Discussion about this template&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{ns:10}}:{{{1}}}|action=edit}} &lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;You can edit this template. Please use the preview button before saving.&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;&lt;!--
+--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+&lt;hr/&gt;&lt;center&gt;'''{{purge}}''' the Wikipedia cache of this template.&lt;hr/&gt;&lt;/center&gt;&lt;br/&gt;
+{{documentation}} 
+&lt;!--Note: Metadata (interwiki links, etc) for this template should be put on [[Template:Tnavbar/doc]]--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172964235</id>
+      <timestamp>2007-11-21T19:45:44Z</timestamp>
+      <contributor>
+        <username>Trödel</username>
+        <id>171039</id>
+      </contributor>
+      <comment>use new template [[:Template:documentation]]</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; -webkit-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; -webkit-column-count:{{{1}}}; column-count:{{{1}}} }};&quot; |}}&gt;
+&lt;references /&gt;&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Fact</title>
+    <id>2048472</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>183974165</id>
+      <timestamp>2008-01-13T03:50:24Z</timestamp>
+      <contributor>
+        <username>Harryboyles</username>
+        <id>754264</id>
+      </contributor>
+      <comment>Fix so that the invalid date category only has main namespace pages</comment>
+      <text xml:space="preserve">&lt;!--{{Fact}} begin--&gt;{{fix
+|link=Wikipedia:Citation needed
+|text=citation needed
+|class=noprint Template-Fact
+|title=This claim needs references to reliable sources
+|date={{{date|}}}
+|cat=[[Category:All articles with unsourced statements]]
+|cat-date=Category:Articles with unsourced statements}}&lt;includeonly&gt;{{#if:{{NAMESPACE}}||{{#if:{{{date|}}}|{{#ifexist:Category:Articles with unsourced statements since {{{date}}}||[[Category:Articles with invalid date parameter in template]]}}|}}}}&lt;/includeonly&gt;&lt;!--{{Fact}} end--&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Col-2</title>
+    <id>3218306</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>165838941</id>
+      <timestamp>2007-10-20T14:11:57Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <minor/>
+      <comment>hmm, it does need the parameter...</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{hprotected}}&lt;/noinclude&gt;&lt;p&gt;&lt;/p&gt;
+| width=&quot;50%&quot; align=&quot;{{{align|left}}}&quot; valign=&quot;{{{valign|top}}}&quot; |&lt;noinclude&gt;{{template doc|Col-begin/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Web cite</title>
+    <id>4877567</id>
+    <revision>
+      <id>49908711</id>
+      <timestamp>2006-04-24T12:12:26Z</timestamp>
+      <contributor>
+        <username>Msikma</username>
+        <id>304976</id>
+      </contributor>
+      <text xml:space="preserve">#REDIRECT [[Template:Cite web]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:DJIA</title>
+    <id>3533924</id>
+    <revision>
+      <id>193818182</id>
+      <timestamp>2008-02-25T00:39:12Z</timestamp>
+      <contributor>
+        <username>UnitedStatesian</username>
+        <id>3461395</id>
+      </contributor>
+      <comment>added</comment>
+      <text xml:space="preserve">{{Navbox
+|name = DJIA
+|title = {{flagicon|United States}} [[Dow Jones Industrial Average]] companies
+|titlestyle = background:lightsteelblue
+|groupstyle = background:lightsteelblue
+|group1 = Current stocks
+|list1 = [[3M]]{{·}}[[Alcoa]]{{·}}{{nowrap|[[American Express]]}}{{·}}{{nowrap|[[American International Group]]}}{{·}}[[AT&amp;T]]{{·}}{{nowrap|[[Bank of America]]}}{{·}}[[Boeing]]{{·}}[[Caterpillar Inc.|Caterpillar]]{{·}}{{nowrap|[[Chevron Corporation|Chevron]]}}{{·}}[[Citigroup]]{{·}}{{nowrap|[[The Coca-Cola Company]]}}{{·}}[[DuPont]]{{·}}[[ExxonMobil]]{{·}}{{nowrap|[[General Electric]]}}{{·}}{{nowrap|[[General Motors]]}}{{·}}[[Hewlett-Packard]]{{·}}{{nowrap|[[The Home Depot]]}}{{·}}[[Intel Corporation|Intel]]{{·}}[[IBM]]{{·}}[[Johnson &amp; Johnson]]{{·}}{{nowrap|[[JPMorgan Chase]]}}{{·}}
+[[McDonald's]]{{·}}[[Merck &amp; Co.]]{{·}}[[Microsoft]]{{·}}[[Pfizer]]{{·}}[[Procter &amp; Gamble]]{{·}}{{nowrap|[[United Technologies Corporation|United Technologies]]}}{{·}}[[Verizon Communications|Verizon]]{{·}}[[Wal-Mart]]{{·}}{{nowrap|[[The Walt Disney Company]]}}
+
+|group2 = Selected former stocks
+|list2 = [[Altria Group]]{{·}} [[American Telephone &amp; Telegraph]]{{·}} [[American Tobacco Company]]{{·}} [[Bethlehem Steel]]{{·}} [[Colorado Fuel and Iron]]{{·}} [[Eastman Kodak]]{{·}} [[General Foods]]{{·}} [[Goodyear Tire and Rubber Company]]{{·}} [[Honeywell]]{{·}} [[International Paper]]{{·}} [[Johns-Manville]]{{·}} [[Nash Motors]]{{·}} [[Navistar International]]{{·}} [[North American Company]]{{·}} [[Sears, Roebuck and Company|Sears Roebuck]]{{·}} [[Union Carbide]]{{·}} [[United States Rubber Company]]{{·}} [[F. W. Woolworth Company|Woolworth's]] 
+ 
+}}&lt;includeonly&gt;
+[[Category:Dow Jones Industrial Average]]
+&lt;/includeonly&gt;&lt;noinclude&gt;
+[[Category:Stock market indices templates|DJIA]]
+[[Category:United States navigational boxes|DJIA]]
+
+[[fr:Modèle:DJIA]]
+[[it:Template:Dow Jones Industrial Average]]
+[[ja:Template:ダウ平均株価]]
+[[pt:Predefinição:Dow Jones Industrial Average]]
+[[zh:Template:DJIA]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

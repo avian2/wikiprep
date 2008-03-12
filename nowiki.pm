@@ -31,10 +31,10 @@ sub randomString() {
 #
 # Regular expression may be compiled, and must be enclosed in parenthesis.
 
-sub extractTags($\$\%) {
-  my ($regex, $refToText, $refToChunksReplaced) = @_;
+sub extractTags(\$\$\%) {
+  my ($refToRegex, $refToText, $refToChunksReplaced) = @_;
 
-  $$refToText =~ s/$regex/&extractOneTag($1, $refToChunksReplaced)/seg;
+  $$refToText =~ s/$$refToRegex/&extractOneTag($1, $refToChunksReplaced)/seg;
 }
 
 BEGIN {
@@ -55,7 +55,7 @@ sub replaceTags(\$\%) {
 sub extractOneTag($\%) {
   my ($content, $RefToChunksReplaced) = @_;
 
-  my $token = &randomString();
+  my $token = sprintf("\x7fUNIQ%08x%08x", rand(0x7fffffff), rand(0x7fffffff));
 
   $$RefToChunksReplaced{$token} = $content;
 

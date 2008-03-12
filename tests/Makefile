@@ -28,7 +28,8 @@ LOGS =	images.log \
 	hurt.log \
 	microsoft.log \
 	microsoft2.log \
-	window.log
+	window.log \
+	intel.log
 
 all: test
 

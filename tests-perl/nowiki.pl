@@ -4,6 +4,8 @@ use nowiki;
 my ($t, $r);
 my %tok;
 
+my $regex = qr/(<nowiki>.*?<\/nowiki>)/;
+
 print "Generated unique strings:\n";
 print "  ", &nowiki::randomString(), "\n";
 print "  ", &nowiki::randomString(), "\n";
@@ -16,7 +18,7 @@ END
 ;
 $r = $t;
 
-&nowiki::extractTags("(<nowiki>.*?</nowiki>)", \$t, \%tok);
+&nowiki::extractTags(\$regex, \$t, \%tok);
 &nowiki::replaceTags(\$t, \%tok);
 
 ok($r eq $t);
@@ -32,7 +34,7 @@ $r = $t;
 
 %tok = ();
 
-&nowiki::extractTags("(<nowiki>.*?</nowiki>)", \$t, \%tok);
+&nowiki::extractTags(\$regex, \$t, \%tok);
 
 ok($t =~ /nice day/);
 
