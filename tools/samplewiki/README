@@ -1,0 +1,24 @@
+Introduction
+============
+
+"samplewiki" is a simple C utility that will take an XML Wikipedia dump and
+extract a random sample of pages from it.
+
+Usage
+=====
+
+The script takes XML data on standard input and writes XML data on
+standard output. Use a command line like this:
+
+./samplewiki < enwiki-pages-articles.xml > enwiki-pages-articles.sample.xml
+
+Use "make" to compile.
+
+Other notes
+===========
+
+Change the PART define in source file to set the size of the sample.
+
+For maximum speed of processing the code relies on the exact formatting of
+the Wikipedia XML dumps. It won't work correctly if the amount of
+whitespace in the XML changes.
