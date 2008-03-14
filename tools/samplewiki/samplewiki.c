@@ -23,7 +23,11 @@
 /* 1/PART is the probability that a Wikipedia page will end up in the sample
  * For example: PART = 20 will include approximately one in twenty pages and
  * will give you a 650 MB sample. */
-#define PART	100
+#define PART	500
+
+#define MAXLINELEN	(5 * 1024 * 1024)
+
+#define MAXPAGES 	5000
 
 #define TEMPLATE_TITLE	"    <title>Template:"
 #define TITLE		"    <title>"
@@ -32,16 +36,18 @@ int main() {
 	int inPage=0;
 	int inGoodMood=0;
 
+	int page_count = 0;
+
 	char *buffer;
 	char *r;
 
 	int template_title_len = strlen(TEMPLATE_TITLE);
 	int title_len = strlen(TITLE);
 
-	buffer=malloc(5*1024*1024*sizeof(*buffer));
+	buffer=malloc(MAXLINELEN*sizeof(*buffer));
 
 	while(1) {
-		r=fgets(buffer, 5*1024*1024, stdin);
+		r=fgets(buffer, MAXLINELEN, stdin);
 
 		if(r==NULL) return 0;
 
@@ -52,8 +58,15 @@ int main() {
 		} else {
 			if(!strncmp(buffer, TITLE, title_len)) {
 				inPage=1;
-				inGoodMood=((random()%PART)==1);
+
+				if(MAXPAGES == -1 || page_count < MAXPAGES) {
+					inGoodMood = ((random()%PART)==1);
+				} else {
+					inGoodMood = 0;
+				}
+
 				if(inGoodMood) {
+					page_count ++;
 					fputs("  <page>\n", stdout);
 				}
 			}
