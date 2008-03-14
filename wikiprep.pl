@@ -975,7 +975,8 @@ sub resolveLink(\$) {
 
 BEGIN {
 
-my $nowikiRegex = qr/(<(?:pre|nowiki)[^<>]*>.*?<\/(?:pre|nowiki)>)/;
+my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
+my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 
 sub includeTemplates(\$\$\$) {
   my ($refToId, $refToTitle, $refToText) = @_;
@@ -1003,11 +1004,13 @@ sub includeTemplates(\$\$\$) {
   # Use negative look-ahead and look-behind to make sure that we are matching agains two opening
   # braces and not three (which may be left after unsuccessful parameter substitution
   while ($templateRecursionLevels < $maxTemplateRecursionLevels) {
-    my %ChunksReplaced = ();
+    my %nowikiChunksReplaced = ();
+    my %preChunksReplaced = ();
 
     # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
     # infinite loops if templates include an example invocation in <nowiki> tags.
-    &nowiki::extractTags(\$nowikiRegex, $refToText, \%ChunksReplaced);
+    &nowiki::extractTags(\$preRegex, $refToText, \%preChunksReplaced);
+    &nowiki::extractTags(\$nowikiRegex, $refToText, \%nowikiChunksReplaced);
 
     my $r = $$refToText =~ s/(?<!\{)\{\{(?!\{)
                                 (?:\s*)        # optional whitespace before the template name is ignored
@@ -1031,7 +1034,8 @@ sub includeTemplates(\$\$\$) {
                              \}\}
                             /&instantiateTemplate($1, $refToId, $refToTitle)/segx;
 
-    &nowiki::replaceTags($refToText, \%ChunksReplaced);
+    &nowiki::replaceTags($refToText, \%nowikiChunksReplaced);
+    &nowiki::replaceTags($refToText, \%preChunksReplaced);
 
     last unless ($r);
 
