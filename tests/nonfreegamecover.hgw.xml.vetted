@@ -1,0 +1,66 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="383786" orglength="805" newlength="897" stub="0" categories="0" outlinks="1" urls="2">
+<title>Image:Uru Box.jpg</title>
+<categories></categories>
+<links>10988409</links>
+<urls>
+http://wikimediafoundation.org
+http://www.amazon.co.uk
+</urls>
+<text>
+<h1> Summary </h1>
+
+<h1> Licensing </h1>
+
+Copyrighted
+
+This image is cover art for a video or computer game, and the copyright for it is most likely owned by either the game&apos;s publisher or developer. It is believed that the use of low-resolution images of game cover art
+*to illustrate the packaging of the game in question
+*on the  English-language Wikipedia, hosted on servers in the United States by the non-profit  Wikimedia Foundation,
+constitutes fair use under United States copyright law. Other uses of this image, on Wikipedia or elsewhere, might be copyright infringement. See  for more information.
+
+To the uploader: please add a detailed fair use rationale for each use, as well as the source of the work and copyright information. 
+----
+
+Usage:
+
+This template accepts the platform(s) as parameter to better categorize the tagged image.
+
+or
+
+or just
+
+if the platform is unknown.
+
+
+</text>
+</page>
+</mediawiki>

@@ -1,0 +1,229 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Image:Uru Box.jpg</title>
+    <id>383786</id>
+    <revision>
+      <id>181752399</id>
+      <timestamp>2008-01-03T00:52:09Z</timestamp>
+      <contributor>
+        <username>Islander</username>
+        <id>1272154</id>
+      </contributor>
+      <minor/>
+      <comment>formatting</comment>
+      <text xml:space="preserve">== Summary ==
+
+{{Non-free fair use rationale
+|Article= Uru: Ages Beyond Myst
+|Description= Game Cover
+|Source= http://www.amazon.co.uk
+|Portion= Entire Cover
+|Purpose= The cover of URU: ABM, for use as a visual identity on the URU article.
+|Resolution= Yes
+|Replaceability= Not replaceable
+|other_information= Fair use claimed for the [[Uru: Ages Beyond Myst]] article because:
+* No free alternative available.
+* It does not detract from the value of the image, or the copyright holder's ability to make further profit from it.
+* The image is provided at a low resolution inappropriate for re-printing, thus the usage on Wikipedia does not pose a problem of aiding piracy of any kind.
+}}
+
+== Licensing ==
+{{Non-free game cover|Windows}}
+
+[[Category:Myst images|Uru: Ages Beyond Myst]]
+[[fr:Image:Uru.jpg]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Non-free fair use rationale</title>
+    <id>10988408</id>
+    <revision>
+      <id>193041251</id>
+      <timestamp>2008-02-21T14:56:31Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Non-free fair use rationale: [[WP:HRT|frequently transcluded template]], tempting target for vandalism [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Non-free use rationale]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Non-free game cover</title>
+    <id>1217400</id>
+    <revision>
+      <id>194353032</id>
+      <timestamp>2008-02-27T05:04:58Z</timestamp>
+      <contributor>
+        <username>JackSchmidt</username>
+        <id>4495964</id>
+      </contributor>
+      <comment>Happy-melon's category= method, do not include template in categories</comment>
+      <text xml:space="preserve">&lt;!-- Fair use tag, based on Template:Image-license-fairuse
+--&gt;&lt;div class=&quot;boilerplate&quot; style=&quot;margin:0.5em auto; width: 80%; clear: both; background-color: #f7f8ff; border: 2px solid #8888aa; padding: 4px; font-size:85%; min-height:64px; vertical-align: center&quot; id=&quot;imageLicense&quot;&gt;
+&lt;div style=&quot;float:left&quot; id=&quot;imageLicenseIcon&quot;&gt;[[Image:Gamepad.svg|64px|Copyrighted]]&lt;/div&gt;
+&lt;div style=&quot;text-align:left;margin-left:68px&quot; id=&quot;imageLicenseText&quot;&gt;
+This image is '''cover art''' for a '''[[video game|video]]''' or '''[[computer game]]''', and the copyright for it is most likely owned by either the game's publisher or developer. It is believed that the use of low-resolution images of game cover art
+*to illustrate the '''packaging of the game in question'''
+*on the [[en:wikipedia:Main Page| English-language Wikipedia]], hosted on servers in the United States by the non-profit [http://wikimediafoundation.org Wikimedia Foundation],
+constitutes '''[[fair use]]''' under [[United States copyright law]]. '''Other uses of this image, on Wikipedia or elsewhere, might be [[copyright infringement]]'''. See [[Wikipedia:Non-free content]] for more information.
+
+'''To the uploader''': please add a detailed '''[[Wikipedia:Non-free use rationale guideline|fair use rationale]]''' for each use, as well as the '''source''' of the work and copyright information.{{#if:{{{1|}}}||&lt;br /&gt;Additionally, please specify '''at least one platform''' in the first parameter. See usage below.}}
+----
+&lt;div class=&quot;NavFrame&quot; style=&quot;padding:0px; border-style: none;&quot;&gt;
+&lt;div class=&quot;NavFrame&quot; style=&quot;border-style: none; padding: 0px;&quot;&gt;
+&lt;div class=&quot;NavHead&quot; style=&quot;background: transparent; text-align: left; padding: 0px;&quot;&gt;'''Usage:'''&lt;/div&gt;
+&lt;div class=&quot;NavContent&quot; style=&quot;display: none; text-align: left; padding: 0px;&quot;&gt;
+This template accepts the platform(s) as parameter to better categorize the tagged image.
+&lt;pre style=&quot;font-size: normal&quot;&gt;{{Non-free game cover|Macintosh|Linux|Windows}}&lt;/pre&gt;
+or
+&lt;pre style=&quot;font-size: normal&quot;&gt;{{Non-free game cover|Macintosh}}&lt;/pre&gt;
+or just
+&lt;pre style=&quot;font-size: normal&quot;&gt;{{Non-free game cover}}&lt;/pre&gt;
+if the platform is unknown.
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+{{#ifeq:{{{1}}}|PC|&lt;br /&gt;&lt;span class=&quot;error&quot;&gt;Possible tagging error: this image has been tagged as a &quot;PC&quot; game cover. This should only be done if it is for an ''unidentifiable'' personal computer platform. If the cover says &quot;PC-CD/DVD-ROM&quot;, it most likely means ''Windows''.|}}&lt;/div&gt;&lt;includeonly&gt;{{{category|
+{{Non-free media}}
+[[Category:{{{1|Video}}} game covers|{{PAGENAME}}]]
+{{#if:{{{2|}}}|[[Category:{{{2}}} game covers|{{PAGENAME}}]]|}}
+{{#if:{{{3|}}}|[[Category:{{{3}}} game covers|{{PAGENAME}}]]|}} }}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+==See also==
+*{{tl|game rationale}}
+[[Category:Non-free image copyright tags|{{PAGENAME}}]]
+[[Category:Video game media templates|{{PAGENAME}}]]
+[[Category:Templates using ParserFunctions|{{PAGENAME}}]]
+
+[[ar:قالب:غلاف لعبة]]
+[[pt:Predefinição:Fair Use em imagens de video games]]
+[[ru:Шаблон:Обложка компьютерной игры]]
+[[sl:Predloga:Naslovnica igre]]
+[[sr:Шаблон:Омот игрице]]
+[[vi:Tiêu bản:Bìa trò chơi điện tử]]
+[[zh:Template:Gamecover]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Non-free media</title>
+    <id>10696542</id>
+    <revision>
+      <id>194402578</id>
+      <timestamp>2008-02-27T12:47:43Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>removing template from [[Category:All non-free media]]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;[[Category:All non-free media|{{PAGENAME}}]]&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Non-free use rationale</title>
+    <id>8488620</id>
+    <revision>
+      <id>193507974</id>
+      <timestamp>2008-02-23T16:29:31Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>move notes to documentation, outside the full protection</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{mergefrom|Fair use media rationale}}&lt;/noinclude&gt;
+&lt;noinclude&gt;&lt;!--
+
+Do not edit this page directly!  Instead, you should copy and paste the following code onto your image description page:
+
+
+{{Non-free use rationale
+|Description=
+|Source=
+|Article=
+|Portion=
+|Low_resolution=
+|Purpose=
+|Replaceability=
+|other_information= (optional variable, can be left out)
+}}
+
+
+--&gt;&lt;/noinclude&gt;{| summary=&quot;The fair use rationale of this image.&quot; class=&quot;toccolours&quot; style=&quot;width: 100%&quot; cellpadding=&quot;2&quot;
+! colspan=2 style=&quot;background: #d8e0ff; text-align: center; vertical-align: top; padding-right: 0.4em; width: 15%; font-size: 12pt&quot; id=&quot;rationale_header&quot; |Non-free / fair use media [[Wikipedia:Fair use rationale guideline|rationale]] &lt;!--
+--&gt;{{#if:{{{Special_header|}}}| {{{Special_header}}}|}}&lt;!--
+--&gt;{{#if:{{{Article|}}}|{{#ifexist:{{{Article|}}}|for [[{{{Article}}}]] &lt;includeonly&gt;[[Category:Non-free images with valid backlink|{{PAGENAME}}]]&lt;/includeonly&gt;|''- WARNING: &lt;code&gt;{{{Article}}}&lt;/code&gt; DOES NOT EXIST''&lt;div style=&quot;font-size:smaller&quot;&gt;Check capitalisation and enter only the exact name (title) of ''a single article'' with no additional formatting. It is also possible the indicated article was deleted.&lt;/div&gt; &lt;includeonly&gt;[[Category:Non-free images with red backlink|{{PAGENAME}}]]&lt;/includeonly&gt;}}|''- NEEDS ARTICLE NAME'' &lt;includeonly&gt;[[Category:Non-free images lacking article backlink|{{PAGENAME}}]]&lt;/includeonly&gt;}}&lt;noinclude&gt;&lt;!--
+--&gt;&lt;div style=&quot;font-size:smaller&quot;&gt;Please read [[Wikipedia:Fair use rationale guideline]] before using this template.&lt;/div&gt;&lt;/noinclude&gt;
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; width: 15%&quot; id=&quot;rationale_desc&quot; |Description
+|
+{{{Description}}}
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em&quot; id=&quot;rationale_src&quot; | Source
+|
+&lt;noinclude&gt;{{{Source}}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#if:{{{Source|}}}|{{{Source}}}|[[Category:Images without source&lt;noinclude&gt;|*&lt;/noinclude&gt;]] &lt;span style=&quot;color:red&quot;&gt;'''No source specified. Please edit this image description and provide a source.'''&lt;/span&gt;}}&lt;/includeonly&gt;
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em&quot; id=&quot;rationale_art&quot; | Article
+|
+[[{{{Article}}}]]
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; white-space: nowrap&quot; id=&quot;rationale_port&quot; | [[Template:Non-free use rationale#note-portion|Portion used]]
+|
+{{{Portion}}}
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; white-space: nowrap&quot; id=&quot;rationale_reduc&quot; | [[Template:Non-free use rationale#note-resolution|Low resolution?]]
+|
+{{{Resolution|{{{Low_resolution}}}}}}
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; white-space: nowrap&quot; id=&quot;rationale_purp&quot; | [[Template:Non-free use rationale#note-purpose|Purpose of use]]
+|
+&lt;noinclude&gt;{{{Purpose}}}&lt;/noinclude&gt;&lt;includeonly&gt;{{#if:{{{Purpose|}}}|{{{Purpose}}}|&lt;span style=&quot;color:red&quot;&gt;'''No purpose specified. Please edit this image description and provide a purpose.'''&lt;/span&gt;[[Category:Images that transclude the Non-free media rationale template with no Purpose specified]]}}&lt;/includeonly&gt;
+|-
+! style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; white-space: nowrap&quot; id=&quot;rationale_repl&quot; | [[Template:Non-free use rationale#note-replace|Replaceable?]]
+|
+{{{Replaceability}}}
+{{#switch: {{{other_information|}}}
+| - =# .
+# Significance. Non-free content is used only if its presence would significantly increase readers' understanding of the topic, and its omission would be detrimental to that understanding. Non-free media files are not used if they can be replaced by text that serves a similar function.
+| none =
+| &lt;includeonly&gt;=&lt;/includeonly&gt;
+| #default = &lt;tr&gt;&lt;td style=&quot;background: #ccf; text-align: right; vertical-align: center; padding-right: 0.4em; white-space: nowrap; font-weight: bold&quot; id=&quot;rationale_otherinf&quot;&gt;[[Template:Non-free use rationale#note-other|Other information]]&lt;/td&gt;&lt;td&gt;
+{{{other_information}}}&lt;noinclude&gt; (optional)&lt;/noinclude&gt;&lt;/td&gt;&lt;/tr&gt;}}
+|}{{Non-free media}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

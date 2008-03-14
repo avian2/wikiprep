@@ -975,7 +975,7 @@ sub resolveLink(\$) {
 
 BEGIN {
 
-my $nowikiRegex = qr/(<nowiki>.*?<\/nowiki>)/;
+my $nowikiRegex = qr/(<(?:pre|nowiki)[^<>]*>.*?<\/(?:pre|nowiki)>)/;
 
 sub includeTemplates(\$\$\$) {
   my ($refToId, $refToTitle, $refToText) = @_;

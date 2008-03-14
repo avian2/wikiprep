@@ -29,7 +29,8 @@ LOGS =	images.log \
 	microsoft.log \
 	microsoft2.log \
 	window.log \
-	intel.log
+	intel.log \
+	nonfreegamecover.log
 
 all: test
 
