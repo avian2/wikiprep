@@ -30,7 +30,8 @@ LOGS =	images.log \
 	microsoft2.log \
 	window.log \
 	intel.log \
-	nonfreegamecover.log
+	nonfreegamecover.log \
+	olympics.log
 
 all: test
 
