@@ -100,7 +100,7 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
                      5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
                      9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
 
-my $maxTemplateRecursionLevels = 10;
+my $maxTemplateRecursionLevels = 20;
 my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
@@ -998,6 +998,21 @@ sub includeTemplates(\$\$\$) {
 
   my $templateRecursionLevels = 0;
 
+  # Take note of which templates have been included, so we can break recursion loops. This
+  # hash maps template page id to the last recursion level when this template was included.
+  #
+  # A template can only be included on one recursion level on one page. This removes possible
+  # infinite template recursion. Note that this isn't equivalent to MediaWiki handling of 
+  # template loops (see http://meta.wikimedia.org/wiki/Help:Template), but it seems to be
+  # working well enough for us.
+  #
+  # An example where we would get an infinite loop, but MediaWiki wouldn't:
+  # (from "Template:Olympic Games")
+  #
+  # {{#if:{{{Sport|}}}|{{Olympic Games {{{Sport}}}}}}}
+
+  my %includedTemplates = ();
+
   # We also require that the body of a template does not contain the template opening sequence
   # (two successive opening braces - "\{\{"). We use negative lookahead to achieve this.
 
@@ -1032,7 +1047,8 @@ sub includeTemplates(\$\$\$) {
 #                                               # hence "[^\{]" (any char except opening brace).
 # END OF OLD code and comments
                              \}\}
-                            /&instantiateTemplate($1, $refToId, $refToTitle)/segx;
+                            /&instantiateTemplate($1, $refToId, $refToTitle, \%includedTemplates,
+                                                  $templateRecursionLevels)/segx;
 
     &nowiki::replaceTags($refToText, \%nowikiChunksReplaced);
     &nowiki::replaceTags($refToText, \%preChunksReplaced);
@@ -1174,8 +1190,9 @@ BEGIN {
 } # end of BEGIN block
 
 
-sub instantiateTemplate($\$\$) {
-  my ($templateInvocation, $refToId, $refToTopPageTitle) = @_;
+sub instantiateTemplate($\$\$\%$) {
+  my ($templateInvocation, $refToId, $refToTopPageTitle, 
+      $refToIncludedTemplates, $templateRecursionLevels) = @_;
 
   my $result = "";
 
@@ -1197,7 +1214,8 @@ sub instantiateTemplate($\$\$) {
       return $overrideResult;
     }
 
-    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result);
+    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result, 
+                          $refToIncludedTemplates, $templateRecursionLevels);
   }
 
   $result;  # return value
@@ -1326,13 +1344,26 @@ sub logTemplateInclude(\$\$\%) {
   close(TEMPF);
 }
 
-sub includeTemplateText(\$\%\$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult) = @_;
+sub includeTemplateText(\$\%\$\$\%$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult, 
+      $refToIncludedTemplates, $templateRecursionLevels) = @_;
 
   &normalizeTitle($refToTemplateTitle);
   my $includedPageId = &resolveLink($refToTemplateTitle);
 
   if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
+    my $lastIncludeLevel = $$refToIncludedTemplates{$includedPageId};
+
+    if ( defined($lastIncludeLevel) ) {
+      if ( $lastIncludeLevel != $templateRecursionLevels ) {
+        print LOGF "Template loop in '$$refToTemplateTitle' detected\n";
+        $$refToResult = " ";
+        return
+      }
+    } else {
+      $$refToIncludedTemplates{$includedPageId} = $templateRecursionLevels;
+    }
+
     # OK, perform the actual inclusion with parameter substitution
 
     &logTemplateInclude(\$includedPageId, $refToId, $refToParameterHash);
