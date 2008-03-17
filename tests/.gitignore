@@ -1,0 +1,13 @@
+*.log
+*.templates
+*.version
+*.stat.inlinks
+*.stat.categories
+*.related_links
+*.redir.xml
+*.local.xml
+*.anchor_text
+*.min_local_id
+*.hgw.xml
+*.disambig
+*.cat_hier
