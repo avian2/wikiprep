@@ -6,7 +6,7 @@ good=0
 for vettedfile in *.vetted; do
 	basefile=`basename "$vettedfile" .vetted`
 
-	basefile=`echo "$basefile" | sed -e 's/\!/\//'`
+	basefile=`echo "$basefile" | sed -e 's/\!/\//g'`
 
 	all=$(($all+1))
 
