@@ -41,6 +41,7 @@ use images;
 use nowiki;
 use revision;
 use languages;
+use templates;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.2";
@@ -189,7 +190,7 @@ binmode(LOCALF, ':utf8');
 binmode(DISAMBIGF, ':utf8');
 binmode(LOCALIDF, ':utf8');
 
-mkdir($templateIncDir);
+&templates::prepare(\$templateIncDir);
 
 if( opendir(TEMPD, "$templateIncDir") ) {
   my @dirContents = readdir(TEMPD);
@@ -1328,7 +1329,9 @@ sub includeParserFunction(\$\%\$\$) {
 sub logTemplateInclude(\$\$\%) {
   my ($refToTemplateId, $refToPageId, $refToParameterHash) = @_;
 
-  open(TEMPF, ">>$templateIncDir/$$refToTemplateId");
+  my $path = &templates::logPath(\$templateIncDir, $refToTemplateId);
+
+  open(TEMPF, ">>$path") or die("$path: $!");
   binmode(TEMPF,  ':utf8');
 
   print TEMPF "Page $$refToPageId\n";
