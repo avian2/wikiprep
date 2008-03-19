@@ -83,6 +83,7 @@ if (! -e $file) {
   die "Input file '$file' cannot be opened for reading\n";
 }
 
+my $startTime = time;
 
 ##### Global definitions #####
 
@@ -234,6 +235,10 @@ close(ANCHORF);
 close(RELATEDF);
 close(LOCALF);
 close(DISAMBIGF);
+
+my $elapsed = time - $startTime;
+
+printf("Processing took %d:%02d:%02d\n", $elapsed/3600, ($elapsed / 60) % 60, $elapsed % 60);
 
 # Hogwarts needs the anchor text file to be sorted in the increading order of target page id.
 # The file is originally sorted by source page id (second field in each line).
@@ -845,7 +850,7 @@ sub transform() {
       STDOUT->flush();
     }
   }
-  print "\n"
+  print "\n";
 }
 
 sub updateStatistics(\@\@) {
