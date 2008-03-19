@@ -14,7 +14,7 @@ sub prepare(\$) {
   do {
     my $path = "$$refToTemplateIncDir/$n";
     if( -d $path ) {
-      File::Path::rmtree($path, 1, 0);
+      File::Path::rmtree($path, 0, 0);
     }
     mkdir("$$refToTemplateIncDir/$n");
     $n++;
