@@ -1951,8 +1951,8 @@ BEGIN {
   # or any other subsequent character.
   my $urlTerminator = qr/[\[\]\{\}\s\n\|\"<>]|$/;
 
-  my $urlSequence1 = qr/\[(?:\s*)($urlProtocols(?:[^\[\]]*))\]/;
-  my $urlSequence2 = qr/($urlProtocols(?:.*?))$urlTerminator/;
+  my $urlSequence1 = qr/\[\s*($urlProtocols[^\[\]]*)\]/;
+  my $urlSequence2 = qr/($urlProtocols.*?)$urlTerminator/;
 
   sub extractUrls(\$\@) {
     my ($refToText, $refToUrlsArray) = @_;
