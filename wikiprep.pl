@@ -44,7 +44,7 @@ use languages;
 use templates;
 
 my $licenseFile = "COPYING";
-my $version = "2.02.tomaz.2";
+my $version = "2.02.tomaz.3";
 
 if (@ARGV < 1) {
   &printUsage();
@@ -56,6 +56,7 @@ my $showLicense = 0;
 my $showVersion = 0;
 my $dontExtractUrls = 0;
 my $doWriteLog = 0;
+my $doCompress = 0;
 my $dontIncludeTemplates = 0;
 
 GetOptions('f=s' => \$file,
@@ -63,6 +64,7 @@ GetOptions('f=s' => \$file,
            'version' => \$showVersion,
            'nourls' => \$dontExtractUrls,
            'log' => \$doWriteLog,
+           'compress' => \$doCompress,
            'notemplates' => \$dontIncludeTemplates );
 
 if ($showLicense) {
@@ -175,9 +177,15 @@ my $totalByteCount = 0;
 
 &revision::writeVersion($versionFile, $file);
 
-open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
+if( $doCompress ) {
+  open(OUTF, "| gzip >$outputFile.gz") or die "Cannot open pipe to gzip: $!: $outputFile.gz";
+  open(ANCHORF, "| gzip > $anchorTextFile.gz") or die "Cannot open pipe to gzip: $!: $anchorTextFile.gz";
+} else {
+  open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
+  open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
+}
+
 open(LOGF, "> $logFile") or die "Cannot open $logFile";
-open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
 open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile";
 open(LOCALF, "> $localPagesFile") or die "Cannot open $localPagesFile: $!";
 open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
@@ -2431,5 +2439,6 @@ Available options:
   -log           Write a large log file with debug information.
                  Log can get approximately 3-4 times larger than
                  the XML dump.
+  -compress      Enable compression on some of the output files.
 END
 }
