@@ -71,6 +71,7 @@
       <text xml:space="preserve">
 	      [[Dummy]]
 	      [[Dummy|Dummy2]]
+	      [[Nested|Nested [[anchors]] and some [[more]]]]
       </text>
     </revision>
   </page>

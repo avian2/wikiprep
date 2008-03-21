@@ -1,0 +1,286 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Mantra</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+		    ==History==
+[[Image:Om Mani Padme Hum.jpg|left|thumb|250px|Polychrome text left of center is the primary [[mantra]] of [[Tibetan Buddhism]], Sanskrit {{IAST|[[Om Mani Padme Hum|Oṃ Maṇi Padme Hūṃ]]}} 
+
+({{bo|w=oMmanipad+mehU~M|t=&lt;font face=&quot;Tibetan Machine Uni&quot;&gt;ༀམནིཔདྨེཧཱུྃ&lt;/font&gt;|lang=yes}}). Monochrome text right of center reads Sanskrit {{IAST|&quot;Oṃ [[Vajrasattva]] Hūm&quot;}} ({{bo|w=oM badzrasatwa hUM |t=&lt;font face=&quot;Jomolhari&gt;ༀབཛྲསཏྭཧཱུཾ&lt;/font&gt;|lang=yes}}), an invocation to the embodiment of primeval purity.]]
+
+
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Bo</title>
+    <id>5328480</id>
+    <revision>
+      <id>179686363</id>
+      <timestamp>2007-12-22T23:32:32Z</timestamp>
+      <contributor>
+        <ip>222.150.89.95</ip>
+      </contributor>
+      <comment>+cat</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;Values:
+*'''c''' for '''c'''onventional phonetic spelling
+*'''t''' for the name in '''T'''ibetan characters
+*'''w''' for the transliteration of the Tibetan name according to '''W'''ylie romanisation
+*'''z''' for the spelling in the PRC's [[Tibetan Pinyin]] ('''Z'''angwen Pinyin)
+*'''l''' for the pronunciation in the '''L'''hasa dialect, given in the [[International Phonetic Alphabet]]
+
+At current, the only mandatory portion is that the formatting will be off if you don't include a value for t or w (use [[Template:bo-wo]] to include only the Tibetan Pinyin). '''Also note''' that &quot;c&quot; is currently non-functional because of formatting problems. Just include the conventional spelling as part of the value for &quot;t&quot;, separated from the Tibetan spelling by a comma.
+
+By default, the &lt;nowiki&gt;[[Tibetan]]&lt;/nowiki&gt; link is directed to [[Tibetan script]]. If you would like it to point to [[Tibetan language]] instead (which is appropriate if you are including a conventional spelling or anything else other than Tibetan script), set '''lang''' to &quot;yes&quot; or &quot;1&quot;.
+
+Example:
+
+&lt;nowiki&gt;'''Vimalamitra''' ({{bo|t=Drime Shenyen, དྲི་མེད་བཤེས་གཉེན་|w=Dri-med Bshes-gnyen|z=Chimê Xênyên|l=ʈʂʰímeʔ ɕéɲẽ|lang=yes}})&lt;/nowiki&gt;
+
+yields:
+
+'''Vimalamitra''' ({{bo|t=Drime Shenyen, དྲི་མེད་བཤེས་གཉེན་|w=Dri-med Bshes-gnyen|z=Chimê Xênyên|l=ʈʂʰímeʔ ɕéɲẽ|lang=yes}})
+
+&lt;/noinclude&gt;{{ #if: {{{t|}}} |{{ #if: {{{lang|}}} |[[Tibetan language|Tibetan]]|[[Tibetan script|{{ #if: {{{script|}}} |Tibetan script|Tibetan}}]]}}: {{{t}}} |}}{{ #if: {{{w|}}} |{{ #if: {{{t|}}} |&amp;#59;&amp;nbsp;|}}[[Wylie transliteration|Wylie]]: ''&lt;nowiki&gt;&lt;/nowiki&gt;{{{w}}}'' |}}{{ #if: {{{z|}}} |&amp;#59; [[Tibetan Pinyin|ZWPY]]: {{{z}}} |}}{{ #if: {{{o|}}} |&amp;#59; [[Tibetan Pinyin|ZWPY]]: {{{o}}} |}}{{ #if: {{{l|}}} |&amp;#59; Lhasa dialect [[help:IPA|IPA]]: {{Template:IPA|[{{{l}}}]}} |}}&lt;noinclude&gt;
+[[Category:Multilingual support templates|Bo]]
+
+[[ja:Template:Bo]]
+[[vi:Tiêu bản:Bo]]
+[[zh:Template:Bo]]
+&lt;/noinclude&gt;
+</text>
+</revision>
+</page>
+  <page>
+    <title>Template:IAST</title>
+    <id>2682596</id>
+    <revision>
+      <id>191386412</id>
+      <timestamp>2008-02-14T09:39:23Z</timestamp>
+      <contributor>
+        <username>Eleassar</username>
+        <id>294421</id>
+      </contributor>
+      <minor />
+      <comment>iw: sl</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{protected template}}&lt;/noinclude&gt;{{transl|sa|IAST|{{{1}}}}}&lt;noinclude&gt;
+
+template to mark [[IAST]] transliteration of Sanskrit. Transcludes {{tl|transl}}.
+
+==Example==
+
+:&lt;code&gt;&lt;nowiki&gt;{{lang|sa|म}} {{IAST|ma}}&lt;/nowiki&gt;&lt;/code&gt;
+gives:
+:{{lang|sa|म}} {{IAST|ma}}
+
+use {{tl|ISOtranslit}} for ISO transliteration of non-Sanskrit Indic.
+
+[[Category:Multilingual support templates]]
+[[de:Vorlage:IAST]]
+[[lb:Template:IAST]]
+[[sl:Predloga:IAST]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:IPA</title>
+    <id>1346385</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>177913359</id>
+      <timestamp>2007-12-14T17:41:52Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Change span title &quot;Pronunciation in IPA&quot; to &quot;Representation in the International Phonetic Alphabet (IPA)&quot; for clarity per editprotected on talk by [[User:SMcCandlish|SMcCandlish]]</comment>
+      <text xml:space="preserve">&lt;span title=&quot;Representation in the International Phonetic Alphabet (IPA)&quot; class=&quot;IPA&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Translation</title>
+    <id>882420</id>
+    <revision>
+      <id>195089906</id>
+      <timestamp>2008-03-01T09:52:51Z</timestamp>
+      <contributor>
+        <ip>125.25.20.180</ip>
+      </contributor>
+      <text xml:space="preserve">{{#ifexist:Wikipedia:Translation/{{PAGENAME}}
+|{{Wikipedia:Translation/{{PAGENAME}}}}
+|{{#if:{{{1|}}}
+|
+{{ambox
+|type=style
+|image=[[Image:Translation arrow.svg|50px|Translation arrow icon]]
+|text=This article or section should be [[Wikipedia:Translation|translated]] (or additional material should be added from material at {{{1}}}). Please &lt;span class=&quot;plainlinks&quot;&gt;[{{SERVER}}{{localurl:{{PAGENAME}}|action=edit}} translate]&lt;/span&gt; this.
+}}
+|
+{{ambox
+|type=style
+|image=[[Image:Translation arrow.svg|50px|Translation arrow icon]]
+|text='''Click on &lt;span class=&quot;plainlinks&quot;&gt;[{{fullurl:Wikipedia:Translation/{{PAGENAME}}|action=edit&amp;preload=Template:Translation/Preload}}&lt;/span&gt; '''Wikipedia:Translation/{{#if:{{{NONAME|}}}|&lt;nowiki&gt;{{ENGLISH PAGE NAME}}&lt;/nowiki&gt;|{{PAGENAME}}}}'''] and follow the instructions to make a translation request.'''
+{{#if:{{{1|}}}|&lt;small&gt;Translation has been requested from material at {{{1}}}.&lt;/small&gt;}}
+}}
+}}
+}}&lt;noinclude&gt;
+[[ca:Template:Traducció]]
+[[es:Plantilla:Traducción]]
+[[fr:Modèle:Demande de traduction]]
+[[ia:Patrono:Traduction]]
+[[ja:Template:翻訳中]]
+[[lo:ແມ່ແບບ:ແປ]]
+[[zh:Template:Translation]]
+[[km:Template:Translation]]
+&lt;/noinclude&gt;&lt;noinclude&gt;
+[[Category:{{Translation/Base}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+    <page>
+    <title>Template:Transl</title>
+    <id>10661272</id>
+    <revision>
+      <id>193008465</id>
+      <timestamp>2008-02-21T10:39:20Z</timestamp>
+      <contributor>
+        <username>Od Mishehu</username>
+        <id>461626</id>
+      </contributor>
+      <comment>replacing {{[[template:Transl/doc|{{FULLPAGENAME}}/doc]]}} with {{
+[[template:Documentation|documentation]]}} per talk [age request</comment>
+      <text xml:space="preserve">&lt;span lang=&quot;{{{1}}}-Latn&quot; xml:lang=
+&quot;{{{1}}}-Latn&quot; title={{ #if: {{{3|}}} | {{#switch: {{{2}}}
+|ISO = {{#switch: {{{1}}}
+ |ba
+ |be
+ |bg
+ |uk
+ |ab
+ |mn
+ |kk
+ |ky
+ |tut
+ |bua
+ |sah 
+ |xal
+ |ru 
+ |Cyrl = &quot;ISO 9 Cyrillic&quot;
+ |fa
+ |ur
+ |ku
+ |ps
+ |tg
+ |ug
+ |ar 
+ |Arab = &quot;ISO 233 Arabic&quot;
+ |yi
+ |he 
+ |Hebr = &quot;ISO 259 Hebrew&quot;
+ |grc 
+ |el = &quot;ISO 843 Greek&quot;
+ |ja 
+ |Hira
+ |Kana
+ |Hrkt
+ |Jpan = &quot;ISO 3602 Japanese&quot;
+ |pny
+ |zho
+ |chi
+ |zh 
+ |Hans
+ |Hant
+ |Han = &quot;ISO 7098 Chinese&quot;
+ |kat
+ |ka = &quot;ISO 9984 Georgian&quot;
+ |arm
+ |hy = &quot;ISO 9985 Armenian&quot;
+ |tha
+ |th = &quot;ISO 11940 Thai&quot;
+ |kor
+ |ko = &quot;ISO 11941 Korean&quot;
+ |sa
+ |hi
+ |bn
+ |te
+ |mr
+ |gu
+ |kn
+ |ml
+ |ta
+ |dra
+ |inc 
+ |Brah
+ |Beng
+ |Deva = &quot;15919 Indic&quot;
+ |#default = &quot;ISO transliteration&quot;
+ }}
+|DIN = {{#switch: {{{1}}}
+ |fa
+ |ur
+ |ku
+ |ps
+ |tg
+ |ug
+ |ar 
+ |Arab = &quot;DIN 31635 Arabic&quot;
+ |#default = &quot;DIN transliteration&quot;
+ }}
+|IAST = &quot;International Alphabet of Sanskrit Transliteration&quot;
+|#default = &quot;{{{1}}} {{{2}}} transliteration&quot;
+}}
+|{{#switch: {{{1}}}
+ |akk
+ |sem 
+ |Phnx = &quot;Semitic transliteration&quot;
+ |Xsux = &quot;Cuneiform transliteration&quot;
+ |#default = &quot;{{langname|{{{1}}}}} transliteration&quot;
+ }}
+}}  class=&quot;Unicode&quot; style=&quot;white-space:normal; text-decoration: none&quot;&gt;{{{3|{{{2}}}}}}&lt;/span&gt;&lt;noinclude&gt;
+
+{{protected template}}
+{{documentation}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

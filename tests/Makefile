@@ -31,7 +31,8 @@ LOGS =	images.log \
 	window.log \
 	intel.log \
 	nonfreegamecover.log \
-	olympics.log
+	olympics.log \
+	tibet.log
 
 all: test
 

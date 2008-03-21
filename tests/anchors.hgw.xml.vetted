@@ -59,7 +59,7 @@
       
 </text>
 </page>
-<page id="4" orglength="48" newlength="34" stub="0" categories="0" outlinks="0" urls="0">
+<page id="4" orglength="103" newlength="70" stub="0" categories="0" outlinks="0" urls="0">
 <title>Test2</title>
 <categories></categories>
 <links></links>
@@ -69,6 +69,7 @@
 
 	      Dummy
 	      Dummy2
+	      Nested anchors and some more
       
 </text>
 </page>

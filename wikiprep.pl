@@ -1100,21 +1100,23 @@ BEGIN {
     # Template definitions (especially those with parameters) can easily span several lines,
     # hence the "/s" modifier. The template name extends up to the first pipeline symbol (if any).
     # Template parameters go after the "|" symbol.
-    if ($$refToTemplateInvocation =~ /^([^|]*)\|(.*)$/sx) {
-      $$refToTemplateTitle = $1;  # single out the template name itself
-      my $paramsList = $2;
 
-      # Template parameters often contain URLs, internal links, or just other useful text,
-      # whereas the template serves for presenting it in some nice way.
-      # Parameters are separated by "|" symbols. However, we cannot simply split the string
-      # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-      # on those "|" symbols that are not inside [[...]]. It's obviously sufficient to check that
-      # brackets are not improperly nested on one side of "|", so we use lookahead.
-      # We first replace all "|" symbols that are not inside [[...]] with a special separator that
-      # we invented, which will hopefully not normally appear in the text (.pAr.).
-      # Next, we use 'split' to break the string on this new separator.
+    # Template parameters often contain URLs, internal links, or just other useful text,
+    # whereas the template serves for presenting it in some nice way.
+    # Parameters are separated by "|" symbols. However, we cannot simply split the string
+    # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
+    # on those "|" symbols that are not inside [[...]]. It's obviously sufficient to check that
+    # brackets are not improperly nested on one side of "|", so we use lookahead.
+    # We first replace all "|" symbols that are not inside [[...]] with a special separator that
+    # we invented, which will hopefully not normally appear in the text (.pAr.).
+    # Next, we use 'split' to break the string on this new separator.
+    
+    # Note that template name can also contain internal links (for example when template is a
+    # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
+    # the name of the template as for template parameters.
 
-      $paramsList =~ s/\|                       # split on pipeline symbol, such that
+    $$refToTemplateInvocation =~ 
+                     s/\|                       # split on pipeline symbol, such that
                           (?:                   # non-capturing grouper that encloses 2 options
                               (?=               #   zero-width lookahead - option #1
                                   [^\]]*$       #     there are no closing brackets up to the end
@@ -1131,73 +1133,74 @@ BEGIN {
                       /$specialSeparator/sxg;   # replace matching symbols with a special separator
                                                 # /s means string can contain newline chars
 
-      my @parameters = split(/$specialSeparatorRegex/, $paramsList);
+    my @parameters = split(/$specialSeparatorRegex/, $$refToTemplateInvocation);
 
-      # Parameters can be either named or unnamed. In the latter case, their name is defined by their
-      # ordinal position (1, 2, 3, ...).
+    # String before the first "|" symbol is the title of the template.
+    $$refToTemplateTitle = shift(@parameters);
 
-      my $unnamedParameterCounter = 0;
-      my $parameterCounter = 0;
+    # Template invocation does not contain any parameters
+    return unless($#parameters > -1);
 
-      # It's legal for unnamed parameters to be skipped, in which case they will get default
-      # values (if available) during actual instantiation. That is {{template_name|a||c}} means
-      # parameter 1 gets the value 'a', parameter 2 value is not defined, and parameter 3 gets the value 'c'.
-      # This case is correctly handled by function 'split', and does not require any special handling.
-      my $param;
-      foreach $param (@parameters) {
+    # Parameters can be either named or unnamed. In the latter case, their name is defined by their
+    # ordinal position (1, 2, 3, ...).
 
-        # if the value does not contain a link, we can later trim whitespace
-        my $doesNotContainLink = 0;
-        if ($param !~ /\]\]/) {
-          $doesNotContainLink = 1; 
-        }
+    my $unnamedParameterCounter = 0;
+    my $parameterCounter = 0;
 
-        # For parser functions we need unmodified parameters by position. For example:
-        # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
-        # hash. Note that the key of the hash can't be generated any other way (parameter names can't 
-        # include '=' characters)
-        $parameterCounter++;
+    # It's legal for unnamed parameters to be skipped, in which case they will get default
+    # values (if available) during actual instantiation. That is {{template_name|a||c}} means
+    # parameter 1 gets the value 'a', parameter 2 value is not defined, and parameter 3 gets the value 'c'.
+    # This case is correctly handled by function 'split', and does not require any special handling.
+    my $param;
+    foreach $param (@parameters) {
 
-        my $unexpandedParam = $param;
-        if ($doesNotContainLink) {
-          &trimWhitespaceBothSides(\$unexpandedParam);
-        }
-        $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
-
-        # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
-        # a link (to prevent possible gluing the link to the following text after template substitution)
-
-        # Parameter values may contain "=" symbols, hence the parameter name extends up to
-        # the first such symbol.
-        # It is legal for a parameter to be specified several times, in which case the last assignment
-        # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
-        # Therefore, we don't check if the parameter has been assigned a value before, because
-        # anyway the last assignment should override any previous ones.
-        if ($param =~ /^([^=]*)=(.*)$/s) {
-          # This is a named parameter.
-          # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
-          # parameter ("2") is specified explicitly - this is handled transparently.
-
-          my $parameterName = $1;
-          my $parameterValue = $2;
-
-          &trimWhitespaceBothSides(\$parameterName);
-          if ($doesNotContainLink) { # if the value does not contain a link, trim whitespace
-            &trimWhitespaceBothSides(\$parameterValue);
-          }
-
-          $$refToParameterHash{$parameterName} = $parameterValue;
-        } else {
-          # this is an unnamed parameter
-          $unnamedParameterCounter++;
-
-          $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
-        }
+      # if the value does not contain a link, we can later trim whitespace
+      my $doesNotContainLink = 0;
+      if ($param !~ /\]\]/) {
+        $doesNotContainLink = 1; 
       }
-    } else {
-      # Template invocation does not contain a pipeline symbol, hence take the entire
-      # invocation text as the template title.
-      $$refToTemplateTitle = $$refToTemplateInvocation;
+
+      # For parser functions we need unmodified parameters by position. For example:
+      # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
+      # hash. Note that the key of the hash can't be generated any other way (parameter names can't 
+      # include '=' characters)
+      $parameterCounter++;
+
+      my $unexpandedParam = $param;
+      if ($doesNotContainLink) {
+        &trimWhitespaceBothSides(\$unexpandedParam);
+      }
+      $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
+
+      # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
+      # a link (to prevent possible gluing the link to the following text after template substitution)
+
+      # Parameter values may contain "=" symbols, hence the parameter name extends up to
+      # the first such symbol.
+      # It is legal for a parameter to be specified several times, in which case the last assignment
+      # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
+      # Therefore, we don't check if the parameter has been assigned a value before, because
+      # anyway the last assignment should override any previous ones.
+      if ($param =~ /^([^=]*)=(.*)$/s) {
+        # This is a named parameter.
+        # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
+        # parameter ("2") is specified explicitly - this is handled transparently.
+
+        my $parameterName = $1;
+        my $parameterValue = $2;
+
+        &trimWhitespaceBothSides(\$parameterName);
+        if ($doesNotContainLink) { # if the value does not contain a link, trim whitespace
+          &trimWhitespaceBothSides(\$parameterValue);
+        }
+
+        $$refToParameterHash{$parameterName} = $parameterValue;
+      } else {
+        # this is an unnamed parameter
+        $unnamedParameterCounter++;
+
+        $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
+      }
     }
   }
 
