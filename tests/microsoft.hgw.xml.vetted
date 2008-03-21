@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="19001" orglength="70247" newlength="48339" stub="0" categories="0" outlinks="14" urls="103">
+<page id="19001" orglength="70247" newlength="48514" stub="0" categories="0" outlinks="14" urls="103">
 <title>Microsoft</title>
 <categories></categories>
 <links>13752112 13752113 13752114 13752110 13752111 13752115 13752116 13752117 13752118 13752119 13752120 13752121 13752122 13752123</links>
@@ -336,7 +336,7 @@ Microsoft ( September 20, 2005 ).
 
 <h2> Platform Products and Services Division </h2>
 
-The current logo of Microsoft Windows, one of the company&apos;s best-known products.
+<internal id="13752122">The current logo of Microsoft Windows, one of the company&apos;s best-known products.</internal>
 
 This division produces Microsoft&apos;s flagship product, the Windows operating system. It has been produced in many versions, including Windows 3.1, Windows 95, Windows 98, Windows 2000, Windows Me, Windows Server 2003, Windows XP and Windows Vista. Almost all IBM compatible personal computers come with Windows preinstalled. The current desktop version of Windows is Windows Vista. The online service MSN, the cable television station MSNBC and the Microsoft online magazine Slate are all part of this division. (Slate was acquired by The Washington Post on December 21, 2004.) At the end of 1997, Microsoft acquired Hotmail, the most popular webmail service, which it rebranded as &quot;MSN Hotmail&quot;. In 1999, Microsoft introduced MSN Messenger, an instant messaging client, to compete with the popular AOL Instant Messenger. Along with Windows Vista, MSN Messenger became Windows Live Messenger.
 
@@ -350,7 +350,7 @@ Microsoft offers a suite of server software, entitled Windows Server System. Win
 
 <h2> Business Division </h2>
 
-Front entrance to building 17 on the main campus of the company&apos;s Redmond campus.
+<internal id="13752112">Front entrance to building 17 on the main campus of the company&apos;s Redmond campus.</internal>
 
 The Microsoft Business Division produces Microsoft Office, which is the company&apos;s line of office software. The software product includes Word (a word processor), Access (a personal relational database application), Excel (a spreadsheet program), Outlook (Windows-only groupware, frequently used with Exchange Server), PowerPoint (presentation software), and Publisher (desktop publishing software). A number of other products were added later with the release of Office 2003 including Visio, Project, MapPoint, InfoPath and OneNote.
 
@@ -358,7 +358,7 @@ The division focuses on developing financial and business management software fo
 
 <h2> Entertainment and Devices Division </h2>
 
-The Xbox 360, Microsoft&apos;s second system in the gaming console market.
+<internal id="13752123">The Xbox 360, Microsoft&apos;s second system in the gaming console market.</internal>
 
 Microsoft has attempted to expand the Windows brand into many other markets, with products such as Windows CE for PDAs and its &quot;Windows-powered&quot; Smartphone products. Microsoft initially entered the mobile market through Windows CE for handheld devices, which today has developed into Windows Mobile 6. The focus of the operating system is on devices where the OS may not directly be visible to the end user, in particular, appliances and cars. The company produces MSN TV, formerly WebTV, a television-based Internet appliance. Microsoft used to sell a set-top Digital Video Recorder (DVR) called the UltimateTV, which allowed users to record up to 35 hours of television programming from a direct-to-home satellite television provider DirecTV. This was the main competition in the UK for British Sky Broadcasting&apos;s (BSkyB) SKY + service, owned by Rupert Murdoch. UltimateTV has since been discontinued, with DirecTV instead opting to market DVRs from TiVo Inc. before later switching to their own DVR brand.
 
@@ -394,9 +394,9 @@ As of 15 November 2007, Microsoft announced the purchase of Musiwave, Openwave&a
 
 <h1> Business culture </h1>
 
-Photo of Microsoft&apos;s RedWest campus.
+<internal id="13752113">Photo of Microsoft&apos;s RedWest campus.</internal>
 
-Landscaping at Microsoft&apos;s RedWest campus
+<internal id="13752114">Landscaping at Microsoft&apos;s RedWest campus</internal>
 
 Microsoft has often been described as having a developer-centric business culture. A great deal of time and money is spent each year on recruiting young university-trained software developers and on keeping them in the company. For example, while many software companies often place an entry-level software developer in a cubicle desk within a large office space filled with other cubicles, Microsoft assigns a private or semiprivate closed office to every developer or pair of developers. In addition, key decision makers at every level are either developers or former developers. In a sense, the software developers at Microsoft are considered the &quot;stars&quot; of the company in the same way that the sales staff at IBM are considered the &quot;stars&quot; of their company.
 
