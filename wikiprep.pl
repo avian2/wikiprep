@@ -57,15 +57,13 @@ my $showVersion = 0;
 my $dontExtractUrls = 0;
 my $doWriteLog = 0;
 my $doCompress = 0;
-my $dontIncludeTemplates = 0;
 
 GetOptions('f=s' => \$file,
            'license' => \$showLicense,
            'version' => \$showVersion,
            'nourls' => \$dontExtractUrls,
            'log' => \$doWriteLog,
-           'compress' => \$doCompress,
-           'notemplates' => \$dontIncludeTemplates );
+           'compress' => \$doCompress);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -804,9 +802,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
-    if ( ! $dontIncludeTemplates ) {
-      &includeTemplates(\$id, \$title, \$text);
-    }
+    &includeTemplates(\$id, \$title, \$text);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
@@ -2080,10 +2076,8 @@ sub postprocessText(\$$$) {
   $$refToText =~ s/<br(?:\s*)(?:[\/]?)>/\n\n/g;
 
   # Remove tables and math blocks, as they often carry a lot of noise
-  if( ! $dontIncludeTemplates ) {
-    &eliminateTables($refToText);
-    &eliminateMath($refToText);
-  }
+  &eliminateTables($refToText);
+  &eliminateMath($refToText);
 
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them now.
