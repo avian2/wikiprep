@@ -2120,7 +2120,7 @@ sub postprocessText(\$$$) {
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text
   # from being glued together).
-  $$refToText =~ s/<(?:.*?)>/ /sg;
+  $$refToText =~ s/<.*?>/ /sg;
 
   # Change markup on bold/italics emphasis. We probably don't need to distinguish
   # these 3 types of emphasis, so we just replace all of them with a generic <em> tag.
@@ -2134,7 +2134,7 @@ sub postprocessText(\$$$) {
   # Note that we don't want to replace sequences of spaces only, as this might make the text
   # less readable. Instead, we only eliminate sequences of whitespace that contain at least
   # two newlines.
-  $$refToText =~ s/(?:\s*)\n(?:\s*)\n(?:\s*)/\n\n/g;
+  $$refToText =~ s/\s*\n\s*\n\s*/\n\n/g;
 
   # Eliminate XML entities such as "&nbsp;" , "&times;" etc. - otherwise,
   # in C++ code they will give rise to spurious words "nbsp", "times" etc.
@@ -2146,7 +2146,7 @@ sub postprocessText(\$$$) {
   # (i.e., with leading "&amp;"). XML parser replaces "&amp;" with "&",
   # so here in the code we see the entities as "&nbsp;".
   $$refToText =~ s{&                 # the entity starts with "&"
-                   ((?:\#?)(?:\w+))  # optional '#' sign (as in &#945;), followed by
+                   (\#?\w+)  # optional '#' sign (as in &#945;), followed by
                                      # an uninterrupted sequence of letters and/or digits
                    ;                 # the entity ends with a semicolon
                   }{&logReplacedXmlEntity($1)}egx;   # entities are replaced with a space
