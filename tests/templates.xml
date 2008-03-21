@@ -112,6 +112,7 @@
 		    {{template with some spaces}}
 		    {{Template_with_some_spaces}}
 		    {{template_with_some_spaces}}
+		    {{}}
 	    </text>
     </revision>
   </page>

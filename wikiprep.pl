@@ -1219,6 +1219,8 @@ sub instantiateTemplate($\$\$\%$) {
   my %templateParams;
   &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
+  return $result unless(defined($templateTitle));
+
   &includeParserFunction(\$templateTitle, \%templateParams, $refToTopPageTitle, \$result);
 
   # If this wasn't a parser function call, try to include a template.
