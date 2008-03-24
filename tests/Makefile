@@ -33,7 +33,9 @@ LOGS =	images.log \
 	nonfreegamecover.log \
 	olympics.log \
 	tibet.log \
-	externalurls.log
+	externalurls.log \
+	coord.log \
+	riemann.log
 
 all: test
 

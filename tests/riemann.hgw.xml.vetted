@@ -1,0 +1,124 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="2198016" orglength="9694" newlength="7538" stub="0" categories="0" outlinks="2" urls="2">
+<title>Zeta function universality</title>
+<categories></categories>
+<links>4740320 4740321</links>
+<urls>
+http://xxx.lanl.gov/abs/chao-dyn/9406003
+http://secamlocal.ex.ac.uk/people/staff/mrwatkin/zeta/voronin.htm
+</urls>
+<text>
+<internal id="4740320">Any non-vanishing holomorphic function f defined on the strip can be approximated by the  -function.</internal>
+In mathematics, the universality of zeta-functions is the remarkable property of the Riemann zeta-function and other, similar, functions, such as the Dirichlet L-functions, to approximate arbitrary non-vanishing holomorphic functions arbitrarily well.
+
+The universality of the Riemann zeta function was first proven by Sergei Mikhailovitch Voronin in 1975 Voronin, S.M. (1975) &quot;Theorem on the Universality of the Riemann Zeta Function.&quot; Izv. Akad. Nauk SSSR, Ser. Matem. 39 pp.475-486. Reprinted in Math. USSR Izv. 9, 443-445, 1975  and is sometimes known as Voronin&apos;s Universality Theorem.
+
+<internal id="4740321">The Riemann zeta function on the strip 1/2 &lt; Re(s) &lt; 1; 103 &lt; Im(s) &lt; 109.</internal> 
+<h1>Formal statement</h1>
+A mathematically precise statement of universality for the Riemann zeta-function  (s) follows.
+
+Let U be a compact subset of the strip
+
+:
+
+such that the complement of U is connected. Let f : U   C be a continuous function on U which is holomorphic on the interior  of U and does not have any zeros in U. Then for any     0 there exists a t   0 such that
+
+:
+
+Even more: the lower density of the set of values t which do the job is positive, as is expressed by the following inequality about a limes inferior.                                                                                
+:
+
+where   denotes the Lebesgue measure on the real numbers.
+
+<h1>Discussion</h1>
+The condition that the complement of U be connected essentially means that U doesn&apos;t contain any holes.
+
+The intuitive meaning of the first statement is as follows: it is possible to move U by some vertical displacement it so that the function f on U is approximated by the zeta function on the displaced copy of U, to an accuracy of  .
+
+Note that the function f is not allowed to have any zeros on U. This is an important restriction; if you start with a holomorphic function with an isolated zero, then any &quot;nearby&quot; holomorphic function will also have a zero. According to the Riemann hypothesis, the Riemann zeta function does not have any zeros in the considered strip, and so it couldn&apos;t possibly approximate such a function. Note however that the function f(s)=0 which is identically zero on U can be approximated by  : we can first pick the &quot;nearby&quot; function g(s)= /2 (which is holomorphic and doesn&apos;t have zeros) and find a vertical displacement such that   approximates g to accuracy  /2, and therefore f to accuracy  .
+
+The accompanying figure shows the zeta function on a representative part of the relevant strip. The color of the point s encodes the value  (s) as follows: the hue represents the argument of  (s), with red denoting positive real values, and then counterclockwise through yellow, green cyan, blue and purple. Strong colors denote values close to 0 (black = 0), weak colors denote values far away from 0 (white =  ). The picture shows three zeros of the zeta function, at about 1/2+103.7i, 1/2+105.5i and 1/2+107.2i. Voronin&apos;s theorem essentially states that this strip contains all possible &quot;analytic&quot; color patterns that don&apos;t use black or white.
+
+The rough meaning of the statement on the lower density is as follows: if a function f and an  &gt;0 is given, there is a positive probability that a randomly picked vertical displacement it will yield an approximation of f to accuracy  .
+
+Note also that the interior of U may be empty, in which case there is no requirement of f being holomorphic. For example, if we take U to be a line segment, then a continuous function f: U   C is nothing but a curve in the complex plane, and we see that the zeta function encodes every possible curve (i.e., any figure that can be drawn without lifting the pencil) to arbitrary precision on the considered strip.
+
+The theorem as stated applies only to regions U that are contained in the strip. However, if we allow translations and scalings, we can also find encoded in the zeta functions approximate versions of all non-vanishing holomorphic functions defined on other regions. In particular, since the zeta function itself is holomorphic, versions of itself are encoded within it at different scales, the hallmark of a fractal.   Woon, S.C. 
+      (June 11, 1994)
+
+.   Riemann zeta function is a fractal      .    Retrieved on December 21, 2007 .
+
+The surprising nature of the theorem may be summarized in this way: the Riemann zeta functions contains &quot;all possible behaviors&quot; within it, and is thus &quot;chaotic&quot; in a sense, yet it is a perfectly smooth analytic function with a rather simple, straightforward definition.
+
+<h2>Proof sketch</h2>
+A sketch of the proof presented in (Voronin and Karatsuba, 1992)  Karatsuba, A. A. ;  S. M. Voronin  (1992-07).    The Riemann Zeta-Function       .  Walter de Gruyter, 396  . ISBN 3110131706  .      
+  follows. We consider only the case where U is a disk centered at 3/4:
+: 
+and we will argue that every non-zero holomorphic function defined on U can be approximated by the  -function on a vertical translation of this set.
+
+Passing to the logarithm, it is enough to show that for every holomorphic function g:U C and every  &gt;0 there exists a real number t such that
+:
+
+We will first approximate g(s) with the logarithm of certain finite products reminiscent of the Euler product for the  -function:
+: 
+where P denotes the set of all primes.
+
+If   is a sequence of real numbers, one for each prime p, and M is a finite set of primes, we set
+:
+
+We consider the specific sequence
+:  
+and claim that g(s) can be approximated by a function of the form   for a suitable set M of primes. The proof of this claim utilizes the Hardy space H of holomorphic functions defined on U, a Hilbert space. We set
+: 
+where p k  denotes the k-th prime number. It can then be shown that the series
+: 
+is conditionally convergent in H, i.e. for every element v of H there exists a rearrangement of the series
+which converges in H to v. This argument uses a theorem that generalizes the Riemann series theorem to a Hilbert space setting. Because of a relationship between the norm in H and the maximum absolute value of a function, we can then approximate our given function g(s) with an initial segment of this rearranged series, as required.
+
+By a version of the Kronecker theorem, applied to the real numbers   (which are linearly independent over the rationals)
+we can find real values of t so that   is approximated by  . Further, for some of these values t,   approximates  , finishing the proof.
+
+<h1>Universality of other zeta functions</h1>
+A similar universality property has been shown for the Lerch zeta-function. The Dirichlet L-functions show not only universality, but a certain kind of joint universality that allow any set of functions to be approximated by the same value(s) of t in different L-functions, where each function to be approximated is paired with a different L-function.  B. Bagchi  (1982). &quot;A Universality theorem for Dirichlet L-functions&quot;  . Mat. Z. 181  :  pp.319-334            .      
+   Sections of the Lerch zeta-function have also been shown to have a form of joint universality.
+
+<h1>References</h1>
+
+<h1>Further reading</h1>
+* A. A. Karatsuba and S. M. Voronin, The Riemann-Zeta Function, Walter de Gruyter, July 1992
+
+<h1>External links</h1>
+*  Voronin&apos;s Universality Theorem, by Matthew R. Watkins
+
+
+</text>
+</page>
+</mediawiki>

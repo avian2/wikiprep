@@ -1,0 +1,500 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Zeta function universality</title>
+    <id>2198016</id>
+    <revision>
+      <id>200383826</id>
+      <timestamp>2008-03-23T21:46:10Z</timestamp>
+      <contributor>
+        <username>AxelBoldt</username>
+        <id>2</id>
+      </contributor>
+      <comment>proof sketch</comment>
+      <text xml:space="preserve">[[Image:Voronin universality theorem.png|thumb|right|240px|Any non-vanishing holomorphic function ''f'' defined on the strip can be approximated by the &amp;zeta;-function.]]
+In [[mathematics]], the '''universality''' of [[zeta-function]]s is the remarkable property of the [[Riemann zeta-function]] and other, similar, functions, such as the [[Dirichlet L-function]]s, to approximate arbitrary non-vanishing [[holomorphic function]]s arbitrarily well. 
+
+The universality of the Riemann zeta function was first proven by [[Sergei Mikhailovitch Voronin]] in 1975&lt;ref&gt;Voronin, S.M. (1975) &quot;Theorem on the Universality of the Riemann Zeta Function.&quot; Izv. Akad. Nauk SSSR, Ser. Matem. 39 pp.475-486. Reprinted in Math. USSR Izv. 9, 443-445, 1975&lt;/ref&gt; and is sometimes known as '''Voronin's Universality Theorem'''.
+
+[[Image:Voronin-3.png|thumb|right|150px|The Riemann zeta function on the strip 1/2 &lt; Re(''s'') &lt; 1; 103 &lt; Im(''s'') &lt; 109.]] 
+==Formal statement==
+A mathematically precise statement of universality for the Riemann zeta-function &amp;zeta;(''s'') follows.
+                                                                               
+Let ''U'' be a [[compact set|compact]] [[subset]] of the strip
+
+:&lt;math&gt;\{ s\in \mathbb{C} \mid 1/2 &lt; \mbox{Re } s &lt; 1 \}&lt;/math&gt;
+
+such that the [[complement (set theory)|complement]] of ''U'' is [[connected space|connected]]. Let ''f'' : ''U'' &amp;rarr; '''C''' be a [[continuous function]] on ''U'' which is holomorphic on the [[interior  (topology)|interior ]] of ''U'' and does not have any zeros in ''U''. Then for any &amp;epsilon; &amp;gt; 0 there exists a ''t'' &amp;ge; 0 such that
+
+:&lt;math&gt;|\zeta(s+it)-f(s)| &lt; \varepsilon\quad\mbox{for all}\quad s\in U.&lt;/math&gt;
+
+Even more: the lower density of the set of values ''t'' which do the job is positive, as is expressed by the following inequality about a [[limes inferior]].                                                                                
+:&lt;math&gt; 0 &lt;
+\liminf_{T\to\infty} \frac{1}{T}
+\lambda\left( \left\{
+t\in[0,T] \mid \max_{s\in U} |\zeta(s+it)-f(s)| &lt; \varepsilon
+\right\} \right)
+&lt;/math&gt;
+                                                                               
+where &amp;lambda; denotes the [[Lebesgue measure]] on the real numbers. 
+
+==Discussion==
+The condition that the complement of ''U'' be connected essentially means that ''U'' doesn't contain any holes.
+
+The intuitive meaning of the first statement is as follows: it is possible to move ''U'' by some vertical displacement ''it'' so that the function ''f'' on ''U'' is approximated by the zeta function on the displaced copy of ''U'', to an accuracy of &amp;epsilon;. 
+
+Note that the function ''f'' is not allowed to have any zeros on ''U''. This is an important restriction; if you start with a holomorphic function with an isolated zero, then any &quot;nearby&quot; holomorphic function will also have a zero. According to the [[Riemann hypothesis]], the Riemann zeta function does not have any zeros in the considered strip, and so it couldn't possibly approximate such a function. Note however that the function ''f''(''s'')=0 which is identically zero on ''U'' can be approximated by &amp;zeta;: we can first pick the &quot;nearby&quot; function ''g''(''s'')=&amp;epsilon;/2 (which is holomorphic and doesn't have zeros) and find a vertical displacement such that &amp;zeta; approximates ''g'' to accuracy &amp;epsilon;/2, and therefore ''f'' to accuracy &amp;epsilon;.
+
+The accompanying figure shows the zeta function on a representative part of the relevant strip. The color of the point ''s'' encodes the value &amp;zeta;(''s'') as follows: the hue represents the argument of &amp;zeta;(''s''), with red denoting positive real values, and then counterclockwise through yellow, green cyan, blue and purple. Strong colors denote values close to 0 (black = 0), weak colors denote values far away from 0 (white = &amp;infin;). The picture shows three zeros of the zeta function, at about 1/2+103.7''i'', 1/2+105.5''i'' and 1/2+107.2''i''. Voronin's theorem essentially states that this strip contains all possible &quot;analytic&quot; color patterns that don't use black or white.
+
+The rough meaning of the statement on the lower density is as follows: if a function ''f'' and an &amp;epsilon;&gt;0 is given, there is a positive probability that a randomly picked vertical displacement ''it'' will yield an approximation of ''f'' to accuracy &amp;epsilon;.
+
+Note also that the interior of ''U'' may be empty, in which case there is no requirement of ''f'' being holomorphic. For example, if we take ''U'' to be a line segment, then a continuous function ''f'': ''U'' &amp;rarr; '''C''' is nothing but a curve in the complex plane, and we see that the zeta function encodes every possible curve (i.e., any figure that can be drawn without lifting the pencil) to arbitrary precision on the considered strip.
+
+The theorem as stated applies only to regions ''U'' that are contained in the strip. However, if we allow translations and scalings, we can also find encoded in the zeta functions approximate versions of all non-vanishing holomorphic functions defined on other regions. In particular, since the zeta function itself is holomorphic, versions of itself are encoded within it at different scales, the hallmark of a [[fractal]].&lt;ref&gt;{{Cite web
+| last = Woon
+| first = S.C.
+| title = Riemann zeta function is a fractal
+| accessdate = 2007-12-21
+| date = 1994-06-11
+| url = http://xxx.lanl.gov/abs/chao-dyn/9406003
+}}&lt;/ref&gt;
+
+The surprising nature of the theorem may be summarized in this way: the Riemann zeta functions contains &quot;all possible behaviors&quot; within it, and is thus &quot;chaotic&quot; in a sense, yet it is a perfectly smooth analytic function with a rather simple, straightforward definition. 
+
+===Proof sketch===
+A sketch of the proof presented in (Voronin and Karatsuba, 1992)&lt;ref&gt;{{Cite book
+| publisher = Walter de Gruyter
+| isbn = 3110131706
+| pages = 396
+| last = Karatsuba
+| first = A. A.
+| coauthors = S. M. Voronin
+| title = The Riemann Zeta-Function
+| date = 1992-07
+}}&lt;/ref&gt; follows. We consider only the case where ''U'' is a disk centered at 3/4:
+:&lt;math&gt;U=\{ s\in \mathbb{C} : |s-3/4|&lt;r \}\quad\mbox{with}\quad 0&lt;r&lt;1/4&lt;/math&gt;
+and we will argue that every non-zero holomorphic function defined on ''U'' can be approximated by the &amp;zeta;-function on a vertical translation of this set.
+
+Passing to the [[logarithm]], it is enough to show that for every holomorphic function ''g'':''U''&amp;rarr;'''C''' and every &amp;epsilon;&gt;0 there exists a real number ''t'' such that
+:&lt;math&gt;|\ln \zeta(s+it)-g(s)| &lt; \varepsilon\quad\mbox{for all}\quad s\in U.&lt;/math&gt;
+
+We will first approximate ''g''(''s'') with the logarithm of certain finite products reminiscent of the Euler product for the &amp;zeta;-function:
+:&lt;math&gt;\zeta(s)=\prod_{p\in\mathbb{P}}\left(1-\frac{1}{p^s}\right)^{-1}&lt;/math&gt;
+where '''P''' denotes the set of all primes.
+
+If &lt;math&gt;\theta=(\theta_p)_{p\in\mathbb{P}}&lt;/math&gt; is a sequence of real numbers, one for each prime ''p'', and ''M'' is a finite set of primes, we set
+:&lt;math&gt;\zeta_M(s,\theta)=\prod_{p\in M}\left(1-\frac{e^{-2\pi i \theta_p}}{p^s}\right)^{-1}.&lt;/math&gt;
+
+We consider the specific sequence
+:&lt;math&gt;\hat\theta=(\frac{1}{4},\frac{2}{4},\frac{3}{4},\frac{4}{4},\frac{5}{4},\ldots)&lt;/math&gt; 
+and claim that ''g''(''s'') can be approximated by a function of the form &lt;math&gt;\ln(\zeta_M(s,\hat\theta))&lt;/math&gt; for a suitable set ''M'' of primes. The proof of this claim utilizes the [[Hardy space]] ''H'' of holomorphic functions defined on ''U'', a [[Hilbert space]]. We set
+:&lt;math&gt;u_k(s)=\ln\left(1-\frac{e^{-\pi i k/2}}{p_k^s} \right)&lt;/math&gt;
+where ''p''&lt;sub&gt;''k''&lt;/sub&gt; denotes the ''k''-th prime number. It can then be shown that the series
+:&lt;math&gt;\sum_{k=1}^\infty u_k&lt;/math&gt;
+is [[conditionally convergent]] in ''H'', i.e. for every element ''v'' of ''H'' there exists a rearrangement of the series
+which converges in ''H'' to ''v''. This argument uses a theorem that generalizes the [[Riemann series theorem]] to a Hilbert space setting. Because of a relationship between the norm in ''H'' and the maximum absolute value of a function, we can then approximate our given function ''g''(''s'') with an initial segment of this rearranged series, as required.
+
+By a version of the [[Kronecker theorem]], applied to the real numbers &lt;math&gt;\frac{\ln 2}{2\pi}, \frac{\ln 3}{2\pi}, \frac{\ln 5}{2\pi},\ldots,\frac{\ln p_N}{2\pi}&lt;/math&gt; (which are [[linearly independent]] over the rationals)
+we can find real values of ''t'' so that &lt;math&gt;\ln(\zeta_M(s,\hat\theta))&lt;/math&gt; is approximated by &lt;math&gt;\ln(\zeta_M(s+it,0))\;&lt;/math&gt;. Further, for some of these values ''t'', &lt;math&gt;\ln(\zeta_M(s+it,0))\;&lt;/math&gt; approximates &lt;math&gt;\ln(\zeta(s+it))\;&lt;/math&gt;, finishing the proof.
+
+==Universality of other zeta functions==
+A similar universality property has been shown for the [[Lerch zeta function|Lerch zeta-function]]. The [[Dirichlet L-function]]s show not only universality, but a certain kind of '''joint universality''' that allow any set of functions to be approximated by the same value(s) of ''t'' in different ''L''-functions, where each function to be approximated is paired with a different ''L''-function.&lt;ref&gt;{{cite journal||author=B. Bagchi
+|title=A Universality theorem for Dirichlet L-functions
+|journal=Mat. Z.
+|year=1982
+|volume=181
+|pages=pp.319-334}}&lt;/ref&gt;  Sections of the Lerch zeta-function have also been shown to have a form of joint universality.
+
+==References==
+&lt;references/&gt;
+
+==Further reading==
+* A. A. Karatsuba and S. M. Voronin, ''The Riemann-Zeta Function'', Walter de Gruyter, July 1992
+
+==External links==
+* [http://secamlocal.ex.ac.uk/people/staff/mrwatkin/zeta/voronin.htm Voronin's Universality Theorem], by Matthew R. Watkins
+
+[[Category:Zeta and L-functions]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite journal</title>
+    <id>4740319</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>200272972</id>
+      <timestamp>2008-03-23T10:33:30Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>restore nbsp</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite style=&quot;font-style:normal&quot;&gt;{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{authorlink|}}}
+    |[[{{{authorlink}}}|{{#if:
+      {{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}]]
+    |{{#if:{{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}
+  }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{coauthors|}}}
+    | &lt;nowiki&gt;;&lt;/nowiki&gt; {{{coauthors}}}
+  }}
+}}{{#if:{{{date|}}}
+  |&amp;#32;({{{date}}})
+  |{{#if:{{{year|}}}
+    |{{#if:{{{month|}}}
+      |&amp;#32;({{{month}}} {{{year}}})
+      |&amp;#32;({{{year}}})
+     }}
+   }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  | .
+}}{{#if:{{{author|}}}{{{last|}}}{{{year|}}}{{{date|}}}
+  | &amp;#32;
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if: {{{curly|}}}|“|&quot;}} 
+ }}{{#if:{{{url|}}}
+  |[{{{url}}} {{{title}}}]
+  |{{{title}}}
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if:{{{curly|}}}|”|&quot;}} 
+ }}{{#if:{{{language|}}} 
+  | &amp;#32;(in {{{language}}})
+}}{{#if:{{{format|}}}
+  | &amp;#32;({{{format}}})
+}}{{#if:{{{journal|}}}
+  |. ''{{{journal}}}''
+}}{{#if:{{{volume|}}}
+  |&amp;#32;'''{{{volume}}}'''
+}}{{#if:{{{issue|}}}
+  |&amp;#32;({{{issue}}})
+}}{{#if:{{{pages|}}}
+  |&lt;nowiki&gt;:&lt;/nowiki&gt; {{{pages}}}
+}}{{#if:{{{publisher|}}}
+  |.&amp;#32;{{#if:{{{location|}}} 
+    |{{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{#if:{{{doi|}}} 
+  |. [[Digital object identifier|doi]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{#if:{{{issn|}}}
+  |. [[International Standard Serial Number|ISSN]] [http://worldcat.org/issn/{{{issn}}} {{{issn}}}]
+}}{{#if:{{{pmid|}}}
+  |. PMID {{{pmid}}}
+}}{{#if:{{{bibcode|}}}
+  |. [[Bibcode]]:&amp;nbsp;[http://adsabs.harvard.edu/abs/{{{bibcode}}} {{{bibcode}}}]
+}}{{#if:{{{oclc|}}} 
+  |. [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{#if:{{{id|}}}
+  |. {{{id}}}
+}}{{#if:{{{accessdate|}}}
+  |. Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}
+}}{{#if:{{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}
+}}{{#if:{{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}
+}}{{#if:{{{laysummary|}}}
+  |. [{{{laysummary}}} Lay summary]{{#if: {{{laysource|}}}|&amp;nbsp;&amp;ndash;&amp;nbsp;''{{{laysource}}}''}}
+}}{{#if:{{{laydate|}}}
+  | &amp;#32;([[{{{laydate}}}]])
+}}.{{#if:{{{quote|}}}
+  | &amp;#32;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:journal}}&lt;!--                Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:journal
+  --&gt;&amp;rft.genre=article&lt;!--                                                     article: a document published in a journal. (genre could also be (the entire) journal, issue, conference, proceeding, preprint, or unknown)
+  --&gt;{{#if: {{{title|}}}     | &amp;rft.atitle={{urlencode:{{{title}}}}}     }}&lt;!-- Article title.
+  --&gt;{{#if: {{{journal|}}}   | &amp;rft.jtitle={{urlencode:{{{journal}}}}}   }}&lt;!-- Journal title. Use the most complete title available ... &quot;journal of the american medical association&quot;
+  --&gt;{{#if: {{{date|}}} 
+       | &amp;rft.date={{urlencode:{{{date}}}}}
+       | {{#if: {{{year|}}}  | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. (ISO 8601)
+  --&gt;{{#if: {{{volume|}}}    | &amp;rft.volume={{urlencode:{{{volume}}}}}    }}&lt;!-- Volume designation usually expressed as a number but could be roman numerals or non-numeric, i.e. &quot;124&quot;, or &quot;VI&quot;.
+  --&gt;{{#if: {{{issue|}}}     | &amp;rft.issue={{urlencode:{{{issue}}}}}      }}&lt;!-- This is the designation of the published issue of a journal ... could be non-numeric
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, i.e, &quot;Fred James&quot;
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}      }}&lt;!-- Start and end pages, i.e. &quot;53-58&quot;. This can also be used for an unstructured pagination statement when data relating to pagination cannot be interpreted as a start-end pair, i.e. &quot;A7, C4-9&quot;, &quot;1-3,6&quot;.
+  --&gt;{{#if: {{{issn|}}}      | &amp;rft.issn={{urlencode:{{{issn}}}}}        }}&lt;!-- International Standard Serials Number (ISSN). The issn may contain a hyphen, i.e. &quot;1041-5653&quot;
+  --&gt;{{#if: {{{pmid|}}}      | &amp;rft_id=info:pmid/{{urlencode:{{{pmid}}}}}}}&lt;!-- PubMed ID
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- DOI
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- URL
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+&lt;!--
+    PLEASE DO NOT ADD DOCUMENTATION/CATEGORIES/INTERWIKIS HERE
+--&gt;
+{{pp-template|small=yes}}
+{{Template doc}}
+&lt;!--
+    MAKE ADDITIONS TO THE /doc SUBPAGE INSTEAD, THANKS
+--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>197522060</id>
+      <timestamp>2008-03-11T18:08:49Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}}{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite book</title>
+    <id>4086375</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>200488921</id>
+      <timestamp>2008-03-24T07:41:04Z</timestamp>
+      <contributor>
+        <username>Tivedshambo</username>
+        <id>1328636</id>
+      </contributor>
+      <minor/>
+      <comment>Volume in bold</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite class=&quot;book&quot; style=&quot;font-style:normal&quot; {{
+  #if: {{{ref|}}}
+  |{{#ifeq:{{{ref}}}|none||id=&quot;{{{ref}}}&quot;}}
+  |{{#if:{{{last|}}} | {{#if:{{{year|}}} | id=&quot;Reference-{{{last}}}-{{{year}}}&quot; }} }}
+}}&gt;{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{
+    #if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{
+      #if: {{{last|}}}
+      | {{{last}}}{{ #if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{
+  #if: {{{author|}}}{{{last|}}}
+  | {{ #if: {{{coauthors|}}} | &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{
+  #if: {{{origdate|}}}
+  | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origdate}}}]
+  | {{
+    #if: {{{origyear|}}}
+    | {{
+      #if: {{{origmonth|}}}
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origmonth}}} {{{origyear}}}]
+      | &amp;#32;&lt;nowiki&gt;[&lt;/nowiki&gt;{{{origyear}}}]
+    }}
+  }}
+}}{{
+  #if: {{{date|}}}
+  | &amp;#32;({{{date}}})
+  | {{
+    #if: {{{year|}}}
+    | {{
+      #if: {{{month|}}}
+      | &amp;#32;({{{month}}} {{{year}}})
+      | &amp;#32;({{{year}}})
+    }}
+  }}
+}}{{ #if: {{{author|}}}{{{last|}}} | .
+}}{{
+  #if: {{{chapter|}}}
+  | &amp;#32;&quot;{{
+    #if: {{{chapterurl|}}}
+    | [{{{chapterurl}}} {{{chapter}}}]
+    | {{{chapter}}}
+}}&quot;,}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;in {{{editor}}}: 
+}} &lt;i&gt;{{
+  #if: {{{url|}}} | [{{{url}}} {{{title}}}] | {{{title}}}
+}}&lt;/i&gt;{{
+  #if: {{{format|}}} | &amp;#32;({{{format}}})
+}}{{
+  #if: {{{others|}}} | , {{{others}}}
+}}{{
+  #if: {{{edition|}}} | , {{{edition}}}
+}}{{
+  #if: {{{series|}}} | , {{{series}}}
+}}{{
+    #if: {{{volume|{{{number|}}}}}} | &amp;#32;'''{{{volume|{{{number}}}}}}'''
+}}{{
+  #if: {{{language|}}} | &amp;#32;(in {{{language}}})
+}}{{
+  #if: {{{publisher|}}}
+  | {{#if: {{{format|}}}{{{others|}}}{{{edition|}}} | ,&amp;#32; | .&amp;#32; }}{{ 
+    #if: {{{location|}}} 
+    | {{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{
+  #if: {{{pages|{{{page|}}}}}} | ,&amp;#32;{{{pages|{{{page}}}}}}
+}}{{
+  #if: {{{doi|}}} | . [[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{
+  #if: {{{id|}}} | . {{{id}}}
+}}{{
+  #if: {{{isbn|}}} | . ISBN {{{isbn}}}
+}}{{
+  #if: {{{oclc|}}} | . [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{
+  #if: {{{url|}}}{{{chapterurl|}}} | {{
+  #if: {{{accessdate|}}} | 
+  . Retrieved on [[{{{accessdate}}}]]
+  | {{
+    #if: {{{accessyear|}}}
+    | . Retrieved {{
+      #if: {{{accessmonth|}}}
+      | on [[{{{accessmonth}}} {{{accessyear}}}]]
+      | during [[{{{accessyear}}}]]
+  }}}}
+  }}
+}}.{{ #if: {{{quote|}}} | &amp;nbsp;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:book}}&lt;!--                   Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:book
+  --&gt;&amp;rft.genre=book&lt;!--                                                        book: a publication that is complete in one part or a designated finite number of parts, often identified with an ISBN.  (genre could also be bookitem, conference, proceeding, report, document, or unknown)
+  --&gt;&amp;rft.btitle={{urlencode:{{{title|}}}}}&lt;!--                                 The title of the book. This can also be expressed as title, for compatibility with version 0.1. &quot;moby dick or the white whale&quot;
+  --&gt;{{#if: {{{chapter|}}}   | &amp;rft.atitle={{urlencode:{{{chapter}}}}}   }}&lt;!-- Chapter title. Chapter title is included if it is a distinct title, e.g. &quot;The Push Westward.&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... e.g. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, e.g. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, e.g. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}&lt;!--
+  --&gt;{{#if: {{{year|}}}      | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. Book dates are assumed to be a single year. (or ISO 8601)
+  --&gt;{{#if: {{{edition|}}}   | &amp;rft.edition={{urlencode:{{{edition}}}}}  }}&lt;!-- Statement of the edition of the book. This will usually be a phrase, with or without numbers, but may be a single number, e.g. &quot;First edition&quot;, &quot;4th ed.&quot;
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.pub={{urlencode:{{{publisher}}}}}    }}&lt;!-- Publisher name. &quot;Harper and Row&quot;
+  --&gt;{{#if: {{{location|}}}  | &amp;rft.place={{urlencode:{{{location}}}}}   }}&lt;!-- Place of publication. &quot;New York&quot;
+  --&gt;{{#if: {{{pages|{{{page|}}}}}}     | &amp;rft.pages={{urlencode:{{{pages|{{{page}}}}}}}}      }}&lt;!-- Start and end pages for parts of a book, e.g. &quot;124-147&quot; ... This data element includes the OpenURL 0.1 definition of &quot;pages&quot;.
+  --&gt;{{#if: {{{series|}}}    | &amp;rft.series={{urlencode:{{{series}}}}}    }}&lt;!-- The title of a series in which the book or document was issued. There may also be an ISSN associated with the series.
+  --&gt;{{#if: {{{isbn|}}}      | &amp;rft.isbn={{{isbn}}}                      }}&lt;!-- International Standard Book Number (ISBN) ... i.e. &quot;057117678X&quot; but it may contain hyphens, e.g. &quot;1-878067-73-7&quot;
+  --&gt;{{#if: {{{oclc|}}}      | &amp;rft_id=info:oclcnum/{{{oclc}}}           }}&lt;!-- 
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- 
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- 
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

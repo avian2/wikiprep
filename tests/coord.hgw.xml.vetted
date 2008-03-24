@@ -27,53 +27,22 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="20" newlength="8" stub="0" categories="0" outlinks="1" urls="0">
-<title>Guano</title>
-<categories></categories>
-<links>8</links>
-<urls>
-</urls>
-<text>
-Foo
-
-bar
-</text>
-</page>
-<page id="5" orglength="148" newlength="101" stub="0" categories="0" outlinks="0" urls="0">
-<title>Something</title>
+<page id="2" orglength="312" newlength="347" stub="0" categories="0" outlinks="0" urls="0">
+<title>Test</title>
 <categories></categories>
 <links></links>
 <urls>
 </urls>
 <text>
 
-		    This is hello template
-		    This is hello template
+		    This test case demonstrates a flaw in the way wikiprep 
+		    parses template parameters - parameter definition is
+		    closed by the first &apos;}}}&apos;, so for &quot;precdec&quot; parameter, this
+		    matches at the first &apos;}}}}&apos;, which in fact closes two
+		    #if statements.
 
-See this
-		    Hello
-		    See this
+{{#expr:N*(52.6691+(N+0/60)/60) round 3}
 	    
-</text>
-</page>
-<page id="7" orglength="341" newlength="66" stub="0" categories="0" outlinks="0" urls="0">
-<title>7</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-
-
 </text>
 </page>
 </mediawiki>

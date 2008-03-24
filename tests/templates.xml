@@ -66,7 +66,7 @@
         <id>4581842</id>
       </contributor>
       <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
-      <text xml:space="preserve">&gt;div class="notice metadata plainlinks" id="disambig"&lt; {|style="background:none" |style="vertical-align:middle;"|[[Image:Disambig gray.svg|30px]] |style="vertical-align:middle;"|''This [[Wikipedia:Disambiguation|disambiguation]] page lists articles associated with the same title. If &gt;!-- you are viewing this online as opposed to as a [[hard copy]] and --&lt;an [{{fullurl:Special:Whatlinkshere/{{FULLPAGENAME}}|namespace=0}} internal link] led you here, you may wish to change the link to point directly to the intended article.'' |}&gt;/div&lt;&gt;includeonly&lt;[[Category:Disambiguation]]&gt;/includeonly&lt;&gt;noinclude&lt; {{/doc}} &gt;/noinclude&lt;</text>
+      <text xml:space="preserve">&lt;div class="notice metadata plainlinks" id="disambig"&gt; {|style="background:none" |style="vertical-align:middle;"|[[Image:Disambig gray.svg|30px]] |style="vertical-align:middle;"|''This [[Wikipedia:Disambiguation|disambiguation]] page lists articles associated with the same title. If &lt;!-- you are viewing this online as opposed to as a [[hard copy]] and --&gt;an [{{fullurl:Special:Whatlinkshere/{{FULLPAGENAME}}|namespace=0}} internal link] led you here, you may wish to change the link to point directly to the intended article.'' |}&lt;/div&gt;&lt;includeonly&gt;[[Category:Disambiguation]]&lt;/includeonly&gt;&lt;noinclude&gt; {{/doc}} &lt;/noinclude&gt;</text>
     </revision>
   </page>
   <page>

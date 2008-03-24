@@ -1,4 +1,4 @@
-<mediawiki>
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
@@ -27,53 +27,26 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="20" newlength="8" stub="0" categories="0" outlinks="1" urls="0">
-<title>Guano</title>
-<categories></categories>
-<links>8</links>
-<urls>
-</urls>
-<text>
-Foo
+  <page>
+    <title>Template:Coor dms2dec</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">{{#expr:{{#switch:{{{1}}}|N|E=1|S|W=-1}}*({{{2|0}}}+({{{3|0}}}+{{{4|0}}}/60)/60) round {{{precdec|{{#if:{{{4|}}}|5|{{#if:{{{3|}}}|3|0}}}}+{{precision1|{{{4|{{{3|{{{2}}}}}}}}}}}}}}}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Test</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+		    This test case demonstrates a flaw in the way wikiprep 
+		    parses template parameters - parameter definition is
+		    closed by the first '}}}', so for "precdec" parameter, this
+		    matches at the first '}}}}', which in fact closes two
+		    #if statements.
 
-bar
-</text>
-</page>
-<page id="5" orglength="148" newlength="101" stub="0" categories="0" outlinks="0" urls="0">
-<title>Something</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-		    This is hello template
-		    This is hello template
-
-See this
-		    Hello
-		    See this
-	    
-</text>
-</page>
-<page id="7" orglength="341" newlength="66" stub="0" categories="0" outlinks="0" urls="0">
-<title>7</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-		    X
-
-
-</text>
-</page>
+		    {{coor dms2dec|W|52.6691|N|}}
+	    </text>
+    </revision>
+  </page>
 </mediawiki>

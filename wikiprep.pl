@@ -104,7 +104,7 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
                      5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
                      9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
 
-my $maxTemplateRecursionLevels = 20;
+my $maxTemplateRecursionLevels = 40;
 my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
@@ -751,6 +751,8 @@ sub transform() {
 
     $processedPageCount++;
     $processedByteCount+=length(${$page->text});
+
+    # next if( $id != 1192748);
 
     my $timeStr = &getTimeAsString();
     print LOGF "[$timeStr] Transforming page id=$id\n";
@@ -2123,7 +2125,7 @@ sub postprocessText(\$$$) {
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text
   # from being glued together).
-  $$refToText =~ s/<.*?>/ /sg;
+  $$refToText =~ s/<\/?[a-z][^<>]*?>/ /sg;
 
   # Change markup on bold/italics emphasis. We probably don't need to distinguish
   # these 3 types of emphasis, so we just replace all of them with a generic <em> tag.
