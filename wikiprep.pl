@@ -1977,7 +1977,7 @@ BEGIN {
   my $urlTerminator = qr/[\[\]\{\}\s\n\|\"<>]|$/;
 
   my $urlSequence1 = qr/\[\s*($urlProtocols[^\[\]]*)\]/;
-  my $urlSequence2 = qr/($urlProtocols.*?)$urlTerminator/;
+  my $urlSequence2 = qr/($urlProtocols.*?)($urlTerminator)/;
 
   sub extractUrls(\$\@) {
     my ($refToText, $refToUrlsArray) = @_;
@@ -1990,7 +1990,7 @@ BEGIN {
     # Now we handle standalone URLs (those not enclosed in brackets)
     # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
     # the terminator symbol itself, but rather only the URL.
-    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray)/eg;
+    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray, $2)/eg;
 
     &removeDuplicatesAndSelf($refToUrlsArray, undef);
   }
@@ -2011,12 +2011,16 @@ BEGIN {
     $text;  # return value
   }
 
-  sub collectStandaloneUrl($\@) {
-    my ($url, $refToUrlsArray) = @_;
+  sub collectStandaloneUrl($\@$) {
+    my ($url, $refToUrlsArray, $urlTerminator) = @_;
 
     push(@$refToUrlsArray, $url); # collect the URL as-is
 
-    " "; # return value - replace the URL with a space
+    if(defined($urlTerminator)) {
+      return $urlTerminator;
+    } else {
+      return "";
+    }
   }
 }
 

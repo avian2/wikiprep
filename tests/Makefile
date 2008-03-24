@@ -32,7 +32,8 @@ LOGS =	images.log \
 	intel.log \
 	nonfreegamecover.log \
 	olympics.log \
-	tibet.log
+	tibet.log \
+	externalurls.log
 
 all: test
 
