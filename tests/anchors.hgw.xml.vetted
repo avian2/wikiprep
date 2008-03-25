@@ -27,27 +27,27 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="206" newlength="225" stub="0" categories="0" outlinks="3" urls="0">
+<page id="1" orglength="206" newlength="113" stub="0" categories="0" outlinks="3" urls="0">
 <title>Gu</title>
 <categories></categories>
 <links>5 6 2</links>
 <urls>
 </urls>
 <text>
-<internal id="5">Lepa slika</internal> nekaj teksta in se ena <internal id="5">druga slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
+Lepa slika nekaj teksta in se ena druga slika. Pa se en link kar tako krneki. Pa se en link na Ga brez anchorja. 
 </text>
 </page>
-<page id="2" orglength="144" newlength="159" stub="0" categories="0" outlinks="2" urls="0">
+<page id="2" orglength="144" newlength="75" stub="0" categories="0" outlinks="2" urls="0">
 <title>Ga</title>
 <categories></categories>
 <links>5 6</links>
 <urls>
 </urls>
 <text>
-<internal id="5">grda slika</internal> nekaj teksta in se ena <internal id="5">prva slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>
+grda slika nekaj teksta in se ena prva slika. Pa se en link kar tako krneki
 </text>
 </page>
-<page id="3" orglength="140" newlength="144" stub="0" categories="0" outlinks="2" urls="0">
+<page id="3" orglength="140" newlength="88" stub="0" categories="0" outlinks="2" urls="0">
 <title>Sony</title>
 <categories></categories>
 <links>7 2</links>
@@ -55,7 +55,7 @@
 </urls>
 <text>
 
-      <internal id="7">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
+      A Sony Vaio FJ series without webcam is expanding the... gulpgagluedanchor
       
 </text>
 </page>

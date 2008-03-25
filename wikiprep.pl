@@ -835,7 +835,7 @@ sub transform() {
       &extractUrls(\$text, \@urls);
     }
 
-    &postprocessText(\$text, 1, 1);
+    &postprocessText(\$text, 1);
 
     my $newLength = length($text);  # text length AFTER all transformations
 
@@ -1610,10 +1610,8 @@ sub logAnchorText(\@$) {
     $linkLocation = $$AnchorArrayEntry{linkLocation};
 
     if ($targetId != $curPageId) {
-      # anchor text doesn't need escaping of XML characters,
-      # hence the second function parameter is 0
-      &postprocessText(\$anchorText, 0, 0);
-
+      &postprocessText(\$anchorText, 0); # anchor text doesn't need escaping of XML characters,
+                                         # hence the second function parameter is 0
       $anchorText =~ s/\n/ /g;  # replace all newlines with spaces
 
       $anchorText =~ s/^\s*//g;  # remove leading and trainling whitespace
@@ -1737,20 +1735,18 @@ sub collectInternalLink($$$\@\@$$) {
   # than one link (one for the day, another one for the year).
   my $dateRecognized = 0;
 
-  my $targetId = undef;
-
   # Alternative text (specified after pipeline) blocks normalization of dates.
   # We also perform a quick check - if the link does not start with a digit,
   # then it surely does not contain a date
   if ( ($link =~ /^\d/) && (! $alternativeTextAvailable)) {
-    $dateRecognized = &normalizeDates(\$link, \$result, \$targetId, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
+    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
   }
 
   # If a date (either day or day + year) was recognized, then no further processing is necessary
   if (! $dateRecognized) {
     &normalizeTitle(\$link);
 
-    $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
+    my $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
 
     # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
     # other languages). While these links are not resolved to valid pages, we also want
@@ -1800,11 +1796,7 @@ sub collectInternalLink($$$\@\@$$) {
 
   }
 
-  if ( defined($targetId) and length($result) > 0 ) {
-    return "<internal id=\"$targetId\">$result</internal>"; 
-  } else {
-    return $result;
-  }
+  $result;  #return value
 }
 
 sub performPipelineMasking(\$\$) {
@@ -1877,8 +1869,8 @@ sub resolveAndCollectInternalLink(\$\@) {
 # In (2) and (3), we only normalize the day, because it will be parsed separately from the year.
 # This function is only invoked if the link has no alternative text available, therefore,
 # we're free to override the result text.
-sub normalizeDates(\$\$\$\@\%) {
-  my ($refToLink, $refToResultText, $refToTargetId, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
+sub normalizeDates(\$\$\@\%) {
+  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
 
   my $dateRecognized = 0;
 
@@ -1895,7 +1887,6 @@ sub normalizeDates(\$\$\$\@\%) {
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
       if ( defined($targetId) && defined($refToAnchorTextArray) ) {
-        $$refToTargetId = $targetId;
         push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                        linkLocation => "$linkLocation" });
       }
@@ -1918,8 +1909,7 @@ sub normalizeDates(\$\$\$\@\%) {
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
-          $$refToTargetId = $targetId; 
-          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
+            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                            linkLocation => "$linkLocation" });
         }
       } else {
@@ -1947,7 +1937,6 @@ sub normalizeDates(\$\$\$\@\%) {
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
-            $$refToTargetId = $targetId; 
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink",
                                            linkLocation => "$linkLocation" });
         }
@@ -1955,7 +1944,6 @@ sub normalizeDates(\$\$\$\@\%) {
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
-            $$refToTargetId = $targetId; 
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year",
                                            linkLocation => "$linkLocation" });
         }
@@ -2063,12 +2051,8 @@ sub writeDisambig(\$\@) {
 	print DISAMBIGF "\n";
 }
 
-BEGIN {
-
-my $nowikiRegex = qr/(<\/?internal.*?>)/;
-
-sub postprocessText(\$$$) {
-  my ($refToText, $whetherToEncodeXmlChars, $whetherToPreserveInternalTags) = @_;
+sub postprocessText(\$$) {
+  my ($refToText, $whetherToEncodeXmlChars) = @_;
 
   # Eliminate all <includeonly> and <onlyinclude> fragments, because this text
   # will not be included anywhere, as we already handled all inclusion directives
@@ -2113,15 +2097,6 @@ sub postprocessText(\$$$) {
                             \}\}
                            / /sgx);
 
-  # Save <internal> XML tags introduced by extractInternalLinks(), so that they do not get mangled
-  # by postprocessing below. This is needed only when the preprocessing the final output.
-
-  my %nowikiCh = ();
-
-  if( $whetherToPreserveInternalTags ) {
-    &nowiki::extractTags(\$nowikiRegex, $refToText, \%nowikiCh);
-  }
-
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text
   # from being glued together).
@@ -2164,10 +2139,6 @@ sub postprocessText(\$$$) {
   # NOTE that the following operations introduce XML tags, so they must appear
   # after the original text underwent character encoding with 'encodeXmlChars' !!
 
-  if( $whetherToPreserveInternalTags ) {
-    &nowiki::replaceTags($refToText, \%nowikiCh);
-  }
-
   # Change markup for section headers.
   # Note that section headers may only begin at the very first position in the line
   # (not even after a space). Therefore, each header markup in the following commands
@@ -2178,8 +2149,6 @@ sub postprocessText(\$$$) {
   $$refToText =~ s/^====(.*?)====/<h3>$1<\/h3>/mg;
   $$refToText =~ s/^===(.*?)===/<h2>$1<\/h2>/mg;
   $$refToText =~ s/^==(.*?)==/<h1>$1<\/h1>/mg;
-}
-
 }
 
 sub logReplacedXmlEntity($) {

@@ -37,7 +37,7 @@
 Something.
 </text>
 </page>
-<page id="5" orglength="289" newlength="229" stub="0" categories="0" outlinks="4" urls="0">
+<page id="5" orglength="289" newlength="89" stub="0" categories="0" outlinks="4" urls="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links>6 2 7 8</links>
@@ -45,13 +45,13 @@ Something.
 </urls>
 <text>
 
-		    <internal id="6">This is a cool image</internal>
+		    This is a cool image
 
-<internal id="6">Another cool image</internal>
+Another cool image
 
-<internal id="6">Arg</internal>
+Arg
 
-<internal id="8"><internal id="2">Gu</internal></internal>
+Gu
 
 something
 		    something
