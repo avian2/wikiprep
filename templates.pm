@@ -9,6 +9,8 @@ package templates;
 
 my $maxParameterRecursionLevels = 10;
 
+# Template logging functions
+
 sub prepare(\$) {
   my ($refToTemplateIncDir) = @_;
 
@@ -32,6 +34,8 @@ sub logPath(\$\$) {
 
   return "$$refToTemplateIncDir/$prefix/$$refToTemplateId";
 }
+
+# Template parameter substitution
 
 sub substituteParameter($\%) {
   my ($parameter, $refToParameterHash) = @_;
