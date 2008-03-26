@@ -105,7 +105,6 @@ my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April'
                      9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
 
 my $maxTemplateRecursionLevels = 40;
-my $maxParameterRecursionLevels = 5;
 my $maxTableRecursionLevels = 5;
 
 # We use a different (and faster) way of recursively including templates than MediaWiki. In most
@@ -1387,52 +1386,17 @@ sub includeTemplateText(\$\%\$\$\%$) {
       $$refToIncludedTemplates{$includedPageId} = $templateRecursionLevels;
     }
 
-    # OK, perform the actual inclusion with parameter substitution
-
+    # Log which template has been included in which page with which parameters
     &logTemplateInclude(\$includedPageId, $refToId, $refToParameterHash);
 
+    # OK, perform the actual inclusion with parameter substitution. 
+
+    # First we retrieve the text of the template
     $$refToResult = $templates{$includedPageId};
 
-    # Perform parameter substitution
-    # A parameter call ( {{{...}}} ) may span over a newline, hence the /s modifier
-
-    # Parameters may be nested (see comments below), hence we do the substitution iteratively
-    # in a while loop. We also limit the maximum number of iterations to avoid too long or
-    # even endless loops (in case of malformed input).
-    my $parameterRecursionLevels = 0;
-
-    # We also require that the body of a parameter does not contain the parameter opening sequence
-    # (three successive opening braces - "\{\{\{"). We use negative lookahead to achieve this.
-    while ( ($parameterRecursionLevels < $maxParameterRecursionLevels) &&
-            $$refToResult =~ s/\{\{\{
-                                (
-                                  (?:
-                                      (?!
-                                          \{\{\{
-                                      )
-                                      .
-                                  )*?
-                                )
-
-# OLD code and comments
-#                                      ([^\{]*?)      # Occasionally, parameters are nested because
-#                                                     # they are dependent on other parameters,
-#                                                     # e.g., {{{Author|{{{PublishYear|}}}}}}
-#                                                     # (here, the default value for 'Author' is
-#                                                     # dependent on 'PublishYear').
-#                                                     # In order to prevent incorrect parsing, e.g.,
-#                                                     # "{{{Author|{{{PublishYear|}}}", we require that the
-#                                                     # parameter name does not include opening braces,
-#                                                     # hence "[^\{]" (any char except opening brace).
-# END OF OLD code and comments
-                               \}\}\}
-                              /&substituteParameter($1, $refToParameterHash)/segx
-          ) {
-      $parameterRecursionLevels++;
-    }
-
-    if($parameterRecursionLevels >= $maxParameterRecursionLevels) {
-      print LOGF "Maximum template parameter recursion level reached\n"
+    # Substitute template parameters
+    if( &templates::templateParameterRecursion($refToResult, $refToParameterHash, 1) ) {
+      print LOGF "Maximum template parameter recursion level reached\n";
     }
 
   } else {
@@ -1443,45 +1407,6 @@ sub includeTemplateText(\$\%\$\$\%$) {
     print LOGF "Template '$$refToTemplateTitle' is not available for inclusion\n";
     $$refToResult = " ";
   }
-}
-
-sub substituteParameter($\%) {
-  my ($parameter, $refToParameterHash) = @_;
-
-  my $result;
-
-  if ($parameter =~ /^([^|]*)\|(.*)$/) {
-    # This parameter has a default value
-    my $paramName = $1;
-    my $defaultValue = $2;
-
-    if ( defined($$refToParameterHash{$paramName}) ) {
-      $result = $$refToParameterHash{$paramName};  # use parameter value specified in template invocation
-    } else { # use the default value
-      $result = $defaultValue;
-    }
-  } else {
-    # parameter without a default value
-
-    if ( defined($$refToParameterHash{$parameter}) ) {
-      $result = $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
-    } else {
-      # Parameter not specified in template invocation and does not have a default value -
-      # do not perform substitution and keep the parameter in 3 braces
-      # (these are Wiki rules for templates, see  http://meta.wikimedia.org/wiki/Help:Template ).
-
-      # $result = "{{{$parameter}}}";
-
-      # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
-      # practice we get a lot less noise in the output if we expand them to zero-length strings.
-      $result = "";
-    }
-  }
-
-  # Surplus parameters - i.e., those assigned values in template invocation but not used
-  # in the template body - are simply ignored.
-
-  $result;  # return value
 }
 
 sub computeFullyQualifiedTemplateTitle(\$) {

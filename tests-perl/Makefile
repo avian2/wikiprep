@@ -1,7 +1,8 @@
 TESTS = images.pl \
 	nowiki.pl \
 	revision.pl \
-	languages.pl
+	languages.pl \
+	templates.pl
 
 all: test
 

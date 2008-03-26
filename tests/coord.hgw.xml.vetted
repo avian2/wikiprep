@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="2" orglength="312" newlength="347" stub="0" categories="0" outlinks="0" urls="0">
+<page id="2" orglength="312" newlength="301" stub="0" categories="0" outlinks="0" urls="0">
 <title>Test</title>
 <categories></categories>
 <links></links>
@@ -41,8 +41,7 @@
 		    matches at the first &apos;}}}}&apos;, which in fact closes two
 		    #if statements.
 
-{{#expr:N*(52.6691+(N+0/60)/60) round 3}
-	    
+
 </text>
 </page>
 </mediawiki>
