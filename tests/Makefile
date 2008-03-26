@@ -35,7 +35,8 @@ LOGS =	images.log \
 	tibet.log \
 	externalurls.log \
 	coord.log \
-	riemann.log
+	riemann.log \
+	carbon.log
 
 all: test
 

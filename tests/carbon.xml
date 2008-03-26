@@ -1,0 +1,1028 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Iron fertilization</title>
+    <id>1</id>
+    <revision>
+	    <text>
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Carbon dioxide sink</title>
+    <id>5980</id>
+    <revision>
+      <id>200650887</id>
+      <timestamp>2008-03-24T22:21:35Z</timestamp>
+      <contributor>
+        <username>Elpincha</username>
+        <id>121288</id>
+      </contributor>
+      <minor/>
+      <comment>/* Storage in vegetation and soils */  cpedit</comment>
+      <text xml:space="preserve">
+This example demonstrates, what happens when a template is substituted in
+a wiki article (instead of transcluded)
+
+:&lt;span class=&quot;boilerplate seealso&quot;&gt;''See also: {{#if:Iron fertilization |&lt;!--then:--&gt;[[:Iron fertilization|{{{l1|Iron fertilization}}}]] |&lt;!--else:--&gt;'''Error: [[Template:See also|Template must be given at least one article name]]''' 
+}}{{#if:{{{2|}}}|{{#if:{{{3|}}}|, |&amp;nbsp;and }} [[:{{{2}}}|{{{l2|{{{2}}}}}}]]
+}}{{#if:{{{3|}}}|{{#if:{{{4|}}}|, |,&amp;nbsp;and }} [[:{{{3}}}|{{{l3|{{{3}}}}}}]]
+}}{{#if:{{{4|}}}|{{#if:{{{5|}}}|, |,&amp;nbsp;and }} [[:{{{4}}}|{{{l4|{{{4}}}}}}]]
+}}{{#if:{{{5|}}}|{{#if:{{{6|}}}|, |,&amp;nbsp;and }} [[:{{{5}}}|{{{l5|{{{5}}}}}}]]
+}}{{#if:{{{6|}}}|{{#if:{{{7|}}}|, |,&amp;nbsp;and }} [[:{{{6}}}|{{{l6|{{{6}}}}}}]]
+}}{{#if:{{{7|}}}|{{#if:{{{8|}}}|, |,&amp;nbsp;and }} [[:{{{7}}}|{{{l7|{{{7}}}}}}]]
+}}{{#if:{{{8|}}}|{{#if:{{{9|}}}|, |,&amp;nbsp;and }} [[:{{{8}}}|{{{l8|{{{8}}}}}}]]
+}}{{#if:{{{9|}}}|{{#if:{{{10|}}}|, |,&amp;nbsp;and }} [[:{{{9}}}|{{{l9|{{{9}}}}}}]]
+}}{{#if:{{{10|}}}|{{#if:{{{11|}}}|, |,&amp;nbsp;and }} [[:{{{10}}}|{{{l10|{{{10}}}}}}]]
+}}{{#if:{{{11|}}}|{{#if:{{{12|}}}|, |,&amp;nbsp;and }} [[:{{{11}}}|{{{l11|{{{11}}}}}}]]
+}}{{#if:{{{12|}}}|{{#if:{{{13|}}}|, |,&amp;nbsp;and }} [[:{{{12}}}|{{{l12|{{{12}}}}}}]]
+}}{{#if:{{{13|}}}|{{#if:{{{14|}}}|, |,&amp;nbsp;and }} [[:{{{13}}}|{{{l13|{{{13}}}}}}]]
+}}{{#if:{{{14|}}}|{{#if:{{{15|}}}|, |,&amp;nbsp;and }} [[:{{{14}}}|{{{l14|{{{14}}}}}}]]
+}}{{#if:{{{15|}}}|,&amp;nbsp;and [[:{{{15}}}|{{{l15|{{{15}}}}}}]]
+}}{{#if:{{{16|}}}| &amp;mdash; '''&lt;br/&gt;Error: [[Template:See also|Too many links specified (maximum is 15)]]'''
+}}''&lt;/span&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox/core</title>
+    <id>12774496</id>
+    <revision>
+      <id>190914505</id>
+      <timestamp>2008-02-12T15:45:04Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Fix for double inclusion of &quot;background:white;&quot;</comment>
+      <text xml:space="preserve">&lt;table class=&quot;navbox {{#ifeq:{{{state|}}}|plain||collapsible {{{state|autocollapse}}}}} nowraplinks&quot; style=&quot;margin:auto; {{#ifeq:{{{nogroups|}}}|true|{{#if:{{{l1|}}}|{{#if:{{{l2|}}}|background:white;}}}}|background:white;}} {{{bodystyle|}}}&quot;&gt;&lt;!--
+
+---Titlebar---
+--&gt;&lt;tr&gt;&lt;th colspan=&quot;{{{span|1}}}&quot; style=&quot;text-align:center;width:100%;{{{titlestyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#ifeq:{{{navbar|}}}|plain||&lt;div style=&quot;float:left; width:6em; text-align:left;&quot;&gt;{{Tnavbar| {{{name&lt;noinclude&gt;|Navbox&lt;/noinclude&gt;}}}|fontstyle={{{titlestyle|}}};border:none;|mini=1}}&lt;/div&gt;}}&lt;span style=&quot;font-size:110%;&quot;&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;!--
+
+---Above (optional)---
+--&gt;{{#if:{{{above|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{abovestyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{above|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---First group and image(s)---
+--&gt;{{#if:{{{l1|}}}|&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|{{#ifeq:{{{nogroups|}}}|true|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-right:7px; width:0%;&quot;&gt;{{{imageleft}}}&lt;/td&gt;}}}}&lt;!--
+
+--&gt;{{#if:{{{g1|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g1|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g1|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g1|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l1|}}}&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;td rowspan=&quot;{{{imagespan|}}}&quot; style=&quot;vertical-align:middle; padding-left:7px; width:0%;&quot;&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+---Remaining groups---
+--&gt;{{#if:{{{l2|}}}|&lt;tr&gt;{{#if:{{{g2|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g2|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g2|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g2|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l2|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l3|}}}|&lt;tr&gt;{{#if:{{{g3|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g3|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g3|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g3|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l3|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l4|}}}|&lt;tr&gt;{{#if:{{{g4|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g4|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g4|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g4|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l4|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l5|}}}|&lt;tr&gt;{{#if:{{{g5|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g5|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g5|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g5|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l5|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l6|}}}|&lt;tr&gt;{{#if:{{{g6|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g6|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g6|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g6|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l6|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l7|}}}|&lt;tr&gt;{{#if:{{{g7|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g7|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g7|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g7|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l7|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l8|}}}|&lt;tr&gt;{{#if:{{{g8|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g8|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g8|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g8|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l8|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l9|}}}|&lt;tr&gt;{{#if:{{{g9|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g9|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g9|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g9|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l9|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l10|}}}|&lt;tr&gt;{{#if:{{{g10|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g10|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g10|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g10|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l10|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l11|}}}|&lt;tr&gt;{{#if:{{{g11|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g11|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g11|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g11|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l11|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l12|}}}|&lt;tr&gt;{{#if:{{{g12|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g12|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g12|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g12|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l12|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l13|}}}|&lt;tr&gt;{{#if:{{{g13|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g13|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g13|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g13|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l13|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l14|}}}|&lt;tr&gt;{{#if:{{{g14|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g14|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g14|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g14|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l14|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l15|}}}|&lt;tr&gt;{{#if:{{{g15|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g15|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g15|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g15|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l15|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l16|}}}|&lt;tr&gt;{{#if:{{{g16|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g16|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g16|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g16|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l16|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l17|}}}|&lt;tr&gt;{{#if:{{{g17|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g17|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g17|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g17|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l17|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l18|}}}|&lt;tr&gt;{{#if:{{{g18|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g18|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g18|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g18|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l18|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l19|}}}|&lt;tr&gt;{{#if:{{{g19|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g19|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g19|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g19|}}}|left|center}};{{{os|}}}&quot;&gt;{{{l19|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{l20|}}}|&lt;tr&gt;{{#if:{{{g20|}}}|&lt;th style=&quot;{{{gs|}}}&quot;&gt;{{{g20|}}}&lt;/th&gt;}}&lt;td colspan=&quot;{{#if:{{{g20|}}}|1|{{#ifeq:{{{nogroups|}}}|true|1|2}}}}&quot; style=&quot;text-align:{{#if:{{{g20|}}}|left|center}};{{{es|}}}&quot;&gt;{{{l20|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+---Below (optional)---
+--&gt;{{#if:{{{below|}}}|&lt;tr&gt;&lt;td style=&quot;text-align:center;{{{belowstyle|}}}&quot; colspan=&quot;{{{span|1}}}&quot;&gt;{{{below|}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;&lt;/table&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite journal</title>
+    <id>4740319</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>200272972</id>
+      <timestamp>2008-03-23T10:33:30Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>restore nbsp</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;cite style=&quot;font-style:normal&quot;&gt;{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{authorlink|}}}
+    |[[{{{authorlink}}}|{{#if:
+      {{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}]]
+    |{{#if:{{{last|}}}
+      |{{{last}}}{{#if:
+        {{{first|}}}
+        |, {{{first}}}
+      }}
+      |{{{author}}}
+    }}
+  }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{coauthors|}}}
+    | &lt;nowiki&gt;;&lt;/nowiki&gt; {{{coauthors}}}
+  }}
+}}{{#if:{{{date|}}}
+  |&amp;#32;({{{date}}})
+  |{{#if:{{{year|}}}
+    |{{#if:{{{month|}}}
+      |&amp;#32;({{{month}}} {{{year}}})
+      |&amp;#32;({{{year}}})
+     }}
+   }}
+}}{{#if:{{{author|}}}{{{last|}}}
+  | .
+}}{{#if:{{{author|}}}{{{last|}}}{{{year|}}}{{{date|}}}
+  | &amp;#32;
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if: {{{curly|}}}|“|&quot;}} 
+ }}{{#if:{{{url|}}}
+  |[{{{url}}} {{{title}}}]
+  |{{{title}}}
+}}{{#ifeq:{{{quotes|}}} 
+ | no 
+ | 
+ | {{#if:{{{curly|}}}|”|&quot;}} 
+ }}{{#if:{{{language|}}} 
+  | &amp;#32;(in {{{language}}})
+}}{{#if:{{{format|}}}
+  | &amp;#32;({{{format}}})
+}}{{#if:{{{journal|}}}
+  |. ''{{{journal}}}''
+}}{{#if:{{{volume|}}}
+  |&amp;#32;'''{{{volume}}}'''
+}}{{#if:{{{issue|}}}
+  |&amp;#32;({{{issue}}})
+}}{{#if:{{{pages|}}}
+  |&lt;nowiki&gt;:&lt;/nowiki&gt; {{{pages}}}
+}}{{#if:{{{publisher|}}}
+  |.&amp;#32;{{#if:{{{location|}}} 
+    |{{{location}}}:&amp;#32;
+  }}{{{publisher}}}
+}}{{#if:{{{doi|}}} 
+  |. [[Digital object identifier|doi]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}]
+}}{{#if:{{{issn|}}}
+  |. [[International Standard Serial Number|ISSN]] [http://worldcat.org/issn/{{{issn}}} {{{issn}}}]
+}}{{#if:{{{pmid|}}}
+  |. PMID {{{pmid}}}
+}}{{#if:{{{bibcode|}}}
+  |. [[Bibcode]]:&amp;nbsp;[http://adsabs.harvard.edu/abs/{{{bibcode}}} {{{bibcode}}}]
+}}{{#if:{{{oclc|}}} 
+  |. [[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}]
+}}{{#if:{{{id|}}}
+  |. {{{id}}}
+}}{{#if:{{{accessdate|}}}
+  |. Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}
+}}{{#if:{{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}, {{{accessyear}}}
+}}{{#if:{{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}} {{{accessyear}}}
+}}{{#if:{{{laysummary|}}}
+  |. [{{{laysummary}}} Lay summary]{{#if: {{{laysource|}}}|&amp;nbsp;&amp;ndash;&amp;nbsp;''{{{laysource}}}''}}
+}}{{#if:{{{laydate|}}}
+  | &amp;#32;([[{{{laydate}}}]])
+}}.{{#if:{{{quote|}}}
+  | &amp;#32;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:journal}}&lt;!--                Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:journal
+  --&gt;&amp;rft.genre=article&lt;!--                                                     article: a document published in a journal. (genre could also be (the entire) journal, issue, conference, proceeding, preprint, or unknown)
+  --&gt;{{#if: {{{title|}}}     | &amp;rft.atitle={{urlencode:{{{title}}}}}     }}&lt;!-- Article title.
+  --&gt;{{#if: {{{journal|}}}   | &amp;rft.jtitle={{urlencode:{{{journal}}}}}   }}&lt;!-- Journal title. Use the most complete title available ... &quot;journal of the american medical association&quot;
+  --&gt;{{#if: {{{date|}}} 
+       | &amp;rft.date={{urlencode:{{{date}}}}}
+       | {{#if: {{{year|}}}  | &amp;rft.date={{urlencode:{{{year}}}}} }}     }}&lt;!-- Date of publication. (ISO 8601)
+  --&gt;{{#if: {{{volume|}}}    | &amp;rft.volume={{urlencode:{{{volume}}}}}    }}&lt;!-- Volume designation usually expressed as a number but could be roman numerals or non-numeric, i.e. &quot;124&quot;, or &quot;VI&quot;.
+  --&gt;{{#if: {{{issue|}}}     | &amp;rft.issue={{urlencode:{{{issue}}}}}      }}&lt;!-- This is the designation of the published issue of a journal ... could be non-numeric
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}        }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}      }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}    }}&lt;!-- First author's given name or names or initials. This data element may contain multiple words and punctuation, i.e, &quot;Fred James&quot;
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}      }}&lt;!-- Start and end pages, i.e. &quot;53-58&quot;. This can also be used for an unstructured pagination statement when data relating to pagination cannot be interpreted as a start-end pair, i.e. &quot;A7, C4-9&quot;, &quot;1-3,6&quot;.
+  --&gt;{{#if: {{{issn|}}}      | &amp;rft.issn={{urlencode:{{{issn}}}}}        }}&lt;!-- International Standard Serials Number (ISSN). The issn may contain a hyphen, i.e. &quot;1041-5653&quot;
+  --&gt;{{#if: {{{pmid|}}}      | &amp;rft_id=info:pmid/{{urlencode:{{{pmid}}}}}}}&lt;!-- PubMed ID
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- DOI
+  --&gt;{{#if: {{{url|}}}       | &amp;rft_id={{urlencode:{{{url}}}}}           }}&lt;!-- URL
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+&lt;!--
+    PLEASE DO NOT ADD DOCUMENTATION/CATEGORIES/INTERWIKIS HERE
+--&gt;
+{{pp-template|small=yes}}
+{{Template doc}}
+&lt;!--
+    MAKE ADDITIONS TO THE /doc SUBPAGE INSTEAD, THANKS
+--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:EnergyPortal</title>
+    <id>11723166</id>
+    <revision>
+      <id>194178289</id>
+      <timestamp>2008-02-26T15:24:03Z</timestamp>
+      <contributor>
+        <username>Cydebot</username>
+        <id>1215485</id>
+      </contributor>
+      <minor/>
+      <comment>Robot - Moving category Energy portal-related templates to Energy portal templates per [[WP:CFD|CFD]] at [[Wikipedia:Categories for discussion/Log/2008 February 20]].</comment>
+      <text xml:space="preserve">{{Portal|Energy|Crystal 128 energy.png}}
+&lt;noinclude&gt;
+[[Category:Energy portal templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Fix</title>
+    <id>5632010</id>
+    <revision>
+      <id>176973821</id>
+      <timestamp>2007-12-10T12:11:27Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{NAMESPACE}}||{{{cat|[[Category:All pages needing cleanup]]}}}{{#if:{{{cat-date|}}}|[[{{{cat-date}}} {{#if:{{{date|}}}|{{#if:{{{from|}}}|from|since}} {{{date}}}}}]]}}}}{{#if:{{{text|}}}|&lt;sup class=&quot;{{{class|noprint Inline-Template}}}&quot;&gt;&lt;span title=&quot;{{{title|}}}{{#if:{{{date|}}}|&amp;nbsp;{{#if:{{{from|}}}|from|since}} {{{date}}}}}&quot; style=&quot;white-space: nowrap;&quot;&gt;&amp;#91;''{{{pre-text|}}}[[{{{link|Wikipedia:Cleanup}}}|{{{text|}}}]]{{{post-text|}}}''&amp;#93;&lt;/span&gt;&lt;/sup&gt;|{{{special|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>197522060</id>
+      <timestamp>2008-03-11T18:08:49Z</timestamp>
+      <contributor>
+        <username>Rich Farmbrough</username>
+        <id>82835</id>
+      </contributor>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}}{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·w</title>
+    <id>15943978</id>
+    <revision>
+      <id>193894186</id>
+      <timestamp>2008-02-25T09:37:20Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Created as a short name (a redirect) for {{·wrap}}.</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:·wrap]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Global warming</title>
+    <id>3657316</id>
+    <revision>
+      <id>200118234</id>
+      <timestamp>2008-03-22T18:32:36Z</timestamp>
+      <contributor>
+        <username>Oren0</username>
+        <id>2172222</id>
+      </contributor>
+      <comment>split controversy from politics, per template talk</comment>
+      <text xml:space="preserve">{{Navbox
+|name  = Global warming
+|state = {{{state|collapsed}}}
+|title = [[Global warming]] and [[climate change]]
+|groupstyle = line-height:1.1em; padding:0.35em 1.0em;
+|liststyle  = line-height:1.4em;
+
+|group1 = [[Temperature record|Temperatures]]
+|list1  = {{nowrap begin}} [[Instrumental temperature record|Instrumental record]]{{·w}} [[Satellite temperature measurements|Satellite record]]{{·w}} [[Temperature record of the past 1000 years|Past 1,000 years]]{{·w}} [[Temperature record since 1880|Since 1880]]{{·w}} [[Geologic temperature record|Geologic record]] {{nowrap end}}
+
+|group2 = [[Attribution of recent climate change|Causes]]
+|list2  = {{Navbox subgroups
+ |groupstyle = width:8em; line-height:1.1em; padding:0.35em 0.75em; font-weight:normal;
+ |liststyle  = line-height:1.3em; width:auto;
+ |list1  = [[Scientific opinion on climate change]]
+ |group2 = [[Anthropogenic]]
+ |list2  = {{nowrap begin}} [[Aviation and the environment|Aviation]] {{·w}} [[Carbon dioxide]]{{·w}} [[Climate sensitivity]]{{·w}} [[Global dimming]]{{·w}} [[Global warming potential]]{{·w}} [[Greenhouse effect]]{{·w}} [[Greenhouse gas]]es{{·w}} [[Keeling Curve]]{{·w}} [[Land use, land-use change and forestry|Land use and forestry]]{{·w}} [[Urban heat island]] {{nowrap end}}
+ |group3 = Natural
+ |list3  = {{nowrap begin}} [[Albedo]]{{·w}} [[Cloud forcing]]{{·w}} [[Glaciation]]{{·w}} [[Global cooling]]{{·w}} [[El Niño|Ocean variability]]{{·w}} [[Milankovitch cycles|Orbital variations]]{{·w}} [[Orbital forcing]]{{·w}} [[Radiative forcing]]{{·w}} [[Solar variation]]{{·w}} [[Volcano|Volcanism]] {{nowrap end}}
+ }}
+
+|group3 = [[Climate model|Models]]
+|list3  = [[Global climate model]]
+
+|group4 = [[Politics of global warming|Politics]]
+|list4  = {{nowrap begin}} [[United Nations Framework Convention on Climate Change|United Nations Framework Convention on Climate Change (UNFCCC / FCCC)]]{{·w}} [[Intergovernmental Panel on Climate Change|Intergovernmental Panel on Climate Change (IPCC)]]{{nowrap end}}
+
+|group5 = [[Global warming controversy|Controversy]]
+|list5 = [[List of scientists opposing the mainstream scientific assessment of global warming|Scientists opposing the mainstream assessment]]{{·w}} [[Climate change denial]] {{nowrap end}}
+
+|group6 = [[Effects of global warming|Potential effects&lt;br/&gt;and issues]]
+|list6  = {{Navbox subgroups
+ |groupstyle = width:8em; line-height:1.1em; padding:0.35em 0.75em; font-weight:normal;
+ |liststyle  = line-height:1.3em; width:auto;
+ |group1 = General
+ |list1  = {{nowrap begin}} [[Climate change and agriculture]]{{·w}} [[Drought]]{{·w}} [[Economics of global warming]]{{·w}} [[El Niño]]{{·w}} [[Retreat of glaciers since 1850|Glacier retreat]]{{·w}} [[Extinction risk from climate change|Mass extinction]]{{·w}} [[Ozone depletion]]{{·w}} [[Ocean acidification]]{{·w}} [[Sea level rise]]{{·w}} [[Season creep]]{{·w}} [[Shutdown of thermohaline circulation]] {{nowrap end}}
+ |group2 = By country
+ |list2  = {{nowrap begin}} [[Effects of global warming on Australia|Australia]]{{·w}} [[Effects of global warming on India|India]]{{·w}} [[National Assessment on Climate Change|United States]] {{nowrap end}}
+ }}
+
+|group7 = [[Mitigation of global warming|Mitigation]]
+|list7  = {{Navbox subgroups
+ |groupstyle = width:8em; line-height:1.1em; padding:0.35em 0.75em; font-weight:normal;
+ |liststyle  = line-height:1.3em; width:auto;
+ |group1 = [[Kyoto Protocol]]
+ |list1  = {{nowrap begin}} [[Clean Development Mechanism]]{{·w}} [[Joint Implementation]]{{·w}} [[Bali roadmap]] {{nowrap end}}
+ |group2 = Governmental
+ |list2  = {{nowrap begin}} [[European Climate Change Programme]]{{·w}} [[United Kingdom Climate Change Programme]]{{·w}} [[Oil phase-out in Sweden]] {{nowrap end}}
+ |group3 = Schemes
+ |list3  = {{nowrap begin}} [[Emissions trading]]{{·w}} [[Personal carbon trading]]{{·w}} [[Carbon tax]]{{·w}} [[Carbon offset]]{{·w}}  [[Carbon credit]]{{·w}} [[Carbon dioxide sink|Carbon dioxide sink (Carbon sequestration)]] {{nowrap end}}
+ |group4 = [[Energy conservation|Energy&lt;br/&gt;conservation]]
+ |list4  = {{nowrap begin}} [[Efficient energy use]]{{·w}} [[Renewable energy]]{{·w}} [[Renewable energy commercialization]]{{·w}}[[Renewable energy development]]{{·w}} [[Soft energy path]] {{nowrap end}}
+ |group5 = Other
+ |list5  = {{nowrap begin}} [[G8 Climate Change Roundtable]]{{·w}} [[Individual and political action on climate change]] {{nowrap end}}
+}}
+
+|group8 = [[Adaptation to global warming|Proposed&lt;br/&gt;adaptations]]
+|list8 = {{Navbox subgroups
+ |groupstyle = width:8em; line-height:1.1em; padding:0.35em 0.75em; font-weight:normal;
+ |liststyle  = line-height:1.3em; width:auto;
+ |group1 = Strategies
+ |list1  = {{nowrap begin}} [[Dam]]ming [[glacial lake]]s{{·w}} [[Drought tolerance]]{{·w}} [[Irrigation|Irrigation investment]]{{·w}} [[Rainwater tank|Rainwater storage]]{{·w}} [[Sustainable development]]{{·w}} [[Weather control]] {{nowrap end}}
+ |group2 = Initiatives
+ |list2 = {{nowrap begin}} [[Avoiding Dangerous Climate Change]]{{·w}} [[Land Allocation Decision Support System]] {{nowrap end}}
+ }}
+
+|belowstyle = font-weight:bold;
+|below = {{nowrap begin}} [[:Category:Global warming]]{{·w}} [[:Category:Climate change]]{{·w}} [[Glossary of climate change]] {{nowrap end}}
+}}&lt;noinclude&gt;
+&lt;br/&gt;{{collapsible option}}
+
+[[Category:Energy templates|{{PAGENAME}}]]
+[[Category:Template-Class Environment articles]]
+[[Category:WikiProject Environment|τ]]
+
+[[de:Vorlage:Navigationsleiste Globale Erwärmung]]
+[[fi:Malline:Ilmastonmuutos]]
+[[ja:Template:地球温暖化]]
+[[ru:Шаблон:Глобальное потепление]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite news</title>
+    <id>4321630</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>176437851</id>
+      <timestamp>2007-12-07T20:50:54Z</timestamp>
+      <contributor>
+        <username>Random832</username>
+        <id>13872</id>
+      </contributor>
+      <comment>fix?</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||&lt;div style=&quot;border:1px solid red; background-color:#ffdab9; display:table;&quot;&gt; 
+You must specify '''''archiveurl=''''' and '''''archivedate=''' when using {{tl|cite news}}. Available parameters:
+{{Cite news/doc/parameterlist}}
+&lt;/div&gt;{{
+    #if: {{NAMESPACE}}||
+      [[Category:Articles with broken citations]]
+    }}
+}}
+}}{{#if: {{{title|}}}
+  |{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{authorlink|}}}
+      | [[{{{authorlink}}}|{{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}]]
+      | {{#if: {{{last|}}}
+        | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+        | {{{author}}}
+      }}
+    }}
+  }}{{#if: {{{author|}}}{{{last|}}}
+    | {{#if: {{{coauthors|}}} | &amp;#59;&amp;#32;{{{coauthors}}} }}.&amp;#32;
+  }}{{#if: {{{curly|}}}|“|&quot;
+  }}{{#if: {{{archiveurl|}}}
+    | [{{{archiveurl}}} {{{title}}}] 
+    | {{#if: {{{url|}}} 
+      | [{{{url}}} {{{title}}}] 
+      | {{{title}}}
+    }}
+  }}{{#if: {{{curly|}}}|”|&quot;}}{{#if: {{{format|}}} | &amp;#32;({{{format}}}) 
+    }}{{#if: {{{work|}}}
+    | , ''{{{work}}}''}}{{#if: {{{publisher|}}}
+    | , {{#if: {{{location|}}} |{{{location}}}:&amp;#32;}}{{{publisher}}}
+  }}{{#if: {{{date|}}}
+    | , {{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}}
+  }}{{#if: {{{pages|}}}
+    | , pp.&amp;nbsp;{{{pages}}}
+    |{{#if: {{{page|}}}
+      | , p.&amp;nbsp;{{{page}}}
+    }}
+  }}{{#if: {{{id|}}} 
+    | . {{{id}}}
+  }}{{#if: {{{accessdate|}}}  
+  | .&amp;#32;Retrieved on [[{{{accessdate}}}]]
+  }}.{{#if: {{{language|}}}
+  | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+  }}{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+  }}{{ #if: {{{quote|}}}
+    | &amp;nbsp;&quot;{{{quote}}}&quot;
+  }}|Template error: argument '''title''' is required.}}&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:dc}}&lt;!--                     Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:dc
+  --&gt;&amp;rft.type=newspaperArticle&lt;!--                                             The nature or genre of the content of the resource.  (newspaperArticle chosen purely because it is recognized by Zotero.)
+  --&gt;&amp;rft.subject=News&lt;!--                                                      A topic of the content of the resource. Typically expressed as keywords, key phrases or classification codes...
+  --&gt;{{#if: {{{first|}}}     | &amp;rft.aufirst={{urlencode:{{{first}}}}}       }}&lt;!-- First author's given name or names or initials... may contain multiple words and punctuation, i.e. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{last|}}}      | &amp;rft.aulast={{urlencode:{{{last}}}}}         }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{author|}}}    | &amp;rft.au={{urlencode:{{{author}}}}}           }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;&amp;rft.title={{urlencode:{{{title|}}}}}&lt;!--                                     A name given to the resource.
+  --&gt;{{#if: {{{url|}}}       | &amp;rft.identifier={{urlencode:{{{url}}}}}      }}&lt;!-- URL 
+  --&gt;{{#if: {{{format|}}}    | &amp;rft.format={{urlencode:{{{format}}}}}       }}&lt;!-- The physical or digital manifestation of the resource... may include the media-type or dimensions of the resource.
+  --&gt;{{#if: {{{work|}}}      | &amp;rft.source={{urlencode:{{{work}}}}}         }}&lt;!-- A Reference to a resource from which the present resource is derived. 
+  --&gt;{{#if: {{{publisher|}}} | &amp;rft.publisher={{urlencode:{{{publisher}}}}} }}&lt;!-- An entity responsible for making the resource available... person, an organization, or a service.
+  --&gt;{{#if: {{{pages|}}}     | &amp;rft.pages={{urlencode:{{{pages}}}}}         }}&lt;!-- Start and end pages for parts (of a book), i.e. &quot;124-147&quot;
+  --&gt;{{#if: {{{page|}}}      | &amp;rft.spage={{urlencode:{{{page}}}}}         }}&lt;!-- Start page for parts (of a book), i.e. &quot;124&quot;
+  --&gt;{{#if: {{{date|}}}      | &amp;rft.date={{urlencode:{{{date}}}}}           }}&lt;!-- A date of an event in the lifecycle of the resource... typically the creation or availability of the resource. (ISO 8601)
+  --&gt;{{#if: {{{language|}}}  | &amp;rft.language={{urlencode:{{{language}}}}}   }}&lt;!-- A language of the intellectual content of the resource. Recommended best practice is to use RFC 3066... in conjunction with ISO639
+  --&gt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox subgroups</title>
+    <id>14741355</id>
+    <revision>
+      <id>178430584</id>
+      <timestamp>2007-12-17T03:02:20Z</timestamp>
+      <contributor>
+        <username>Psantora</username>
+        <id>257756</id>
+      </contributor>
+      <comment>moved [[Template:Navbox subgroups]] to [[Template:Navbox subgroup]] over redirect: keep standard with {{navbox generic subgroup}}</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Navbox subgroup]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·wrap</title>
+    <id>12885137</id>
+    <revision>
+      <id>196710070</id>
+      <timestamp>2008-03-08T06:22:35Z</timestamp>
+      <contributor>
+        <username>Cydebot</username>
+        <id>1215485</id>
+      </contributor>
+      <minor/>
+      <comment>Robot - Speedily moving category Formatting templates to Wikipedia formatting templates per [[WP:CFD|CFD]].</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&amp;nbsp;&lt;b&gt;·&lt;/b&gt;&lt;/span&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-semi-template|small=yes}}
+
+This template works together with [[Template:Nowrap begin|&lt;nowiki&gt;{{nowrap begin}}&lt;/nowiki&gt;]]. See explanation there.
+
+
+[[Category:Wikipedia formatting templates|Wrap·]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Portal</title>
+    <id>1780010</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172639014</id>
+      <timestamp>2007-11-20T04:30:10Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>CSS class portal</comment>
+      <text xml:space="preserve">&lt;div class=&quot;{{#ifeq:{{{left|no}}}|yes|tleft|tright}} portal&quot; style=&quot;border:solid #aaa 1px; background:#f9f9f9; margin:0.5em 0 0.5em 0.5em; font-size:85%;&quot;&gt;
+{| style=&quot;background:transparent;&quot; width={{{boxsize|{{{4|0}}}}}}
+| &lt;div style=&quot;position:relative; width:{{{size|{{{3|32}}}}}}px; height:28px; overflow:hidden&quot;&gt;&lt;div style=&quot;position:absolute; top:0px; left:0px; z-index:2;&quot;&gt; [[Image:{{{image|{{{2|Portal.svg}}}}}}|{{{size|{{{3|32}}}}}}x28px]]&lt;/div&gt;&lt;/div&gt;
+| '''''[[Portal:{{{name|{{{1|{{PAGENAME}}}}}}}}|{{{name|{{{1|{{PAGENAME}}}}}}}}{{#ifeq:{{{break|}}}|yes|&lt;br /&gt;|&amp;#32;}}Portal]]'''''
+|}&lt;/div&gt;&lt;noinclude&gt;
+{{documentation}}&lt;!--Please add any interwiki links etc on the /doc page, not here - thanks!--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tnavbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>171324865</id>
+      <timestamp>2007-11-14T00:23:38Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&amp;nbsp;&lt;span class=&quot;noprint plainlinksneverexpand&quot; style=&quot;white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;|&lt;!--else:
+--&gt;&lt;div class=&quot;noprint plainlinksneverexpand&quot; style=&quot;background-color:transparent; padding:0; white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{mini|}}}{{{miniv|}}}{{{plain|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;|&lt;!--else:
+--&gt;This box:&amp;nbsp;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{miniv|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{viewplain|}}}|view|v}}&lt;/span&gt;]]|&lt;!--else:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[Template talk:{{{1}}}|&lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;Discussion about this template&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{ns:10}}:{{{1}}}|action=edit}} &lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;You can edit this template. Please use the preview button before saving.&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;&lt;!--
+--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+&lt;hr/&gt;&lt;center&gt;'''{{purge}}''' the Wikipedia cache of this template.&lt;hr/&gt;&lt;/center&gt;&lt;br/&gt;
+{{documentation}} 
+&lt;!--Note: Metadata (interwiki links, etc) for this template should be put on [[Template:Tnavbar/doc]]--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main</title>
+    <id>1208356</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>172617823</id>
+      <timestamp>2007-11-20T02:17:26Z</timestamp>
+      <contributor>
+        <username>Chmod007</username>
+        <id>72856</id>
+      </contributor>
+      <comment>Adding CSS class names</comment>
+      <text xml:space="preserve">:&lt;div class=&quot;noprint relarticle mainarticle&quot;&gt;''Main article{{#if:{{{2|}}}|s}}: [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&amp;#32;|&amp;#32;and&amp;#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, and [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}''{{#if:{{{11| }}}|&amp;#32; (too many parameters in &amp;#123;&amp;#123;[[Template:main|main]]&amp;#125;&amp;#125;)}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>172964235</id>
+      <timestamp>2007-11-21T19:45:44Z</timestamp>
+      <contributor>
+        <username>Trödel</username>
+        <id>171039</id>
+      </contributor>
+      <comment>use new template [[:Template:documentation]]</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; -webkit-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; -webkit-column-count:{{{1}}}; column-count:{{{1}}} }};&quot; |}}&gt;
+&lt;references /&gt;&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Or</title>
+    <id>4913972</id>
+    <revision>
+      <id>172232139</id>
+      <timestamp>2007-11-18T06:31:05Z</timestamp>
+      <contributor>
+        <username>Maelgwnbot</username>
+        <id>4594058</id>
+      </contributor>
+      <minor/>
+      <comment>Bot Updating template fields, {{tl|Template doc}}</comment>
+      <text xml:space="preserve">{{fix
+|link=Wikipedia:No_original_research
+|title=The material in the vicinity of this tag may be based upon unreliable original research
+|text=original research?
+|date={{{date|}}}
+|cat-date=Category:Articles that may contain original research}}&lt;!--
+
+ *** Documentation ***
+
+--&gt;&lt;noinclude&gt;
+
+{{Documentation, template}}
+
+&lt;!-- Add categories and inter-wikis to the /doc subpage, not here! --&gt;
+
+[[Category:Citation and verifiability maintenance templates|{{PAGENAME}}]]
+[[Category:Inline templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox subgroup</title>
+    <id>12973994</id>
+    <revision>
+      <id>195222024</id>
+      <timestamp>2008-03-02T00:22:12Z</timestamp>
+      <contributor>
+        <username>Sardanaphalus</username>
+        <id>427947</id>
+      </contributor>
+      <minor/>
+      <comment>typo</comment>
+      <text xml:space="preserve">&lt;table class=&quot;navbox nowraplinks&quot; style=&quot;background:transparent; font-size:100%; padding:0; border:none; margin:-3px; text-align:left; {{{bodystyle|}}}&quot;&gt;
+
+{{#if:{{{list1|}}}     |&lt;tr&gt;
+{{#if:{{{group1|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group1style|}}}&quot;&gt;{{{group1}}}&lt;/th&gt;
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list1style|}}}&quot;&gt;|&lt;td colspan=&quot;2&quot; style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list1style|}}}&quot;&gt;}}{{{list1}}}&lt;/td&gt;
+&lt;/tr&gt;}}
+
+{{#if:{{{list2|}}}     |&lt;tr&gt;
+{{#if:{{{group2|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupevenstyle|}}}{{{group2style|}}}&quot;&gt;{{{group2}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{evenstyle|}}}{{{list2style|}}}&quot; colspan=&quot;{{#if:{{{group2|}}}|1|2}}&quot;&gt;{{{list2}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list3|}}}  |&lt;tr&gt;
+{{#if:{{{group3|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group3style|}}}&quot;&gt;{{{group3}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list3style|}}}&quot; colspan=&quot;{{#if:{{{group3|}}}|1|2}}&quot;&gt;{{{list3}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list4|}}}  |&lt;tr&gt;
+{{#if:{{{group4|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupevenstyle|}}}{{{group4style|}}}&quot;&gt;{{{group4}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{evenstyle|}}}{{{list4style|}}}&quot; colspan=&quot;{{#if:{{{group4|}}}|1|2}}&quot;&gt;{{{list4}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list5|}}}  |&lt;tr&gt;
+{{#if:{{{group5|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group5style|}}}&quot;&gt;{{{group5}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list5style|}}}&quot; colspan=&quot;{{#if:{{{group5|}}}|1|2}}&quot;&gt;{{{list5}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list6|}}}  |&lt;tr&gt;
+{{#if:{{{group6|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupevenstyle|}}}{{{group6style|}}}&quot;&gt;{{{group6}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{evenstyle|}}}{{{list6style|}}}&quot; colspan=&quot;{{#if:{{{group6|}}}|1|2}}&quot;&gt;{{{list6}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list7|}}}  |&lt;tr&gt;
+{{#if:{{{group7|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group7style|}}}&quot;&gt;{{{group7}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list7style|}}}&quot; colspan=&quot;{{#if:{{{group7|}}}|1|2}}&quot;&gt;{{{list7}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list8|}}}  |&lt;tr&gt;
+{{#if:{{{group8|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupevenstyle|}}}{{{group8style|}}}&quot;&gt;{{{group8}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{evenstyle|}}}{{{list8style|}}}&quot; colspan=&quot;{{#if:{{{group8|}}}|1|2}}&quot;&gt;{{{list8}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list9|}}}  |&lt;tr&gt;
+{{#if:{{{group9|}}}    |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group9style|}}}&quot;&gt;{{{group9}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list9style|}}}&quot; colspan=&quot;{{#if:{{{group9|}}}|1|2}}&quot;&gt;{{{list9}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list10|}}} |&lt;tr&gt;
+{{#if:{{{group10|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group10style|}}}&quot;&gt;{{{group10}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list10style|}}}&quot; colspan=&quot;{{#if:{{{group10|}}}|1|2}}&quot;&gt;{{{list10}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list11|}}} |&lt;tr&gt;
+{{#if:{{{group11|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group11style|}}}&quot;&gt;{{{group11}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list11style|}}}&quot; colspan=&quot;{{#if:{{{group11|}}}|1|2}}&quot;&gt;{{{list11}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list12|}}} |&lt;tr&gt;
+{{#if:{{{group12|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group12style|}}}&quot;&gt;{{{group12}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list12style|}}}&quot; colspan=&quot;{{#if:{{{group12|}}}|1|2}}&quot;&gt;{{{list12}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list13|}}} |&lt;tr&gt;
+{{#if:{{{group13|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group13style|}}}&quot;&gt;{{{group13}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list13style|}}}&quot; colspan=&quot;{{#if:{{{group13|}}}|1|2}}&quot;&gt;{{{list13}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list14|}}} |&lt;tr&gt;
+{{#if:{{{group14|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupoddstyle|}}}{{{group14style|}}}&quot;&gt;{{{group14}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{oddstyle|}}}{{{list14style|}}}&quot; colspan=&quot;{{#if:{{{group14|}}}|1|2}}&quot;&gt;{{{list14}}}&lt;/td&gt;
+&lt;/tr&gt;}} &lt;!--
+
+--&gt;{{#if:{{{list15|}}} |&lt;tr&gt;
+{{#if:{{{group15|}}}   |&lt;th style=&quot;background:#e6e6ff;white-space:nowrap;text-align:right; {{{groupstyle|}}}{{{groupevenstyle|}}}{{{group15style|}}}&quot;&gt;{{{group15}}}&lt;/th&gt;}}
+&lt;td style=&quot;{{{liststyle|}}}{{{evenstyle|}}}{{{list15style|}}}&quot; colspan=&quot;{{#if:{{{group15|}}}|1|2}}&quot;&gt;{{{list15}}}&lt;/td&gt;&lt;/tr&gt;}} &lt;!--
+
+--&gt;&lt;/table&gt;&lt;noinclude&gt;
+
+{{template doc}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Fact</title>
+    <id>2048472</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>183974165</id>
+      <timestamp>2008-01-13T03:50:24Z</timestamp>
+      <contributor>
+        <username>Harryboyles</username>
+        <id>754264</id>
+      </contributor>
+      <comment>Fix so that the invalid date category only has main namespace pages</comment>
+      <text xml:space="preserve">&lt;!--{{Fact}} begin--&gt;{{fix
+|link=Wikipedia:Citation needed
+|text=citation needed
+|class=noprint Template-Fact
+|title=This claim needs references to reliable sources
+|date={{{date|}}}
+|cat=[[Category:All articles with unsourced statements]]
+|cat-date=Category:Articles with unsourced statements}}&lt;includeonly&gt;{{#if:{{NAMESPACE}}||{{#if:{{{date|}}}|{{#ifexist:Category:Articles with unsourced statements since {{{date}}}||[[Category:Articles with invalid date parameter in template]]}}|}}}}&lt;/includeonly&gt;&lt;!--{{Fact}} end--&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>169409860</id>
+      <timestamp>2007-11-05T17:22:36Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <comment>Removing VDEcolor parameter; titlestyle now works on VDE links.</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{Navbox/core
+|name = {{{name&lt;noinclude&gt;|{{FULLPAGENAME}}&lt;/noinclude&gt;}}}
+|navbar = {{{navbar|}}}
+|state = {{{state|autocollapse}}}
+|title = {{{title|}}}
+|image = {{{image|}}}
+|imageleft = {{{imageleft|}}}
+
+|imagespan = {{#expr:{{#if:{{{body|}}}{{{list1|}}}|1|0}} +{{#if:{{{list2|}}}|1|0}} +{{#if:{{{list3|}}}|1|0}} +{{#if:{{{list4|}}}|1|0}} +{{#if:{{{list5|}}}|1|0}} +{{#if:{{{list6|}}}|1|0}} +{{#if:{{{list7|}}}|1|0}} +{{#if:{{{list8|}}}|1|0}} +{{#if:{{{list9|}}}|1|0}} +{{#if:{{{list10|}}}|1|0}} +{{#if:{{{list11|}}}|1|0}} +{{#if:{{{list12|}}}|1|0}} +{{#if:{{{list13|}}}|1|0}} +{{#if:{{{list14|}}}|1|0}} +{{#if:{{{list15|}}}|1|0}} +{{#if:{{{list16|}}}|1|0}} +{{#if:{{{list17|}}}|1|0}} +{{#if:{{{list18|}}}|1|0}} +{{#if:{{{list19|}}}|1|0}} +{{#if:{{{list20|}}}|1|0}}}}
+
+|span = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}{{{imageleft|}}}|{{#if:{{{image|}}}|3|2}}|{{#if:{{{image|}}}|2|1}}}}
+
+|nogroups = {{#if:{{{group1|}}}{{{group2|}}}{{{group3|}}}{{{group4|}}}{{{group5|}}}{{{group6|}}}{{{group7|}}}{{{group8|}}}{{{group9|}}}{{{group10|}}}{{{group11|}}}{{{group12|}}}{{{group13|}}}{{{group14|}}}{{{group15|}}}{{{group16|}}}{{{group17|}}}{{{group18|}}}{{{group19|}}}{{{group20|}}}|false|true}}
+
+|bodystyle = {{{style|}}}{{{bodystyle|}}}
+|titlestyle = {{{titlestyle|}}}
+|abovestyle = background:#ddddff;{{{abovestyle|}}}
+|belowstyle = background:#ddddff;{{{belowstyle|}}}
+
+|above = {{{above|}}}
+|below = {{{below|}}}
+
+|gs = white-space:nowrap;background:#ddddff;text-align:right;{{{groupstyle|}}}
+|os = width:100%;font-size:95%;{{{liststyle|}}}{{{oddstyle|}}}
+|es = width:100%;font-size:95%;background:#f7f7f7;{{{liststyle|}}}{{{evenstyle|}}}
+
+|g1 = {{{group1|}}}
+|g2 = {{{group2|}}}
+|g3 = {{{group3|}}}
+|g4 = {{{group4|}}}
+|g5 = {{{group5|}}}
+|g6 = {{{group6|}}}
+|g7 = {{{group7|}}}
+|g8 = {{{group8|}}}
+|g9 = {{{group9|}}}
+|g10 = {{{group10|}}}
+|g11 = {{{group11|}}}
+|g12 = {{{group12|}}}
+|g13 = {{{group13|}}}
+|g14 = {{{group14|}}}
+|g15 = {{{group15|}}}
+|g16 = {{{group16|}}}
+|g17 = {{{group17|}}}
+|g18 = {{{group18|}}}
+|g19 = {{{group19|}}}
+|g20 = {{{group20|}}}
+
+|l1 = {{{body|}}}{{{list1|}}}{{{category|}}}
+|l2 = {{{list2|}}}
+|l3 = {{{list3|}}}
+|l4 = {{{list4|}}}
+|l5 = {{{list5|}}}
+|l6 = {{{list6|}}}
+|l7 = {{{list7|}}}
+|l8 = {{{list8|}}}
+|l9 = {{{list9|}}}
+|l10 = {{{list10|}}}
+|l11 = {{{list11|}}}
+|l12 = {{{list12|}}}
+|l13 = {{{list13|}}}
+|l14 = {{{list14|}}}
+|l15 = {{{list15|}}}
+|l16 = {{{list16|}}}
+|l17 = {{{list17|}}}
+|l18 = {{{list18|}}}
+|l19 = {{{list19|}}}
+|l20 = {{{list20|}}}
+
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap end</title>
+    <id>12884962</id>
+    <revision>
+      <id>196709953</id>
+      <timestamp>2008-03-08T06:21:41Z</timestamp>
+      <contributor>
+        <username>Cydebot</username>
+        <id>1215485</id>
+      </contributor>
+      <minor/>
+      <comment>Robot - Speedily moving category Formatting templates to Wikipedia formatting templates per [[WP:CFD|CFD]].</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-semi-template|small=yes}}
+
+This template works together with [[Template:Nowrap begin|&lt;nowiki&gt;{{nowrap begin}}&lt;/nowiki&gt;]]. See explanation there.
+
+[[Category:Wikipedia formatting templates|{{PAGENAME}}]]
+
+[[ms:Templat:Nowrap end]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap begin</title>
+    <id>12884936</id>
+    <revision>
+      <id>195816438</id>
+      <timestamp>2008-03-04T15:51:34Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Reverted edit by Malyctenar to last version by David Göthberg. See talk page for explanation why.</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;white-space:nowrap&quot;&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-semi-template|small=yes}}
+{{template doc}} 
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>
