@@ -18,3 +18,9 @@ Usage
 Run the following to get a list of available options:
 
 $ perl wikiprep.pl
+
+Requirements
+============
+
+libparse-mediawikidump-perl
+libregexp-common-perl
