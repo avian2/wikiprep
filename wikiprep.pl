@@ -708,6 +708,12 @@ sub prescan() {
 
       $text =~ s/<!--(?:.*?)-->/ /sg;
 
+      # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
+      # MediaWiki extension they use that selects random text - wikiprep
+      # creates huge pages if we don't remove it)
+
+      # $text =~ s/<choose[^>]*>(?:.*?)<\/choose[^>]*>/ /sg;
+
       my $onlyincludeAccumulator;
       while ($text =~ /<onlyinclude>(.*?)<\/onlyinclude>/sg) {
         my $onlyincludeFragment = $1;
@@ -783,6 +789,12 @@ sub transform() {
     # Comments can easily span several lines, so we use the "/s" modifier.
 
     $text =~ s/<!--(?:.*?)-->/ /sg;
+
+    # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
+    # MediaWiki extension they use that selects random text - wikiprep
+    # creates huge pages if we don't remove it)
+
+    # $text =~ s/<choose[^>]*>(?:.*?)<\/choose[^>]*>/ /sg;
 
     # The check for stub must be done BEFORE any further processing,
     # because stubs indicators are templates, and templates are substituted.

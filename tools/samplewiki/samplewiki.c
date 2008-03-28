@@ -23,11 +23,12 @@
 /* 1/PART is the probability that a Wikipedia page will end up in the sample
  * For example: PART = 20 will include approximately one in twenty pages and
  * will give you a 650 MB sample. */
-#define PART	500
+#define PART	20
 
 #define MAXLINELEN	(5 * 1024 * 1024)
 
-#define MAXPAGES 	5000
+/* #define MAXPAGES 	5000 */
+#define MAXPAGES 	-1
 
 #define TEMPLATE_TITLE	"    <title>Template:"
 #define TITLE		"    <title>"
