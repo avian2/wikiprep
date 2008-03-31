@@ -1733,7 +1733,14 @@ sub collectInternalLink($$$\@\@$$) {
 
   }
 
-  $result;  #return value
+  # Mark internal links with special magic words that are later converted to XML tags
+  # in postprocessText()
+
+  if ( defined($targetId) and length($result) > 0 ) {
+    return ".pAriD=\"$targetId\".$result.pArenD."; 
+  } else {
+    return $result;
+  }
 }
 
 sub performPipelineMasking(\$\$) {
@@ -1988,8 +1995,10 @@ sub writeDisambig(\$\@) {
 	print DISAMBIGF "\n";
 }
 
-sub postprocessText(\$$) {
-  my ($refToText, $whetherToEncodeXmlChars) = @_;
+BEGIN {
+
+sub postprocessText(\$$$) {
+  my ($refToText, $whetherToEncodeXmlChars, $whetherToPreserveInternalTags) = @_;
 
   # Eliminate all <includeonly> and <onlyinclude> fragments, because this text
   # will not be included anywhere, as we already handled all inclusion directives
@@ -2075,6 +2084,27 @@ sub postprocessText(\$$) {
 
   # NOTE that the following operations introduce XML tags, so they must appear
   # after the original text underwent character encoding with 'encodeXmlChars' !!
+  
+  # Convert magic words marking internal links to XML tags. Only properly nested 
+  # tags are replaced.
+
+  if( $whetherToPreserveInternalTags ) {
+    1 while( 
+      $$refToText =~ s/\.pAriD=&quot;([0-9]+)&quot;\.
+                                                      (
+                                                        (?:
+                                                           (?!\.pAr)
+                                                           .
+                                                        )*?
+                                                      )
+                       \.pArenD\./<internal id="$1">$2<\/internal>/sgx );
+  }
+
+  # Remove any unreplaced magic words. This replace als removes tags, that for some
+  # reason aren't properly nested (and weren't caught by replace above).
+
+  $$refToText =~ s/\.pAriD=(&quot;|")[0-9]+(&quot;|")\.//g;
+  $$refToText =~ s/\.pArenD\.//g;
 
   # Change markup for section headers.
   # Note that section headers may only begin at the very first position in the line
