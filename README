@@ -1,26 +1,183 @@
-Original source
-===============
 
-Wikipedia Preprocessor (WikiPrep)
-Evgeniy Gabrilovich (gabr@cs.technion.ac.il)
-GPLv2
 
-http://www.cs.technion.ac.il/~gabr/resources/code/wikiprep
+				 Wikiprep
+			      ==============
+			       Zemanta fork
 
-Testing
+	  MediaWiki syntax preprocessor and information extractor
+
+
+
+Content
 =======
 
-$ make test
+1.	Introduction
+1.1	  Relation to the original Wikiprep
+1.2	  Current status
 
-Usage
-=====
+2.	Requirements and installation
+2.1	  Software
+2.2	  Hardware
+
+3.	Usage
+
+4.	Tools
+
+5.	License
+
+6.	Hacking
+
+
+
+1. Introduction
+===============
+
+Wikiprep is a Perl script that parses MediaWiki data dumps in XML format
+and extracts useful information from them (MediaWiki is the software that
+is best known for running Wikipedia and other Wikimedia foundation
+projects).
+
+MediaWiki uses a markup language (wiki syntax) that is optimized for easy
+editing by human beings. It contains a lot of quirks, special cases and 
+odd corners that help MediaWiki correctly display wiki pages, even when
+they contain typing errors. This makes parsing this syntax with other
+software highly non-trivial.
+
+One goal of Wikiprep is to implement a parser that:
+  
+  o is compatible with MediaWiki as closely as possible, implementing as
+    much functionality as is needed to achive other goals.
+
+  o is as fast as possible, allowing tracking the English Wikipedia dataset
+    as closely as possible (MediaWiki's PHP code is slow)
+
+The other goal is to use that parser to extract various information from
+the dump that is suitable for further processing and is stored in files
+with simple syntax.
+
+
+1.1 Relation to the original Wikiprep
+
+Wikiprep was initialy developed by Evgeniy Gabrilovich to aid his research.
+Tomaz Solc adapted his script for use in semantic information extraction
+from Wikipedia as part of Zemanta web service.
+
+This version of Wikiprep undergone some extensive modification to be able
+to extract information needed by Zemanta's engine.
+
+
+1.2 Current status
+
+Currently implemented MediaWiki functionality:
+
+  o Templates:
+  
+      - Named and positional parameters,
+      - parameter defaults,
+      - recursive inclusion to some degree - infinite recursion
+        breaking is currently implemented in a way uncompatible with
+	MediaWiki and
+      - support for <noinclude>, <includeonly> and similar syntax.
+
+  o Parser functions (currently only #if, #ifeq, #language)
+
+  o Magic words (currently only urlencode, PAGENAME)
+
+  o Redirects
+
+  o Internal and external links
+
+  o Proper handling of <nowiki> and other pseudo-HTML tags
+
+  o Disambiguation page recognition and special parsing 
+
+  o MediaWiki compatible date handling
+
+  o Stub page recognition
+
+  o Table and math syntax blocks are recognized and removed from the final
+    output
+
+  o Related article identification
+
+Processing of an English Wikipedia dump on an up-to-date machine takes
+approximately 50 hours.
+
+
+
+2. Requirements
+===============
+
+
+2.1 Software
+
+You will need the following Perl modules installed (names in parentheses
+are names of respective Debian packages):
+
+Parse::MediaWikiDump  (libparse-mediawikidump-perl)
+Regexp::Common        (libregexp-common-perl)
+
+You will of course also need a recent version of Perl 5.
+
+
+2.2 Hardware
+
+English Wikipedia is big. Don't underestimate it. 
+
+As of April 2008, Wikiprep output takes approximately 15 GB of hard disk
+space (with -compress and without -log option). Debug log takes 20 GB or
+more.
+
+2 GB RAM is minimum, but 4 GB or more is needed. Wikiprep is currently
+single threaded, so use the fastest CPU you can get. On a 2.33 GHz Intel
+Xeon CPU it takes approximately 60 hours to process the English Wikipedia.
+
+
+
+3. Usage
+========
 
 Run the following to get a list of available options:
 
 $ perl wikiprep.pl
 
-Requirements
-============
+To run regression tests, run 
 
-libparse-mediawikidump-perl
-libregexp-common-perl
+$ make test
+
+
+
+4. Tools
+========
+
+FIXME
+
+
+
+5. License
+==========
+
+FIXME
+
+Wikipedia Preprocessor (WikiPrep)
+Copyright by Evgeniy Gabrilovich (gabr@cs.technion.ac.il), GPLv2
+
+Original source:
+
+http://www.cs.technion.ac.il/~gabr/resources/code/wikiprep
+
+Extensive modifications by Tomaz Solc
+
+
+Tools are copyright by Tomaz Solc, GPLv2.
+
+
+Examples are copied from English Wikipedia, and are copyright by their
+authors. GFDL.
+
+
+
+6. Hacking
+==========
+
+FIXME
