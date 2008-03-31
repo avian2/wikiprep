@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="82762" orglength="27238" newlength="15088" stub="0" categories="0" outlinks="102" urls="10">
+<page id="82762" orglength="27238" newlength="15263" stub="0" categories="0" outlinks="102" urls="10">
 <title>1984 Summer Olympics</title>
 <categories></categories>
 <links>13179743 13179744 13179745 13179746 13179747 13179748 13179749 13179750 13179751 13179752 13179753 13179754 13179755 13179756 13179757 13179758 13179759 13179760 13179761 13179762 13179763 13179764 13179765 13179766 13179767 13179768 13179769 13179770 13179771 13179772 13179773 13179774 13179775 13179776 13179777 13179778 13179779 13179780 13179781 13179782 13179783 13179784 13179785 13179786 13179787 13179788 13179789 13179790 13179791 13179792 13179793 13179794 13179795 13179796 13179797 13179798 13179799 13179800 13179801 13179802 13179803 13179804 13179805 13179806 13179807 13179808 13179809 13179810 13179811 13179812 13179813 13179814 13179815 13179816 13179817 13179818 13179819 13179820 13179821 13179822 13179823 13179824 13179825 13179826 13179827 13179828 13179829 13179830 13179831 13179832 13179833 13179834 13179835 13179836 13179837 13179838 13179839 13179840 13179841 13179842 13179843 13179844</links>
@@ -48,8 +48,8 @@ http://select.nytimes.com/gst/abstract.html?res=FA0B13FA3F5C0C738DDDA10894DC484D
 
 Music sample:
 
-&quot;Olympic Fanfare and Theme&quot;
-noicon
+<internal id="13179744">&quot;Olympic Fanfare and Theme&quot;</internal>
+<internal id="13179744">noicon</internal>
  composed by John Williams for the 1984 Summer Olympics in Los Angeles
 
 Problems listening to the file? See media help.
@@ -140,17 +140,17 @@ See the medal winners, ordered by sport:
 * Tennis
 
 <h1>Medal count</h1>
-Team show jumping bronze medal handed out at the 1984 Summer Games
+<internal id="13179745">Team show jumping bronze medal handed out at the 1984 Summer Games</internal>
 : Main article : 1984 Summer Olympics medal count
 
 These are the top medal-collecting nations for the 1984 Games. (Host country is highlighted) and (Highest amount in bold).
 
 <h1>Participating nations</h1>
-Participating nations
+<internal id="13179754">Participating nations</internal>
 Athletes from 140 nations competed at the Los Angeles Games:
 
 <h1>Boycotting countries</h1> 
-Boycotting countries shown in red and orange
+<internal id="13179843">Boycotting countries shown in red and orange</internal>
 
 14 Countries took part in the Soviet led boycott of the 1984 Olympic Games :
 *

@@ -856,7 +856,7 @@ sub transform() {
       &extractUrls(\$text, $id, \@urls);
     }
 
-    &postprocessText(\$text, 1);
+    &postprocessText(\$text, 1, 1);
 
     my $newLength = length($text);  # text length AFTER all transformations
 
@@ -1557,8 +1557,10 @@ sub logAnchorText(\@$) {
     $linkLocation = $$AnchorArrayEntry{linkLocation};
 
     if ($targetId != $curPageId) {
-      &postprocessText(\$anchorText, 0); # anchor text doesn't need escaping of XML characters,
-                                         # hence the second function parameter is 0
+      # anchor text doesn't need escaping of XML characters,
+      # hence the second function parameter is 0
+      &postprocessText(\$anchorText, 0, 0);
+
       $anchorText =~ s/\n/ /g;  # replace all newlines with spaces
 
       $anchorText =~ s/^\s*//g;  # remove leading and trainling whitespace
@@ -1682,18 +1684,20 @@ sub collectInternalLink($$$\@\@$$) {
   # than one link (one for the day, another one for the year).
   my $dateRecognized = 0;
 
+  my $targetId = undef;
+
   # Alternative text (specified after pipeline) blocks normalization of dates.
   # We also perform a quick check - if the link does not start with a digit,
   # then it surely does not contain a date
   if ( ($link =~ /^\d/) && (! $alternativeTextAvailable)) {
-    $dateRecognized = &normalizeDates(\$link, \$result, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
+    $dateRecognized = &normalizeDates(\$link, \$result, \$targetId, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
   }
 
   # If a date (either day or day + year) was recognized, then no further processing is necessary
   if (! $dateRecognized) {
     &normalizeTitle(\$link);
 
-    my $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
+    $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
 
     # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
     # other languages). While these links are not resolved to valid pages, we also want
@@ -1823,8 +1827,8 @@ sub resolveAndCollectInternalLink(\$\@) {
 # In (2) and (3), we only normalize the day, because it will be parsed separately from the year.
 # This function is only invoked if the link has no alternative text available, therefore,
 # we're free to override the result text.
-sub normalizeDates(\$\$\@\%) {
-  my ($refToLink, $refToResultText, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
+sub normalizeDates(\$\$\$\@\%) {
+  my ($refToLink, $refToResultText, $refToTargetId, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation) = @_;
 
   my $dateRecognized = 0;
 
@@ -1841,6 +1845,7 @@ sub normalizeDates(\$\$\@\%) {
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
       if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+        $$refToTargetId = $targetId;
         push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                        linkLocation => "$linkLocation" });
       }
@@ -1863,7 +1868,8 @@ sub normalizeDates(\$\$\@\%) {
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
+          $$refToTargetId = $targetId; 
+          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
                                            linkLocation => "$linkLocation" });
         }
       } else {
@@ -1891,6 +1897,7 @@ sub normalizeDates(\$\$\@\%) {
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+            $$refToTargetId = $targetId; 
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink",
                                            linkLocation => "$linkLocation" });
         }
@@ -1898,6 +1905,7 @@ sub normalizeDates(\$\$\@\%) {
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
         if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+            $$refToTargetId = $targetId; 
             push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year",
                                            linkLocation => "$linkLocation" });
         }
@@ -2031,8 +2039,6 @@ sub writeDisambig(\$\@) {
 
 	print DISAMBIGF "\n";
 }
-
-BEGIN {
 
 sub postprocessText(\$$$) {
   my ($refToText, $whetherToEncodeXmlChars, $whetherToPreserveInternalTags) = @_;
