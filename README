@@ -111,13 +111,14 @@ approximately 50 hours.
 
 2.1 Software
 
-You will need the following Perl modules installed (names in parentheses
-are names of respective Debian packages):
+You need a recent version of Perl 5 with the following modules installed (names
+in parentheses are names of respective Debian packages):
 
 Parse::MediaWikiDump  (libparse-mediawikidump-perl)
 Regexp::Common        (libregexp-common-perl)
 
-You will of course also need a recent version of Perl 5.
+You will also need gzip installed if you want to use the -compress option.
+
 
 
 2.2 Hardware
