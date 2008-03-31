@@ -2047,8 +2047,8 @@ sub postprocessText(\$$$) {
   # will not be included anywhere, as we already handled all inclusion directives
   # in function 'includeTemplates'.
   # This block can easily span several lines, hence the "/s" modifier.
-  $$refToText =~ s/<includeonly>(.*?)<\/includeonly>/ /sg;
-  $$refToText =~ s/<onlyinclude>(.*?)<\/onlyinclude>/ /sg;
+  $$refToText =~ s/<includeonly>(?:.*?)<\/includeonly>/ /sg;
+  $$refToText =~ s/<onlyinclude>(?:.*?)<\/onlyinclude>/ /sg;
 
   # <noinclude> fragments remain, but remove the tags per se
   # We block the code below, as <noinclude> tags will anyway be thrown away later,
