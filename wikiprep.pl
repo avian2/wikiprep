@@ -145,6 +145,10 @@ if ($doWriteLog) {
   $logFile = "$filePath/$fileBasename.log";
 }
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
+
+# Information about anchor texts for external linnks
+my $externalAnchorTextFile = "$filePath/$fileBasename.external_anchors";
+
 my $relatedLinksFile = "$filePath/$fileBasename.related_links";
 
 # Disambiguation links
@@ -177,13 +181,16 @@ my $totalByteCount = 0;
 if( $doCompress ) {
   open(OUTF, "| gzip >$outputFile.gz") or die "Cannot open pipe to gzip: $!: $outputFile.gz";
   open(ANCHORF, "| gzip > $anchorTextFile.gz") or die "Cannot open pipe to gzip: $!: $anchorTextFile.gz";
+  open(EXANCHORF, "| gzip > $externalAnchorTextFile.gz") 
+                                       or die "Cannot open pipe to gzip: $!: $externalAnchorTextFile.gz";
 } else {
-  open(OUTF, "> $outputFile") or die "Cannot open $outputFile";
-  open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile";
+  open(OUTF, "> $outputFile") or die "Cannot open $outputFile: $!";
+  open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile: $!";
+  open(EXANCHORF, "> $externalAnchorTextFile") or die "Cannot open $externalAnchorTextFile: $!";
 }
 
-open(LOGF, "> $logFile") or die "Cannot open $logFile";
-open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile";
+open(LOGF, "> $logFile") or die "Cannot open $logFile: $!";
+open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile: $!";
 open(LOCALF, "> $localPagesFile") or die "Cannot open $localPagesFile: $!";
 open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
 open(LOCALIDF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
@@ -197,6 +204,7 @@ binmode(RELATEDF, ':utf8');
 binmode(LOCALF, ':utf8');
 binmode(DISAMBIGF, ':utf8');
 binmode(LOCALIDF, ':utf8');
+binmode(EXANCHORF, ':utf8');
 
 &templates::prepare(\$templateIncDir);
 
@@ -206,13 +214,14 @@ if( opendir(TEMPD, "$templateIncDir") ) {
   closedir(TEMPD);
 }
 
-print ANCHORF  "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
+print ANCHORF "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
 
 print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 print LOCALF "<pages>\n";
 
-print DISAMBIGF  "# Line format: <Disambig page id>  <Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
+print DISAMBIGF "# Line format: <Disambig page id>  <Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
+print EXANCHORF "# Line format: <Source page id>  <Url>  <Anchor>\n\n\n";
 
 &copyXmlFileHeader();
 &loadNamespaces();
@@ -242,6 +251,7 @@ close(ANCHORF);
 close(RELATEDF);
 close(LOCALF);
 close(DISAMBIGF);
+close(EXANCHORF);
 
 my $elapsed = time - $startTime;
 
@@ -843,7 +853,7 @@ sub transform() {
     &logAnchorText(\@anchorTexts, $id);
 
     if ( ! $dontExtractUrls ) {
-      &extractUrls(\$text, \@urls);
+      &extractUrls(\$text, $id, \@urls);
     }
 
     &postprocessText(\$text, 1);
@@ -1903,57 +1913,84 @@ sub normalizeDates(\$\$\@\%) {
 }
 
 BEGIN {
-  # The URL protocol (e.g., http) matched here may be in either case, hence we use the /i modifier.
-  my $urlProtocols = qr/http:\/\/|https:\/\/|telnet:\/\/|gopher:\/\/|file:\/\/|wais:\/\/|ftp:\/\/|mailto:|news:/i;
-  # A URL terminator may be either one of a list of characters OR end of string (that is, '$').
-  # This last part is necessary to handle URLs at the very end of a string when there is no "\n"
-  # or any other subsequent character.
-  my $urlTerminator = qr/[\[\]\{\}\s\n\|\"<>]|$/;
+  # Allowed URL protocols (copied from DefaultSettings.php)
 
-  my $urlSequence1 = qr/\[\s*($urlProtocols[^\[\]]*)\]/;
-  my $urlSequence2 = qr/($urlProtocols.*?)($urlTerminator)/;
+  # Note that Wikipedia is case sensitive regarding URL protocols (e.g., [Http://...] will not produce 
+  # an external link) 
 
-  sub extractUrls(\$\@) {
-    my ($refToText, $refToUrlsArray) = @_;
+  my %urlProtocols = ( 'http' => 1, 'https' => 1, 'ftp' => 1, 'irc' => 1, 'gopher' => 1, 'telnet' => 1, 
+                       'nntp' => 1, 'worldwind' => 1, 'mailto' => 1, 'news' => 1 );
 
-    # First we handle the case of URLs enclosed in single brackets, with or without the description,
-    # and with optional leading and/or trailing whitespace
+  # A regex that matches all valid URLs. The first group is
+  my $urlRegex = qr/[a-z]+:(?:[\w!\$\&\'()*+,-.\/:;=?\@\_`~]|%[a-fA-F0-9]{2})+/;
+
+  # MediaWiki supports two kinds of external links: implicit and explicit.
+
+  # Explicit links can have anchors, and have format like [http://www.cnn.com CNN]. Anchor is the text from
+  # the first whitespace to the end of the bracketed expression.
+
+  # Note that no whitespace is allowed before the URL.
+  my $urlSequence1 = qr/\[($urlRegex)(.*?)\]/;
+
+  # Implicit links are normal text that is recognized as a valid URL.
+  my $urlSequence2 = qr/($urlRegex)/;
+
+  sub extractUrls(\$$\@) {
+    my ($refToText, $id, $refToUrlsArray) = @_;
+
+    # First we handle the case of URLs enclosed in single brackets, with or without the description.
     # Examples: [http://www.cnn.com], [ http://www.cnn.com  ], [http://www.cnn.com  CNN Web site]
-    $$refToText =~ s/$urlSequence1/&collectUrlFromBrackets($1, $refToUrlsArray)/eg;
+    $$refToText =~ s/$urlSequence1/&collectUrlFromBrackets($1, $2, $id, $refToUrlsArray)/eg;
 
     # Now we handle standalone URLs (those not enclosed in brackets)
     # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
     # the terminator symbol itself, but rather only the URL.
-    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray, $2)/eg;
+    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray)/eg;
 
     &removeDuplicatesAndSelf($refToUrlsArray, undef);
   }
 
-  sub collectUrlFromBrackets($\@) {
-    my ($url, $refToUrlsArray) = @_;
+  sub collectUrlFromBrackets($$$\@) {
+    my ($url, $anchor, $id, $refToUrlsArray) = @_;
 
-    my $text;
-    # Assumption: leading whitespace has already been stripped
-    if ( $url =~ /^($urlProtocols(?:.*?))($urlTerminator(?:.*))$/ ) { # description available
-      push(@$refToUrlsArray, $1);
-      $text = $2;
-    } else { # no description
+    # Extract protocol - this is the part of the string before the first ':' because of the
+    # $urlRegex above.
+   
+    my @temp = split(/:/, $url, 2);
+    my $urlProtocol = $temp[0];
+
+    if( exists( $urlProtocols{$urlProtocol} ) ) {
       push(@$refToUrlsArray, $url);
-      $text = " ";
-    }
 
-    $text;  # return value
+      my $anchorTrimmed = $anchor;
+      &trimWhitespaceBothSides(\$anchorTrimmed);
+
+      # See if there is anything left of the anchor and log to file
+      if( length( $anchorTrimmed ) > 0 ) {
+        print EXANCHORF "$id\t$url\t$anchorTrimmed\n";
+      }
+      return $anchor;
+    } else {
+      # Return the original string, just like MediaWiki does.
+      return "[$url$anchor]";
+    }
   }
 
-  sub collectStandaloneUrl($\@$) {
-    my ($url, $refToUrlsArray, $urlTerminator) = @_;
+  # Same procedure as for extracting URLs from brackets, except that we can't have an 
+  # anchor in this case.
 
-    push(@$refToUrlsArray, $url); # collect the URL as-is
+  sub collectStandaloneUrl($\@) {
+    my ($url, $refToUrlsArray) = @_;
 
-    if(defined($urlTerminator)) {
-      return $urlTerminator;
-    } else {
+    my @temp = split(/:/, $url, 2);
+    my $urlProtocol = $temp[0];
+
+    if( exists( $urlProtocols{$urlProtocol} ) ) {
+      push(@$refToUrlsArray, $url);
       return "";
+    } else {
+      # Don't replace anything
+      return "$url";
     }
   }
 }

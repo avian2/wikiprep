@@ -1,0 +1,10 @@
+# Line format: <Source page id>  <Url>  <Anchor>
+
+
+1	http://6.example.com	some text
+1	http://7.example.com	some text
+1	mailto:tomaz@example.com	mail me
+1	http://5.example.com	|some text
+1	http://8.example.com	some text
+1	http://9.example.com	some [http://10.example.com text
+1	http://10.example.com	<br/> some text

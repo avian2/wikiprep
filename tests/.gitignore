@@ -1,5 +1,6 @@
 *.log
 *.templates
+*.external_anchors
 *.version
 *.stat.inlinks
 *.stat.categories

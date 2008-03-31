@@ -27,18 +27,55 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="64" newlength="2" stub="0" categories="0" outlinks="0" urls="2">
+<page id="1" orglength="779" newlength="463" stub="0" categories="0" outlinks="0" urls="11">
 <title>A</title>
 <categories></categories>
 <links></links>
 <urls>
-http://www.example.com
-http://www.example2.com
+http://1.example.com
+http://6.example.com
+http://7.example.com
+mailto:tomaz@example.com
+http://5.example.com
+http://8.example.com
+http://9.example.com
+http://10.example.com
+http://2.example.com
+http://11.example.com
+http://12.example.com
 </urls>
 <text>
 
+		    1.
 
+These aren&apos;t recognized as valid links by MediaWiki:
 
+2. [ ] (but this is recognized as an 
+		                                implicit link)
+		    3. [Http://3.example.com]
+		    4. [HTTP://4.example.com]
+
+Some valid anchors:
+
+5.  some text
+		    6.  some text 
+		    7.  mail me
+
+Increasingly broken markup:
+
+8. |some text
+		    9.  some text 
+		   10.  some [ text ]
+		   11.
+
+some text
+		   12. [ some
+		       text]
+
+Implicit link:
+
+13. 
+	    
 </text>
 </page>
 </mediawiki>

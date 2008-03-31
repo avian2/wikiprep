@@ -47,6 +47,7 @@ test: clean $(LOGS) compare
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
+	rm -f *.external_anchors
 	rm -f *.cat_hier
 	rm -f *.hgw.xml
 	rm -f *.local.xml
