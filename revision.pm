@@ -6,10 +6,34 @@ use FindBin;
 package revision;
 
 sub getWikiprepRevision() {
-  open(VERSION, "svnversion $FindBin::Bin|");
-  my $version = <VERSION>;
-  chomp($version);
-  close(VERSION);
+  my $version;
+
+  my $topdir = $FindBin::Bin;
+  $topdir =~ s/tests-perl\/?//;
+
+  # First try SVN...
+  if( open(VERSION, "svnversion $topdir|") ) {
+    $version = <VERSION>;
+    chomp($version);
+    close(VERSION);
+  } else {
+    $version = "exported";
+  }
+
+  if( $version eq "exported" ) {
+    # No SVN version information. Check for git.
+    if( open(VERSION, "git --git-dir $topdir/.git rev-parse HEAD|") ) {
+      $version = <VERSION>;
+      if( defined( $version ) ) {
+        chomp($version);
+        close(VERSION);
+      } else {
+        $version = "unknown";
+      }
+    } else {
+      $version = "unknown";
+    }
+  }
 
   return $version;
 }
@@ -17,7 +41,7 @@ sub getWikiprepRevision() {
 sub getDumpDate($) {
   my ($dumpFile) = @_;
 
-  if($dumpFile =~ /[a-z]+-([0-9]+)-pages-articles.xml$/) {
+  if($dumpFile =~ /[a-z]+-([0-9a-z_]+)-pages-articles.xml$/) {
     return $1;
   } else {
     return "unknown";
@@ -27,7 +51,7 @@ sub getDumpDate($) {
 sub getDatabaseName($) {
   my ($dumpFile) = @_;
 
-  if($dumpFile =~ /([a-z]+)-[0-9]+-pages-articles.xml$/) {
+  if($dumpFile =~ /([a-z]+)-[0-9a-z_]+-pages-articles.xml$/) {
     return $1;
   } else {
     return "unknown";
