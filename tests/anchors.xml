@@ -75,31 +75,4 @@
       </text>
     </revision>
   </page>
-  <page>
-    <title>Nested</title>
-    <id>5</id>
-    <revision>
-      <text xml:space="preserve">
-	      Foo
-      </text>
-    </revision>
-  </page>
-  <page>
-    <title>Anchors</title>
-    <id>6</id>
-    <revision>
-      <text xml:space="preserve">
-	      Foo
-      </text>
-    </revision>
-  </page>
-  <page>
-    <title>More</title>
-    <id>7</id>
-    <revision>
-      <text xml:space="preserve">
-	      Foo
-      </text>
-    </revision>
-  </page>
 </mediawiki>

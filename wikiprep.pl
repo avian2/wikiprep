@@ -749,10 +749,6 @@ sub prescan() {
 
   print "Total $totalPageCount pages ($totalByteCount bytes)\n";
   print LOGF "Total $totalPageCount pages ($totalByteCount bytes)\n";
-
-  # Leave some space between the highest encountered page ID and local IDs 
-  # for any pages that may later be added by Riffle tool.
-  $localIDCounter += 5000;
 }
 
 sub transform() {

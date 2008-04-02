@@ -27,85 +27,49 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="206" newlength="234" stub="0" categories="0" outlinks="3" urls="0">
+<page id="1" orglength="206" newlength="225" stub="0" categories="0" outlinks="3" urls="0">
 <title>Gu</title>
 <categories></categories>
-<links>5008 5009 2</links>
+<links>5 6 2</links>
 <urls>
 </urls>
 <text>
-<internal id="5008">Lepa slika</internal> nekaj teksta in se ena <internal id="5008">druga slika</internal>. Pa se en link kar tako <internal id="5009">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
+<internal id="5">Lepa slika</internal> nekaj teksta in se ena <internal id="5">druga slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
 </text>
 </page>
-<page id="2" orglength="144" newlength="168" stub="0" categories="0" outlinks="2" urls="0">
+<page id="2" orglength="144" newlength="159" stub="0" categories="0" outlinks="2" urls="0">
 <title>Ga</title>
 <categories></categories>
-<links>5008 5009</links>
+<links>5 6</links>
 <urls>
 </urls>
 <text>
-<internal id="5008">grda slika</internal> nekaj teksta in se ena <internal id="5008">prva slika</internal>. Pa se en link kar tako <internal id="5009">krneki</internal>
+<internal id="5">grda slika</internal> nekaj teksta in se ena <internal id="5">prva slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>
 </text>
 </page>
-<page id="3" orglength="140" newlength="147" stub="0" categories="0" outlinks="2" urls="0">
+<page id="3" orglength="140" newlength="144" stub="0" categories="0" outlinks="2" urls="0">
 <title>Sony</title>
 <categories></categories>
-<links>5010 2</links>
+<links>7 2</links>
 <urls>
 </urls>
 <text>
 
-      <internal id="5010">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
+      <internal id="7">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
       
 </text>
 </page>
-<page id="4" orglength="103" newlength="154" stub="0" categories="0" outlinks="3" urls="0">
+<page id="4" orglength="103" newlength="70" stub="0" categories="0" outlinks="0" urls="0">
 <title>Test2</title>
 <categories></categories>
-<links>6 7 5</links>
+<links></links>
 <urls>
 </urls>
 <text>
 
 	      Dummy
 	      Dummy2
-	      <internal id="5">Nested <internal id="6">anchors</internal> and some <internal id="7">more</internal></internal>
-      
-</text>
-</page>
-<page id="5" orglength="18" newlength="18" stub="0" categories="0" outlinks="0" urls="0">
-<title>Nested</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-	      Foo
-      
-</text>
-</page>
-<page id="6" orglength="18" newlength="18" stub="0" categories="0" outlinks="0" urls="0">
-<title>Anchors</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-	      Foo
-      
-</text>
-</page>
-<page id="7" orglength="18" newlength="18" stub="0" categories="0" outlinks="0" urls="0">
-<title>More</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-	      Foo
+	      Nested anchors and some more
       
 </text>
 </page>
