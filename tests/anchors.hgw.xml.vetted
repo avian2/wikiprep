@@ -30,46 +30,82 @@
 <page id="1" orglength="206" newlength="225" stub="0" categories="0" outlinks="3" urls="0">
 <title>Gu</title>
 <categories></categories>
-<links>5 6 2</links>
+<links>8 9 2</links>
 <urls>
 </urls>
 <text>
-<internal id="5">Lepa slika</internal> nekaj teksta in se ena <internal id="5">druga slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
+<internal id="8">Lepa slika</internal> nekaj teksta in se ena <internal id="8">druga slika</internal>. Pa se en link kar tako <internal id="9">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
 </text>
 </page>
 <page id="2" orglength="144" newlength="159" stub="0" categories="0" outlinks="2" urls="0">
 <title>Ga</title>
 <categories></categories>
-<links>5 6</links>
+<links>8 9</links>
 <urls>
 </urls>
 <text>
-<internal id="5">grda slika</internal> nekaj teksta in se ena <internal id="5">prva slika</internal>. Pa se en link kar tako <internal id="6">krneki</internal>
+<internal id="8">grda slika</internal> nekaj teksta in se ena <internal id="8">prva slika</internal>. Pa se en link kar tako <internal id="9">krneki</internal>
 </text>
 </page>
-<page id="3" orglength="140" newlength="144" stub="0" categories="0" outlinks="2" urls="0">
+<page id="3" orglength="140" newlength="145" stub="0" categories="0" outlinks="2" urls="0">
 <title>Sony</title>
 <categories></categories>
-<links>7 2</links>
+<links>10 2</links>
 <urls>
 </urls>
 <text>
 
-      <internal id="7">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
+      <internal id="10">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
       
 </text>
 </page>
-<page id="4" orglength="103" newlength="70" stub="0" categories="0" outlinks="0" urls="0">
+<page id="4" orglength="103" newlength="154" stub="0" categories="0" outlinks="3" urls="0">
 <title>Test2</title>
 <categories></categories>
-<links></links>
+<links>6 7 5</links>
 <urls>
 </urls>
 <text>
 
 	      Dummy
 	      Dummy2
-	      Nested anchors and some more
+	      <internal id="5">Nested <internal id="6">anchors</internal> and some <internal id="7">more</internal></internal>
+      
+</text>
+</page>
+<page id="5" orglength="24" newlength="24" stub="0" categories="0" outlinks="0" urls="0">
+<title>Nested</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+             Foo
+      
+</text>
+</page>
+<page id="6" orglength="24" newlength="24" stub="0" categories="0" outlinks="0" urls="0">
+<title>Anchors</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+             Foo
+      
+</text>
+</page>
+<page id="7" orglength="24" newlength="24" stub="0" categories="0" outlinks="0" urls="0">
+<title>More</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+             Foo
       
 </text>
 </page>
