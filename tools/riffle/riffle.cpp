@@ -113,8 +113,10 @@ int scan_chunks(char *tracker_path)
 
 		int r = scan_to_title(in, title_buffer);
 		if(r) {
-			fprintf(stderr, "ERROR: unexpected end of file: %s\n", 
+			fprintf(stderr, "WARNING: unexpected end of file (ignoring): %s\n", 
 									path);
+			fclose(in);
+			continue;
 		}
 
 		page_info i;
@@ -187,6 +189,8 @@ int riffle_dump(FILE *in, FILE *out)
 		if(i->second.replaced) continue;
 
 		FILE *new_in = fopen( i->second.path.c_str(), "r" );
+
+		// fprintf(stderr, "DEBUG: %s\n", title_buffer);
 
 		scan_to_title(new_in, title_buffer);
 
