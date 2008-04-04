@@ -255,11 +255,13 @@ int main(int argc, char **argv) {
 	FILE *in = fopen(inf, "r");
 	if(in == NULL) {
 		fprintf(stderr, "ERROR: Can't open: %s\n", inf);
+		perror(inf);
 		exit(1);
 	}
 	FILE *out = fopen(outf, "w");
 	if(out == NULL) {
 		fprintf(stderr, "ERROR: Can't open: %s\n", outf);
+		perror(inf);
 		exit(1);
 	}
 
