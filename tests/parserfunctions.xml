@@ -41,10 +41,10 @@
       <text xml:space="preserve">{{#ifdef: a | bbb | ccc }}
       
 	      {{#if:[[a|b]]|true|false}} should be true
+	      {{#if:|true|false}} should be false
       
-      	      {{#if:
-                 a
-	        |true|false}} should be true</text>
+      	      {{#if:aaa
+a|true|false}} should be true</text>
     </revision>
   </page>
   <page>
