@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="5" orglength="82" newlength="24" stub="0" categories="0" outlinks="0" urls="0">
+<page id="5" orglength="166" newlength="45" stub="0" categories="0" outlinks="0" urls="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links></links>
@@ -37,6 +37,21 @@
 bbb
 
 true should be true
+
+true should be true
+</text>
+</page>
+<page id="1" orglength="81" newlength="36" stub="0" categories="0" outlinks="0" urls="0">
+<title>A</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+		    Howdy
+		    Hello world
+	    
 </text>
 </page>
 </mediawiki>

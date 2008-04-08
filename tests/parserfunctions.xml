@@ -40,7 +40,28 @@
       <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
       <text xml:space="preserve">{{#ifdef: a | bbb | ccc }}
       
-	      {{#if:[[a|b]]|true|false}} should be true</text>
+	      {{#if:[[a|b]]|true|false}} should be true
+      
+      	      {{#if:
+                 a
+	        |true|false}} should be true</text>
+    </revision>
+  </page>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{{{#if:true|B|C}}}}
+		    {{{{#if:true|B|C}}|greeting=Hello world}}
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:B</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">{{{greeting|Howdy}}}</text>
     </revision>
   </page>
 </mediawiki>
