@@ -1053,8 +1053,12 @@ sub includeTemplates(\$\$\$) {
   # We also require that the body of a template does not contain the template opening sequence
   # (two successive opening braces - "\{\{"). We use negative lookahead to achieve this.
 
-  # Use negative look-ahead and look-behind to make sure that we are matching agains two opening
-  # braces and not three (which may be left after unsuccessful parameter substitution
+  # Use negative look-ahead to make sure that we are matching agains two opening
+  # braces and not three.
+  #
+  # This is important in cases where template title is calculated by a parser function. 
+  # e.g. {{{{#if: ... |Echo|void}} ... }}
+
   while ($templateRecursionLevels < $maxTemplateRecursionLevels) {
     my %nowikiChunksReplaced = ();
     my %preChunksReplaced = ();
@@ -1064,7 +1068,7 @@ sub includeTemplates(\$\$\$) {
     &nowiki::extractTags(\$preRegex, $refToText, \%preChunksReplaced);
     &nowiki::extractTags(\$nowikiRegex, $refToText, \%nowikiChunksReplaced);
 
-    my $r = $$refToText =~ s/(?<!\{)\{\{(?!\{)
+    my $r = $$refToText =~ s/\{\{(?!\{)
                                 (?:\s*)        # optional whitespace before the template name is ignored
                                 (
                                   (?:

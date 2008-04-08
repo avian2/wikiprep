@@ -38,7 +38,7 @@
 	    
 </text>
 </page>
-<page id="5980" orglength="1584" newlength="302" stub="0" categories="0" outlinks="1" urls="0">
+<page id="5980" orglength="1584" newlength="391" stub="0" categories="0" outlinks="1" urls="0">
 <title>Carbon dioxide sink</title>
 <categories></categories>
 <links>1</links>
@@ -49,22 +49,24 @@
 This example demonstrates, what happens when a template is substituted in
 a wiki article (instead of transcluded)
 
-: &apos;&apos;See also:  } | Error: Template must be given at least one article name 
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} }}
-}} &apos;&apos; 
+: &apos;&apos;See also:  <internal id="1">{ }</internal> , { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, { }
+}}, and { }
+}}   &apos;&apos;&apos;
+
+Error: Too many links specified (maximum is 15)&apos;&apos;&apos;
+&apos;&apos; 
 </text>
 </page>
 </mediawiki>
