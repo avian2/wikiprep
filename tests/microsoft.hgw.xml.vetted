@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="19001" orglength="70247" newlength="48514" stub="0" categories="0" outlinks="16" urls="103">
+<page id="19001" orglength="70247" newlength="48606" stub="0" categories="0" outlinks="16" urls="106">
 <title>Microsoft</title>
 <categories></categories>
 <links>13752112 13752113 13752114 13752115 13752110 13752111 13752116 13752117 13752118 13752119 13752120 13752121 13752122 13752123 13752124 13752125</links>
@@ -39,6 +39,8 @@ http://www.microsoft.com/xbox/
 http://www.microsoft.com/games/
 http://help.live.com/help.aspx?project=tou&amp;mkt=en-us
 http://www.zune.net/en-US/
+http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx
+http://www.microsoft.com/presspass/inside_ms.mspx
 http://www.microsoft.com/worldwide/
 http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID=4338&amp;WidCoAbbName=&amp;Month=&amp;langcode=e
 http://www.microsoft.com/msft/ar05/downloads/MS_2005_AR.doc
@@ -135,6 +137,7 @@ http://www.microsoft.com/windowsserversystem/facts/default.mspx
 http://www.vnunet.com/vnunet/news/2150210/linux-fans-hit-back-microsoft
 http://www.eweek.com/article2/0,1895,1553727,00.asp
 http://www.microsoft.com/
+http://research.microsoft.com/~horvitz/horvitz_traffic_uai2005.pdf
 </urls>
 <text>
 
@@ -439,9 +442,8 @@ Another community site that provides daily videocasts and other services, On10.n
 
 Most free technical support available through Microsoft is provided through online Usenet newsgroups (in the early days it was also provided on CompuServe). There are several of these newsgroups for nearly every product Microsoft provides, and often they are monitored by Microsoft employees. People who are helpful on the newsgroups can be elected by other peers or Microsoft employees for Microsoft Most Valuable Professional (MVP) status, which entitles people to a sort of special social status, in addition to possibilities for awards and other benefits.
 
-By 2005, the city of Seattle in the state of Washington had 2,500 users who owned smartphone and desktop computer versions of the JamBayes Traffic Forecasting Service, developed by researchers at Microsoft and the University of Washington. You must specify  title =  and url =  when using  .
-
-Horvitz, Eric, Johnson Apacible, Raman Sarin, and Lin Liao  .    (PDF)   . Microsoft Research (research.microsoft.com/~horvitz) .    Retrieved on December 18, 2007 .
+By 2005, the city of Seattle in the state of Washington had 2,500 users who owned smartphone and desktop computer versions of the JamBayes Traffic Forecasting Service, developed by researchers at Microsoft and the University of Washington.   Horvitz, Eric, Johnson Apacible, Raman Sarin, and Lin Liao  .  [ Prediction, Expectation, and Surprise: Methods, Designs,
+and Study of a Deployed Traffic Forecasting Service] (PDF)   . Microsoft Research (research.microsoft.com/~horvitz) .    Retrieved on December 18, 2007 .
 
 Kleiner Perkins Caufield &amp; Byers, Sequoia Capital, Skymoon Ventures, Crescendo Ventures, ZenShin Capital Partners, Artis Capital, Gold Hill Capital, and several individuals gave Dash USD$45 million for Dash Express which Wired News says &quot;learns from its users&quot;. &quot;If a Dash owner is moving 5 miles per hour in a   mph (  km/h
 
@@ -619,6 +621,8 @@ Lists
 
 This is a featured article. Click here for more information.
 desc none
+
+Image:Padlock-silver-medium.svg
 
 
 </text>

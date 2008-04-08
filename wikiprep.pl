@@ -1272,9 +1272,12 @@ sub includeParserFunction(\$\%\$\$) {
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
+
+  # Parser function invocation can span more than one line, hence the /s modifier
+
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
 
-  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/ ) {
+  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName=$1;
     $$refToParameterHash{'=0='}=$2;
 
