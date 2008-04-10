@@ -12,6 +12,7 @@ using namespace std;
 
 #define LINE_BUFFER_LEN		(10 * 1024 * 1024)
 #define TITLE_BUFFER_LEN	(1024 * 1024)
+#define ID_BUFFER_LEN		(1024)
 
 #define FINISH_STRING		"</mediawiki>\n"
 
@@ -22,8 +23,14 @@ using namespace std;
 int title_prefix_len;
 #define TITLE_POSTFIX		"</title>\n"
 
+#define ID_PREFIX		"    <id>"
+int id_prefix_len;
+#define ID_POSTFIX		"</id>\n"
+
 char *line_buffer;
+char *line2_buffer;
 char *title_buffer;
+char *id_buffer;
 
 struct page_info {
 	string path;
@@ -51,8 +58,13 @@ int copy_preamble(FILE *in, FILE *out)
 	}
 }
 
-int finish_page(FILE *in, FILE *out)
+int finish_page(FILE *in, FILE *out, char *title_buff, char *id_buff)
 {
+	fputs(title_buff, out);
+	fputs(ID_PREFIX, out);
+	fputs(id_buff, out);
+	fputs(ID_POSTFIX, out);
+
 	while(1) {
 		char *r=fgets(line_buffer, LINE_BUFFER_LEN, in);
 
@@ -69,7 +81,7 @@ int finish_page(FILE *in, FILE *out)
 	}
 }
 
-int scan_to_title(FILE *in, char *title_buff)
+int scan_to_id(FILE *in, char *title_buff, char *id_buff)
 {
 	while(1) {
 		char *r=fgets(line_buffer, LINE_BUFFER_LEN, in);
@@ -79,8 +91,12 @@ int scan_to_title(FILE *in, char *title_buff)
 			return 1;
 		}
 
-		if(!strncmp(line_buffer, TITLE_PREFIX, title_prefix_len)) {
-			char *loc = strstr(line_buffer, TITLE_POSTFIX);
+		if((!strncmp(line2_buffer, TITLE_PREFIX, title_prefix_len)) &&
+		   (!strncmp(line_buffer,  ID_PREFIX,    id_prefix_len   ))) {
+
+			strcpy(title_buff, line2_buffer);
+
+			char *loc = strstr(line_buffer, ID_POSTFIX);
 
 			if(loc == NULL) {
 				fprintf(stderr, "ERROR: malformed line: %s\n", line_buffer);
@@ -90,12 +106,14 @@ int scan_to_title(FILE *in, char *title_buff)
 			/* terminate string at the start of postfix */
 			loc[0] = 0;
 
-			char *begin = line_buffer + title_prefix_len;
+			char *begin = line_buffer + id_prefix_len;
 
-			strcpy(title_buff, begin);
+			strcpy(id_buff, begin);
 
 			return 0;
 		}
+
+		strcpy(line2_buffer, line_buffer);
 	}
 }
 
@@ -111,7 +129,7 @@ int scan_chunks(char *tracker_path)
 		FILE *in = fopen(path, "r");
 		if(in == NULL) break;
 
-		int r = scan_to_title(in, title_buffer);
+		int r = scan_to_id(in, title_buffer, id_buffer);
 		if(r) {
 			fprintf(stderr, "WARNING: unexpected end of file (ignoring): %s\n", 
 									path);
@@ -123,7 +141,7 @@ int scan_chunks(char *tracker_path)
 		i.path = string(path);
 		i.replaced = false;
 
-		page_index[ string(title_buffer) ] = i;
+		page_index[ string(id_buffer) ] = i;
 
 		fclose(in);
 	}
@@ -146,21 +164,18 @@ int riffle_dump(FILE *in, FILE *out)
 	}
 
 	while(1) {
-		r = scan_to_title(in, title_buffer);
+		r = scan_to_id(in, title_buffer, id_buffer);
 		if(r) break;
 
 		fputs(PAGE_START_STRING, out);
-		fputs(TITLE_PREFIX, out);
-		fputs(title_buffer, out);
-		fputs(TITLE_POSTFIX, out);
 
 		map<string, page_info>::iterator i;
 
-		i = page_index.find( string(title_buffer) );
+		i = page_index.find( string(id_buffer) );
 
 		if( i == page_index.end() ) {
 			/* Copy old page */
-			r = finish_page(in, out);
+			r = finish_page(in, out, title_buffer, id_buffer);
 			if(r) {
 				fprintf(stderr, "ERROR: unexpected end while copying page %s\n", title_buffer);
 				return 1;
@@ -172,9 +187,9 @@ int riffle_dump(FILE *in, FILE *out)
 
 			FILE *new_in = fopen( i->second.path.c_str(), "r" );
 
-			scan_to_title(new_in, title_buffer);
+			scan_to_id(new_in, title_buffer, id_buffer);
 
-			finish_page(new_in, out);
+			finish_page(new_in, out, title_buffer, id_buffer);
 
 			fclose(new_in);
 
@@ -192,14 +207,11 @@ int riffle_dump(FILE *in, FILE *out)
 
 		// fprintf(stderr, "DEBUG: %s\n", title_buffer);
 
-		scan_to_title(new_in, title_buffer);
+		scan_to_id(new_in, title_buffer, id_buffer);
 
 		fputs(PAGE_START_STRING, out);
-		fputs(TITLE_PREFIX, out);
-		fputs(title_buffer, out);
-		fputs(TITLE_POSTFIX, out);
 
-		finish_page(new_in, out);
+		finish_page(new_in, out, title_buffer, id_buffer);
 
 		fclose(new_in);
 
@@ -224,7 +236,9 @@ void syntax() {
 
 int main(int argc, char **argv) {
 	line_buffer = (char *) malloc(LINE_BUFFER_LEN*sizeof(*line_buffer));
+	line2_buffer = (char *) malloc(LINE_BUFFER_LEN*sizeof(*line_buffer));
 	title_buffer = (char *) malloc(TITLE_BUFFER_LEN*sizeof(*title_buffer));
+	id_buffer = (char *) malloc(ID_BUFFER_LEN*sizeof(*id_buffer));
 
 	char *inf = NULL;
 	char *outf = NULL;
@@ -233,6 +247,7 @@ int main(int argc, char **argv) {
 	int opt;
 
 	title_prefix_len = strlen(TITLE_PREFIX);
+	id_prefix_len = strlen(ID_PREFIX);
 
 	while ((opt = getopt(argc, argv, "i:o:t:")) != -1) {
 		switch (opt) {
@@ -287,7 +302,9 @@ int main(int argc, char **argv) {
 	fclose(out);
 
 	free(line_buffer);
+	free(line2_buffer);
 	free(title_buffer);
+	free(id_buffer);
 
 	return 0;
 }
