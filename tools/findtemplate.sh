@@ -16,10 +16,14 @@ OLDDIR=`pwd`
 
 cd "$TEMPLATEDIR"
 
-for T in `grep -rl "^$PARAMNAME = " *`; do
-	TEMPLATEID=`echo $T | sed -e 's/^.*\///'`
-	TEMPLATETITLE=`grep $TEMPLATEID index`
-	PAGENUM=`grep '^Page ' $T | wc -l`
+grep -rci "^$PARAMNAME = " 1 2 3 4 5 6 7 8 9 | (
+	while read T; do
+		TEMPLATEID=`echo $T | sed -e 's/^.*\///' | sed -e 's/:[0-9]\+$//'`
+		TEMPLATETITLE=`grep "^$TEMPLATEID[^0-9]" index`
+		PAGENUM=`echo $T | sed -e 's/^.*://'`
 
-	echo "$TEMPLATETITLE ($PAGENUM)"
-done
+		if [ "x$PAGENUM" != "x0" ]; then
+			echo "$TEMPLATETITLE ($PAGENUM)"
+		fi
+	done
+)
