@@ -47,6 +47,16 @@
 		    6. [http://7.example.com some text ]
 		    7. [mailto:tomaz@example.com mail me]
 
+		    This is a bit broken markup:
+
+		    MediaWiki parses ''BikerMice 2006'' as anchor
+
+		   7a. [http://www.youtube.com/user/BikerMice2006''BikerMice 2006'']
+
+		    In this case 2006'' is anchor, rest is URL
+
+		   7b. [http://www.youtube.com/user/BikerMice2006'BikerMice 2006'']
+
 		    Increasingly broken markup:
 
 		    8. [http://5.example.com|some text]
