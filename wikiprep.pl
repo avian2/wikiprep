@@ -42,6 +42,7 @@ use nowiki;
 use revision;
 use languages;
 use templates;
+use lang;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -58,12 +59,15 @@ my $dontExtractUrls = 0;
 my $doWriteLog = 0;
 my $doCompress = 0;
 
+my $langCode = 'en';
+
 GetOptions('f=s' => \$file,
            'license' => \$showLicense,
            'version' => \$showVersion,
            'nourls' => \$dontExtractUrls,
            'log' => \$doWriteLog,
-           'compress' => \$doCompress);
+           'compress' => \$doCompress,
+           'lang=s' => \$langCode);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -87,22 +91,31 @@ if (! -e $file) {
 
 my $startTime = time;
 
+my $refToLangDB = &lang::get( $langCode );
+my %langDB = %$refToLangDB;
+
 ##### Global definitions #####
 
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
 
-my $relatedWording_Standalone =
-  qr/Main(?:\s+)article(?:s?)|Further(?:\s+)information|Related(?:\s+)article(?:s?)|Related(?:\s+)topic(?:s?)|See(?:\s+)main(?:\s+)article(?:s?)|See(?:\s+)article(?:s?)|See(?:\s+)also|For(?:\s+)(?:more|further)/i;
-  ## For(?:\s+)more(?:\s+)(?:background|details)(?:\s+)on(?:\s+)this(?:\s+)topic,(?:\s+)see
-my $relatedWording_Inline = qr/See[\s:]|See(?:\s+)also|For(?:\s+)(?:more|further)/i;
-my $relatedWording_Section = qr/Further(?:\s+)information|See(?:\s+)also|Related(?:\s+)article(?:s?)|Related(?:\s+)topic(?:s?)/i;
+my %numMonthToNumDays = ( 1 => 31, 
+                          2 => 29, 
+                          3 => 31, 
+                          4 => 30, 
+                          5 => 31, 
+                          6 => 30, 
+                          7 => 31, 
+                          8 => 31, 
+                          9 => 30, 
+                          10 => 31, 
+                          11 => 30, 
+                          12 => 31);
 
-my %monthToNumDays = ('January' => 31, 'February' => 29, 'March' => 31, 'April' => 30,
-                      'May' => 31, 'June' => 30, 'July' => 31, 'August' => 31,
-                      'September' => 30, 'October' => 31, 'November' => 30, 'December' => 31);
-my %numberToMonth = (1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April',
-                     5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
-                     9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December');
+# Create a mapping from month name to the number of days in that month needed by normalizeDates()
+my %monthToNumDays;
+for my $num ( keys(%numMonthToNumDays) ) {
+  $monthToNumDays{ $langDB{'numberToMonth'}->{$num} } = $numMonthToNumDays{$num};
+}
 
 my $maxTemplateRecursionLevels = 40;
 my $maxTableRecursionLevels = 5;
@@ -120,11 +133,6 @@ my %overrideTemplates = ('Template:!' => ' ', 'Template:!!' => ' ', 'Template:!-
 ##### Global variables #####
 
 my %namespaces;
-# we only process pages in these namespaces + the main namespace (which has an empty name)
-my %okNamespacesForPrescanning = ('Template' => 1, 'Category' => 1, 'Image' => 1);
-# we don't use templates as concepts. Image descriptions are included in the dump as normal pages.
-my %okNamespacesForTransforming = ('Category' => 1, 'Image' => 1); 
-my %okNamespacesForLocalPages = ('Image' => 1);
 
 # Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
 #my %id2title;
@@ -324,26 +332,12 @@ sub isDisambiguation($) {
 
   my $result = 0;
 
-  if ( ${$page->text} =~ /(\{\{ 
-                                (?:\s*)
-    			                      (?:
-    				                        (disambiguation)|
-                                    (disambig)|
-                       		          (dab)|
-                       		          (hndis)|
-                                    (surname)|
-                       		          (geodis)|
-                       		          (schooldis)|
-                       		          (hospitaldis)|
-                       		          (mathdab)|
-                                    (numberdis)
-			                          )
-                                (?:\s*)
-                                (?:\|.*)?
-                                (?:\s*)
-		                      \}\})/ix ) {
+  my $disambigTemplates = $langDB{'disambigTemplates'};
+  my $disambigTitle = $langDB{'disambigTitle'};
+
+  if ( ${$page->text} =~ /(\{\{\s*$disambigTemplates\s*(?:\|.*)?\s*\}\})/ix ) {
     $result = 1;
-  } elsif ( $page->title =~ /\(disambiguation\)/i ) {
+  } elsif ( $page->title =~ /$disambigTitle/ix ) {
     $result = 1;
   }
 
@@ -398,7 +392,7 @@ sub isNamespaceOkForLocalPages(\$) {
 
   if ($$refToNamespace ne '') {
     if ( &isKnownNamespace($refToNamespace) ) {
-      $result = defined( $okNamespacesForLocalPages{$$refToNamespace} );
+      $result = defined( $langDB{'okNamespacesForLocalPages'}->{$$refToNamespace} );
     } else {
       # A simple way to recognize most namespaces that link to translated articles. A better 
       # way would be to store these namespaces in a hash.
@@ -417,13 +411,13 @@ sub isNamespaceOkForLocalPages(\$) {
 sub isNamespaceOkForPrescanning($) {
   my ($page) = @_;
 
-  &isNamespaceOk($page, \%okNamespacesForPrescanning);
+  &isNamespaceOk($page, $langDB{'okNamespacesForPrescanning'});
 }
 
 sub isNamespaceOkForTransforming($) {
   my ($page) = @_;
 
-  &isNamespaceOk($page, \%okNamespacesForTransforming);
+  &isNamespaceOk($page, $langDB{'okNamespacesForTransforming'});
 }
 
 sub isNamespaceOk($\%) {
@@ -693,7 +687,8 @@ sub prescan() {
     $idexists{$id} = 'x';
     $title2id{$title} = $id;
 
-    if ($title =~ /^Template:/) {
+    my $templateNamespace = $langDB{'templateNamespace'};
+    if ($title =~ /^$templateNamespace:/) {
       my $text = ${$page->text};
 
       print TEMPINDEX "$id\t$title\n";
@@ -864,7 +859,8 @@ sub transform() {
 
     &updateStatistics(\@categories, \@internalLinks);
 
-    if ($title =~ /^Category:/) {
+    my $categoryNamespace = $langDB{'categoryNamespace'};
+    if ($title =~ /^$categoryNamespace:/) {
       &updateCategoryHierarchy($id, \@categories);
     }
 
@@ -1464,7 +1460,7 @@ sub computeFullyQualifiedTemplateTitle(\$) {
     # The title of the page being included is NOT in the main namespace and lacks
     # any other explicit designation of the namespace - therefore, it is resolved
     # to the Template namespace (that's the default for the template inclusion mechanism).
-    $$refToTemplateTitle = "Template:$$refToTemplateTitle";
+    $$refToTemplateTitle = $langDB{'templateNamespace'} . ":" . $$refToTemplateTitle;
   }
 }
 
@@ -1475,7 +1471,8 @@ sub extractCategories(\$\@$) {
   # The first parameter to 'collectCategory' is passed by value rather than by reference,
   # because it might be dangerous to pass a reference to $1 in case it might get modified
   # (with unclear consequences).
-  $$refToText =~ s/\[\[(?:\s*)(Category:.*?)\]\]/&collectCategory($1, $refToCategoriesArray)/ieg;
+  my $categoryNamespace = $langDB{'categoryNamespace'};
+  $$refToText =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $refToCategoriesArray)/ieg;
 
   # We don't accumulate categories directly in a hash table, since this would not preserve
   # their original order of appearance.
@@ -1619,7 +1616,8 @@ sub collectInternalLink($$$\@\@$$) {
   my $alternativeTextAvailable = 0;
 
   my $isImageLink = 0;
-  if ($link =~ /^Image:/) {
+  my $imageNamespace = $langDB{'imageNamespace'};
+  if ($link =~ /^$imageNamespace:/) {
     $isImageLink = 1;
   }
 
@@ -1863,8 +1861,8 @@ sub normalizeDates(\$\$\$\@\%) {
     my $monthNum = int($1);
     my $day = $2;
 
-    if ( defined($numberToMonth{$monthNum}) ) {
-      my $month = $numberToMonth{$monthNum};
+    if ( defined($langDB{'numberToMonth'}->{$monthNum}) ) {
+      my $month = $langDB{'numberToMonth'}->{$monthNum};
       if (1 <= $day && $day <= $monthToNumDays{$month}) {
         $dateRecognized = 1;
 
@@ -1890,8 +1888,8 @@ sub normalizeDates(\$\$\$\@\%) {
     my $monthNum = int($2);
     my $day = $3;
 
-    if ( defined($numberToMonth{$monthNum}) ) {
-      my $month = $numberToMonth{$monthNum};
+    if ( defined($langDB{'numberToMonth'}->{$monthNum}) ) {
+      my $month = $langDB{'numberToMonth'}->{$monthNum};
       if (1 <= $day && $day <= $monthToNumDays{$month}) {
         $dateRecognized = 1;
 
@@ -2376,7 +2374,8 @@ sub identifyRelatedArticles(\$\@$) {
     # and not just anywhere in the line. Otherwise, we would collect as related
     # those links that just happen to occur in the same line with an unrelated
     # string that represents a standalone designator.
-    if ($line =~ /^(?:.{0,5})(${relatedWording_Standalone}.*)$/) {
+    my $relatedRegex = $langDB{'relatedWording_Standalone'};
+    if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       print LOGF "Related(S): $id => $str\n";
       &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
@@ -2386,7 +2385,8 @@ sub identifyRelatedArticles(\$\@$) {
 
   # Inlined (in parentheses)
   foreach $line (@text) {
-    while ($line =~ /\((?:\s*)(${relatedWording_Inline}.*?)\)/g) {
+    my $relatedRegex = $langDB{'relatedWording_Inline'};
+    while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       print LOGF "Related(I): $id => $str\n";
       &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
@@ -2412,7 +2412,8 @@ sub identifyRelatedArticles(\$\@$) {
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
         my $sectionHeader = $1;
-        if ($sectionHeader =~ /$relatedWording_Section/) {
+        my $relatedRegex = $langDB{'relatedWording_Section'};
+        if ($sectionHeader =~ /$relatedRegex/) {
           $relatedSectionFound = 1;
           next; # proceed to the next line
         } else {
@@ -2462,5 +2463,7 @@ Available options:
                  Log can get approximately 3-4 times larger than
                  the XML dump.
   -compress      Enable compression on some of the output files.
+  -lang LANG     Use language other than English. LANG is Wikipedia
+                 language prefix (e.g. 'sl' for 'slwiki').
 END
 }
