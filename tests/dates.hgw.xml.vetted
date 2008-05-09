@@ -1,0 +1,98 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="1" orglength="301" newlength="595" stub="0" categories="0" outlinks="4" urls="0">
+<title>A</title>
+<categories></categories>
+<links>2 3 4 5</links>
+<urls>
+</urls>
+<text>
+
+<internal id="2">October 15</internal>, <internal id="3">1982</internal>
+<internal id="2">October 15</internal> <internal id="3">1982</internal>
+<internal id="3">1982</internal>-<internal id="2"> October 15</internal>
+<internal id="3">October 15, 1982</internal>
+<internal id="4">October 15, 1982</internal>
+
+July 4, <internal id="5">2000</internal>
+4 July, <internal id="5">2000</internal>
+<internal id="5">2000</internal>-7-4
+<internal id="5">2000</internal>- July 04
+2000-7-4
+<internal id="5">July 04, 2000</internal>
+
+October 16, 1983
+October 16 1983
+1983- October 16
+October 16, 1983
+	    
+</text>
+</page>
+<page id="2" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
+<title>October 15</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Foo
+</text>
+</page>
+<page id="3" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
+<title>1982</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Foo
+</text>
+</page>
+<page id="4" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
+<title>October 15, 1982</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Foo
+</text>
+</page>
+<page id="5" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
+<title>2000</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Foo
+</text>
+</page>
+</mediawiki>

@@ -1,0 +1,115 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>B</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>C</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Standalone</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">
+: Further information [[A]]
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Standalone not</title>
+    <id>5</id>
+    <revision>
+	    <text xml:space="preserve">
+There is some further information at the [[A]] page
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Inline</title>
+    <id>6</id>
+    <revision>
+	    <text xml:space="preserve">
+Lorem ipsum dolor sit amet, (See also [[B]]) consectetuer adipiscing elit. Nunc euismod egestas metus. Sed lobortis pharetra eros. Suspendisse mi lorem, bibendum nec, adipiscing dignissim, tempor nec, turpis. Praesent vel nulla. Phasellus vel leo. Morbi mi lacus, pellentesque eu, congue adipiscing, tincidunt vel, nunc. Praesent consectetuer erat vehicula nunc. Sed lorem lacus, lacinia a, dapibus vitae, sodales ut, felis. Ut id nisi. Mauris quam ante, bibendum vitae, euismod ac, pretium tempus, nisi. Aliquam feugiat dignissim lorem.
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Inline not</title>
+    <id>7</id>
+    <revision>
+	    <text xml:space="preserve">
+See [[B]]
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Section</title>
+    <id>8</id>
+    <revision>
+	    <text xml:space="preserve">
+===See also===
+
+* [[C]], official page
+* [[B]]
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Section not</title>
+    <id>9</id>
+    <revision>
+	    <text xml:space="preserve">
+===Something===
+* [[C]], official page
+* [[B]]
+	    </text>
+    </revision>
+  </page>
+</mediawiki>
+
+
