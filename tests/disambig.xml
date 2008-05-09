@@ -28,62 +28,74 @@
     </namespaces>
   </siteinfo>
   <page>
-    <title>Gxu (disambiguation)</title>
-    <id>3</id>
+    <title>A (disambiguation)</title>
+    <id>1</id>
     <revision>
-      <id>136421847</id>
-      <timestamp>2007-06-06T23:05:07Z</timestamp>
-      <contributor>
-        <username>Cwschimpff</username>
-        <id>4581842</id>
-      </contributor>
-      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
-      <text xml:space="preserve">adiowdoji. 
+      <text xml:space="preserve"> 
+ * [[A1]]
+ * [[A2]]
+ * [[A3]]
       </text>
     </revision>
   </page>
   <page>
-    <title>Gu</title>
+    <title>B</title>
     <id>2</id>
     <revision>
-      <id>136421847</id>
-      <timestamp>2007-06-06T23:05:07Z</timestamp>
-      <contributor>
-        <username>Cwschimpff</username>
-        <id>4581842</id>
-      </contributor>
-      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
-      <text xml:space="preserve">{{dab}}.
+      <text xml:space="preserve"> 
+ # [[B1]]
+ # [[B2]]
+ # [[B3]]
+
+ {{dab}}
       </text>
     </revision>
   </page>
   <page>
-    <title>Gu</title>
+    <title>C</title>
+    <id>3</id>
+    <revision>
+      <text xml:space="preserve"> 
+ ** [[C1]]
+ ** [[C2]]
+ ** [[C3]]
+
+ {{hndis|John Titor}}
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>D</title>
+    <id>4</id>
+    <revision>
+      <text xml:space="preserve"> 
+ ** [[D1]]
+ ** [[D2]]
+ ** [[D3]]
+
+ {{hndisaa}}
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>E</title>
     <id>5</id>
     <revision>
-      <id>136421847</id>
-      <timestamp>2007-06-06T23:05:07Z</timestamp>
-      <contributor>
-        <username>Cwschimpff</username>
-        <id>4581842</id>
-      </contributor>
-      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
-      <text xml:space="preserve">{{hndis|John Titor}}.
+      <text xml:space="preserve"> 
+{{dab}}
       </text>
     </revision>
   </page>
   <page>
-    <title>Gu</title>
-    <id>7</id>
+    <title>D</title>
+    <id>6</id>
     <revision>
-      <id>136421847</id>
-      <timestamp>2007-06-06T23:05:07Z</timestamp>
-      <contributor>
-        <username>Cwschimpff</username>
-        <id>4581842</id>
-      </contributor>
-      <comment>[[WP:AES|←]]Redirected page to [[Algeria]]</comment>
-      <text xml:space="preserve">{{hndisaa}}.
+	    <text xml:space="preserve"> 
+ * Something without a link
+
+Unrelared [[link]]
+
+{{surname}}
       </text>
     </revision>
   </page>
