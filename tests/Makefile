@@ -36,7 +36,9 @@ LOGS =	images.log \
 	externalurls.log \
 	coord.log \
 	riemann.log \
-	carbon.log
+	carbon.log \
+	dates.log \
+	related.log
 
 all: test
 
