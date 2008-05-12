@@ -1,0 +1,186 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Dablink</title>
+    <id>945764</id>
+
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>161709751</id>
+      <timestamp>2007-10-02T02:43:39Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;div class=&quot;dablink&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ambox</title>
+    <id>13179742</id>
+
+    <revision>
+      <id>209125197</id>
+      <timestamp>2008-04-30T00:25:07Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+
+      <comment>Planned new version from /sandbox. Many new additions and fixes. See discussions at [[Wikipedia talk:Article message boxes]].</comment>
+      <text xml:space="preserve">&lt;table class=&quot;metadata plainlinks ambox 
+{{#switch:{{{type|}}}
+  | speedy     = ambox-speedy   &lt;!-- Can be used from 19 May 2008 --&gt;
+  | delete                          &lt;!-- delete = serious --&gt;
+  | serious    = ambox-delete       
+  | content    = ambox-content
+  | style      = ambox-style
+  | move                            &lt;!-- move = merge --&gt;
+  | merge      = ambox-merge   &lt;!--ambox-move can be used 20 May 2008--&gt;
+
+  | protection = ambox-protection
+  | notice     = ambox-notice
+  | #default   = ambox-notice
+}}&quot; style=&quot;{{{style|}}}&quot;&gt;
+&lt;tr&gt;
+&lt;td class=&quot;ambox-image&quot;&gt;
+{{#ifeq:{{{image|}}}|none
+  | &lt;!-- No image cell; empty cell necessary for text cell to have 100% width --&gt;
+  | &lt;div style=&quot;width:52px;&quot;&gt; {{#switch:{{{image|{{{type|}}}}}}
+    | speedy     = [[Image:Ambox speedy deletion.png|40x40px]] 
+    | delete
+    | serious    = [[Image:Ambox deletion.png|40x40px]] 
+    | content    = [[Image:Ambox content.png|40x40px]]
+    | style      = [[Image:Ambox style.png|40x40px]]
+    | move
+    | merge      = [[Image:Ambox move.png|40x40px]]
+    | protection = [[Image:Ambox protection.png|40x40px]]
+    | notice     = [[Image:Ambox notice.png|40x40px]]
+    | blank      = &amp;nbsp;
+    | #default   = {{{image|[[Image:Ambox notice.png|40x40px]]}}}
+  }}&lt;/div&gt;
+
+}}&lt;/td&gt;
+&lt;td class=&quot;ambox-text&quot; style=&quot;{{{textstyle|}}}&quot;&gt;{{{text}}}&lt;/td&gt;
+{{#if:{{{imageright|}}}
+  | &lt;td class=&quot;ambox-imageright&quot;&gt;&lt;div style=&quot;width:52px;&quot;&gt; {{{imageright}}} &lt;/div&gt;&lt;/td&gt;
+
+}}
+&lt;/tr&gt;
+&lt;/table&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dispute</title>
+    <id>2343267</id>
+
+    <revision>
+      <id>19940191</id>
+      <timestamp>2005-07-30T20:40:45Z</timestamp>
+      <contributor>
+        <username>Flcelloguy</username>
+        <id>267668</id>
+      </contributor>
+
+      <comment>Created redir</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Disputed]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Disputed</title>
+    <id>392667</id>
+
+    <restrictions>edit=autoconfirmed:move=sysop</restrictions>
+    <revision>
+      <id>202589269</id>
+      <timestamp>2008-04-01T17:36:22Z</timestamp>
+      <contributor>
+        <username>MBisanz</username>
+        <id>92123</id>
+
+      </contributor>
+      <minor/>
+      <comment>Reverted edits by [[Special:Contributions/AkhtaBot|AkhtaBot]] ([[User talk:AkhtaBot|talk]]) to last version by The Obento Musubi</comment>
+      <text xml:space="preserve">&lt;!--{{Disputed}} begin--&gt;{{ambox
+| type  = content
+| text  = '''The factual accuracy of this article is [[Wikipedia:Accuracy dispute|disputed]].'''&lt;br /&gt;{{#ifexist:{{TALKPAGENAME}}|&lt;small&gt;Please see the relevant discussion on the [[{{TALKPAGENAME}}#{{{1|Disputed}}}|talk page]].{{#if:{{{date|}}}|''({{{date}}})''}}&lt;/small&gt;}}
+}}
+&lt;includeonly&gt;{{#switch:{{NAMESPACE}}|{{ns:-0}}|Talk=[[Category:Accuracy disputes {{#if:{{{date|}}}|from {{{date}}}|}}]]{{#if:{{{date|}}}|{{#ifexist:Category:Accuracy disputes from {{{date}}}||[[Category:Articles with invalid date parameter in template]]}}}}}}&lt;/includeonly&gt;&lt;!--{{Disputed}} end--&gt;&lt;noinclude&gt;
+
+{{Documentation, template}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Test1</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{Dispute}}
+
+		    This text in dispute.
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Test2</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{dablink|For something else, see [[Test3]]}}
+
+		    Ambigous text
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Test3</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{dablink|For something completely different, see [[Test2]]}}
+		    
+		    Ambigous text
+	    </text>
+    </revision>
+  </page>
+</mediawiki>

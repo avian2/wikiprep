@@ -27,8 +27,8 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="2" orglength="28" newlength="2" stub="1" categories="0" outlinks="0" urls="0">
-<title>A</title>
+<page id="1" orglength="53" newlength="29" stub="0" categories="0" outlinks="0" urls="0">
+<title>Test1</title>
 <categories></categories>
 <links></links>
 <urls>
@@ -36,11 +36,12 @@
 <text>
 
 
-
+This text in dispute.
+	    
 </text>
 </page>
-<page id="3" orglength="454" newlength="2" stub="0" categories="0" outlinks="0" urls="0">
-<title>B</title>
+<page id="2" orglength="79" newlength="21" stub="0" categories="0" outlinks="0" urls="0">
+<title>Test2</title>
 <categories></categories>
 <links></links>
 <urls>
@@ -48,11 +49,12 @@
 <text>
 
 
-
+Ambigous text
+	    
 </text>
 </page>
-<page id="4" orglength="17" newlength="1" stub="0" categories="0" outlinks="0" urls="0">
-<title>C</title>
+<page id="3" orglength="101" newlength="21" stub="0" categories="0" outlinks="0" urls="0">
+<title>Test3</title>
 <categories></categories>
 <links></links>
 <urls>
@@ -60,6 +62,8 @@
 <text>
 
 
+Ambigous text
+	    
 </text>
 </page>
 </mediawiki>

@@ -43,6 +43,7 @@ use revision;
 use languages;
 use templates;
 use lang;
+use css;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -840,6 +841,10 @@ sub transform() {
 
     &images::convertGalleryToLink(\$text);
     &images::convertImagemapToLink(\$text);
+
+    # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
+    # contain usable text for us.
+    &css::removeMetadata(\$text);
 
     my @anchorTexts;
 

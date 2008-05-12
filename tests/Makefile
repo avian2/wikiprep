@@ -38,7 +38,8 @@ LOGS =	images.log \
 	riemann.log \
 	carbon.log \
 	dates.log \
-	related.log
+	related.log \
+	css.log
 
 all: test
 
