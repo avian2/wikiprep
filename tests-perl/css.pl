@@ -1,9 +1,14 @@
-use Test::Simple tests => 7;
+use Test::Simple tests => 8;
 use css;
 
 my ($a);
 
 $a = '<div class="dablink">Blah blah</div>';
+&css::removeMetadata(\$a);
+
+ok($a eq " ");
+
+$a = "<div class=\"dablink\">\nBlah\nblah\n</div>";
 &css::removeMetadata(\$a);
 
 ok($a eq " ");
