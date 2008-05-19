@@ -7,6 +7,7 @@ SYNTAX: findtemplates path_to_template_dir named_parameter
 
 Example: findtemplates enwiki-20080312-pages-articles.templates isbn
 END
+	exit 0
 fi
 
 TEMPLATEDIR="$1"
