@@ -151,7 +151,36 @@ $ make test
 4. Tools
 ========
 
-FIXME
+There are a couple of tools in the tools/ directory that aim to make your
+life a bit easier. Their use should be pretty much obvious from the help
+message they return if you run them without any command line arguments.
+
+  o findtemplate.sh
+
+    Find templates that support a named parameter. Good for searching for
+    all templates that support for example the "isbn" parameter.
+
+  o getpage.py
+
+    Uses Special:Export feature of Wikipedia to download a single article
+    and all templates it depends on. It then constructs a file resembling
+    a MediaWiki XML dump, containing only these pages.
+
+    Good for making testing datasets or researching why a specific page
+    failed to parse properly.
+
+  o samplewiki
+
+    Takes a complete MediaWiki XML dump, takes a random sample of pages
+    from it and creates a new (smaller) dump.
+
+  o riffle
+
+    Takes a complete MediaWiki XML dump and some articles downloaded using the
+    Special:Export feature and inserts these articles into the dump.
+
+    Good for keeping an XML dump up-to-date without having to re-download the
+    whole thing.
 
 
 
