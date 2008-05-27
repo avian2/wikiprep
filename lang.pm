@@ -1,12 +1,14 @@
 # vim:sw=2:tabstop=2:expandtab
 
 use strict;
+use encoding 'utf-8';
 
 package lang;
 
 my $langDB = {
 
               # English
+              # --------------------------------------------------------------------------------------------
               
               'en' => {
                   # Names of months as used by MediaWiki for date links
@@ -117,6 +119,9 @@ my $langDB = {
                   'disambigTitle' =>
                       qr/\(disambiguation\)/ix,
               },
+
+              # Slovene
+              # --------------------------------------------------------------------------------------------
 
               'sl' => {
                   # Names of months as used by MediaWiki for date links

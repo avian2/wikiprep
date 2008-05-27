@@ -1,10 +1,9 @@
 # vim:sw=2:tabstop=2:expandtab
 
 use strict;
+use encoding 'utf-8';
 
 package languages;
-
-use encoding 'utf-8';
 
 # List of languages copied from MediaWiki (languages/Names.php)
 
