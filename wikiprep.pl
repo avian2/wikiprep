@@ -1123,29 +1123,26 @@ BEGIN {
   my $specialSeparator = "\.pAr\.";
   my $specialSeparatorRegex = qr/$specialSeparator/;
 
-  sub parseTemplateInvocation(\$\$\%) {
-    my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+  # Template definitions (especially those with parameters) can easily span several lines,
+  # hence the "/s" modifier. The template name extends up to the first pipeline symbol (if any).
+  # Template parameters go after the "|" symbol.
 
-    # Template definitions (especially those with parameters) can easily span several lines,
-    # hence the "/s" modifier. The template name extends up to the first pipeline symbol (if any).
-    # Template parameters go after the "|" symbol.
-
-    # Template parameters often contain URLs, internal links, or just other useful text,
-    # whereas the template serves for presenting it in some nice way.
-    # Parameters are separated by "|" symbols. However, we cannot simply split the string
-    # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-    # on those "|" symbols that are not inside [[...]]. It's obviously sufficient to check that
-    # brackets are not improperly nested on one side of "|", so we use lookahead.
-    # We first replace all "|" symbols that are not inside [[...]] with a special separator that
-    # we invented, which will hopefully not normally appear in the text (.pAr.).
-    # Next, we use 'split' to break the string on this new separator.
+  # Template parameters often contain URLs, internal links, or just other useful text,
+  # whereas the template serves for presenting it in some nice way.
+  # Parameters are separated by "|" symbols. However, we cannot simply split the string
+  # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
+  # on those "|" symbols that are not inside [[...]]. It's obviously sufficient to check that
+  # brackets are not improperly nested on one side of "|", so we use lookahead.
+  # We first replace all "|" symbols that are not inside [[...]] with a special separator that
+  # we invented, which will hopefully not normally appear in the text (.pAr.).
+  # Next, we use 'split' to break the string on this new separator.
     
-    # Note that template name can also contain internal links (for example when template is a
-    # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
-    # the name of the template as for template parameters.
+  # Note that template name can also contain internal links (for example when template is a
+  # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
+  # the name of the template as for template parameters.
 
-    $$refToTemplateInvocation =~ 
-                     s/\|                       # split on pipeline symbol, such that
+  my $templateIncludeRegex = qr/
+                       \|                       # split on pipeline symbol, such that
                           (?:                   # non-capturing grouper that encloses 2 options
                               (?=               #   zero-width lookahead - option #1
                                   [^\]]*$       #     there are no closing brackets up to the end
@@ -1159,8 +1156,14 @@ BEGIN {
                                                 #     precede it are not closing brackets
                               )                 #   end of second lookahead  (= end of option #2)
                           )                     # end of the outer grouper
-                      /$specialSeparator/sxg;   # replace matching symbols with a special separator
-                                                # /s means string can contain newline chars
+                      /sx;  
+  
+  sub parseTemplateInvocation(\$\$\%) {
+    my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+
+    # replace matching symbols with a special separator
+    # /s means string can contain newline chars
+    $$refToTemplateInvocation =~ s/$templateIncludeRegex/$specialSeparator/sxg;   
 
     my @parameters = split(/$specialSeparatorRegex/, $$refToTemplateInvocation);
 
