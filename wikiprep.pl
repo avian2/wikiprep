@@ -1038,18 +1038,28 @@ my $templateRegex = qr/\{\{                 # match only two opening braces, not
                                 )
                              \}\}/sx;
 
+# This function transcludes all templates in a given string and returns a fully expanded
+# text. 
+
+# It's called recursively, so we have a $templateRecursionLevel parameter to track the 
+# recursion depth and break out in case it gets too deep.
+
+ 
+
 sub includeTemplates(\$\$$$) {
   my ($refToId, $refToTitle, $text, $templateRecursionLevel) = @_;
 
   if( $templateRecursionLevel > $maxTemplateRecursionLevels ) {
+
+    # Ignore this template if limit is reached 
+
+    # Since we limit the number of levels of template recursion, we might end up with several
+    # un-instantiated templates. In this case we simply eliminate them - however, we do so
+    # later, in function 'postprocessText()', after extracting categories, links and URLs.
+
     print LOGF "Maximum template recursion level reached\n";
     return " ";
   }
-
-  # Using the while loop forces templates to be included recursively
-  # (i.e., includes the body of templates that themselves were included
-  # on the previous iteration ).
-  # Template definitions can easily span several lines, hence the "/s" modifier.
 
   # Templates are frequently nested. Occasionally, parsing mistakes may cause template insertion
   # to enter an infinite loop, for instance when trying to instantiate Template:Country
@@ -1061,35 +1071,15 @@ sub includeTemplates(\$\$$$) {
   # the article. Therefore, we simply limit the number of iterations of nested template
   # inclusion.
 
-  my $templateRecursionLevels = 0;
-
-  # Take note of which templates have been included, so we can break recursion loops. This
-  # hash maps template page id to the last recursion level when this template was included.
-  #
-  # A template can only be included on one recursion level on one page. This removes possible
-  # infinite template recursion. Note that this isn't equivalent to MediaWiki handling of 
-  # template loops (see http://meta.wikimedia.org/wiki/Help:Template), but it seems to be
-  # working well enough for us.
-  #
-  # An example where we would get an infinite loop, but MediaWiki wouldn't:
-  # (from "Template:Olympic Games")
-  #
-  # {{#if:{{{Sport|}}}|{{Olympic Games {{{Sport}}}}}}}
-
-  # We also require that the body of a template does not contain the template opening sequence
-  # (two successive opening braces - "\{\{"). We use negative lookahead to achieve this.
-
-  # Use negative look-ahead to make sure that we are matching agains two opening
-  # braces and not three.
-  #
-  # This is important in cases where template title is calculated by a parser function. 
-  # e.g. {{{{#if: ... |Echo|void}} ... }}
-
+  # Note that this isn't equivalent to MediaWiki handling of template loops 
+  # (see http://meta.wikimedia.org/wiki/Help:Template), but it seems to be working well enough for us.
+  
   my %nowikiChunksReplaced = ();
   my %preChunksReplaced = ();
 
   # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
   # infinite loops if templates include an example invocation in <nowiki> tags.
+
   &nowiki::extractTags(\$preRegex, \$text, \%preChunksReplaced);
   &nowiki::extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
 
@@ -1098,14 +1088,10 @@ sub includeTemplates(\$\$$$) {
   &nowiki::replaceTags(\$text, \%nowikiChunksReplaced);
   &nowiki::replaceTags(\$text, \%preChunksReplaced);
 
-  # print LOGF "Finished with templates level $templateRecursionLevels\n";
+  # print LOGF "Finished with templates level $templateRecursionLevel\n";
   # print LOGF "#########\n\n";
   # print LOGF "$text";
   # print LOGF "#########\n\n";
-
-  # Since we limit the number of levels of template recursion, we might end up with several
-  # un-instantiated templates. In this case we simply eliminate them - however, we do so
-  # later, in function 'postprocessText()', after extracting categories, links and URLs.
 
   return $text;
 }

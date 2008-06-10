@@ -147,6 +147,11 @@ sub templateParameterRecursion(\$\$$) {
 
 }
 
+# Template call parsing
+
+# This function will parse a template invocation (e.g. everything within two braces {{ ... }})
+# and return a template title and a hash of template parameters.
+
 # The template name extends up to the first pipeline symbol (if any).
 # Template parameters go after the "|" symbol.
 
@@ -160,8 +165,15 @@ sub templateParameterRecursion(\$\$$) {
 # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
 # the name of the template as for template parameters.
 
+# Same goes if template parameters include other template invocations.
+
 sub parseTemplateInvocation(\$\$\%) {
   my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+
+  # This is a simple parser that splits the invocation string on those "|" symbols that are not
+  # nested within "[" or "{" braces.
+  
+  # We first split the string into tokens - symbols we care about and other text.
 
   my @tokens = split(/([\{\}\[\]\|])/, $$refToTemplateInvocation );
 
@@ -170,8 +182,13 @@ sub parseTemplateInvocation(\$\$\%) {
   my @accumulator = ();
   my @parameters = ();
 
+  # Iterate through tokens and gather them into the accumulator
+
   for my $token (@tokens) {
     if( $token eq '|' and $brace == 0 and $square == 0 ) {
+
+      # Unnested "|" means we store the contents of the accumulator into a new parameter
+
       push(@parameters, join('', @accumulator));
       @accumulator = ()
     } else {
@@ -187,8 +204,9 @@ sub parseTemplateInvocation(\$\$\%) {
       push(@accumulator, $token);
     }
   }
-
   push(@parameters, join('', @accumulator));
+
+  # We now have the invocation string split up in the @parameters list.
 
   # String before the first "|" symbol is the title of the template.
   $$refToTemplateTitle = shift(@parameters);
