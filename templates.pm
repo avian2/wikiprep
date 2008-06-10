@@ -179,18 +179,19 @@ sub parseTemplateInvocation(\$\$\%) {
 
   my $brace = 0;
   my $square = 0;
-  my @accumulator = ();
+  my $accumulator = "";
   my @parameters = ();
 
   # Iterate through tokens and gather them into the accumulator
 
-  for my $token (@tokens) {
+  my $token;
+  for $token (@tokens) {
     if( $token eq '|' and $brace == 0 and $square == 0 ) {
 
       # Unnested "|" means we store the contents of the accumulator into a new parameter
 
-      push(@parameters, join('', @accumulator));
-      @accumulator = ()
+      push(@parameters, $accumulator);
+      $accumulator = "";
     } else {
       if( $token eq '{' ) {
         $brace ++;
@@ -201,10 +202,10 @@ sub parseTemplateInvocation(\$\$\%) {
       } elsif( $token eq ']' ) {
         $square -- if $square > 0;
       }
-      push(@accumulator, $token);
+      $accumulator .= $token;
     }
   }
-  push(@parameters, join('', @accumulator));
+  push(@parameters, $accumulator);
 
   # We now have the invocation string split up in the @parameters list.
 
