@@ -39,7 +39,9 @@ LOGS =	images.log \
 	carbon.log \
 	dates.log \
 	related.log \
-	css.log
+	css.log \
+	whitespace.log \
+	kaon2.log
 
 all: test
 

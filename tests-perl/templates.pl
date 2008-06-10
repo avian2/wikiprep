@@ -1,4 +1,4 @@
-use Test::Simple tests => 4;
+use Test::More tests => 16;
 use templates;
 
 my $r;
@@ -35,3 +35,29 @@ $paramHash = { '1' => 'Foo' };
 &templates::templateParameterRecursion(\$text, $paramHash, 1);
 
 ok($text eq ":''Further information: [[Foo]]{{#if: |,}}{{#if: |&amp;nbsp;and}}");
+
+# parseTemplateInvocation
+
+$text = "simple|a|b=c";
+$name = '';
+%paramHash = ();
+
+&templates::parseTemplateInvocation(\$text, \$name, \%paramHash);
+is($name, "simple");
+is($paramHash{'=1='}, "a");
+is($paramHash{'=2='}, "b=c");
+is($paramHash{'1'}, "a");
+is($paramHash{'b'}, "c");
+
+$text = "complex|[[link|anchor]]|{{nested|{{template|p}}\n|blah}}|bare_param";
+$name = '';
+%paramHash = ();
+
+&templates::parseTemplateInvocation(\$text, \$name, \%paramHash);
+is($name, "complex");
+is($paramHash{'=1='}, "[[link|anchor]]");
+is($paramHash{'=2='}, "{{nested|{{template|p}}\n|blah}}");
+is($paramHash{'=3='}, "bare_param");
+is($paramHash{'1'}, "[[link|anchor]]");
+is($paramHash{'2'}, "{{nested|{{template|p}}\n|blah}}");
+is($paramHash{'3'}, "bare_param");

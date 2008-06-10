@@ -128,8 +128,11 @@ my $maxTableRecursionLevels = 5;
 # ignore these templates.
 #
 # See http://meta.wikimedia.org/wiki/Template:!
-my %overrideTemplates = ('Template:!' => ' ', 'Template:!!' => ' ', 'Template:!-' => ' ',
-                         'Template:-!' => ' ');
+#my %overrideTemplates = ('Template:!' => ' ', 'Template:!!' => ' ', 'Template:!-' => ' ',
+#                         'Template:-!' => ' ');
+
+my %overrideTemplates = ();
+
 
 ##### Global variables #####
 
@@ -821,7 +824,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
-    &includeTemplates(\$id, \$title, \$text);
+    $text = &includeTemplates(\$id, \$title, $text, 0);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
@@ -1019,7 +1022,7 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 # Regular expression that matches a template include directive. It is replaced with fully
 # expanded template text.
 
-my $templateRegex = qr/\{\{(?!\{)           # match only two opening braces, not three, which may 
+my $templateRegex = qr/\{\{                 # match only two opening braces, not three, which may 
                                             # be there because of an unexpanded template parameter.
                                            
                                             # (some pages have template parameters in them although
@@ -1028,16 +1031,20 @@ my $templateRegex = qr/\{\{(?!\{)           # match only two opening braces, not
                                 \s*         # optional whitespace before the template name is ignored
                                 (
                                   (?:
-                                      (?!
-                                          \{\{  # Match only unnested templates
-                                      )
-                                      .
+                                      [^{}]
+                                      |
+                                      $Regexp::Common::RE{balanced}{-parens => "{}"}
                                   )*?
                                 )
                              \}\}/sx;
 
-sub includeTemplates(\$\$\$) {
-  my ($refToId, $refToTitle, $refToText) = @_;
+sub includeTemplates(\$\$$$) {
+  my ($refToId, $refToTitle, $text, $templateRecursionLevel) = @_;
+
+  if( $templateRecursionLevel > $maxTemplateRecursionLevels ) {
+    print LOGF "Maximum template recursion level reached\n";
+    return " ";
+  }
 
   # Using the while loop forces templates to be included recursively
   # (i.e., includes the body of templates that themselves were included
@@ -1069,8 +1076,6 @@ sub includeTemplates(\$\$\$) {
   #
   # {{#if:{{{Sport|}}}|{{Olympic Games {{{Sport}}}}}}}
 
-  my %includedTemplates = ();
-
   # We also require that the body of a template does not contain the template opening sequence
   # (two successive opening braces - "\{\{"). We use negative lookahead to achieve this.
 
@@ -1080,183 +1085,51 @@ sub includeTemplates(\$\$\$) {
   # This is important in cases where template title is calculated by a parser function. 
   # e.g. {{{{#if: ... |Echo|void}} ... }}
 
-  while ($templateRecursionLevels < $maxTemplateRecursionLevels) {
-    my %nowikiChunksReplaced = ();
-    my %preChunksReplaced = ();
+  my %nowikiChunksReplaced = ();
+  my %preChunksReplaced = ();
 
-    # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
-    # infinite loops if templates include an example invocation in <nowiki> tags.
-    &nowiki::extractTags(\$preRegex, $refToText, \%preChunksReplaced);
-    &nowiki::extractTags(\$nowikiRegex, $refToText, \%nowikiChunksReplaced);
+  # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
+  # infinite loops if templates include an example invocation in <nowiki> tags.
+  &nowiki::extractTags(\$preRegex, \$text, \%preChunksReplaced);
+  &nowiki::extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
 
-    my $r = $$refToText =~ s/$templateRegex/
-                                      &instantiateTemplate($1, $refToId, $refToTitle, \%includedTemplates,
-                                      $templateRecursionLevels)/segx;
+  $text =~ s/$templateRegex/&instantiateTemplate($1, $refToId, $refToTitle, $templateRecursionLevel)/segx;
 
-    &nowiki::replaceTags($refToText, \%nowikiChunksReplaced);
-    &nowiki::replaceTags($refToText, \%preChunksReplaced);
+  &nowiki::replaceTags(\$text, \%nowikiChunksReplaced);
+  &nowiki::replaceTags(\$text, \%preChunksReplaced);
 
-    last unless ($r);
-
-    # print LOGF "Finished with templates level $templateRecursionLevels\n";
-    # print LOGF "#########\n\n";
-    # print LOGF "$$refToText";
-    # print LOGF "#########\n\n";
-    $templateRecursionLevels++;
-  }
-
-  if($templateRecursionLevels >= $maxTemplateRecursionLevels) {
-    print LOGF "Maximum template recursion level reached\n"
-  }
+  # print LOGF "Finished with templates level $templateRecursionLevels\n";
+  # print LOGF "#########\n\n";
+  # print LOGF "$text";
+  # print LOGF "#########\n\n";
 
   # Since we limit the number of levels of template recursion, we might end up with several
   # un-instantiated templates. In this case we simply eliminate them - however, we do so
   # later, in function 'postprocessText()', after extracting categories, links and URLs.
+
+  return $text;
 }
 
 }
-
-BEGIN {
-  # Making variables static for the function to avoid recompilation of regular expressions
-  # every time the function is called.
-
-  my $specialSeparator = "\.pAr\.";
-  my $specialSeparatorRegex = qr/$specialSeparator/;
-
-  # Template definitions (especially those with parameters) can easily span several lines,
-  # hence the "/s" modifier. The template name extends up to the first pipeline symbol (if any).
-  # Template parameters go after the "|" symbol.
-
-  # Template parameters often contain URLs, internal links, or just other useful text,
-  # whereas the template serves for presenting it in some nice way.
-  # Parameters are separated by "|" symbols. However, we cannot simply split the string
-  # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-  # on those "|" symbols that are not inside [[...]]. It's obviously sufficient to check that
-  # brackets are not improperly nested on one side of "|", so we use lookahead.
-  # We first replace all "|" symbols that are not inside [[...]] with a special separator that
-  # we invented, which will hopefully not normally appear in the text (.pAr.).
-  # Next, we use 'split' to break the string on this new separator.
-    
-  # Note that template name can also contain internal links (for example when template is a
-  # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
-  # the name of the template as for template parameters.
-
-  my $templateIncludeRegex = qr/
-                       \|                       # split on pipeline symbol, such that
-                          (?:                   # non-capturing grouper that encloses 2 options
-                              (?=               #   zero-width lookahead - option #1
-                                  [^\]]*$       #     there are no closing brackets up to the end
-                                                #     of the string (i.e., all the characters up to
-                                                #     the end of the string are not closing brackets)
-                              )                 #   end of first lookahead (= end of option #1)
-                              |                 #   or
-                              (?=               #   another zero-width lookahead - option #2
-                                  [^\]]* \[     #     the nearest opening bracket on the right is not preceded
-                                                #     by a closing bracket (i.e., all the characters that
-                                                #     precede it are not closing brackets
-                              )                 #   end of second lookahead  (= end of option #2)
-                          )                     # end of the outer grouper
-                      /sx;  
-  
-  sub parseTemplateInvocation(\$\$\%) {
-    my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
-
-    # replace matching symbols with a special separator
-    # /s means string can contain newline chars
-    $$refToTemplateInvocation =~ s/$templateIncludeRegex/$specialSeparator/sxg;   
-
-    my @parameters = split(/$specialSeparatorRegex/, $$refToTemplateInvocation);
-
-    # String before the first "|" symbol is the title of the template.
-    $$refToTemplateTitle = shift(@parameters);
-
-    # Template invocation does not contain any parameters
-    return unless($#parameters > -1);
-
-    # Parameters can be either named or unnamed. In the latter case, their name is defined by their
-    # ordinal position (1, 2, 3, ...).
-
-    my $unnamedParameterCounter = 0;
-    my $parameterCounter = 0;
-
-    # It's legal for unnamed parameters to be skipped, in which case they will get default
-    # values (if available) during actual instantiation. That is {{template_name|a||c}} means
-    # parameter 1 gets the value 'a', parameter 2 value is not defined, and parameter 3 gets the value 'c'.
-    # This case is correctly handled by function 'split', and does not require any special handling.
-    my $param;
-    foreach $param (@parameters) {
-
-      # if the value does not contain a link, we can later trim whitespace
-      my $doesNotContainLink = 0;
-      if ($param !~ /\]\]/) {
-        $doesNotContainLink = 1; 
-      }
-
-      # For parser functions we need unmodified parameters by position. For example:
-      # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
-      # hash. Note that the key of the hash can't be generated any other way (parameter names can't 
-      # include '=' characters)
-      $parameterCounter++;
-
-      my $unexpandedParam = $param;
-      if ($doesNotContainLink) {
-        &trimWhitespaceBothSides(\$unexpandedParam);
-      }
-      $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
-
-      # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
-      # a link (to prevent possible gluing the link to the following text after template substitution)
-
-      # Parameter values may contain "=" symbols, hence the parameter name extends up to
-      # the first such symbol.
-      # It is legal for a parameter to be specified several times, in which case the last assignment
-      # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
-      # Therefore, we don't check if the parameter has been assigned a value before, because
-      # anyway the last assignment should override any previous ones.
-      if ($param =~ /^([^=]*)=(.*)$/s) {
-        # This is a named parameter.
-        # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
-        # parameter ("2") is specified explicitly - this is handled transparently.
-
-        my $parameterName = $1;
-        my $parameterValue = $2;
-
-        &trimWhitespaceBothSides(\$parameterName);
-        if ($doesNotContainLink) { # if the value does not contain a link, trim whitespace
-          &trimWhitespaceBothSides(\$parameterValue);
-        }
-
-        $$refToParameterHash{$parameterName} = $parameterValue;
-      } else {
-        # this is an unnamed parameter
-        $unnamedParameterCounter++;
-
-        $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
-      }
-    }
-  }
-
-} # end of BEGIN block
-
 
 sub instantiateTemplate($\$\$\%$) {
-  my ($templateInvocation, $refToId, $refToTopPageTitle, 
-      $refToIncludedTemplates, $templateRecursionLevels) = @_;
-
-  my $result = "";
+  my ($templateInvocation, $refToId, $refToTopPageTitle, $templateRecursionLevel) = @_;
 
   print LOGF "Instantiating template=$templateInvocation\n";
 
   my $templateTitle;
   my %templateParams;
-  &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
+  &templates::parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
-  return $result unless(defined($templateTitle));
+  $templateTitle = &includeTemplates($refToId, $refToTopPageTitle, $templateTitle, $templateRecursionLevel + 1);
 
-  &includeParserFunction(\$templateTitle, \%templateParams, $refToTopPageTitle, \$result);
+  return "" unless(defined($templateTitle));
+
+  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $refToId, $refToTopPageTitle, 
+                                                                                  $templateRecursionLevel);
 
   # If this wasn't a parser function call, try to include a template.
-  if ( length($result) == 0 ) {
+  if ( not defined($result) ) {
     &computeFullyQualifiedTemplateTitle(\$templateTitle);
 
     my $overrideResult = $overrideTemplates{$templateTitle};
@@ -1265,15 +1138,17 @@ sub instantiateTemplate($\$\$\%$) {
       return $overrideResult;
     }
 
-    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result, 
-                          $refToIncludedTemplates, $templateRecursionLevels);
+    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result);
   }
 
-  $result;  # return value
+  $result = &includeTemplates($refToId, $refToTopPageTitle, $result, $templateRecursionLevel + 1);
+
+  return $result;  # return value
 }
 
-sub includeParserFunction(\$\%\$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToTopPageTitle, $refToResult) = @_;
+sub includeParserFunction(\$\%\$\$\$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToTopPageTitle, $templateRecursionLevel, 
+                                                                                        $refToResult) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
@@ -1281,10 +1156,13 @@ sub includeParserFunction(\$\%\$\$) {
   # Parser function invocation can span more than one line, hence the /s modifier
 
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
+  
+  my $result = undef;
 
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
-    my $functionName=$1;
-    $$refToParameterHash{'=0='}=$2;
+    my $functionName = $1;
+    $$refToParameterHash{'=0='} = &includeTemplates($refToId, $refToTopPageTitle, $2, 
+                                                                               $templateRecursionLevel + 1);
 
     print LOGF "Evaluating parser function #$functionName\n";
 
@@ -1306,15 +1184,15 @@ sub includeParserFunction(\$\%\$\$) {
         # "The condition string is non-empty". 
 
         if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
-          $$refToResult = $valueIfTrue;
+          $result = $valueIfTrue;
         } else {
-          $$refToResult = " ";
+          $result = " ";
         }
       } else {
         if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
-          $$refToResult = $valueIfFalse;
+          $result = $valueIfFalse;
         } else {
-          $$refToResult = " ";
+          $result = " ";
         }
       }
     } elsif ( $functionName eq 'ifeq' ) {
@@ -1332,15 +1210,15 @@ sub includeParserFunction(\$\%\$\$) {
         # implementation also supports numerical comparissons.
 
         if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
-          $$refToResult = $valueIfTrue;
+          $result = $valueIfTrue;
         } else {
-          $$refToResult = " ";
+          $result = " ";
         }
       } else {
         if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
-          $$refToResult = $valueIfFalse;
+          $result = $valueIfFalse;
         } else {
-          $$refToResult = " ";
+          $result = " ";
         }
       }
     } elsif ( $functionName eq 'language' ) {
@@ -1349,7 +1227,7 @@ sub includeParserFunction(\$\%\$\$) {
 
       my $code = $$refToParameterHash{'=0='};
 
-      $$refToResult = &languages::languageName($code);
+      $result = &languages::languageName($code);
     } else {
 
       print LOGF "Function #$functionName not supported\n";
@@ -1358,25 +1236,27 @@ sub includeParserFunction(\$\%\$\$) {
       # to be the most sensible alternative in most cases (for example in #time and #date)
 
       if ( exists($$refToParameterHash{'1'}) && ( length($$refToParameterHash{'1'}) > 0 ) ) {
-        $$refToResult = $$refToParameterHash{'1'};
+        $result = $$refToParameterHash{'1'};
       } else {
-        $$refToResult = " ";
+        $result = " ";
       }
     }
 
-    # print LOGF "Function returned: $$refToResult\n";
+    # print LOGF "Function returned: $result\n";
 
   } elsif ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
     # This function is used in some pages to construct links
     # http://meta.wikimedia.org/wiki/Help:URL
 
-    print LOGF "URL encoding string $1\n";
+    $result = $1;
+    print LOGF "URL encoding string $result\n";
 
-    $$refToResult = $1;
-    $$refToResult =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
+    $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
-    $$refToResult = $$refToTopPageTitle;
+    $result = $$refToTopPageTitle;
   }
+
+  return $result;
 }
 
 sub logTemplateInclude(\$\$\%) {
@@ -1400,25 +1280,13 @@ sub logTemplateInclude(\$\$\%) {
   close(TEMPF);
 }
 
-sub includeTemplateText(\$\%\$\$\%$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult, 
-      $refToIncludedTemplates, $templateRecursionLevels) = @_;
+sub includeTemplateText(\$\%\$\$$) {
+  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult) = @_;
 
   &normalizeTitle($refToTemplateTitle);
   my $includedPageId = &resolveLink($refToTemplateTitle);
 
   if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
-    my $lastIncludeLevel = $$refToIncludedTemplates{$includedPageId};
-
-    if ( defined($lastIncludeLevel) ) {
-      if ( $lastIncludeLevel != $templateRecursionLevels ) {
-        print LOGF "Template loop in '$$refToTemplateTitle' detected\n";
-        $$refToResult = " ";
-        return
-      }
-    } else {
-      $$refToIncludedTemplates{$includedPageId} = $templateRecursionLevels;
-    }
 
     # Log which template has been included in which page with which parameters
     &logTemplateInclude(\$includedPageId, $refToId, $refToParameterHash);
@@ -1985,7 +1853,7 @@ BEGIN {
       push(@$refToUrlsArray, $url);
 
       my $anchorTrimmed = $anchor;
-      &trimWhitespaceBothSides(\$anchorTrimmed);
+      &utils::trimWhitespaceBothSides(\$anchorTrimmed);
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
@@ -2340,15 +2208,6 @@ sub removeElements(\@\@) {
 sub getTimeAsString() {
   my $tm = localtime();
   my $result = sprintf("%02d:%02d:%02d", $tm->hour, $tm->min, $tm->sec);
-}
-
-sub trimWhitespaceBothSides(\$) {
-    my ($stringRef) = @_;
-
-    # remove leading whitespace
-    $$stringRef =~ s/^\s*//;
-    # remove trailing whitespace
-    $$stringRef =~ s/\s*$//;
 }
 
 # There are 3 kinds of related links that we look for:

@@ -1,0 +1,1165 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Kaon</title>
+    <id>385846</id>
+    <revision>
+      <id>216613862</id>
+      <timestamp>2008-06-02T12:50:48Z</timestamp>
+      <contributor>
+        <username>Thasaidon</username>
+        <id>1867625</id>
+      </contributor>
+      <text xml:space="preserve">{{dablink|This article describes the subatomic particle called the kaon. For the ontology infrastructure of the same name, see [[KAON]]. For the character in Kyoshiro to Towa no Sora, see [[Kyoshiro to Towa no Sora]].}}
+{{Infobox Particle
+| bgcolour =
+| name = Kaon
+| image = 
+| caption = 
+| num_types = 3
+| composition = {{SubatomicParticle|Kaon+}}: {{SubatomicParticle|Up quark}}{{SubatomicParticle|Strange antiquark}}&lt;br /&gt;{{SubatomicParticle|Kaon0}}: {{SubatomicParticle|Down quark}}{{SubatomicParticle|Strange antiquark}} / {{SubatomicParticle|Strange quark}}{{SubatomicParticle|Down antiquark}}&lt;br /&gt;{{SubatomicParticle|Kaon-}}: {{SubatomicParticle|Strange quark}}{{SubatomicParticle|Up antiquark}}
+| family = [[Boson]]s
+| group = [[Meson]]s
+| generation =
+| interaction = [[Strong interaction|Strong]]
+| antiparticle = 
+| theorized = 
+| discovered = 
+| symbol = {{SubatomicParticle|Kaon+}}, {{SubatomicParticle|Kaon0}}, &amp; {{SubatomicParticle|Kaon-}}
+| mass = {{SubatomicParticle|Kaon+-}}: 493.667&amp;plusmn;0.013  [[MeV]]/[[Speed of light|c]]&lt;sup&gt;2&lt;/sup&gt;&lt;br /&gt;{{SubatomicParticle|Kaon0}}: 497.648&amp;plusmn;0.022 [[MeV]]/[[Speed of light|c]]&lt;sup&gt;2&lt;/sup&gt;
+| decay_time = {{SubatomicParticle|Kaon+-}}: 1.2384±0.0024×10&lt;sup&gt;−8&lt;/sup&gt;[[second|s]]&lt;br /&gt;{{SubatomicParticle|K-short}}: 8.958×10&lt;sup&gt;−11&lt;/sup&gt;s&lt;br /&gt;{{SubatomicParticle|K-long}}: 1.2384±0.0024×10&lt;sup&gt;−8&lt;/sup&gt;s
+| decay_particle =
+| electric_charge = {{SubatomicParticle|Kaon+-}}: &amp;plusmn;[[Elementary charge|e]]&lt;br /&gt;{{SubatomicParticle|Kaon0}}: 0
+| color_charge =
+| spin = 0
+| num_spin_states = 
+}}
+
+In [[particle physics]], a '''kaon''' (/ˈkeɪɒn/, also called '''K-meson''' and denoted {{SubatomicParticle|Kaon}}) is any one of a group of four [[meson]]s distinguished by the fact that they carry a [[quantum number]] called [[strangeness]]. In the [[quark model]] they are understood to contain a single [[strange quark]] (or antiquark).
+
+==Basic properties==
+The four kaons are :
+#The negatively charged {{SubatomicParticle|Kaon-}} (containing a [[strange quark]] and an [[up quark|up antiquark]]) has mass 493.667±0.013&amp;nbsp;[[MeV]] and [[mean lifetime]] (1.2384±0.0024)×10&lt;sup&gt;−8&lt;/sup&gt;&amp;nbsp;seconds.
+#Its [[antiparticle]], the positively charged {{SubatomicParticle|Kaon+}} (containing an up quark and a strange antiquark) must  (by [[CPT invariance]]) have mass and lifetime equal to that of {{SubatomicParticle|Kaon-}}. The mass difference is 0.032±0.090&amp;nbsp;MeV, consistent with zero. The difference in lifetime is (0.11±0.09)×10&lt;sup&gt;−8&lt;/sup&gt;&amp;nbsp;seconds.
+#The {{SubatomicParticle|Kaon0}} (containing a [[down quark]] and a [[strange quark|strange antiquark]]) has mass 497.648±0.022&amp;nbsp;MeV. It has mean squared charge radius of −0.076±0.018&amp;nbsp;fm&lt;sup&gt;2&lt;/sup&gt;.
+#Its antiparticle {{SubatomicParticle|AntiKaon0}} (containing a [[strange quark]] and a [[down quark|down antiquark]]) has the same mass. 
+It is clear from the [[quark model]] assignments that the kaons form two doublets of [[isospin]]; that is, they belong to the [[fundamental representation]] of [[SU(2)]] called the '''2'''. One doublet of strangeness +1 contains the {{SubatomicParticle|Kaon+}} and the {{SubatomicParticle|Kaon0}}. The antiparticles form the other doublet.
+
+{| class=&quot;wikitable&quot;
+! Particle
+! Symbol 
+! Anti-&lt;br&gt;particle 
+! [[Quark]]&lt;br&gt;Makeup 
+! [[Spin (physics)|Spin]] and [[Parity (physics)|parity]]
+! [[Rest mass]]&lt;br&gt;[[electron volt|MeV]]/[[speed of light|c]]&lt;sup&gt;2&lt;/sup&gt;
+! [[strangeness|S]]
+! [[charm (quantum number)|C]]
+! [[bottomness|B]]
+! [[Mean lifetime]]&lt;br&gt;[[second|s]]
+! Decays to
+! Notes
+|-
+| Charged &lt;br&gt;Kaon
+| {{SubatomicParticle|Kaon+}}
+| {{SubatomicParticle|Kaon-}}
+| {{SubatomicParticle|Up Quark}}{{SubatomicParticle|Strange antiquark}} / {{SubatomicParticle|Strange Quark}}{{SubatomicParticle|Up antiquark}}
+| Pseudoscalar
+| 493.7
+| +1
+| 0
+| 0
+| 1.24&amp;times;10&lt;sup&gt;-8&lt;/sup&gt;
+| {{SubatomicParticle|Antimuon}} + {{SubatomicParticle|Muon neutrino}} &lt;br/&gt; or {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Pion0}}
+|-
+| Neutral&lt;br&gt;Kaon
+| {{SubatomicParticle|Kaon0}}
+| {{SubatomicParticle|AntiKaon0}}
+| {{SubatomicParticle|Down quark}}{{SubatomicParticle|Strange antiquark}} / {{SubatomicParticle|Strange quark}}{{SubatomicParticle|Down antiquark}}
+| Pseudoscalar
+| 497.7
+| +1
+| 0
+| 0
+| [[List of mesons#Notes on neutral kaons|weak decay]]
+| 
+| [[Strong force|Strong]] [[eigenstate]] - no definite lifetime 
+|-
+| K-Short
+| {{SubatomicParticle|K-short}}
+| {{SubatomicParticle|K-short}}
+| &lt;math&gt;\mathrm{\frac{d\bar{s} + s\bar{d}}{\sqrt{2}}}&lt;/math&gt;
+| Pseudoscalar
+| 497.7
+| [[List of mesons#Notes on neutral kaons|(*)]]
+| 0
+| 0
+| 0.89&amp;times;10&lt;sup&gt;-10&lt;/sup&gt;
+| {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Pion-}} &lt;br/&gt;or 2{{SubatomicParticle|Pion0}}
+| [[Weak force|Weak]] [[eigenstate]] - makeup is missing small [[CP violation|CP-violating]] term 
+|-
+| K-Long
+| {{SubatomicParticle|K-long}}
+| {{SubatomicParticle|K-long}}
+| &lt;math&gt;\mathrm{\frac{d\bar{s} - s\bar{d}}{\sqrt{2}}}&lt;/math&gt;
+| Pseudoscalar
+| 497.7
+| [[List of mesons#Notes on neutral kaons|(*)]]
+| 0
+| 0
+| 5.2&amp;times;10&lt;sup&gt;-8&lt;/sup&gt;
+| {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Electron}} + {{SubatomicParticle|Electron neutrino}}
+| [[Weak force|Weak]] [[eigenstate]] - makeup is missing small [[CP violation|CP-violating]] term 
+|}
+
+Although the {{SubatomicParticle|Kaon0}} and its antiparticle {{SubatomicParticle|AntiKaon0}} are usually produced via the [[strong force]], they decay [[weak force|weakly]]. Thus, once created the two are better thought of as composites of two weak [[eigenstate]]s which have vastly different lifetimes:
+#The long-lived neutral kaon is called the {{SubatomicParticle|K-long}} (&quot;K-long&quot;), decays primarily into three [[pion]]s, and has a mean lifetime of 5.18×10&lt;sup&gt;−8&lt;/sup&gt;&amp;nbsp;seconds.
+#The short-lived neutral kaon is called the {{SubatomicParticle|K-short}} (&quot;K-short&quot;), decays primarily into two pions, and has a mean lifetime 8.958×10&lt;sup&gt;−11&lt;/sup&gt;&amp;nbsp;seconds.
+
+(''See discussion of [[Kaon#Neutral kaon mixing|neutral kaon mixing]] below.'')
+
+An experimental observation made in 1964 that K-longs rarely decay into two pions was the discovery of [[CP violation]] (see below).
+
+Main decay modes for {{SubatomicParticle|Kaon+}}:
+:{| border=0
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Antimuon}} {{SubatomicParticle|Muon neutrino}}
+| (leptonic, [[branching ratio|BR]] = (63.43±0.17)%);
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Pion+}} {{SubatomicParticle|Pion0}}
+| (hadronic, BR = (21.13±0.14)%);
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Pion+}} {{SubatomicParticle|Pion+}} {{SubatomicParticle|Pion-}}
+| (hadronic, BR = (5.576±0.031)%);
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Pion+}} {{SubatomicParticle|Pion0}} {{SubatomicParticle|Pion0}}
+| (hadronic, BR = (1.73±0.04)%);
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Pion0}} {{SubatomicParticle|Positron}} {{SubatomicParticle|Electron neutrino}}
+| (semileptonic, BR = (4.87±0.06)%)
+|}
+
+==Strangeness==
+&lt;blockquote&gt;
+The discovery of hadrons with the internal quantum number &quot;strangeness&quot; marks the beginning
+of a most exciting epoch in particle physics that even now, fifty years later, has not yet
+found its conclusion ...  by and large experiments have driven the development, and that
+major discoveries came unexpectedly or even against expectations expressed by theorists.
+&amp;nbsp;—&amp;nbsp;I.I.&amp;nbsp;Bigi and A.I.&amp;nbsp;Sanda, ''CP violation'', (ISBN 0-521-44349-0)
+&lt;/blockquote&gt;
+
+In 1947, [[George Rochester|G. D. Rochester]] and C. C. Butler published two [[cloud chamber]] photographs of [[cosmic ray]]-induced events, one showing what appeared to be a neutral particle decaying into two charged pions, and one which appeared to be a charged particle decaying into a charged pion and something neutral. The estimated mass of the new particles was very rough, about half a proton's mass. More examples of these &quot;V-particles&quot; were slow in coming.
+
+The first breakthrough was obtained at [[California Institute of Technology|Caltech]], where a cloud chamber was taken up [[Mount Wilson (California)|Mount Wilson]], for greater cosmic ray exposure. In 1950, 30 charged and 4 neutral V-particles were reported. Inspired by this, numerous mountaintop observations were made over the next several years, and by 1953, the following terminology was adopted: &quot;L-meson&quot; meant [[muon]] or [[pion]]. &quot;K-meson&quot; meant a particle intermediate in mass between the pion and [[nucleon]]. &quot;[[Hyperon]]&quot; meant any particle heavier than a nucleon.
+
+The decays were extremely slow; typical lifetimes are of the order of 10&lt;sup&gt;−10&lt;/sup&gt; seconds. However, production in [[pion]]-[[proton]] reactions proceeds much faster, with a time scale of 10&lt;sup&gt;−23&lt;/sup&gt; seconds. The problem of this mismatch was solved by [[Abraham Pais]] who postulated the new quantum number called &quot;[[strangeness]]&quot; which is conserved in [[strong interaction]]s but violated by the [[weak interaction]]s. Strange particles appear copiously due to &quot;associated production&quot; of a strange and an antistrange particle together. It was soon shown that this could not be a [[multiplicative quantum number]], because that would allow reactions which were never seen in the new [[cyclotron]]s which were commissioned in [[Brookhaven National Laboratory]] in 1953 and in the [[Lawrence Berkeley Laboratory]] in 1955.
+
+==Parity violation: the τ-θ puzzle==
+Two different decays were found for charged strange mesons:
+:{| border=0
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Theta+}}    || &amp;rarr; || {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Pion0}}
+|- style=&quot;height: 2em;&quot;
+| {{SubatomicParticle|Antitauon}} || &amp;rarr; || {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Pion+}} + {{SubatomicParticle|Pion-}}
+|}
+Since the two final states have different [[parity (physics)|parity]] it was thought that the initial states should also have different parities, and hence be two distinct particles. However, with increasingly precise measurements, there were found to be no difference between their masses and lifetimes, indicating that they are the same particle. This was known as the '''τ-θ puzzle'''. It was resolved only by the discovery of [[parity (physics)#Parity violation|parity violation]] in [[weak interaction]]s. Since the mesons decay through weak interactions, parity need not be conserved, and the two decays may be caused by the same particle, now called the {{SubatomicParticle|Kaon+}}.
+
+==CP violation in neutral meson oscillations==
+Initially it was thought that although [[parity]] was violated, [[CP symmetry|CP (charge parity) symmetry]] was conserved. In order to understand the discovery of [[CP violation]], it is necessary to understand the mixing of neutral kaons; this phenomenon does not require CP violation, but it is the context in which CP violation was first observed.
+
+===Neutral kaon mixing===
+[[Image:kkbar.png|thumb|right|Two different neutral K mesons, carrying different strangeness, can turn from one into another through the [[weak interaction]]s, since these interactions do not conserve strangeness. The strange quark in the {{SubatomicParticle|Kaon0}} turns into a down quark by successively emitting two [[W-boson]]s of opposite charge. The down antiquark in the {{SubatomicParticle|Kaon0}} turns into a strange antiquark by absorbing them.]]
+
+Since neutral kaons carry strangeness, they cannot be their own antiparticles. There must be then two different neutral kaons, differing by two units of strangeness. The question was then how to establish the presence of these two mesons. The solution used a phenomenon called '''[[neutral particle oscillations]]''', by which these two kinds of mesons can turn from one into another through the weak interactions, which cause them to decay into pions (see the adjacent figure).
+
+These oscillations were first investigated by [[Murray Gell-Mann]] and [[Abraham Pais]] together. They considered the CP-invariant time evolution of states with opposite strangeness. In matrix notation one can write
+::&lt;math&gt; \psi(t) = U(t)\psi(0) = {\rm e}^{iHt} \begin{pmatrix}a \\ b\end{pmatrix}, \qquad H =\begin{pmatrix}M &amp; \Delta\\ \Delta &amp; M\end{pmatrix}&lt;/math&gt;
+where ψ is a [[quantum state]] of the system specified by the amplitudes of being in each of the two [[quantum mechanics#Basis states|basis states]] (which are ''a'' and ''b'' at time ''t''&amp;nbsp;=&amp;nbsp;0). The diagonal elements (''M'') of the [[Hamiltonian (quantum mechanics)|Hamiltonian]] are due to [[strong interaction]] physics which conserves strangeness. The two diagonal elements must be equal, since the particle and antiparticle have equal masses in the absence of the weak interactions. The off-diagonal elements, which mix opposite strangeness particles, are due to [[weak interactions]]; [[CP symmetry]] requires them to be real.
+
+The consequence of the matrix ''H'' being real is that the probabilities of the two states will forever oscillate back and forth. However, if any part of the matrix were imaginary, as is forbidden by [[CP symmetry]], then part of the combination will diminish over time. The diminishing part can be either one component (''a'') or the other (''b''), or a mixture of the two.
+
+====Mixing====
+The eigenstates are obtained by diagonalizing this matrix. This gives new eigenvectors, which we can call '''K&lt;sub&gt;1&lt;/sub&gt;''' which is the sum of the two states of opposite strangeness, and '''K&lt;sub&gt;2&lt;/sub&gt;''', which is the difference. The two are eigenstates of '''CP''' with opposite eigenvalues; '''K&lt;sub&gt;1&lt;/sub&gt;''' has '''CP'''&amp;nbsp;=&amp;nbsp;+1, and '''K&lt;sub&gt;2&lt;/sub&gt;''' has '''CP'''&amp;nbsp;=&amp;nbsp;-1 Since the two-pion final state also has '''CP'''&amp;nbsp;=&amp;nbsp;+1, only the '''K&lt;sub&gt;1&lt;/sub&gt;''' can decay this way. The '''K&lt;sub&gt;2&lt;/sub&gt;''' must decay into three pions. Since the mass of '''K&lt;sub&gt;2&lt;/sub&gt;''' is just a little larger than the sum of the masses of three pions, this decay proceeds very slowly, about 600 times slower than the decay of '''K&lt;sub&gt;1&lt;/sub&gt;''' into two pions. These two different modes of decay were observed by [[Leon Lederman]] and his coworkers in 1956, establishing the existence of the two [[weak interaction|weak]] [[eigenstate]]s (states with definite [[mean lifetime|lifetimes]] under decays via the [[weak force]]) of the neutral kaons.
+
+These two weak eigenstates are called the {{SubatomicParticle|K-long}} (K-long) and {{SubatomicParticle|K-short}} (K-short).  [[CP symmetry]], which was assumed at the time, implies that {{SubatomicParticle|K-short}}&amp;nbsp;=&amp;nbsp;'''K&lt;sub&gt;1&lt;/sub&gt;''' and {{SubatomicParticle|K-long}}&amp;nbsp;=&amp;nbsp;'''K&lt;sub&gt;2&lt;/sub&gt;'''.
+
+====Oscillation====
+An initially pure beam of {{SubatomicParticle|Kaon0}} will turn into its antiparticle while propagating, which will turn back into the original particle, and so on. This is called particle oscillation. On observing the weak decay ''into leptons'', it was found that a {{SubatomicParticle|Kaon0}} always decayed into an electron, whereas the antiparticle {{SubatomicParticle|AntiKaon0}} decayed into the positron. The earlier analysis yielded a relation between the rate of electron and positron production from sources of pure {{SubatomicParticle|Kaon0}} and its antiparticle {{SubatomicParticle|AntiKaon0}}. Analysis of the time dependence of this [[semileptonic decay]] showed the phenomenon of oscillation, and allowed the extraction of the mass splitting between the {{SubatomicParticle|K-short}} and {{SubatomicParticle|K-long}}. Since this is due to weak interactions it is very small, 10&lt;sup&gt;−15&lt;/sup&gt; times the mass of each state.
+
+====Regeneration====
+A beam of neutral kaons decays in flight so that the short-lived {{SubatomicParticle|K-short}} disappears, leaving a beam of pure long-lived {{SubatomicParticle|K-long}}. If this beam is shot into matter, then the {{SubatomicParticle|Kaon0}} and its antiparticle {{SubatomicParticle|AntiKaon0}} interact differently with the nuclei. The {{SubatomicParticle|Kaon0}} undergoes quasi-[[elastic scattering]] with [[nucleon]]s, whereas its antiparticle can create [[hyperon]]s. Due to the different interactions of the two components, [[quantum coherence]] between the two particles is lost. The emerging beam then contains different linear superpositions of the {{SubatomicParticle|Kaon0}} and {{SubatomicParticle|AntiKaon0}}. Such a superposition is a mixture of {{SubatomicParticle|K-long}} and {{SubatomicParticle|K-short}}; the {{SubatomicParticle|K-short}} is regenerated by passing a neutral kaon beam through matter. Regeneration was observed by Oreste Piccioni and his collaborators at [[Lawrence Berkeley National Laboratory]]. Soon thereafter, Robert Adair and his coworkers reported excess {{SubatomicParticle|K-short}} regeneration, thus opening a new chapter in this history.
+
+===CP violation===
+While trying to verify Adair's results, in 1964 [[James Cronin]] and [[Val Fitch]] of [[Brookhaven National Laboratory|BNL]] found decays of {{SubatomicParticle|K-long}} into two pions ('''CP'''&amp;nbsp;=&amp;nbsp;+1). As explained in [[#Mixing|an earlier section]], this required the assumed initial and final states to have different values of '''CP''', and hence immediately suggested [[CP violation]]. Alternative explanations such as non-linear quantum mechanics and a new unobserved particle were soon ruled out, leaving CP violation as the only possibility. Cronin and Fitch received the [[Nobel Prize in Physics]] for this discovery in 1980.
+
+It turns out that although the {{SubatomicParticle|K-long}} and {{SubatomicParticle|K-short}} are [[weak interaction|weak]] [[eigenstates]] (because they have definite [[mean lifetime|lifetimes]] for decay by way of the weak force), they are ''not quite'' '''CP''' eigenstates. Instead, for small ε (and up to normalization),
+
+:{{SubatomicParticle|K-long}} = '''K&lt;sub&gt;2&lt;/sub&gt;''' + ε'''K&lt;sub&gt;1&lt;/sub&gt;'''
+
+and similarly for {{SubatomicParticle|K-short}}. Thus occasionally the {{SubatomicParticle|K-long}} decays as a '''K&lt;sub&gt;1&lt;/sub&gt;''' with '''CP'''&amp;nbsp;=&amp;nbsp;+1, and likewise the {{SubatomicParticle|K-short}} can decay with '''CP'''&amp;nbsp;=&amp;nbsp;−1. This is known as '''indirect CP violation''', CP violation due to mixing of {{SubatomicParticle|Kaon0}} and its antiparticle. There is also a '''direct CP violation''' effect, in which the CP violation occurs during the decay itself. Both are present, because both mixing and decay arise from the same interaction with the [[W boson]] and thus have CP violation predicted by the [[CKM matrix]].
+
+==See also==
+*[[Hadron]]s, [[meson]]s, [[hyperon]]s and [[flavour (particle physics)|flavour]]
+*[[Strange quark]] and the [[quark model]]
+*[[Parity (physics)]], [[charge conjugation]], [[time reversal symmetry]], [[CPT invariance]] and [[CP violation]]
+*[[Neutrino oscillation]]
+
+==References and external links==
+{{nofootnotes}}
+*[http://pdg.lbl.gov/2004/listings/mxxxcomb.html#mesonsstrange Particle data group on strange mesons]
+*''The quark model'', by J.J.J. Kokkedee
+*{{citebook|author=Sozzi, M.S.|title=Discrete symmetries and CP violation|publisher=Oxford University Press|year=2008|id=ISBN 978-0-19-929666-8}}
+*''CP violation'', by I.I. Bigi and A.I. Sanda (Cambridge University Press, 2000) ISBN 0-521-44349-0
+*Griffiths, David (1987). Introduction to Elementary Particles. New York: John Wiley &amp; Sons. ISBN 0-471-60386-4.
+
+{{Particles}}
+
+[[Category:Mesons]]
+
+[[cs:Kaon]]
+[[de:Kaon]]
+[[es:Kaón]]
+[[fa:کائون]]
+[[fr:Kaon]]
+[[it:Kaone]]
+[[he:קאון]]
+[[nl:Kaon]]
+[[ja:K中間子]]
+[[pl:Kaon]]
+[[pt:Káon]]
+[[ru:Каон]]
+[[sk:Kaón]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:SubatomicParticle</title>
+    <id>16260497</id>
+    <revision>
+      <id>205771370</id>
+      <timestamp>2008-04-15T12:20:09Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>documentation usually goes below</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#ifeq: {{lc:{{{link|}}}}} | yes
+|[[{{SubatomicParticle/link|{{{1}}}}}|{{SubatomicParticle/symbol|{{{1}}}}}]]
+|{{SubatomicParticle/symbol|{{{1}}}}}
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;!--
+PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS
+Normally, the code for the template is included, but this template is too complex to do that.
+--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:SubatomicParticle/link</title>
+    <id>16546469</id>
+    <revision>
+      <id>215202299</id>
+      <timestamp>2008-05-27T04:07:27Z</timestamp>
+      <contributor>
+        <username>Headbomb</username>
+        <id>1461430</id>
+      </contributor>
+      <minor/>
+      <comment>spaces</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#switch:{{lc:{{{1}}}}}
+|quark                  = quark
+|antiquark              = antiquark
+|up quark               = up quark
+|up antiquark           = up antiquark
+|down quark             = down quark
+|down antiquark         = down antiquark
+|strange quark          = strange quark
+|strange antiquark      = strange antiquark
+|charm quark            = charm quark
+|charm antiquark        = charm antiquark
+|bottom quark           = bottom quark
+|bottom antiquark       = bottom antiquark
+|top quark              = top quark
+|top antiquark          = top antiquark
+|
+|lepton                 = lepton
+|antilepton             = antilepton
+|electron               = electron
+|antielectron           = positron
+|positron               = positron
+|muon                   = muon
+|antimuon               = antimuon
+|tau                    = tau lepton
+|tauon                  = tau lepton
+|antitau                = antitauon
+|antitauon              = antitauon
+|neutrino               = neutrino
+|antineutrino           = antineutrino
+|electron neutrino      = electron neutrino
+|electron antineutrino  = electron antineutrino
+|muon neutrino          = muon neutrino
+|muon antineutrino      = muon antineutrino
+|tau neutrino           = tau neutrino
+|tau antineutrino       = tau antineutrino
+|
+|photon                 = photon
+|gluon                  = gluon
+|w boson                = w boson
+|w boson+               = w boson
+|w boson0               = w boson
+|w boson-               = w boson
+|w boson+-              = w boson
+|z boson                = z boson
+|higgs boson            = higgs boson
+|x boson                = x boson
+|y boson                = y boson
+|majoron                = majoron
+|
+|proton                 =proton
+|proton+                =proton
+|antiproton             =antiproton
+|antiproton-            =antiproton
+|neutron                =neutron
+|neutron0               =neutron
+|antineutron            =antineutron
+|antineutron0           =antineutron
+|nucleon                =nucleon
+|nucleon+               =proton
+|nucleon0               =neutron
+|antinucleon            =antinucleon
+|antinucleon0           =antineutron
+|antinucleon-           =antiproton
+|delta                  =delta baryon
+|delta++                =delta baryon
+|delta+                 =delta baryon
+|delta0                 =delta baryon
+|delta-                 =delta baryon
+|delta+-                =delta baryon
+|lambda                 =lambda baryon
+|lambda0                =lambda baryon
+|lambda*                =lambda baryon
+|lambda*0               =lambda baryon
+|charmed lambda         =lambda baryon
+|charmed lambda+        =lambda baryon
+|charmed lambda*        =lambda baryon
+|charmed lambda*+       =lambda baryon
+|bottom lambda          =lambda baryon
+|bottom lambda0         =lambda baryon
+|bottom lambda*         =lambda baryon
+|bottom lambda*0        =lambda baryon
+|top lambda             =lambda baryon
+|top lambda+            =lambda baryon
+|top lambda*            =lambda baryon
+|top lambda*+           =lambda baryon
+|sigma                  =sigma baryon
+|sigma+                 =sigma baryon
+|sigma0                 =sigma baryon
+|sigma-                 =sigma baryon
+|sigma+-                =sigma baryon
+|sigma*                 =sigma baryon
+|sigma*+                =sigma baryon
+|sigma*0                =sigma baryon
+|sigma*-                =sigma baryon
+|sigma*+-               =sigma baryon
+|charmed sigma          =sigma baryon
+|charmed sigma++        =sigma baryon
+|charmed sigma+         =sigma baryon
+|charmed sigma0         =sigma baryon
+|charmed sigma*         =sigma baryon
+|charmed sigma*++       =sigma baryon
+|charmed sigma*+        =sigma baryon
+|charmed sigma*0        =sigma baryon
+|bottom sigma           =sigma baryon
+|bottom sigma+          =sigma baryon
+|bottom sigma0          =sigma baryon
+|bottom sigma-          =sigma baryon
+|bottom sigma+-         =sigma baryon
+|bottom sigma*          =sigma baryon
+|bottom sigma*+         =sigma baryon
+|bottom sigma*0         =sigma baryon
+|bottom sigma*-         =sigma baryon
+|bottom sigma*+-        =sigma baryon
+|top sigma              =sigma baryon
+|top sigma++            =sigma baryon
+|top sigma+             =sigma baryon
+|top sigma0             =sigma baryon
+|top sigma*             =sigma baryon
+|top sigma*++           =sigma baryon
+|top sigma*+            =sigma baryon
+|top sigma*0            =sigma baryon
+|xi                     =xi baryon
+|xi0                    =xi baryon
+|xi-                    =xi baryon
+|xi*                    =xi baryon
+|xi*0                   =xi baryon
+|xi*-                   =xi baryon
+|charmed xi             =xi baryon
+|charmed xi+            =xi baryon
+|charmed xi0            =xi baryon
+|charmed xi'            =xi baryon
+|charmed xi'+           =xi baryon
+|charmed xi'0           =xi baryon
+|charmed xi*            =xi baryon
+|charmed xi*+           =xi baryon
+|charmed xi*0           =xi baryon
+|cascade b              =xi baryon
+|bottom xi              =xi baryon
+|bottom xi0             =xi baryon
+|bottom xi-             =xi baryon
+|bottom xi'             =xi baryon
+|bottom xi'0            =xi baryon
+|bottom xi'-            =xi baryon
+|bottom xi*             =xi baryon
+|bottom xi*0            =xi baryon
+|bottom xi*-            =xi baryon
+|top xi                 =xi baryon
+|top xi+                =xi baryon
+|top xi0                =xi baryon
+|top xi*                =xi baryon
+|top xi*+               =xi baryon
+|top xi*0               =xi baryon
+|double charmed xi      =xi baryon
+|double charmed xi++    =xi baryon
+|double charmed xi+     =xi baryon
+|double charmed xi*     =xi baryon
+|double charmed xi*++   =xi baryon
+|double charmed xi*+    =xi baryon
+|double bottom xi       =xi baryon
+|double bottom xi0      =xi baryon
+|double bottom xi-      =xi baryon
+|double bottom xi*      =xi baryon
+|double bottom xi*0     =xi baryon
+|double bottom xi*-     =xi baryon
+|double top xi          =xi baryon
+|double top xi++        =xi baryon
+|double top xi+         =xi baryon
+|double top xi*         =xi baryon
+|double top xi*++       =xi baryon
+|double top xi*+        =xi baryon
+|charmed bottom xi      =xi baryon
+|charmed bottom xi+     =xi baryon
+|charmed bottom xi0     =xi baryon
+|charmed bottom xi'     =xi baryon
+|charmed bottom xi'+    =xi baryon
+|charmed bottom xi'0    =xi baryon
+|charmed bottom xi*     =xi baryon
+|charmed bottom xi*+    =xi baryon
+|charmed bottom xi*0    =xi baryon
+|charmed top xi         =xi baryon
+|charmed top xi++       =xi baryon
+|charmed top xi+        =xi baryon
+|charmed top xi*        =xi baryon
+|charmed top xi*++      =xi baryon
+|charmed top xi*+       =xi baryon
+|bottom top xi          =xi baryon
+|bottom top xi+         =xi baryon
+|bottom top xi0         =xi baryon
+|bottom top xi*         =xi baryon
+|bottom top xi*+        =xi baryon
+|bottom top xi*0        =xi baryon
+|omega                  =omega baryon
+|omega-                 =omega baryon
+|charmed omega          =omega baryon
+|charmed omega0         =omega baryon
+|charmed omega*         =omega baryon
+|charmed omega*0        =omega baryon
+|bottom omega           =omega baryon
+|bottom omega-          =omega baryon
+|bottom omega*          =omega baryon
+|bottom omega*-         =omega baryon
+|top omega              =omega baryon
+|top omega0             =omega baryon
+|top omega*             =omega baryon
+|top omega*0            =omega baryon
+|double charmed omega   =omega baryon
+|double charmed omega+  =omega baryon
+|double charmed omega*  =omega baryon
+|double charmed omega*+ =omega baryon
+|double bottom omega    =omega baryon
+|double bottom omega-   =omega baryon
+|double bottom omega*   =omega baryon
+|double bottom omega*-  =omega baryon
+|double top omega       =omega baryon
+|double top omega+      =omega baryon
+|double top omega*      =omega baryon
+|double top omega*+     =omega baryon
+|charmed bottom omega   =omega baryon
+|charmed bottom omega0  =omega baryon
+|charmed bottom omega'  =omega baryon
+|charmed bottom omega'0 =omega baryon
+|charmed bottom omega*  =omega baryon
+|charmed bottom omega*0 =omega baryon
+|charmed top omega      =omega baryon
+|charmed top omega+     =omega baryon
+|charmed top omega*     =omega baryon
+|charmed top omega*+    =omega baryon
+|bottom top omega       =omega baryon
+|bottom top omega0      =omega baryon
+|bottom top omega*      =omega baryon
+|bottom top omega*0     =omega baryon
+|triple charmed omega   =omega baryon
+|triple charmed omega++ =omega baryon
+|triple bottom omega    =omega baryon
+|triple bottom omega-   =omega baryon
+|triple top omega       =omega baryon
+|triple top omega++     =omega baryon
+|double charmed bottom omega     =omega baryon
+|double charmed bottom omega+    =omega baryon
+|double charmed bottom omega*    =omega baryon
+|double charmed bottom omega*+   =omega baryon
+|double charmed top omega        =omega baryon
+|double charmed top omega++      =omega baryon
+|double charmed top omega*       =omega baryon
+|double charmed top omega*++     =omega baryon
+|charmed double bottom omega     =omega baryon
+|charmed double bottom omega0    =omega baryon
+|charmed double bottom omega*    =omega baryon
+|charmed double bottom omega*0   =omega baryon
+|charmed bottom top omega        =omega baryon
+|charmed bottom top omega+       =omega baryon
+|charmed bottom top omega*       =omega baryon
+|charmed bottom top omega*+      =omega baryon
+|charmed double top omega        =omega baryon
+|charmed double top omega++      =omega baryon
+|charmed double top omega*       =omega baryon
+|charmed double top omega*++     =omega baryon
+|double bottom top omega         =omega baryon
+|double bottom top omega0        =omega baryon
+|double bottom top omega*        =omega baryon
+|double bottom top omega*0       =omega baryon
+|bottom double top omega         =omega baryon
+|bottom double top omega+        =omega baryon
+|bottom double top omega*        =omega baryon
+|bottom double top omega*+       =omega baryon
+|
+|theta+                 = pentaquark
+|charmed theta0         = pentaquark
+|phi0                   = pentaquark
+|
+|pion                   = pion
+|pion+                  = pion
+|pion0                  = pion
+|pion-                  = pion
+|pion+-                 = pion
+|kaon                   = kaon
+|kaon+                  = kaon
+|kaon0                  = kaon
+|kaon-                  = kaon
+|kaon+-                 = kaon
+|antikaon               = kaon
+|antikaon+              = kaon
+|antikaon0              = kaon
+|antikaon-              = kaon
+|antikaon+-             = kaon
+|k-short                = kaon
+|k-short0               = kaon
+|k-long                 = kaon
+|k-long0                = kaon
+|eta                    = eta meson
+|eta prime              = eta meson
+|charmed eta            = eta meson
+|charmed eta prime      = eta meson
+|omega meson            = omega meson
+|rho                    = rho meson
+|rho+                   = rho meson
+|rho0                   = rho meson
+|rho-                   = rho meson
+|rho+-                  = rho meson
+|phi meson              = phi meson
+|d                      = D meson
+|d+                     = D meson
+|d0                     = D meson
+|d-                     = D meson
+|d+-                    = D meson
+|antid                  = D meson
+|antid+                 = D meson
+|antid0                 = D meson
+|antid-                 = D meson
+|antid+-                = D meson
+|strange d              = D meson
+|strange d*             = D meson
+|strange d+             = D meson
+|strange d0             = D meson
+|strange d-             = D meson
+|strange d+-            = D meson
+|j/psi                  = J/ψ meson
+|b                      = B meson
+|b+                     = B meson
+|b0                     = B meson
+|b-                     = B meson
+|b+-                    = B meson
+|antib                  = B meson
+|antib+                 = B meson
+|antib0                 = B meson
+|antib-                 = B meson
+|antib+-                = B meson
+|strange b              = B meson
+|strange b0             = B meson
+|strange antib          = B meson
+|strange antib0         = B meson
+|charmed b              = B meson
+|charmed b+             = B meson
+|charmed b0             = B meson
+|charmed b-             = B meson
+|charmed b+-            = B meson
+|charmed antib          = B meson
+|charmed antib+         = B meson
+|charmed antib0         = B meson
+|charmed antib-         = B meson
+|charmed antib+-        = B meson
+|upsilon                = Upsilon particle
+|
+|gamma                  = gamma ray
+|alpha                  = alpha particle
+|alpha++                = alpha particle
+|beta                   = beta particle
+|beta+                  = beta particle
+|beta-                  = beta particle
+|beta+-                 = beta particle
+|
+|para-positronium       = positronium
+|ortho-positronium      = positronium
+|antihydrogen           = antihydrogen
+|antideuterium          = antideuterium
+|antitritium            = antitritium
+|antihelium             = antihelium
+|
+|#default               = {{FormattingError|Error in &lt;nowiki&gt;{{&lt;/nowiki&gt;[[Template:SubatomicParticle/link|SubatomicParticle]]&lt;nowiki&gt;}}&lt;/nowiki&gt;: unknown particle {{{1}}}}}
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:SubatomicParticle/symbol</title>
+    <id>16288186</id>
+
+    <revision>
+      <id>211354924</id>
+      <timestamp>2008-05-09T22:49:18Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+
+      <comment>update to use new syntax for {{PhysicsParticle}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#switch:{{lc:{{{1}}}}}
+|quark={{PhysicsParticle|q}}
+|antiquark={{PhysicsParticle|anti=yes|q}}
+|up quark={{PhysicsParticle|u}}
+|up antiquark={{PhysicsParticle|anti=yes|u}}
+|down quark={{PhysicsParticle|d}}
+|down antiquark={{PhysicsParticle|anti=yes|d}}
+|strange quark={{PhysicsParticle|s}}
+|strange antiquark={{PhysicsParticle|anti=yes|s}}
+|charm quark={{PhysicsParticle|c}}
+|charm antiquark={{PhysicsParticle|anti=yes|c}}
+|bottom quark={{PhysicsParticle|b}}
+|bottom antiquark={{PhysicsParticle|anti=yes|b}}
+|top quark={{PhysicsParticle|t}}
+|top antiquark={{PhysicsParticle|anti=yes|t}}
+|
+|lepton={{PhysicsParticle|l}}
+|antilepton={{PhysicsParticle|anti=yes|l}}
+|electron={{PhysicsParticle|e|TR=&amp;minus;}}
+|antielectron={{PhysicsParticle|e|TR=+}}
+|positron={{PhysicsParticle|e|TR=+}}
+|muon={{PhysicsParticle|&amp;mu;|TR=&amp;minus;}}
+|antimuon={{PhysicsParticle|&amp;mu;|TR=+}}
+|tau={{PhysicsParticle|&amp;tau;|TR=&amp;minus;}}
+|tauon={{PhysicsParticle|&amp;tau;|TR=&amp;minus;}}
+|antitau={{PhysicsParticle|&amp;tau;|TR=+}}
+|antitauon={{PhysicsParticle|&amp;tau;|TR=+}}
+|neutrino={{PhysicsParticle|&amp;nu;}}
+|antineutrino={{PhysicsParticle|anti=yes|&amp;nu;}}
+|electron neutrino={{PhysicsParticle|&amp;nu;|BR=e}}
+|electron antineutrino={{PhysicsParticle|anti=yes|&amp;nu;|BR=e}}
+|muon neutrino={{PhysicsParticle|&amp;nu;|BR=&amp;mu;}}
+|muon antineutrino={{PhysicsParticle|anti=yes|&amp;nu;|BR=&amp;mu;}}
+|tau neutrino={{PhysicsParticle|&amp;nu;|BR=&amp;tau;}}
+|tau antineutrino={{PhysicsParticle|anti=yes|&amp;nu;|BR=&amp;tau;}}
+|
+|photon={{PhysicsParticle|&amp;gamma;}}
+|gluon={{PhysicsParticle|g}}
+|w boson={{PhysicsParticle|W}}
+|w boson+={{PhysicsParticle|W|TR=+}}
+|w boson0={{PhysicsParticle|W|TR=0}}
+|w boson-={{PhysicsParticle|W|TR=&amp;minus;}}
+|w boson+-={{PhysicsParticle|W|TR=&amp;plusmn;}}
+|z boson={{PhysicsParticle|Z}}
+|higgs boson={{PhysicsParticle|H|TR=0}}
+|x boson={{PhysicsParticle|X}}
+|y boson={{PhysicsParticle|Y}}
+|majoron={{PhysicsParticle|J}}
+|
+|proton={{PhysicsParticle|p}}
+|proton+={{PhysicsParticle|p|TR=+}}
+|antiproton={{PhysicsParticle|anti=yes|p}}
+|antiproton-={{PhysicsParticle|anti=yes|p|TR=&amp;minus;}}
+|neutron={{PhysicsParticle|n}}
+|neutron0={{PhysicsParticle|n|TR=0}}
+|antineutron={{PhysicsParticle|anti=yes|n}}
+|antineutron0={{PhysicsParticle|anti=yes|n|TR=0}}
+|nucleon={{PhysicsParticle|N}}
+|nucleon+={{PhysicsParticle|N|TR=+}}
+|nucleon0={{PhysicsParticle|N|TR=0}}
+|antinucleon={{PhysicsParticle|anti=yes|N}}
+|antinucleon0={{PhysicsParticle|anti=yes|N|TR=0}}
+|antinucleon-={{PhysicsParticle|anti=yes|N|TR=-}}
+
+|delta={{PhysicsParticle|&amp;Delta;}}
+|delta++={{PhysicsParticle|&amp;Delta;|TR=++}}
+|delta+={{PhysicsParticle|&amp;Delta;|TR=+}}
+|delta0={{PhysicsParticle|&amp;Delta;|TR=0}}
+|delta-={{PhysicsParticle|&amp;Delta;|TR=&amp;minus;}}
+|delta+-={{PhysicsParticle|&amp;Delta;|TR=&amp;plusmn;}}
+
+|lambda={{PhysicsParticle|&amp;Lambda;}}
+|lambda0={{PhysicsParticle|&amp;Lambda;|TR=0}}
+|charmed lambda={{PhysicsParticle|&amp;Lambda;|BR=c}}
+|charmed lambda+={{PhysicsParticle|&amp;Lambda;|TR=+|BR=c}}
+|bottom lambda={{PhysicsParticle|&amp;Lambda;|BR=b}}
+|bottom lambda0={{PhysicsParticle|&amp;Lambda;|TR=0|BR=b}}
+|top lambda={{PhysicsParticle|&amp;Lambda;|BR=t}}
+|top lambda+={{PhysicsParticle|&amp;Lambda;|TR=+|BR=t}}
+
+|sigma={{PhysicsParticle|&amp;Sigma;}}
+|sigma+={{PhysicsParticle|&amp;Sigma;|TR=+}}
+|sigma0={{PhysicsParticle|&amp;Sigma;|TR=0}}
+|sigma-={{PhysicsParticle|&amp;Sigma;|TR=&amp;minus;}}
+|sigma+-={{PhysicsParticle|&amp;Sigma;|TR=&amp;plusmn;}}
+|sigma*={{PhysicsParticle|&amp;Sigma;|TR=∗}}
+|sigma*+={{PhysicsParticle|&amp;Sigma;|TR=∗+}}
+|sigma*0={{PhysicsParticle|&amp;Sigma;|TR=∗0}}
+|sigma*-={{PhysicsParticle|&amp;Sigma;|TR=∗-}}
+|sigma*+-={{PhysicsParticle|&amp;Sigma;|TR=∗&amp;plusmn;}}
+|charmed sigma={{PhysicsParticle|&amp;Sigma;|BR=c}}
+|charmed sigma++={{PhysicsParticle|&amp;Sigma;|TR=++|BR=c}}
+|charmed sigma+={{PhysicsParticle|&amp;Sigma;|TR=+|BR=c}}
+|charmed sigma0={{PhysicsParticle|&amp;Sigma;|TR=0|BR=c}}
+|charmed sigma*={{PhysicsParticle|&amp;Sigma;|TR=∗|BR=c}}
+|charmed sigma*++={{PhysicsParticle|&amp;Sigma;|TR=∗++|BR=c}}
+|charmed sigma*+={{PhysicsParticle|&amp;Sigma;|TR=∗+|BR=c}}
+|charmed sigma*0={{PhysicsParticle|&amp;Sigma;|TR=∗0|BR=c}}
+|bottom sigma={{PhysicsParticle|&amp;Sigma;|BR=b}}
+|bottom sigma+={{PhysicsParticle|&amp;Sigma;|TR=+|BR=b}}
+|bottom sigma0={{PhysicsParticle|&amp;Sigma;|TR=0|BR=b}}
+|bottom sigma-={{PhysicsParticle|&amp;Sigma;|TR=&amp;minus;|BR=b}}
+|bottom sigma+-={{PhysicsParticle|&amp;Sigma;|TR=&amp;plusmn;|BR=b}}
+|bottom sigma*={{PhysicsParticle|&amp;Sigma;|TR=∗|BR=b}}
+|bottom sigma*+={{PhysicsParticle|&amp;Sigma;|TR=∗+|BR=b}}
+|bottom sigma*0={{PhysicsParticle|&amp;Sigma;|TR=∗0|BR=b}}
+|bottom sigma*-={{PhysicsParticle|&amp;Sigma;|TR=∗&amp;minus;|BR=b}}
+|bottom sigma*+-={{PhysicsParticle|&amp;Sigma;|TR=∗&amp;plusmn;|BR=b}}
+|top sigma={{PhysicsParticle|&amp;Sigma;|TR=++|BR=t}}
+|top sigma++={{PhysicsParticle|&amp;Sigma;|TR=++|BR=t}}
+|top sigma+={{PhysicsParticle|&amp;Sigma;|TR=+|BR=t}}
+|top sigma0={{PhysicsParticle|&amp;Sigma;|TR=0|BR=t}}
+|top sigma*={{PhysicsParticle|&amp;Sigma;|TR=∗|BR=t}}
+|top sigma*++={{PhysicsParticle|&amp;Sigma;|TR=∗++|BR=t}}
+|top sigma*+={{PhysicsParticle|&amp;Sigma;|TR=∗+|BR=t}}
+|top sigma*0={{PhysicsParticle|&amp;Sigma;|TR=∗0|BR=t}}
+
+|xi={{PhysicsParticle|&amp;Xi;}}
+|xi0={{PhysicsParticle|&amp;Xi;|TR=0}}
+|xi-={{PhysicsParticle|&amp;Xi;|TR=&amp;minus;}}
+|xi*={{PhysicsParticle|TR=∗|&amp;Xi;}}
+|xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0}}
+|xi*-={{PhysicsParticle|&amp;Xi;|TR=∗&amp;minus;}}
+|charmed xi={{PhysicsParticle|&amp;Xi;|BR=c}}
+|charmed xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=c}}
+|charmed xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=c}}
+|charmed xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=c}}
+|charmed xi'+={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=+|BR=c}}
+|charmed xi'0={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=0|BR=c}}
+|charmed xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=c}}
+|charmed xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=c}}
+|charmed xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=c}}
+|cascade b={{PhysicsParticle|&amp;Xi;|BR=b}}
+|bottom xi={{PhysicsParticle|&amp;Xi;|BR=b}}
+|bottom xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=b}}
+|bottom xi-={{PhysicsParticle|&amp;Xi;|TR=&amp;minus;|BR=b}}
+|bottom xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=b}}
+|bottom xi'0={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=0|BR=b}}
+|bottom xi'-={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=&amp;minus;|BR=b}}
+|bottom xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=b}}
+|bottom xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=b}}
+|bottom xi*-={{PhysicsParticle|&amp;Xi;|TR=∗&amp;minus;|BR=b}}
+|top xi={{PhysicsParticle|&amp;Xi;|BR=t}}
+|top xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=t}}
+|top xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=t}}
+|top xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=t}}
+|top xi'+={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=+|BR=t}}
+|top xi'0={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=0|BR=t}}
+|top xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=t}}
+|top xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=t}}
+|top xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=t}}
+|double charmed xi={{PhysicsParticle|&amp;Xi;|BR=cc}}
+|double charmed xi++={{PhysicsParticle|&amp;Xi;|TR=++|BR=cc}}
+|double charmed xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=cc}}
+|double charmed xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=cc}}
+|double charmed xi*++={{PhysicsParticle|&amp;Xi;|TR=∗++|BR=cc}}
+|double charmed xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=cc}}
+|double bottom xi={{PhysicsParticle|&amp;Xi;|BR=bb}}
+|double bottom xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=bb}}
+|double bottom xi-={{PhysicsParticle|&amp;Xi;|TR=&amp;minus;|BR=bb}}
+|double bottom xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=bb}}
+|double bottom xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=bb}}
+|double bottom xi*-={{PhysicsParticle|&amp;Xi;|TR=∗&amp;minus;|BR=bb}}
+|double top xi={{PhysicsParticle|&amp;Xi;|BR=tt}}
+|double top xi++={{PhysicsParticle|&amp;Xi;|TR=++|BR=tt}}
+|double top xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=tt}}
+|double top xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=tt}}
+|double top xi*++={{PhysicsParticle|&amp;Xi;|TR=∗++|BR=tt}}
+|double top xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=tt}}
+|charmed bottom xi={{PhysicsParticle|&amp;Xi;|BR=cc}}
+|charmed bottom xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=cb}}
+|charmed bottom xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=cb}}
+|charmed bottom xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=cc}}
+|charmed bottom xi'+={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=+|BR=cb}}
+|charmed bottom xi'0={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=0|BR=cb}}
+|charmed bottom xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=cc}}
+|charmed bottom xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=cb}}
+|charmed bottom xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=cb}}
+|charmed top xi={{PhysicsParticle|&amp;Xi;|BR=ct}}
+|charmed top xi++={{PhysicsParticle|&amp;Xi;|TR=++|BR=ct}}
+|charmed top xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=ct}}
+|charmed top xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=ct}}
+|charmed top xi'++={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=++|BR=ct}}
+|charmed top xi'+={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=+|BR=ct}}
+|charmed top xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=ct}}
+|charmed top xi*++={{PhysicsParticle|&amp;Xi;|TR=∗++|BR=ct}}
+|charmed top xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=ct}}
+|bottom top xi={{PhysicsParticle|&amp;Xi;|BR=bt}}
+|bottom top xi+={{PhysicsParticle|&amp;Xi;|TR=+|BR=bt}}
+|bottom top xi0={{PhysicsParticle|&amp;Xi;|TR=0|BR=bt}}
+|bottom top xi'={{PhysicsParticle|&amp;Xi;&amp;prime;|BR=bt}}
+|bottom top xi'+={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=+|BR=bt}}
+|bottom top xi'0={{PhysicsParticle|&amp;Xi;&amp;prime;|TR=0|BR=bt}}
+|bottom top xi*={{PhysicsParticle|&amp;Xi;|TR=∗|BR=bt}}
+|bottom top xi*+={{PhysicsParticle|&amp;Xi;|TR=∗+|BR=bt}}
+|bottom top xi*0={{PhysicsParticle|&amp;Xi;|TR=∗0|BR=bt}}
+
+|omega={{PhysicsParticle|&amp;Omega;}}
+|omega-={{PhysicsParticle|&amp;Omega;|TR=&amp;minus;}}
+|charmed omega={{PhysicsParticle|&amp;Omega;|BR=c}}
+|charmed omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=c}}
+|charmed omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=c}}
+|charmed omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=c}}
+|bottom omega={{PhysicsParticle|&amp;Omega;|BR=b}}
+|bottom omega-={{PhysicsParticle|&amp;Omega;|TR=&amp;minus;|BR=b}}
+|bottom omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=b}}
+|bottom omega*-={{PhysicsParticle|&amp;Omega;|TR=∗&amp;minus;|BR=b}}
+|top omega={{PhysicsParticle|&amp;Omega;|BR=t}}
+|top omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=t}}
+|top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=t}}
+|top omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=t}}
+|double charmed omega={{PhysicsParticle|&amp;Omega;|BR=cc}}
+|double charmed omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=cc}}
+|double charmed omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=cc}}
+|double charmed omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=cc}}
+|double bottom omega={{PhysicsParticle|&amp;Omega;|BR=bb}}
+|double bottom omega-={{PhysicsParticle|&amp;Omega;|TR=&amp;minus;|BR=bb}}
+|double bottom omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=bb}}
+|double bottom omega*-={{PhysicsParticle|&amp;Omega;|TR=∗&amp;minus;|BR=bb}}
+|double top omega={{PhysicsParticle|&amp;Omega;|BR=tt}}
+|double top omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=tt}}
+|double top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=tt}}
+|double top omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=tt}}
+|charmed bottom omega={{PhysicsParticle|&amp;Omega;|BR=cb}}
+|charmed bottom omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=cb}}
+|charmed bottom omega'={{PhysicsParticle|&amp;Omega;&amp;prime;|BR=cb}}
+|charmed bottom omega'0={{PhysicsParticle|&amp;Omega;&amp;prime;|TR=0|BR=cb}}
+|charmed bottom omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=cb}}
+|charmed bottom omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=cb}}
+|charmed top omega={{PhysicsParticle|&amp;Omega;|BR=ct}}
+|charmed top omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=ct}}
+|charmed top omega'={{PhysicsParticle|&amp;Omega;&amp;prime;|BR=ct}}
+|charmed top omega'+={{PhysicsParticle|&amp;Omega;&amp;prime;|TR=+|BR=ct}}
+|charmed top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=ct}}
+|charmed top omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=ct}}
+|bottom top omega={{PhysicsParticle|&amp;Omega;|BR=bt}}
+|bottom top omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=bt}}
+|bottom top omega'={{PhysicsParticle|&amp;Omega;&amp;prime;|BR=bt}}
+|bottom top omega'0={{PhysicsParticle|&amp;Omega;&amp;prime;|TR=0|BR=bt}}
+|bottom top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=bt}}
+|bottom top omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=bt}}
+|triple charmed omega={{PhysicsParticle|&amp;Omega;|BR=ccc}}
+|triple charmed omega++={{PhysicsParticle|&amp;Omega;|TR=++|BR=ccc}}
+|triple bottom omega={{PhysicsParticle|&amp;Omega;|BR=bbb}}
+|triple bottom omega-={{PhysicsParticle|&amp;Omega;|TR=&amp;minus;|BR=bbb}}
+|triple top omega={{PhysicsParticle|&amp;Omega;|BR=ttt}}
+|triple top omega++={{PhysicsParticle|&amp;Omega;|TR=++|BR=ttt}}
+|double charmed bottom omega={{PhysicsParticle|&amp;Omega;|BR=ccb}}
+|double charmed bottom omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=ccb}}
+|double charmed bottom omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=ccb}}
+|double charmed bottom omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=ccb}}
+|double charmed top omega={{PhysicsParticle|&amp;Omega;|BR=cct}}
+|double charmed top omega++={{PhysicsParticle|&amp;Omega;|TR=++|BR=cct}}
+|double charmed top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=cct}}
+|double charmed top omega*++={{PhysicsParticle|&amp;Omega;|TR=∗++|BR=cct}}
+|charmed double bottom omega={{PhysicsParticle|&amp;Omega;|BR=cbb}}
+|charmed double bottom omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=cbb}}
+|charmed double bottom omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=cbb}}
+|charmed double bottom omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=cbb}}
+|charmed bottom top omega={{PhysicsParticle|&amp;Omega;|BR=cbt}}
+|charmed bottom top omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=cbt}}
+|charmed bottom top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=cbt}}
+|charmed bottom top omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=cbt}}
+|charmed double top omega={{PhysicsParticle|&amp;Omega;|BR=ctt}}
+|charmed double top omega++={{PhysicsParticle|&amp;Omega;|TR=++|BR=ctt}}
+|charmed double top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=ctt}}
+|charmed double top omega*++={{PhysicsParticle|&amp;Omega;|TR=∗++|BR=ctt}}
+|double bottom top omega={{PhysicsParticle|&amp;Omega;|BR=bbt}}
+|double bottom top omega0={{PhysicsParticle|&amp;Omega;|TR=0|BR=bbt}}
+|double bottom top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=bbt}}
+|double bottom top omega*0={{PhysicsParticle|&amp;Omega;|TR=∗0|BR=bbt}}
+|bottom double top omega={{PhysicsParticle|&amp;Omega;|BR=btt}}
+|bottom double top omega+={{PhysicsParticle|&amp;Omega;|TR=+|BR=btt}}
+|bottom double top omega*={{PhysicsParticle|&amp;Omega;|TR=∗|BR=btt}}
+|bottom double top omega*+={{PhysicsParticle|&amp;Omega;|TR=∗+|BR=btt}}
+
+|theta+={{PhysicsParticle|&amp;Theta;|TR=+}}
+|charmed theta0={{PhysicsParticle|&amp;Theta;|TR=0|BR=c}}
+|phi0={{PhysicsParticle|&amp;Phi;|TR=0}}
+|
+|pion={{PhysicsParticle|&amp;pi;}}
+|pion+={{PhysicsParticle|&amp;pi;|TR=+}}
+|pion0={{PhysicsParticle|&amp;pi;|TR=0}}
+|pion-={{PhysicsParticle|&amp;pi;|TR=&amp;minus;}}
+|pion+-={{PhysicsParticle|&amp;pi;|TR=&amp;plusmn;}}
+|kaon={{PhysicsParticle|K}}
+|kaon+={{PhysicsParticle|K|TR=+}}
+|kaon0={{PhysicsParticle|K|TR=0}}
+|kaon-={{PhysicsParticle|K|TR=&amp;minus;}}
+|kaon+-={{PhysicsParticle|K|TR=&amp;plusmn;}}
+|antikaon={{PhysicsParticle|anti=yes|K}}
+|antikaon+={{PhysicsParticle|anti=yes|K|TR=+}}
+|antikaon0={{PhysicsParticle|anti=yes|K|TR=0}}
+|antikaon-={{PhysicsParticle|anti=yes|K|TR=&amp;minus;}}
+|antikaon+-={{PhysicsParticle|anti=yes|K|TR=&amp;plusmn;}}
+|k-short={{PhysicsParticle|K|BR=S}}
+|k-short0={{PhysicsParticle|K|TR=0|BR=S}}
+|k-long={{PhysicsParticle|K|BR=L}}
+|k-long0={{PhysicsParticle|K|TR=0|BR=L}}
+|eta={{PhysicsParticle|&amp;eta;}}
+|eta prime={{PhysicsParticle|&amp;eta;&amp;prime;}}
+|charmed eta={{PhysicsParticle|&amp;eta;|BR=c}}
+|charmed eta prime={{PhysicsParticle|&amp;eta;&amp;prime;|BR=c}}
+|omega meson={{PhysicsParticle|&amp;omega;}}
+|rho={{PhysicsParticle|&amp;rho;}}
+|rho+={{PhysicsParticle|&amp;rho;|TR=+}}
+|rho0={{PhysicsParticle|&amp;rho;|TR=0}}
+|rho-={{PhysicsParticle|&amp;rho;|TR=&amp;minus;}}
+|rho+-={{PhysicsParticle|&amp;rho;|TR=&amp;plusmn;}}
+|phi meson={{PhysicsParticle|&amp;phi;}}
+|d={{PhysicsParticle|D}}
+|d+={{PhysicsParticle|D|TR=+}}
+|d0={{PhysicsParticle|D|TR=0}}
+|d-={{PhysicsParticle|D|TR=&amp;minus;}}
+|d+-={{PhysicsParticle|D|TR=&amp;plusmn;}}
+|antid={{PhysicsParticle|anti=yes|D}}
+|antid+={{PhysicsParticle|anti=yes|D|TR=+}}
+|antid0={{PhysicsParticle|anti=yes|D|TR=0}}
+|antid-={{PhysicsParticle|anti=yes|D|TR=&amp;minus;}}
+|antid+-={{PhysicsParticle|anti=yes|D|TR=&amp;plusmn;}}
+|strange d={{PhysicsParticle|D|BR=s}}
+|strange d*={{PhysicsParticle|D|TR=∗|BR=s}} 
+|strange d+={{PhysicsParticle|D|TR=+|BR=s}}
+|strange d0={{PhysicsParticle|D|TR=0|BR=s}}
+|strange d-={{PhysicsParticle|D|TR=&amp;minus;|BR=s}}
+|strange d+-={{PhysicsParticle|D|TR=&amp;plusmn;|BR=s}}
+|j/psi={{PhysicsParticle|J/&amp;psi;}}
+|b={{PhysicsParticle|B}}
+|b+={{PhysicsParticle|B|TR=+}}
+|b0={{PhysicsParticle|B|TR=0}}
+|b-={{PhysicsParticle|B|TR=&amp;minus;}}
+|b+-={{PhysicsParticle|B|TR=&amp;plusmn;}}
+|antib={{PhysicsParticle|anti=yes|B}}
+|antib+={{PhysicsParticle|anti=yes|B|TR=+}}
+|antib0={{PhysicsParticle|anti=yes|B|TR=0}}
+|antib-={{PhysicsParticle|anti=yes|B|TR=&amp;minus;}}
+|antib+-={{PhysicsParticle|anti=yes|B|TR=&amp;plusmn;}}
+|strange b={{PhysicsParticle|B|BR=s}}
+|strange b0={{PhysicsParticle|B|TR=0|BR=s}}
+|strange antib={{PhysicsParticle|anti=yes|B|BR=s}}
+|strange antib0={{PhysicsParticle|anti=yes|B|TR=0|BR=s}}
+|charmed b={{PhysicsParticle|B|BR=c}}
+|charmed b+={{PhysicsParticle|B|TR=+|BR=c}}
+|charmed b0={{PhysicsParticle|B|TR=0|BR=c}}
+|charmed b-={{PhysicsParticle|B|TR=&amp;minus;|BR=c}}
+|charmed b+-={{PhysicsParticle|B|TR=&amp;plusmn;|BR=c}}
+|charmed antib={{PhysicsParticle|anti=yes|B|BR=c}}
+|charmed antib+={{PhysicsParticle|anti=yes|B|TR=+|BR=c}}
+|charmed antib0={{PhysicsParticle|anti=yes|B|TR=0|BR=c}}
+|charmed antib-={{PhysicsParticle|anti=yes|B|TR=&amp;minus;|BR=c}}
+|charmed antib+-={{PhysicsParticle|anti=yes|B|TR=&amp;plusmn;|BR=c}}
+|upsilon={{PhysicsParticle|&amp;Upsilon;}}
+|
+|gamma={{PhysicsParticle|&amp;gamma;}}
+|alpha={{PhysicsParticle|&amp;alpha;}}
+|alpha++={{PhysicsParticle|&amp;alpha;|TR=++}}
+|beta={{PhysicsParticle|&amp;beta;}}
+|beta+={{PhysicsParticle|&amp;beta;|TR=+}}
+|beta-={{PhysicsParticle|&amp;beta;|TR=&amp;minus;}}
+|beta+-={{PhysicsParticle|&amp;beta;|TR=&amp;plusmn;}}
+|
+|para-positronium={{PhysicsParticle|S|TL=1|BR=0}}
+|ortho-positronium={{PhysicsParticle|S|TL=3|BR=0}}
+|antihydrogen={{PhysicsParticle|anti=yes|H}}
+|antideuterium={{PhysicsParticle|anti=yes|D}}
+|antitritium={{PhysicsParticle|anti=yes|T}}
+|antihelium={{PhysicsParticle|anti=yes|He}}
+|#default = {{FormattingError|Error in {{tl|SubatomicParticle/symbol}}: unknown particle {{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Su</title>
+    <id>16844188</id>
+
+    <revision>
+      <id>211374791</id>
+      <timestamp>2008-05-10T00:57:50Z</timestamp>
+      <contributor>
+        <username>Dragons flight</username>
+        <id>16980</id>
+      </contributor>
+
+      <comment>minor reduction in parser load for heavily used template</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;
+{{documentation}}
+&lt;!--
+PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS
+Normally, the code for the template is included, but this template is too complex to do that.
+--&gt;&lt;/noinclude&gt;&lt;includeonly&gt;{{#ifeq:{{{p|{{{b|}}}}}}|{{{b}}}
+|&lt;sub&gt;{{{b}}}&lt;/sub&gt;
+|{{#if:{{{b|}}}
+|&lt;SPAN style=&quot;{{#ifeq: {{{w|}}}|f| font: 80% monospace; |font-size:80%; }} display:-moz-inline-box; -moz-box-orient:vertical; display:inline-block; vertical-align: bottom; /*Horizontal positioning, affects IE&amp;FF*/margin-bottom:-0.4em; min-height:1em; line-height:1em; {{#switch: {{{a|}}}|r=text-align:right|c=text-align:center}}&quot;&gt;&lt;SPAN style=&quot;display:block; min-height:1em; /*Horizontal positioning, affects IE only*/margin-top:-1.4em;&quot;&gt;{{{p|&amp;nbsp;}}}&lt;/SPAN&gt;&lt;SPAN style=&quot;display:block; min-height:1em;&quot;&gt;{{{b|&amp;nbsp;}}}&lt;/SPAN&gt;&lt;/SPAN&gt;
+
+|&lt;sup&gt;{{{p}}}&lt;/sup&gt;
+}}}}&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:PhysicsParticle</title>
+    <id>16287605</id>
+
+    <revision>
+      <id>212542581</id>
+      <timestamp>2008-05-15T05:54:12Z</timestamp>
+      <contributor>
+        <username>SkyLined</username>
+        <id>6429027</id>
+      </contributor>
+
+      <comment>Previous change appears to mess up anything that has an overline :S</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;
+{{documentation}}
+&lt;!--
+PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS
+Normally, the code for the template is included, but this template is too complex to do that.
+--&gt;&lt;/noinclude&gt;&lt;includeonly&gt;&lt;span style=&quot;white-space:nowrap&quot;&gt;&lt;!--
+  --&gt;{{#if:{{{link|}}}|&lt;!--
+    --&gt;[[{{{link}}}|&lt;!-- with link
+      --&gt;{{#if:{{{TL|{{{BL|}}}}}}|{{su|a=r|p={{{TL|}}}|b={{{BL|}}}}}}}&lt;!--
+      --&gt;{{#ifeq: {{{anti}}}|yes|{{overline|{{{1}}}}}|{{{1}}}}}&lt;!--
+      --&gt;{{#if:{{{TR|{{{BR|}}}}}}|{{su|a=l|p={{{TR|}}}|b={{{BR|}}}}}}}&lt;!--
+    --&gt;]]&lt;!--
+  --&gt;|&lt;!-- without link
+    --&gt;{{#if:{{{TL|{{{BL|}}}}}}|{{su|a=r|p={{{TL|}}}|b={{{BL|}}}}}}}&lt;!--
+    --&gt;{{#ifeq: {{{anti}}}|yes|{{overline|{{{1}}}}}|{{{1}}}}}&lt;!--
+    --&gt;{{#if:{{{TR|{{{BR|}}}}}}|{{su|a=l|p={{{TR|}}}|b={{{BR|}}}}}}}&lt;!--
+  --&gt;}}&lt;!--
+--&gt;&lt;/span&gt;&lt;/includeonly&gt;</text>
+
+    </revision>
+  </page>
+  <page>
+    <title>Template:Overline</title>
+    <id>5457334</id>
+
+    <revision>
+      <id>181333585</id>
+      <timestamp>2008-01-01T05:43:27Z</timestamp>
+      <contributor>
+        <username>Ryulong</username>
+        <id>889851</id>
+      </contributor>
+
+      <minor/>
+      <comment>Protected Template:Overline [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;span style=&quot;text-decoration:overline;&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;
+{{{{FULLPAGENAME}}/doc}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+
+    </revision>
+  </page>
+  <page>
+    <title>Template:Particles</title>
+    <id>9344409</id>
+
+    <revision>
+      <id>214238616</id>
+      <timestamp>2008-05-22T18:10:54Z</timestamp>
+      <contributor>
+        <username>Ersik</username>
+        <id>6912903</id>
+      </contributor>
+
+      <text xml:space="preserve">{{Navbox 
+|name = Particles
+|title=[[Particle physics|Particles in physics]]
+|group1=[[Elementary particle]]s
+|list1='''''[[Fermion]]s:'''''&amp;nbsp; '''[[Quark]]s''': [[up quark|u]] · [[down quark|d]] · [[charm quark|c]] · [[strange quark|s]] · [[top quark|t]] · [[bottom quark|b]]  •  '''[[Lepton|Leptons]]''': {{SubatomicParticle|link=yes|Electron}} ·  {{SubatomicParticle|link=yes|Positron}} · [[Muon|{{SubatomicParticle|Muon}} · {{SubatomicParticle|Antimuon}}]] · [[Tau lepton|{{SubatomicParticle|Tauon}} · {{SubatomicParticle|Antitauon}}]] · [[Neutrino|{{SubatomicParticle|Electron neutrino}} · {{SubatomicParticle|Muon neutrino}} · {{SubatomicParticle|Tau neutrino}}]] · [[Antineutrino|{{SubatomicParticle|Electron antineutrino}} · {{SubatomicParticle|Muon antineutrino}} · {{SubatomicParticle|Tau antineutrino}}]] &lt;br/&gt;'''''[[Boson]]s:'''''&amp;nbsp; '''[[Gauge boson|Gauge bosons]]''': {{SubatomicParticle|link=yes|Photon}} · {{SubatomicParticle|link=yes|Gluon}} ·  [[W and Z bosons|{{SubatomicParticle|W Boson+-}} · {{SubatomicParticle|Z Boson}}]]&amp;nbsp;&lt;br /&gt;'''''Other:'''''&amp;nbsp; [[Faddeev-Popov ghost|Ghosts]]
+|group2=[[Bound state|Composite particle]]s 
+|list2='''''[[Hadron]]s:'''''&amp;nbsp; '''[[Baryon]]s'''/'''[[Hyperon]]s'''/'''[[Nucleon]]s''': {{SubatomicParticle|link=yes|Proton+}} · {{SubatomicParticle|link=yes|Neutron0}} · {{SubatomicParticle|link=yes|Delta}} · {{SubatomicParticle|link=yes|Lambda}} · {{SubatomicParticle|link=yes|Sigma}} · {{SubatomicParticle|link=yes|Xi}} · {{SubatomicParticle|link=yes|Omega}} • '''[[Meson]]s'''/'''[[Quarkonium|Quarkonia]]''': {{SubatomicParticle|link=yes|Pion}} · {{SubatomicParticle|link=yes|Kaon}} · {{SubatomicParticle|link=yes|Rho}} · {{SubatomicParticle|link=yes|J/Psi}} · {{SubatomicParticle|link=yes|Upsilon}} &lt;br/&gt;'''''Other:'''''&amp;nbsp; '''[[Atomic nucleus|Atomic nuclei]]''' • '''[[Atom]]s''' • '''[[Exotic atom]]s''': [[Positronium]] · [[Muonium]] • '''[[Molecule]]s'''
+|group3=[[Hypothetical particles|Hypothetical elementary particles]]
+|list3='''''[[Superpartner]]s:''''' [[Axino]] · [[Chargino]] · [[Gaugino]] · [[Gluino]] · [[Gravitino]] · [[Higgsino]] · [[Neutralino]] · [[Sfermion]] &lt;br/&gt;'''''Other:''''' [[Axion]] · [[Dilaton]] · [[Graviton]] · [[Higgs boson]] · [[Tachyon]] · [[X and Y bosons|X · Y]] · [[W' boson|W']] · [[Z' boson|Z']] · [[Sterile neutrino]]
+|group4=[[:Category:Hypothetical composite particles|Hypothetical composite particles]]
+|list4='''''[[Exotic hadron]]s:'''''&amp;nbsp; '''[[Exotic baryon]]s''': [[Dibaryon]] · [[Pentaquark]] • '''[[Exotic meson]]s''': [[Glueball]] · [[Tetraquark]] &lt;br/&gt;'''''Other:'''''&amp;nbsp; [[Mesonic molecule]]
+|group5=[[Quasiparticle]]s
+|list5=[[Davydov soliton]] · [[Exciton]] · [[Magnon]] · [[Phonon]] · [[Plasmon]] · [[Polariton]] · [[Polaron]]
+|group6=Lists
+|list6 = [[List of particles]] · [[List of baryons]] · [[List of mesons]] · [[Timeline of particle discoveries]]
+}}&lt;noinclude&gt;
+
+[[Category:Physics navbox templates|{{PAGENAME}}]]
+
+[[ar:قالب:جسيمات]]
+[[fa:الگو:ذرات بنیادی]]
+[[fr:Modèle:Tableau particules]]
+[[ja:Template:粒子の一覧]]
+[[ru:Шаблон:Частицы]]
+[[vi:Tiêu bản:Hạt cơ bản]]
+[[zh:Template:Particles]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

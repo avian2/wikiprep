@@ -1,39 +1,29 @@
 Page 14617
-products =  [[Microprocessor]]s<br>[[Flash memory]]<br>[[Motherboard]] [[Chipsets]]<br>[[Network Interface Card]]<br>[[Bluetooth]] [[Chipsets]] 
-foundation =  [[1968]] <sup>1</sup> 
-slogan = ''Leap Ahead''
-company_type =  [[Public company|Public]] ([[NASDAQ]]:&nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=INTC&selected=INTC INTC]<includeonly>[[Category:Companies listed on NASDAQ]]</includeonly>
-, [[Hong Kong Stock Exchange|SEHK]]: [http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID=4335&WidCoAbbName=&Month=&langcode=e 4335][[Category:Companies listed on the Hong Kong Stock Exchange]]
-) 
-num_employees =  86,300 (2007)<ref name='CNNmoney 2007-10-17'>        [http://money.cnn.com/quote/snapshot/snapshot.html?symb=INTC INTC - Intel Corporation Company profile - CNNMoney]  .&#32;''money.cnn.com'' .&#32;Cable News Network .   &#32;Retrieved on [[2007-10-17]] .
-   
-</ref> 
-key_people =  [[Paul S. Otellini]], CEO <br>[[Craig Barrett (Intel Chairman)|Craig Barrett]], Chairman 
 company_name = Intel Corporation
 founders = Gordon E. Moore and Robert Noyce
-location =  [[Santa Clara, California]] <br/>  
+products =  [[Microprocessor]]s<br>[[Flash memory]]<br>[[Motherboard]] [[Chipsets]]<br>[[Network Interface Card]]<br>[[Bluetooth]] [[Chipsets]] 
+location =  [[Santa Clara, California]] <br/> {{USA}} 
+revenue =  {{gain}} $38.3 billion [[United States dollar|USD]] (2007)<ref>
+{{cite web
+ | url = http://www.edn.com/article/CA6424781.html
+ | title = AMD wins 2006 revenue battle with Intel, iSuppli says
+ | accessdate = 2007-11-05
+}}</ref><ref>
+{{cite web
+ | url = http://www.informationweek.com/news/showArticle.jhtml?articleID=198001312
+ | title = Chipmaker Report: Intel's Revenue Sank In 2006 
+ | accessdate = 2007-11-05
+}}</ref> 
+footnotes =  '''<sup>1</sup>'''<small>[[Incorporation (business)|Incorporated]] in [[California]] in [[1968]], reincorporated in Delaware in [[1989]].<ref name='SEC-filing'> {{cite web|url=http://secfilings.nasdaq.com/edgar_conv_html%2f2006%2f02%2f27%2f0000891618-06-000089.html#FIS_BUSINESS |title=INTEL CORP (Form: 10-K, Received: 02/27/2006 06:02:42) |accessdate=2007-07-05 |date=2005-12-31 |work=[[United States Securities and Exchange Commission]] }}</ref></small>
 
- 
-revenue =  <span style="color: #0c0; font-size: larger;">▲</span>
- $38.3 billion [[United States dollar|USD]] (2007)<ref>
-       [http://www.edn.com/article/CA6424781.html AMD wins 2006 revenue battle with Intel, iSuppli says]      .   &#32;Retrieved on [[2007-11-05]] .
-   
-</ref><ref>
-       [http://www.informationweek.com/news/showArticle.jhtml?articleID=198001312 Chipmaker Report: Intel's Revenue Sank In 2006]      .   &#32;Retrieved on [[2007-11-05]] .
-   
-</ref> 
-footnotes =  '''<sup>1</sup>'''<small>[[Incorporation (business)|Incorporated]] in [[California]] in [[1968]], reincorporated in Delaware in [[1989]].<ref name='SEC-filing'>        [http://secfilings.nasdaq.com/edgar_conv_html%2f2006%2f02%2f27%2f0000891618-06-000089.html#FIS_BUSINESS INTEL CORP (Form: 10-K, Received: 02/27/2006 06:02:42)]   .&#32;''[[United States Securities and Exchange Commission]] ''
-   &#32;([[2005-12-31]])
-    
-.   &#32;Retrieved on [[2007-07-05]] .
-   
-</ref></small>
-
+foundation =  [[1968]] <sup>1</sup> 
 homepage = [http://www.intel.com/ www.intel.com]
-net_income =  <span style="color: #0c0; font-size: larger;">▲</span>
- $7.0 billion [[United States dollar|USD]] (2007) 
-operating_income =  <span style="color: #0c0; font-size: larger;">▲</span>
- $8.2 billion [[United States dollar|USD]] (2007) 
-industry =  [[Semiconductors]] 
+slogan = ''Leap Ahead''
+net_income =  {{gain}} $7.0 billion [[United States dollar|USD]] (2007) 
+operating_income =  {{gain}} $8.2 billion [[United States dollar|USD]] (2007) 
+company_type =  [[Public company|Public]] ({{nasdaq|INTC}}, {{hkex|4335}}) 
+num_employees = 86,300 (2007)<ref name='CNNmoney 2007-10-17'> {{cite web|url=http://money.cnn.com/quote/snapshot/snapshot.html?symb=INTC |title=INTC - Intel Corporation Company profile - CNNMoney |accessdate=2007-10-17 |work=money.cnn.com |publisher=Cable News Network }}</ref>
 company_logo =  [[Image:Intel-logo.svg|100px]] 
+industry =  [[Semiconductors]] 
+key_people =  [[Paul S. Otellini]], CEO <br>[[Craig Barrett (Intel Chairman)|Craig Barrett]], Chairman 
 End

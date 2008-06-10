@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="2198016" orglength="9694" newlength="7538" stub="0" categories="0" outlinks="2" urls="2">
+<page id="2198016" orglength="9694" newlength="7537" stub="0" categories="0" outlinks="2" urls="2">
 <title>Zeta function universality</title>
 <categories></categories>
 <links>4740320 4740321</links>
@@ -71,15 +71,17 @@ The rough meaning of the statement on the lower density is as follows: if a func
 
 Note also that the interior of U may be empty, in which case there is no requirement of f being holomorphic. For example, if we take U to be a line segment, then a continuous function f: U   C is nothing but a curve in the complex plane, and we see that the zeta function encodes every possible curve (i.e., any figure that can be drawn without lifting the pencil) to arbitrary precision on the considered strip.
 
-The theorem as stated applies only to regions U that are contained in the strip. However, if we allow translations and scalings, we can also find encoded in the zeta functions approximate versions of all non-vanishing holomorphic functions defined on other regions. In particular, since the zeta function itself is holomorphic, versions of itself are encoded within it at different scales, the hallmark of a fractal.   Woon, S.C. 
-      (June 11, 1994)
+The theorem as stated applies only to regions U that are contained in the strip. However, if we allow translations and scalings, we can also find encoded in the zeta functions approximate versions of all non-vanishing holomorphic functions defined on other regions. In particular, since the zeta function itself is holomorphic, versions of itself are encoded within it at different scales, the hallmark of a fractal.    Woon, S.C.
+
+ (June 11, 1994)
 
 .   Riemann zeta function is a fractal      .    Retrieved on December 21, 2007 .
 
 The surprising nature of the theorem may be summarized in this way: the Riemann zeta functions contains &quot;all possible behaviors&quot; within it, and is thus &quot;chaotic&quot; in a sense, yet it is a perfectly smooth analytic function with a rather simple, straightforward definition.
 
 <h2>Proof sketch</h2>
-A sketch of the proof presented in (Voronin and Karatsuba, 1992)  Karatsuba, A. A. ;  S. M. Voronin  (1992-07).    The Riemann Zeta-Function       .  Walter de Gruyter, 396  . ISBN 3110131706  .      
+A sketch of the proof presented in (Voronin and Karatsuba, 1992)   Karatsuba, A. A.
+ ;  S. M. Voronin  (1992-07).    The Riemann Zeta-Function       .  Walter de Gruyter, 396  . ISBN 3110131706  .      
   follows. We consider only the case where U is a disk centered at 3/4:
 : 
 and we will argue that every non-zero holomorphic function defined on U can be approximated by the  -function on a vertical translation of this set.
@@ -107,7 +109,8 @@ By a version of the Kronecker theorem, applied to the real numbers   (which are 
 we can find real values of t so that   is approximated by  . Further, for some of these values t,   approximates  , finishing the proof.
 
 <h1>Universality of other zeta functions</h1>
-A similar universality property has been shown for the Lerch zeta-function. The Dirichlet L-functions show not only universality, but a certain kind of joint universality that allow any set of functions to be approximated by the same value(s) of t in different L-functions, where each function to be approximated is paired with a different L-function.  B. Bagchi  (1982). &quot;A Universality theorem for Dirichlet L-functions&quot;  . Mat. Z. 181  :  pp.319-334            .      
+A similar universality property has been shown for the Lerch zeta-function. The Dirichlet L-functions show not only universality, but a certain kind of joint universality that allow any set of functions to be approximated by the same value(s) of t in different L-functions, where each function to be approximated is paired with a different L-function.  B. Bagchi
+  (1982). &quot;A Universality theorem for Dirichlet L-functions&quot;  . Mat. Z. 181  :  pp.319-334            .      
    Sections of the Lerch zeta-function have also been shown to have a form of joint universality.
 
 <h1>References</h1>
