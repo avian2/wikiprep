@@ -1015,6 +1015,17 @@ BEGIN {
 
 my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
+my $templateRegex = qr/\{\{(?!\{)
+                                (?:\s*)        # optional whitespace before the template name is ignored
+                                (
+                                  (?:
+                                      (?!
+                                          \{\{
+                                      )
+                                      .
+                                  )*?
+                                )
+                             \}\}/sx;
 
 sub includeTemplates(\$\$\$) {
   my ($refToId, $refToTitle, $refToText) = @_;
@@ -1069,28 +1080,9 @@ sub includeTemplates(\$\$\$) {
     &nowiki::extractTags(\$preRegex, $refToText, \%preChunksReplaced);
     &nowiki::extractTags(\$nowikiRegex, $refToText, \%nowikiChunksReplaced);
 
-    my $r = $$refToText =~ s/\{\{(?!\{)
-                                (?:\s*)        # optional whitespace before the template name is ignored
-                                (
-                                  (?:
-                                      (?!
-                                          \{\{
-                                      )
-                                      .
-                                  )*?
-                                )
-# OLD code and comments
-#                                (?:\s*)        # optional whitespace before the template name is ignored
-#                                ([^\{]*?)      # Occasionally, templates are nested,
-#                                               # e.g., {{localurl:{{NAMESPACE}}:{{PAGENAME}}}}
-#                                               # In order to prevent incorrect parsing, e.g.,
-#                                               # "{{localurl:{{NAMESPACE}}", we require that the
-#                                               # template name does not include opening braces,
-#                                               # hence "[^\{]" (any char except opening brace).
-# END OF OLD code and comments
-                             \}\}
-                            /&instantiateTemplate($1, $refToId, $refToTitle, \%includedTemplates,
-                                                  $templateRecursionLevels)/segx;
+    my $r = $$refToText =~ s/$templateRegex/
+                                      &instantiateTemplate($1, $refToId, $refToTitle, \%includedTemplates,
+                                      $templateRecursionLevels)/segx;
 
     &nowiki::replaceTags($refToText, \%nowikiChunksReplaced);
     &nowiki::replaceTags($refToText, \%preChunksReplaced);
