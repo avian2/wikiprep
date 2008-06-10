@@ -1015,12 +1015,21 @@ BEGIN {
 
 my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
-my $templateRegex = qr/\{\{(?!\{)
-                                \s*        # optional whitespace before the template name is ignored
+
+# Regular expression that matches a template include directive. It is replaced with fully
+# expanded template text.
+
+my $templateRegex = qr/\{\{(?!\{)           # match only two opening braces, not three, which may 
+                                            # be there because of an unexpanded template parameter.
+                                           
+                                            # (some pages have template parameters in them although
+                                            # they are not templates)
+                                            
+                                \s*         # optional whitespace before the template name is ignored
                                 (
                                   (?:
                                       (?!
-                                          \{\{
+                                          \{\{  # Match only unnested templates
                                       )
                                       .
                                   )*?
