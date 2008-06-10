@@ -1016,7 +1016,7 @@ BEGIN {
 my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 my $templateRegex = qr/\{\{(?!\{)
-                                (?:\s*)        # optional whitespace before the template name is ignored
+                                \s*        # optional whitespace before the template name is ignored
                                 (
                                   (?:
                                       (?!
