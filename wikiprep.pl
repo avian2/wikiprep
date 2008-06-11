@@ -33,6 +33,7 @@ use FileHandle;
 use Getopt::Long;
 use Time::localtime;
 use Parse::MediaWikiDump;
+use Regexp::Common;
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -1020,31 +1021,21 @@ my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 
 # Regular expression that matches a template include directive. It is replaced with fully
-# expanded template text.
+# expanded template text in includeTemplates() below.
 
-my $templateRegex = qr/\{\{                 # match only two opening braces, not three, which may 
-                                            # be there because of an unexpanded template parameter.
-                                           
-                                            # (some pages have template parameters in them although
-                                            # they are not templates)
-                                            
-                                \s*         # optional whitespace before the template name is ignored
-                                (
-                                  (?:
-                                      [^{}]+
-                                      |
-                                      $Regexp::Common::RE{balanced}{-parens => "{}"}
-                                  )*?
-                                )
-                             \}\}/sx;
+# Matches two opening braces with any balanced combination of braces within. Note that this also
+# matches for example {{{3}}} (which can happen if we get an unexpanded template parameter in the
+# output). This case is handled as an unknown template, which is then replaced by an empty string.
+
+# (some pages have template parameters in them although they are not templates)
+
+my $templateRegex = qr/\{($RE{balanced}{-parens => "{}"})\}/s;
 
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
 
 # It's called recursively, so we have a $templateRecursionLevel parameter to track the 
 # recursion depth and break out in case it gets too deep.
-
- 
 
 sub includeTemplates(\$\$$$) {
   my ($refToId, $refToTitle, $text, $templateRecursionLevel) = @_;
@@ -1101,7 +1092,16 @@ sub includeTemplates(\$\$$$) {
 sub instantiateTemplate($\$\$\%$) {
   my ($templateInvocation, $refToId, $refToTopPageTitle, $templateRecursionLevel) = @_;
 
-  print LOGF "Instantiating template=$templateInvocation\n";
+  # Clean the invocation string: remove braces that were also matched by $RE{balanced} and 
+  # ignore optional whitespace before the template name.
+  
+  if( $templateInvocation =~ /^\{\s*(.*)\}$/s ) {
+    $templateInvocation = $1;
+    print LOGF "Instantiating template=$templateInvocation\n";
+  } else {
+    print LOGF "Invalid template invocation=$templateInvocation\n";
+    return "";
+  }
 
   my $templateTitle;
   my %templateParams;
