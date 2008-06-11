@@ -175,8 +175,6 @@ sub parseTemplateInvocation(\$\$\%) {
   
   # We first split the string into tokens - symbols we care about and other text.
 
-  my @tokens = split(/([\{\}\[\]\|])/, $$refToTemplateInvocation );
-
   my $brace = 0;
   my $square = 0;
   my $accumulator = "";
@@ -185,7 +183,7 @@ sub parseTemplateInvocation(\$\$\%) {
   # Iterate through tokens and gather them into the accumulator
 
   my $token;
-  for $token (@tokens) {
+  for $token ( split(/([\{\}\[\]\|])/, $$refToTemplateInvocation ) ) {
     if( $token eq '|' and $brace == 0 and $square == 0 ) {
 
       # Unnested "|" means we store the contents of the accumulator into a new parameter
