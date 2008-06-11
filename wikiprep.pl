@@ -1031,7 +1031,7 @@ my $templateRegex = qr/\{\{                 # match only two opening braces, not
                                 \s*         # optional whitespace before the template name is ignored
                                 (
                                   (?:
-                                      [^{}]
+                                      [^{}]+
                                       |
                                       $Regexp::Common::RE{balanced}{-parens => "{}"}
                                   )*?
@@ -1107,9 +1107,9 @@ sub instantiateTemplate($\$\$\%$) {
   my %templateParams;
   &templates::parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
-  $templateTitle = &includeTemplates($refToId, $refToTopPageTitle, $templateTitle, $templateRecursionLevel + 1);
-
   return "" unless(defined($templateTitle));
+
+  $templateTitle = &includeTemplates($refToId, $refToTopPageTitle, $templateTitle, $templateRecursionLevel + 1);
 
   my $result = &includeParserFunction(\$templateTitle, \%templateParams, $refToId, $refToTopPageTitle, 
                                                                                   $templateRecursionLevel);
