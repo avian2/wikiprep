@@ -238,9 +238,11 @@ sub parseTemplateInvocation(\$\$\%) {
     # include '=' characters)
     $parameterCounter++;
 
-    my $unexpandedParam = $param;
+    my $unexpandedParam;
     if ($doesNotContainLink) {
-      &utils::trimWhitespaceBothSides(\$unexpandedParam);
+      $unexpandedParam = &utils::trimWhitespaceBothSides($param);
+    } else {
+      $unexpandedParam = $param;
     }
     $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
 
@@ -258,12 +260,14 @@ sub parseTemplateInvocation(\$\$\%) {
       # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
       # parameter ("2") is specified explicitly - this is handled transparently.
 
-      my $parameterName = $1;
-      my $parameterValue = $2;
-
-      &utils::trimWhitespaceBothSides(\$parameterName);
-      if ($doesNotContainLink) { # if the value does not contain a link, trim whitespace
-        &utils::trimWhitespaceBothSides(\$parameterValue);
+      my $parameterName = &utils::trimWhitespaceBothSides($1);
+      my $parameterValue;
+      
+      # if the value does not contain a link, trim whitespace
+      if ($doesNotContainLink) {
+        $parameterValue = &utils::trimWhitespaceBothSides($2);
+      } else {
+        $parameterValue = $2;
       }
 
       $$refToParameterHash{$parameterName} = $parameterValue;

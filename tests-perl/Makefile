@@ -1,4 +1,5 @@
-TESTS = images.pl \
+TESTS = utils.pl \
+	images.pl \
 	nowiki.pl \
 	revision.pl \
 	languages.pl \

@@ -4,13 +4,14 @@ use strict;
 
 package utils;
 
-sub trimWhitespaceBothSides(\$) {
-    my ($stringRef) = @_;
+# See http://www.perlmonks.org/?node_id=2258 for performance comparisson
 
-    # remove leading whitespace
-    $$stringRef =~ s/^\s*//;
-    # remove trailing whitespace
-    $$stringRef =~ s/\s*$//;
+sub trimWhitespaceBothSides {
+  $_ = shift;
+  s/^\s+//;
+  s/\s+$//;
+
+  return $_;
 }
 
 1

@@ -761,6 +761,22 @@ sub transform() {
 
   my $page;
   while (defined($page = $pages->page)) {
+    my $pageStartTime = time;
+
+    if( $pageStartTime - $lastDisplayTime > 5 ) {
+
+      $lastDisplayTime = $pageStartTime;
+
+      my $bytesPerSecond = $processedByteCount/($pageStartTime-$startTime);
+      my $percentDone = 100.0*$processedByteCount/$totalByteCount;
+      my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
+
+      my $hoursLeft = $secondsLeft/3600;
+
+      printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
+      STDOUT->flush();
+    }
+
     my $id = $page->id;
 
     $processedPageCount++;
@@ -768,8 +784,7 @@ sub transform() {
 
     # next if( $id != 1192748);
 
-    my $timeStr = &getTimeAsString();
-    &logger::msg("DEBUG", "[$timeStr] Transforming page id=$id");
+    &logger::msg("DEBUG", "Transforming page id=$id");
 
     if ( defined( &isRedirect($page) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
@@ -872,20 +887,10 @@ sub transform() {
       &updateCategoryHierarchy($id, \@categories);
     }
 
-    my $nowTime = time;
-    if( $nowTime - $lastDisplayTime > 5 ) {
+    my $pageFinishedTime = time;
 
-      $lastDisplayTime = $nowTime;
-
-      my $bytesPerSecond = $processedByteCount/($nowTime-$startTime);
-      my $percentDone = 100.0*$processedByteCount/$totalByteCount;
-      my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
-
-      my $hoursLeft = $secondsLeft/3600;
-
-      printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
-      STDOUT->flush();
-    }
+    &logger::msg("PROFILE", "Transforming page $id took " . ( $pageFinishedTime - $pageStartTime ) .
+                            " seconds");
   }
   print "\n";
 }
@@ -1853,8 +1858,7 @@ BEGIN {
     if( exists( $urlProtocols{$urlProtocol} ) ) {
       push(@$refToUrlsArray, $url);
 
-      my $anchorTrimmed = $anchor;
-      &utils::trimWhitespaceBothSides(\$anchorTrimmed);
+      my $anchorTrimmed = &utils::trimWhitespaceBothSides($anchor);
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
