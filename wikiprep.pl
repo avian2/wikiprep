@@ -45,6 +45,7 @@ use languages;
 use templates;
 use lang;
 use css;
+use logger;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -58,7 +59,7 @@ my $file;
 my $showLicense = 0;
 my $showVersion = 0;
 my $dontExtractUrls = 0;
-my $doWriteLog = 0;
+my $logArgs = "";
 my $doCompress = 0;
 
 my $langCode = 'en';
@@ -67,7 +68,7 @@ GetOptions('f=s' => \$file,
            'license' => \$showLicense,
            'version' => \$showVersion,
            'nourls' => \$dontExtractUrls,
-           'log' => \$doWriteLog,
+           'log=s' => \$logArgs,
            'compress' => \$doCompress,
            'lang=s' => \$langCode);
 
@@ -153,10 +154,7 @@ my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
-my $logFile = "/dev/null";
-if ($doWriteLog) {
-  $logFile = "$filePath/$fileBasename.log";
-}
+my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
 
 # Information about anchor texts for external linnks
@@ -190,6 +188,7 @@ my $totalPageCount = 0;
 my $totalByteCount = 0;
 
 &revision::writeVersion($versionFile, $file);
+&logger::init($logFile, $logArgs);
 
 if( $doCompress ) {
   open(OUTF, "| gzip >$outputFile.gz") or die "Cannot open pipe to gzip: $!: $outputFile.gz";
@@ -202,7 +201,6 @@ if( $doCompress ) {
   open(EXANCHORF, "> $externalAnchorTextFile") or die "Cannot open $externalAnchorTextFile: $!";
 }
 
-open(LOGF, "> $logFile") or die "Cannot open $logFile: $!";
 open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile: $!";
 open(LOCALF, "> $localPagesFile") or die "Cannot open $localPagesFile: $!";
 open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
@@ -211,7 +209,6 @@ open(LOCALIDF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
 binmode(OUTF,    ':utf8');
-binmode(LOGF,    ':utf8');
 binmode(ANCHORF, ':utf8');
 binmode(RELATEDF, ':utf8');
 binmode(LOCALF, ':utf8');
@@ -259,12 +256,13 @@ print "Loaded $numTemplates templates\n";
 
 print LOCALF "</pages>\n";
 
-close(LOGF);
 close(ANCHORF);
 close(RELATEDF);
 close(LOCALF);
 close(DISAMBIGF);
 close(EXANCHORF);
+
+&logger::stop();
 
 my $elapsed = time - $startTime;
 
@@ -646,7 +644,7 @@ sub prescan() {
 
     if ($counter % 1000 == 0) {
       my $timeStr = &getTimeAsString();
-      print LOGF "[$timeStr] Prescanning page id=$id\n";
+      &logger::msg("DEBUG", "[$timeStr] Prescanning page id=$id");
     }
 
     my $title = $page->title;
@@ -659,7 +657,7 @@ sub prescan() {
       # this page is a redirect to [[Non-nreaking space]], but having in the system
       # a redirect page with an empty title causes numerous problems, so we'll live
       # happier without it.
-      print LOGF "Skipping page with empty title id=$id\n";
+      &logger::msg("DEBUG", "Skipping page with empty title id=$id");
       next;
     }
 
@@ -680,13 +678,13 @@ sub prescan() {
     # it belongs to one of the namespaces we're interested in
 
     if ( exists($idexists{$id}) ) {
-      print LOGF "Warning: Page id=$id already encountered before!\n";
+      &logger::msg("WARNING", "Page id=$id already encountered before!");
       next;
     }
     if ( exists($title2id{$title}) ) {
       # A page could have been encountered before with a different spelling.
       # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
-      print LOGF "Warning: Page title='$title' already encountered before!\n";
+      &logger::msg("WARNING", "Page title='$title' already encountered before!");
       next;
     }
     $idexists{$id} = 'x';
@@ -745,10 +743,10 @@ sub prescan() {
   close(TEMPINDEX);
 
   my $timeStr = &getTimeAsString();
-  print LOGF "[$timeStr] Prescanning complete - prescanned $counter pages\n";
+  &logger::msg("DEBUG", "[$timeStr] Prescanning complete - prescanned $counter pages");
 
   print "Total $totalPageCount pages ($totalByteCount bytes)\n";
-  print LOGF "Total $totalPageCount pages ($totalByteCount bytes)\n";
+  &logger::msg("DEBUG", "Total $totalPageCount pages ($totalByteCount bytes)");
 }
 
 sub transform() {
@@ -771,7 +769,7 @@ sub transform() {
     # next if( $id != 1192748);
 
     my $timeStr = &getTimeAsString();
-    print LOGF "[$timeStr] Transforming page id=$id\n";
+    &logger::msg("DEBUG", "[$timeStr] Transforming page id=$id");
 
     if ( defined( &isRedirect($page) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
@@ -786,7 +784,7 @@ sub transform() {
 
     # see the comment about empty titles in function 'prescan'
     if (length($title) == 0) {
-      print LOGF "Skipping page with empty title id=$id\n";
+      &logger::msg("DEBUG", "Skipping page with empty title id=$id");
       next;
     }
 
@@ -817,7 +815,7 @@ sub transform() {
     # Parse disambiguation pages before template substitution because disambig
     # indicators are also templates.
     if ( &isDisambiguation($page) ) {
-      print LOGF "Parsing disambiguation page\n";
+      &logger::msg("DEBUG", "Parsing disambiguation page");
 
       &parseDisambig(\$id, \$text);
     }
@@ -979,9 +977,9 @@ sub resolveLink(\$) {
     # check if this is a double redirect
     if ( exists($redir{$targetTitle}) ) {
       $targetTitle = undef; # double redirects are not allowed and are ignored
-      print LOGF "Warning: link '$$refToTitle' caused double redirection and was ignored\n";
+      &logger::msg("WARNING", "link '$$refToTitle' caused double redirection and was ignored");
     } else {
-      print LOGF "Link '$$refToTitle' was redirected to '$targetTitle'\n";
+      &logger::msg("DEBUG", "Link '$$refToTitle' was redirected to '$targetTitle'");
     }
   }
 
@@ -994,7 +992,7 @@ sub resolveLink(\$) {
 	# significantly reduces memory usage.
 
         if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
-          print LOGF "Link '$$refToTitle' was ignored\n";
+          &logger::msg("DEBUG", "Link '$$refToTitle' was ignored");
           $targetId = undef;
 	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
         } else {
@@ -1008,7 +1006,7 @@ sub resolveLink(\$) {
 
           print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $encodedTargetTitle, "</title>\n</page>\n";
 
-          print LOGF "Warning: link '$$refToTitle' cannot be matched to an known ID, assigning local ID\n";
+          &logger::msg("DEBUG", "link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
         } 
     }
   } else {
@@ -1051,7 +1049,7 @@ sub includeTemplates(\$\$$$) {
     # un-instantiated templates. In this case we simply eliminate them - however, we do so
     # later, in function 'postprocessText()', after extracting categories, links and URLs.
 
-    print LOGF "Maximum template recursion level reached\n";
+    &logger::msg("WARNING", "Maximum template recursion level reached");
     return " ";
   }
 
@@ -1114,9 +1112,9 @@ sub instantiateTemplate($\$\$\%$) {
   
   if( $templateInvocation =~ /^\{\{\s*(.*)\}\}$/s ) {
     $templateInvocation = $1;
-    print LOGF "Instantiating template=$templateInvocation\n";
+    &logger::msg("DEBUG", "Instantiating template=$templateInvocation");
   } else {
-    print LOGF "Invalid template invocation=$templateInvocation\n";
+    &logger::msg("WARNING", "Invalid template invocation=$templateInvocation");
     return "";
   }
 
@@ -1137,7 +1135,7 @@ sub instantiateTemplate($\$\$\%$) {
 
     my $overrideResult = $overrideTemplates{$templateTitle};
     if(defined $overrideResult) {
-      print LOGF "Overriding template $templateTitle\n";
+      &logger::msg("WARNING", "Overriding template $templateTitle");
       return $overrideResult;
     }
 
@@ -1167,7 +1165,7 @@ sub includeParserFunction(\$\%\$\$\$) {
     $$refToParameterHash{'=0='} = &includeTemplates($refToId, $refToTopPageTitle, $2, 
                                                                                $templateRecursionLevel + 1);
 
-    print LOGF "Evaluating parser function #$functionName\n";
+    &logger::msg("DEBUG", "Evaluating parser function #$functionName");
 
     if ( $functionName eq 'if' ) {
 
@@ -1233,7 +1231,7 @@ sub includeParserFunction(\$\%\$\$\$) {
       $result = &languages::languageName($code);
     } else {
 
-      print LOGF "Function #$functionName not supported\n";
+      &logger::msg("WARNING", "Function #$functionName not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
@@ -1252,7 +1250,7 @@ sub includeParserFunction(\$\%\$\$\$) {
     # http://meta.wikimedia.org/wiki/Help:URL
 
     $result = $1;
-    print LOGF "URL encoding string $result\n";
+    &logger::msg("DEBUG", "URL encoding string $result");
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
@@ -1301,7 +1299,7 @@ sub includeTemplateText(\$\%\$\$$) {
 
     # Substitute template parameters
     if( &templates::templateParameterRecursion($refToResult, $refToParameterHash, 1) ) {
-      print LOGF "Maximum template parameter recursion level reached\n";
+      &logger::msg("WARNING", "Maximum template parameter recursion level reached");
     }
 
   } else {
@@ -1309,7 +1307,7 @@ sub includeTemplateText(\$\%\$\$$) {
     # we only allow for inclusion of pages in the Template namespace), or perhaps it's
     # a variable name like {{NUMBEROFARTICLES}}. Just remove this inclusion directive and
     # replace it with a space
-    print LOGF "Template '$$refToTemplateTitle' is not available for inclusion\n";
+    &logger::msg("WARNING", "Template '$$refToTemplateTitle' is not available for inclusion");
     $$refToResult = " ";
   }
 }
@@ -1374,7 +1372,7 @@ sub collectCategory($\@) {
   if ( defined($catId) ) {
     push(@$refToCategoriesArray, $catId);
   } else {
-    print LOGF "Warning: unknown category '$catName'\n";
+    &logger::msg("WARNING", "unknown category '$catName'");
   }
 
   # The return value is just a space, because we remove categories from the text
@@ -1600,7 +1598,7 @@ sub collectInternalLink($$$\@\@$$) {
     #    that contain a colon in their title), we believe this is a reasonable tradeoff.
     if ( !defined($targetId) && ! $alternativeTextAvailable && $link =~ /:/ ) {
       $result = "";
-      print LOGF "Discarding text for link '$originalLink'\n";
+      &logger::msg("DEBUG", "Discarding text for link '$originalLink'");
     } else {
       # finally, add the text originally attached to the left and/or to the right of the link
       # (if the link represents a date, then it has not text glued to it, so it's OK to only
@@ -1686,7 +1684,7 @@ sub resolveAndCollectInternalLink(\$\@) {
     if ( ! exists($templates{$targetId}) ) { 
       push(@$refToInternalLinksArray, $targetId);
     } else {
-      print LOGF "Ignoring link to a template '$$refToLink'\n";
+      &logger::msg("DEBUG", "Ignoring link to a template '$$refToLink'");
       $targetId = undef;
     }
   } else {
@@ -1696,7 +1694,7 @@ sub resolveAndCollectInternalLink(\$\@) {
     #   media and sound files fall in this category
     # - Links to other languages, e.g., [[de:...]]
     # - Links to other Wiki projects, e.g., [[Wiktionary:...]]
-    print LOGF "Warning: unknown link '$$refToLink'\n";
+    &logger::msg("WARNING", "unknown link '$$refToLink'");
   }
 
   $targetId;  # return value
@@ -2049,7 +2047,7 @@ sub postprocessText(\$$$) {
 sub logReplacedXmlEntity($) {
   my ($xmlEntity) = @_;
 
-  print LOGF "ENTITY: &$xmlEntity;\n";
+  &logger::msg("DEBUG", "ENTITY: &$xmlEntity;");
 
   " "; # return value - entities are replaced with a space
 }
@@ -2173,8 +2171,8 @@ sub removeDuplicatesAndSelf(\@$) {
   my $item;
   foreach $item (@$refToArray) {
     if ( defined($elementToRemove) && ($item == $elementToRemove) ) {
-      printf LOGF "Warning: current page links or categorizes to itself - " .
-                  "link discarded ($elementToRemove)\n";
+      &logger::msg("WARNING", "current page links or categorizes to itself - " . 
+                              "link discarded ($elementToRemove)");
       next;
     }
     push(@uniq, $item) unless $seen{$item}++;
@@ -2248,9 +2246,9 @@ sub identifyRelatedArticles(\$\@$) {
     my $relatedRegex = $langDB{'relatedWording_Standalone'};
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
-      print LOGF "Related(S): $id => $str\n";
+      &logger::msg("DEBUG", "Related(S): $id => $str");
       &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
-      print LOGF "Related(S): $id ==> @$refToRelatedArticles\n";
+      &logger::msg("DEBUG", "Related(S): $id ==> @$refToRelatedArticles");
     }
   }
 
@@ -2259,9 +2257,9 @@ sub identifyRelatedArticles(\$\@$) {
     my $relatedRegex = $langDB{'relatedWording_Inline'};
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
-      print LOGF "Related(I): $id => $str\n";
+      &logger::msg("DEBUG", "Related(I): $id => $str");
       &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
-      print LOGF "Related(I): $id ==> @$refToRelatedArticles\n";
+      &logger::msg("DEBUG", "Related(I): $id ==> @$refToRelatedArticles");
     }
   }
 
@@ -2274,11 +2272,11 @@ sub identifyRelatedArticles(\$\@$) {
       if ($line =~ /==(?:.*?)==/) { # we just encountered the next section - exit the loop
         last;
       } else { # collect the links from the current line
-        print LOGF "Related(N): $id => $line\n";
+        &logger::msg("DEBUG", "Related(N): $id => $line");
         # 'extractInternalLinks' may mofidy its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
         &extractInternalLinks(\$line, $refToRelatedArticles, $id, undef, 0, 0);
-        print LOGF "Related(N): $id ==> @$refToRelatedArticles\n";
+        &logger::msg("DEBUG", "Related(N): $id ==> @$refToRelatedArticles");
       }
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
@@ -2330,11 +2328,15 @@ USAGE: $0 <options> -f <XML file with page dump>
 Available options:
   -nourls        Don't extract external links (URLs) from pages. 
                  Reduces run-time by approximately one half.
-  -log           Write a large log file with debug information.
+  -log ARGS      Write a large log file with debug information.
                  Log can get approximately 3-4 times larger than
-                 the XML dump.
+                 the XML dump, depending on the settings below.
   -compress      Enable compression on some of the output files.
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
+
+Logging options (separate multiple options with colons):
+
+  debug, warning, profile
 END
 }
