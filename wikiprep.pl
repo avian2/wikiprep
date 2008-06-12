@@ -1032,7 +1032,7 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 
 # (some pages have template parameters in them although they are not templates)
 
-my $templateRegex = qr/\{($RE{balanced}{-parens => "{}"})\}/s;
+my $templateRegex = qr/(\{$RE{balanced}{-parens => "{}"}\})/s;
 
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
@@ -1077,17 +1077,31 @@ sub includeTemplates(\$\$$$) {
   &nowiki::extractTags(\$preRegex, \$text, \%preChunksReplaced);
   &nowiki::extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
 
-  $text =~ s/$templateRegex/&instantiateTemplate($1, $refToId, $refToTitle, $templateRecursionLevel)/segx;
+  my $invocation = 0;
+  my $new_text = "";
+  my $token;
 
-  &nowiki::replaceTags(\$text, \%nowikiChunksReplaced);
-  &nowiki::replaceTags(\$text, \%preChunksReplaced);
+  for $token ( split(/$templateRegex/s, $text) ) {
+    if( $invocation ) {
+      $new_text .= &instantiateTemplate($token, $refToId, $refToTitle, $templateRecursionLevel);
+      $invocation = 0;
+    } else {
+      $new_text .= $token;
+      $invocation = 1;
+    }
+  }
+
+  # $text =~ s/$templateRegex/&instantiateTemplate($1, $refToId, $refToTitle, $templateRecursionLevel)/segx;
+
+  &nowiki::replaceTags(\$new_text, \%nowikiChunksReplaced);
+  &nowiki::replaceTags(\$new_text, \%preChunksReplaced);
 
   # print LOGF "Finished with templates level $templateRecursionLevel\n";
   # print LOGF "#########\n\n";
   # print LOGF "$text";
   # print LOGF "#########\n\n";
 
-  return $text;
+  return $new_text;
 }
 
 }
@@ -1098,7 +1112,7 @@ sub instantiateTemplate($\$\$\%$) {
   # Clean the invocation string: remove braces that were also matched by $RE{balanced} and 
   # ignore optional whitespace before the template name.
   
-  if( $templateInvocation =~ /^\{\s*(.*)\}$/s ) {
+  if( $templateInvocation =~ /^\{\{\s*(.*)\}\}$/s ) {
     $templateInvocation = $1;
     print LOGF "Instantiating template=$templateInvocation\n";
   } else {
