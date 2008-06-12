@@ -1,0 +1,1080 @@
+<!-- Causes segfault on Perl 5.8 and earlier versions of Wikiprep -->
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>290</id>
+    <revision>
+      <id>218517461</id>
+      <timestamp>2008-06-11T00:11:14Z</timestamp>
+      <contributor>
+        <username>Thingg</username>
+        <id>5924818</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted edits by [[Special:Contributions/66.167.213.143|66.167.213.143]] to last version by Arienh4 (using [[WP:HG|Huggle]])</comment>
+      <text xml:space="preserve">{{Otherusesof|A}}
+{{wiktionarypar2|A|a}}
+{{Latin alphabet navbox|uc=A|lc=a}}
+&lt;!--When inserting apostrophes in this section, be careful--&gt;
+The letter '''A''' is the first letter in the [[Latin alphabet]]. Its name in [[English language|English]] is '''a'''&lt;ref&gt;&quot;a&quot;, ''Merriam-Webster's Third New International Dictionary of the English Language, Unabridged,'' (1993)&lt;/ref&gt; ({{pronEng|eɪ}}), plural ''A''&lt;nowiki&gt;'&lt;/nowiki&gt;s, ''A''s, ''a''s, or ''a's''.&lt;ref&gt;''Merriam-Webster's Manual for Writers and Editors'' p. 61 (1998); ''Chicago Manual of Style,'' 15th ed. (University of Chicago Press, 2003) p. 281&lt;/ref&gt; 
+
+== History ==
+The letter A can be traced to a [[pictogram]] of an [[ox]] head in [[Egyptian hieroglyph]] or the [[Proto-semitic alphabet]].&lt;ref&gt;{{cite encyclopedia
+  | title = A
+  | encyclopedia = The World Book Encyclopedia
+  | volume = 1
+  | pages = 1
+  | publisher = Field Enterprises, Inc
+  | date = 1956  }}
+&lt;/ref&gt;
+
+{| class=&quot;wikitable&quot;
+|- style=&quot;background-color:#EEEEEE; text-align:center;&quot;
+! Egyptian hieroglyph&lt;br&gt; ox's head
+! Proto-Semitic&lt;br&gt; ox's head
+! Phoenician &lt;br&gt;''aleph''
+! Greek &lt;br&gt;Alpha
+! Etruscan &lt;br&gt;A
+! Roman &lt;br&gt;A
+|- style=&quot;background-color:white; text-align:center;&quot;
+|[[Image:EgyptianA-01.svg|Egyptian hieroglyphic ox head]]
+|[[Image:Proto-semiticA-01.svg|Proto-semitic ox head]]
+|[[Image:PhoenicianA-01.svg|Phoenician aleph]]
+|[[Image:Alpha uc lc.svg|65px|Greek alpha]]
+|[[Image:EtruscanA.svg|Etruscan A]]
+|[[Image:RomanA-01.svg|Roman A]]
+|}
+
+Circa 1600 B.C. the [[Phoenician alphabet]]'s letter had a linear form that served as the basis for some later forms. Its name must have corresponded closely to the [[Hebrew alphabet|Hebrew]] [[aleph]].
+
+When the [[Ancient Greece|Ancient Greeks]] adopted the alphabet, they had no use for the [[glottal stop]] that the letter had denoted in [[Phoenician languages|Phoenician]] and other [[Semitic languages]], so they used the sign for the vowel {{IPA|/a/}}, and changed its name to [[alpha (letter)|alpha]]. In the earliest Greek inscriptions after the [[Greek Dark Ages]], dating to the [[8th century BC]], the letter rests upon its side, but in the [[Greek alphabet]] of later times it generally resembles the modern capital letter, although many local varieties can be distinguished by the shortening of one leg, or by the angle at which the cross line is set.
+
+The [[Etruscans]] brought the Greek alphabet to their civilization in the [[Italian Peninsula]] and left the letter unchanged. The Romans later adopted the [[Old Italic alphabet|Etruscan alphabet]] to write [[Latin]], and the resulting letter was preserved in the modern [[Latin alphabet]] used to write many languages, including [[English language|English]].
+
+{| cellspacing=&quot;10&quot; cellpadding=&quot;0&quot; style=&quot;background-color: white; float: right;&quot;
+|- align=&quot;center&quot;
+|[[Image:BlackletterA-01.png|Blackletter A]]&lt;br /&gt;[[Blackletter]] A 
+|[[Image:UncialA-01.svg|Uncial A]]&lt;br /&gt;[[Uncial]] A
+|[[Image:Acap.svg|Another Capital A]]&lt;br /&gt;Another Capital A&amp;nbsp;
+|- align=&quot;center&quot;
+|[[Image:ModernRomanA-01.png|Modern Roman A]]&lt;br /&gt;Modern Roman A
+|[[Image:ModernItalicA-01.png|Modern Italic A]]&lt;br /&gt;Modern Italic A
+|[[Image:ModernScriptA-01.png|Modern Script A]]&lt;br /&gt;Modern Script A
+|}
+The letter has two [[Lower case|minuscule]] (lower-case) forms. The form used in most current [[handwriting]], and in [[italic type]], consists of a circle and vertical stroke ({{Unicode|ɑ}}), called [[Latin alpha]] or &quot;script a&quot;. Most printed material uses a form consisting of a small loop with an arc over it ({{IPA|a}}). Both derive from the majuscule (capital) form. In Greek handwriting, it was common to join the left leg and horizontal stroke into a single loop, as demonstrated by the Uncial version shown. Many fonts then made the right leg vertical. In some of these, the [[serif]] that began the right leg stroke developed into an arc, resulting in the printed form, while in others it was dropped, resulting in the modern handwritten form.
+
+== Usage ==
+[[Image:LowercaseA.svg|right|thumb|200|Typographic variants include a double-story and single-story '''a'''.]]
+In [[English language|English]], the letter &quot;A&quot; by itself usually denotes the [[near-open front unrounded vowel]] ({{IPA|/æ/}}) as in ''pad'', the [[open back unrounded vowel]] ({{IPA|/ɑː/}}) as in ''father'', or, in concert with a later orthographic vowel, the diphthong {{IPA|/eɪ/}} (though the pronunciation varies with the dialect) as in ''ace'' and ''major'', due to effects of the [[great vowel shift]].
+
+In most other languages that use the Latin alphabet, the letter A denotes either an [[open back unrounded vowel]] ({{IPA|/ɑ/}}), or an [[open central unrounded vowel]] ({{IPA|/a/}}). In the [[help:IPA|International Phonetic Alphabet]], variants of the letter A denote various [[vowel]]s. In [[X-SAMPA]], capital A denotes the [[open back unrounded vowel]] and lowercase a denotes the [[open front unrounded vowel]].
+
+''A'' is the third-most common letter in English, and the second-most common in [[Spanish language|Spanish]] and [[French language|French]]. On average, about 8.2% of letters in English tend to be ''A''s, while the number is 6.2% in Spanish and 4% in French.&lt;ref&gt;{{cite web|url=http://starbase.trincoll.edu/~crypto/resources/LetFreq.html|title=Percentages of Letter frequencies per Thousand words|accessdate=2006-05-01}}&lt;/ref&gt;
+
+''A'' also is the English [[indefinite article]], extended to ''an'' before a word beginning with a vowel. See [[a and an]].
+
+''A-'' also is a [[Prefix (linguistics)|prefix]] that serves to negate the [[morpheme]] to which it is attached, such as ''a''moral, ''a''political, etc. This derives from Greek.
+
+== Codes for computing ==
+{{Letter
+|NATO=Alpha
+|Morse=·–
+|Character=A1
+|Braille=⠁
+}}
+In [[Unicode]] the [[majuscule|capital]] A is codepoint U+0041 and the [[minuscule|lowercase]] a is U+0061.
+
+In [[Positional notation|positional numeral systems]] with base higher than 10, A is the character used to represent decimal 10, or in [[Binary numeral system|binary]], 1010
+
+The [[ASCII]] code for capital A is 65 and for lowercase a is 97; or in [[Binary numeral system|binary]] 01000001 and 01100001, respectively.
+
+The [[EBCDIC]] code for capital A is 193 and for lowercase a is 129.
+
+The [[morse code]] for A is   dit dah  or  a dot and a dash.
+
+The [[numeric character reference]]s in [[HTML]] and [[XML]] are &quot;&lt;tt&gt;&amp;amp;#65;&lt;/tt&gt;&quot; and &quot;&lt;tt&gt;&amp;amp;#97;&lt;/tt&gt;&quot; for upper and lower case respectively.
+
+== See also ==
+{{Wikisource1911Enc|A}}
+{{Commons|A}}
+*[[Alpha (letter)|Alpha]]
+*[[A (Cyrillic)|Cyrillic A]]
+*&lt;big&gt;[[ª]]&lt;/big&gt;
+*[[Ã]]
+*[[Ä]]
+*[[Å]] (Aa)
+*[[Æ]]
+*[[A-breve|Ă]]
+*[[Turned a|∀]]
+
+==External references==
+{{reflist}}
+
+{{Latin alphabet}}
+
+[[Category:Latin letters]]
+[[Category:Vowel letters]]
+[[Category:Requests for audio pronunciation (English)]]
+
+[[af:A]]
+[[als:A]]
+[[ar:A]]
+[[an:A]]
+[[arc:A]]
+[[ast:A]]
+[[az:A]]
+[[zh-min-nan:A]]
+[[bar:A]]
+[[bs:A]]
+[[br:A (lizherenn)]]
+[[bg:A]]
+[[ca:A]]
+[[cs:A]]
+[[co:A]]
+[[cy:A]]
+[[da:A]]
+[[de:A]]
+[[dv:އޭ]]
+[[et:A]]
+[[el:A]]
+[[eml:A]]
+[[es:A]]
+[[eo:A]]
+[[eu:A]]
+[[fa:A]]
+[[fr:A (lettre)]]
+[[fur:A]]
+[[gd:A]]
+[[gl:A]]
+[[ko:A]]
+[[hr:A]]
+[[io:A]]
+[[ilo:A]]
+[[ia:A]]
+[[is:A]]
+[[it:A]]
+[[he:A]]
+[[ka:A]]
+[[kw:A]]
+[[sw:A]]
+[[ht:A]]
+[[ku:A (herf)]]
+[[la:A]]
+[[lv:A]]
+[[lb:A (Buschtaf)]]
+[[lt:A]]
+[[hu:A]]
+[[ms:A]]
+[[nah:A]]
+[[nl:A (letter)]]
+[[ja:A]]
+[[no:A]]
+[[nn:A]]
+[[nrm:A]]
+[[uz:A (xarf)]]
+[[pt:A]]
+[[crh:A]]
+[[ro:A]]
+[[qu:A]]
+[[ru:A (латиница)]]
+[[se:A]]
+[[scn:A]]
+[[simple:A]]
+[[sk:A]]
+[[sl:A]]
+[[szl:A]]
+[[sr:A (слово латинице)]]
+[[fi:A]]
+[[sv:A]]
+[[tl:A]]
+[[th:A]]
+[[vi:A]]
+[[tr:A]]
+[[uk:A (латиниця)]]
+[[vo:A]]
+[[yo:A]]
+[[zh-yue:A]]
+[[diq:A]]
+[[bat-smg:A]]
+[[zh:A]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Latin alphabet</title>
+    <id>7286437</id>
+    <revision>
+      <id>196852941</id>
+      <timestamp>2008-03-08T21:15:13Z</timestamp>
+      <contributor>
+        <username>Down10</username>
+        <id>435999</id>
+      </contributor>
+      <comment>Added [[WP:DOC|Template documentation]]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{|class=&quot;wikitable&quot; style=&quot;clear:{{{clear|both}}};margin:0.2em auto;width:{{{width|90%}}};border-collapse:collapse;&quot;
+|-
+!colspan=&quot;26&quot; style=&quot;background:#efefef;text-align:center&quot;|The [[ISO/IEC 646|ISO]] basic [[Latin alphabet]]
+|-style=&quot;text-align:center&quot;
+|style=&quot;text-align:center;width:3.85%&quot;|[[A|Aa]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[B|Bb]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[C|Cc]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[D|Dd]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[E|Ee]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[F|Ff]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[G|Gg]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[H|Hh]]
+|style=&quot;text-align:center;width:3.75%&quot;|[[I|Ii]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[J|Jj]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[K|Kk]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[L|Ll]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[M|Mm]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[N|Nn]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[O|Oo]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[P|Pp]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[Q|Qq]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[R|Rr]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[S|Ss]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[T|Tt]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[U|Uu]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[V|Vv]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[W|Ww]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[X|Xx]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[Y|Yy]]
+|style=&quot;text-align:center;width:3.85%&quot;|[[Z|Zz]]
+|-
+|colspan=&quot;26&quot; class=&quot;Unicode&quot;|
+{{Latin alphabet inclusion|{{{1|{{PAGENAME}}}}}|{{{2|{{{1|{{PAGENAME}}}}}}}}}}
+{{nowrap|[[History of the Latin alphabet|history]] •}}
+{{nowrap|[[palaeography]] •}}
+{{nowrap|[[Alphabets derived from the Latin|derivations]] •}}
+{{nowrap|[[diacritic|diacritics]] •}}
+{{nowrap|[[punctuation]] •}}
+{{nowrap|[[Roman numerals|numerals]] •}}
+{{nowrap|[[Latin characters in Unicode|Unicode]] •}}
+{{nowrap|[[List of Latin letters|list of letters]]}}
+|}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Unicode</title>
+    <id>943744</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161709716</id>
+      <timestamp>2007-10-02T02:43:25Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;span class=&quot;Unicode&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Wikisource1911Enc</title>
+    <id>2213647</id>
+    <revision>
+      <id>169141187</id>
+      <timestamp>2007-11-04T12:27:14Z</timestamp>
+      <contributor>
+        <username>Conrad.Irwin</username>
+        <id>1037756</id>
+      </contributor>
+      <comment>reword and tidy up. now changes wording depending on whether link is to exact or related article.</comment>
+      <text xml:space="preserve">&lt;div class=&quot;infobox sisterproject&quot;&gt;[[Image:Wikisource-logo.svg|left|50px| ]]
+&lt;div style=&quot;margin-left: 60px;&quot;&gt;[[Wikisource]] has the text of {{#if:{{{2|}}}|a|the}} [[Encyclopædia Britannica Eleventh Edition|1911 Encyclopædia Britannica]] article {{#if:{{{2|}}}|about}} '''''[[Wikisource:1911 Encyclopædia Britannica/{{{1|{{PAGENAME}}}}}|{{{2|{{{1|{{PAGENAME}}}}}}}}]]'''''.&lt;/div&gt;&lt;/div&gt;&lt;noinclude&gt;
+
+==See also==
+* [[Wikipedia:Sister projects]] for full usage information
+
+[[Category:Wikisource link templates|Wikisource1911Enc]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherusesof</title>
+    <id>2593891</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>159463378</id>
+      <timestamp>2007-09-21T20:20:25Z</timestamp>
+      <contributor>
+        <username>MZMcBride</username>
+        <id>212624</id>
+      </contributor>
+      <comment>updated template</comment>
+      <text xml:space="preserve">{{dablink|For other uses of &quot;{{{1|{{PAGENAME}}}}}&quot;, see [[{{{2|{{{1|{{PAGENAME}}}}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+----
+For further information, see the [[{{TALKPAGENAME}}|talk page]].
+[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]
+&lt;!--Other languages--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>214471143</id>
+      <timestamp>2008-05-23T18:38:50Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <comment>partially reverting change by Rich Farmbrough - year shouldn't be wikilinked alone, doc says that nothing is wikilinked if daymonth/monthday is used</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{
+#if: {{#if: {{{url|}}} | {{#if: {{{title|}}} |1}}}}
+  ||You must specify  '''''title = ''''' and '''''url = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}{{
+#if: {{{archiveurl|}}}{{{archivedate|}}} 
+  | {{#if: {{#if: {{{archiveurl|}}}| {{#if: {{{archivedate|}}} |1}}}}
+    ||You must specify '''''archiveurl = ''''' and '''''archivedate = ''''' when using {{[[Template:cite web|cite web]]}}.
+{{#if: {{NAMESPACE}}|| [[Category:Articles with broken citations]]}}
+}}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{authorlink|}}}
+    | [[{{{authorlink}}}|{{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}]]
+    | {{#if: {{{last|}}}
+      | {{{last}}}{{#if: {{{first|}}} | , {{{first}}} }}
+      | {{{author}}}
+    }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  | {{#if: {{{coauthors|}}}| &lt;nowiki&gt;;&lt;/nowiki&gt;&amp;#32;{{{coauthors}}} }}
+}}{{#if: {{{author|}}}{{{last|}}}|
+    {{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{{date}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  |}}
+}}{{#if: {{{last|}}}{{{author|}}}
+  | .&amp;#32;}}{{
+  #if: {{{editor|}}}
+  | &amp;#32;{{{editor}}}: 
+}}{{#if: {{{archiveurl|}}}
+    | {{#if: {{{archiveurl|}}} | {{#if: {{{title|}}} | [{{{archiveurl}}} {{{title}}}] }}}}
+    | {{#if: {{{url|}}} | {{#if: {{{title|}}} | [{{{url}}} {{{title}}}] }}}}
+}}{{#if: {{{format|}}} | &amp;#32;({{{format|}}})
+}}{{#if: {{{language|}}} | &amp;#32;&lt;span style=&quot;color:#555;&quot;&gt;({{{language}}})&lt;/span&gt; 
+}}{{#if: {{{work|}}}
+  | .&amp;#32;''{{{work}}}''
+}}{{#if: {{{pages|}}}
+  | &amp;#32;{{{pages}}}
+}}{{#if: {{{publisher|}}}
+  | .&amp;#32;{{{publisher}}}{{#if: {{{author|}}}{{{last|}}}
+    | 
+    | {{#if: {{{date|}}}{{{year|}}}{{{month|}}} || }}
+  }}
+}}{{#if: {{{author|}}}{{{last|}}}
+  ||{{#if: {{{date|}}}
+    | &amp;#32;({{#ifeq:{{#time:Y-m-d|{{{date}}}}}|{{{date}}}|[[{{{date}}}]]|{{#ifeq:{{#time:Y-m-d|{{{date}}}}}|1970-01-01|[[{{{date}}}]]|{{{date}}}}}}})
+    | {{#if: {{{year|}}}
+      | {{#if: {{{month|}}}
+        | &amp;#32;({{{month}}} {{{year}}})
+        | &amp;#32;({{{year}}})
+      }}
+    }}
+  }}
+}}.{{#if: {{{archivedate|}}}
+  | &amp;#32;Archived from [{{{url}}} the original] on [[{{{archivedate}}}]].
+}}{{#if: {{{doi|}}} 
+  | &amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi|{{{doilabel|}}}}}} {{{doi}}}].
+}}{{#if: {{{accessdate|}}}
+  | &amp;#32;Retrieved on [[{{{accessdate}}}]]{{#if: {{{accessyear|}}} | , [[{{{accessyear}}}]] }}.
+}}{{#if: {{{accessmonthday|}}}
+  | &amp;#32;Retrieved on {{{accessmonthday}}}{{#if: {{{accessyear|}}} | , {{{accessyear}}} }}.
+}}{{#if: {{{accessdaymonth|}}}
+  | &amp;#32;Retrieved on {{{accessdaymonth}}}{{#if: {{{accessyear|}}} | &amp;#32;{{{accessyear}}} }}.
+}}{{#if: {{{quote|}}} 
+  | &amp;nbsp;“{{{quote}}}”
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dablink</title>
+    <id>945764</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>161709751</id>
+      <timestamp>2007-10-02T02:43:39Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;div class=&quot;dablink&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pron-en</title>
+    <id>13847663</id>
+    <revision>
+      <id>216974474</id>
+      <timestamp>2008-06-04T01:29:05Z</timestamp>
+      <contributor>
+        <username>Kwamikagami</username>
+        <id>93143</id>
+      </contributor>
+      <text xml:space="preserve">&lt;onlyinclude&gt;pronounced &lt;span title=&quot;Pronunciation in the International Phonetic Alphabet (IPA)&quot; class=&quot;IPA&quot;&gt;[[Help:IPA for English|/{{{1}}}/]]&lt;/span&gt;&lt;/onlyinclude&gt;
+
+==Example==
+
+Such code:
+
+: &lt;CODE&gt;&lt;NOWIKI&gt;A battleship, {{pronEng|ˈbætəlʃɪp}}, is ...&lt;/NOWIKI&gt;&lt;/CODE&gt;
+
+Will display:
+
+: A battleship, {{pronEng|ˈbætəlʃɪp}}, is ...
+
+==Usage==
+{{usage of IPA templates}}
+
+&lt;!-- PLEASE ADD CATEGORIES BELOW THIS LINE, THANKS. --&gt;
+
+[[Category:IPA templates|{{PAGENAME}}]]
+
+&lt;!-- PLEASE ADD INTERWIKIS BELOW THIS LINE, THANKS. --&gt;
+&lt;noinclude&gt;
+[[ar:PronEng]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:!</title>
+    <id>4459157</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>113778758</id>
+      <timestamp>2007-03-09T06:48:22Z</timestamp>
+      <contributor>
+        <username>Quarl</username>
+        <id>59118</id>
+      </contributor>
+      <comment>{{template doc}}</comment>
+      <text xml:space="preserve">|&lt;noinclude&gt;{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:IPA</title>
+    <id>1346385</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>177913359</id>
+      <timestamp>2007-12-14T17:41:52Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Change span title &quot;Pronunciation in IPA&quot; to &quot;Representation in the International Phonetic Alphabet (IPA)&quot; for clarity per editprotected on talk by [[User:SMcCandlish|SMcCandlish]]</comment>
+      <text xml:space="preserve">&lt;span title=&quot;Representation in the International Phonetic Alphabet (IPA)&quot; class=&quot;IPA&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Latin alphabet navbox</title>
+    <id>1312793</id>
+    <revision>
+      <id>202588876</id>
+      <timestamp>2008-04-01T17:34:33Z</timestamp>
+      <contributor>
+        <username>MBisanz</username>
+        <id>92123</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted edits by [[Special:Contributions/AkhtaBot|AkhtaBot]] ([[User talk:AkhtaBot|talk]]) to last version by 334</comment>
+      <text xml:space="preserve">{| class=&quot;infobox&quot; width=&quot;200&quot;
+|-
+!&lt;includeonly&gt;[[Image:Latin alphabet {{{uc|{{PAGENAME}}}}}{{{lc|{{lc:{{PAGENAME}}}}}}}.svg|center|{{{uc|{{PAGENAME}}}}}]]&lt;/includeonly&gt;&lt;noinclude&gt;''Image''&lt;/noinclude&gt;
+|-
+!bgcolor=&quot;#ccccff&quot;|Basic [[Latin alphabet]]&lt;/span&gt;
+|-
+|
+{| style=&quot;text-align:center; background:none; width:100%; margin:auto;&quot;
+|-
+|width=&quot;16.6%&quot;|&amp;nbsp;||width=&quot;16.7%&quot;|[[A|Aa]]||width=&quot;16.7%&quot;|[[B|Bb]]||width=&quot;16.7%&quot;|[[C|Cc]]||width=&quot;16.7%&quot;|[[D|Dd]]||width=&quot;16.6%&quot;|&amp;nbsp;
+|-
+|[[E|Ee]]||[[F|Ff]]||[[G|Gg]]||[[H|Hh]]||[[I|Ii]]||[[J|Jj]]
+|-
+|[[K|Kk]]||[[L|Ll]]||[[M|Mm]]||[[N|Nn]]||[[O|Oo]]||[[P|Pp]]
+|-
+|[[Q|Qq]]||[[R|Rr]]||[[S|Ss]]||[[T|Tt]]||[[U|Uu]]||[[V|Vv]]
+|-
+|&amp;nbsp;||[[W|Ww]]||[[X|Xx]]||[[Y|Yy]]||[[Z|Zz]]||&amp;nbsp;
+|}
+|}&lt;noinclude&gt;
+[[Category:Writing system templates|{{PAGENAME}}]]
+[[ar:قالب:حروف لاتينية]]
+﻿[[arc:Template:ܐܠܦܒܝܬ ܠܛܝܢܝܐ]]
+[[az:Şablon:Latin hərfləri]]
+[[bg:Шаблон:Кутия Латиница]]
+[[ca:Plantilla:Alfabet llatí]]
+[[el:Πρότυπο:A-Z]]
+&lt;!--[[en:Template:Latin alphabet navbox]]--&gt;
+[[eo:Ŝablono:A-Z]]
+[[es:Plantilla:AZ]]
+[[eu:Txantiloi:Latindar alfabeto]]
+[[fa:الگو:الفبای لاتین]]
+[[fi:Malline:Latinalaiset aakkoset]]
+[[gd:Template:AZ]]
+[[he:תבנית:אלפבית לטיני]]
+[[hr:Predložak:A-Ž]]
+[[hu:Sablon:Latin iras keret]]
+[[ilo:Template:AZ]]
+[[io:Template:A-Z]]
+[[ja:Template:A-Z]]
+[[ko:틀:AZ]]
+[[kw:Template:Latin]]
+[[la:Formula:Alphabetum]]
+[[nn:Mal:Alfabetet]]
+[[pt:Predefinição:A-Z]]
+[[ro:Format:A-Z]]
+[[ru:Шаблон:Латиница]]
+[[simple:Template:A-Z]]
+[[sl:Predloga:A-Ž]]
+[[sv:Mall:A-Ö navigering]]
+[[th:แม่แบบ:AZ]]
+[[tl:Template:AZ]]
+[[zh:Template:Infobox Latin common]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Wiktionarypar</title>
+    <id>1167761</id>
+    <revision>
+      <id>109614348</id>
+      <timestamp>2007-02-20T18:53:53Z</timestamp>
+      <contributor>
+        <username>Persian Poet Gal</username>
+        <id>538346</id>
+      </contributor>
+      <minor/>
+      <comment>fufilling protected edit request</comment>
+      <text xml:space="preserve">&lt;div class=&quot;infobox sisterproject&quot;&gt;
+&lt;div style=&quot;float: left;&quot;&gt;[[Image:Wiktionary-logo-en.png|50px|none|Wiktionary|]]&lt;/div&gt;
+&lt;div style=&quot;margin-left: 60px;&quot;&gt;Look up '''''[[wiktionary:{{{1}}}|{{{1}}}]]'''{{#if:{{{2|}}}|, '''[[wiktionary:{{{2}}}|{{{2}}}]]'''}}{{#if:{{{3|}}}|, '''[[wiktionary:{{{3}}}|{{{3}}}]]'''}}{{#if:{{{4|}}}|, '''[[wiktionary:{{{4}}}|{{{4}}}]]'''}}{{#if:{{{5|}}}|, '''[[wiktionary:{{{5}}}|{{{5}}}]]'''}}'' in [[Wiktionary]], the free dictionary.&lt;/div&gt;
+&lt;/div&gt;&lt;noinclude&gt;
+----
+This [[Wikipedia:Template|template]] is a [[Wikipedia:Avoid self-references|self-reference]] and so is part of the Wikipedia project rather than the encyclopaedic content.
+
+Usage: &lt;code&gt;{&amp;#123;Wiktionarypar|1st|2nd|...|5th&amp;#125;}&lt;/code&gt; (one up to five parameters)
+
+See also:
+* {{Lt|wiktionary}}
+* {{Lt|wiktionarypar}}
+* {{Lt|wiktionaryleft}}
+* {{Lt|wiktionarycat}}
+
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Templates using ParserFunctions|{{PAGENAME}}]]
+
+[[sl:predloga:wikislovar]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:AZsubnav</title>
+    <id>1701295</id>
+    <revision>
+      <id>213151272</id>
+      <timestamp>2008-05-18T00:49:07Z</timestamp>
+      <contributor>
+        <username>Anomie</username>
+        <id>301903</id>
+      </contributor>
+      <comment>rv addition of borders to the subtable</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{|style=&quot;margin:auto;width:100%;border:0;border-collapse:collapse&quot;
+|-
+!colspan=&quot;26&quot; style=&quot;background:#efefef;border:0&quot;|[[Wikipedia:List of all two-letter combinations|Two-letter combinations]]
+|-style=&quot;text-align:center&quot;
+|style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}a]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}b]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}c]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}d]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}e]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}f]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}g]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}h]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}i]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}j]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}k]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}l]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}m]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}n]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}o]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}p]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}q]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}r]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}s]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}t]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}u]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}v]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}w]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}x]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}y]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}z]]
+|-style=&quot;text-align:center&quot;
+|style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}A]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}B]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}C]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}D]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}E]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}F]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}G]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}H]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}I]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}J]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}K]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}L]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}M]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}N]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}O]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}P]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}Q]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}R]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}S]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}T]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}U]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}V]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}W]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}X]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}Y]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}Z]]
+|-
+!colspan=&quot;26&quot; style=&quot;border:0;background:#efefef&quot;|[[Wikipedia:List of all single-letter-single-digit combinations|Letter-digit]] ''&amp;'' [[Wikipedia:List of all single-digit-single-letter combinations|Digit-letter]] combinations
+|-style=&quot;text-align:center&quot;
+|style=&quot;border:0&quot;|&amp;nbsp;||style=&quot;border:0&quot;|&amp;nbsp;
+|style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}0]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}1]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}2]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}3]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}4]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}5]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}6]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}7]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}8]]||style=&quot;border:0&quot;|[[{{{1|{{PAGENAME}}}}}9]]
+|style=&quot;border:0&quot;|&amp;nbsp;||style=&quot;border:0&quot;|&amp;nbsp;
+|style=&quot;border:0&quot;|[[0{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[1{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[2{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[3{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[4{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[5{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[6{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[7{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[8{{{1|{{PAGENAME}}}}}]]||style=&quot;border:0&quot;|[[9{{{1|{{PAGENAME}}}}}]]
+|style=&quot;border:0&quot;|&amp;nbsp;||style=&quot;border:0&quot;|&amp;nbsp;
+|}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap</title>
+    <id>1627975</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>217157546</id>
+      <timestamp>2008-06-04T21:13:26Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <minor/>
+      <comment>closing colon</comment>
+      <text xml:space="preserve">&lt;span style=&quot;white-space:nowrap;&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;!--interwikis/categories go inside doc--&gt;&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>209251521</id>
+      <timestamp>2008-04-30T16:05:00Z</timestamp>
+      <contributor>
+        <username>CapitalR</username>
+        <id>988917</id>
+      </contributor>
+      <comment>fixing minor bug per editprotected request</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; -webkit-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; -webkit-column-count:{{{1}}}; column-count:{{{1}}};&quot; }} }}&gt;
+&lt;references /&gt;&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Latin alphabet inclusion</title>
+    <id>11678919</id>
+    <revision>
+      <id>208599474</id>
+      <timestamp>2008-04-27T20:34:00Z</timestamp>
+      <contributor>
+        <username>JMyrleFuller</username>
+        <id>2068487</id>
+      </contributor>
+      <comment>Added turned A</comment>
+      <text xml:space="preserve">{{#switch:{{{1|{{PAGENAME}}}}}
+|A|Á|À|Ă|Ắ|Ằ|Ẵ|Ẳ|Â|Ấ|Ầ|Ẫ|Ẩ|Ǎ|Å|Ǻ|Ä|Ǟ|Ã|Ȧ|Ǡ|Ą|Ā|Ả|Ȁ|Ȃ|Ạ|Ặ|Ậ|Ḁ|Ⱥ|ᶏ|
+a=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter A with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Á|Áá]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[À|Àà]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ă|Ăă]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ắ|Ắắ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ằ|Ằằ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẵ|Ẵẵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẳ|Ẳẳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Â|Ââ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ấ|Ấấ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ầ|Ầầ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẫ|Ẫẫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẩ|Ẩẩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǎ|Ǎǎ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Å|Åå]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǻ|Ǻǻ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ä|Ää]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǟ|Ǟǟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ã|Ãã]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȧ|Ȧȧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǡ|Ǡǡ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ą|Ąą]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ā|Āā]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ả|Ảả]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȁ|Ȁȁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȃ|Ȃȃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ạ|Ạạ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ặ|Ặặ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ậ|Ậậ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḁ|Ḁḁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱥ|Ⱥⱥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶏ|ᶏ]]&lt;/span&gt; &lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Turned a|ɐ∀]]&lt;/span&gt;&lt;/div&gt;
+|B|Ḃ|Ḅ|Ḇ|Ƀ|Ɓ|Ƃ|ᵬ|ᶀ|
+b=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter B with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḃ|Ḃḃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḅ|Ḅḅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḇ|Ḇḇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƀ|Ƀƀ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɓ|Ɓɓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƃ|Ƃƃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵬ|ᵬ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶀ|ᶀ]]&lt;/span&gt;&lt;/div&gt;
+|C|Ć|Ĉ|Č|Ċ|Ç|Ḉ|Ȼ|Ƈ|ɕ|
+c=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter C with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ć|Ćć]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĉ|Ĉĉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Č|Čč]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ċ|Ċċ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ç|Çç]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḉ|Ḉḉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȼ|Ȼȼ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƈ|Ƈƈ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɕ|ɕ]]&lt;/span&gt;&lt;/div&gt;
+|D|Ď|Ḋ|Ḑ|Ḍ|Ḓ|Ḏ|Đ|Ɖ|Ɗ|Ƌ|ᵭ|ᶁ|ᶑ|ȡ|
+d=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter D with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ď|Ďď]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḋ|Ḋḋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḑ|Ḑḑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḍ|Ḍḍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḓ|Ḓḓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḏ|Ḏḏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Đ|Đđ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɖ|Ɖɖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɗ|Ɗɗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƌ|Ƌƌ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵭ|ᵭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶁ|ᶁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶑ|ᶑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȡ|ȡ]]&lt;/span&gt;&lt;/div&gt;
+|E|É|È|Ĕ|Ê|Ế|Ề|Ễ|Ể|Ě|Ë|Ẽ|Ė|Ȩ|Ḝ|Ę|Ē|Ḗ|Ḕ|Ẻ|Ȅ|Ȇ|Ẹ|Ệ|Ḙ|Ḛ|Ɇ|ᶒ|
+e=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter E with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[É|Éé]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[È|Èè]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĕ|Ĕĕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ê|Êê]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ế|Ếế]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ề|Ềề]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ễ|Ễễ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ể|Ểể]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ě|Ěě]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ë|Ëë]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẽ|Ẽẽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ė|Ėė]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȩ|Ȩȩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḝ|Ḝḝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ę|Ęę]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ē|Ēē]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḗ|Ḗḗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḕ|Ḕḕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẻ|Ẻẻ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȅ|Ȅȅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȇ|Ȇȇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẹ|Ẹẹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ệ|Ệệ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḙ|Ḙḙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḛ|Ḛḛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɇ|Ɇɇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶒ|ᶒ]]&lt;/span&gt;&lt;/div&gt;
+|F|Ḟ|Ƒ|ᵮ|ᶂ|
+f=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter F with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḟ|Ḟḟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƒ|Ƒƒ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵮ|ᵮ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶂ|ᶂ]]&lt;/span&gt;&lt;/div&gt;
+|G|Ǵ|Ğ|Ĝ|Ǧ|Ġ|Ģ|Ḡ|Ǥ|Ɠ|ᶃ|
+g=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter G with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǵ|Ǵǵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ğ|Ğğ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĝ|Ĝĝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǧ|Ǧǧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ġ|Ġġ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ģ|Ģģ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḡ|Ḡḡ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǥ|Ǥǥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɠ|Ɠɠ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶃ|ᶃ]]&lt;/span&gt;&lt;/div&gt;
+|H|Ĥ|Ȟ|Ḧ|Ḣ|Ḩ|Ḥ|Ḫ|ẖ|Ħ|Ⱨ|
+h=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter H with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĥ|Ĥĥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȟ|Ȟȟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḧ|Ḧḧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḣ|Ḣḣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḩ|Ḩḩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḥ|Ḥḥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḫ|Ḫḫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẖ|H̱ẖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ħ|Ħħ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱨ|Ⱨⱨ]]&lt;/span&gt;&lt;/div&gt;
+|I|Í|Ì|Ĭ|Î|Ǐ|Ï|Ḯ|Ĩ|Į|Ī|Ỉ|Ȉ|Ȋ|Ị|Ḭ|Ɨ|ᵻ|ᶖ|Turkish dotted and dotless I|İ|ı|
+i=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter I with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Í|Íí]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ì|Ìì]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĭ|Ĭĭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Î|Îî]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǐ|Ǐǐ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ï|Ïï]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḯ|Ḯḯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĩ|Ĩĩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Į|Įį]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ī|Īī]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỉ|Ỉỉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȉ|Ȉȉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȋ|Ȋȋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ị|Ịị]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḭ|Ḭḭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɨ|Ɨɨ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵻ|ᵻ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶖ|ᶖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Turkish dotted and dotless I|İi]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Turkish dotted and dotless I|Iı]]&lt;/span&gt;&lt;/div&gt;
+|J|Ĵ|ǰ|ȷ|Ɉ|ʝ|ɟ|ʄ|
+j=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter J with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĵ|Ĵĵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɉ|Ɉɉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ǰ|J̌ǰ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȷ|ȷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʝ|ʝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɟ|ɟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʄ|ʄ]]&lt;/span&gt;&lt;/div&gt;
+|K|Ḱ|Ǩ|Ķ|Ḳ|Ḵ|Ƙ|Ⱪ|ᶄ|
+k=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter K with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḱ|Ḱḱ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǩ|Ǩǩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ķ|Ķķ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḳ|Ḳḳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḵ|Ḵḵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƙ|Ƙƙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱪ|Ⱪⱪ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶄ|ᶄ]]&lt;/span&gt;&lt;/div&gt;
+|L|Ĺ|Ľ|Ļ|Ḷ|Ḹ|Ḽ|Ḻ|Ł|Ŀ|Ƚ|Ⱡ|Ɫ|ɬ|ᶅ|ɭ|ȴ|
+l=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter L with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĺ|Ĺĺ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ľ|Ľľ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ļ|Ļļ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḷ|Ḷḷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḹ|Ḹḹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḽ|Ḽḽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḻ|Ḻḻ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ł|Łł]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŀ|Ŀŀ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƚ|Ƚƚ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱡ|Ⱡⱡ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɫ|Ɫɫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɬ|ɬ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶅ|ᶅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɭ|ɭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȴ|ȴ]]&lt;/span&gt;&lt;/div&gt;
+|M|Ḿ|Ṁ|Ṃ|ᵯ|ᶆ|ɱ|
+m=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter M with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḿ|Ḿḿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṁ|Ṁṁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṃ|Ṃṃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵯ|ᵯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶆ|ᶆ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɱ|ɱ]]&lt;/span&gt;&lt;/div&gt;
+|N|Ń|Ǹ|Ň|Ñ|Ṅ|Ņ|Ṇ|Ṋ|Ṉ|Ɲ|Ƞ|N̈|ᵰ|ᶇ|ɳ|ȵ|
+n=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter N with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ń|Ńń]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǹ|Ǹǹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ň|Ňň]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ñ|Ññ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṅ|Ṅṅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ņ|Ņņ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṇ|Ṇṇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṋ|Ṋṋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṉ|Ṉṉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[N̈|N̈n̈]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɲ|Ɲɲ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƞ|Ƞƞ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵰ|ᵰ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶇ|ᶇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɳ|ɳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȵ|ȵ]]&lt;/span&gt;&lt;/div&gt;
+|O|Ó|Ò|Ŏ|Ô|Ố|Ồ|Ỗ|Ổ|Ǒ|Ö|Ȫ|Ő|Õ|Ṍ|Ṏ|Ȭ|Ȯ|Ȱ|Ø|Ǿ|Ǫ|Ǭ|Ō|Ṓ|Ṑ|Ỏ|Ȍ|Ȏ|Ơ|Ớ|Ờ|Ỡ|Ở|Ợ|Ọ|Ộ|Ɵ|
+o=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter O with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ó|Óó]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ò|Òò]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŏ|Ŏŏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ô|Ôô]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ố|Ốố]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ồ|Ồồ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỗ|Ỗỗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ổ|Ổổ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǒ|Ǒǒ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ö|Öö]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȫ|Ȫȫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ő|Őő]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Õ|Õõ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṍ|Ṍṍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṏ|Ṏṏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȭ|Ȭȭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȯ|Ȯȯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȱ|Ȱȱ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ø|Øø]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǿ|Ǿǿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǫ|Ǫǫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǭ|Ǭǭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ō|Ōō]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṓ|Ṓṓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṑ|Ṑṑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỏ|Ỏỏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȍ|Ȍȍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȏ|Ȏȏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ơ|Ơơ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ớ|Ớớ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ờ|Ờờ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỡ|Ỡỡ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ở|Ởở]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ợ|Ợợ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ọ|Ọọ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ộ|Ộộ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɵ|Ɵɵ]]&lt;/span&gt;&lt;/div&gt;
+|P|Ṕ|Ṗ|Ᵽ|Ƥ|P̃|ᵱ|ᶈ|
+p=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter P with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṕ|Ṕṕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṗ|Ṗṗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ᵽ|Ᵽᵽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƥ|Ƥƥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[P̃|P̃p̃]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵱ|ᵱ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶈ|ᶈ]]&lt;/span&gt;&lt;/div&gt;
+|Q|Ɋ|ʠ|
+q=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter Q with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɋ|Ɋɋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʠ|ʠ]]&lt;/span&gt;&lt;/div&gt;
+|R|Ŕ|Ř|Ṙ|Ŗ|Ȑ|Ȓ|Ṛ|Ṝ|Ṟ|Ɍ|Ɽ|ᵲ|ᶉ|ɼ|ɽ|ɾ|ᵳ|
+r=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter R with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŕ|Ŕŕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ř|Řř]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṙ|Ṙṙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŗ|Ŗŗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȑ|Ȑȑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȓ|Ȓȓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṛ|Ṛṛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṝ|Ṝṝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṟ|Ṟṟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɍ|Ɍɍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɽ|Ɽɽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵲ|ᵲ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶉ|ᶉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɼ|ɼ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɾ|ɾ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵳ|ᵳ]]&lt;/span&gt;&lt;/div&gt;
+|S|Ś|Ṥ|Ŝ|Š|Ṧ|Ṡ|Ş|Ṣ|Ṩ|Ș|S̩|ᵴ|ᶊ|ʂ|ȿ|
+s=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter S with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ś|Śś]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṥ|Ṥṥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŝ|Ŝŝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Š|Šš]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṧ|Ṧṧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṡ|Ṡṡẛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ş|Şş]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṣ|Ṣṣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṩ|Ṩṩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ș|Șș]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[S̩|S̩s̩]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵴ|ᵴ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶊ|ᶊ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʂ|ʂ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȿ|ȿ]]&lt;/span&gt;&lt;/div&gt;
+|T|Ť|Ṫ|Ţ|Ṭ|Ț|Ṱ|Ṯ|Ŧ|Ⱦ|Ƭ|Ʈ|T̈|ẗ|ᵵ|ƫ|ȶ|
+t=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter T with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ť|Ťť]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṫ|Ṫṫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ţ|Ţţ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṭ|Ṭṭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ț|Țț]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṱ|Ṱṱ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṯ|Ṯṯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŧ|Ŧŧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱦ|Ⱦⱦ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƭ|Ƭƭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ʈ|Ʈʈ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[T̈|T̈ẗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵵ|ᵵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ƫ|ƫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ȶ|ȶ]]&lt;/span&gt;&lt;/div&gt;
+|U|Ú|Ù|Ŭ|Û|Ǔ|Ů|Ü|Ǘ|Ǜ|Ǚ|Ǖ|Ű|Ũ|Ṹ|Ų|Ū|Ṻ|Ủ|Ȕ|Ȗ|Ư|Ứ|Ừ|Ữ|Ử|Ự|Ụ|Ṳ|Ṷ|Ṵ|Ʉ|ᵾ|ᶙ|
+u=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter U with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ú|Úú]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ù|Ùù]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŭ|Ŭŭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Û|Ûû]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǔ|Ǔǔ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ů|Ůů]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ü|Üü]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǘ|Ǘǘ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǜ|Ǜǜ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǚ|Ǚǚ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǖ|Ǖǖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ű|Űű]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ũ|Ũũ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṹ|Ṹṹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ų|Ųų]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ū|Ūū]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṻ|Ṻṻ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ủ|Ủủ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȕ|Ȕȕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȗ|Ȗȗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ư|Ưư]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ứ|Ứứ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ừ|Ừừ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ữ|Ữữ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ử|Ửử]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ự|Ựự]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ụ|Ụụ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṳ|Ṳṳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṷ|Ṷṷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṵ|Ṵṵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ʉ|Ʉʉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵾ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶙ]]&lt;/span&gt;&lt;/div&gt;
+|V|Ṽ|Ṿ|Ʋ|ᶌ|ⱴ|
+v=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter V with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṽ|Ṽṽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṿ|Ṿṿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ʋ|Ʋʋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶌ|ᶌ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ⱴ|ⱴ]]&lt;/span&gt;&lt;/div&gt;
+|W|Ẃ|Ẁ|Ŵ|Ẅ|Ẇ|Ẉ|W̊|ẘ|
+w=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter W with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẃ|Ẃẃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẁ|Ẁẁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŵ|Ŵŵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẅ|Ẅẅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẇ|Ẇẇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẉ|Ẉẉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẘ|W̊ẘ]]&lt;/span&gt;&lt;/div&gt;
+|X|Ẍ|Ẋ|ᶍ|
+x=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter X with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẍ|Ẍẍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẋ|Ẋẋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶍ|ᶍ]]&lt;/span&gt;&lt;/div&gt;
+|Y|Ý|Ỳ|Ŷ|Ÿ|Ỹ|Ẏ|Ȳ|Ỷ|Ỵ|Ɏ|Ƴ|Y̊|ẙ|ʏ|
+y=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter Y with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ý|Ýý]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỳ|Ỳỳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŷ|Ŷŷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẙ|Y̊ẙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ÿ|Ÿÿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỹ|Ỹỹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẏ|Ẏẏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȳ|Ȳȳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỷ|Ỷỷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỵ|Ỵỵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɏ|Ɏɏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƴ|Ƴƴ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʏ|ʏ]]&lt;/span&gt;&lt;/div&gt;
+|Z|Ź|Ẑ|Ž|Ż|Ẓ|Ẕ|Ƶ|Ȥ|Ⱬ|ᵶ|ᶎ|ʐ|ʑ|ɀ|
+z=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letter Z with [[diacritic]]s'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ź|Źź]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẑ|Ẑẑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ž|Žž]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ż|Żż]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẓ|Ẓẓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẕ|Ẕẕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƶ|Ƶƶ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȥ|Ȥȥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱬ|Ⱬⱬ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᵶ|ᵶ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶎ|ᶎ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʐ|ʐ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʑ|ʑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɀ|ɀ]]&lt;/span&gt;&lt;/div&gt;
+}}{{#switch:{{{2|{{{1|{{PAGENAME}}}}}}}}
+|Ⱥ|Ƀ|Ȼ|Đ|Ɇ|Ǥ|Ħ|Ɨ|Ɉ|Ł|Ø|Ᵽ|Ɍ|Ŧ|Ɏ|Ƶ|
+bar|stroke=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Bar (diacritic)|stroke]] sign'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ⱥ|Ⱥⱥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƀ|Ƀƀ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȼ|Ȼȼ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Đ|Đđ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɇ|Ɇɇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǥ|Ǥǥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ħ|Ħħ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɨ|Ɨɨ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɉ|Ɉɉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ł|Łł]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ø|Øø]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ᵽ|Ᵽᵽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɍ|Ɍɍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŧ|Ŧŧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɏ|Ɏɏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƶ|Ƶƶ]]&lt;/span&gt;&lt;/div&gt;
+|Ɓ|Ƈ|Ɗ|Ɠ|Ƙ|Ƥ|Ƭ|Ƴ|
+hook=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Hook (diacritic)|hook]] sign'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɓ|Ɓɓ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƈ|Ƈƈ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɗ|Ɗɗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɠ|Ɠɠ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƙ|Ƙƙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƥ|Ƥƥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƭ|Ƭƭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ƴ|Ƴƴ]]&lt;/span&gt;&lt;/div&gt;
+|Ơ|Ư|
+horn=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Horn (diacritic)|horn]] sign'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ơ|Ơơ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ư|Ưư]]&lt;/span&gt;&lt;/div&gt;
+|Ɖ|Ɽ|ɽ|ƺ|
+tail=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using tail sign'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɖ|Ɖɖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ɽ|Ɽɽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ƺ]]&lt;/span&gt;&lt;/div&gt;
+|Ç|Ḑ|Ȩ|Ģ|Ḩ|Ķ|Ļ|Ņ|Ŗ|Ş|Ţ|
+cedilla=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[cedilla]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ç|Çç]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḑ|Ḑḑ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȩ|Ȩȩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ģ|Ģģ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḩ|Ḩḩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ķ|Ķķ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ļ|Ļļ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ņ|Ņņ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŗ|Ŗŗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ş|Şş]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ţ|Ţţ]]&lt;/span&gt;&lt;/div&gt;
+|Ą|Ę|Į|Ǫ|Ų|
+ogonek=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[ogonek]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ą|Ąą]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ę|Ęę]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Į|Įį]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǫ|Ǫǫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ų|Ųų]]&lt;/span&gt;&lt;/div&gt;
+|ᶏ|ᶒ|ᶖ|ɭ|ɳ|Ʈ|ᶙ|ʐ|
+retroflex hook=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using retroflex hook sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶒ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶖ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ɳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ʈ|Ʈʈ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ᶙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ʐ]]&lt;/span&gt;&lt;/div&gt;
+|Ș|Ț|
+comma=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Comma (punctuation)|comma]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[D-comma|D{{unicode|̦}}d{{unicode|̦}}]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[S-comma|Șș]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[T-comma|Țț]]&lt;/span&gt;&lt;/div&gt;
+|Á|Ǽ|Ć|É|Ǵ|Í|Ḱ|Ĺ|Ḿ|Ń|Ó|Ǿ|Ṕ|Ŕ|Ś|Ú|Ẃ|Ý|Ź|
+acute=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Acute accent|acute accent]]'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Á|Áá]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǽ|Ǽǽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ć|Ćć]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[É|Éé]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǵ|Ǵǵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Í|Íí]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḱ|Ḱḱ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĺ|Ĺĺ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḿ|Ḿḿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ń|Ńń]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ó|Óó]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǿ|Ǿǿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṕ|Ṕṕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŕ|Ŕŕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ś|Śś]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ú|Úú]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẃ|Ẃẃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ý|Ýý]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ź|Źź]]&lt;/span&gt;&lt;/div&gt;
+|Ő|Ű|
+double acute=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Double acute accent|double acute]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ő|Őő]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ű|Űű]]&lt;/span&gt;&lt;/div&gt;
+|À|È|Ì|Ǹ|Ò|Ù|Ẁ|Ỳ|
+grave=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Grave accent|grave accent]]'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[À|Àà]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[È|Èè]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ì|Ìì]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǹ|Ǹǹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ò|Òò]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ù|Ùù]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẁ|Ẁẁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỳ|Ỳỳ]]&lt;/span&gt;&lt;/div&gt;
+|Â|Ĉ|Ê|Ĝ|Ĥ|Î|Ĵ|Ô|Ŝ|Û|Ŵ|Ŷ|Ẑ|
+circumflex=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[circumflex]] accent'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Â|Ââ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĉ|Ĉĉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ê|Êê]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĝ|Ĝĝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĥ|Ĥĥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Î|Îî]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĵ|Ĵĵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ô|Ôô]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŝ|Ŝŝ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Û|Ûû]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŵ|Ŵŵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŷ|Ŷŷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẑ|Ẑẑ]]&lt;/span&gt;&lt;/div&gt;
+|Ǎ|Č|Ď|Ě|Ǧ|Ȟ|Ǐ|J̌|ǰ|Ǩ|Ľ|Ň|Ǒ|Ř|Š|Ť|Ǔ|Ž|Ǯ|
+caron=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[caron]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǎ|Ǎǎ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Č|Čč]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ď|Ďď]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ě|Ěě]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǧ|Ǧǧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȟ|Ȟȟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǐ|Ǐǐ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ǰ|J̌ǰ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǩ|Ǩǩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ľ|Ľľ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ň|Ňň]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǒ|Ǒǒ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ř|Řř]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Š|Šš]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ť|Ťť]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǔ|Ǔǔ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ž|Žž]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǯ|Ǯǯ]]&lt;/span&gt;&lt;/div&gt;
+|Ă|Ĕ|Ğ|Ĭ|Ŏ|Ŭ|
+breve=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[breve]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ă|Ăă]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĕ|Ĕĕ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ğ|Ğğ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĭ|Ĭĭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŏ|Ŏŏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ŭ|Ŭŭ]]&lt;/span&gt;&lt;/div&gt;
+|Ā|Ē|Ḡ|Ī|Ō|Ū|Ȳ|Ǣ|
+macron=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[macron]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ā|Āā]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ē|Ēē]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḡ|Ḡḡ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ī|Īī]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ō|Ōō]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ū|Ūū]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȳ|Ȳȳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ǣ|Ǣǣ]]&lt;/span&gt;&lt;/div&gt;
+|Ã|Ẽ|Ĩ|Ñ|Õ|Ũ|Ṽ|Ỹ|
+tilde=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[tilde]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ã|Ãã]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẽ|Ẽẽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ĩ|Ĩĩ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ñ|Ññ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Õ|Õõ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ũ|Ũũ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṽ|Ṽṽ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỹ|Ỹỹ]]&lt;/span&gt;&lt;/div&gt;
+|Ä|Ë|Ḧ|Ï|Ö|T̈|ẗ|Ü|Ẅ|Ẍ|Ÿ|
+diaeresis|umlaut=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Umlaut (diacritic)|umlaut or diaeresis]] sign'''&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ä|Ää]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ë|Ëë]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḧ|Ḧḧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ï|Ïï]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[N̈|N̈n̈]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ö|Öö]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẗ|T̈ẗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ü|Üü]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẅ|Ẅẅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẍ|Ẍẍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ÿ|Ÿÿ]]&lt;/span&gt;&lt;/div&gt;
+|Å|Ů|W̊|ẘ|Y̊|ẙ|
+ring=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Ring (diacritic)|ring]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Å|Åå]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ů|Ůů]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẘ|W̊ẘ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[ẙ|Y̊ẙ]]&lt;/span&gt;&lt;/div&gt;
+|Ȧ|Ḃ|Ċ|Ḋ|Ė|Ḟ|Ġ|Ḣ|İ|Turkish dotted and dotless I|Ṁ|Ṅ|Ȯ|Ṗ|Ṙ|Ṡ|Ṫ|Ẇ|Ẋ|Ẏ|Ż|
+dot above=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Dot (diacritic)|dot-above]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȧ|Ȧȧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḃ|Ḃḃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ċ|Ċċ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḋ|Ḋḋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ė|Ėė]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḟ|Ḟḟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ġ|Ġġ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḣ|Ḣḣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Turkish dotted and dotless I|İ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṁ|Ṁṁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṅ|Ṅṅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȯ|Ȯȯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṗ|Ṗṗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṙ|Ṙṙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṡ|Ṡṡẛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṫ|Ṫṫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẇ|Ẇẇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẋ|Ẋẋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẏ|Ẏẏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ż|Żż]]&lt;/span&gt;&lt;/div&gt;
+|Ạ|Ḅ|Ḍ|Ẹ|Ḥ|Ị|Ḳ|Ḷ|Ṃ|Ṇ|Ọ|Ṛ|Ṣ|Ṭ|Ụ|Ṿ|Ẉ|Ỵ|Ẓ|
+dot below=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Dot (diacritic)|dot-below]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ạ|Ạạ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḅ|Ḅḅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḍ|Ḍḍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẹ|Ẹẹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḥ|Ḥḥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ị|Ịị]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḳ|Ḳḳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḷ|Ḷḷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṃ|Ṃṃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṇ|Ṇṇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ọ|Ọọ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṛ|Ṛṛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṣ|Ṣṣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṭ|Ṭṭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ụ|Ụụ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṿ|Ṿṿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẉ|Ẉẉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỵ|Ỵỵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẓ|Ẓẓ]]&lt;/span&gt;&lt;/div&gt;
+|dot=&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Dot (diacritic)|dot-above]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȧ|Ȧȧ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḃ|Ḃḃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ċ|Ċċ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḋ|Ḋḋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ė|Ėė]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḟ|Ḟḟ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ġ|Ġġ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḣ|Ḣḣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Turkish dotted and dotless I|İ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṁ|Ṁṁ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṅ|Ṅṅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ȯ|Ȯȯ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṗ|Ṗṗ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṙ|Ṙṙ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṡ|Ṡṡẛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṫ|Ṫṫ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẇ|Ẇẇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẋ|Ẋẋ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẏ|Ẏẏ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ż|Żż]]&lt;/span&gt;&lt;/div&gt;
+&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;'''Letters using [[Dot (diacritic)|dot-below]] sign'''&lt;/div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ạ|Ạạ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḅ|Ḅḅ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḍ|Ḍḍ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẹ|Ẹẹ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḥ|Ḥḥ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ị|Ịị]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḳ|Ḳḳ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ḷ|Ḷḷ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṃ|Ṃṃ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṇ|Ṇṇ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ọ|Ọọ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṛ|Ṛṛ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṣ|Ṣṣ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṭ|Ṭṭ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ụ|Ụụ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ṿ|Ṿṿ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẉ|Ẉẉ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ỵ|Ỵỵ]]&lt;/span&gt;&lt;span style=&quot;float:left;width:2.1em&quot;&gt;[[Ẓ|Ẓẓ]]&lt;/span&gt;&lt;/div&gt;
+}}&lt;div style=&quot;clear:both;background:#efefef;text-align:center&quot;&gt;{{#switch:{{{2|{{{1|{{PAGENAME}}}}}}}}
+|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z={{AZsubnav|{{{1|{{PAGENAME}}}}}}}}}&lt;/div&gt;&lt;noinclude&gt;
+------
+{{Intricate template}}
+
+[[Category:Language templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite encyclopedia</title>
+    <id>1664277</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>217232863</id>
+      <timestamp>2008-06-05T04:35:52Z</timestamp>
+      <contributor>
+        <username>Omegatron</username>
+        <id>18931</id>
+      </contributor>
+      <comment>white space should not display anymore, while browser tools that replace this with a link will still work</comment>
+      <text xml:space="preserve">&lt;cite style=&quot;font-style:normal&quot;&gt;{{
+#if:{{{author|}}}{{{last|}}}
+  |{{#if:{{{authorlink|}}}
+    |[[{{{authorlink}}}|{{
+    #if: {{{last|}}}
+      |{{{last}}}{{#if:{{{first|}}}|, {{{first}}}}}
+      |{{{author}}}
+    }}]]
+    |{{#if: {{{last|}}}
+      |{{{last}}}{{#if:{{{first|}}}|, {{{first}}}}}
+      |{{{author}}}{{#if:{{{coauthors|}}}
+        |
+        |
+        }}
+    }}
+  }}{{
+  #if:{{{coauthors|}}}
+    |&lt;nowiki&gt;;&lt;/nowiki&gt; {{{coauthors}}}
+  }}{{
+  #if:{{{date|}}}
+    |&amp;#32;({{{date}}}).
+    |{{#if:{{{year|}}}
+      |{{#if:{{{month|}}}
+        |&amp;#32;({{{month}}} {{{year}}}).
+        |&amp;#32;({{{year}}}).
+      }}
+    }}
+  }}
+}}&amp;#32;{{
+#if:{{{url|}}}
+  |&quot;[{{{url}}} {{{article|{{{title}}}}}}]&quot;.
+  |{{
+  #if:{{{article|{{{title|}}}}}}
+    |&quot;{{{article|{{{title}}}}}}&quot;.
+  }}
+}}{{
+#if:{{{encyclopedia|}}}{{{ency|}}}
+  |&amp;#32;''{{{encyclopedia|{{{ency}}}}}}''
+}}{{
+#if:{{{edition|}}}
+  |&amp;#32;({{{edition}}})
+}}{{
+#if:{{{volume|}}}
+  |&amp;#32;'''{{{volume}}}'''
+}}.{{
+#if:{{{last|}}}{{{author|}}}
+  |&amp;#32;
+  |{{
+  #if:{{{date|}}}
+    |&amp;#32;({{{date}}}).
+    |{{#if:{{{year|}}}
+      |{{#if:{{{month|}}}
+        |&amp;#32;({{{month}}} {{{year}}}).
+        |&amp;#32;({{{year}}}).
+      }}
+    }}
+  }}
+}}{{
+#if:{{{editor|}}}
+  |&amp;#32;Ed. {{{editor}}}.
+}}{{
+#if:{{{publisher|}}}|{{
+  #if:{{{location|}}}
+    |&amp;#32;{{{location}}}:
+  }}&amp;#32;{{{publisher}}}.
+}}{{
+#if:{{{pages|}}}
+  |&amp;#32;{{{pages}}}.
+}}{{
+#if:{{{doi|}}}
+  |&amp;#32;[[Digital object identifier|DOI]]:[http://dx.doi.org/{{{doi}}} {{{doi}}}].
+}}{{
+#if:{{{id|}}}
+  |&amp;#32;{{{id}}}.
+}}{{
+  #if: {{{isbn|}}} |&amp;#32;ISBN {{{isbn}}}.
+}}{{
+  #if: {{{oclc|}}} |&amp;#32;[[OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{oclc}}}}} {{{oclc}}}].
+}}{{
+#if:{{{accessdate|}}}
+  |&amp;#32;Retrieved on [[{{{accessdate}}}]].
+  |{{
+  #if:{{{accessyear|}}}|{{
+    #if:{{{accessmonth|}}}
+      |&amp;#32;Retrieved on {{{accessmonth}}} {{{accessyear}}}.
+      |&amp;#32;Retrieved on {{{accessyear}}}.
+    }}
+  }}
+}}{{
+#if: {{{quote|}}}
+    | &amp;nbsp;“{{{quote}}}”
+}}&lt;/cite&gt;&lt;!--
+
+This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information:
+  --&gt;&lt;span class=&quot;Z3988&quot; title=&quot;ctx_ver=Z39.88-2004&lt;!--
+  --&gt;&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:dc}}&lt;!--                     Field descriptions: http://www.openurl.info/registry/docs/mtx/info:ofi/fmt:kev:mtx:dc
+  --&gt;&amp;rft.type=encyclopediaArticle&lt;!--                                          The nature or genre of the content of the resource.  (encyclopediaArticle chosen purely because it is recognized by Zotero.)
+  --&gt;{{#if: {{{first|}}}        | &amp;rft.aufirst={{urlencode:{{{first}}}}}       }}&lt;!-- First author's given name or names or initials... may contain multiple words and punctuation, i.e. &quot;Fred F&quot;, &quot;Fred James&quot;
+  --&gt;{{#if: {{{last|}}}         | &amp;rft.aulast={{urlencode:{{{last}}}}}         }}&lt;!-- First author's family name. This may be more than one word ... i.e. Smith, Fred James is recorded as &quot;aulast=smith&quot;
+  --&gt;{{#if: {{{author|}}}       | &amp;rft.au={{urlencode:{{{author}}}}}           }}&lt;!-- This data element contains the full name of a single author, i. e. &quot;Smith, Fred M&quot;, &quot;Harry S. Truman&quot;.
+  --&gt;{{#if: {{{editor|}}}       | &amp;rft.contributor={{urlencode:{{{editor}}}}}  }}&lt;!-- An entity responsible for making contributions to the content of the resource. Examples of Contributor include a person, an organization, or a service.
+  --&gt;&amp;rft.title={{urlencode:{{{title|}}}}}&lt;!--                                        A name given to the resource.
+  --&gt;{{#if: {{{url|}}}          | &amp;rft.identifier={{urlencode:{{{url}}}}}      }}&lt;!-- URL 
+  --&gt;{{#if: {{{format|}}}       | &amp;rft.format={{urlencode:{{{format}}}}}       }}&lt;!-- The physical or digital manifestation of the resource... may include the media-type or dimensions of the resource.
+  --&gt;{{#if: {{{encyclopedia|}}} | &amp;rft.source={{urlencode:{{{encyclopedia}}}}} }}&lt;!-- A Reference to a resource from which the present resource is derived.
+  --&gt;{{#if: {{{edition|}}}      | &amp;rft.edition={{urlencode:{{{edition}}}}}     }}&lt;!-- Statement of the edition of the book. This will usually be a phrase, with or without numbers, but may be a single number, e.g. &quot;First edition&quot;, &quot;4th ed.&quot; 
+  --&gt;{{#if: {{{volume|}}}       | &amp;rft.volume={{urlencode:{{{volume}}}}}       }}&lt;!-- Volume designation usually expressed as a number but could be roman numerals or non-numeric, i.e. &quot;124&quot;, or &quot;VI&quot;.
+  --&gt;{{#if: {{{publisher|}}}    | &amp;rft.publisher={{urlencode:{{{publisher}}}}} }}&lt;!-- An entity responsbile for making the resource available... person, an organization, or a service.
+  --&gt;{{#if: {{{location|}}}     | &amp;rft.place={{urlencode:{{{location}}}}}      }}&lt;!-- Place of publication. &quot;New York&quot;
+  --&gt;{{#if: {{{pages|}}}        | &amp;rft.pages={{urlencode:{{{pages}}}}}         }}&lt;!-- Start and end pages for parts (of a book), i.e. &quot;124-147&quot;
+  --&gt;{{#if: {{{date|}}} 
+       | &amp;rft.date={{urlencode:{{{date}}}}}
+       | {{#if: {{{year|}}}     | &amp;rft.date={{urlencode:{{{year}}}}} }}        }}&lt;!-- A date of an event in the lifecycle of the resource... typically the creation or availability of the resource. (ISO 8601)
+  --&gt;{{#if: {{{language|}}}     | &amp;rft.language={{urlencode:{{{language}}}}}   }}&lt;!-- A language of the intellectual content of the resource. Recommended best practice is to use RFC 3066... in conjunction with ISO639
+  --&gt;{{#if: {{{doi|}}}       | &amp;rft_id=info:doi/{{urlencode:{{{doi}}}}}  }}&lt;!-- DOI
+  --&gt;{{#if: {{{isbn|}}}      | &amp;rft.isbn={{{isbn}}}                      }}&lt;!-- International Standard Book Number (ISBN) ... i.e. &quot;057117678X&quot; but it may contain hyphens, e.g. &quot;1-878067-73-7&quot;
+  --&gt;{{#if: {{{oclc|}}}      | &amp;rft_id=info:oclcnum/{{{oclc}}}           }}&lt;!-- 
+  --&gt;&quot;&gt;&lt;span style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Click</title>
+    <id>3395718</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>203294753</id>
+      <timestamp>2008-04-04T14:39:21Z</timestamp>
+      <contributor>
+        <username>AzaToth</username>
+        <id>128326</id>
+      </contributor>
+      <comment>added an default size parameter that officially deprecated separate width and hight parameter, size want px to be included</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#tag:imagemap|
+Image:{{{image|Transparent.gif}}}{{!}}{{{size|{{#iferror: {{#expr:{{{width}}} &gt; 0 }} |{{{width|}}}|{{{width}}}{{#if:{{{height|}}}|{{#iferror: {{#expr:{{{height}}} &gt; 0 }}||x{{{height}}}}}px|px}}}}}}}{{!}}{{{title|}}}
+default [[{{{link|Main Page}}}|{{{title|{{{link|}}}}}}]]
+desc {{{desc|none}}}
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:PronEng</title>
+    <id>17225311</id>
+    <revision>
+      <id>209852053</id>
+      <timestamp>2008-05-03T05:43:33Z</timestamp>
+      <contributor>
+        <username>Kwamikagami</username>
+        <id>93143</id>
+      </contributor>
+      <comment>[[WP:AES|←]]Redirected page to [[Template:Pron-en]]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Pron-en]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Commons</title>
+    <id>1142901</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>205312605</id>
+      <timestamp>2008-04-13T12:07:51Z</timestamp>
+      <contributor>
+        <username>Superm401</username>
+        <id>35752</id>
+      </contributor>
+      <comment>use Template:Click, per talk</comment>
+      <text xml:space="preserve">&lt;div class=&quot;infobox sisterproject&quot;&gt;&lt;div align=&quot;left&quot; style=&quot;float:left&quot;&gt;{{click|image=Commons-logo.svg|size=50px|link=Commons:{{{1|Special:Search/{{PAGENAME}}}}}}}&lt;/div&gt;&lt;div style=&quot;margin-left: 60px;&quot;&gt;Wikimedia Commons has media related to:&lt;div style=&quot;margin-left: 10px;&quot;&gt; '''''[[Commons:{{{1|Special:Search/{{PAGENAME}}}}}|{{{2|{{{1|{{PAGENAME}}}}}}}}]]''''' &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Wiktionarypar2</title>
+    <id>2212770</id>
+    <revision>
+      <id>47144873</id>
+      <timestamp>2006-04-05T20:41:54Z</timestamp>
+      <contributor>
+        <username>Omniplex</username>
+        <id>571527</id>
+      </contributor>
+      <comment>Simplify maintenance</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Wiktionarypar]] {{R unprintworthy}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Letter</title>
+    <id>3652062</id>
+    <revision>
+      <id>181058822</id>
+      <timestamp>2007-12-30T21:29:40Z</timestamp>
+      <contributor>
+        <username>Once in a Blue Moon</username>
+        <id>1673644</id>
+      </contributor>
+      <comment>Semaphore has been split</comment>
+      <text xml:space="preserve">&lt;div style=&quot;float: right; width: 400px; clear:right; margin-left:1em;&quot;&gt;
+&lt;div style=&quot;text-align: center; font-weight: bold; line-height: 125%; font-size: large;&quot;&gt;Alternative representations of {{PAGENAME}}&lt;/div&gt;
+{| cellspacing=0 cellpadding=0 width=100% style=&quot;text-align: center; background: white;&quot;
+|- style=&quot;font-size: smaller; line-height: 125%;&quot;
+| colspan=2 width=50% style=&quot;border-left: 1px solid silver; border-top: 1px solid silver;&quot; | [[NATO phonetic alphabet|NATO phonetic]]
+| colspan=2 width=50% style=&quot;border-left: 1px solid silver; border-top: 1px solid silver; border-right: 1px solid silver;&quot; | [[Morse code]]
+|- style=&quot;font-family: monospace; font-weight: bold; line-height: 100%;&quot;
+| colspan=2 width=50% style=&quot;border-left: 1px solid silver;&quot; | {{{NATO}}}
+| colspan=2 width=50% style=&quot;border-left: 1px solid silver; border-right: 1px solid silver; font-size: large;&quot; | &lt;span class=&quot;plainlinksneverexpand nounderlines&quot; style=&quot;letter-spacing: 0.2em;&quot;&gt;[[Media:{{PAGENAME}} morse code.ogg|{{{Morse}}}]]&lt;/span&gt;
+|- style=&quot;height: 80px;&quot;
+| width=25% style=&quot;border-left: 1px solid silver; border-top: 1px solid silver;&quot; | [[Image:ICS_{{{NATO}}}.svg|75px|border]]
+| width=25% style=&quot;border-left: 1px solid silver; border-top: 1px solid silver;&quot; | [[Image:Semaphore_{{{NATO}}}.svg|90px]]
+| width=25% style=&quot;border-left: 1px solid silver; border-top: 1px solid silver;&quot; | [[Image:Sign language {{PAGENAME}}.svg|45px]]
+| width=25% style=&quot;border-left: 1px solid silver; border-right: 1px solid silver; border-top: 1px solid silver;&quot; | [[Image:Braille_{{{Character}}}.svg|77px|{{{Braille}}}]]
+|- style=&quot;font-size: smaller; line-height: 125%;&quot;
+| width=25% style=&quot;border-left: 1px solid silver; border-bottom: 1px solid silver;&quot; | [[International maritime signal flags|Signal flag]]
+| width=25% style=&quot;border-left: 1px solid silver; border-bottom: 1px solid silver;&quot; | [[Flag semaphore]]
+| width=25% style=&quot;border-left: 1px solid silver; border-bottom: 1px solid silver;&quot; | [[American Sign Language alphabet|ASL Manual]]
+| width=25% style=&quot;border-left: 1px solid silver; border-right: 1px solid silver; border-bottom: 1px solid silver;&quot; | [[Braille]]
+|}
+&lt;/div&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

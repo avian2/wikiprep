@@ -41,7 +41,8 @@ LOGS =	images.log \
 	related.log \
 	css.log \
 	whitespace.log \
-	kaon2.log
+	kaon2.log \
+	segfault.log
 
 all: test
 

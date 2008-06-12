@@ -1,0 +1,122 @@
+<!-- Causes segfault on Perl 5.8 and earlier versions of Wikiprep -->
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.13alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="290" orglength="7675" newlength="4872" stub="0" categories="0" outlinks="20" urls="1">
+<title>A</title>
+<categories></categories>
+<links>17225313 17225314 17225315 17225316 17225317 17225318 17225319 17225320 17225321 17225322 17225323 17225324 17225325 17225326 17225327 17225328 17225329 17225330 17225331 17225312</links>
+<urls>
+http://starbase.trincoll.edu/~crypto/resources/LetFreq.html
+</urls>
+<text>
+
+
+<internal id="17225313">Wiktionary</internal> 
+ Look up A, a    in Wiktionary, the free dictionary.
+
+The letter A is the first letter in the Latin alphabet. Its name in English is a &quot;a&quot;, Merriam-Webster&apos;s Third New International Dictionary of the English Language, Unabridged, (1993)  (pronounced  /eɪ/ 
+), plural A &apos; s, As, as, or a&apos;s. Merriam-Webster&apos;s Manual for Writers and Editors p. 61 (1998); Chicago Manual of Style, 15th ed. (University of Chicago Press, 2003) p. 281
+
+<h1> History </h1>
+The letter A can be traced to a pictogram of an ox head in Egyptian hieroglyph or the Proto-semitic alphabet.    &quot;A&quot;. The World Book Encyclopedia  1. (1956).   Field Enterprises, Inc. 1.           
+
+Circa 1600 B.C. the Phoenician alphabet&apos;s letter had a linear form that served as the basis for some later forms. Its name must have corresponded closely to the Hebrew aleph.
+
+When the Ancient Greeks adopted the alphabet, they had no use for the glottal stop that the letter had denoted in Phoenician and other Semitic languages, so they used the sign for the vowel  /a/ 
+, and changed its name to alpha. In the earliest Greek inscriptions after the Greek Dark Ages, dating to the 8th century BC, the letter rests upon its side, but in the Greek alphabet of later times it generally resembles the modern capital letter, although many local varieties can be distinguished by the shortening of one leg, or by the angle at which the cross line is set.
+
+The Etruscans brought the Greek alphabet to their civilization in the Italian Peninsula and left the letter unchanged. The Romans later adopted the Etruscan alphabet to write Latin, and the resulting letter was preserved in the modern Latin alphabet used to write many languages, including English.
+
+The letter has two minuscule (lower-case) forms. The form used in most current handwriting, and in italic type, consists of a circle and vertical stroke ( ɑ 
+), called Latin alpha or &quot;script a&quot;. Most printed material uses a form consisting of a small loop with an arc over it ( a 
+). Both derive from the majuscule (capital) form. In Greek handwriting, it was common to join the left leg and horizontal stroke into a single loop, as demonstrated by the Uncial version shown. Many fonts then made the right leg vertical. In some of these, the serif that began the right leg stroke developed into an arc, resulting in the printed form, while in others it was dropped, resulting in the modern handwritten form.
+
+<h1> Usage </h1>
+<internal id="17225327">Typographic variants include a double-story and single-story a.</internal>
+In English, the letter &quot;A&quot; by itself usually denotes the near-open front unrounded vowel ( /æ/ 
+) as in pad, the open back unrounded vowel ( /ɑː/ 
+) as in father, or, in concert with a later orthographic vowel, the diphthong  /eɪ/ 
+ (though the pronunciation varies with the dialect) as in ace and major, due to effects of the great vowel shift.
+
+In most other languages that use the Latin alphabet, the letter A denotes either an open back unrounded vowel ( /ɑ/ 
+), or an open central unrounded vowel ( /a/ 
+). In the International Phonetic Alphabet, variants of the letter A denote various vowels. In X-SAMPA, capital A denotes the open back unrounded vowel and lowercase a denotes the open front unrounded vowel.
+
+A is the third-most common letter in English, and the second-most common in Spanish and French. On average, about 8.2% of letters in English tend to be As, while the number is 6.2% in Spanish and 4% in French.         Percentages of Letter frequencies per Thousand words      
+.    Retrieved on May 01, 2006 .
+
+A also is the English indefinite article, extended to an before a word beginning with a vowel. See a and an.
+
+A- also is a prefix that serves to negate the morpheme to which it is attached, such as amoral, apolitical, etc. This derives from Greek.
+
+<h1> Codes for computing </h1>
+
+Alternative representations of A
+
+In Unicode the capital A is codepoint U+0041 and the lowercase a is U+0061.
+
+In positional numeral systems with base higher than 10, A is the character used to represent decimal 10, or in binary, 1010
+
+The ASCII code for capital A is 65 and for lowercase a is 97; or in binary 01000001 and 01100001, respectively.
+
+The EBCDIC code for capital A is 193 and for lowercase a is 129.
+
+The morse code for A is   dit dah  or  a dot and a dash.
+
+The numeric character references in HTML and XML are &quot;  #65; &quot; and &quot;  #97; &quot; for upper and lower case respectively.
+
+<h1> See also </h1>
+ <internal id="17225312"> </internal>
+ Wikisource has the text of the 1911 Encyclopædia Britannica article   A.
+
+Image:Commons-logo.svg|
+50px|
+
+default Commons:A
+desc none
+
+Wikimedia Commons has media related to:  A
+
+*Alpha
+*Cyrillic A
+* ª 
+*Ã
+*Ä
+*Å (Aa)
+*Æ
+*Ă
+*∀
+
+<h1>External references</h1>
+
+
+</text>
+</page>
+</mediawiki>
