@@ -758,7 +758,8 @@ sub transform() {
   my $processedPageCount = 0;
   my $processedByteCount = 0;
 
-  my $startTime = time-1;
+  my $startTime = time - 1;
+  my $lastDisplayTime = $startTime;
 
   my $page;
   while (defined($page = $pages->page)) {
@@ -874,14 +875,16 @@ sub transform() {
     }
 
     my $nowTime = time;
+    if( $nowTime - $lastDisplayTime > 5 ) {
 
-    my $bytesPerSecond = $processedByteCount/($nowTime-$startTime);
-    my $percentDone = 100.0*$processedByteCount/$totalByteCount;
-    my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
+      $lastDisplayTime = $nowTime;
 
-    my $hoursLeft = $secondsLeft/3600;
+      my $bytesPerSecond = $processedByteCount/($nowTime-$startTime);
+      my $percentDone = 100.0*$processedByteCount/$totalByteCount;
+      my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
 
-    if ( $processedPageCount % 100 == 0 ) {
+      my $hoursLeft = $secondsLeft/3600;
+
       printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
       STDOUT->flush();
     }
