@@ -18,7 +18,7 @@ sub init {
   }
 
 	for $a ( @splitargs ) {
-    if( exists( $settings{$a} ) ) {
+    if( exists( $settings{ uc($a) } ) ) {
       $settings{ uc($a) } = 1;
     } else {
       die("Invalid log setting: $a");
@@ -34,6 +34,7 @@ sub msg {
 
   if( $settings{$type} == 1 ) {
     print(LOGF "$type: $msg\n");
+    LOGF->flush();
   }
 }
 
