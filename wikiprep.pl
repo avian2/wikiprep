@@ -1206,26 +1206,33 @@ sub includeParserFunction(\$\%\$\$\$) {
       my $valueIfTrue = $$refToParameterHash{'=2='};
       my $valueIfFalse = $$refToParameterHash{'=3='};
 
+      # Already has templates expanded.
       my $lvalue = $$refToParameterHash{'=0='};
       my $rvalue = $$refToParameterHash{'=1='};
 
-      # lvalue is always defined
-      if ( defined($rvalue) and ($lvalue eq $rvalue) ) {
-        # The {{#ifeq:}} function is an if-then-else construct. The applied condition is 
-        # "is rvalue equal to lvalue". Note that this does only string comparison while MediaWiki
-        # implementation also supports numerical comparissons.
+      if ( defined($rvalue ) ) {
+        $rvalue = &includeTemplates($refToId, $refToTopPageTitle, $rvalue, $templateRecursionLevel + 1);
 
-        if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
-          $result = $valueIfTrue;
+        # lvalue is always defined
+        if ( $lvalue eq $rvalue ) {
+          # The {{#ifeq:}} function is an if-then-else construct. The applied condition is 
+          # "is rvalue equal to lvalue". Note that this does only string comparison while MediaWiki
+          # implementation also supports numerical comparissons.
+
+          if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
+            $result = $valueIfTrue;
+          } else {
+            $result = " ";
+          }
         } else {
-          $result = " ";
+          if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
+            $result = $valueIfFalse;
+          } else {
+            $result = " ";
+          }
         }
       } else {
-        if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
-          $result = $valueIfFalse;
-        } else {
-          $result = " ";
-        }
+        $result = " ";
       }
     } elsif ( $functionName eq 'language' ) {
       # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
