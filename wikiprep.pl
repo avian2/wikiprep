@@ -120,7 +120,7 @@ for my $num ( keys(%numMonthToNumDays) ) {
   $monthToNumDays{ $langDB{'numberToMonth'}->{$num} } = $numMonthToNumDays{$num};
 }
 
-my $maxTemplateRecursionLevels = 40;
+my $maxTemplateRecursionLevels = 10;
 my $maxTableRecursionLevels = 5;
 
 # We use a different (and faster) way of recursively including templates than MediaWiki. In most
@@ -1117,6 +1117,7 @@ sub instantiateTemplate($\$\$\%$) {
   
   if( $templateInvocation =~ /^\{\{\s*(.*)\}\}$/s ) {
     $templateInvocation = $1;
+    &logger::msg("DEBUG", "Template recursion level $templateRecursionLevel");
     &logger::msg("DEBUG", "Instantiating template=$templateInvocation");
   } else {
     &logger::msg("WARNING", "Invalid template invocation=$templateInvocation");

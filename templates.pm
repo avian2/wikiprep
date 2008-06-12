@@ -149,26 +149,16 @@ sub templateParameterRecursion(\$\$$) {
 
 # Template call parsing
 
-# This function will parse a template invocation (e.g. everything within two braces {{ ... }})
-# and return a template title and a hash of template parameters.
+sub splitTemplateInvocationFast($) {
 
-# The template name extends up to the first pipeline symbol (if any).
-# Template parameters go after the "|" symbol.
+  my ($refToTemplateInvocation) = @_;
 
-# Template parameters often contain URLs, internal links, or just other useful text,
-# whereas the template serves for presenting it in some nice way.
-# Parameters are separated by "|" symbols. However, we cannot simply split the string
-# on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-# on those "|" symbols that are not inside [[...]]. 
-  
-# Note that template name can also contain internal links (for example when template is a
-# parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
-# the name of the template as for template parameters.
+  return split(/\|/, $$refToTemplateInvocation);
+}
 
-# Same goes if template parameters include other template invocations.
+sub splitTemplateInvocationSlow($) {
 
-sub parseTemplateInvocation(\$\$\%) {
-  my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+  my ($refToTemplateInvocation) = @_;
 
   # This is a simple parser that splits the invocation string on those "|" symbols that are not
   # nested within "[" or "{" braces.
@@ -205,6 +195,42 @@ sub parseTemplateInvocation(\$\$\%) {
   }
   push(@parameters, $accumulator);
 
+  return @parameters;
+}
+
+sub splitTemplateInvocation($) {
+  my ($refToTemplateInvocation) = @_;
+
+  if( $$refToTemplateInvocation =~ /[\{\[]/ ) {
+    return splitTemplateInvocationSlow($refToTemplateInvocation);
+  } else {
+    return splitTemplateInvocationFast($refToTemplateInvocation);
+  }
+}
+
+# This function will parse a template invocation (e.g. everything within two braces {{ ... }})
+# and return a template title and a hash of template parameters.
+
+# The template name extends up to the first pipeline symbol (if any).
+# Template parameters go after the "|" symbol.
+
+# Template parameters often contain URLs, internal links, or just other useful text,
+# whereas the template serves for presenting it in some nice way.
+# Parameters are separated by "|" symbols. However, we cannot simply split the string
+# on "|" symbols, since these frequently appear inside internal links. Therefore, we split
+# on those "|" symbols that are not inside [[...]]. 
+  
+# Note that template name can also contain internal links (for example when template is a
+# parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
+# the name of the template as for template parameters.
+
+# Same goes if template parameters include other template invocations.
+
+sub parseTemplateInvocation(\$\$\%) {
+  my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+
+  my @parameters = &splitTemplateInvocation($refToTemplateInvocation);
+
   # We now have the invocation string split up in the @parameters list.
 
   # String before the first "|" symbol is the title of the template.
@@ -227,10 +253,7 @@ sub parseTemplateInvocation(\$\$\%) {
   foreach $param (@parameters) {
 
     # if the value does not contain a link, we can later trim whitespace
-    my $doesNotContainLink = 0;
-    if ($param !~ /\]\]/) {
-      $doesNotContainLink = 1; 
-    }
+    my $doesNotContainLink = ($param !~ /\]\]/);
 
     # For parser functions we need unmodified parameters by position. For example:
     # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
@@ -238,12 +261,12 @@ sub parseTemplateInvocation(\$\$\%) {
     # include '=' characters)
     $parameterCounter++;
 
-    my $unexpandedParam;
+    my $unexpandedParam = $param;
     if ($doesNotContainLink) {
-      $unexpandedParam = &utils::trimWhitespaceBothSides($param);
-    } else {
-      $unexpandedParam = $param;
-    }
+      $unexpandedParam =~ s/^\s+//;
+      $unexpandedParam =~ s/\s+$//;
+    } 
+
     $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
 
     # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
@@ -260,15 +283,17 @@ sub parseTemplateInvocation(\$\$\%) {
       # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
       # parameter ("2") is specified explicitly - this is handled transparently.
 
-      my $parameterName = &utils::trimWhitespaceBothSides($1);
-      my $parameterValue;
+      my $parameterName = $1;
+      my $parameterValue = $2;
+
+      $parameterName =~ s/^\s+//;
+      $parameterName =~ s/\s+$//;
       
       # if the value does not contain a link, trim whitespace
       if ($doesNotContainLink) {
-        $parameterValue = &utils::trimWhitespaceBothSides($2);
-      } else {
-        $parameterValue = $2;
-      }
+        $parameterValue =~ s/^\s+//;
+        $parameterValue =~ s/\s+$//;
+      } 
 
       $$refToParameterHash{$parameterName} = $parameterValue;
     } else {
