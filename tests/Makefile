@@ -40,6 +40,7 @@ LOGS =	images.log \
 	dates.log \
 	related.log \
 	css.log \
+	css2.log \
 	whitespace.log \
 	kaon2.log \
 	segfault.log

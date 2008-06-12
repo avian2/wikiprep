@@ -6,7 +6,7 @@ package css;
 
 BEGIN {
 
-my $cssClassesToRemove = "metadata|dablink";
+my $cssClassesToRemove = "metadata|dablink|sisterproject";
 
 my $cssClassesRegex = qr/
 		<div\s[^<>]*class="(?:[^"]*\s)?(?:$cssClassesToRemove)(?:\s[^"]*)?"[^<>]*>
