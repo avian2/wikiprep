@@ -1112,6 +1112,15 @@ sub includeTemplates(\$\$$$) {
 sub instantiateTemplate($\$\$\%$) {
   my ($templateInvocation, $refToId, $refToTopPageTitle, $templateRecursionLevel) = @_;
 
+  my $len = length( $templateInvocation );
+  if($len > 32767) {
+    # Some {{#switch ... }} statements are excesivelly long and usually do not produce anything
+    # useful. Plus they can cause segfauls in older versions of Perl.
+
+    &logger::msg("WARNING", "Ignoring long template invocation=$templateInvocation");
+    return "";
+  }
+
   # Clean the invocation string: remove braces that were also matched by $RE{balanced} and 
   # ignore optional whitespace before the template name.
   
