@@ -33,6 +33,7 @@ use FileHandle;
 use Getopt::Long;
 use Time::localtime;
 use Parse::MediaWikiDump;
+use Regexp::Common;
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -1025,6 +1026,17 @@ BEGIN {
 my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 
+# Regular expression that matches a template include directive. It is replaced with fully
+# expanded template text in includeTemplates() below.
+
+# Matches two opening braces with any balanced combination of braces within. Note that this also
+# matches for example {{{3}}} (which can happen if we get an unexpanded template parameter in the
+# output). This case is handled as an unknown template, which is then replaced by an empty string.
+
+# (some pages have template parameters in them although they are not templates)
+
+my $templateRegex = qr/(\{$RE{balanced}{-parens => "{}"}\})/s;
+
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
 
@@ -1072,7 +1084,7 @@ sub includeTemplates(\$\$$$) {
   my $new_text = "";
   my $token;
 
-  for $token ( &templates::splitTemplateInclude(\$text) ) {
+  for $token ( split(/$templateRegex/s, $text) ) {
     if( $invocation ) {
       $new_text .= &instantiateTemplate($token, $refToId, $refToTitle, $templateRecursionLevel);
       $invocation = 0;

@@ -1,4 +1,4 @@
-use Test::More tests => 20;
+use Test::More tests => 16;
 use templates;
 
 my $r;
@@ -61,21 +61,3 @@ is($paramHash{'=3='}, "bare_param");
 is($paramHash{'1'}, "[[link|anchor]]");
 is($paramHash{'2'}, "{{nested|{{template|p}}\n|blah}}");
 is($paramHash{'3'}, "bare_param");
-
-# splitTemplateInclude
-
-$text = 'text{{template}}text';
-is(join(':', &templates::splitTemplateInclude(\$text)), 
-   "text:{{template}}:text");
-
-$text = 'text{{template|{{1}}|{{2|{{3}}}}}}text';
-is(join(':', &templates::splitTemplateInclude(\$text)), 
-   "text:{{template|{{1}}|{{2|{{3}}}}}}:text");
-
-$text = 'text{{template|{{1}}|{{2|{{3}}}}}}';
-is(join(':', &templates::splitTemplateInclude(\$text)), 
-   "text:{{template|{{1}}|{{2|{{3}}}}}}");
-
-$text = 'text{{template|{{1}}|{{2|{{3}}}}}';
-is(join(':', &templates::splitTemplateInclude(\$text)), 
-   "text{{template|{{1}}|{{2|{{3}}}}}");
