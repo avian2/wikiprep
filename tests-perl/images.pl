@@ -2,47 +2,48 @@ use Test::Simple tests => 12;
 use images;
 
 my ($t, $r);
+my @t;
 
-$t = "Image:Blah1|short|longer|the longest anchor text";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "short|longer|the longest anchor text");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "the longest anchor text");
 
-$t = "Image:Blah1|240x240px|anchor text";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "240x240px|anchor text");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "anchor text");
 
-$t = "Image:Blah1|100px|left|an";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "100px|left|an");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "an");
 
-$t = "Image:Blah1|100PX|Left|An";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "100PX|Left|An");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "An");
 
-$t = "Image:Blah1|100PX|Left|";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "100PX|Left|");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "");
 
-$t = "Image:Blah1|100PX|Left";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "100PX|Left");
+$r = &images::parseImageParameters(\@t);
 
 ok($r eq "");
 
-$t = "Image:Blah1";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "");
+$r = &images::parseImageParameters(\@t);
 ok($r eq "");
 
-$t = "Image:Blah1|10px|";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "10px|");
+$r = &images::parseImageParameters(\@t);
 ok($r eq "");
 
-$t = "Image:Blah1|10px| ";
-$r = &images::parseImageParameters($t);
+@t = split(/\|/, "10px| ");
+$r = &images::parseImageParameters(\@t);
 ok($r eq " ");
 
 $t = <<END

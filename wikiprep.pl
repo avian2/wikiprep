@@ -1389,6 +1389,21 @@ sub collectCategory($\@) {
   " ";
 }
 
+BEGIN {
+
+my $internalLinkRegex = qr/
+                             (\w*)            # words may be glued to the beginning of the link,
+                                              # in which case they become part of the link
+                                              # e.g., "ex-[[Giuseppe Mazzini|Mazzinian]] "
+                             \[\[
+                                   ([^\[]*?)  # the link text can be any chars except an opening bracket,
+                                              # this ensures we correctly parse nested links (see comments above)
+                             \]\]
+                             (\w*)            # words may be glued to the end of the link,
+                                              # in which case they become part of the link
+                                              # e.g., "[[public transport]]ation"
+                         /sx;
+
 sub extractInternalLinks(\$\@$\@$$) {
   my ($refToText, $refToInternalLinksArray, $id,
       $refToAnchorTextArray, $whetherToRemoveDuplicates, $logUnknownLinks ) = @_;
@@ -1407,25 +1422,15 @@ sub extractInternalLinks(\$\@$\@$$) {
   # we extract links in several iterations of the while loop, while the link definition requires that
   # each pair [[...]] does not contain any opening braces.
 
-  1 while ( $$refToText =~ s/
-                             (\w*)            # words may be glued to the beginning of the link,
-                                              # in which case they become part of the link
-                                              # e.g., "ex-[[Giuseppe Mazzini|Mazzinian]] "
-                             \[\[
-                                   ([^\[]*?)  # the link text can be any chars except an opening bracket,
-                                              # this ensures we correctly parse nested links (see comments above)
-                             \]\]
-                             (\w*)            # words may be glued to the end of the link,
-                                              # in which case they become part of the link
-                                              # e.g., "[[public transport]]ation"
-                            /&collectInternalLink($1, $2, $3, $refToInternalLinksArray, 
-                                                  $refToAnchorTextArray,
-                                                  $-[0], $logUnknownLinks)/segx
-          );
+  1 while ( $$refToText =~ s/$internalLinkRegex/&collectInternalLink($1, $2, $3, $refToInternalLinksArray, 
+                                                                     $refToAnchorTextArray,
+                                                                     $-[0], $logUnknownLinks)/eg );
 
   if ($whetherToRemoveDuplicates) {
     &removeDuplicatesAndSelf($refToInternalLinksArray, $id);
   }
+
+}
 
 }
 
@@ -1500,33 +1505,39 @@ sub collectInternalLink($$$\@\@$$) {
     $isImageLink = 1;
   }
 
-  # First extract everything before the first pipeline symbol.
-  if ($link =~ /^([^|]*)(\|.*)$/s) {
-    $link = $1;
-    $result = $2;
+  if ( !$link ) {
+    # Empty link, bail out.
+    return "";
+  }
 
-    if ($isImageLink) {
-      # Image links have to parsed separately, because anchors can contain parameters (size, type, etc.)
-      # which we exclude in a separate function.
+  my @pipeFields = split(/\|/, $link);
 
-      $result = &images::parseImageParameters($result);
+  # Text before the first "|" symbol contains link destination.
+  $link = shift(@pipeFields);
+
+  if ($isImageLink) {
+    # Image links have to parsed separately, because anchors can contain parameters (size, type, etc.)
+    # which we exclude in a separate function.
+    $result = &images::parseImageParameters(\@pipeFields);
+
+    if( length($result) > 0 ) {
       $alternativeTextAvailable = 1;
-    } else {
-      # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
-      # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
-      # all text before the last pipeline.
-      if ($result =~ /\|([^|]*)$/s) {
-        $result = $1;
-      }
+    } 
+  } else {
+    # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
+    # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
+    # all text before the last pipeline.
+    $result = pop(@pipeFields);
 
-      $alternativeTextAvailable = 1; # pipeline found, see comment above
-    }
+    if( defined($result) ) {
 
-    if (length($result) == 0) {
-      if ($isImageLink) {
-        $alternativeTextAvailable = 0;
-      } else {
-        if ($link !~ /\#/) {
+      # pipeline found, see comment above
+      $alternativeTextAvailable = 1; 
+
+      if( length($result) == 0 ) {
+        # Pipeline found, but no text follows.
+       
+        if ($link !~ /#/) {
           # If the "|" symbol is not followed by some text, then it masks the namespace
           # as well as any text in parentheses at the end of the link title.
           # However, pipeline masking is only invoked if the link does not contain an anchor,
@@ -1537,11 +1548,6 @@ sub collectInternalLink($$$\@\@$$) {
           $result = $link;
         }
       }
-    }  
-  } else {
-    if ($isImageLink) {
-      # Nothing is displayed for images without anchors
-      $result = "";
     } else {
       # the link text does not contain the pipeline, so take it as-is
       $result = $link;
@@ -1566,6 +1572,7 @@ sub collectInternalLink($$$\@\@$$) {
       }
     }
   } else {
+    # Empty link, bail out.
     return "";
   }
 

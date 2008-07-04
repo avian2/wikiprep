@@ -87,19 +87,14 @@ sub convertOneImagemap($) {
 
 # Note that the anchor text can be on any location, not just after the last |. This means we have to
 # check all image parameters and select the one that looks the most like anchor text.
-sub parseImageParameters($) {
-  my ($imageParameters) = @_;
 
-  my @imageParameters;
-
-  # Store parameters delimited by | into an array.
-  while ( $imageParameters =~ s/\|([^|]*)$// ) {
-    push @imageParameters, $1;
-  }
+# refToImageParameters is a reference to an array that holds the string split around | symbols.
+sub parseImageParameters(\@) {
+  my ($refToImageParameters) = @_;
 
   my @candidateAnchors;
 
-  for my $parameter (@imageParameters) {
+  for my $parameter (@$refToImageParameters) {
     # A list of valid parameters can be found here:
     # http://en.wikipedia.org/wiki/Wikipedia:Image_markup
 
