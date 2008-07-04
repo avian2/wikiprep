@@ -1472,9 +1472,6 @@ sub collectInternalLink($$$\@\@$$) {
   my $originalLink = $link;
   my $result = "";
 
-  # strip leading whitespace, if any
-  $link =~ s/^\s*//;
-
   # Link definitions may span over adjacent lines and therefore contain line breaks,
   # hence we use the /s modifier on most matchings.
 
@@ -1486,14 +1483,9 @@ sub collectInternalLink($$$\@\@$$) {
   #   (without the leading colon, the link will go to the side menu
   # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
   # In all such cases, we strip the leading colon.
-  if ($link =~ /^
-                   :        # colon at the beginnning of the link name
-                   (.*)     # the rest of the link text
-                $
-               /sx) {
-    # just strip this initial colon (as well as any whitespace preceding it)
-    $link = $1;
-  }
+
+  # just strip this initial colon (as well as any whitespace preceding it)
+  $link =~ s/^\s*:?//;
 
   # Alternative text may be available after the pipeline symbol.
   # If the pipeline symbol is only used for masking parts of
@@ -1523,8 +1515,8 @@ sub collectInternalLink($$$\@\@$$) {
       # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
       # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
       # all text before the last pipeline.
-      if ($result =~ /^(.*)\|([^|]*)$/s) {
-        $result = $2;
+      if ($result =~ /\|([^|]*)$/s) {
+        $result = $1;
       }
 
       $alternativeTextAvailable = 1; # pipeline found, see comment above
@@ -1556,18 +1548,25 @@ sub collectInternalLink($$$\@\@$$) {
     }
   }
 
-  if ($link =~ /^(.*)\#(.*)$/s) {
-    # The link contains an anchor, so adjust the link to point to the page as a whole.
-    $link = $1;
-    my $anchor = $2;
-    # Check if the link points to an anchor on the current page, and if so - ignore it.
-    if (length($link) == 0 && ! $alternativeTextAvailable) {
-      # This is indeed a link pointing to an anchor on the current page.
-      # The link is thus cleared, so that it will not be resolved and collected later.
-      # For anchors to the same page, discard the leading '#' symbol, and take
-      # the rest as the text - but only if no alternative text was provided for this link.
-      $result = $anchor;
+  # If the link contains an anchor, adjust the link to point to the page as a whole and
+  # exract the anchor
+  my $anchor;
+
+  if( $link ) {
+    ( $link, $anchor ) = split(/#/, $link, 2);
+    if ( defined($anchor) ) {
+
+      # Check if the link points to an anchor on the current page, and if so - ignore it.
+      if (length($link) == 0 && ! $alternativeTextAvailable) {
+        # This is indeed a link pointing to an anchor on the current page.
+        # The link is thus cleared, so that it will not be resolved and collected later.
+        # For anchors to the same page, discard the leading '#' symbol, and take
+        # the rest as the text - but only if no alternative text was provided for this link.
+        $result = $anchor;
+      }
     }
+  } else {
+    return "";
   }
 
   # Now collect the link, or links if the original link is in the date format
