@@ -4,6 +4,7 @@ TESTS = utils.pl \
 	revision.pl \
 	languages.pl \
 	templates.pl \
+	ctemplates.pl \
 	css.pl
 
 all: test

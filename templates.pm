@@ -6,6 +6,8 @@ use File::Path;
 use Regexp::Common;
 use utils;
 
+use ctemplates;
+
 package templates;
 
 my $maxParameterRecursionLevels = 10;
@@ -199,12 +201,12 @@ sub splitTemplateInvocationSlow($) {
 }
 
 sub splitTemplateInvocation($) {
-  my ($refToTemplateInvocation) = @_;
+  my $templateInvocation = shift;
 
-  if( $$refToTemplateInvocation =~ /[\{\[]/ ) {
-    return splitTemplateInvocationSlow($refToTemplateInvocation);
+  if( $templateInvocation =~ /[\{\[]/ ) {
+    return splitTemplateInvocationSlow(\$templateInvocation);
   } else {
-    return splitTemplateInvocationFast($refToTemplateInvocation);
+    return splitTemplateInvocationFast(\$templateInvocation);
   }
 }
 
@@ -229,7 +231,8 @@ sub splitTemplateInvocation($) {
 sub parseTemplateInvocation(\$\$\%) {
   my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
 
-  my @parameters = &splitTemplateInvocation($refToTemplateInvocation);
+  #my @parameters = &splitTemplateInvocation($$refToTemplateInvocation);
+  my @parameters = &ctemplates::splitTemplateInvocation($$refToTemplateInvocation);
 
   # We now have the invocation string split up in the @parameters list.
 
@@ -303,6 +306,41 @@ sub parseTemplateInvocation(\$\$\%) {
       $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
     }
   }
+}
+
+BEGIN {
+
+# Regular expression that matches a template include directive. It is replaced with fully
+# expanded template text in includeTemplates() below.
+
+# Matches two opening braces with any balanced combination of braces within. Note that this also
+# matches for example {{{3}}} (which can happen if we get an unexpanded template parameter in the
+# output). This case is handled as an unknown template, which is then replaced by an empty string.
+
+# (some pages have template parameters in them although they are not templates)
+
+my $templateRegex = qr/(\{$Regexp::Common::RE{balanced}{-parens => "{}"}\})/s;
+
+sub splitOnTemplates($) {
+  my $text = shift;
+
+  my @retval;
+  my $invocation = 0;
+
+  for my $i ( split(/$templateRegex/s, $text) ) {
+    if( $invocation ) {
+      $i =~ s/^\{\{//;
+      $i =~ s/\}\}$//;
+      $invocation = 0;
+    } else {
+      $invocation = 1;
+    }
+    push(@retval, $i);
+  }
+
+  return @retval;
+}
+
 }
 
 1

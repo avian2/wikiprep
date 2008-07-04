@@ -43,6 +43,7 @@ use nowiki;
 use revision;
 use languages;
 use templates;
+use ctemplates;
 use lang;
 use css;
 use logger;
@@ -1026,17 +1027,6 @@ BEGIN {
 my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
 my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
 
-# Regular expression that matches a template include directive. It is replaced with fully
-# expanded template text in includeTemplates() below.
-
-# Matches two opening braces with any balanced combination of braces within. Note that this also
-# matches for example {{{3}}} (which can happen if we get an unexpanded template parameter in the
-# output). This case is handled as an unknown template, which is then replaced by an empty string.
-
-# (some pages have template parameters in them although they are not templates)
-
-my $templateRegex = qr/(\{$RE{balanced}{-parens => "{}"}\})/s;
-
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
 
@@ -1084,7 +1074,8 @@ sub includeTemplates(\$\$$$) {
   my $new_text = "";
   my $token;
 
-  for $token ( split(/$templateRegex/s, $text) ) {
+  #for $token ( &templates::splitOnTemplates($text) ) {
+  for $token ( &ctemplates::splitOnTemplates($text) ) {
     if( $invocation ) {
       $new_text .= &instantiateTemplate($token, $refToId, $refToTitle, $templateRecursionLevel);
       $invocation = 0;
@@ -1124,14 +1115,10 @@ sub instantiateTemplate($\$\$\%$) {
   # Clean the invocation string: remove braces that were also matched by $RE{balanced} and 
   # ignore optional whitespace before the template name.
   
-  if( $templateInvocation =~ /^\{\{\s*(.*)\}\}$/s ) {
-    $templateInvocation = $1;
-    &logger::msg("DEBUG", "Template recursion level $templateRecursionLevel");
-    &logger::msg("DEBUG", "Instantiating template=$templateInvocation");
-  } else {
-    &logger::msg("WARNING", "Invalid template invocation=$templateInvocation");
-    return "";
-  }
+  $templateInvocation =~ s/^\s*//;
+  
+  &logger::msg("DEBUG", "Template recursion level $templateRecursionLevel");
+  &logger::msg("DEBUG", "Instantiating template=$templateInvocation");
 
   my $templateTitle;
   my %templateParams;
