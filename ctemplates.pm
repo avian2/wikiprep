@@ -2,6 +2,27 @@ use strict;
 
 package ctemplates;
 
+# This module provides C implementation of two functions
+# (original Perl implementations can be found in templates.pm)
+#
+# splitOnTemplates() - splits a string on template invocations
+#
+# This function splits a string containing Wiki text into a
+# " text - template invocation - text - template invocation - text ... "
+# list of strings. Where "text" is ordinary text and "template invocation"
+# is contents of "{{ ... }}" blocks. Such blocks may contain other nested
+# "{" constructs.
+#
+# splitTemplateInvocation() - splits a string on "|" symbols
+#
+# This function splits template invocations (for example as returned by
+# splitOnTemplates() ) into separate template parameters.
+#
+# It basically splits the string on "|" symbols, so that each split string
+# contains balanced "{" or "[" constructs. This for example means that
+# it will correctly split template parameters even when they contain links
+# or other template invocations (that themselves contain "|" symbols)
+
 # use Inline C => Config => OPTIMIZE => '-g';
 use Inline C => <<'END_C';
 void splitOnTemplates(SV *svi) {
