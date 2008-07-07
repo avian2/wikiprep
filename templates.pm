@@ -264,13 +264,12 @@ sub parseTemplateInvocation(\$\$\%) {
     # include '=' characters)
     $parameterCounter++;
 
-    my $unexpandedParam = $param;
     if ($doesNotContainLink) {
-      $unexpandedParam =~ s/^\s+//;
-      $unexpandedParam =~ s/\s+$//;
+      $param =~ s/^\s+//;
+      $param =~ s/\s+$//;
     } 
 
-    $$refToParameterHash{"=${parameterCounter}="} = $unexpandedParam;
+    $$refToParameterHash{"=${parameterCounter}="} = $param;
 
     # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
     # a link (to prevent possible gluing the link to the following text after template substitution)
@@ -281,29 +280,30 @@ sub parseTemplateInvocation(\$\$\%) {
     # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
     # Therefore, we don't check if the parameter has been assigned a value before, because
     # anyway the last assignment should override any previous ones.
-    if ($param =~ /^([^={}]*)=(.*)$/s) {
-      # This is a named parameter.
-      # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
-      # parameter ("2") is specified explicitly - this is handled transparently.
+    my ( $parameterName, $parameterValue ) = split(/=/, $param, 2);
 
-      my $parameterName = $1;
-      my $parameterValue = $2;
+    if( defined( $parameterName ) ) {
+      if( defined( $parameterValue ) ) {
+        # This is a named parameter.
+        # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
+        # parameter ("2") is specified explicitly - this is handled transparently.
 
-      $parameterName =~ s/^\s+//;
-      $parameterName =~ s/\s+$//;
+        $parameterName =~ s/\s+$//;
       
-      # if the value does not contain a link, trim whitespace
-      if ($doesNotContainLink) {
-        $parameterValue =~ s/^\s+//;
-        $parameterValue =~ s/\s+$//;
-      } 
+        # if the value does not contain a link, trim whitespace
+        if ($doesNotContainLink) {
+          $parameterValue =~ s/^\s+//;
+        } else {
+          $parameterName =~ s/^\s+//;
+        }
 
-      $$refToParameterHash{$parameterName} = $parameterValue;
-    } else {
-      # this is an unnamed parameter
-      $unnamedParameterCounter++;
+        $$refToParameterHash{$parameterName} = $parameterValue;
+      } else {
+        # this is an unnamed parameter
+        $unnamedParameterCounter++;
 
-      $$refToParameterHash{$unnamedParameterCounter} = $unexpandedParam;
+        $$refToParameterHash{$unnamedParameterCounter} = $param;
+      }
     }
   }
 }
