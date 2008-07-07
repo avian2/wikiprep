@@ -105,6 +105,7 @@ my $langDB = {
                   'disambigTemplates' =>
                       qr/disambiguation|
                          disambig|
+                         disambig-cleanup|
                          dab|
                          hndis|
                          surname|
