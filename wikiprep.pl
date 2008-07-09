@@ -1730,7 +1730,7 @@ sub normalizeDates(\$\$\$\@\%) {
 
   my $dateRecognized = 0;
 
-  if ($$refToLink =~ /^(\d\d)\s*([A-Za-z]+)$/) {
+  if ($$refToLink =~ /^([0-9]{1,2})\s+([A-Za-z]+)$/) {
     my $day = $1;
     my $month = ucfirst(lc($2));
 
@@ -1750,7 +1750,7 @@ sub normalizeDates(\$\$\$\@\%) {
     } else {
       # this doesn't look like a valid date, leave as-is
     }
-  } elsif ($$refToLink =~ /^(\d\d)\-(\d\d)$/) {
+  } elsif ($$refToLink =~ /^([0-9]{1,2})\-([0-9]{1,2})$/) {
     my $monthNum = int($1);
     my $day = $2;
 
@@ -1776,7 +1776,7 @@ sub normalizeDates(\$\$\$\@\%) {
     } else {
       # this doesn't look like a valid date, leave as-is
     }
-  } elsif ($$refToLink =~ /^(\d\d\d\d)\-(\d\d)\-(\d\d)$/) {
+  } elsif ($$refToLink =~ /^([0-9]{3,4})\-([0-9]{1,2})\-([0-9]{1,2})$/) {
     my $year = $1;
     my $monthNum = int($2);
     my $day = $3;

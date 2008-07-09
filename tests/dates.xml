@@ -49,6 +49,10 @@
 [[16 October]] [[1983]]
 [[1983]]-[[10-16]]
 [[1983-10-16]]
+
+[[15October]] [[1982]]
+[[5 October]] [[1982]]
+[[October 5]] [[1982]]
 	    </text>
     </revision>
   </page>
@@ -76,6 +80,13 @@
   <page>
     <title>2000</title>
     <id>5</id>
+    <revision>
+	    <text xml:space="preserve">Foo</text>
+    </revision>
+  </page>
+  <page>
+    <title>October 5</title>
+    <id>6</id>
     <revision>
 	    <text xml:space="preserve">Foo</text>
     </revision>

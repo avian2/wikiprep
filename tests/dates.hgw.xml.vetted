@@ -27,10 +27,10 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="301" newlength="595" stub="0" categories="0" outlinks="4" urls="0">
+<page id="1" orglength="371" newlength="817" stub="0" categories="0" outlinks="5" urls="0">
 <title>A</title>
 <categories></categories>
-<links>2 3 4 5</links>
+<links>2 3 4 5 6</links>
 <urls>
 </urls>
 <text>
@@ -42,16 +42,20 @@
 <internal id="4">October 15, 1982</internal>
 
 July 4, <internal id="5">2000</internal>
-4 July, <internal id="5">2000</internal>
-<internal id="5">2000</internal>-7-4
+July 4, <internal id="5">2000</internal>
+<internal id="5">2000</internal>- July 4
 <internal id="5">2000</internal>- July 04
-2000-7-4
+<internal id="5">July 4, 2000</internal>
 <internal id="5">July 04, 2000</internal>
 
 October 16, 1983
 October 16 1983
 1983- October 16
 October 16, 1983
+
+15October <internal id="3">1982</internal>
+<internal id="6">October 5</internal> <internal id="3">1982</internal>
+<internal id="6">October 5</internal> <internal id="3">1982</internal>
 	    
 </text>
 </page>
@@ -87,6 +91,16 @@ Foo
 </page>
 <page id="5" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
 <title>2000</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Foo
+</text>
+</page>
+<page id="6" orglength="3" newlength="3" stub="0" categories="0" outlinks="0" urls="0">
+<title>October 5</title>
 <categories></categories>
 <links></links>
 <urls>
