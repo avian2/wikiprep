@@ -1,3 +1,4 @@
+#!/usr/bin/perl -w
 ###############################################################################
 # vim:sw=2:tabstop=2:expandtab
 #
@@ -153,7 +154,8 @@ my %statIncomingLinks;  # number of links incoming to each page
 # Counter for IDs assigned to nonexistent pages.
 my $localIDCounter = 1;
 
-my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml");
+my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml", ".xml.gz", ".xml.bz2");
+$fileSuffix =~ s/\.gz$|\.bz2//;
 my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
 my $logFile = "$filePath/$fileBasename.log";
 my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
@@ -477,7 +479,14 @@ sub encodeXmlChars(\$) {
 }
 
 sub copyXmlFileHeader() {
-  open(INF, "< $file") or die "Cannot open $file: $!";
+  if ($file =~ /\.gz$/) {
+    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
+  } elsif ($file =~ /\.bz2$/) {
+    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
+  } else {
+    open(INF, "< $file") or die "Cannot open $file: $!";
+  }
+
   while (<INF>) { # copy lines up to "</siteinfo>"
     if (/^<mediawiki /) {
       # The top level element - mediawiki - contains a lot of attributes (e.g., schema)
@@ -490,6 +499,7 @@ sub copyXmlFileHeader() {
     }
     last if (/<\/siteinfo>/);
   }
+
   close(INF); # this file will later be reopened by "Parse::MediaWikiDump"
 }
 
@@ -595,7 +605,14 @@ sub writeCategoryHierarchy() {
 
 sub loadNamespaces() {
   # re-open the input XML file
-  my $pages = Parse::MediaWikiDump::Pages->new($file);
+  if ($file =~ /\.gz$/) {
+    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
+  } elsif ($file =~ /\.bz2$/) {
+    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
+  } else {
+    open(INF, "< $file") or die "Cannot open $file: $!";
+  }
+  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
 
   # load namespaces
   my $refNamespaces = $pages->namespaces;
@@ -610,13 +627,23 @@ sub loadNamespaces() {
     &normalizeNamespace(\$namespaceName);
     $namespaces{$namespaceName} = $namespaceId;
   }
+
+  close(INF);
 }
 
 # build id <-> title mappings and redirection table,
 # as well as load templates
 sub prescan() {
   # re-open the input XML file
-  my $pages = Parse::MediaWikiDump::Pages->new($file);
+  if ($file =~ /\.gz$/) {
+    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
+  } elsif ($file =~ /\.bz2$/) {
+    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
+  } else {
+    open(INF, "< $file") or die "Cannot open $file: $!";
+  }
+
+  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
 
   my $counter = 0;
   
@@ -742,7 +769,7 @@ sub prescan() {
   }
 
   close(TEMPINDEX);
-
+  close(INF);
   my $timeStr = &getTimeAsString();
   &logger::msg("DEBUG", "[$timeStr] Prescanning complete - prescanned $counter pages");
 
@@ -752,7 +779,14 @@ sub prescan() {
 
 sub transform() {
   # re-open the input XML file
-  my $pages = Parse::MediaWikiDump::Pages->new($file);
+  if ($file =~ /\.gz$/) {
+    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
+  } elsif ($file =~ /\.bz2$/) {
+    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
+  } else {
+    open(INF, "< $file") or die "Cannot open $file: $!";
+  }
+  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
 
   my $processedPageCount = 0;
   my $processedByteCount = 0;
@@ -894,6 +928,7 @@ sub transform() {
                             " seconds");
   }
   print "\n";
+  close(INF);
 }
 
 sub updateStatistics(\@\@) {
@@ -2337,7 +2372,9 @@ under certain conditions; type '$0 -license' for details.
 Type '$0 -version' for version information.
 
 USAGE: $0 <options> -f <XML file with page dump>
-       e.g., $0 -f pages_articles.xml
+
+ e.g.  $0 -f pages_articles.xml
+   or  $0 -f pages_articles.xml.bz2
 
 Available options:
   -nourls        Don't extract external links (URLs) from pages. 

@@ -122,7 +122,8 @@ If you can't use Inline::C, search for references to 'ctemplate::' in the
 code and change them to 'template::'. This will use equivalent pure Perl
 implementations.
 
-You will also need gzip installed if you want to use the -compress option.
+If you want to process gzip or bzip2 compressed dumps you will need gzip and
+bzip2 installed. Gzip is also required for the -compress option.
 
 
 
