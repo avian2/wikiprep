@@ -760,8 +760,13 @@ sub prescan() {
       } else {
         # If there are no <onlyinclude> fragments, simply eliminate
         # <noinclude> fragments and keep <includeonly> ones.
-        $text =~ s/<noinclude>(?:.*?)<\/noinclude>/\n/sg;
+        $text =~ s/<noinclude>.*?<\/noinclude>/\n/sg;
+
+        # In case there are unterminated <noinclude> tags
+        $text =~ s/<noinclude>.*$//sg;
+
         $text =~ s/<includeonly>(.*?)<\/includeonly>/$1/sg;
+
       }
 
       $templates{$id} = $text;
