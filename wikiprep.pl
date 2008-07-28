@@ -1130,6 +1130,9 @@ sub includeTemplates(\$\$$$) {
   # print LOGF "$text";
   # print LOGF "#########\n\n";
   
+  my $text_len = length $new_text;
+  &logger::msg("DEBUG", "Text length after templates level $templateRecursionLevel: $text_len chars");
+  
   return $new_text;
 }
 
