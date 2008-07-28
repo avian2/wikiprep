@@ -1059,8 +1059,8 @@ sub resolveLink(\$) {
 
 BEGIN {
 
-my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/;
-my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/;
+my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/s;
+my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
 
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
@@ -1129,7 +1129,7 @@ sub includeTemplates(\$\$$$) {
   # print LOGF "#########\n\n";
   # print LOGF "$text";
   # print LOGF "#########\n\n";
-
+  
   return $new_text;
 }
 
