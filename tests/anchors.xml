@@ -72,6 +72,8 @@
 	      [[Dummy]]
 	      [[Dummy|Dummy2]]
 	      [[Nested|Nested [[anchors]] and some [[more]]]]
+
+	      [[Category:Bogus|This should be invisible]]
       </text>
     </revision>
   </page>
@@ -99,6 +101,14 @@
     <revision>
       <text xml:space="preserve">
              Foo
+      </text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Bogus</title>
+    <id>8</id>
+    <revision>
+    <text xml:space="preserve">
       </text>
     </revision>
   </page>

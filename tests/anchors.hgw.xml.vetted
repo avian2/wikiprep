@@ -27,41 +27,41 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="206" newlength="225" stub="0" categories="0" outlinks="3" urls="0">
+<page id="1" orglength="206" newlength="226" stub="0" categories="0" outlinks="3" urls="0">
 <title>Gu</title>
 <categories></categories>
-<links>8 9 2</links>
+<links>9 10 2</links>
 <urls>
 </urls>
 <text>
-<internal id="8">Lepa slika</internal> nekaj teksta in se ena <internal id="8">druga slika</internal>. Pa se en link kar tako <internal id="9">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
+<internal id="9">Lepa slika</internal> nekaj teksta in se ena <internal id="9">druga slika</internal>. Pa se en link kar tako <internal id="10">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
 </text>
 </page>
-<page id="2" orglength="144" newlength="159" stub="0" categories="0" outlinks="2" urls="0">
+<page id="2" orglength="144" newlength="160" stub="0" categories="0" outlinks="2" urls="0">
 <title>Ga</title>
 <categories></categories>
-<links>8 9</links>
+<links>9 10</links>
 <urls>
 </urls>
 <text>
-<internal id="8">grda slika</internal> nekaj teksta in se ena <internal id="8">prva slika</internal>. Pa se en link kar tako <internal id="9">krneki</internal>
+<internal id="9">grda slika</internal> nekaj teksta in se ena <internal id="9">prva slika</internal>. Pa se en link kar tako <internal id="10">krneki</internal>
 </text>
 </page>
 <page id="3" orglength="140" newlength="145" stub="0" categories="0" outlinks="2" urls="0">
 <title>Sony</title>
 <categories></categories>
-<links>10 2</links>
+<links>11 2</links>
 <urls>
 </urls>
 <text>
 
-      <internal id="10">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
+      <internal id="11">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
       
 </text>
 </page>
-<page id="4" orglength="103" newlength="154" stub="0" categories="0" outlinks="3" urls="0">
+<page id="4" orglength="155" newlength="149" stub="0" categories="1" outlinks="3" urls="0">
 <title>Test2</title>
-<categories></categories>
+<categories>8</categories>
 <links>6 7 5</links>
 <urls>
 </urls>
@@ -70,7 +70,8 @@
 	      Dummy
 	      Dummy2
 	      <internal id="5">Nested <internal id="6">anchors</internal> and some <internal id="7">more</internal></internal>
-      
+
+
 </text>
 </page>
 <page id="5" orglength="24" newlength="24" stub="0" categories="0" outlinks="0" urls="0">
@@ -106,6 +107,17 @@
 <text>
 
              Foo
+      
+</text>
+</page>
+<page id="8" orglength="7" newlength="7" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Bogus</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
       
 </text>
 </page>
