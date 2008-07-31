@@ -48,6 +48,7 @@ use ctemplates;
 use lang;
 use css;
 use logger;
+use interwiki;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -183,6 +184,9 @@ my $redirFile = "$filePath/$fileBasename.redir.xml";
 # Information about template inclusion
 my $templateIncDir = "$filePath/$fileBasename.templates";
 
+# Information about template inclusion
+my $interwikiDir = "$filePath/$fileBasename.interwiki";
+
 # Information about dump and wikiprep versions
 my $versionFile = "$filePath/$fileBasename.version";
 
@@ -220,12 +224,7 @@ binmode(LOCALIDF, ':utf8');
 binmode(EXANCHORF, ':utf8');
 
 &templates::prepare(\$templateIncDir);
-
-if( opendir(TEMPD, "$templateIncDir") ) {
-  my @dirContents = readdir(TEMPD);
-  unlink @dirContents;
-  closedir(TEMPD);
-}
+&interwiki::prepare(\$interwikiDir);
 
 print ANCHORF "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
@@ -905,10 +904,12 @@ sub transform() {
     &css::removeMetadata(\$text);
 
     my @anchorTexts;
+    my @interwikiLinks;
 
-    &extractInternalLinks(\$text, \@internalLinks, $id, \@anchorTexts, 1, 0);
+    &extractInternalLinks(\$text, \@internalLinks, $id, \@anchorTexts, \@interwikiLinks, 1, 0);
 
     &logAnchorText(\@anchorTexts, $id);
+    &logInterwikiLinks(\@interwikiLinks, $id);
 
     if ( ! $dontExtractUrls ) {
       &extractUrls(\$text, $id, \@urls);
@@ -1312,6 +1313,17 @@ sub includeParserFunction(\$\%\$\$\$) {
   return $result;
 }
 
+sub logInterwikiLinks(\@$) {
+  my ($refToInternalLinks, $id) = @_;
+
+  foreach my $link ( @$refToInternalLinks ) {
+    open(INTERF, ">>$interwikiDir/$link->{targetWiki}");
+    binmode(INTERF, ':utf8');
+    print INTERF "$id\t$link->{targetTitle}\n";
+    close(INTERF);
+  }
+}
+
 sub logTemplateInclude(\$\$\%) {
   my ($refToTemplateId, $refToPageId, $refToParameterHash) = @_;
 
@@ -1449,7 +1461,7 @@ my $internalLinkRegex = qr/
 
 sub extractInternalLinks(\$\@$\@$$) {
   my ($refToText, $refToInternalLinksArray, $id,
-      $refToAnchorTextArray, $whetherToRemoveDuplicates, $logUnknownLinks ) = @_;
+      $refToAnchorTextArray, $refToInterwikiLinksArray, $whetherToRemoveDuplicates, $logUnknownLinks ) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
@@ -1465,8 +1477,10 @@ sub extractInternalLinks(\$\@$\@$$) {
   # we extract links in several iterations of the while loop, while the link definition requires that
   # each pair [[...]] does not contain any opening braces.
 
-  1 while ( $$refToText =~ s/$internalLinkRegex/&collectInternalLink($1, $2, $3, $refToInternalLinksArray, 
-                                                                     $refToAnchorTextArray,
+  1 while ( $$refToText =~ s/$internalLinkRegex/&collectInternalLink($1, $2, $3, 
+                                                                     $refToInternalLinksArray, 
+                                                                     $refToAnchorTextArray, 
+                                                                     $refToInterwikiLinksArray,
                                                                      $-[0], $logUnknownLinks)/eg );
 
   if ($whetherToRemoveDuplicates) {
@@ -1513,8 +1527,8 @@ sub logAnchorText(\@$) {
   }
 }
 
-sub collectInternalLink($$$\@\@$$) {
-  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, 
+sub collectInternalLink($$$\@\@$$$) {
+  my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, $refToInterwikiLinksArray,
       $linkLocation, $logUnknownLinks) = @_;
 
   my $originalLink = $link;
@@ -1534,6 +1548,10 @@ sub collectInternalLink($$$\@\@$$) {
 
   # just strip this initial colon (as well as any whitespace preceding it)
   $link =~ s/^\s*:?//;
+  if ( !$link ) {
+    # Empty link, bail out.
+    return "";
+  }
 
   # Alternative text may be available after the pipeline symbol.
   # If the pipeline symbol is only used for masking parts of
@@ -1543,21 +1561,41 @@ sub collectInternalLink($$$\@\@$$) {
   my $alternativeTextAvailable = 0;
 
   my $isImageLink = 0;
+  my $interwikiRecognized = 0;
+  my $interwikiTitle;
+
   my $imageNamespace = $langDB{'imageNamespace'};
   if ($link =~ /^$imageNamespace:/) {
     $isImageLink = 1;
   }
 
+  # "-1" parameter permits empty trailing fields (important for pipeline masking)
+  my @pipeFields = split(/\|/, $link, -1);
+
+  # Text before the first "|" symbol contains link destination.
+  $link = shift(@pipeFields);
   if ( !$link ) {
     # Empty link, bail out.
     return "";
   }
 
-  my @pipeFields = split(/\|/, $link);
+  # If the link contains a section reference, adjust the link to point to the page as a whole and
+  # exract the section
+  my $section;
 
-  # Text before the first "|" symbol contains link destination.
-  $link = shift(@pipeFields);
+  ( $link, $section ) = split(/#/, $link, 2);
+  if ( defined($section) ) {
 
+    # Check if the link points to a section on the current page, and if so - ignore it.
+    if (length($link) == 0 && ! $alternativeTextAvailable) {
+      # This is indeed a link pointing to an section on the current page.
+      # The link is thus cleared, so that it will not be resolved and collected later.
+      # For section links to the same page, discard the leading '#' symbol, and take
+      # the rest as the text - but only if no alternative text was provided for this link.
+      $result = $section;
+    }
+  }
+  
   if ($isImageLink) {
     # Image links have to be parsed separately, because anchors can contain parameters (size, type, etc.)
     # which we exclude in a separate function.
@@ -1567,6 +1605,23 @@ sub collectInternalLink($$$\@\@$$) {
       $alternativeTextAvailable = 1;
     } 
   } else {
+    # Check if this is an interwiki link.
+    my $wikiName;
+    ( $wikiName, $interwikiTitle ) = &interwiki::parseInterwiki($link);
+    
+    if( defined( $wikiName ) ) {
+      $wikiName = lc($wikiName);
+
+      my $normalizedTitle = $interwikiTitle;
+      &normalizeTitle(\$normalizedTitle);
+
+      $interwikiRecognized = 1;
+
+      if( defined( $refToInterwikiLinksArray ) ) {
+        push( @$refToInterwikiLinksArray, { targetWiki => $wikiName, targetTitle => $normalizedTitle } );
+      }
+    }
+
     # Extract everything after the last pipeline symbol. Normal pages shouldn't have more than one
     # pipeline symbol, but remove extra pipes in case of broken or unknown new markup. Discard
     # all text before the last pipeline.
@@ -1579,12 +1634,16 @@ sub collectInternalLink($$$\@\@$$) {
 
       if( length($result) == 0 ) {
         # Pipeline found, but no text follows.
-       
-        if ($link !~ /#/) {
+
+        if( $interwikiRecognized ) {
+          # For interwiki links, pipeline masking is performed simply by using the page title
+          # instead of the complete link.
+          $result = $interwikiTitle;
+        } elsif ( not defined($section) ) {
           # If the "|" symbol is not followed by some text, then it masks the namespace
           # as well as any text in parentheses at the end of the link title.
-          # However, pipeline masking is only invoked if the link does not contain an anchor,
-          # hence the additional condition in the 'if' statement.
+          # However, pipeline masking is only invoked if the link does not contain a section 
+          # reference, hence the additional condition in the 'if' statement.
           &performPipelineMasking(\$link, \$result);
         } else {
           # If the link contains an anchor, then masking is not invoked, and we take the entire link
@@ -1595,28 +1654,6 @@ sub collectInternalLink($$$\@\@$$) {
       # the link text does not contain the pipeline, so take it as-is
       $result = $link;
     }
-  }
-
-  # If the link contains a section reference, adjust the link to point to the page as a whole and
-  # exract the section
-  my $section;
-
-  if( $link ) {
-    ( $link, $section ) = split(/#/, $link, 2);
-    if ( defined($section) ) {
-
-      # Check if the link points to a section on the current page, and if so - ignore it.
-      if (length($link) == 0 && ! $alternativeTextAvailable) {
-        # This is indeed a link pointing to an section on the current page.
-        # The link is thus cleared, so that it will not be resolved and collected later.
-        # For section links to the same page, discard the leading '#' symbol, and take
-        # the rest as the text - but only if no alternative text was provided for this link.
-        $result = $section;
-      }
-    }
-  } else {
-    # Empty link, bail out.
-    return "";
   }
 
   # Now collect the link, or links if the original link is in the date format
@@ -1630,12 +1667,14 @@ sub collectInternalLink($$$\@\@$$) {
   # Alternative text (specified after pipeline) blocks normalization of dates.
   # We also perform a quick check - if the link does not start with a digit,
   # then it surely does not contain a date
-  if ( ($link =~ /^\d/) && (! $alternativeTextAvailable)) {
-    $dateRecognized = &normalizeDates(\$link, \$result, \$targetId, $refToInternalLinksArray, $refToAnchorTextArray, $linkLocation);
+  if ( ( !$interwikiRecognized ) and ( !$alternativeTextAvailable ) and ( $link =~ /^\d/ ) ) {
+    $dateRecognized = &normalizeDates(\$link, \$result, \$targetId, $refToInternalLinksArray, 
+                                                                    $refToAnchorTextArray, $linkLocation);
   }
 
-  # If a date (either day or day + year) was recognized, then no further processing is necessary
-  if (! $dateRecognized) {
+  # If a date (either day or day + year) or interwiki link was recognized, then no further
+  # processing is necessary
+  if (! $dateRecognized and ! $interwikiRecognized ) {
     &normalizeTitle(\$link);
 
     $targetId = &resolveAndCollectInternalLink(\$link, $refToInternalLinksArray);
@@ -1961,7 +2000,7 @@ sub parseDisambig(\$\$) {
 	    my @disambigLinks;
       my @anchorTexts;
 
-			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, 0, 1);
+			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, undef, 0, 1);
 
 			&writeDisambig($refToId, \@anchorTexts);
 		}
@@ -2307,7 +2346,7 @@ sub identifyRelatedArticles(\$\@$) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &logger::msg("DEBUG", "Related(S): $id => $str");
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
+      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, undef, 0, 0);
       &logger::msg("DEBUG", "Related(S): $id ==> @$refToRelatedArticles");
     }
   }
@@ -2318,7 +2357,7 @@ sub identifyRelatedArticles(\$\@$) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &logger::msg("DEBUG", "Related(I): $id => $str");
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, 0, 0);
+      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, undef, 0, 0);
       &logger::msg("DEBUG", "Related(I): $id ==> @$refToRelatedArticles");
     }
   }
@@ -2335,7 +2374,7 @@ sub identifyRelatedArticles(\$\@$) {
         &logger::msg("DEBUG", "Related(N): $id => $line");
         # 'extractInternalLinks' may mofidy its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $refToRelatedArticles, $id, undef, 0, 0);
+        &extractInternalLinks(\$line, $refToRelatedArticles, $id, undef, undef, 0, 0);
         &logger::msg("DEBUG", "Related(N): $id ==> @$refToRelatedArticles");
       }
     } else { # we haven't yet found the related section

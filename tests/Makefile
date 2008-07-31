@@ -44,7 +44,8 @@ LOGS =	images.log \
 	whitespace.log \
 	kaon2.log \
 	segfault.log \
-	noinclude.log
+	noinclude.log \
+	interwiki.log
 
 all: test
 
