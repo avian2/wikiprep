@@ -1559,7 +1559,7 @@ sub collectInternalLink($$$\@\@$$) {
   $link = shift(@pipeFields);
 
   if ($isImageLink) {
-    # Image links have to parsed separately, because anchors can contain parameters (size, type, etc.)
+    # Image links have to be parsed separately, because anchors can contain parameters (size, type, etc.)
     # which we exclude in a separate function.
     $result = &images::parseImageParameters(\@pipeFields);
 
@@ -1597,21 +1597,21 @@ sub collectInternalLink($$$\@\@$$) {
     }
   }
 
-  # If the link contains an anchor, adjust the link to point to the page as a whole and
-  # exract the anchor
-  my $anchor;
+  # If the link contains a section reference, adjust the link to point to the page as a whole and
+  # exract the section
+  my $section;
 
   if( $link ) {
-    ( $link, $anchor ) = split(/#/, $link, 2);
-    if ( defined($anchor) ) {
+    ( $link, $section ) = split(/#/, $link, 2);
+    if ( defined($section) ) {
 
-      # Check if the link points to an anchor on the current page, and if so - ignore it.
+      # Check if the link points to a section on the current page, and if so - ignore it.
       if (length($link) == 0 && ! $alternativeTextAvailable) {
-        # This is indeed a link pointing to an anchor on the current page.
+        # This is indeed a link pointing to an section on the current page.
         # The link is thus cleared, so that it will not be resolved and collected later.
-        # For anchors to the same page, discard the leading '#' symbol, and take
+        # For section links to the same page, discard the leading '#' symbol, and take
         # the rest as the text - but only if no alternative text was provided for this link.
-        $result = $anchor;
+        $result = $section;
       }
     }
   } else {
