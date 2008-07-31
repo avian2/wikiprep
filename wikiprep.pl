@@ -2055,10 +2055,13 @@ sub postprocessText(\$$$) {
   # (i.e., with leading "&amp;"). XML parser replaces "&amp;" with "&",
   # so here in the code we see the entities as "&nbsp;".
   $$refToText =~ s{&                 # the entity starts with "&"
-                   (\#?\w+)  # optional '#' sign (as in &#945;), followed by
+                   (\#?\w+)          # optional '#' sign (as in &#945;), followed by
                                      # an uninterrupted sequence of letters and/or digits
                    ;                 # the entity ends with a semicolon
-                  }{&logReplacedXmlEntity($1)}egx;   # entities are replaced with a space
+                  }{ }gx;            # entities are replaced with a space
+
+                                     # Replace with &logReplacedXmlEntity($1)
+                                     # to log entity replacements.
 
   if ($whetherToEncodeXmlChars) {
     # encode text for XML
