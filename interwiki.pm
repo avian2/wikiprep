@@ -38,7 +38,7 @@ sub prepare(\$) {
 }
 
 my $interwikiRegexS = join('|', @$interwikiList);
-my $interwikiRegex = qr/^(?:$interwikiRegexS)/;
+my $interwikiRegex = qr/^(?:$interwikiRegexS)/i;
 
 sub parseInterwiki($)
 {
