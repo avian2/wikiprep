@@ -1337,6 +1337,7 @@ sub logTemplateInclude(\$\$\%) {
   foreach my $parameter ( keys(%$refToParameterHash) ) {
     if($parameter !~ /^=/) {
       my $value = $$refToParameterHash{$parameter};
+      $value =~ s/\n/ /g;
       print TEMPF "$parameter = $value\n";
     }
   }

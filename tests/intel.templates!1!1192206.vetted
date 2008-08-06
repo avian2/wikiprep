@@ -3,19 +3,8 @@ company_name = Intel Corporation
 founders = Gordon E. Moore and Robert Noyce
 products =  [[Microprocessor]]s<br>[[Flash memory]]<br>[[Motherboard]] [[Chipsets]]<br>[[Network Interface Card]]<br>[[Bluetooth]] [[Chipsets]] 
 location =  [[Santa Clara, California]] <br/> {{USA}} 
-revenue =  {{gain}} $38.3 billion [[United States dollar|USD]] (2007)<ref>
-{{cite web
- | url = http://www.edn.com/article/CA6424781.html
- | title = AMD wins 2006 revenue battle with Intel, iSuppli says
- | accessdate = 2007-11-05
-}}</ref><ref>
-{{cite web
- | url = http://www.informationweek.com/news/showArticle.jhtml?articleID=198001312
- | title = Chipmaker Report: Intel's Revenue Sank In 2006 
- | accessdate = 2007-11-05
-}}</ref> 
-footnotes =  '''<sup>1</sup>'''<small>[[Incorporation (business)|Incorporated]] in [[California]] in [[1968]], reincorporated in Delaware in [[1989]].<ref name='SEC-filing'> {{cite web|url=http://secfilings.nasdaq.com/edgar_conv_html%2f2006%2f02%2f27%2f0000891618-06-000089.html#FIS_BUSINESS |title=INTEL CORP (Form: 10-K, Received: 02/27/2006 06:02:42) |accessdate=2007-07-05 |date=2005-12-31 |work=[[United States Securities and Exchange Commission]] }}</ref></small>
-
+revenue =  {{gain}} $38.3 billion [[United States dollar|USD]] (2007)<ref> {{cite web  | url = http://www.edn.com/article/CA6424781.html  | title = AMD wins 2006 revenue battle with Intel, iSuppli says  | accessdate = 2007-11-05 }}</ref><ref> {{cite web  | url = http://www.informationweek.com/news/showArticle.jhtml?articleID=198001312  | title = Chipmaker Report: Intel's Revenue Sank In 2006   | accessdate = 2007-11-05 }}</ref> 
+footnotes =  '''<sup>1</sup>'''<small>[[Incorporation (business)|Incorporated]] in [[California]] in [[1968]], reincorporated in Delaware in [[1989]].<ref name='SEC-filing'> {{cite web|url=http://secfilings.nasdaq.com/edgar_conv_html%2f2006%2f02%2f27%2f0000891618-06-000089.html#FIS_BUSINESS |title=INTEL CORP (Form: 10-K, Received: 02/27/2006 06:02:42) |accessdate=2007-07-05 |date=2005-12-31 |work=[[United States Securities and Exchange Commission]] }}</ref></small> 
 foundation =  [[1968]] <sup>1</sup> 
 homepage = [http://www.intel.com/ www.intel.com]
 slogan = ''Leap Ahead''
