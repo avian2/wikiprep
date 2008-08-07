@@ -61,7 +61,6 @@ clean:
 	rm -f *.hgw.xml
 	rm -f *.local.xml
 	rm -f *.log
-	rm -f *.prescan
 	rm -f *.related_links
 	rm -f *.stat.categories
 	rm -f *.stat.inlinks
@@ -70,6 +69,7 @@ clean:
 	rm -f *.min_local_id
 	rm -f *.version
 	rm -rf *.templates
+	rm -rf *.interwiki
 
 compare:
 	./compare
