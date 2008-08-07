@@ -525,12 +525,14 @@ sub writeRedirects() {
 
     if ( exists( $title2id{$fromTitle} ) ) {
       $fromId = $title2id{$fromTitle};
+      next if ( exists( $templates{$fromId} ) );
     } else {
       $fromId = "unknown";
     }
 
     if ( exists( $title2id{$toTitle} ) ) {
       $toId = $title2id{$toTitle};
+      next if ( exists( $templates{$toId} ) );
     } else {
       $toId = "unknown";
     }
