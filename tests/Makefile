@@ -46,14 +46,17 @@ LOGS =	images.log \
 	segfault.log \
 	noinclude.log \
 	interwiki.log \
-	tempredir.log
+	tempredir.log \
+	microsoft-new.log
+
+OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 
 all: test
 
 test: clean $(LOGS) compare
 
 %.log: %.xml
-	perl ../wikiprep.pl -log all -f $< >/dev/null
+	perl ../wikiprep.pl -log all $(OPTIONS) -f $< >/dev/null
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
@@ -69,6 +72,8 @@ clean:
 	rm -f *.disambig
 	rm -f *.min_local_id
 	rm -f *.version
+	rm -f *.gum.xml
+	rm -f *.tmpl.xml
 	rm -rf *.templates
 	rm -rf *.interwiki
 
