@@ -39,16 +39,17 @@ use Regexp::Common;
 use FindBin;
 use lib "$FindBin::Bin";
 
-use images;
-use nowiki;
-use revision;
-use languages;
-use templates;
-use ctemplates;
-use lang;
-use css;
-use logger;
-use interwiki;
+use Wikiprep::images;
+use Wikiprep::nowiki;
+use Wikiprep::revision;
+use Wikiprep::languages;
+use Wikiprep::templates;
+use Wikiprep::ctemplates;
+use Wikiprep::lang;
+use Wikiprep::css;
+use Wikiprep::logger;
+use Wikiprep::interwiki;
+use Wikiprep::utils;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -953,7 +954,8 @@ sub transform() {
 
     my $pageFinishedTime = time;
 
-    &logger::msg("PROFILE", "Transforming page $page->{id} took " . ( $pageFinishedTime - $page->{startTime} ) .
+    &logger::msg("PROFILE", "Transforming page $page->{id} took " . 
+                            ( $pageFinishedTime - $page->{startTime} ) .
                             " seconds");
   }
   print "\n";

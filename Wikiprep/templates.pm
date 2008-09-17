@@ -4,9 +4,9 @@ use strict;
 use File::Path;
 #use Text::Balanced;
 use Regexp::Common;
-use utils;
 
-use ctemplates;
+use Wikiprep::utils;
+use Wikiprep::ctemplates;
 
 package templates;
 
