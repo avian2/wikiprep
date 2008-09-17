@@ -919,7 +919,7 @@ sub transform() {
     my @anchorTexts;
     my @interwikiLinks;
 
-    &extractInternalLinks(\$pageStruct->{text}, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1, 0);
+    &extractInternalLinks(\$pageStruct->{text}, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1);
 
     &logAnchorText(\@anchorTexts, $pageStruct->{id});
     &logInterwikiLinks(\@interwikiLinks, $pageStruct->{id});
@@ -1474,9 +1474,9 @@ my $internalLinkRegex = qr/
                                               # e.g., "[[public transport]]ation"
                          /sx;
 
-sub extractInternalLinks(\$\@$\@$$) {
+sub extractInternalLinks(\$\@$\@$) {
   my ($refToText, $refToInternalLinksArray, $id,
-      $refToAnchorTextArray, $refToInterwikiLinksArray, $whetherToRemoveDuplicates, $logUnknownLinks ) = @_;
+      $refToAnchorTextArray, $refToInterwikiLinksArray, $whetherToRemoveDuplicates) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
@@ -1496,7 +1496,7 @@ sub extractInternalLinks(\$\@$\@$$) {
                                                                      $refToInternalLinksArray, 
                                                                      $refToAnchorTextArray, 
                                                                      $refToInterwikiLinksArray,
-                                                                     $-[0], $logUnknownLinks)/eg );
+                                                                     $-[0])/eg );
 
   if ($whetherToRemoveDuplicates) {
     &removeDuplicatesAndSelf($refToInternalLinksArray, $id);
@@ -1524,7 +1524,7 @@ sub logAnchorText(\@$) {
     $anchorText = $$AnchorArrayEntry{anchorText};
     $linkLocation = $$AnchorArrayEntry{linkLocation};
 
-    if ($targetId != $curPageId) {
+    if (defined($targetId) and $targetId != $curPageId) {
       # anchor text doesn't need escaping of XML characters,
       # hence the second function parameter is 0
       &postprocessText(\$anchorText, 0, 0);
@@ -1542,9 +1542,9 @@ sub logAnchorText(\@$) {
   }
 }
 
-sub collectInternalLink($$$\@\@$$$) {
+sub collectInternalLink($$$\@\@$$) {
   my ($prefix, $link, $suffix, $refToInternalLinksArray, $refToAnchorTextArray, $refToInterwikiLinksArray,
-      $linkLocation, $logUnknownLinks) = @_;
+      $linkLocation) = @_;
 
   my $originalLink = $link;
   my $result = "";
@@ -1731,13 +1731,9 @@ sub collectInternalLink($$$\@\@$$$) {
     # This is important because otherwise the linkLocation wouldn't get stored.
 
     if ( defined($refToAnchorTextArray) ) {
-      if ( defined($targetId) ) {
-        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$result", 
-                                       linkLocation => "$linkLocation" });
-      } elsif ($logUnknownLinks) {
-        push(@$refToAnchorTextArray, { targetId => "undef", anchorText => "$result", 
-                                       linkLocation => "$linkLocation" });
-      }
+      $targetId = undef unless $targetId;
+      push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => "$result", 
+                                     linkLocation => "$linkLocation" });
     }
 
   }
@@ -2023,7 +2019,7 @@ sub parseDisambig(\$\$) {
 	    my @disambigLinks;
       my @anchorTexts;
 
-			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, undef, 0, 1);
+			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, undef, 0);
 
 			&writeDisambig($refToId, \@anchorTexts);
 		}
@@ -2036,7 +2032,12 @@ sub writeDisambig(\$\@) {
 	print DISAMBIGF "$$refToDisambigId";
 
   for my $anchor (@$refToAnchorTextArray) {
-    print DISAMBIGF "\t$$anchor{'targetId'}\t$$anchor{'anchorText'}"
+    if( defined( $anchor->{'targetId'} ) ) {
+      print DISAMBIGF "\t$anchor->{'targetId'}";
+    } else {
+      print DISAMBIGF "\tundef";
+    }
+    print DISAMBIGF "\t$anchor->{'anchorText'}"
   }
 
 	print DISAMBIGF "\n";
@@ -2373,7 +2374,7 @@ sub identifyRelatedArticles(\%) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &logger::msg("DEBUG", "Related(S): $id => $str");
-      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
       &logger::msg("DEBUG", "Related(S): $id ==> @{$pageStruct->{relatedArticles}}");
     }
   }
@@ -2384,7 +2385,7 @@ sub identifyRelatedArticles(\%) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &logger::msg("DEBUG", "Related(I): $id => $str");
-      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
       &logger::msg("DEBUG", "Related(I): $id ==> @{$pageStruct->{relatedArticles}}");
     }
   }
@@ -2401,7 +2402,7 @@ sub identifyRelatedArticles(\%) {
         &logger::msg("DEBUG", "Related(N): $id => $line");
         # 'extractInternalLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+        &extractInternalLinks(\$line, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
         &logger::msg("DEBUG", "Related(N): $id ==> @{$pageStruct->{relatedArticles}}");
       }
     } else { # we haven't yet found the related section
