@@ -892,9 +892,6 @@ sub transform() {
       $page->{isDisambig} = 0;
     }
 
-    my @internalLinks;
-    my @urls;
-
     $page->{templates} = {};
     $page->{text} = &includeTemplates($page, $page->{text}, 0);
 
@@ -923,7 +920,11 @@ sub transform() {
     $page->{internalLinks} = [];
     $page->{interwikiLinks} = [];
 
-    &extractInternalLinks(\$page->{text}, \@internalLinks, $page->{id}, $page->{internalLinks}, $page->{interwikiLinks}, 1);
+    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, $page->{interwikiLinks});
+
+    my @internalLinks;
+    &getLinkIds(\@internalLinks, $page->{internalLinks});
+    &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
     &logAnchorText($page);
     &logInterwikiLinks($page);
@@ -996,8 +997,9 @@ sub writePage(\%) {
 
   my $numCategories = scalar(@{$page->{categories}});
 
-  my $internalLinks = &getLinkIds($page->{internalLinks});
-  &removeDuplicatesAndSelf($internalLinks, $page->{id});
+  my @internalLinks;
+  &getLinkIds(\@internalLinks, $page->{internalLinks});
+  &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
   my @urls;
   for my $link (@{$page->{externalLinks}}) {
@@ -1006,7 +1008,7 @@ sub writePage(\%) {
 
   &removeDuplicatesAndSelf(\@urls, undef);
 
-  my $numLinks = scalar(@$internalLinks);
+  my $numLinks = scalar(@internalLinks);
   my $numUrls = scalar(@urls);
 
   print OUTF "<page id=\"$page->{id}\" orglength=\"$page->{orgLength}\" newlength=\"$page->{newLength}\" stub=\"$page->{isStub}\" " .
@@ -1021,7 +1023,7 @@ sub writePage(\%) {
   print OUTF "</categories>\n";
 
   print OUTF "<links>";
-  print OUTF join(" ", @$internalLinks);
+  print OUTF join(" ", @internalLinks);
   print OUTF "</links>\n";
 
   print OUTF "<urls>\n";
@@ -1505,9 +1507,8 @@ my $internalLinkRegex = qr/
                                               # e.g., "[[public transport]]ation"
                          /sx;
 
-sub extractInternalLinks(\$\@$\@$) {
-  my ($refToText, $refToInternalLinksArray, $id,
-      $refToAnchorTextArray, $refToInterwikiLinksArray, $whetherToRemoveDuplicates) = @_;
+sub extractWikiLinks(\$\@$\@$) {
+  my ($refToText, $refToAnchorTextArray, $refToInterwikiLinksArray) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
@@ -1523,35 +1524,20 @@ sub extractInternalLinks(\$\@$\@$) {
   # we extract links in several iterations of the while loop, while the link definition requires that
   # each pair [[...]] does not contain any opening braces.
   
-  $refToAnchorTextArray = [] unless( defined( $refToAnchorTextArray ) );
-
-  1 while ( $$refToText =~ s/$internalLinkRegex/&collectInternalLink($1, $2, $3, 
+  1 while ( $$refToText =~ s/$internalLinkRegex/&collectWikiLink($1, $2, $3, 
                                                                      $refToAnchorTextArray, 
                                                                      $refToInterwikiLinksArray,
                                                                      $-[0])/eg );
-
-  my $ids = getLinkIds($refToAnchorTextArray);
-
-  if ($whetherToRemoveDuplicates) {
-    &removeDuplicatesAndSelf($ids, $id);
-  }
-
-  @$refToInternalLinksArray = (@$refToInternalLinksArray, @$ids);
-
 }
 
-sub getLinkIds(\@) {
-  my ($refToInternalLinks) = @_;
-
-  my @ids;
+sub getLinkIds(\@\@) {
+  my ($refToLinkIds, $refToInternalLinks) = @_;
 
   for my $link (@$refToInternalLinks) {
     if( defined( $link->{targetId} ) ) {
-      push(@ids, $link->{targetId});
+      push(@$refToLinkIds, $link->{targetId});
     }
   }
-
-  return \@ids;
 }
 
 }
@@ -1588,7 +1574,7 @@ sub logAnchorText(\%) {
   }
 }
 
-sub collectInternalLink($$$\@\@$$) {
+sub collectWikiLink($$$\@\@$) {
   my ($prefix, $link, $suffix, $refToAnchorTextArray, $refToInterwikiLinksArray,
       $linkLocation) = @_;
 
@@ -2055,11 +2041,9 @@ sub parseDisambig(\%) {
                           (\*)
                         )/ix ) {
 
-      my @dummy;
-
       my @disambigLinks;
 
-      &extractInternalLinks(\$line, \@dummy, $page->{id}, \@disambigLinks, undef, 0);
+      &extractWikiLinks(\$line, \@disambigLinks, undef);
 
       push(@{$page->{disambigLinks}}, \@disambigLinks)
 		}
@@ -2387,27 +2371,18 @@ sub getTimeAsString() {
 #    Ex: medicine (see also: [[Health]])
 # 3) Dedicated section
 #    Ex: == See also ==
-#
-# In all calls to 'extractInternalLinks':
-# - The penultimate argument is 0, since we don't need to log anchor text here.
-#   Anchor text will be handled when we analyze all the internal links in
-#   the entire article (and not just look for related links).
-# - The last argument is 0 in order not to remove duplicates on every invocation
-#   of 'extractInternalLinks'. This is because duplicates in related links are
-#   not very common, but performing duplicate removal each time is expensive.
-#   Instead, we remove duplicates once at the very end.
 sub identifyRelatedArticles(\%) {
   my ($page) = @_;
 
   my $id = $page->{id};
 
   # We split the text into a set of lines. This also creates a copy of the original text -
-  # this is important, since the function 'extractInternalLinks' modifies its argument,
+  # this is important, since the function 'extractWikiLinks' modifies its argument,
   # so we'd better use it on a copy of the real article body.
   my @text = split("\n", $page->{text});
   my $line;
 
-  $page->{relatedArticles} = [];
+  my @relatedInternalLinks;
 
   # Standalone
   foreach $line (@text) {
@@ -2420,8 +2395,7 @@ sub identifyRelatedArticles(\%) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &logger::msg("DEBUG", "Related(S): $id => $str");
-      &extractInternalLinks(\$str, $page->{relatedArticles}, $id, undef, undef, 0);
-      &logger::msg("DEBUG", "Related(S): $id ==> @{$page->{relatedArticles}}");
+      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
     }
   }
 
@@ -2431,8 +2405,7 @@ sub identifyRelatedArticles(\%) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &logger::msg("DEBUG", "Related(I): $id => $str");
-      &extractInternalLinks(\$str, $page->{relatedArticles}, $id, undef, undef, 0);
-      &logger::msg("DEBUG", "Related(I): $id ==> @{$page->{relatedArticles}}");
+      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
     }
   }
 
@@ -2446,10 +2419,9 @@ sub identifyRelatedArticles(\%) {
         last;
       } else { # collect the links from the current line
         &logger::msg("DEBUG", "Related(N): $id => $line");
-        # 'extractInternalLinks' may modify its argument ('$line'), but it's OK
+        # 'extractWikiLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $page->{relatedArticles}, $id, undef, undef, 0);
-        &logger::msg("DEBUG", "Related(N): $id ==> @{$page->{relatedArticles}}");
+        &extractWikiLinks(\$line, \@relatedInternalLinks, undef);
       }
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
@@ -2467,7 +2439,10 @@ sub identifyRelatedArticles(\%) {
     }
   }
 
-  &removeDuplicatesAndSelf($page->{relatedArticles}, $id);
+  $page->{relatedArticles} = [];
+
+  &getLinkIds($page->{relatedArticles}, \@relatedInternalLinks);
+  &removeDuplicatesAndSelf($page->{relatedArticles}, $page->{id});
 }
 
 sub recordRelatedArticles(\%) {
