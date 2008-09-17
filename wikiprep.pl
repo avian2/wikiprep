@@ -907,7 +907,7 @@ sub transform() {
     # from the list of related links, and only then record the list of related links
     # to the file.
     &removeElements($pageStruct->{relatedArticles}, $pageStruct->{categories});
-    &recordRelatedArticles($pageStruct->{id}, $pageStruct->{relatedArticles});
+    &recordRelatedArticles($pageStruct);
 
     &images::convertGalleryToLink(\$pageStruct->{text});
     &images::convertImagemapToLink(\$pageStruct->{text});
@@ -2399,7 +2399,7 @@ sub identifyRelatedArticles(\%) {
         last;
       } else { # collect the links from the current line
         &logger::msg("DEBUG", "Related(N): $id => $line");
-        # 'extractInternalLinks' may mofidy its argument ('$line'), but it's OK
+        # 'extractInternalLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
         &extractInternalLinks(\$line, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
         &logger::msg("DEBUG", "Related(N): $id ==> @{$pageStruct->{relatedArticles}}");
@@ -2423,13 +2423,13 @@ sub identifyRelatedArticles(\%) {
   &removeDuplicatesAndSelf($pageStruct->{relatedArticles}, $id);
 }
 
-sub recordRelatedArticles($\@) {
-  my ($id, $refToRelatedArticles) = @_;
+sub recordRelatedArticles(\%) {
+  my ($pageStruct) = @_;
 
-  my $size = scalar(@$refToRelatedArticles);
+  my $size = scalar(@{$pageStruct->{relatedArticles}});
   return if ($size == 0);
 
-  print RELATEDF "$id\t", join(" ", @$refToRelatedArticles), "\n";
+  print RELATEDF "$pageStruct->{id}\t", join(" ", @{$pageStruct->{relatedArticles}}), "\n";
 }
 
 
