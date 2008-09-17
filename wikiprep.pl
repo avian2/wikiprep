@@ -927,7 +927,7 @@ sub transform() {
     &logInterwikiLinks(\@interwikiLinks, $pageStruct->{id});
 
     if ( ! $dontExtractUrls ) {
-      &extractUrls(\$pageStruct->{text}, $pageStruct->{id}, \@urls);
+      &extractUrls($pageStruct);
     }
 
     &postprocessText(\$pageStruct->{text}, 1, 1);
@@ -935,7 +935,7 @@ sub transform() {
     # text length AFTER all transformations
     $pageStruct->{newLength} = length($pageStruct->{text});
 
-    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, \@urls);
+    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, $pageStruct->{bareUrls});
 
     &updateStatistics(\@categories, \@internalLinks);
 
@@ -1937,23 +1937,26 @@ BEGIN {
   # Implicit links are normal text that is recognized as a valid URL.
   my $urlSequence2 = qr/($urlRegex)/;
 
-  sub extractUrls(\$$\@) {
-    my ($refToText, $id, $refToUrlsArray) = @_;
+  sub extractUrls(\%) {
+    my ($pageStruct) = @_;
+
+    $pageStruct->{externalLinks} = [];
+    $pageStruct->{bareUrls} = [];
 
     # First we handle the case of URLs enclosed in single brackets, with or without the description.
     # Examples: [http://www.cnn.com], [ http://www.cnn.com  ], [http://www.cnn.com  CNN Web site]
-    $$refToText =~ s/$urlSequence1/&collectUrlFromBrackets($1, $2, $id, $refToUrlsArray)/eg;
+    $pageStruct->{text} =~ s/$urlSequence1/&collectUrlFromBrackets($1, $2, $pageStruct)/eg;
 
     # Now we handle standalone URLs (those not enclosed in brackets)
     # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
     # the terminator symbol itself, but rather only the URL.
-    $$refToText =~ s/$urlSequence2/&collectStandaloneUrl($1, $refToUrlsArray)/eg;
+    $pageStruct->{text} =~ s/$urlSequence2/&collectStandaloneUrl($1, $pageStruct)/eg;
 
-    &removeDuplicatesAndSelf($refToUrlsArray, undef);
+    &removeDuplicatesAndSelf($pageStruct->{bareUrls}, undef);
   }
 
-  sub collectUrlFromBrackets($$$\@) {
-    my ($url, $anchor, $id, $refToUrlsArray) = @_;
+  sub collectUrlFromBrackets($$\%) {
+    my ($url, $anchor, $pageStruct) = @_;
 
     # Extract protocol - this is the part of the string before the first ':' because of the
     # $urlRegex above.
@@ -1962,13 +1965,17 @@ BEGIN {
     my $urlProtocol = $temp[0];
 
     if( exists( $urlProtocols{$urlProtocol} ) ) {
-      push(@$refToUrlsArray, $url);
+      push(@{$pageStruct->{bareUrls}}, $url);
 
       my $anchorTrimmed = &utils::trimWhitespaceBothSides($anchor);
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
-        print EXANCHORF "$id\t$url\t$anchorTrimmed\n";
+        print EXANCHORF "$pageStruct->{id}\t$url\t$anchorTrimmed\n";
+
+        push(@{$pageStruct->{externalLinks}}, { anchor => $anchorTrimmed, url => $url } );
+      } else {
+        push(@{$pageStruct->{externalLinks}}, { url => $url } );
       }
       return $anchor;
     } else {
@@ -1980,14 +1987,15 @@ BEGIN {
   # Same procedure as for extracting URLs from brackets, except that we can't have an 
   # anchor in this case.
 
-  sub collectStandaloneUrl($\@) {
-    my ($url, $refToUrlsArray) = @_;
+  sub collectStandaloneUrl($\%) {
+    my ($url, $pageStruct) = @_;
 
     my @temp = split(/:/, $url, 2);
     my $urlProtocol = $temp[0];
 
     if( exists( $urlProtocols{$urlProtocol} ) ) {
-      push(@$refToUrlsArray, $url);
+      push(@{$pageStruct->{bareUrls}}, $url);
+      push(@{$pageStruct->{externalLinks}}, { url => $url } );
       return "";
     } else {
       # Don't replace anything
