@@ -49,7 +49,9 @@ use Wikiprep::lang qw( getLang );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::logger qw( msg );
 use Wikiprep::interwiki qw( parseInterwiki );
-use Wikiprep::utils qw( trimWhitespaceBothSides );
+use Wikiprep::utils qw( trimWhitespaceBothSides encodeXmlChars getLinkIds removeDuplicatesAndSelf );
+
+use Wikiprep::Output::Legacy;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -102,8 +104,6 @@ my $refToLangDB = &getLang( $langCode );
 my %langDB = %$refToLangDB;
 
 ##### Global definitions #####
-
-my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
 
 my %numMonthToNumDays = ( 1 => 31, 
                           2 => 29, 
@@ -158,35 +158,10 @@ my $localIDCounter = 1;
 
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml", ".xml.gz", ".xml.bz2");
 $fileSuffix =~ s/\.gz$|\.bz2//;
-my $outputFile = "$filePath/$fileBasename.hgw$fileSuffix";
+
+my $out = Wikiprep::Output::Legacy->new("$filePath/$fileBasename", $file);
+
 my $logFile = "$filePath/$fileBasename.log";
-my $anchorTextFile = "$filePath/$fileBasename.anchor_text";
-
-# Information about anchor texts for external linnks
-my $externalAnchorTextFile = "$filePath/$fileBasename.external_anchors";
-
-my $relatedLinksFile = "$filePath/$fileBasename.related_links";
-
-# Disambiguation links
-my $disambigPagesFile = "$filePath/$fileBasename.disambig";
-
-# Information about nonexistent pages and IDs that were assigned to them 
-# (named "local" because assigned IDs are only unique within this dump and not
-# across Wikipedia) 
-my $localPagesFile = "$filePath/$fileBasename.local.xml";
-
-# File containing the lowest local ID number (all pages with IDs larger than this
-# are local)
-my $localIDFile = "$filePath/$fileBasename.min_local_id";
-
-# Information about redirects
-my $redirFile = "$filePath/$fileBasename.redir.xml";
-
-# Information about template inclusion
-my $templateIncDir = "$filePath/$fileBasename.templates";
-
-# Information about template inclusion
-my $interwikiDir = "$filePath/$fileBasename.interwiki";
 
 # Information about dump and wikiprep versions
 my $versionFile = "$filePath/$fileBasename.version";
@@ -198,50 +173,13 @@ my $totalByteCount = 0;
 &writeVersion($versionFile, $file);
 &Wikiprep::logger::init($logFile, $logArgs);
 
-if( $doCompress ) {
-  open(OUTF, "| gzip >$outputFile.gz") or die "Cannot open pipe to gzip: $!: $outputFile.gz";
-  open(ANCHORF, "| gzip > $anchorTextFile.gz") or die "Cannot open pipe to gzip: $!: $anchorTextFile.gz";
-  open(EXANCHORF, "| gzip > $externalAnchorTextFile.gz") 
-                                       or die "Cannot open pipe to gzip: $!: $externalAnchorTextFile.gz";
-} else {
-  open(OUTF, "> $outputFile") or die "Cannot open $outputFile: $!";
-  open(ANCHORF, "> $anchorTextFile") or die "Cannot open $anchorTextFile: $!";
-  open(EXANCHORF, "> $externalAnchorTextFile") or die "Cannot open $externalAnchorTextFile: $!";
-}
-
-open(RELATEDF, "> $relatedLinksFile") or die "Cannot open $relatedLinksFile: $!";
-open(LOCALF, "> $localPagesFile") or die "Cannot open $localPagesFile: $!";
-open(DISAMBIGF, "> $disambigPagesFile") or die "Cannot open $disambigPagesFile: $!";
-open(LOCALIDF, "> $localIDFile") or die "Cannot open $localIDFile: $!";
-
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
-binmode(OUTF,    ':utf8');
-binmode(ANCHORF, ':utf8');
-binmode(RELATEDF, ':utf8');
-binmode(LOCALF, ':utf8');
-binmode(DISAMBIGF, ':utf8');
-binmode(LOCALIDF, ':utf8');
-binmode(EXANCHORF, ':utf8');
 
-&Wikiprep::templates::prepare(\$templateIncDir);
-&Wikiprep::interwiki::prepare(\$interwikiDir);
-
-print ANCHORF "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
-print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
-
-print LOCALF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
-print LOCALF "<pages>\n";
-
-print DISAMBIGF "# Line format: <Disambig page id>  <Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
-print EXANCHORF "# Line format: <Source page id>  <Url>  <Anchor>\n\n\n";
-
-&copyXmlFileHeader();
 &loadNamespaces();
 &prescan();
 
-print LOCALIDF "$localIDCounter\n";
-close(LOCALIDF);
+$out->lastLocalID($localIDCounter);
 
 my $numTitles = scalar( keys(%title2id) );
 print "Loaded $numTitles titles\n";
@@ -251,19 +189,12 @@ my $numTemplates = scalar( keys(%templates) );
 print "Loaded $numTemplates templates\n";
 
 &transform();
-&closeXmlFile();
 
-&writeRedirects();
+$out->writeRedirects(\%redir, \%title2id, \%templates);
 &writeStatistics();
 &writeCategoryHierarchy();
 
-print LOCALF "</pages>\n";
-
-close(ANCHORF);
-close(RELATEDF);
-close(LOCALF);
-close(DISAMBIGF);
-close(EXANCHORF);
+$out->finish();
 
 &Wikiprep::logger::stop();
 
@@ -472,86 +403,6 @@ sub isTitleOkForLocalPages(\$) {
   return $namespaceOk
 }
 
-sub encodeXmlChars(\$) {
-  my ($refToStr) = @_;
-
-  $$refToStr =~ s/([&"'<>])/&$XmlEntities{$1};/g;
-}
-
-sub copyXmlFileHeader() {
-  if ($file =~ /\.gz$/) {
-    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
-  } elsif ($file =~ /\.bz2$/) {
-    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
-  } else {
-    open(INF, "< $file") or die "Cannot open $file: $!";
-  }
-
-  while (<INF>) { # copy lines up to "</siteinfo>"
-    if (/^<mediawiki /) {
-      # The top level element - mediawiki - contains a lot of attributes (e.g., schema)
-      # that are no longer applicable to the XML file after our transformation.
-      # Therefore, we simply write an opening tag <mediawiki> without any attributes.
-      print OUTF "<mediawiki>\n";
-    } else {
-      # All other lines (up to </siteinfo>) are copied as-is
-      print OUTF;
-    }
-    last if (/<\/siteinfo>/);
-  }
-
-  close(INF); # this file will later be reopened by "Parse::MediaWikiDump"
-}
-
-sub closeXmlFile() {
-  print OUTF "</mediawiki>\n";
-  close(OUTF);
-}
-
-# Save information about redirects into an XML-formatted file.
-sub writeRedirects() {
-  my $fromTitle;
-  my $toTitle;
-  my $fromId;
-  my $toId;
-
-  open(REDIRF, "> $redirFile") or die "Cannot open $redirFile: $!";
-  binmode(REDIRF, ':utf8');
-
-  print REDIRF "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
-  print REDIRF "<redirects>\n";
-
-  foreach $fromTitle ( keys(%redir) ) {
-    $toTitle = $redir{$fromTitle};
-
-    if ( exists( $title2id{$fromTitle} ) ) {
-      $fromId = $title2id{$fromTitle};
-      next if ( exists( $templates{$fromId} ) );
-    } else {
-      $fromId = "unknown";
-    }
-
-    if ( exists( $title2id{$toTitle} ) ) {
-      $toId = $title2id{$toTitle};
-      next if ( exists( $templates{$toId} ) );
-    } else {
-      $toId = "unknown";
-    }
-
-    my $encodedFromTitle=$fromTitle;
-    &encodeXmlChars(\$encodedFromTitle);
-    my $encodedToTitle=$toTitle;
-    &encodeXmlChars(\$encodedToTitle);
-    
-
-    print REDIRF "<redirect>\n<from>\n<id>", $fromId, "</id>\n<title>", $encodedFromTitle, "</title>\n</from>\n<to>\n<id>", $toId, "</id>\n<title>", $encodedToTitle, "</title>\n</to>\n</redirect>\n"
-
-  }
-
-  print REDIRF "</redirects>\n";
-	
-  close(REDIRF)
-}
 sub writeStatistics() {
   my $statCategoriesFile = "$filePath/$fileBasename.stat.categories";
   my $statIncomingLinksFile = "$filePath/$fileBasename.stat.inlinks";
@@ -653,11 +504,6 @@ sub prescan() {
 
   my $page;
 
-  open(TEMPINDEX, "> $templateIncDir/index");
-  binmode(TEMPINDEX,  ':utf8');
-
-  print TEMPINDEX "# Line format: <Template page id>  <Template name>\n";
-
   while (defined($page = $pages->page)) {
     my $id = $page->id;
 
@@ -724,7 +570,7 @@ sub prescan() {
     if ($title =~ /^$templateNamespace:/) {
       my $text = ${$page->text};
 
-      print TEMPINDEX "$id\t$title\n";
+      $out->newTemplate($id, $title);
 
       # We're storing template text for future inclusion, therefore,
       # remove all <noinclude> text and keep all <includeonly> text
@@ -775,7 +621,6 @@ sub prescan() {
     }
   }
 
-  close(TEMPINDEX);
   close(INF);
   my $timeStr = &getTimeAsString();
   &msg("DEBUG", "[$timeStr] Prescanning complete - prescanned $counter pages");
@@ -909,7 +754,6 @@ sub transform() {
     # from the list of related links, and only then record the list of related links
     # to the file.
     &removeElements($page->{relatedArticles}, $page->{categories});
-    &recordRelatedArticles($page);
 
     &convertGalleryToLink(\$page->{text});
     &convertImagemapToLink(\$page->{text});
@@ -927,10 +771,6 @@ sub transform() {
     &getLinkIds(\@internalLinks, $page->{internalLinks});
     &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
-    &logAnchorText($page);
-    &logInterwikiLinks($page);
-    &logTemplateIncludes($page);
-
     if ( ! $dontExtractUrls ) {
       &extractUrls($page);
     }
@@ -940,8 +780,7 @@ sub transform() {
     # text length AFTER all transformations
     $page->{newLength} = length($page->{text});
 
-    &writePage($page);
-    &writeDisambig($page);
+    $out->newPage($page);
 
     &updateStatistics($page->{categories}, \@internalLinks);
 
@@ -994,54 +833,6 @@ sub updateCategoryHierarchy($\@) {
   }
 }
 
-sub writePage(\%) {
-  my ($page) = @_;
-
-  my $numCategories = scalar(@{$page->{categories}});
-
-  my @internalLinks;
-  &getLinkIds(\@internalLinks, $page->{internalLinks});
-  &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
-
-  my @urls;
-  for my $link (@{$page->{externalLinks}}) {
-    push(@urls, $link->{url});
-  }
-
-  &removeDuplicatesAndSelf(\@urls, undef);
-
-  my $numLinks = scalar(@internalLinks);
-  my $numUrls = scalar(@urls);
-
-  print OUTF "<page id=\"$page->{id}\" orglength=\"$page->{orgLength}\" newlength=\"$page->{newLength}\" stub=\"$page->{isStub}\" " .
-             "categories=\"$numCategories\" outlinks=\"$numLinks\" urls=\"$numUrls\">\n";
-
-  my $encodedTitle = $page->{title};
-  &encodeXmlChars(\$encodedTitle);
-  print OUTF "<title>$encodedTitle</title>\n";
-
-  print OUTF "<categories>";
-  print OUTF join(" ", @{$page->{categories}});
-  print OUTF "</categories>\n";
-
-  print OUTF "<links>";
-  print OUTF join(" ", @internalLinks);
-  print OUTF "</links>\n";
-
-  print OUTF "<urls>\n";
-
-  for my $url (@urls) {
-    &encodeXmlChars(\$url);
-    print OUTF "$url\n";
-  }
-  print OUTF "</urls>\n";
-
-  # text has already undergone 'encodeXmlChars' in function 'postprocessText'
-  print OUTF "<text>\n$page->{text}\n</text>\n";
-
-  print OUTF "</page>\n";
-}
-
 # Maps a title into the id, and performs redirection if necessary.
 # Assumption: the argument was already normalized using 'normalizeTitle'
 sub resolveLink(\$) {
@@ -1069,27 +860,24 @@ sub resolveLink(\$) {
     if ( exists($title2id{$targetTitle}) ) {
       $targetId = $title2id{$targetTitle};
     } else {
-        # Among links to uninteresting namespaces this also ignores links that point to articles in 
-	# different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
-	# significantly reduces memory usage.
+      # Among links to uninteresting namespaces this also ignores links that point to articles in 
+	    # different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
+    	# significantly reduces memory usage.
 
-        if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
-          &msg("DEBUG", "Link '$$refToTitle' was ignored");
-          $targetId = undef;
-	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
-        } else {
-          $targetId = $localIDCounter;
-          $localIDCounter++;
+      if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
+        &msg("DEBUG", "Link '$$refToTitle' was ignored");
+        $targetId = undef;
+      } else {
+      	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
+        $targetId = $localIDCounter;
+        $localIDCounter++;
 
-          $title2id{$targetTitle}=$targetId;
+        $title2id{$targetTitle}=$targetId;
 
-	  my $encodedTargetTitle=$targetTitle;
-	  &encodeXmlChars(\$encodedTargetTitle);
+        $out->newLocalID( $targetId, $targetTitle );
 
-          print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $encodedTargetTitle, "</title>\n</page>\n";
-
-          &msg("DEBUG", "link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
-        } 
+        &msg("DEBUG", "link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
+      }  
     }
   } else {
     $targetId = undef;
@@ -1344,17 +1132,6 @@ sub includeParserFunction(\$\%\%$\$) {
   return $result;
 }
 
-sub logInterwikiLinks(\%) {
-  my ($page) = @_;
-
-  foreach my $link ( @{$page->{interwikiLinks}} ) {
-    open(INTERF, ">>$interwikiDir/$link->{targetWiki}");
-    binmode(INTERF, ':utf8');
-    print INTERF "$page->{id}\t$link->{targetTitle}\n";
-    close(INTERF);
-  }
-}
-
 sub noteTemplateInclude(\$\%\%) {
   my ($refToTemplateId, $page, $refToParameterHash) = @_;
 
@@ -1363,32 +1140,6 @@ sub noteTemplateInclude(\$\%\%) {
   $templates->{$$refToTemplateId} = [] unless( defined( $templates->{$$refToTemplateId} ) );
 
   push( @{$templates->{$$refToTemplateId}}, $refToParameterHash );
-}
-
-sub logTemplateIncludes(\%) {
-
-  my ($page) = @_;
-
-  while(my ($templateId, $log) = each(%{$page->{templates}})) {
-    my $path = &Wikiprep::templates::logPath(\$templateIncDir, \$templateId);
-
-    open(TEMPF, ">>$path") or die("$path: $!");
-    binmode(TEMPF,  ':utf8');
-
-    for my $refToParameterHash (@$log) {
-      print TEMPF "Page $page->{id}\n";
-
-      while(my ($parameter, $value) = each(%$refToParameterHash) ) {
-        if($parameter !~ /^=/) {
-          $value =~ s/\n/ /g;
-          print TEMPF "$parameter = $value\n";
-        }
-      }
-      print TEMPF "End\n";
-    }
-
-    close(TEMPF);
-  }
 }
 
 sub includeTemplateText(\$\%\%\$$) {
@@ -1531,48 +1282,6 @@ sub extractWikiLinks(\$\@$\@$) {
                                                                      $-[0])/eg );
 }
 
-sub getLinkIds(\@\@) {
-  my ($refToLinkIds, $refToInternalLinks) = @_;
-
-  for my $link (@$refToInternalLinks) {
-    if( defined( $link->{targetId} ) ) {
-      push(@$refToLinkIds, $link->{targetId});
-    }
-  }
-}
-
-}
-
-sub logAnchorText(\%) {
-  my ($page) = @_;
-
-  # We remove the links that point from the page to itself.
-  my $targetId;
-  my $anchorText;
-  my $AnchorArrayEntry;
-  my $linkLocation;
-
-  foreach $AnchorArrayEntry (@{$page->{internalLinks}}) {
-    $targetId = $AnchorArrayEntry->{targetId};
-    $anchorText = $AnchorArrayEntry->{anchorText};
-    $linkLocation = $AnchorArrayEntry->{linkLocation};
-
-    if (defined($targetId) and $targetId != $page->{id}) {
-      # anchor text doesn't need escaping of XML characters,
-      # hence the second function parameter is 0
-      &postprocessText(\$anchorText, 0, 0);
-
-      $anchorText =~ s/\n/ /g;  # replace all newlines with spaces
-
-      $anchorText =~ s/^\s*//g;  # remove leading and trainling whitespace
-      $anchorText =~ s/\s*$//g;
-
-      # make sure that something is left of anchor text after postprocessing
-      #if (length($anchorText) > 0) {
-      print ANCHORF "$targetId\t$page->{id}\t$linkLocation\t$anchorText\n";
-      #}
-    }
-  }
 }
 
 sub collectWikiLink($$$\@\@$) {
@@ -1762,9 +1471,14 @@ sub collectWikiLink($$$\@\@$) {
     # Note that for a link to an image that has no alternative text, we log an empty string.
     # This is important because otherwise the linkLocation wouldn't get stored.
 
+    my $postprocessedResult = $result;
+    # anchor text doesn't need escaping of XML characters,
+    # hence the second function parameter is 0
+    &postprocessText(\$postprocessedResult, 0, 0);
+
     $targetId = undef unless $targetId;
     push(@$refToAnchorTextArray, { targetId     => $targetId, 
-                                   anchorText   => $result, 
+                                   anchorText   => $postprocessedResult, 
                                    linkLocation => $linkLocation } );
   }
 
@@ -1993,8 +1707,6 @@ BEGIN {
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
-        print EXANCHORF "$page->{id}\t$url\t$anchorTrimmed\n";
-
         push(@{$page->{externalLinks}}, { anchor => $anchorTrimmed, url => $url } );
       } else {
         push(@{$page->{externalLinks}}, { url => $url } );
@@ -2049,29 +1761,6 @@ sub parseDisambig(\%) {
       push(@{$page->{disambigLinks}}, \@disambigLinks)
 		}
 	}
-}
-
-sub writeDisambig(\%) {
-	my ($page) = @_;
-
-  return unless $page->{isDisambig};
-
-  for my $disambigLinks (@{$page->{disambigLinks}}) {
-
-	  print DISAMBIGF $page->{id};
-
-    for my $anchor (@$disambigLinks) {
-
-      if( defined( $anchor->{'targetId'} ) ) {
-        print DISAMBIGF "\t$anchor->{'targetId'}";
-      } else {
-        print DISAMBIGF "\tundef";
-      }
-      print DISAMBIGF "\t$anchor->{'anchorText'}"
-    }
-
-  	print DISAMBIGF "\n";
-  }
 }
 
 sub postprocessText(\$$$) {
@@ -2311,31 +2000,6 @@ BEGIN {
 
 } # end of BEGIN block
 
-# If specified, 'elementToRemove' contains an element that needs to be removed as well.
-# For links, this ensures that a page does not link to itself. For categories, this
-# ensures that a page is not categorized to itself. This parameter is obviously
-# irrelevant for filtering URLs.
-# 'elementToRemove' must be a numeric value (not string), since we're testing it with '==' (not 'eq')
-sub removeDuplicatesAndSelf(\@$) {
-  my ($refToArray, $elementToRemove) = @_;
-
-  my %seen = ();
-  my @uniq;
-
-  my $item;
-  foreach $item (@$refToArray) {
-    if ( defined($elementToRemove) && ($item == $elementToRemove) ) {
-      &msg("WARNING", "current page links or categorizes to itself - " . 
-                              "link discarded ($elementToRemove)");
-      next;
-    }
-    push(@uniq, $item) unless $seen{$item}++;
-  }
-
-  # overwrite the original array with the new one that does not contain duplicates
-  @$refToArray = @uniq;
-}
-
 # Removes elements of the second list from the first list.
 # For efficiency purposes, the second list is converted into a hash.
 sub removeElements(\@\@) {
@@ -2445,16 +2109,6 @@ sub identifyRelatedArticles(\%) {
   &getLinkIds($page->{relatedArticles}, \@relatedInternalLinks);
   &removeDuplicatesAndSelf($page->{relatedArticles}, $page->{id});
 }
-
-sub recordRelatedArticles(\%) {
-  my ($page) = @_;
-
-  my $size = scalar(@{$page->{relatedArticles}});
-  return if ($size == 0);
-
-  print RELATEDF "$page->{id}\t", join(" ", @{$page->{relatedArticles}}), "\n";
-}
-
 
 ########################################################################
 
