@@ -165,7 +165,7 @@ $fileSuffix =~ s/\.gz$|\.bz2//;
 my $out;
 if( lc($outputFormat) eq 'legacy' ) {
   $out = Wikiprep::Output::Legacy->new("$filePath/$fileBasename", $file, COMPRESS => $doCompress);
-} elsif( lc($outputFormat) eq 'gum' ) {
+} elsif( lc($outputFormat) eq 'composite' ) {
   $out = Wikiprep::Output::Composite->new("$filePath/$fileBasename", $file, COMPRESS => $doCompress);
 }
 
@@ -2157,7 +2157,7 @@ Output formats:
 
   legacy        Traditional output format, compatible with earliest
                 versions of Wikiprep.
-  gum           New format that consolidates most of the extracted
+  composite     New format that consolidates most of the extracted
                 data in a single large XML file.
 END
 }
