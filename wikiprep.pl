@@ -849,6 +849,7 @@ sub transform() {
 
     $pageStruct->{title} = $title;
 
+    {
     my $text = ${$page->text};
 
     $processedByteCount += length(${$page->text});
@@ -877,27 +878,30 @@ sub transform() {
       $pageStruct->{isStub} = 0;
     }
 
+    $pageStruct->{text} = $text;
+  }
+
     # Parse disambiguation pages before template substitution because disambig
     # indicators are also templates.
     if ( &isDisambiguation($page) ) {
       &logger::msg("DEBUG", "Parsing disambiguation page");
 
-      &parseDisambig(\$pageStruct->{id}, \$text);
+      &parseDisambig(\$pageStruct->{id}, \$pageStruct->{text});
     }
 
     my @categories;
     my @internalLinks;
     my @urls;
 
-    $text = &includeTemplates(\$pageStruct->{id}, \$pageStruct->{title}, $text, 0);
+    $pageStruct->{text} = &includeTemplates(\$pageStruct->{id}, \$pageStruct->{title}, $pageStruct->{text}, 0);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
-    &identifyRelatedArticles(\$text, \@relatedArticles, $pageStruct->{id});
+    &identifyRelatedArticles(\$pageStruct->{text}, \@relatedArticles, $pageStruct->{id});
 
     # We process categories directly, because '$page->categories' ignores
     # categories inherited from included templates
-    &extractCategories(\$text, \@categories, $pageStruct->{id});
+    &extractCategories(\$pageStruct->{text}, \@categories, $pageStruct->{id});
 
     # Categories are listed at the end of articles, and therefore may mistakenly
     # be added to the list of related articles (which often appear in the last
@@ -907,31 +911,31 @@ sub transform() {
     &removeElements(\@relatedArticles, \@categories);
     &recordRelatedArticles($pageStruct->{id}, \@relatedArticles);
 
-    &images::convertGalleryToLink(\$text);
-    &images::convertImagemapToLink(\$text);
+    &images::convertGalleryToLink(\$pageStruct->{text});
+    &images::convertImagemapToLink(\$pageStruct->{text});
 
     # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
     # contain usable text for us.
-    &css::removeMetadata(\$text);
+    &css::removeMetadata(\$pageStruct->{text});
 
     my @anchorTexts;
     my @interwikiLinks;
 
-    &extractInternalLinks(\$text, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1, 0);
+    &extractInternalLinks(\$pageStruct->{text}, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1, 0);
 
     &logAnchorText(\@anchorTexts, $pageStruct->{id});
     &logInterwikiLinks(\@interwikiLinks, $pageStruct->{id});
 
     if ( ! $dontExtractUrls ) {
-      &extractUrls(\$text, $pageStruct->{id}, \@urls);
+      &extractUrls(\$pageStruct->{text}, $pageStruct->{id}, \@urls);
     }
 
-    &postprocessText(\$text, 1, 1);
+    &postprocessText(\$pageStruct->{text}, 1, 1);
 
     # text length AFTER all transformations
-    $pageStruct->{newLength} = length($text);
+    $pageStruct->{newLength} = length($pageStruct->{text});
 
-    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$text, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, \@urls);
+    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, \@urls);
 
     &updateStatistics(\@categories, \@internalLinks);
 
