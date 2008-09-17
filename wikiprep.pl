@@ -889,7 +889,6 @@ sub transform() {
       &parseDisambig(\$pageStruct->{id}, \$pageStruct->{text});
     }
 
-    my @categories;
     my @internalLinks;
     my @urls;
 
@@ -900,14 +899,14 @@ sub transform() {
 
     # We process categories directly, because '$page->categories' ignores
     # categories inherited from included templates
-    &extractCategories(\$pageStruct->{text}, \@categories, $pageStruct->{id});
+    &extractCategories($pageStruct);
 
     # Categories are listed at the end of articles, and therefore may mistakenly
     # be added to the list of related articles (which often appear in the last
     # section such as "See also"). To avoid this, we explicitly remove all categories
     # from the list of related links, and only then record the list of related links
     # to the file.
-    &removeElements($pageStruct->{relatedArticles}, \@categories);
+    &removeElements($pageStruct->{relatedArticles}, $pageStruct->{categories});
     &recordRelatedArticles($pageStruct->{id}, $pageStruct->{relatedArticles});
 
     &images::convertGalleryToLink(\$pageStruct->{text});
@@ -934,13 +933,13 @@ sub transform() {
     # text length AFTER all transformations
     $pageStruct->{newLength} = length($pageStruct->{text});
 
-    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, $pageStruct->{bareUrls});
+    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, $pageStruct->{categories}, \@internalLinks, $pageStruct->{bareUrls});
 
-    &updateStatistics(\@categories, \@internalLinks);
+    &updateStatistics($pageStruct->{categories}, \@internalLinks);
 
     my $categoryNamespace = $langDB{'categoryNamespace'};
     if ($pageStruct->{title} =~ /^$categoryNamespace:/) {
-      &updateCategoryHierarchy($pageStruct->{id}, \@categories);
+      &updateCategoryHierarchy($pageStruct->{id}, $pageStruct->{categories});
     }
 
     my $pageFinishedTime = time;
@@ -1419,23 +1418,26 @@ sub computeFullyQualifiedTemplateTitle(\$) {
   }
 }
 
-sub extractCategories(\$\@$) {
-  my ($refToText, $refToCategoriesArray, $id) = @_;
+sub extractCategories(\%) {
+  my ($pageStruct) = @_;
 
   # Remember that namespace names are case-insensitive, hence we're matching with "/i".
   # The first parameter to 'collectCategory' is passed by value rather than by reference,
   # because it might be dangerous to pass a reference to $1 in case it might get modified
   # (with unclear consequences).
   my $categoryNamespace = $langDB{'categoryNamespace'};
-  $$refToText =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $refToCategoriesArray)/ieg;
+
+  $pageStruct->{categories} = [];
+
+  $pageStruct->{text} =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $pageStruct)/ieg;
 
   # We don't accumulate categories directly in a hash table, since this would not preserve
   # their original order of appearance.
-  &removeDuplicatesAndSelf($refToCategoriesArray, $id);
+  &removeDuplicatesAndSelf($pageStruct->{categories}, $pageStruct->{id});
 }
 
 sub collectCategory($\@) {
-  my ($catName, $refToCategoriesArray) = @_;
+  my ($catName, $pageStruct) = @_;
 
   if ($catName =~ /^(.*)\|/) {
     # Some categories contain a sort key, e.g., [[Category:Whatever|*]] or [[Category:Whatever| ]]
@@ -1447,7 +1449,7 @@ sub collectCategory($\@) {
 
   my $catId = &resolveLink(\$catName);
   if ( defined($catId) ) {
-    push(@$refToCategoriesArray, $catId);
+    push(@{$pageStruct->{categories}}, $catId);
   } else {
     &logger::msg("WARNING", "unknown category '$catName'");
   }
