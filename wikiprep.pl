@@ -794,6 +794,8 @@ sub transform() {
   }
   my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
 
+  my $categoryNamespace = $langDB{'categoryNamespace'};
+
   my $processedPageCount = 0;
   my $processedByteCount = 0;
 
@@ -836,7 +838,6 @@ sub transform() {
     if ( ! &isNamespaceOkForTransforming($mwpage) ) {
       next; # we're only interested in pages from certain namespaces
     }
-
 
     my $title = $mwpage->title;
     &normalizeTitle(\$title);
@@ -884,7 +885,11 @@ sub transform() {
     if ( &isDisambiguation($mwpage) ) {
       &logger::msg("DEBUG", "Parsing disambiguation page");
 
-      &parseDisambig(\$page->{id}, \$page->{text});
+      &parseDisambig($page);
+
+      $page->{isDisambig} = 1;
+    } else {
+      $page->{isDisambig} = 0;
     }
 
     my @internalLinks;
@@ -932,12 +937,15 @@ sub transform() {
     $page->{newLength} = length($page->{text});
 
     &writePage($page->{id}, \$page->{title}, \$page->{text}, $page->{orgLength}, $page->{newLength}, $page->{isStub}, $page->{categories}, \@internalLinks, $page->{bareUrls});
+    &writeDisambig($page);
 
     &updateStatistics($page->{categories}, \@internalLinks);
 
-    my $categoryNamespace = $langDB{'categoryNamespace'};
     if ($page->{title} =~ /^$categoryNamespace:/) {
       &updateCategoryHierarchy($page->{id}, $page->{categories});
+      $page->{isCategory} = 1;
+    } else {
+      $page->{isCategory} = 0;
     }
 
     my $pageFinishedTime = time;
@@ -1998,12 +2006,13 @@ BEGIN {
   }
 }
 
-sub parseDisambig(\$\$) {
-	my ($refToId, $refToText) = @_;
+sub parseDisambig(\%) {
+	my ($page) = @_;
 
-	my @lines = split(/\n/, $$refToText);
+  $page->{disambigLinks} = [];
 
-	for my $line (@lines) {
+	for my $line ( split(/\n/, $page->{text}) ) {
+
 		if ( $line =~ /^\s*(?:
 					                (\*\*)|
 					                (\#\#)|
@@ -2013,31 +2022,38 @@ sub parseDisambig(\$\$) {
                           (\*)
                         )/ix ) {
 
-	    my @disambigLinks;
-      my @anchorTexts;
+      my @dummy;
 
-			&extractInternalLinks(\$line, \@disambigLinks, $$refToId, \@anchorTexts, undef, 0);
+      my @disambigLinks;
 
-			&writeDisambig($refToId, \@anchorTexts);
+      &extractInternalLinks(\$line, \@dummy, $page->{id}, \@disambigLinks, undef, 0);
+
+      push(@{$page->{disambigLinks}}, \@disambigLinks)
 		}
 	}
 }
 
-sub writeDisambig(\$\@) {
-	my ($refToDisambigId, $refToAnchorTextArray) = @_;
+sub writeDisambig(\%) {
+	my ($page) = @_;
 
-	print DISAMBIGF "$$refToDisambigId";
+  return unless $page->{isDisambig};
 
-  for my $anchor (@$refToAnchorTextArray) {
-    if( defined( $anchor->{'targetId'} ) ) {
-      print DISAMBIGF "\t$anchor->{'targetId'}";
-    } else {
-      print DISAMBIGF "\tundef";
+  for my $disambigLinks (@{$page->{disambigLinks}}) {
+
+	  print DISAMBIGF $page->{id};
+
+    for my $anchor (@$disambigLinks) {
+
+      if( defined( $anchor->{'targetId'} ) ) {
+        print DISAMBIGF "\t$anchor->{'targetId'}";
+      } else {
+        print DISAMBIGF "\tundef";
+      }
+      print DISAMBIGF "\t$anchor->{'anchorText'}"
     }
-    print DISAMBIGF "\t$anchor->{'anchorText'}"
-  }
 
-	print DISAMBIGF "\n";
+  	print DISAMBIGF "\n";
+  }
 }
 
 sub postprocessText(\$$$) {
