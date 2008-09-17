@@ -924,8 +924,8 @@ sub transform() {
 
     &extractInternalLinks(\$page->{text}, \@internalLinks, $page->{id}, $page->{internalLinks}, $page->{interwikiLinks}, 1);
 
-    &logAnchorText($page->{internalLinks}, $page->{id});
-    &logInterwikiLinks($page->{interwikiLinks}, $page->{id});
+    &logAnchorText($page);
+    &logInterwikiLinks($page);
 
     if ( ! $dontExtractUrls ) {
       &extractUrls($page);
@@ -1339,13 +1339,13 @@ sub includeParserFunction(\$\%\%$\$) {
   return $result;
 }
 
-sub logInterwikiLinks(\@$) {
-  my ($refToInternalLinks, $id) = @_;
+sub logInterwikiLinks(\%) {
+  my ($page) = @_;
 
-  foreach my $link ( @$refToInternalLinks ) {
+  foreach my $link ( @{$page->{interwikiLinks}} ) {
     open(INTERF, ">>$interwikiDir/$link->{targetWiki}");
     binmode(INTERF, ':utf8');
-    print INTERF "$id\t$link->{targetTitle}\n";
+    print INTERF "$page->{id}\t$link->{targetTitle}\n";
     close(INTERF);
   }
 }
@@ -1540,25 +1540,21 @@ sub getLinkIds(\@) {
 
 }
 
-sub logAnchorText(\@$) {
-  my ($refToAnchorTextsArray, $curPageId) = @_;
+sub logAnchorText(\%) {
+  my ($page) = @_;
 
-  # Remember that we use a hash table to associate anchor text with target page ids.
-  # Therefore, if the current page has several links to another page (it happens), then we only
-  # keep the anchor text of the last one (and override the previous ones) - we can live with it.
-  # Consequently, we do not need to remove duplicates as there are none.
-  # However, we still remove the links that point from the page to itself.
+  # We remove the links that point from the page to itself.
   my $targetId;
   my $anchorText;
   my $AnchorArrayEntry;
   my $linkLocation;
 
-  foreach $AnchorArrayEntry (@$refToAnchorTextsArray) {
-    $targetId = $$AnchorArrayEntry{targetId};
-    $anchorText = $$AnchorArrayEntry{anchorText};
-    $linkLocation = $$AnchorArrayEntry{linkLocation};
+  foreach $AnchorArrayEntry (@{$page->{internalLinks}}) {
+    $targetId = $AnchorArrayEntry->{targetId};
+    $anchorText = $AnchorArrayEntry->{anchorText};
+    $linkLocation = $AnchorArrayEntry->{linkLocation};
 
-    if (defined($targetId) and $targetId != $curPageId) {
+    if (defined($targetId) and $targetId != $page->{id}) {
       # anchor text doesn't need escaping of XML characters,
       # hence the second function parameter is 0
       &postprocessText(\$anchorText, 0, 0);
@@ -1570,7 +1566,7 @@ sub logAnchorText(\@$) {
 
       # make sure that something is left of anchor text after postprocessing
       #if (length($anchorText) > 0) {
-      print ANCHORF "$targetId\t$curPageId\t$linkLocation\t$anchorText\n";
+      print ANCHORF "$targetId\t$page->{id}\t$linkLocation\t$anchorText\n";
       #}
     }
   }
