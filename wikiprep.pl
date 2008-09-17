@@ -802,15 +802,18 @@ sub transform() {
 
   my $page;
   while (defined($page = $pages->page)) {
-    my $pageStartTime = time;
 
-    if( $pageStartTime - $lastDisplayTime > 5 ) {
+    my $pageStruct = {};
 
-      $lastDisplayTime = $pageStartTime;
+    $pageStruct->{startTime} = time;
 
-      my $bytesPerSecond = $processedByteCount/($pageStartTime-$startTime);
-      my $percentDone = 100.0*$processedByteCount/$totalByteCount;
-      my $secondsLeft = ($totalByteCount-$processedByteCount)/$bytesPerSecond;
+    if( $pageStruct->{startTime} - $lastDisplayTime > 5 ) {
+
+      $lastDisplayTime = $pageStruct->{startTime};
+
+      my $bytesPerSecond = $processedByteCount / ( $pageStruct->{StartTime} - $startTime );
+      my $percentDone = 100.0 * $processedByteCount / $totalByteCount;
+      my $secondsLeft = ( $totalByteCount - $processedByteCount ) / $bytesPerSecond;
 
       my $hoursLeft = $secondsLeft/3600;
 
@@ -818,14 +821,13 @@ sub transform() {
       STDOUT->flush();
     }
 
-    my $id = $page->id;
+    $pageStruct->{id} = $page->id;
 
     $processedPageCount++;
-    $processedByteCount+=length(${$page->text});
 
     # next if( $id != 1192748);
 
-    &logger::msg("DEBUG", "Transforming page id=$id");
+    &logger::msg("DEBUG", "Transforming page id=$pageStruct->{id}");
 
     if ( defined( &isRedirect($page) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
@@ -835,18 +837,24 @@ sub transform() {
       next; # we're only interested in pages from certain namespaces
     }
 
+
     my $title = $page->title;
     &normalizeTitle(\$title);
 
     # see the comment about empty titles in function 'prescan'
     if (length($title) == 0) {
-      &logger::msg("DEBUG", "Skipping page with empty title id=$id");
+      &logger::msg("DEBUG", "Skipping page with empty title id=$pageStruct->{id}");
       next;
     }
 
+    $pageStruct->{title} = $title;
+
     my $text = ${$page->text};
 
-    my $orgLength = length($text);  # text length BEFORE any transformations
+    $processedByteCount += length(${$page->text});
+
+    # text length BEFORE any transformations
+    $pageStruct->{orgLength} = length($text);
 
     # Remove comments (<!-- ... -->) from text. This is best done as early as possible so
     # that it doesn't slow down the rest of the code.
@@ -863,9 +871,10 @@ sub transform() {
 
     # The check for stub must be done BEFORE any further processing,
     # because stubs indicators are templates, and templates are substituted.
-    my $isStub = 0;
     if ( $text =~ m/stub}}/i ) {
-      $isStub = 1;
+      $pageStruct->{isStub} = 1;
+    } else {
+      $pageStruct->{isStub} = 0;
     }
 
     # Parse disambiguation pages before template substitution because disambig
@@ -873,22 +882,22 @@ sub transform() {
     if ( &isDisambiguation($page) ) {
       &logger::msg("DEBUG", "Parsing disambiguation page");
 
-      &parseDisambig(\$id, \$text);
+      &parseDisambig(\$pageStruct->{id}, \$text);
     }
 
     my @categories;
     my @internalLinks;
     my @urls;
 
-    $text = &includeTemplates(\$id, \$title, $text, 0);
+    $text = &includeTemplates(\$pageStruct->{id}, \$pageStruct->{title}, $text, 0);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
-    &identifyRelatedArticles(\$text, \@relatedArticles, $id);
+    &identifyRelatedArticles(\$text, \@relatedArticles, $pageStruct->{id});
 
     # We process categories directly, because '$page->categories' ignores
     # categories inherited from included templates
-    &extractCategories(\$text, \@categories, $id);
+    &extractCategories(\$text, \@categories, $pageStruct->{id});
 
     # Categories are listed at the end of articles, and therefore may mistakenly
     # be added to the list of related articles (which often appear in the last
@@ -896,7 +905,7 @@ sub transform() {
     # from the list of related links, and only then record the list of related links
     # to the file.
     &removeElements(\@relatedArticles, \@categories);
-    &recordRelatedArticles($id, \@relatedArticles);
+    &recordRelatedArticles($pageStruct->{id}, \@relatedArticles);
 
     &images::convertGalleryToLink(\$text);
     &images::convertImagemapToLink(\$text);
@@ -908,31 +917,32 @@ sub transform() {
     my @anchorTexts;
     my @interwikiLinks;
 
-    &extractInternalLinks(\$text, \@internalLinks, $id, \@anchorTexts, \@interwikiLinks, 1, 0);
+    &extractInternalLinks(\$text, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1, 0);
 
-    &logAnchorText(\@anchorTexts, $id);
-    &logInterwikiLinks(\@interwikiLinks, $id);
+    &logAnchorText(\@anchorTexts, $pageStruct->{id});
+    &logInterwikiLinks(\@interwikiLinks, $pageStruct->{id});
 
     if ( ! $dontExtractUrls ) {
-      &extractUrls(\$text, $id, \@urls);
+      &extractUrls(\$text, $pageStruct->{id}, \@urls);
     }
 
     &postprocessText(\$text, 1, 1);
 
-    my $newLength = length($text);  # text length AFTER all transformations
+    # text length AFTER all transformations
+    $pageStruct->{newLength} = length($text);
 
-    &writePage($id, \$title, \$text, $orgLength, $newLength, $isStub, \@categories, \@internalLinks, \@urls);
+    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$text, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, \@categories, \@internalLinks, \@urls);
 
     &updateStatistics(\@categories, \@internalLinks);
 
     my $categoryNamespace = $langDB{'categoryNamespace'};
     if ($title =~ /^$categoryNamespace:/) {
-      &updateCategoryHierarchy($id, \@categories);
+      &updateCategoryHierarchy($pageStruct->{id}, \@categories);
     }
 
     my $pageFinishedTime = time;
 
-    &logger::msg("PROFILE", "Transforming page $id took " . ( $pageFinishedTime - $pageStartTime ) .
+    &logger::msg("PROFILE", "Transforming page $pageStruct->{id} took " . ( $pageFinishedTime - $pageStruct->{startTime} ) .
                             " seconds");
   }
   print "\n";
