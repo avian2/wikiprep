@@ -13,3 +13,5 @@
 *.disambig
 *.cat_hier
 *.interwiki
+*.gum.xml
+*.tmpl.xml
