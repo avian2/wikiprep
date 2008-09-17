@@ -792,7 +792,7 @@ sub transform() {
   } else {
     open(INF, "< $file") or die "Cannot open $file: $!";
   }
-  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
+  my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
 
   my $processedPageCount = 0;
   my $processedByteCount = 0;
@@ -800,18 +800,18 @@ sub transform() {
   my $startTime = time - 1;
   my $lastDisplayTime = $startTime;
 
-  my $page;
-  while (defined($page = $pages->page)) {
+  my $mwpage;
+  while (defined($mwpage = $mwpages->page)) {
 
-    my $pageStruct = {};
+    my $page = {};
 
-    $pageStruct->{startTime} = time;
+    $page->{startTime} = time;
 
-    if( $pageStruct->{startTime} - $lastDisplayTime > 5 ) {
+    if( $page->{startTime} - $lastDisplayTime > 5 ) {
 
-      $lastDisplayTime = $pageStruct->{startTime};
+      $lastDisplayTime = $page->{startTime};
 
-      my $bytesPerSecond = $processedByteCount / ( $pageStruct->{StartTime} - $startTime );
+      my $bytesPerSecond = $processedByteCount / ( $page->{StartTime} - $startTime );
       my $percentDone = 100.0 * $processedByteCount / $totalByteCount;
       my $secondsLeft = ( $totalByteCount - $processedByteCount ) / $bytesPerSecond;
 
@@ -821,40 +821,40 @@ sub transform() {
       STDOUT->flush();
     }
 
-    $pageStruct->{id} = $page->id;
+    $page->{id} = $mwpage->id;
 
     $processedPageCount++;
 
     # next if( $id != 1192748);
 
-    &logger::msg("DEBUG", "Transforming page id=$pageStruct->{id}");
+    &logger::msg("DEBUG", "Transforming page id=$page->{id}");
 
-    if ( defined( &isRedirect($page) ) ) {
+    if ( defined( &isRedirect($mwpage) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
     }
 
-    if ( ! &isNamespaceOkForTransforming($page) ) {
+    if ( ! &isNamespaceOkForTransforming($mwpage) ) {
       next; # we're only interested in pages from certain namespaces
     }
 
 
-    my $title = $page->title;
+    my $title = $mwpage->title;
     &normalizeTitle(\$title);
 
     # see the comment about empty titles in function 'prescan'
     if (length($title) == 0) {
-      &logger::msg("DEBUG", "Skipping page with empty title id=$pageStruct->{id}");
+      &logger::msg("DEBUG", "Skipping page with empty title id=$page->{id}");
       next;
     }
 
-    $pageStruct->{title} = $title;
+    $page->{title} = $title;
 
-    my $text = ${$page->text};
+    my $text = ${$mwpage->text};
 
-    $processedByteCount += length(${$page->text});
+    $processedByteCount += length($text);
 
     # text length BEFORE any transformations
-    $pageStruct->{orgLength} = length($text);
+    $page->{orgLength} = length($text);
 
     # Remove comments (<!-- ... -->) from text. This is best done as early as possible so
     # that it doesn't slow down the rest of the code.
@@ -872,77 +872,77 @@ sub transform() {
     # The check for stub must be done BEFORE any further processing,
     # because stubs indicators are templates, and templates are substituted.
     if ( $text =~ m/stub}}/i ) {
-      $pageStruct->{isStub} = 1;
+      $page->{isStub} = 1;
     } else {
-      $pageStruct->{isStub} = 0;
+      $page->{isStub} = 0;
     }
 
-    $pageStruct->{text} = $text;
+    $page->{text} = $text;
 
     # Parse disambiguation pages before template substitution because disambig
     # indicators are also templates.
-    if ( &isDisambiguation($page) ) {
+    if ( &isDisambiguation($mwpage) ) {
       &logger::msg("DEBUG", "Parsing disambiguation page");
 
-      &parseDisambig(\$pageStruct->{id}, \$pageStruct->{text});
+      &parseDisambig(\$page->{id}, \$page->{text});
     }
 
     my @internalLinks;
     my @urls;
 
-    $pageStruct->{text} = &includeTemplates($pageStruct, $pageStruct->{text}, 0);
+    $page->{text} = &includeTemplates($page, $page->{text}, 0);
 
     # This function only examines the contents of '$text', but doesn't change it.
-    &identifyRelatedArticles($pageStruct);
+    &identifyRelatedArticles($page);
 
     # We process categories directly, because '$page->categories' ignores
     # categories inherited from included templates
-    &extractCategories($pageStruct);
+    &extractCategories($page);
 
     # Categories are listed at the end of articles, and therefore may mistakenly
     # be added to the list of related articles (which often appear in the last
     # section such as "See also"). To avoid this, we explicitly remove all categories
     # from the list of related links, and only then record the list of related links
     # to the file.
-    &removeElements($pageStruct->{relatedArticles}, $pageStruct->{categories});
-    &recordRelatedArticles($pageStruct);
+    &removeElements($page->{relatedArticles}, $page->{categories});
+    &recordRelatedArticles($page);
 
-    &images::convertGalleryToLink(\$pageStruct->{text});
-    &images::convertImagemapToLink(\$pageStruct->{text});
+    &images::convertGalleryToLink(\$page->{text});
+    &images::convertImagemapToLink(\$page->{text});
 
     # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
     # contain usable text for us.
-    &css::removeMetadata(\$pageStruct->{text});
+    &css::removeMetadata(\$page->{text});
 
     my @anchorTexts;
     my @interwikiLinks;
 
-    &extractInternalLinks(\$pageStruct->{text}, \@internalLinks, $pageStruct->{id}, \@anchorTexts, \@interwikiLinks, 1);
+    &extractInternalLinks(\$page->{text}, \@internalLinks, $page->{id}, \@anchorTexts, \@interwikiLinks, 1);
 
-    &logAnchorText(\@anchorTexts, $pageStruct->{id});
-    &logInterwikiLinks(\@interwikiLinks, $pageStruct->{id});
+    &logAnchorText(\@anchorTexts, $page->{id});
+    &logInterwikiLinks(\@interwikiLinks, $page->{id});
 
     if ( ! $dontExtractUrls ) {
-      &extractUrls($pageStruct);
+      &extractUrls($page);
     }
 
-    &postprocessText(\$pageStruct->{text}, 1, 1);
+    &postprocessText(\$page->{text}, 1, 1);
 
     # text length AFTER all transformations
-    $pageStruct->{newLength} = length($pageStruct->{text});
+    $page->{newLength} = length($page->{text});
 
-    &writePage($pageStruct->{id}, \$pageStruct->{title}, \$pageStruct->{text}, $pageStruct->{orgLength}, $pageStruct->{newLength}, $pageStruct->{isStub}, $pageStruct->{categories}, \@internalLinks, $pageStruct->{bareUrls});
+    &writePage($page->{id}, \$page->{title}, \$page->{text}, $page->{orgLength}, $page->{newLength}, $page->{isStub}, $page->{categories}, \@internalLinks, $page->{bareUrls});
 
-    &updateStatistics($pageStruct->{categories}, \@internalLinks);
+    &updateStatistics($page->{categories}, \@internalLinks);
 
     my $categoryNamespace = $langDB{'categoryNamespace'};
-    if ($pageStruct->{title} =~ /^$categoryNamespace:/) {
-      &updateCategoryHierarchy($pageStruct->{id}, $pageStruct->{categories});
+    if ($page->{title} =~ /^$categoryNamespace:/) {
+      &updateCategoryHierarchy($page->{id}, $page->{categories});
     }
 
     my $pageFinishedTime = time;
 
-    &logger::msg("PROFILE", "Transforming page $pageStruct->{id} took " . ( $pageFinishedTime - $pageStruct->{startTime} ) .
+    &logger::msg("PROFILE", "Transforming page $page->{id} took " . ( $pageFinishedTime - $page->{startTime} ) .
                             " seconds");
   }
   print "\n";
@@ -1087,7 +1087,7 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
 # recursion depth and break out in case it gets too deep.
 
 sub includeTemplates(\%$$) {
-  my ($pageStruct, $text, $templateRecursionLevel) = @_;
+  my ($page, $text, $templateRecursionLevel) = @_;
 
   if( $templateRecursionLevel > $maxTemplateRecursionLevels ) {
 
@@ -1130,7 +1130,7 @@ sub includeTemplates(\%$$) {
   #for $token ( &templates::splitOnTemplates($text) ) {
   for $token ( &ctemplates::splitOnTemplates($text) ) {
     if( $invocation ) {
-      $new_text .= &instantiateTemplate($token, $pageStruct, $templateRecursionLevel);
+      $new_text .= &instantiateTemplate($token, $page, $templateRecursionLevel);
       $invocation = 0;
     } else {
       $new_text .= $token;
@@ -1157,7 +1157,7 @@ sub includeTemplates(\%$$) {
 }
 
 sub instantiateTemplate($\%$) {
-  my ($templateInvocation, $pageStruct, $templateRecursionLevel) = @_;
+  my ($templateInvocation, $page, $templateRecursionLevel) = @_;
 
   my $len = length( $templateInvocation );
   if($len > 32767) {
@@ -1182,9 +1182,9 @@ sub instantiateTemplate($\%$) {
 
   return "" unless(defined($templateTitle));
 
-  $templateTitle = &includeTemplates($pageStruct, $templateTitle, $templateRecursionLevel + 1);
+  $templateTitle = &includeTemplates($page, $templateTitle, $templateRecursionLevel + 1);
 
-  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $pageStruct, $templateRecursionLevel);
+  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $page, $templateRecursionLevel);
 
   # If this wasn't a parser function call, try to include a template.
   if ( not defined($result) ) {
@@ -1196,16 +1196,16 @@ sub instantiateTemplate($\%$) {
       return $overrideResult;
     }
 
-    &includeTemplateText(\$templateTitle, \%templateParams, \$pageStruct->{id}, \$result);
+    &includeTemplateText(\$templateTitle, \%templateParams, \$page->{id}, \$result);
   }
 
-  $result = &includeTemplates($pageStruct, $result, $templateRecursionLevel + 1);
+  $result = &includeTemplates($page, $result, $templateRecursionLevel + 1);
 
   return $result;  # return value
 }
 
 sub includeParserFunction(\$\%\%$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $pageStruct, $templateRecursionLevel, $refToResult) = @_;
+  my ($refToTemplateTitle, $refToParameterHash, $page, $templateRecursionLevel, $refToResult) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
@@ -1218,7 +1218,7 @@ sub includeParserFunction(\$\%\%$\$) {
 
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
-    $$refToParameterHash{'=0='} = &includeTemplates($pageStruct, $2, $templateRecursionLevel + 1);
+    $$refToParameterHash{'=0='} = &includeTemplates($page, $2, $templateRecursionLevel + 1);
 
     &logger::msg("DEBUG", "Evaluating parser function #$functionName");
 
@@ -1261,7 +1261,7 @@ sub includeParserFunction(\$\%\%$\$) {
       my $rvalue = $$refToParameterHash{'=1='};
 
       if ( defined($rvalue ) ) {
-        $rvalue = &includeTemplates($pageStruct, $rvalue, $templateRecursionLevel + 1);
+        $rvalue = &includeTemplates($page, $rvalue, $templateRecursionLevel + 1);
 
         # lvalue is always defined
         if ( $lvalue eq $rvalue ) {
@@ -1316,7 +1316,7 @@ sub includeParserFunction(\$\%\%$\$) {
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
-    $result = $pageStruct->{title};
+    $result = $page->{title};
   }
 
   return $result;
@@ -1417,7 +1417,7 @@ sub computeFullyQualifiedTemplateTitle(\$) {
 }
 
 sub extractCategories(\%) {
-  my ($pageStruct) = @_;
+  my ($page) = @_;
 
   # Remember that namespace names are case-insensitive, hence we're matching with "/i".
   # The first parameter to 'collectCategory' is passed by value rather than by reference,
@@ -1425,17 +1425,17 @@ sub extractCategories(\%) {
   # (with unclear consequences).
   my $categoryNamespace = $langDB{'categoryNamespace'};
 
-  $pageStruct->{categories} = [];
+  $page->{categories} = [];
 
-  $pageStruct->{text} =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $pageStruct)/ieg;
+  $page->{text} =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $page)/ieg;
 
   # We don't accumulate categories directly in a hash table, since this would not preserve
   # their original order of appearance.
-  &removeDuplicatesAndSelf($pageStruct->{categories}, $pageStruct->{id});
+  &removeDuplicatesAndSelf($page->{categories}, $page->{id});
 }
 
 sub collectCategory($\@) {
-  my ($catName, $pageStruct) = @_;
+  my ($catName, $page) = @_;
 
   if ($catName =~ /^(.*)\|/) {
     # Some categories contain a sort key, e.g., [[Category:Whatever|*]] or [[Category:Whatever| ]]
@@ -1447,7 +1447,7 @@ sub collectCategory($\@) {
 
   my $catId = &resolveLink(\$catName);
   if ( defined($catId) ) {
-    push(@{$pageStruct->{categories}}, $catId);
+    push(@{$page->{categories}}, $catId);
   } else {
     &logger::msg("WARNING", "unknown category '$catName'");
   }
@@ -1932,25 +1932,25 @@ BEGIN {
   my $urlSequence2 = qr/($urlRegex)/;
 
   sub extractUrls(\%) {
-    my ($pageStruct) = @_;
+    my ($page) = @_;
 
-    $pageStruct->{externalLinks} = [];
-    $pageStruct->{bareUrls} = [];
+    $page->{externalLinks} = [];
+    $page->{bareUrls} = [];
 
     # First we handle the case of URLs enclosed in single brackets, with or without the description.
     # Examples: [http://www.cnn.com], [ http://www.cnn.com  ], [http://www.cnn.com  CNN Web site]
-    $pageStruct->{text} =~ s/$urlSequence1/&collectUrlFromBrackets($1, $2, $pageStruct)/eg;
+    $page->{text} =~ s/$urlSequence1/&collectUrlFromBrackets($1, $2, $page)/eg;
 
     # Now we handle standalone URLs (those not enclosed in brackets)
     # The $urlTemrinator is matched via positive lookahead (?=...) in order not to remove
     # the terminator symbol itself, but rather only the URL.
-    $pageStruct->{text} =~ s/$urlSequence2/&collectStandaloneUrl($1, $pageStruct)/eg;
+    $page->{text} =~ s/$urlSequence2/&collectStandaloneUrl($1, $page)/eg;
 
-    &removeDuplicatesAndSelf($pageStruct->{bareUrls}, undef);
+    &removeDuplicatesAndSelf($page->{bareUrls}, undef);
   }
 
   sub collectUrlFromBrackets($$\%) {
-    my ($url, $anchor, $pageStruct) = @_;
+    my ($url, $anchor, $page) = @_;
 
     # Extract protocol - this is the part of the string before the first ':' because of the
     # $urlRegex above.
@@ -1959,17 +1959,17 @@ BEGIN {
     my $urlProtocol = $temp[0];
 
     if( exists( $urlProtocols{$urlProtocol} ) ) {
-      push(@{$pageStruct->{bareUrls}}, $url);
+      push(@{$page->{bareUrls}}, $url);
 
       my $anchorTrimmed = &utils::trimWhitespaceBothSides($anchor);
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
-        print EXANCHORF "$pageStruct->{id}\t$url\t$anchorTrimmed\n";
+        print EXANCHORF "$page->{id}\t$url\t$anchorTrimmed\n";
 
-        push(@{$pageStruct->{externalLinks}}, { anchor => $anchorTrimmed, url => $url } );
+        push(@{$page->{externalLinks}}, { anchor => $anchorTrimmed, url => $url } );
       } else {
-        push(@{$pageStruct->{externalLinks}}, { url => $url } );
+        push(@{$page->{externalLinks}}, { url => $url } );
       }
       return $anchor;
     } else {
@@ -1982,14 +1982,14 @@ BEGIN {
   # anchor in this case.
 
   sub collectStandaloneUrl($\%) {
-    my ($url, $pageStruct) = @_;
+    my ($url, $page) = @_;
 
     my @temp = split(/:/, $url, 2);
     my $urlProtocol = $temp[0];
 
     if( exists( $urlProtocols{$urlProtocol} ) ) {
-      push(@{$pageStruct->{bareUrls}}, $url);
-      push(@{$pageStruct->{externalLinks}}, { url => $url } );
+      push(@{$page->{bareUrls}}, $url);
+      push(@{$page->{externalLinks}}, { url => $url } );
       return "";
     } else {
       # Don't replace anything
@@ -2348,17 +2348,17 @@ sub getTimeAsString() {
 #   not very common, but performing duplicate removal each time is expensive.
 #   Instead, we remove duplicates once at the very end.
 sub identifyRelatedArticles(\%) {
-  my ($pageStruct) = @_;
+  my ($page) = @_;
 
-  my $id = $pageStruct->{id};
+  my $id = $page->{id};
 
   # We split the text into a set of lines. This also creates a copy of the original text -
   # this is important, since the function 'extractInternalLinks' modifies its argument,
   # so we'd better use it on a copy of the real article body.
-  my @text = split("\n", $pageStruct->{text});
+  my @text = split("\n", $page->{text});
   my $line;
 
-  $pageStruct->{relatedArticles} = [];
+  $page->{relatedArticles} = [];
 
   # Standalone
   foreach $line (@text) {
@@ -2371,8 +2371,8 @@ sub identifyRelatedArticles(\%) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &logger::msg("DEBUG", "Related(S): $id => $str");
-      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
-      &logger::msg("DEBUG", "Related(S): $id ==> @{$pageStruct->{relatedArticles}}");
+      &extractInternalLinks(\$str, $page->{relatedArticles}, $id, undef, undef, 0);
+      &logger::msg("DEBUG", "Related(S): $id ==> @{$page->{relatedArticles}}");
     }
   }
 
@@ -2382,8 +2382,8 @@ sub identifyRelatedArticles(\%) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &logger::msg("DEBUG", "Related(I): $id => $str");
-      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
-      &logger::msg("DEBUG", "Related(I): $id ==> @{$pageStruct->{relatedArticles}}");
+      &extractInternalLinks(\$str, $page->{relatedArticles}, $id, undef, undef, 0);
+      &logger::msg("DEBUG", "Related(I): $id ==> @{$page->{relatedArticles}}");
     }
   }
 
@@ -2399,8 +2399,8 @@ sub identifyRelatedArticles(\%) {
         &logger::msg("DEBUG", "Related(N): $id => $line");
         # 'extractInternalLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $pageStruct->{relatedArticles}, $id, undef, undef, 0);
-        &logger::msg("DEBUG", "Related(N): $id ==> @{$pageStruct->{relatedArticles}}");
+        &extractInternalLinks(\$line, $page->{relatedArticles}, $id, undef, undef, 0);
+        &logger::msg("DEBUG", "Related(N): $id ==> @{$page->{relatedArticles}}");
       }
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
@@ -2418,16 +2418,16 @@ sub identifyRelatedArticles(\%) {
     }
   }
 
-  &removeDuplicatesAndSelf($pageStruct->{relatedArticles}, $id);
+  &removeDuplicatesAndSelf($page->{relatedArticles}, $id);
 }
 
 sub recordRelatedArticles(\%) {
-  my ($pageStruct) = @_;
+  my ($page) = @_;
 
-  my $size = scalar(@{$pageStruct->{relatedArticles}});
+  my $size = scalar(@{$page->{relatedArticles}});
   return if ($size == 0);
 
-  print RELATEDF "$pageStruct->{id}\t", join(" ", @{$pageStruct->{relatedArticles}}), "\n";
+  print RELATEDF "$page->{id}\t", join(" ", @{$page->{relatedArticles}}), "\n";
 }
 
 
