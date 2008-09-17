@@ -1,8 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
+package Wikiprep::nowiki;
 
-package nowiki;
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( randomString extractTags replaceTags );
 
 # This function is used to create random strings that are used as temporary tokens in Wikipedia articles 
 # being parsed. It must produce a string that has a very low probability of appearing in Wikipedia.

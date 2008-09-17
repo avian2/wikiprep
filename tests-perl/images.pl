@@ -1,49 +1,49 @@
 use Test::Simple tests => 12;
-use images;
+use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 
 my ($t, $r);
 my @t;
 
 @t = split(/\|/, "short|longer|the longest anchor text");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "the longest anchor text");
 
 @t = split(/\|/, "240x240px|anchor text");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "anchor text");
 
 @t = split(/\|/, "100px|left|an");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "an");
 
 @t = split(/\|/, "100PX|Left|An");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "An");
 
 @t = split(/\|/, "100PX|Left|");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "");
 
 @t = split(/\|/, "100PX|Left");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 
 ok($r eq "");
 
 @t = split(/\|/, "");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 ok($r eq "");
 
 @t = split(/\|/, "10px|");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 ok($r eq "");
 
 @t = split(/\|/, "10px| ");
-$r = &images::parseImageParameters(\@t);
+$r = &parseImageParameters(\@t);
 ok($r eq " ");
 
 $t = <<END
@@ -62,7 +62,7 @@ Some text
 Some text here
 END
 ;
-&images::convertGalleryToLink(\$t);
+&convertGalleryToLink(\$t);
 ok($r eq $t);
 
 $t = <<END
@@ -86,7 +86,7 @@ invalid
 Some text here
 END
 ;
-&images::convertGalleryToLink(\$t);
+&convertGalleryToLink(\$t);
 ok($r eq $t);
 
 $t = <<END
@@ -121,5 +121,5 @@ $r = <<END
 [[w:Number|Number]]
 END
 ;
-&images::convertImagemapToLink(\$t);
+&convertImagemapToLink(\$t);
 ok($r eq $t);

@@ -1,8 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
+package Wikiprep::css;
 
-package css;
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( removeMetadata );
 
 BEGIN {
 

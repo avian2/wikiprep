@@ -1,9 +1,12 @@
 # vim:sw=2:tabstop=2:expandtab
 
+package Wikiprep::interwiki;
+
 use strict;
+use Exporter 'import';
 use File::Path;
 
-package interwiki;
+our @EXPORT_OK = qw( parseInterwiki );
 
 # Interwiki links are links to another wiki (e. g. from Wikipedia article to a MemoryAlpha article)
 # that appear as internal links in the browser. Syntax is similar to MediaWiki namespaces: 

@@ -1,9 +1,11 @@
 # vim:sw=2:tabstop=2:expandtab
 
+package Wikiprep::lang;
+
 use strict;
 use encoding 'utf-8';
-
-package lang;
+use Exporter 'import';
+our @EXPORT_OK = qw( getLang );
 
 my $langDB = {
 
@@ -229,7 +231,7 @@ my $langDB = {
               }
           };
 
-sub get($)
+sub getLang($)
 {
   my ( $langCode ) = @_;
   my $db = $langDB->{ $langCode };

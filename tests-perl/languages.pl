@@ -1,8 +1,8 @@
 use Test::Simple tests => 1;
-use languages;
+use Wikiprep::languages qw( languageName );
 
 my $r;
 
-$r = &languages::languageName("en");
+$r = &languageName("en");
 
 ok($r eq "English");

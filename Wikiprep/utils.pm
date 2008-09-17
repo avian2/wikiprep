@@ -1,8 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
+package Wikiprep::utils;
 
-package utils;
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( trimWhitespaceBothSides );
 
 # See http://www.perlmonks.org/?node_id=2258 for performance comparisson
 

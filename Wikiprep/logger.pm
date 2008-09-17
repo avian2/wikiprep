@@ -1,6 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
-package logger;
+package Wikiprep::logger;
+
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( msg );
 
 my %settings = ( DEBUG => 0,
                  WARNING => 0,

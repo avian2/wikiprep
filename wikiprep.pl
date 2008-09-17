@@ -39,17 +39,17 @@ use Regexp::Common;
 use FindBin;
 use lib "$FindBin::Bin";
 
-use Wikiprep::images;
-use Wikiprep::nowiki;
-use Wikiprep::revision;
-use Wikiprep::languages;
-use Wikiprep::templates;
-use Wikiprep::ctemplates;
-use Wikiprep::lang;
-use Wikiprep::css;
-use Wikiprep::logger;
-use Wikiprep::interwiki;
-use Wikiprep::utils;
+use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
+use Wikiprep::nowiki qw( replaceTags extractTags );
+use Wikiprep::revision qw( writeVersion );
+use Wikiprep::languages qw( languageName );
+use Wikiprep::templates qw( templateParameterRecursion parseTemplateInvocation );
+use Wikiprep::ctemplates qw( splitOnTemplates );
+use Wikiprep::lang qw( getLang );
+use Wikiprep::css qw( removeMetadata );
+use Wikiprep::logger qw( msg );
+use Wikiprep::interwiki qw( parseInterwiki );
+use Wikiprep::utils qw( trimWhitespaceBothSides );
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -98,7 +98,7 @@ if (! -e $file) {
 
 my $startTime = time;
 
-my $refToLangDB = &lang::get( $langCode );
+my $refToLangDB = &getLang( $langCode );
 my %langDB = %$refToLangDB;
 
 ##### Global definitions #####
@@ -195,8 +195,8 @@ my $versionFile = "$filePath/$fileBasename.version";
 my $totalPageCount = 0;
 my $totalByteCount = 0;
 
-&revision::writeVersion($versionFile, $file);
-&logger::init($logFile, $logArgs);
+&writeVersion($versionFile, $file);
+&Wikiprep::logger::init($logFile, $logArgs);
 
 if( $doCompress ) {
   open(OUTF, "| gzip >$outputFile.gz") or die "Cannot open pipe to gzip: $!: $outputFile.gz";
@@ -224,8 +224,8 @@ binmode(DISAMBIGF, ':utf8');
 binmode(LOCALIDF, ':utf8');
 binmode(EXANCHORF, ':utf8');
 
-&templates::prepare(\$templateIncDir);
-&interwiki::prepare(\$interwikiDir);
+&Wikiprep::templates::prepare(\$templateIncDir);
+&Wikiprep::interwiki::prepare(\$interwikiDir);
 
 print ANCHORF "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
 print RELATEDF "# Line format: <Page id>  <List of ids of related articles>\n\n\n";
@@ -265,7 +265,7 @@ close(LOCALF);
 close(DISAMBIGF);
 close(EXANCHORF);
 
-&logger::stop();
+&Wikiprep::logger::stop();
 
 my $elapsed = time - $startTime;
 
@@ -674,7 +674,7 @@ sub prescan() {
 
     if ($counter % 1000 == 0) {
       my $timeStr = &getTimeAsString();
-      &logger::msg("DEBUG", "[$timeStr] Prescanning page id=$id");
+      &msg("DEBUG", "[$timeStr] Prescanning page id=$id");
     }
 
     my $title = $page->title;
@@ -687,7 +687,7 @@ sub prescan() {
       # this page is a redirect to [[Non-nreaking space]], but having in the system
       # a redirect page with an empty title causes numerous problems, so we'll live
       # happier without it.
-      &logger::msg("DEBUG", "Skipping page with empty title id=$id");
+      &msg("DEBUG", "Skipping page with empty title id=$id");
       next;
     }
 
@@ -708,13 +708,13 @@ sub prescan() {
     # it belongs to one of the namespaces we're interested in
 
     if ( exists($idexists{$id}) ) {
-      &logger::msg("WARNING", "Page id=$id already encountered before!");
+      &msg("WARNING", "Page id=$id already encountered before!");
       next;
     }
     if ( exists($title2id{$title}) ) {
       # A page could have been encountered before with a different spelling.
       # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
-      &logger::msg("WARNING", "Page title='$title' already encountered before!");
+      &msg("WARNING", "Page title='$title' already encountered before!");
       next;
     }
     $idexists{$id} = 'x';
@@ -778,10 +778,10 @@ sub prescan() {
   close(TEMPINDEX);
   close(INF);
   my $timeStr = &getTimeAsString();
-  &logger::msg("DEBUG", "[$timeStr] Prescanning complete - prescanned $counter pages");
+  &msg("DEBUG", "[$timeStr] Prescanning complete - prescanned $counter pages");
 
   print "Total $totalPageCount pages ($totalByteCount bytes)\n";
-  &logger::msg("DEBUG", "Total $totalPageCount pages ($totalByteCount bytes)");
+  &msg("DEBUG", "Total $totalPageCount pages ($totalByteCount bytes)");
 }
 
 sub transform() {
@@ -830,7 +830,7 @@ sub transform() {
 
     # next if( $id != 1192748);
 
-    &logger::msg("DEBUG", "Transforming page id=$page->{id}");
+    &msg("DEBUG", "Transforming page id=$page->{id}");
 
     if ( defined( &isRedirect($mwpage) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
@@ -845,7 +845,7 @@ sub transform() {
 
     # see the comment about empty titles in function 'prescan'
     if (length($title) == 0) {
-      &logger::msg("DEBUG", "Skipping page with empty title id=$page->{id}");
+      &msg("DEBUG", "Skipping page with empty title id=$page->{id}");
       next;
     }
 
@@ -884,7 +884,7 @@ sub transform() {
     # Parse disambiguation pages before template substitution because disambig
     # indicators are also templates.
     if ( &isDisambiguation($mwpage) ) {
-      &logger::msg("DEBUG", "Parsing disambiguation page");
+      &msg("DEBUG", "Parsing disambiguation page");
 
       &parseDisambig($page);
 
@@ -911,12 +911,12 @@ sub transform() {
     &removeElements($page->{relatedArticles}, $page->{categories});
     &recordRelatedArticles($page);
 
-    &images::convertGalleryToLink(\$page->{text});
-    &images::convertImagemapToLink(\$page->{text});
+    &convertGalleryToLink(\$page->{text});
+    &convertImagemapToLink(\$page->{text});
 
     # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
     # contain usable text for us.
-    &css::removeMetadata(\$page->{text});
+    &removeMetadata(\$page->{text});
 
     $page->{internalLinks} = [];
     $page->{interwikiLinks} = [];
@@ -954,7 +954,7 @@ sub transform() {
 
     my $pageFinishedTime = time;
 
-    &logger::msg("PROFILE", "Transforming page $page->{id} took " . 
+    &msg("PROFILE", "Transforming page $page->{id} took " . 
                             ( $pageFinishedTime - $page->{startTime} ) .
                             " seconds");
   }
@@ -1059,9 +1059,9 @@ sub resolveLink(\$) {
     # check if this is a double redirect
     if ( exists($redir{$targetTitle}) ) {
       $targetTitle = undef; # double redirects are not allowed and are ignored
-      &logger::msg("WARNING", "link '$$refToTitle' caused double redirection and was ignored");
+      &msg("WARNING", "link '$$refToTitle' caused double redirection and was ignored");
     } else {
-      &logger::msg("DEBUG", "Link '$$refToTitle' was redirected to '$targetTitle'");
+      &msg("DEBUG", "Link '$$refToTitle' was redirected to '$targetTitle'");
     }
   }
 
@@ -1074,7 +1074,7 @@ sub resolveLink(\$) {
 	# significantly reduces memory usage.
 
         if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
-          &logger::msg("DEBUG", "Link '$$refToTitle' was ignored");
+          &msg("DEBUG", "Link '$$refToTitle' was ignored");
           $targetId = undef;
 	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
         } else {
@@ -1088,7 +1088,7 @@ sub resolveLink(\$) {
 
           print LOCALF "<page>\n<id>", $targetId, "</id>\n<title>", $encodedTargetTitle, "</title>\n</page>\n";
 
-          &logger::msg("DEBUG", "link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
+          &msg("DEBUG", "link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
         } 
     }
   } else {
@@ -1120,7 +1120,7 @@ sub includeTemplates(\%$$) {
     # un-instantiated templates. In this case we simply eliminate them - however, we do so
     # later, in function 'postprocessText()', after extracting categories, links and URLs.
 
-    &logger::msg("WARNING", "Maximum template recursion level reached");
+    &msg("WARNING", "Maximum template recursion level reached");
     return " ";
   }
 
@@ -1143,15 +1143,14 @@ sub includeTemplates(\%$$) {
   # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
   # infinite loops if templates include an example invocation in <nowiki> tags.
 
-  &nowiki::extractTags(\$preRegex, \$text, \%preChunksReplaced);
-  &nowiki::extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
+  &extractTags(\$preRegex, \$text, \%preChunksReplaced);
+  &extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
 
   my $invocation = 0;
   my $new_text = "";
   my $token;
 
-  #for $token ( &templates::splitOnTemplates($text) ) {
-  for $token ( &ctemplates::splitOnTemplates($text) ) {
+  for $token ( &splitOnTemplates($text) ) {
     if( $invocation ) {
       $new_text .= &instantiateTemplate($token, $page, $templateRecursionLevel);
       $invocation = 0;
@@ -1163,8 +1162,8 @@ sub includeTemplates(\%$$) {
 
   # $text =~ s/$templateRegex/&instantiateTemplate($1, $refToId, $refToTitle, $templateRecursionLevel)/segx;
 
-  &nowiki::replaceTags(\$new_text, \%nowikiChunksReplaced);
-  &nowiki::replaceTags(\$new_text, \%preChunksReplaced);
+  &replaceTags(\$new_text, \%nowikiChunksReplaced);
+  &replaceTags(\$new_text, \%preChunksReplaced);
 
   # print LOGF "Finished with templates level $templateRecursionLevel\n";
   # print LOGF "#########\n\n";
@@ -1172,7 +1171,7 @@ sub includeTemplates(\%$$) {
   # print LOGF "#########\n\n";
   
   my $text_len = length $new_text;
-  &logger::msg("DEBUG", "Text length after templates level $templateRecursionLevel: $text_len chars");
+  &msg("DEBUG", "Text length after templates level $templateRecursionLevel: $text_len chars");
   
   return $new_text;
 }
@@ -1187,7 +1186,7 @@ sub instantiateTemplate($\%$) {
     # Some {{#switch ... }} statements are excesivelly long and usually do not produce anything
     # useful. Plus they can cause segfauls in older versions of Perl.
 
-    &logger::msg("WARNING", "Ignoring long template invocation=$templateInvocation");
+    &msg("WARNING", "Ignoring long template invocation=$templateInvocation");
     return "";
   }
 
@@ -1196,12 +1195,12 @@ sub instantiateTemplate($\%$) {
   
   $templateInvocation =~ s/^\s*//;
   
-  &logger::msg("DEBUG", "Template recursion level $templateRecursionLevel");
-  &logger::msg("DEBUG", "Instantiating template=$templateInvocation");
+  &msg("DEBUG", "Template recursion level $templateRecursionLevel");
+  &msg("DEBUG", "Instantiating template=$templateInvocation");
 
   my $templateTitle;
   my %templateParams;
-  &templates::parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
+  &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
 
   return "" unless(defined($templateTitle));
 
@@ -1215,7 +1214,7 @@ sub instantiateTemplate($\%$) {
 
     my $overrideResult = $overrideTemplates{$templateTitle};
     if(defined $overrideResult) {
-      &logger::msg("WARNING", "Overriding template $templateTitle");
+      &msg("WARNING", "Overriding template $templateTitle");
       return $overrideResult;
     }
 
@@ -1243,7 +1242,7 @@ sub includeParserFunction(\$\%\%$\$) {
     my $functionName = $1;
     $$refToParameterHash{'=0='} = &includeTemplates($page, $2, $templateRecursionLevel + 1);
 
-    &logger::msg("DEBUG", "Evaluating parser function #$functionName");
+    &msg("DEBUG", "Evaluating parser function #$functionName");
 
     if ( $functionName eq 'if' ) {
 
@@ -1313,10 +1312,10 @@ sub includeParserFunction(\$\%\%$\$) {
 
       my $code = $$refToParameterHash{'=0='};
 
-      $result = &languages::languageName($code);
+      $result = &languageName($code);
     } else {
 
-      &logger::msg("WARNING", "Function #$functionName not supported");
+      &msg("WARNING", "Function #$functionName not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
@@ -1335,7 +1334,7 @@ sub includeParserFunction(\$\%\%$\$) {
     # http://meta.wikimedia.org/wiki/Help:URL
 
     $result = $1;
-    &logger::msg("DEBUG", "URL encoding string $result");
+    &msg("DEBUG", "URL encoding string $result");
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
@@ -1371,7 +1370,7 @@ sub logTemplateIncludes(\%) {
   my ($page) = @_;
 
   while(my ($templateId, $log) = each(%{$page->{templates}})) {
-    my $path = &templates::logPath(\$templateIncDir, \$templateId);
+    my $path = &Wikiprep::templates::logPath(\$templateIncDir, \$templateId);
 
     open(TEMPF, ">>$path") or die("$path: $!");
     binmode(TEMPF,  ':utf8');
@@ -1409,8 +1408,8 @@ sub includeTemplateText(\$\%\%\$$) {
     $$refToResult = $templates{$includedPageId};
 
     # Substitute template parameters
-    if( &templates::templateParameterRecursion($refToResult, $refToParameterHash, 1) ) {
-      &logger::msg("WARNING", "Maximum template parameter recursion level reached");
+    if( &templateParameterRecursion($refToResult, $refToParameterHash, 1) ) {
+      &msg("WARNING", "Maximum template parameter recursion level reached");
     }
 
   } else {
@@ -1418,7 +1417,7 @@ sub includeTemplateText(\$\%\%\$$) {
     # we only allow for inclusion of pages in the Template namespace), or perhaps it's
     # a variable name like {{NUMBEROFARTICLES}}. Just remove this inclusion directive and
     # replace it with a space
-    &logger::msg("WARNING", "Template '$$refToTemplateTitle' is not available for inclusion");
+    &msg("WARNING", "Template '$$refToTemplateTitle' is not available for inclusion");
     $$refToResult = " ";
   }
 }
@@ -1486,7 +1485,7 @@ sub collectCategory($\@) {
   if ( defined($catId) ) {
     push(@{$page->{categories}}, $catId);
   } else {
-    &logger::msg("WARNING", "unknown category '$catName'");
+    &msg("WARNING", "unknown category '$catName'");
   }
 
   # The return value is just a space, because we remove categories from the text
@@ -1648,7 +1647,7 @@ sub collectWikiLink($$$\@\@$) {
   if ($isImageLink) {
     # Image links have to be parsed separately, because anchors can contain parameters (size, type, etc.)
     # which we exclude in a separate function.
-    $result = &images::parseImageParameters(\@pipeFields);
+    $result = &parseImageParameters(\@pipeFields);
 
     if( length($result) > 0 ) {
       $alternativeTextAvailable = 1;
@@ -1656,7 +1655,7 @@ sub collectWikiLink($$$\@\@$) {
   } else {
     # Check if this is an interwiki link.
     my $wikiName;
-    ( $wikiName, $interwikiTitle ) = &interwiki::parseInterwiki($link);
+    ( $wikiName, $interwikiTitle ) = &parseInterwiki($link);
     
     if( defined( $wikiName ) ) {
       $wikiName = lc($wikiName);
@@ -1743,7 +1742,7 @@ sub collectWikiLink($$$\@\@$) {
     #    that contain a colon in their title), we believe this is a reasonable tradeoff.
     if ( !defined($targetId) && ! $alternativeTextAvailable && $link =~ /:/ ) {
       $result = "";
-      &logger::msg("DEBUG", "Discarding text for link '$originalLink'");
+      &msg("DEBUG", "Discarding text for link '$originalLink'");
     } else {
       # finally, add the text originally attached to the left and/or to the right of the link
       # (if the link represents a date, then it has not text glued to it, so it's OK to only
@@ -1821,7 +1820,7 @@ sub resolveAndCollectInternalLink(\$) {
   my $targetId = &resolveLink($refToLink);
   if ( defined($targetId) ) {
     if ( exists($templates{$targetId}) ) { 
-      &logger::msg("DEBUG", "Ignoring link to a template '$$refToLink'");
+      &msg("DEBUG", "Ignoring link to a template '$$refToLink'");
       $targetId = undef;
     }
   } else {
@@ -1831,7 +1830,7 @@ sub resolveAndCollectInternalLink(\$) {
     #   media and sound files fall in this category
     # - Links to other languages, e.g., [[de:...]]
     # - Links to other Wiki projects, e.g., [[Wiktionary:...]]
-    &logger::msg("WARNING", "unknown link '$$refToLink'");
+    &msg("WARNING", "unknown link '$$refToLink'");
   }
 
   $targetId;  # return value
@@ -1990,7 +1989,7 @@ BEGIN {
     if( exists( $urlProtocols{$urlProtocol} ) ) {
       push(@{$page->{bareUrls}}, $url);
 
-      my $anchorTrimmed = &utils::trimWhitespaceBothSides($anchor);
+      my $anchorTrimmed = &trimWhitespaceBothSides($anchor);
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
@@ -2202,7 +2201,7 @@ sub postprocessText(\$$$) {
 sub logReplacedXmlEntity($) {
   my ($xmlEntity) = @_;
 
-  &logger::msg("DEBUG", "ENTITY: &$xmlEntity;");
+  &msg("DEBUG", "ENTITY: &$xmlEntity;");
 
   " "; # return value - entities are replaced with a space
 }
@@ -2326,7 +2325,7 @@ sub removeDuplicatesAndSelf(\@$) {
   my $item;
   foreach $item (@$refToArray) {
     if ( defined($elementToRemove) && ($item == $elementToRemove) ) {
-      &logger::msg("WARNING", "current page links or categorizes to itself - " . 
+      &msg("WARNING", "current page links or categorizes to itself - " . 
                               "link discarded ($elementToRemove)");
       next;
     }
@@ -2396,7 +2395,7 @@ sub identifyRelatedArticles(\%) {
     my $relatedRegex = $langDB{'relatedWording_Standalone'};
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
-      &logger::msg("DEBUG", "Related(S): $id => $str");
+      &msg("DEBUG", "Related(S): $id => $str");
       &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
     }
   }
@@ -2406,7 +2405,7 @@ sub identifyRelatedArticles(\%) {
     my $relatedRegex = $langDB{'relatedWording_Inline'};
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
-      &logger::msg("DEBUG", "Related(I): $id => $str");
+      &msg("DEBUG", "Related(I): $id => $str");
       &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
     }
   }
@@ -2420,7 +2419,7 @@ sub identifyRelatedArticles(\%) {
       if ($line =~ /==(?:.*?)==/) { # we just encountered the next section - exit the loop
         last;
       } else { # collect the links from the current line
-        &logger::msg("DEBUG", "Related(N): $id => $line");
+        &msg("DEBUG", "Related(N): $id => $line");
         # 'extractWikiLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
         &extractWikiLinks(\$line, \@relatedInternalLinks, undef);

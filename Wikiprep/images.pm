@@ -1,8 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
+package Wikiprep::images;
 
-package images;
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 
 sub convertGalleryToLink(\$) {
   my ($refToText) = @_;

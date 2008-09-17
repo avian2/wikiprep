@@ -1,5 +1,5 @@
 use Test::Simple tests => 3;
-use nowiki;
+use Wikiprep::nowiki qw( randomString extractTags replaceTags );
 
 my ($t, $r);
 my %tok;
@@ -7,10 +7,10 @@ my %tok;
 my $regex = qr/(<nowiki>.*?<\/nowiki>)/;
 
 print "Generated unique strings:\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
-print "  ", &nowiki::randomString(), "\n";
+print "  ", &randomString(), "\n";
+print "  ", &randomString(), "\n";
+print "  ", &randomString(), "\n";
+print "  ", &randomString(), "\n";
 
 $t = <<END
 hello<nowiki>, world!</nowiki>
@@ -18,8 +18,8 @@ END
 ;
 $r = $t;
 
-&nowiki::extractTags(\$regex, \$t, \%tok);
-&nowiki::replaceTags(\$t, \%tok);
+&extractTags(\$regex, \$t, \%tok);
+&replaceTags(\$t, \%tok);
 
 ok($r eq $t);
 
@@ -34,10 +34,10 @@ $r = $t;
 
 %tok = ();
 
-&nowiki::extractTags(\$regex, \$t, \%tok);
+&extractTags(\$regex, \$t, \%tok);
 
 ok($t =~ /nice day/);
 
-&nowiki::replaceTags(\$t, \%tok);
+&replaceTags(\$t, \%tok);
 
 ok($t eq $r);

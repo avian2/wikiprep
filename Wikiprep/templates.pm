@@ -1,14 +1,17 @@
 # vim:sw=2:tabstop=2:expandtab
 
+package Wikiprep::templates;
+
 use strict;
 use File::Path;
 #use Text::Balanced;
 use Regexp::Common;
+use Exporter 'import';
 
 use Wikiprep::utils;
 use Wikiprep::ctemplates;
 
-package templates;
+our @EXPORT_OK = qw( templateParameterRecursion splitOnTemplates parseTemplateInvocation );
 
 my $maxParameterRecursionLevels = 10;
 
@@ -232,7 +235,7 @@ sub parseTemplateInvocation(\$\$\%) {
   my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
 
   #my @parameters = &splitTemplateInvocation($$refToTemplateInvocation);
-  my @parameters = &ctemplates::splitTemplateInvocation($$refToTemplateInvocation);
+  my @parameters = &Wikiprep::ctemplates::splitTemplateInvocation($$refToTemplateInvocation);
 
   # We now have the invocation string split up in the @parameters list.
 

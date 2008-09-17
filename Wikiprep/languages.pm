@@ -1,9 +1,12 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
-use encoding 'utf-8';
+package Wikiprep::languages;
 
-package languages;
+use strict;
+use Exporter 'import';
+use encoding 'utf-8';
+our @EXPORT_OK = qw( languageName );
+
 
 # List of languages copied from MediaWiki (languages/Names.php)
 

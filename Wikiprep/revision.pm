@@ -1,9 +1,11 @@
 # vim:sw=2:tabstop=2:expandtab
 
-use strict;
-use FindBin;
+package Wikiprep::revision;
 
-package revision;
+use strict;
+use Exporter 'import';
+our @EXPORT_OK = qw( getWikiprepRevision getDumpDate writeVersion );
+use FindBin;
 
 sub getWikiprepRevision() {
   my $version;

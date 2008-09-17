@@ -1,4 +1,4 @@
 use Test::More tests => 1;
-use utils;
+use Wikiprep::utils qw( trimWhitespaceBothSides );
 
-is(&utils::trimWhitespaceBothSides("  hello  "), "hello");
+is(&trimWhitespaceBothSides("  hello  "), "hello");
