@@ -893,7 +893,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
-    $pageStruct->{text} = &includeTemplates(\$pageStruct->{id}, \$pageStruct->{title}, $pageStruct->{text}, 0);
+    $pageStruct->{text} = &includeTemplates($pageStruct, $pageStruct->{text}, 0);
 
     my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
@@ -1090,8 +1090,8 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
 # It's called recursively, so we have a $templateRecursionLevel parameter to track the 
 # recursion depth and break out in case it gets too deep.
 
-sub includeTemplates(\$\$$$) {
-  my ($refToId, $refToTitle, $text, $templateRecursionLevel) = @_;
+sub includeTemplates(\%$$) {
+  my ($pageStruct, $text, $templateRecursionLevel) = @_;
 
   if( $templateRecursionLevel > $maxTemplateRecursionLevels ) {
 
@@ -1134,7 +1134,7 @@ sub includeTemplates(\$\$$$) {
   #for $token ( &templates::splitOnTemplates($text) ) {
   for $token ( &ctemplates::splitOnTemplates($text) ) {
     if( $invocation ) {
-      $new_text .= &instantiateTemplate($token, $refToId, $refToTitle, $templateRecursionLevel);
+      $new_text .= &instantiateTemplate($token, $pageStruct, $templateRecursionLevel);
       $invocation = 0;
     } else {
       $new_text .= $token;
@@ -1160,8 +1160,8 @@ sub includeTemplates(\$\$$$) {
 
 }
 
-sub instantiateTemplate($\$\$\%$) {
-  my ($templateInvocation, $refToId, $refToTopPageTitle, $templateRecursionLevel) = @_;
+sub instantiateTemplate($\%$) {
+  my ($templateInvocation, $pageStruct, $templateRecursionLevel) = @_;
 
   my $len = length( $templateInvocation );
   if($len > 32767) {
@@ -1186,10 +1186,9 @@ sub instantiateTemplate($\$\$\%$) {
 
   return "" unless(defined($templateTitle));
 
-  $templateTitle = &includeTemplates($refToId, $refToTopPageTitle, $templateTitle, $templateRecursionLevel + 1);
+  $templateTitle = &includeTemplates($pageStruct, $templateTitle, $templateRecursionLevel + 1);
 
-  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $refToId, $refToTopPageTitle, 
-                                                                                  $templateRecursionLevel);
+  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $pageStruct, $templateRecursionLevel);
 
   # If this wasn't a parser function call, try to include a template.
   if ( not defined($result) ) {
@@ -1201,17 +1200,16 @@ sub instantiateTemplate($\$\$\%$) {
       return $overrideResult;
     }
 
-    &includeTemplateText(\$templateTitle, \%templateParams, $refToId, \$result);
+    &includeTemplateText(\$templateTitle, \%templateParams, \$pageStruct->{id}, \$result);
   }
 
-  $result = &includeTemplates($refToId, $refToTopPageTitle, $result, $templateRecursionLevel + 1);
+  $result = &includeTemplates($pageStruct, $result, $templateRecursionLevel + 1);
 
   return $result;  # return value
 }
 
-sub includeParserFunction(\$\%\$\$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToTopPageTitle, $templateRecursionLevel, 
-                                                                                        $refToResult) = @_;
+sub includeParserFunction(\$\%\%$\$) {
+  my ($refToTemplateTitle, $refToParameterHash, $pageStruct, $templateRecursionLevel, $refToResult) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
@@ -1224,8 +1222,7 @@ sub includeParserFunction(\$\%\$\$\$) {
 
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
-    $$refToParameterHash{'=0='} = &includeTemplates($refToId, $refToTopPageTitle, $2, 
-                                                                               $templateRecursionLevel + 1);
+    $$refToParameterHash{'=0='} = &includeTemplates($pageStruct, $2, $templateRecursionLevel + 1);
 
     &logger::msg("DEBUG", "Evaluating parser function #$functionName");
 
@@ -1268,7 +1265,7 @@ sub includeParserFunction(\$\%\$\$\$) {
       my $rvalue = $$refToParameterHash{'=1='};
 
       if ( defined($rvalue ) ) {
-        $rvalue = &includeTemplates($refToId, $refToTopPageTitle, $rvalue, $templateRecursionLevel + 1);
+        $rvalue = &includeTemplates($pageStruct, $rvalue, $templateRecursionLevel + 1);
 
         # lvalue is always defined
         if ( $lvalue eq $rvalue ) {
@@ -1323,7 +1320,7 @@ sub includeParserFunction(\$\%\$\$\$) {
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
   } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
-    $result = $$refToTopPageTitle;
+    $result = $pageStruct->{title};
   }
 
   return $result;
