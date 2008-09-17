@@ -919,13 +919,13 @@ sub transform() {
     # contain usable text for us.
     &css::removeMetadata(\$page->{text});
 
-    my @anchorTexts;
-    my @interwikiLinks;
+    $page->{internalLinks} = [];
+    $page->{interwikiLinks} = [];
 
-    &extractInternalLinks(\$page->{text}, \@internalLinks, $page->{id}, \@anchorTexts, \@interwikiLinks, 1);
+    &extractInternalLinks(\$page->{text}, \@internalLinks, $page->{id}, $page->{internalLinks}, $page->{interwikiLinks}, 1);
 
-    &logAnchorText(\@anchorTexts, $page->{id});
-    &logInterwikiLinks(\@interwikiLinks, $page->{id});
+    &logAnchorText($page->{internalLinks}, $page->{id});
+    &logInterwikiLinks($page->{interwikiLinks}, $page->{id});
 
     if ( ! $dontExtractUrls ) {
       &extractUrls($page);
@@ -936,7 +936,7 @@ sub transform() {
     # text length AFTER all transformations
     $page->{newLength} = length($page->{text});
 
-    &writePage($page->{id}, \$page->{title}, \$page->{text}, $page->{orgLength}, $page->{newLength}, $page->{isStub}, $page->{categories}, \@internalLinks, $page->{bareUrls});
+    &writePage($page);
     &writeDisambig($page);
 
     &updateStatistics($page->{categories}, \@internalLinks);
@@ -989,40 +989,49 @@ sub updateCategoryHierarchy($\@) {
   }
 }
 
-sub writePage($\$\$$$$\@\@\@) {
-  my ($id, $refToTitle, $refToText, $orgLength, $newLength, $isStub,
-      $refToCategories, $refToInternalLinks, $refToUrls) = @_;
+sub writePage(\%) {
+  my ($page) = @_;
 
-  my $numCategories = scalar(@$refToCategories);
-  my $numLinks = scalar(@$refToInternalLinks);
-  my $numUrls = scalar(@$refToUrls);
+  my $numCategories = scalar(@{$page->{categories}});
 
-  print OUTF "<page id=\"$id\" orglength=\"$orgLength\" newlength=\"$newLength\" stub=\"$isStub\" " .
+  my $internalLinks = &getLinkIds($page->{internalLinks});
+  &removeDuplicatesAndSelf($internalLinks, $page->{id});
+
+  my @urls;
+  for my $link (@{$page->{externalLinks}}) {
+    push(@urls, $link->{url});
+  }
+
+  &removeDuplicatesAndSelf(\@urls, undef);
+
+  my $numLinks = scalar(@$internalLinks);
+  my $numUrls = scalar(@urls);
+
+  print OUTF "<page id=\"$page->{id}\" orglength=\"$page->{orgLength}\" newlength=\"$page->{newLength}\" stub=\"$page->{isStub}\" " .
              "categories=\"$numCategories\" outlinks=\"$numLinks\" urls=\"$numUrls\">\n";
 
-  my $encodedTitle = $$refToTitle;
+  my $encodedTitle = $page->{title};
   &encodeXmlChars(\$encodedTitle);
   print OUTF "<title>$encodedTitle</title>\n";
 
   print OUTF "<categories>";
-  print OUTF join(" ", @$refToCategories);
+  print OUTF join(" ", @{$page->{categories}});
   print OUTF "</categories>\n";
 
   print OUTF "<links>";
-  print OUTF join(" ", @$refToInternalLinks);
+  print OUTF join(" ", @$internalLinks);
   print OUTF "</links>\n";
 
   print OUTF "<urls>\n";
 
-  my $url;
-  foreach $url (@$refToUrls) {
+  for my $url (@urls) {
     &encodeXmlChars(\$url);
     print OUTF "$url\n";
   }
   print OUTF "</urls>\n";
 
   # text has already undergone 'encodeXmlChars' in function 'postprocessText'
-  print OUTF "<text>\n$$refToText\n</text>\n";
+  print OUTF "<text>\n$page->{text}\n</text>\n";
 
   print OUTF "</page>\n";
 }
@@ -1505,16 +1514,28 @@ sub extractInternalLinks(\$\@$\@$) {
                                                                      $refToInterwikiLinksArray,
                                                                      $-[0])/eg );
 
-  for my $link (@$refToAnchorTextArray) {
+  my $ids = getLinkIds($refToAnchorTextArray);
+
+  if ($whetherToRemoveDuplicates) {
+    &removeDuplicatesAndSelf($ids, $id);
+  }
+
+  @$refToInternalLinksArray = (@$refToInternalLinksArray, @$ids);
+
+}
+
+sub getLinkIds(\@) {
+  my ($refToInternalLinks) = @_;
+
+  my @ids;
+
+  for my $link (@$refToInternalLinks) {
     if( defined( $link->{targetId} ) ) {
-      push(@$refToInternalLinksArray, $link->{targetId});
+      push(@ids, $link->{targetId});
     }
   }
 
-  if ($whetherToRemoveDuplicates) {
-    &removeDuplicatesAndSelf($refToInternalLinksArray, $id);
-  }
-
+  return \@ids;
 }
 
 }
