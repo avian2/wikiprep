@@ -849,7 +849,6 @@ sub transform() {
 
     $pageStruct->{title} = $title;
 
-    {
     my $text = ${$page->text};
 
     $processedByteCount += length(${$page->text});
@@ -879,7 +878,6 @@ sub transform() {
     }
 
     $pageStruct->{text} = $text;
-  }
 
     # Parse disambiguation pages before template substitution because disambig
     # indicators are also templates.
@@ -1732,8 +1730,8 @@ sub collectInternalLink($$$\@\@$$) {
 
     if ( defined($refToAnchorTextArray) ) {
       $targetId = undef unless $targetId;
-      push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => "$result", 
-                                     linkLocation => "$linkLocation" });
+      push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => $result, 
+                                     linkLocation => $linkLocation });
     }
 
   }
@@ -1835,10 +1833,10 @@ sub normalizeDates(\$\$\$\@\%) {
       $$refToResultText = "$month $day";
 
       my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-      if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+      if ( defined($refToAnchorTextArray) ) {
         $$refToTargetId = $targetId;
-        push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
-                                       linkLocation => "$linkLocation" });
+        push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => $$refToResultText,
+                                       linkLocation => $linkLocation });
       }
     } else {
       # this doesn't look like a valid date, leave as-is
@@ -1858,10 +1856,10 @@ sub normalizeDates(\$\$\$\@\%) {
         $$refToResultText = " $month $day";
 
         my $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+        if ( defined($refToAnchorTextArray) ) {
           $$refToTargetId = $targetId; 
-          push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToResultText",
-                                           linkLocation => "$linkLocation" });
+          push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => $$refToResultText,
+                                           linkLocation => $linkLocation });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
@@ -1887,18 +1885,18 @@ sub normalizeDates(\$\$\$\@\%) {
 
         # collect the link for the day
         $targetId = &resolveAndCollectInternalLink($refToLink, $refToInternalLinksArray);
-        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+        if ( defined($refToAnchorTextArray) ) {
             $$refToTargetId = $targetId; 
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$$refToLink",
-                                           linkLocation => "$linkLocation" });
+            push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => $$refToLink,
+                                           linkLocation => $linkLocation });
         }
 
         # collect the link for the year
         $targetId = &resolveAndCollectInternalLink(\$year, $refToInternalLinksArray);
-        if ( defined($targetId) && defined($refToAnchorTextArray) ) {
+        if ( defined($refToAnchorTextArray) ) {
             $$refToTargetId = $targetId; 
-            push(@$refToAnchorTextArray, { targetId => "$targetId", anchorText => "$year",
-                                           linkLocation => "$linkLocation" });
+            push(@$refToAnchorTextArray, { targetId => $targetId, anchorText => $year,
+                                           linkLocation => $linkLocation });
         }
       } else {
         # this doesn't look like a valid date, leave as-is
