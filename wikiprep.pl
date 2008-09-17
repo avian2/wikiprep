@@ -895,9 +895,8 @@ sub transform() {
 
     $pageStruct->{text} = &includeTemplates($pageStruct, $pageStruct->{text}, 0);
 
-    my @relatedArticles;
     # This function only examines the contents of '$text', but doesn't change it.
-    &identifyRelatedArticles(\$pageStruct->{text}, \@relatedArticles, $pageStruct->{id});
+    &identifyRelatedArticles($pageStruct);
 
     # We process categories directly, because '$page->categories' ignores
     # categories inherited from included templates
@@ -908,8 +907,8 @@ sub transform() {
     # section such as "See also"). To avoid this, we explicitly remove all categories
     # from the list of related links, and only then record the list of related links
     # to the file.
-    &removeElements(\@relatedArticles, \@categories);
-    &recordRelatedArticles($pageStruct->{id}, \@relatedArticles);
+    &removeElements($pageStruct->{relatedArticles}, \@categories);
+    &recordRelatedArticles($pageStruct->{id}, $pageStruct->{relatedArticles});
 
     &images::convertGalleryToLink(\$pageStruct->{text});
     &images::convertImagemapToLink(\$pageStruct->{text});
@@ -940,7 +939,7 @@ sub transform() {
     &updateStatistics(\@categories, \@internalLinks);
 
     my $categoryNamespace = $langDB{'categoryNamespace'};
-    if ($title =~ /^$categoryNamespace:/) {
+    if ($pageStruct->{title} =~ /^$categoryNamespace:/) {
       &updateCategoryHierarchy($pageStruct->{id}, \@categories);
     }
 
@@ -2348,14 +2347,18 @@ sub getTimeAsString() {
 #   of 'extractInternalLinks'. This is because duplicates in related links are
 #   not very common, but performing duplicate removal each time is expensive.
 #   Instead, we remove duplicates once at the very end.
-sub identifyRelatedArticles(\$\@$) {
-  my ($refToText, $refToRelatedArticles, $id) = @_;
+sub identifyRelatedArticles(\%) {
+  my ($pageStruct) = @_;
+
+  my $id = $pageStruct->{id};
 
   # We split the text into a set of lines. This also creates a copy of the original text -
   # this is important, since the function 'extractInternalLinks' modifies its argument,
   # so we'd better use it on a copy of the real article body.
-  my @text = split("\n", $$refToText);
+  my @text = split("\n", $pageStruct->{text});
   my $line;
+
+  $pageStruct->{relatedArticles} = [];
 
   # Standalone
   foreach $line (@text) {
@@ -2368,8 +2371,8 @@ sub identifyRelatedArticles(\$\@$) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &logger::msg("DEBUG", "Related(S): $id => $str");
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, undef, 0, 0);
-      &logger::msg("DEBUG", "Related(S): $id ==> @$refToRelatedArticles");
+      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+      &logger::msg("DEBUG", "Related(S): $id ==> @{$pageStruct->{relatedArticles}}");
     }
   }
 
@@ -2379,8 +2382,8 @@ sub identifyRelatedArticles(\$\@$) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &logger::msg("DEBUG", "Related(I): $id => $str");
-      &extractInternalLinks(\$str, $refToRelatedArticles, $id, undef, undef, 0, 0);
-      &logger::msg("DEBUG", "Related(I): $id ==> @$refToRelatedArticles");
+      &extractInternalLinks(\$str, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+      &logger::msg("DEBUG", "Related(I): $id ==> @{$pageStruct->{relatedArticles}}");
     }
   }
 
@@ -2396,8 +2399,8 @@ sub identifyRelatedArticles(\$\@$) {
         &logger::msg("DEBUG", "Related(N): $id => $line");
         # 'extractInternalLinks' may mofidy its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractInternalLinks(\$line, $refToRelatedArticles, $id, undef, undef, 0, 0);
-        &logger::msg("DEBUG", "Related(N): $id ==> @$refToRelatedArticles");
+        &extractInternalLinks(\$line, $pageStruct->{relatedArticles}, $id, undef, undef, 0, 0);
+        &logger::msg("DEBUG", "Related(N): $id ==> @{$pageStruct->{relatedArticles}}");
       }
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
@@ -2415,7 +2418,7 @@ sub identifyRelatedArticles(\$\@$) {
     }
   }
 
-  &removeDuplicatesAndSelf($refToRelatedArticles, $id);
+  &removeDuplicatesAndSelf($pageStruct->{relatedArticles}, $id);
 }
 
 sub recordRelatedArticles($\@) {
