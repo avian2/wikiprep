@@ -52,6 +52,7 @@ use Wikiprep::interwiki qw( parseInterwiki );
 use Wikiprep::utils qw( trimWhitespaceBothSides encodeXmlChars getLinkIds removeDuplicatesAndSelf );
 
 use Wikiprep::Output::Legacy;
+use Wikiprep::Output::Composite;
 
 my $licenseFile = "COPYING";
 my $version = "2.02.tomaz.3";
@@ -69,6 +70,7 @@ my $logArgs = "";
 my $doCompress = 0;
 
 my $langCode = 'en';
+my $outputFormat = "legacy";
 
 GetOptions('f=s' => \$file,
            'license' => \$showLicense,
@@ -76,7 +78,8 @@ GetOptions('f=s' => \$file,
            'nourls' => \$dontExtractUrls,
            'log=s' => \$logArgs,
            'compress' => \$doCompress,
-           'lang=s' => \$langCode);
+           'lang=s' => \$langCode,
+           'format=s' => \$outputFormat);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -159,7 +162,12 @@ my $localIDCounter = 1;
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml", ".xml.gz", ".xml.bz2");
 $fileSuffix =~ s/\.gz$|\.bz2//;
 
-my $out = Wikiprep::Output::Legacy->new("$filePath/$fileBasename", $file);
+my $out;
+if( lc($outputFormat) eq 'legacy' ) {
+  $out = Wikiprep::Output::Legacy->new("$filePath/$fileBasename", $file, COMPRESS => $doCompress);
+} elsif( lc($outputFormat) eq 'gum' ) {
+  $out = Wikiprep::Output::Composite->new("$filePath/$fileBasename", $file, COMPRESS => $doCompress);
+}
 
 my $logFile = "$filePath/$fileBasename.log";
 
@@ -780,8 +788,6 @@ sub transform() {
     # text length AFTER all transformations
     $page->{newLength} = length($page->{text});
 
-    $out->newPage($page);
-
     &updateStatistics($page->{categories}, \@internalLinks);
 
     if ($page->{title} =~ /^$categoryNamespace:/) {
@@ -790,6 +796,8 @@ sub transform() {
     } else {
       $page->{isCategory} = 0;
     }
+
+    $out->newPage($page);
 
     my $pageFinishedTime = time;
 
@@ -2139,9 +2147,17 @@ Available options:
   -compress      Enable compression on some of the output files.
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
+  -format FMT    Use output format FMT (default is legacy).
 
 Logging options (separate multiple options with colons):
 
   debug, warning, profile
+
+Output formats:
+
+  legacy        Traditional output format, compatible with earliest
+                versions of Wikiprep.
+  gum           New format that consolidates most of the extracted
+                data in a single large XML file.
 END
 }
