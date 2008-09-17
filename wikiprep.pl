@@ -895,6 +895,7 @@ sub transform() {
     my @internalLinks;
     my @urls;
 
+    $page->{templates} = {};
     $page->{text} = &includeTemplates($page, $page->{text}, 0);
 
     # This function only examines the contents of '$text', but doesn't change it.
@@ -926,6 +927,7 @@ sub transform() {
 
     &logAnchorText($page);
     &logInterwikiLinks($page);
+    &logTemplateIncludes($page);
 
     if ( ! $dontExtractUrls ) {
       &extractUrls($page);
@@ -1213,7 +1215,7 @@ sub instantiateTemplate($\%$) {
       return $overrideResult;
     }
 
-    &includeTemplateText(\$templateTitle, \%templateParams, \$page->{id}, \$result);
+    &includeTemplateText(\$templateTitle, \%templateParams, $page, \$result);
   }
 
   $result = &includeTemplates($page, $result, $templateRecursionLevel + 1);
@@ -1350,30 +1352,44 @@ sub logInterwikiLinks(\%) {
   }
 }
 
-sub logTemplateInclude(\$\$\%) {
-  my ($refToTemplateId, $refToPageId, $refToParameterHash) = @_;
+sub noteTemplateInclude(\$\%\%) {
+  my ($refToTemplateId, $page, $refToParameterHash) = @_;
 
-  my $path = &templates::logPath(\$templateIncDir, $refToTemplateId);
+  my $templates = $page->{templates};
+  
+  $templates->{$$refToTemplateId} = [] unless( defined( $templates->{$$refToTemplateId} ) );
 
-  open(TEMPF, ">>$path") or die("$path: $!");
-  binmode(TEMPF,  ':utf8');
-
-  print TEMPF "Page $$refToPageId\n";
-
-  foreach my $parameter ( keys(%$refToParameterHash) ) {
-    if($parameter !~ /^=/) {
-      my $value = $$refToParameterHash{$parameter};
-      $value =~ s/\n/ /g;
-      print TEMPF "$parameter = $value\n";
-    }
-  }
-  print TEMPF "End\n";
-
-  close(TEMPF);
+  push( @{$templates->{$$refToTemplateId}}, $refToParameterHash );
 }
 
-sub includeTemplateText(\$\%\$\$$) {
-  my ($refToTemplateTitle, $refToParameterHash, $refToId, $refToResult) = @_;
+sub logTemplateIncludes(\%) {
+
+  my ($page) = @_;
+
+  while(my ($templateId, $log) = each(%{$page->{templates}})) {
+    my $path = &templates::logPath(\$templateIncDir, \$templateId);
+
+    open(TEMPF, ">>$path") or die("$path: $!");
+    binmode(TEMPF,  ':utf8');
+
+    for my $refToParameterHash (@$log) {
+      print TEMPF "Page $page->{id}\n";
+
+      while(my ($parameter, $value) = each(%$refToParameterHash) ) {
+        if($parameter !~ /^=/) {
+          $value =~ s/\n/ /g;
+          print TEMPF "$parameter = $value\n";
+        }
+      }
+      print TEMPF "End\n";
+    }
+
+    close(TEMPF);
+  }
+}
+
+sub includeTemplateText(\$\%\%\$$) {
+  my ($refToTemplateTitle, $refToParameterHash, $page, $refToResult) = @_;
 
   &normalizeTitle($refToTemplateTitle);
   my $includedPageId = &resolveLink($refToTemplateTitle);
@@ -1381,7 +1397,7 @@ sub includeTemplateText(\$\%\$\$$) {
   if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
 
     # Log which template has been included in which page with which parameters
-    &logTemplateInclude(\$includedPageId, $refToId, $refToParameterHash);
+    &noteTemplateInclude(\$includedPageId, $page, $refToParameterHash);
 
     # OK, perform the actual inclusion with parameter substitution. 
 
