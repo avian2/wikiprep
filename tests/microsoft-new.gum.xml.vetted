@@ -7,128 +7,40 @@
 <links>13752110 13752111</links>
 <related></related>
 <external>
-<link>
-<anchor>MSFT</anchor>
-<url>http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=MSFT&amp;selected=MSFT</url>
-</link>
-<link>
-<anchor>Bill Gates: A timeline</anchor>
-<url>http://news.bbc.co.uk/2/hi/business/5085630.stm</url>
-</link>
-<link>
-<url>http://www.microsoft.com/presspass/exec/billg/bio.mspx</url>
-</link>
-<link>
-<url>http://www.microsoft.com/xbox/</url>
-</link>
-<link>
-<url>http://www.microsoft.com/games/</url>
-</link>
-<link>
-<url>http://help.live.com/help.aspx?project=tou&amp;mkt=en-us</url>
-</link>
-<link>
-<url>http://www.zune.net/en-US/</url>
-</link>
-<link>
-<anchor>"Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"</anchor>
-<url>http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx</url>
-</link>
-<link>
-<anchor>"Fast Facts About Microsoft"</anchor>
-<url>http://www.microsoft.com/presspass/inside_ms.mspx</url>
-</link>
-<link>
-<anchor>www.microsoft.com</anchor>
-<url>http://www.microsoft.com/worldwide/</url>
-</link>
-<link>
-<anchor>MSFT</anchor>
-<url>http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=MSFT&amp;selected=MSFT</url>
-</link>
-<link>
-<anchor>4338</anchor>
-<url>http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID=4338&amp;WidCoAbbName=&amp;Month=&amp;langcode=e</url>
-</link>
-<link>
-<anchor>Microsoft Corporation Annual Report 2005</anchor>
-<url>http://www.microsoft.com/msft/ar05/downloads/MS_2005_AR.doc</url>
-</link>
-<link>
-<anchor>The rest of the motto</anchor>
-<url>http://blog.seattlepi.nwsource.com/microsoft/archives/003469.html</url>
-</link>
-<link>
-<anchor>U.S. vs. Microsoft findings of fact</anchor>
-<url>http://www.usdoj.gov/atr/cases/f3800/msjudgex.htm</url>
-</link>
-<link>
-<anchor>Beta version of Microsoft's Vista shows a lot of potential</anchor>
-<url>http://seattlepi.nwsource.com/business/235169_vistatest04.html</url>
-</link>
-<link>
-<anchor>Microsoft launches Vista version of Windows</anchor>
-<url>http://in.tech.yahoo.com/061130/137/69vp5.html</url>
-</link>
-<link>
-<anchor>PC market surged in 2005, will settle in 2006</anchor>
-<url>http://news.com.com/PC+market+surged+in+2005,+will+settle+in+2006/2100-1003_3-6028454.html</url>
-</link>
-<link>
-<anchor>Microsoft unveils Office 2003</anchor>
-<url>http://seattlepi.nwsource.com/business/144528_msftoffice20.html</url>
-</link>
-<link>
-<anchor>Can StarOffice Steal Users From Microsoft?</anchor>
-<url>http://www.pcworld.com/article/id,98003-page,1/article.html</url>
-</link>
-<link>
-<anchor>The Microsoft Millionaires Come of Age</anchor>
-<url>http://www.nytimes.com/2005/05/29/business/yourmoney/29millionaire.html?ex=1275019200&amp;en=de3d71cbbb7e06f8&amp;ei=5090&amp;partner=rssuserland&amp;emc=rss</url>
-</link>
-<link>
-<anchor>Somehow, Usenet lumbers on</anchor>
-<url>http://www.boston.com/business/globe/articles/2005/06/13/somehow_usenet_lumbers_on/</url>
-</link>
-<link>
-<anchor>Microsoft Frequently Asked Questions</anchor>
-<url>http://mvp.support.microsoft.com/mvpfaqs</url>
-</link>
-<link>
-<anchor>United States v. Microsoft</anchor>
-<url>http://www.usdoj.gov/atr/cases/ms_index.htm</url>
-</link>
-<link>
-<url>http://www.microsoft.com/presspass/exec/billg/bio.mspx</url>
-</link>
-<link>
-<url>http://www.microsoft.com/xbox/</url>
-</link>
-<link>
-<url>http://www.microsoft.com/games/</url>
-</link>
-<link>
-<url>http://help.live.com/help.aspx?project=tou&amp;amp;mkt=en-us</url>
-</link>
-<link>
-<url>http://www.zune.net/en-US/</url>
-</link>
-<link>
-<anchor>www.microsoft.com</anchor>
-<url>http://www.microsoft.com/worldwide/</url>
-</link>
-<link>
-<url>http://europa.eu/rapid/pressReleasesAction.do?reference=IP/04/382&amp;format=HTML&amp;aged=1&amp;language=EN&amp;guiLanguage=en</url>
-</link>
-<link>
-<url>http://news.bbc.co.uk/2/hi/business/5085630.stm</url>
-</link>
-<link>
-<url>http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx</url>
-</link>
-<link>
-<url>http://www.microsoft.com/presspass/inside_ms.mspx</url>
-</link>
+<link url="http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=MSFT&amp;selected=MSFT">MSFT</link>
+<link url="http://news.bbc.co.uk/2/hi/business/5085630.stm">Bill Gates: A timeline</link>
+<link url="http://www.microsoft.com/presspass/exec/billg/bio.mspx" />
+<link url="http://www.microsoft.com/xbox/" />
+<link url="http://www.microsoft.com/games/" />
+<link url="http://help.live.com/help.aspx?project=tou&amp;mkt=en-us" />
+<link url="http://www.zune.net/en-US/" />
+<link url="http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx">"Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"</link>
+<link url="http://www.microsoft.com/presspass/inside_ms.mspx">"Fast Facts About Microsoft"</link>
+<link url="http://www.microsoft.com/worldwide/">www.microsoft.com</link>
+<link url="http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=MSFT&amp;selected=MSFT">MSFT</link>
+<link url="http://www.hkex.com.hk/invest/index.asp?id=company/quote_page_e.asp?WidCoID=4338&amp;WidCoAbbName=&amp;Month=&amp;langcode=e">4338</link>
+<link url="http://www.microsoft.com/msft/ar05/downloads/MS_2005_AR.doc">Microsoft Corporation Annual Report 2005</link>
+<link url="http://blog.seattlepi.nwsource.com/microsoft/archives/003469.html">The rest of the motto</link>
+<link url="http://www.usdoj.gov/atr/cases/f3800/msjudgex.htm">U.S. vs. Microsoft findings of fact</link>
+<link url="http://seattlepi.nwsource.com/business/235169_vistatest04.html">Beta version of Microsoft's Vista shows a lot of potential</link>
+<link url="http://in.tech.yahoo.com/061130/137/69vp5.html">Microsoft launches Vista version of Windows</link>
+<link url="http://news.com.com/PC+market+surged+in+2005,+will+settle+in+2006/2100-1003_3-6028454.html">PC market surged in 2005, will settle in 2006</link>
+<link url="http://seattlepi.nwsource.com/business/144528_msftoffice20.html">Microsoft unveils Office 2003</link>
+<link url="http://www.pcworld.com/article/id,98003-page,1/article.html">Can StarOffice Steal Users From Microsoft?</link>
+<link url="http://www.nytimes.com/2005/05/29/business/yourmoney/29millionaire.html?ex=1275019200&amp;en=de3d71cbbb7e06f8&amp;ei=5090&amp;partner=rssuserland&amp;emc=rss">The Microsoft Millionaires Come of Age</link>
+<link url="http://www.boston.com/business/globe/articles/2005/06/13/somehow_usenet_lumbers_on/">Somehow, Usenet lumbers on</link>
+<link url="http://mvp.support.microsoft.com/mvpfaqs">Microsoft Frequently Asked Questions</link>
+<link url="http://www.usdoj.gov/atr/cases/ms_index.htm">United States v. Microsoft</link>
+<link url="http://www.microsoft.com/presspass/exec/billg/bio.mspx" />
+<link url="http://www.microsoft.com/xbox/" />
+<link url="http://www.microsoft.com/games/" />
+<link url="http://help.live.com/help.aspx?project=tou&amp;amp;mkt=en-us" />
+<link url="http://www.zune.net/en-US/" />
+<link url="http://www.microsoft.com/worldwide/">www.microsoft.com</link>
+<link url="http://europa.eu/rapid/pressReleasesAction.do?reference=IP/04/382&amp;format=HTML&amp;aged=1&amp;language=EN&amp;guiLanguage=en" />
+<link url="http://news.bbc.co.uk/2/hi/business/5085630.stm" />
+<link url="http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx" />
+<link url="http://www.microsoft.com/presspass/inside_ms.mspx" />
 </external>
 <interwiki></interwiki>
 <templates>

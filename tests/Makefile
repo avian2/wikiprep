@@ -47,7 +47,8 @@ LOGS =	images.log \
 	noinclude.log \
 	interwiki.log \
 	tempredir.log \
-	microsoft-new.log
+	microsoft-new.log \
+	interwiki-new.log
 
 OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 

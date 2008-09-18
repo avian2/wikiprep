@@ -1,0 +1,72 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">Image</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>A</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{memoryalpha}}
+		    [[  MemoryAlpha: Test ]]
+		    [[MemoryAlpha:Test|Test]]
+		    [[MemoryAlpha:  category:  education]]
+		    [[MemoryAlpha:test|]]
+		    [[wowwiki:Sword of a Thousand Truths|Sword]]
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Memoryalpha</title>
+    <id>1090150</id>
+
+    <revision>
+      <id>205405972</id>
+      <timestamp>2008-04-13T20:50:33Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+
+      <minor/>
+      <comment>Better protection template. Replacing {{Protected2}}.</comment>
+      <text xml:space="preserve">* [[MemoryAlpha:{{{1|{{PAGENAME}}}}}|{{{2|{{{1|{{PAGENAME}}}}}}}}]] article at [[Memory Alpha]], a [[Star Trek]] [[wiki]]&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+[[Category:External link templates|{{PAGENAME}}]]
+[[Category:Star Trek templates|{{PAGENAME}}]]
+
+[[de:Vorlage:Memory Alpha]]
+[[es:Plantilla:Memoryalpha]]
+[[hr:Predložak:Memoryalpha]]
+[[ms:Templat:Memoryalpha]]
+[[zh:template:Memoryalpha article]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

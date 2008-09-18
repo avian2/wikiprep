@@ -216,21 +216,18 @@ sub newPage
 
   $writer->startTag("external");
   for my $link (@{$page->{externalLinks}}) {
-      $writer->startTag("link");
-      if( $link->{anchor} ) {
-        $writer->dataElement("anchor", $link->{anchor});
-      }
-      $writer->dataElement("url", $link->{url});
-      $writer->endTag("link");
+    if( $link->{anchor} ) {
+      $writer->dataElement("link", $link->{anchor}, url => $link->{url});
+    } else {
+      $writer->emptyTag("link", url => $link->{url});
+    }
   }
   $writer->endTag("external");
 
   $writer->startTag("interwiki");
   for my $link (@{$page->{interwikiLinks}}) {
-      $writer->startTag("link");
-      $writer->dataElement("wiki", $link->{targetWiki});
-      $writer->dataElement("title", $link->{targetTitle});
-      $writer->endTag("link");
+      $writer->emptyTag("link", wiki  => $link->{targetWiki},
+                                title => $link->{targetTitle} );
   }
   $writer->endTag("interwiki");
 
