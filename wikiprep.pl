@@ -667,7 +667,7 @@ sub transform() {
 
       $lastDisplayTime = $page->{startTime};
 
-      my $bytesPerSecond = $processedByteCount / ( $page->{StartTime} - $startTime );
+      my $bytesPerSecond = $processedByteCount / ( $page->{startTime} - $startTime );
       my $percentDone = 100.0 * $processedByteCount / $totalByteCount;
       my $secondsLeft = ( $totalByteCount - $processedByteCount ) / $bytesPerSecond;
 
