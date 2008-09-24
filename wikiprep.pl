@@ -649,6 +649,7 @@ sub transform() {
   my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
 
   my $categoryNamespace = $langDB{'categoryNamespace'};
+  my $imageNamespace = $langDB{'imageNamespace'};
 
   my $processedPageCount = 0;
   my $processedByteCount = 0;
@@ -795,6 +796,12 @@ sub transform() {
       $page->{isCategory} = 1;
     } else {
       $page->{isCategory} = 0;
+    }
+
+    if ($page->{title} =~ /^$imageNamespace:/) {
+      $page->{isImage} = 1;
+    } else {
+      $page->{isImage} = 0;
     }
 
     $out->newPage($page);

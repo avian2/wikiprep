@@ -204,7 +204,8 @@ sub newPage
                             newlength   => $page->{newLength},
                             stub        => $page->{isStub},
                             disambig    => $page->{isDisambig},
-                            category    => $page->{isCategory});
+                            category    => $page->{isCategory},
+                            image       => $page->{isImage} );
 
   $writer->dataElement("title", $page->{title});
 
