@@ -660,6 +660,9 @@ sub transform() {
   my $mwpage;
   while (defined($mwpage = $mwpages->page)) {
 
+    $processedPageCount++;
+    $processedByteCount += length(${$mwpage->text});
+
     my $page = {};
 
     $page->{startTime} = time;
@@ -679,8 +682,6 @@ sub transform() {
     }
 
     $page->{id} = $mwpage->id;
-
-    $processedPageCount++;
 
     # next if( $id != 1192748);
 
@@ -706,8 +707,6 @@ sub transform() {
     $page->{title} = $title;
 
     my $text = ${$mwpage->text};
-
-    $processedByteCount += length($text);
 
     # text length BEFORE any transformations
     $page->{orgLength} = length($text);
