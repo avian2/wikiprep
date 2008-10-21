@@ -1870,6 +1870,10 @@ sub postprocessText(\$$$) {
   
   # Convert magic words marking internal links to XML tags. Only properly nested 
   # tags are replaced.
+  
+  # We don't allow "==" to appear in links, since that could cause problems with
+  # unbalanced <h1> and <internal> tags. There are very few legitimate links that
+  # we ignore because of this.
 
   if( $whetherToPreserveInternalTags ) {
     1 while( 
@@ -1877,6 +1881,7 @@ sub postprocessText(\$$$) {
                                                       (
                                                         (?:
                                                            (?!\.pAr)
+                                                           (?!==)
                                                            .
                                                         )*?
                                                       )
@@ -1886,7 +1891,7 @@ sub postprocessText(\$$$) {
   # Remove any unreplaced magic words. This replace als removes tags, that for some
   # reason aren't properly nested (and weren't caught by replace above).
 
-  $$refToText =~ s/\.pAriD=(&quot;|")[0-9]+(&quot;|")\.//g;
+  $$refToText =~ s/\.pAriD=(?:&quot;|")[0-9]+(?:&quot;|")\.//g;
   $$refToText =~ s/\.pArenD\.//g;
 
   # Change markup for section headers.
