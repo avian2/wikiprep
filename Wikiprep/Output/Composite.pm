@@ -275,7 +275,9 @@ sub _logDisambig
       } else {
         print $file "\tundef";
       }
-      print $file "\t$anchor->{'anchorText'}"
+      my $anchorText = $anchor->{'anchorText'};
+      $anchorText =~ s/\t/ /g;
+      print $file "\t$anchorText";
     }
 
   	print $file "\n";

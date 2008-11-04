@@ -1,7 +1,7 @@
 # Line format: <Disambig page id>  <Target page id (or "undef")> <Target anchor> ...
 
 
-1	undef	A1
+1	undef	T a b
 1	undef	A2
 1	undef	A3
 2	undef	B1

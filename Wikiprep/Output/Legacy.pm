@@ -415,7 +415,9 @@ sub _logDisambig
       } else {
         print {$self->{disambigf}} "\tundef";
       }
-      print {$self->{disambigf}} "\t$anchor->{'anchorText'}"
+      my $anchorText = $anchor->{'anchorText'};
+      $anchorText =~ s/\t/ /g;
+      print {$self->{disambigf}} "\t$anchorText"
     }
 
   	print {$self->{disambigf}} "\n";
