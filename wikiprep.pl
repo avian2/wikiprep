@@ -1547,7 +1547,7 @@ sub resolveAndCollectInternalLink(\$) {
 
   my $targetId = &resolveLink($refToLink);
   if ( defined($targetId) ) {
-    if ( exists($templates{$targetId}) ) { 
+    if ( exists($templates{$targetId}) ) {
       &msg("DEBUG", "Ignoring link to a template '$$refToLink'");
       $targetId = undef;
     }
@@ -1888,7 +1888,7 @@ sub postprocessText(\$$$) {
                        \.pArenD\./<internal id="$1">$2<\/internal>/sgx );
   }
 
-  # Remove any unreplaced magic words. This replace als removes tags, that for some
+  # Remove any unreplaced magic words. This replace also removes tags, that for some
   # reason aren't properly nested (and weren't caught by replace above).
 
   $$refToText =~ s/\.pAriD=(?:&quot;|")[0-9]+(?:&quot;|")\.//g;
