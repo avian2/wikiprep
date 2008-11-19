@@ -545,6 +545,17 @@ sub prescan() {
       next;
     }
 
+    if ( exists($idexists{$id}) ) {
+      &msg("WARNING", "Page id=$id already encountered before!");
+      next;
+    }
+    if ( exists($title2id{$title}) ) {
+      # A page could have been encountered before with a different spelling.
+      # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
+      &msg("WARNING", "Page title='$title' already encountered before!");
+      next;
+    }
+
     my $redirect = &isRedirect($page);
     if (defined($redirect)) {
       &normalizeTitle(\$redirect);
@@ -561,16 +572,6 @@ sub prescan() {
     # if we get here, then either the page belongs to the main namespace OR
     # it belongs to one of the namespaces we're interested in
 
-    if ( exists($idexists{$id}) ) {
-      &msg("WARNING", "Page id=$id already encountered before!");
-      next;
-    }
-    if ( exists($title2id{$title}) ) {
-      # A page could have been encountered before with a different spelling.
-      # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
-      &msg("WARNING", "Page title='$title' already encountered before!");
-      next;
-    }
     $idexists{$id} = 'x';
     $title2id{$title} = $id;
 
@@ -863,8 +864,10 @@ sub resolveLink(\$) {
 
     # check if this is a double redirect
     if ( exists($redir{$targetTitle}) ) {
+      my $secondRedirect = $redir{$targetTitle};
+      &msg("WARNING", "link '$$refToTitle' caused double redirection and was ignored: '" . 
+                      "$$refToTitle' -> '$targetTitle' -> '$secondRedirect'");
       $targetTitle = undef; # double redirects are not allowed and are ignored
-      &msg("WARNING", "link '$$refToTitle' caused double redirection and was ignored");
     } else {
       &msg("DEBUG", "Link '$$refToTitle' was redirected to '$targetTitle'");
     }
