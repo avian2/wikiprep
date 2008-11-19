@@ -44,7 +44,7 @@ def getdepends(title):
 
 	deps = {}
 
-	for a in re.findall(u" title=\"(Template:.*?)\">Template:", text):
+	for a in re.findall(u" title=\"(Template:[^\"]*?)\">Template:", text):
 		deps[a] = 1
 
 	return deps
