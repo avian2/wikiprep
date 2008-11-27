@@ -118,9 +118,9 @@ Parse::MediaWikiDump  (libparse-mediawikidump-perl)
 Regexp::Common        (libregexp-common-perl)
 Inline::C             (libinline-perl)
 
-If you can't use Inline::C, search for references to 'ctemplate::' in the 
-code and change them to 'template::'. This will use equivalent pure Perl
-implementations.
+If you can't use Inline::C, search for references to 'Wikiprep::ctemplates' in 
+the code and change them to 'Wikiprep::templates'. This will use equivalent 
+pure Perl implementations.
 
 If you want to process gzip or bzip2 compressed dumps you will need gzip and
 bzip2 installed. Gzip is also required for the -compress option.
