@@ -106,7 +106,7 @@ sub parseImageParameters(\@) {
     }
 
     # Location and type specifications
-    if ( $parameter =~ /^\s*(?:left|right|center|none|thumb|thumbnail|frame)\s*$/i) {
+    if ( $parameter =~ /^\s*(?:left|right|center|none|thumb|thumbnail|frame|border)\s*$/i) {
       next;
     }
 
