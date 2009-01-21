@@ -219,10 +219,10 @@ my $langDB = {
                   # Regular expression that matches names of templates that mark disambiguation articles.
 
                   'disambigTemplates' =>
-                      qr/razločitev
-		      	|razločitveni
-			|disambig
-			|dab/ix,
+                      qr/razločitev|
+                         razločitveni|
+                         disambig|
+                         dab/ix,
 
                   # Regular expression that matches titles of disambiguation articles.
 
