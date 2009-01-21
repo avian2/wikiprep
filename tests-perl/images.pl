@@ -1,5 +1,6 @@
-use Test::Simple tests => 12;
+use Test::Simple tests => 13;
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
+use Wikiprep::lang qw( getLang );
 
 my ($t, $r);
 my @t;
@@ -50,19 +51,19 @@ $t = <<END
 Some text
 <gallery>
 Image:BaseChars.png|Screenshot of Galaksija showing its base character set
-Image:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set
+File:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set
 </gallery>
 Some text here
 END
 ;
 $r = <<END
 Some text
-[[Image:BaseChars.png|Screenshot of Galaksija showing its base character set]]
-[[Image:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set]]
+[[File:BaseChars.png|Screenshot of Galaksija showing its base character set]]
+[[File:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set]]
 Some text here
 END
 ;
-&convertGalleryToLink(\$t);
+&convertGalleryToLink(\$t, &getLang("en") );
 ok($r eq $t);
 
 $t = <<END
@@ -71,7 +72,7 @@ Some text
 
 invalid
 Image:BaseChars.png|Screenshot of Galaksija showing its base character set [[link]]
-Image:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set
+File:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set
 </gallery>
 Some text here
 END
@@ -81,12 +82,12 @@ Some text
 
 
 invalid
-[[Image:BaseChars.png|Screenshot of Galaksija showing its base character set [[link]]]]
-[[Image:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set]]
+[[File:BaseChars.png|Screenshot of Galaksija showing its base character set [[link]]]]
+[[File:GraphicChars.png|Screenshot of Galaksija showing its pseudo-graphics character set]]
 Some text here
 END
 ;
-&convertGalleryToLink(\$t);
+&convertGalleryToLink(\$t, &getLang("en") );
 ok($r eq $t);
 
 $t = <<END
@@ -108,7 +109,7 @@ END
 ;
 
 $r = <<END
-[[Image:Sudoku dot notation.png|300px]]
+[[File:Sudoku dot notation.png|300px]]
 [[w:1|1]]
 [[w:2|2]]
 [[w:3|3]]
@@ -121,5 +122,21 @@ $r = <<END
 [[w:Number|Number]]
 END
 ;
-&convertImagemapToLink(\$t);
+&convertImagemapToLink(\$t, &getLang("en") );
+ok($r eq $t);
+
+$t = <<END
+<imagemap>
+File:Sudoku dot notation.png|300px
+default [[w:Number|Number]]
+</imagemap>
+END
+;
+
+$r = <<END
+[[File:Sudoku dot notation.png|300px]]
+[[w:Number|Number]]
+END
+;
+&convertImagemapToLink(\$t, &getLang("en") );
 ok($r eq $t);

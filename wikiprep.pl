@@ -142,14 +142,6 @@ my $maxTableRecursionLevels = 5;
 
 my %overrideTemplates = ();
 
-sub resolveNamespaceAliases($) {
-  my ($targetId) = @_;
-
-  $targetId =~ s/^Image:/File:/;
-
-  return $targetId;  
-}
-
 ##### Global variables #####
 
 my %namespaces;
@@ -391,6 +383,16 @@ sub isNamespaceOk($\%) {
   }
 
   $result; # return value
+}
+
+sub resolveNamespaceAliases($) {
+  my ($targetId) = @_;
+
+  while(my ($key, $value) = each(%{$langDB{'namespaceAliases'}})) {
+      $targetId =~ s/^\s*$key:/$value:/mig;
+  }
+
+  return $targetId;  
 }
 
 sub isTitleOkForLocalPages(\$) {
@@ -771,8 +773,8 @@ sub transform() {
     # to the file.
     &removeElements($page->{relatedArticles}, $page->{categories});
 
-    &convertGalleryToLink(\$page->{text});
-    &convertImagemapToLink(\$page->{text});
+    &convertGalleryToLink(\$page->{text}, $refToLangDB);
+    &convertImagemapToLink(\$page->{text}, $refToLangDB);
 
     # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
     # contain usable text for us.

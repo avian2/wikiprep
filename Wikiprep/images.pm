@@ -6,8 +6,8 @@ use strict;
 use Exporter 'import';
 our @EXPORT_OK = qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 
-sub convertGalleryToLink(\$) {
-  my ($refToText) = @_;
+sub convertGalleryToLink(\$\%) {
+  my ($refToText, $refToLangDB) = @_;
 
   # Galleries are delimited with <gallery> tags like this:
   #
@@ -22,23 +22,31 @@ sub convertGalleryToLink(\$) {
   1 while ( $$refToText =~ s/<gallery>
                              ([^<]*)
                              <\/gallery>
-                            /&convertOneGallery($1)/segx
+                            /&convertOneGallery($1, $refToLangDB)/segx
           );
 }
 
-sub convertOneGallery($) {
-  my ($galleryText) = @_;
+sub convertOneGallery($\%) {
+  my ($galleryText, $refToLangDB) = @_;
 
+  # Take care of namespace aliases
+
+  while(my ($key, $value) = each(%{$refToLangDB->{'namespaceAliases'}})) {
+      $galleryText =~ s/^\s*$key:/$value:/mig;
+  }
+  
   # Simply enclose each line that starts with Image: in [[ ... ]] and leave the links to be collected by
   # collectInternalLink()
+  
+  my $imageNamespace = $refToLangDB->{'imageNamespace'};
 
-  $galleryText =~ s/^\s*(Image:.*)\s*$/[[$1]]/mig;
+  $galleryText =~ s/^\s*($imageNamespace:.*)\s*$/[[$1]]/mig;
 
   return $galleryText;
 }
 
-sub convertImagemapToLink(\$) {
-  my ($refToText) = @_;
+sub convertImagemapToLink(\$\%) {
+  my ($refToText, $refToLangDB) = @_;
 
   # Imagemaps are similar to galleries, except that include extra markup which must be removed.
   #
@@ -65,15 +73,23 @@ sub convertImagemapToLink(\$) {
   1 while ( $$refToText =~ s/<imagemap>
                              ([^<]*)      
                              <\/imagemap>
-                            /&convertOneImagemap($1)/segx
+                            /&convertOneImagemap($1, $refToLangDB)/segx
           );
 }
 
 sub convertOneImagemap($) {
-  my ($imagemapText) = @_;
+  my ($imagemapText, $refToLangDB) = @_;
+  
+  # Take care of namespace aliases
+
+  while(my ($key, $value) = each(%{$refToLangDB->{'namespaceAliases'}})) {
+      $imagemapText =~ s/^\s*$key:/$value:/mig;
+  }
+
+  my $imageNamespace = $refToLangDB->{'imageNamespace'};
 
   # Convert image specification to a link
-  $imagemapText =~ s/^\s*(Image:.*)\s*$/[[$1]]/mig;
+  $imagemapText =~ s/^\s*($imageNamespace:.*)\s*$/[[$1]]/mig;
 
   # Remove comments
   $imagemapText =~ s/^\s*#.*$//mig;

@@ -1,16 +1,16 @@
 # Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
-6	5	91	
-1	5	155	Friesland
-7	5	184	
-8	5	219	
-9	5	252	
-10	5	283	
-11	5	321	
-12	5	358	
-13	5	489	
-14	5	520	
+6	5	90	
+1	5	152	Friesland
+7	5	181	
+8	5	215	
+9	5	247	
+10	5	277	
+11	5	314	
+12	5	350	
+13	5	479	
+14	5	509	
 15	5	7	Drenthe, the least crowded province
-16	5	78	Friesland is beautiful
-17	5	159	South Holland, the most crowded province
+16	5	77	Friesland is beautiful
+17	5	157	South Holland, the most crowded province
