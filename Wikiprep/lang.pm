@@ -29,6 +29,13 @@ my $langDB = {
                       11 => 'November', 
                       12 => 'December'
                   },
+
+                  # Aliases for namespaces. Link [[Image:X]] is identical to [[File:X]]. XML dump file
+                  # contains only pages in the File: namespace.
+
+                  'namespaceAliases' => {
+                      'Image' => 'File'
+                  },
     
                   # Following three are pre-compiled regular expressions used for recognizing links to 
                   # related articles.
@@ -70,21 +77,21 @@ my $langDB = {
                   'okNamespacesForPrescanning' => {
                       'Template' => 1, 
                       'Category' => 1, 
-                      'Image' => 1
+                      'File' => 1
                   },
 
                   # Pages in these namespaces end up in the final hgw.xml file.
 
                   'okNamespacesForTransforming' => {
                       'Category' => 1, 
-                      'Image' => 1
+                      'File' => 1
                   },
 
                   # Pages in these namespaces that don't exist in the XML dump but have a link to it, 
                   # get assigned a local ID. Broken links to other pages get ignored.
 
                   'okNamespacesForLocalPages' => {
-                      'Image' => 1
+                      'File' => 1
                   },
 
                   # Namespace for categories.
@@ -100,7 +107,7 @@ my $langDB = {
                   # namespace for images.
 
                   'imageNamespace' =>
-                      'Image',
+                      'File',
 
                   # Regular expression that matches names of templates that mark disambiguation articles.
 

@@ -142,6 +142,13 @@ my $maxTableRecursionLevels = 5;
 
 my %overrideTemplates = ();
 
+sub resolveNamespaceAliases($) {
+  my ($targetId) = @_;
+
+  $targetId =~ s/^Image:/File:/;
+
+  return $targetId;  
+}
 
 ##### Global variables #####
 
@@ -1332,6 +1339,8 @@ sub collectWikiLink($$$\@\@$) {
     # Empty link, bail out.
     return "";
   }
+
+  $link = &resolveNamespaceAliases($link);
 
   # Alternative text may be available after the pipeline symbol.
   # If the pipeline symbol is only used for masking parts of
