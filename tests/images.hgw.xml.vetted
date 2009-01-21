@@ -37,19 +37,50 @@
 Something.
 </text>
 </page>
-<page id="5" orglength="289" newlength="229" stub="0" categories="0" outlinks="4" urls="0">
-<title>AlgeriA</title>
+<page id="3" orglength="0" newlength="0" stub="0" categories="0" outlinks="0" urls="0">
+<title>File:J.jpg</title>
 <categories></categories>
-<links>6 2 7 8</links>
+<links></links>
 <urls>
 </urls>
 <text>
 
-		    <internal id="6">This is a cool image</internal>
+</text>
+</page>
+<page id="5" orglength="289" newlength="229" stub="0" categories="0" outlinks="4" urls="0">
+<title>AlgeriA</title>
+<categories></categories>
+<links>7 2 3 8</links>
+<urls>
+</urls>
+<text>
 
-<internal id="6">Another cool image</internal>
+		    <internal id="7">This is a cool image</internal>
 
-<internal id="6">Arg</internal>
+<internal id="7">Another cool image</internal>
+
+<internal id="7">Arg</internal>
+
+<internal id="8"><internal id="2">Gu</internal></internal>
+
+something
+		    something
+	    
+</text>
+</page>
+<page id="6" orglength="281" newlength="229" stub="0" categories="0" outlinks="4" urls="0">
+<title>AlgeriB</title>
+<categories></categories>
+<links>7 2 3 8</links>
+<urls>
+</urls>
+<text>
+
+		    <internal id="7">This is a cool image</internal>
+
+<internal id="7">Another cool image</internal>
+
+<internal id="7">Arg</internal>
 
 <internal id="8"><internal id="2">Gu</internal></internal>
 

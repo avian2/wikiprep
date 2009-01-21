@@ -67,4 +67,26 @@
 	    </text>
     </revision>
   </page>
+  <page>
+    <title>AlgeriB</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">
+		    &lt;gallery&gt;
+		    	File:Drenthe-Position.png|[[w:Drenthe|Drenthe]], the least crowded province   
+			Image:Flevoland-Position.png
+			File:Friesland-Position.png|[[Friesland]] is beautiful
+			Image:Gelderland-Position.png 
+			File:Groningen-Position.png
+			    File:Limburg-Position.png
+			    Image:Noord_Brabant-Position.png 
+			    File:Noord_Holland-Position.png
+			    File:Overijssel-Position.png
+			    File:Zuid_Holland-Position.png|[[w:South Holland|South Holland]], the most crowded province
+			    File:Utrecht-Position.png
+			    File:Zeeland-Position.png
+		    &lt;/gallery&gt;
+	    </text>
+    </revision>
+  </page>
 </mediawiki>

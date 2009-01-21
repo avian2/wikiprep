@@ -35,6 +35,13 @@
     </revision>
   </page>
   <page>
+    <title>File:J.jpg</title>
+    <id>3</id>
+    <revision>
+      <text xml:space="preserve"></text>
+    </revision>
+  </page>
+  <page>
     <title>AlgeriA</title>
     <id>5</id>
     <revision>
@@ -52,6 +59,27 @@
 		    [[Image:]]
 		    [[Image:|something]]
 		    [[:Image:|something]]
+	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>AlgeriB</title>
+    <id>6</id>
+    <revision>
+	    <text xml:space="preserve">
+		    [[File:Hello.jpg|This is a cool image]]
+
+		    [[File:Hello.jpg|Another cool image|100px]]
+
+		    [[File:Hello.jpg|100px|Arg|left]]
+
+		    [[File:Juhu.jpg|100px|[[Gu]]|right]]
+
+		    [[File:J.jpg|]]
+
+		    [[File:]]
+		    [[File:|something]]
+		    [[:File:|something]]
 	    </text>
     </revision>
   </page>
