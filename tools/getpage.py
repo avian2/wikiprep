@@ -4,6 +4,11 @@ import re
 import sys
 import time
 
+# FIXME:
+
+# http://en.wikipedia.org/wiki/Special:Export provides a way to get page
+# export with all required templates, without all this page scrapping nonsense
+
 # Wikipedia blocks urllib's default UA
 class AppURLopener(urllib.FancyURLopener):
 	version = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.12) Gecko/20080129 Iceweasel/2.0.0.12 (Debian-2.0.0.12-1)"
