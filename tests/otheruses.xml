@@ -1,0 +1,1328 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.14alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">File</namespace>
+      <namespace key="7">File talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Test</title>
+    <id>1</id>
+    <revision>
+	    <text>{{about||the Alicante wine region|Alicante (DO)|the Spanish [[provincia]]|Alicante (province)}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses4</title>
+    <id>2468023</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>216419000</id>
+      <timestamp>2008-06-01T15:48:10Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>display &quot;this page...&quot; outside ns:0, per editprotected</comment>
+      <text xml:space="preserve">{{dablink|{{#if: {{{1|}}}|This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is about {{{1}}}.&amp;#32;&amp;#32;}}{{#if:{{{2|}}}|For {{{2}}}, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;|For other uses, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.}}{{#if:{{{2|}}}|{{#if:{{{4|}}}|{{#ifeq:{{{4}}}|1|For other uses, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{4}}}, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{4|}}}|{{#if:{{{6|}}}|{{#ifeq:{{{6}}}|1|For other uses, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{6}}}, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{6|}}}|{{#if:{{{8|}}}|{{#ifeq:{{{8}}}|1|For other uses, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{8}}}, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}}}}}}}}}&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:!</title>
+    <id>4459157</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>113778758</id>
+      <timestamp>2007-03-09T06:48:22Z</timestamp>
+      <contributor>
+        <username>Quarl</username>
+        <id>59118</id>
+      </contributor>
+      <comment>{{template doc}}</comment>
+      <text xml:space="preserve">|&lt;noinclude&gt;{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:About</title>
+    <id>1682063</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>79263191</id>
+      <timestamp>2006-10-03T15:44:09Z</timestamp>
+      <contributor>
+        <username>Tizio</username>
+        <id>203600</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted edits by [[Special:Contributions/Tizio|Tizio]] ([[User talk:Tizio|talk]]) to last version by Drini</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Otheruses4]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dablink</title>
+    <id>945764</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>161709751</id>
+      <timestamp>2007-10-02T02:43:39Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;div class=&quot;dablink&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Distinguish</title>
+    <id>3406012</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>243605470</id>
+      <timestamp>2008-10-07T07:24:22Z</timestamp>
+      <contributor>
+        <username>Luna Santin</username>
+        <id>1587622</id>
+      </contributor>
+      <comment>colon params, so that we link regardless of title (cats, images)</comment>
+      <text xml:space="preserve">{{dablink|Not to be confused with [[:{{{1}}}|{{{1}}}]]&lt;!--
+--&gt;{{#if:{{{2|}}} |&lt;!--then:
+     --&gt;{{#if:{{{3|}}} |&lt;!--then:--&gt;, [[:{{{2}}}|{{{2}}}]]&lt;!--
+                    --&gt;|&lt;!--else:--&gt;&amp;nbsp;or [[{{{2}}}]].}}&lt;!--
+               --&gt;|&lt;!--else:--&gt;.&lt;!--
+--&gt;}}&lt;!--
+--&gt;{{#if:{{{3|}}} |&lt;!--then:
+     --&gt;{{#if:{{{4|}}} |&lt;!--then:--&gt;, [[:{{{3}}}|{{{3}}}]]&lt;!--
+                    --&gt;|&lt;!--else:--&gt;, or [[{{{3}}}]].}}&lt;!--
+--&gt;}}&lt;!--
+--&gt;{{#if:{{{4|}}} |&lt;!--then:--&gt;, or [[:{{{4}}}|{{{4}}}]].}}&lt;!--
+--&gt;}}&lt;noinclude&gt;
+
+
+&lt;br/&gt;{{documentation}}
+&lt;!--Please add any interwiki links etc on the /doc page, not here - thanks!--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Distinguish2</title>
+    <id>4080489</id>
+    <revision>
+      <id>208825862</id>
+      <timestamp>2008-04-28T19:57:02Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Adding {{Documentation}} in the noinclude area.</comment>
+      <text xml:space="preserve">{{dablink|Not to be confused with {{{1}}}.}}&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Documentation</title>
+    <id>13529042</id>
+    <revision>
+      <id>245845393</id>
+      <timestamp>2008-10-17T07:26:49Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Added a div with style=&quot;clear: both;&quot; to the bottom of the green box, so (right) floating boxes in the /doc doesn't flow outside the green box.</comment>
+      <text xml:space="preserve">&lt;div class=&quot;template-documentation&quot;&gt;&lt;!--
+
+These are the literal class definitions in common.css:
+ 
+/* For template documentation */
+.template-documentation {
+    clear: both;
+    margin: 1em 0 0 0;
+    border: 1px solid #aaa; 
+    background-color: #ecfcf4; 
+    padding: 5px;
+}
+
+
+ --&gt;{{#ifeq:{{{heading|μ}}}|&lt;!--**DEFINED BUT EMPTY**--&gt;
+  |&lt;!--**NOTHING**--&gt;
+  |&lt;div style=&quot;padding-bottom:3px; border-bottom: 1px solid #aaa; margin-bottom:1ex&quot;&gt;{{#ifeq:{{{content|μ}}}|μ
+   |&lt;span class=&quot;editsection plainlinks&quot; id=&quot;doc_editlinks&quot;&gt;{{#ifexist: {{{1|{{Documentation/docname}}}}}
+    |&lt;!--**    /doc EXISTS**   --&gt;[[{{fullurl:{{{1|{{Documentation/docname}}}}}|action=edit}} edit]]
+    |&lt;!--**/doc DOESN'T EXIST**--&gt;[[{{fullurl:{{{1|{{Documentation/docname }}}}}|action=edit&amp;preload=Template:Documentation/preload}} create]]
+   }}&lt;/span&gt;
+  }} &lt;span style=&quot;{{#if:{{{heading-style|}}}|{{{heading-style}}}|{{#ifeq:{{NAMESPACE}}|{{ns:template}}|font-weight: bold; font-size: 125%|font-size: 150%}}}}&quot;&gt;{{#if:{{{heading|}}}|{{{heading}}}|{{#ifeq:{{NAMESPACE}}|{{ns:template}}|[[Image:Template-info.svg|50px]] Template documentation|Documentation}}}}&lt;/span&gt;&lt;/div&gt;
+ }}&lt;!--
+
+ --&gt;&lt;div id=&quot;template_doc_page_transcluded&quot; class=&quot;dablink plainlinks&quot;&gt;&lt;!--
+  --&gt;{{#ifexist: {{{1|{{Documentation/docname}}}}}
+  |&lt;!--**/doc EXISTS**--&gt;This [[Wikipedia:Template documentation|documentation]] is [[Wikipedia:Transclusion|transcluded]] from [[{{{1|{{Documentation/docname}}}}}]]. &lt;small style=&quot;font-style: normal&quot;&gt;([{{fullurl:{{{1|{{Documentation/docname}}}}}|action=edit}} edit] &amp;#124; [{{fullurl:{{{1|{{Documentation/docname}}}}}|action=history}} history])&lt;/small&gt;&lt;br /&gt;
+ }}&lt;!--
+
+ --&gt;{{#switch: {{SUBPAGENAME}}
+   |sandbox|testcases=&lt;!--**DO NOT SHOW THESE LINKS ON THE SANDBOX/TESTCASES PAGES**--&gt;
+   |#default=
+    {{#switch: {{SUBJECTSPACE}}
+     |{{ns:template}}
+     |{{ns:user}}=
+      {{#ifexist: {{FULLPAGENAME}}/sandbox
+       |This template has a [[/sandbox|sandbox]] &lt;small style=&quot;font-style: normal&quot;&gt;([{{fullurl:{{ #rel2abs: /sandbox }}|action=edit}} edit])&lt;/small&gt; &lt;!--
+        --&gt;{{#ifexist: {{FULLPAGENAME}}/testcases
+         |and [[/testcases|testcases]] &lt;small style=&quot;font-style: normal&quot;&gt;([{{fullurl:{{ #rel2abs: /testcases }}|action=edit}} edit])&lt;/small&gt;}} for editors to experiment.
+       |{{#ifexist: {{FULLPAGENAME}}/testcases
+        |This template has [[/testcases|testcases]] &lt;small style=&quot;font-style: normal&quot;&gt;([{{fullurl:{{ #rel2abs: /testcases }}|action=edit}} edit])&lt;/small&gt; for editors to experiment.}}
+ }}}}}}
+ &lt;/div&gt;
+{{#if:{{{content|}}}|{{{content}}}|{{#ifexist:{{{1|{{Documentation/docname}}}}} | {{ {{{1|{{Documentation/docname}}}}} }} }}}}
+&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Documentation/docname</title>
+    <id>14206498</id>
+    <revision>
+      <id>198075530</id>
+      <timestamp>2008-03-13T23:23:58Z</timestamp>
+      <contributor>
+        <username>Edokter</username>
+        <id>1624037</id>
+      </contributor>
+      <minor/>
+      <comment>Fix cat</comment>
+      <text xml:space="preserve">{{#switch: {{SUBPAGENAME}}
+  |sandbox|testcases={{ #rel2abs: ../doc }}
+  |#default={{SUBJECTPAGENAME}}/doc
+}}&lt;noinclude&gt;
+[[Category:Template documentation|{{PAGENAME}}]]
+[[ja:Template:Documentation/docname]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Documentation subpage</title>
+    <id>7890381</id>
+    <revision>
+      <id>243381306</id>
+      <timestamp>2008-10-06T07:57:37Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Update to use the {{mbox}} so it looks good on top of other mboxes on documentation pages. And using mbox and not ombox since this template is used on several types of pages.</comment>
+      <text xml:space="preserve">{{#if:{{{Original-recipe|}}}{{{Orig|}}}
+|&lt;!-- reconstruction of original  Template:Template doc page pattern (now the redirected to &quot; Template:Documentation subpage&quot;) template... ca mid-November 2007 --&gt;
+&lt;table  class=&quot;messagebox&quot; style=&quot;line-height:1.1em;&quot; style=&quot; background:#f9f9b7;&quot;&gt;
+&lt;tr&gt; &lt;td rowspan=&quot;3&quot; style=&quot;width:60px;text-align:center;&quot; &gt; [[Image:Edit-paste.svg|40px]]&lt;/td&gt;
+&lt;td&gt; This is the [[Wikipedia:Template documentation|template documentation]]&lt;!--
+--&gt; page for [[{{NAMESPACE}}:{{{1|{{BASEPAGENAME}}}}}]].&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;small&gt;This page may not be intended to be viewed directly. &lt;br/
+&gt;Links using [[Help:Variable|variable]]s may appear broken; do not replace these with [[hardcoded]] page names or URLs.&lt;/small&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;{{#if:{{{inhib|x}}}{{{inhibit|}}}|&lt;!-- skip ---&gt;|&lt;includeonly&gt;[[Category:Template documentation|{{PAGENAME}}]]&lt;/includeonly&gt;
+}}&lt;!-- Please retain the above original template... 
+
+There are templates formulated to [[WP:DPP]] that need this.
+
+Of course, if you all want to start updating all the interwiki exported templates, go on making things more incompatible... queries to User:Fabartus.
+
+---&gt;
+|&lt;includeonly&gt;{{#ifeq: {{lc:{{SUBPAGENAME}}}} | {{{override|doc}}}
+  | &lt;!-- doc page --&gt;
+&lt;/includeonly&gt;{{
+    #ifeq: {{{doc-notice|show}}} | show
+    | {{mbox
+      | type = notice
+      | image = none
+      | text = 
+'''This is a [[Wikipedia:Template documentation|documentation]] [[Wikipedia:Subpages|subpage]] for {{{1|[[{{SUBJECTSPACE}}:{{BASEPAGENAME}}]]}}}''' &lt;small&gt;(see that page for the {{ #if: {{SUBJECTSPACE}} | {{lc:{{SUBJECTSPACE}}}} | article }} itself)&lt;/small&gt;.&lt;br /&gt;It contains usage information, [[Wikipedia:Categories|categories]] and other content that is not part of the original {{ #if: {{SUBJECTSPACE}} |{{lc:{{SUBJECTSPACE}}}} page|article}}. 
+      }}
+    }}{{DEFAULTSORT:{{PAGENAME}}}}{{
+    #if: {{{inhibit|}}}
+    | &lt;!-- skip --&gt;
+    | [[Category:{{
+      #if: {{SUBJECTSPACE}}
+      | {{SUBJECTSPACE}}
+      | Article
+    }} documentation&lt;noinclude&gt;| &lt;/noinclude&gt;]]
+  }}&lt;includeonly&gt;
+| &lt;!-- if not on a /doc subpage, do nothing --&gt;
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:For</title>
+    <id>1808502</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>173596827</id>
+      <timestamp>2007-11-25T01:27:40Z</timestamp>
+      <contributor>
+        <username>Picaroon</username>
+        <id>1110949</id>
+      </contributor>
+      <minor/>
+      <comment>fix</comment>
+      <text xml:space="preserve">{{dablink|For {{{1}}}, see [[:{{{2|{{PAGENAME}} (disambiguation)}}}|{{{2|{{PAGENAME}} (disambiguation)}}}]]{{#if:{{{3|}}}|&amp;#32;and [[{{{3}}}]]}}.}}&lt;noinclude&gt;{{pp-template|small=yes}}
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:For2</title>
+    <id>4388989</id>
+    <revision>
+      <id>133690390</id>
+      <timestamp>2007-05-26T18:59:54Z</timestamp>
+      <contributor>
+        <username>16@r</username>
+        <id>839108</id>
+      </contributor>
+      <comment>no autolinking on second parameter, this is the job of {{for}}</comment>
+      <text xml:space="preserve">{{dablink|For {{{1}}}, see {{{2}}}.}}&lt;noinclude&gt;{{pp-semi-template|small=yes}}
+
+
+&lt;!--Categories--&gt;
+[[Category:Disambiguation and redirection templates|For2]]
+
+&lt;!--Other languages--&gt;
+[[sl:Predloga:Zapomen2]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:For3</title>
+    <id>17867480</id>
+    <revision>
+      <id>224886429</id>
+      <timestamp>2008-07-10T21:09:44Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <comment>use dablink</comment>
+      <text xml:space="preserve">{{dablink|{{#if:{{{1|}}}|&quot;{{{1}}}&quot; redirects here.}} For the {{{2}}}, see [[{{#if:{{{1|}}}|{{{1}}}|{{PAGENAME}}}} ({{#if:{{{3|}}}|{{{3}}}|{{{2}}}}})]].}}&lt;noinclude&gt;
+{{pp-template}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherhurricaneuses</title>
+    <id>4089405</id>
+    <revision>
+      <id>234781061</id>
+      <timestamp>2008-08-28T13:48:45Z</timestamp>
+      <contributor>
+        <username>Kbdank71</username>
+        <id>197953</id>
+      </contributor>
+      <comment>Remove category per per [[WP:CFD|CFD]] [[Wikipedia:Categories for discussion/Log/2008 August 21|2008 August 21]]</comment>
+      <text xml:space="preserve">{{otheruses4|{{{2|}}}|other storms of the same name|{{{1|}}}}}&lt;noinclude&gt;
+[[Category:Disambiguation and redirection templates|Otherhurricaneuses]]
+[[Category:Hurricane templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherhurricaneuses3</title>
+    <id>4089747</id>
+    <revision>
+      <id>97299884</id>
+      <timestamp>2006-12-30T07:29:23Z</timestamp>
+      <contributor>
+        <username>Omegatron</username>
+        <id>18931</id>
+      </contributor>
+      <comment>Inherit styles and formatting from dablink template.  Should this be converted to otheruses4?</comment>
+      <text xml:space="preserve">{{dablink|This article is about the {{{1}}}. For the {{{2}}}, see the main article, [[{{{3}}}]]. For other storms of the same name, see [[{{{4|{{PAGENAME}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+[[Category:Disambiguation and redirection templates|Otherhurricaneuses3]]
+[[Category:Hurricane templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherpeople2</title>
+    <id>3526724</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>220289372</id>
+      <timestamp>2008-06-19T03:43:28Z</timestamp>
+      <contributor>
+        <username>Luna Santin</username>
+        <id>1587622</id>
+      </contributor>
+      <comment>new doc subpage (category moved there)</comment>
+      <text xml:space="preserve">{{dablink|For other persons of the same name, see [[{{{1}}}]].}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherpeople3</title>
+    <id>7514955</id>
+    <revision>
+      <id>227775239</id>
+      <timestamp>2008-07-25T05:15:29Z</timestamp>
+      <contributor>
+        <username>Kimchi.sg</username>
+        <id>295955</id>
+      </contributor>
+      <comment>fix protection template placement - should always be in &lt;noinclude&gt; section for templates</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{dablink|{{#if: {{{1|}}}|This article is about {{{1}}}.&amp;#32;|}}For {{#if: {{{2|}}}|{{{2}}}|other people named {{PAGENAME}}}}, see [[{{#if: {{{3|}}}|{{{3}}}|{{PAGENAME}} (disambiguation)}}]].}}
+&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherpeople4</title>
+    <id>10336882</id>
+    <revision>
+      <id>260334355</id>
+      <timestamp>2008-12-27T15:59:17Z</timestamp>
+      <contributor>
+        <username>J.delanoy</username>
+        <id>2372780</id>
+      </contributor>
+      <minor/>
+      <comment>template</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{dablink|{{#if: {{{1|}}}|This article is about {{{1}}}.&amp;#32;|}} For {{#if: {{{2|}}}|{{{2}}}|other people named {{PAGENAME}}}}, see [[{{#if: {{{3|}}}|{{{3}}}|{{PAGENAME}}}}]].}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherpersons</title>
+    <id>1459772</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>206472602</id>
+      <timestamp>2008-04-18T11:53:38Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Added {{pp-template|small=yes}}.</comment>
+      <text xml:space="preserve">{{dablink|For other persons named {{{1|{{PAGENAME}}}}}, see [[{{{2|{{{1|{{PAGENAME}}}}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherplaces</title>
+    <id>998366</id>
+    <revision>
+      <id>224830003</id>
+      <timestamp>2008-07-10T16:36:45Z</timestamp>
+      <contributor>
+        <username>Trevor MacInnis</username>
+        <id>73333</id>
+      </contributor>
+      <comment>&lt;noinclude&gt;{{pp-template}}&lt;/noinclude&gt;</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{pp-template}}&lt;/noinclude&gt;&lt;includeonly&gt;{{dablink|For other places with the same name, see [[{{{1|{{PAGENAME}}}}} (disambiguation)]].}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherplaces2</title>
+    <id>1426200</id>
+    <revision>
+      <id>260334324</id>
+      <timestamp>2008-12-27T15:59:01Z</timestamp>
+      <contributor>
+        <username>J.delanoy</username>
+        <id>2372780</id>
+      </contributor>
+      <minor/>
+      <comment>template</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{dablink|For other places with the same name, see [[{{{1}}} (disambiguation)]].}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+{{pp-template|small=yes}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherplaces3</title>
+    <id>5803369</id>
+    <revision>
+      <id>260334560</id>
+      <timestamp>2008-12-27T16:01:06Z</timestamp>
+      <contributor>
+        <username>J.delanoy</username>
+        <id>2372780</id>
+      </contributor>
+      <minor/>
+      <comment>template</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{dablink|For other places with the same name, see [[{{{1}}}]].}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+{{pp-template|small=yes}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses</title>
+    <id>693634</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161704458</id>
+      <timestamp>2007-10-02T02:11:32Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">{{Otheruses4|||{{{1|{{PAGENAME}} (disambiguation)}}}}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses-section</title>
+    <id>19396020</id>
+    <revision>
+      <id>239731249</id>
+      <timestamp>2008-09-20T05:02:29Z</timestamp>
+      <contributor>
+        <username>SMcCandlish</username>
+        <id>378390</id>
+      </contributor>
+      <minor/>
+      <comment>undo text</comment>
+      <text xml:space="preserve">&lt;div class=&quot;noprint relarticle&quot; style=&quot;padding-left: 25px; font-style: italic;&quot;&gt;{{#if: {{{1|}}}|This section is about {{{1}}}.&amp;#32;&amp;#32;}}{{#if:{{{2|}}}|For {{{2}}}, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;|For other uses, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.}}{{#if:{{{2|}}}|{{#if:{{{4|}}}|{{#ifeq:{{{4}}}|1|For other uses, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{4}}}, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{4|}}}|{{#if:{{{6|}}}|{{#ifeq:{{{6}}}|1|For other uses, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{6}}}, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{6|}}}|{{#if:{{{8|}}}|{{#ifeq:{{{8}}}|1|For other uses, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{8}}}, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}}}}}}}&lt;/div&gt;&lt;noinclude&gt;
+&lt;!--Categories and interwikis go at the bottom of the /doc page.--&gt;
+{{Documentation}}
+{{Documentation|Template:Otheruses4/doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses1</title>
+    <id>2134066</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>137771566</id>
+      <timestamp>2007-06-12T22:23:03Z</timestamp>
+      <contributor>
+        <username>MZMcBride</username>
+        <id>212624</id>
+      </contributor>
+      <comment>updated code for consistency</comment>
+      <text xml:space="preserve">{{otheruses4|{{{1}}}||{{PAGENAME}} (disambiguation)}}&lt;noinclude&gt;{{pp-template|small=yes}}
+{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses2</title>
+    <id>1231821</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>233728797</id>
+      <timestamp>2008-08-23T13:09:34Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>use documentation</comment>
+      <text xml:space="preserve">{{otheruses4|||{{{1}}} (disambiguation)}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses3</title>
+    <id>1550679</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>209319161</id>
+      <timestamp>2008-04-30T21:31:50Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>use documentaiton</comment>
+      <text xml:space="preserve">{{otheruses4|||{{{1}}}}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses4/doc</title>
+    <id>12693592</id>
+    <revision>
+      <id>258824146</id>
+      <timestamp>2008-12-18T18:59:33Z</timestamp>
+      <contributor>
+        <username>Lambiam</username>
+        <id>745100</id>
+      </contributor>
+      <comment>+''Note. When used in main space, the word &quot;page&quot; in the following hat notes is replaced by &quot;article&quot;.''</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{template doc page transcluded}}&lt;/includeonly&gt;&lt;noinclude&gt;{{template doc page viewed directly}}&lt;/noinclude&gt;
+&lt;!-- EDIT TEMPLATE DOCUMENTATION BELOW THIS LINE --&gt;
+{{tl|otheruses4}} is a commonly used [[Wikipedia:Hatnote|hatnote]] on Wikipedia, and so should be placed at the top of an article, linking the reader to articles with similar titles or concepts that they may have been seeking instead.
+
+For quicker and more intuitive use, &lt;nowiki&gt;{{&lt;/nowiki&gt;'''about'''&lt;nowiki&gt;}}&lt;/nowiki&gt; redirects here, and so can be used interchangeably with &lt;nowiki&gt;{{otheruses4}}&lt;/nowiki&gt;.
+
+For reference, there is information about [[Wikipedia:Hatnote|hatnotes in general]], [[Wikipedia:Hatnote#Examples of proper use|when and how to use them]], a complete [[Wikipedia:Hatnote#Templates|list of the other hatnotes]] available, and [[Wikipedia:Otheruses templates (example usage)|examples of their use]].
+
+For further information, see the [[Template talk:Otheruses4|talk page]].
+
+==Usage==
+''Note. When used in main space, the word &quot;page&quot; in the following hat notes is replaced by &quot;article&quot;.''
+
+* &lt;code&gt;&lt;nowiki&gt;{{otheruses4|USE1}}&lt;/nowiki&gt;&lt;/code&gt;
+: {{otheruses4|USE1|other uses|PAGE NAME (disambiguation)}}
+* &lt;code&gt;&lt;nowiki&gt;{{otheruses4|USE1|USE2}}&lt;/nowiki&gt;&lt;/code&gt;
+: {{otheruses4|USE1|USE2|PAGE NAME (disambiguation)}}
+* &lt;code&gt;&lt;nowiki&gt;{{otheruses4|USE1|USE2|PAGE2}}&lt;/nowiki&gt;&lt;/code&gt;
+: {{otheruses4|USE1|USE2|PAGE2}}
+* &lt;code&gt;&lt;nowiki&gt;{{otheruses4|USE1|USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}}&lt;/nowiki&gt;&lt;/code&gt;
+: {{otheruses4|USE1|USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}}
+
+When there as many other uses as in the last example, it would be more appropriate to create a [[Wikipedia:Disambiguation|disambiguation page]].
+
+Like all templates, it works with or without an initial capital letter; in addition, the word 'otheruses4' can be also replaced by 'about'. For example:
+
+* &lt;code&gt;&lt;nowiki&gt;{{about|USE1}}&lt;/nowiki&gt;&lt;/code&gt;
+: {{about|USE1|other uses|PAGE NAME (disambiguation)}}
+
+{{Otheruses templates}}
+
+&lt;noinclude&gt;[[Category:Template documentation|{{PAGENAME}}]]&lt;/noinclude&gt;&lt;includeonly&gt;
+&lt;!-- ADD CATEGORIES BELOW THIS LINE --&gt;
+[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]
+&lt;!-- ADD INTERWIKIS BELOW THIS LINE --&gt;
+[[fr:Autre4]]
+[[lv:Veidne:Otheruses4]]
+[[mk:Шаблон:Другизначења4]]
+[[sl:Predloga:Drugipomeni4]]
+[[vi:Tiêu bản:Otheruses4]]
+[[zh-yue:Template:Otheruses4]]
+[[sv:Mall:Hänvisning]]
+&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses5</title>
+    <id>9165851</id>
+    <revision>
+      <id>136613383</id>
+      <timestamp>2007-06-07T15:25:46Z</timestamp>
+      <contributor>
+        <username>Tigers boy</username>
+        <id>158530</id>
+      </contributor>
+      <text xml:space="preserve">{{dablink|{{#if: {{{1|}}}|This article is about {{{1}}}.&amp;#32;|}}For {{#if: {{{2|}}}|{{{2}}}|other uses}}, see [[{{#if: {{{3|}}}|{{{3}}}|{{PAGENAME}} (disambiguation)}}]] and [[{{#if: {{{4|}}}|{{{4}}}|{{PAGENAME}}s (disambiguation)}}]].}}&lt;noinclude&gt;[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses6</title>
+    <id>10464416</id>
+    <revision>
+      <id>226715831</id>
+      <timestamp>2008-07-19T23:57:22Z</timestamp>
+      <contributor>
+        <username>Prodego</username>
+        <id>451766</id>
+      </contributor>
+      <comment>small</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{pp-template|small=yes}}&lt;/noinclude&gt;
+{{dablink|For other uses, see [[{{{1|{{PAGENAME}} (disambiguation)}}}]] and [[{{{2|{{PAGENAME}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+
+----
+For further information, see talk page.
+[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]
+&lt;!--Other languages--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses templates</title>
+    <id>4290112</id>
+    <revision>
+      <id>260337110</id>
+      <timestamp>2008-12-27T16:22:13Z</timestamp>
+      <contributor>
+        <ip>203.171.122.94</ip>
+      </contributor>
+      <comment>grammar fix to messagebox</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;&lt;center&gt;
+{| class=&quot;messagebox&quot; style=&quot;width:80%; border:1px solid #c0c090; background:#f8eaba; margin:2px 4px 2px 4px;&quot;
+|- style=&quot;vertical-align:top;&quot;
+|align=&quot;center&quot; style=&quot;width:60px; padding:1ex;&quot;| [[Image:Edit-paste.svg|none|40px]]
+| '''This is the template documentation box for all of the Otheruses templates.'''&lt;br/&gt;&lt;hr/&gt;Such templates are not necessarily intended to be viewed directly. If they use [[w:Help:Variable|variable]]s, some links may appear broken. Do not replace these variables with [[w:Hard coding|hardcoded]] page names or URLs.
+|}&lt;br/&gt;&lt;hr/&gt;
+&lt;/center&gt;
+&lt;/noinclude&gt;&lt;!-- 
+----
+Note this page is apparently included by a whole list of /doc pages, So this should work through and tag them all properly, assuming they are formatted the same ways. 
+----
+---&gt;&lt;div style=&quot;float: right; padding: 0 1em;&quot;&gt;{{tnavbar|otheruses templates}}&lt;/div&gt;
+== Otheruses templates ==
+To discuss these templates as a whole, please see [[Wikipedia talk:Disambiguation]]  If you wish to discuss general wordings, rather than the wording or formatting of this specific template, don't post here, or else what you say will probably go unnoticed.
+
+For a summary page on how to use these templates, see [[Wikipedia:Otheruses templates (example usage)]].
+
+=== Generic ===
+* &lt;code&gt;{{[[Template:Dablink|Dablink]]|TEXT}}&lt;/code&gt;: {{dablink|TEXT}}
+::For example, &lt;nowiki&gt;{{dablink|For other senses of this term, see [[etc...]]}}&lt;/nowiki&gt;. This template is adaptable, but fails to standardize [[Wikipedia:hatnotes|hatnotes]].
+*&lt;code&gt;{{[[Template:Selfref|Selfref]]|TEXT}}&lt;/code&gt;: {{Selfref|TEXT}}
+::(Similar to [[Template:Dablink|Dablink]], but used for messages that wouldn't make sense on mirrors of Wikipedia, such as a link in the main article namespace that links to one in the Wikipedia namespace. ''See [[Wikipedia:Avoid self-references]] for more details''.)
+
+=== Otheruses ===
+''Note. When used in main space, the word &quot;page&quot; in the following hat notes is replaced by &quot;article&quot;.''
+
+{{tl|About}} is the main template for giving other uses; it redirects to {{tl|otheruses4}}.
+
+* &lt;code&gt;{{[[Template:Otheruses4|otheruses4]]|USE1}}&lt;/code&gt; (disambiguous): {{otheruses4|USE1}}
+* &lt;code&gt;{{[[Template:Otheruses4|otheruses4]]|USE1|USE2}}&lt;/code&gt;: {{otheruses4|USE1|USE2}}
+* &lt;code&gt;{{[[Template:Otheruses4|otheruses4]]|USE1|USE2|PAGE2}}&lt;/code&gt;: {{otheruses4|USE1|USE2|PAGE2}}
+* &lt;code&gt;{{[[Template:About|About]]||USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}} &lt;/code&gt; (alias and empty first param):
+:{{About||USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}} 
+* &lt;code&gt;{{[[Template:otheruses4|otheruses4]]|USE1|USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}} &lt;/code&gt; (fully specified):
+:{{otheruses4|USE1|USE2|PAGE2|USE3|PAGE3|USE4|PAGE4|USE5|PAGE5}} 
+
+====Variations====
+There are also variations of {{tl|about}}. These serve the same purpose, and are marginally easier to use for each individual purpose, but overall, it is complicated to have so many different templates; it could be argued that the time saved using them is lost as other editors have to familiarise themselves with them.
+
+All of these templates are special cases of {{tl|about}}.
+
+* &lt;code&gt;{{[[Template:Otheruses|otheruses]]}}&lt;/code&gt;: {{otheruses}}
+Note: &lt;code&gt;{{tlx|about}}&lt;/code&gt; will produce the same result.
+* &lt;code&gt;{{[[Template:Otheruses1|otheruses1]]|USE}}&lt;/code&gt;: {{otheruses1|USE}}
+Note: &lt;code&gt;{{tlx|about|USE}}&lt;/code&gt; will produce the same result.
+* &lt;code&gt;{{[[Template:Otheruses2|otheruses2]]|PAGE}}&lt;/code&gt;: {{otheruses2|PAGE}}
+Note: this simply adds &quot;(disambiguation)&quot; to what you input as PAGE.
+* &lt;code&gt;{{[[Template:Otheruses3|otheruses3]]|PAGE}}&lt;/code&gt;: {{otheruses3|PAGE}}
+Note: &lt;code&gt;{{tlx|about|{{!}}{{!}}PAGE}}&lt;/code&gt; will produce the same result - note the two empty parameters.
+* &lt;code&gt;{{[[Template:Otheruses5|otheruses5]]}}&lt;/code&gt;: {{otheruses5}}
+Note: this is for when there is both a singular and plural disambiguation page; it only works when the plural is formed simply by adding &quot;s&quot; at the end.
+* &lt;code&gt;{{[[Template:Otheruses6|otheruses6]]|PAGE1|PAGE2}}&lt;/code&gt;: {{otheruses6|PAGE1|PAGE2}}
+Note: this is for when there are two disambiguation pages, such as noun and adjective, or singular and irregular plural. There are only two parameters and at least one is required.
+&lt;br&gt;Note: this cannot be recreated with {{tlx|about}} - only with {{tlx|dablink}} or {{tlx|for}}.
+* &lt;code&gt;{{[[Template:This|This]]|USE|PAGE}}&lt;/code&gt;: {{this|USE|PAGE}}
+Note: {{tlx|about|USE|{{!}}PAGE}} will produce the same result - note the empty parameter.
+* &lt;code&gt;{{[[Template:Otheruses-section]]}}&lt;/code&gt;: {{Otheruses-section}}
+Note: This template is precisely the same as {{tl|Otheruses4}}, except it says &quot;section&quot; instead of &quot;article&quot; or &quot;page&quot;, and indents only as far as {{tl|Main}} and other section quasi-hatnotes.
+
+===== For (other topic) =====
+{{tl|for}} (and {{tl|for2}}) can be used instead of {{tl|about}} to not include the first part - &quot;This article is about USE&quot;. However, this can also simply be achieved with an empty first parameter in {{tl|about}}.&lt;br&gt;
+For example, &lt;code&gt;{{[[Template:For|For]]|OTHER TOPIC|PAGE}}&lt;/code&gt; becomes &lt;code&gt;{{[[Template:About|About]]||OTHER TOPIC|PAGE}}&lt;/code&gt;.&lt;br&gt;
+{{tl|for3}} is somewhat different, appending the word ''the'' in its mention of the second parameter, then generates a link using either the second or (if present) the third parameter as a parenthetical. {{tl|the}} is simply a rendering of {{tl|for3}} without bothering with the optional first argument.
+
+* &lt;code&gt;{{[[Template:For|For]]}}&lt;/code&gt; (disambiguous): {{for}}
+* &lt;code&gt;{{[[Template:For|For]]|OTHER TOPIC}}&lt;/code&gt; (disambiguous): {{for|OTHER TOPIC}}
+* &lt;code&gt;{{[[Template:For|For]]|OTHER TOPIC|PAGE}}&lt;/code&gt;: {{for|OTHER TOPIC|PAGE}}
+* &lt;code&gt;{{[[Template:For|For]]|OTHER TOPIC|PAGE1|PAGE2}}&lt;/code&gt;: {{for|OTHER TOPIC|PAGE1|PAGE2}}
+* &lt;code&gt;{{[[Template:For2|For2]]|OTHER TOPIC|&lt;nowiki&gt;CUSTOM TEXT&lt;/nowiki&gt;}}&lt;/code&gt;: {{for2|OTHER TOPIC|CUSTOM TEXT}}
+* &lt;code&gt;{{[[Template:For3|For3]]||DIFFERENT MEANING|}}&lt;/code&gt;: {{for3||DIFFERENT MEANING}}
+* &lt;code&gt;{{[[Template:For3|For3]]|OTHER TOPIC|DIFFERENT MEANING}}&lt;/code&gt;: {{for3|OTHER TOPIC|DIFFERENT MEANING}}
+* &lt;code&gt;{{[[Template:For3|For3]]|OTHER TOPIC|DIFFERENT MEANING|CUSTOM PARENTHETICAL}}&lt;/code&gt;: {{for3|OTHER TOPIC|DIFFERENT MEANING|CUSTOM PARENTHETICAL}}
+* &lt;code&gt;{{[[Template:The|The]]|DIFFERENT MEANING}}&lt;/code&gt;: {{the|DIFFERENT MEANING}}
+* &lt;code&gt;{{[[Template:The|The]]|DIFFERENT MEANING|CUSTOM PARENTHETICAL}}&lt;/code&gt;: {{the|DIFFERENT MEANING|CUSTOM PARENTHETICAL}}
+===== See also =====
+* &lt;code&gt;{{[[Template:See also|See also]]|OTHER TOPIC}}&lt;/code&gt;: {{See also|OTHER TOPIC}}
+This can be used when OTHER TOPIC is related to that of the current article, and already contains a self-explanatory parenthetical.
+ 
+==== Other people ====
+* &lt;code&gt;{{[[Template:Otherpersons|otherpersons]]}}&lt;/code&gt; (disambiguous): {{Otherpersons}}
+* &lt;code&gt;{{[[Template:Otherpersons|otherpersons]]|USE}}&lt;/code&gt; (disambiguous): {{Otherpersons|USE}}
+* &lt;code&gt;{{[[Template:Otherpersons|otherpersons]]|USE|PAGE}}&lt;/code&gt;: {{Otherpersons|USE|PAGE}}
+* &lt;code&gt;{{[[Template:Otherpeople2|otherpeople2]]|PAGE}}&lt;/code&gt;: {{Otherpeople2|PAGE}}
+* &lt;code&gt;{{[[Template:Otherpeople3|otherpeople3]]|USE1|USE2}}&lt;/code&gt;: {{Otherpeople3|USE1|USE2}}
+* &lt;code&gt;{{[[Template:Otherpeople4|otherpeople4]]|USE1|USE2|PAGE}}&lt;/code&gt;: {{Otherpeople4|USE1|USE2|PAGE}}
+
+==== Other places ====
+*{{tl|Otherplaces}}, analogous to {{tl|Otheruses}}
+{{Otherplaces}}
+*{{tl|Otherplaces2}}, analogous to {{tl|Otheruses2}}
+{{Otherplaces2|DifferentArticleName}}
+*{{tl|Otherplaces3}}, analogous to {{tl|Otheruses3}}
+{{Otherplaces3|DifferentArticleName}}
+
+==== Otherhurricaneuses ====
+: For articles on [[storm]]s.
+* &lt;code&gt;{{[[Template:Otherhurricaneuses|otherhurricaneuses]]}}&lt;/code&gt; (disambiguous): {{Otherhurricaneuses}}
+* &lt;code&gt;{{[[Template:Otherhurricaneuses|otherhurricaneuses]]|DISAMBIG}}&lt;/code&gt;: {{Otherhurricaneuses|DISAMBIG}}
+* &lt;code&gt;{{[[Template:Otherhurricaneuses|otherhurricaneuses]]|DISAMBIG|THIS}}&lt;/code&gt;: {{Otherhurricaneuses|DISAMBIG|THIS}}
+* &lt;code&gt;{{[[Template:Otherhurricaneuses3|otherhurricaneuses3]]|USE1|USE2|MAIN}}&lt;/code&gt;: {{Otherhurricaneuses3|USE1|USE2|MAIN}}
+
+==== Otherusesof (topic) ====
+* &lt;code&gt;{{[[Template:Otherusesof|otherusesof]]}} (disambiguous)&lt;/code&gt;: {{otherusesof}}
+* &lt;code&gt;{{[[Template:Otherusesof|otherusesof]]|TOPIC}}&lt;/code&gt;: {{otherusesof|TOPIC}}
+* &lt;code&gt;{{[[Template:Otherusesof|otherusesof]]|TOPIC|PAGE}}&lt;/code&gt;: {{otherusesof|TOPIC|PAGE}}
+
+=== Redirect ===
+
+* &lt;code&gt;{{[[Template:Redirect|Redirect]]|REDIRECT}}&lt;/code&gt; (disambiguous): {{Redirect|REDIRECT}}
+* &lt;code&gt;{{[[Template:Redirect|Redirect]]|REDIRECT||PAGE}}&lt;/code&gt;: {{Redirect|REDIRECT||PAGE}}
+* &lt;code&gt;{{[[Template:Redirect|Redirect]]|REDIRECT|USE|PAGE}}&lt;/code&gt;: {{Redirect|REDIRECT|USE|PAGE}}
+* &lt;code&gt;{{[[Template:Redirect2|Redirect2]]|REDIRECT1|REDIRECT2}}&lt;/code&gt; (disambiguous): {{Redirect2|REDIRECT1|REDIRECT2}}
+* &lt;code&gt;{{[[Template:Redirect2|Redirect2]]|REDIRECT1|REDIRECT2|USE|PAGE}}&lt;/code&gt;: {{Redirect2|REDIRECT1|REDIRECT2|USE|PAGE}}
+* &lt;code&gt;{{[[Template:Redirect3|Redirect3]]|REDIRECT|TEXT}}&lt;/code&gt;: {{Redirect3|REDIRECT|TEXT}}
+* &lt;code&gt;{{[[Template:Redirect4|Redirect4]]|REDIRECT1|REDIRECT2}}&lt;/code&gt; (disambiguous): {{Redirect4|REDIRECT1|REDIRECT2}}
+* &lt;code&gt;{{[[Template:Redirect5|Redirect5]]|REDIRECT|USE1|PAGE1|USE2|PAGE2}}&lt;/code&gt;: {{Redirect5|REDIRECT|USE1|PAGE1|USE2|PAGE2}}
+* &lt;code&gt;{{[[Template:Redirect5|Redirect5]]|REDIRECT|USE1|PAGE1||PAGE2}}&lt;/code&gt;: {{Redirect5|REDIRECT|USE1|PAGE1||PAGE2}}
+* &lt;code&gt;{{[[Template:Redirect6|Redirect6]]|REDIRECT|USE1|PAGE1||}}&lt;/code&gt;: {{Redirect6|REDIRECT|USE1|PAGE1||}}
+* &lt;code&gt;{{[[Template:Redirect8|Redirect8]]|REDIRECT1|REDIRECT2}}&lt;/code&gt;: {{Redirect8|REDIRECT1|REDIRECT2}}
+
+=== &quot;Not to be confused with&quot;... ===
+* &lt;code&gt;{{[[Template:Distinguish|Distinguish]]|PAGE}}&lt;/code&gt;: {{Distinguish|PAGE}}
+* &lt;code&gt;{{[[Template:Distinguish2|Distinguish2]]|TEXT}}&lt;/code&gt;: {{Distinguish2|TEXT}}
+
+=== Notes ===
+'''Do not use [[Wikipedia:Template substitution|subst:]] with these templates''', as that will prevent: 
+#propagating changes as the template is modified; and 
+#the ''[[Special:Whatlinkshere/{{NAMESPACE}}:{{PAGENAME}}|What links here]]'' (WLH) listing.
+
+
+'''Please do not edit these templates unless you know what you are doing'''
+
+These templates may be used in thousands of articles, and changing the syntax could therefore break thousands of articles.  If you wish to edit a disambiguation template first ask yourself:
+# Is there already another template that will do this job?  We have lots of disambiguation templates already, see [[:Category:Disambiguation and redirection templates]].
+# Do I really need a template for this?  Will it ever get used on any other articles, or should I just use {{tl|dablink}} instead?
+# Do I know what will happen if I change the parameters around?  Will it break existing uses of the template, and if so, can I fix them all?
+&lt;div style=&quot;text-align: right&quot;&gt;&lt;small&gt;(This box appears in [[Special:Whatlinkshere/Template:Otheruses templates|several articles in Template talk and Wikipedia namespaces]].)&lt;/small&gt;&lt;/div&gt;
+&lt;includeonly&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{Documentation}}
+&lt;!-- PLEASE ADD CATEGORIES AND INTERWIKIS TO THE /doc SUBPAGE, THANKS --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otherusesof</title>
+    <id>2593891</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>159463378</id>
+      <timestamp>2007-09-21T20:20:25Z</timestamp>
+      <contributor>
+        <username>MZMcBride</username>
+        <id>212624</id>
+      </contributor>
+      <comment>updated template</comment>
+      <text xml:space="preserve">{{dablink|For other uses of &quot;{{{1|{{PAGENAME}}}}}&quot;, see [[{{{2|{{{1|{{PAGENAME}}}}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+----
+For further information, see the [[{{TALKPAGENAME}}|talk page]].
+[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]
+&lt;!--Other languages--&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-meta</title>
+    <id>13371038</id>
+    <revision>
+      <id>262629885</id>
+      <timestamp>2009-01-07T22:42:47Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Removed &quot;small=maybe&quot; case per talk</comment>
+      <text xml:space="preserve">{{#ifeq:{{lc:{{{small|}}}}}|yes|
+&lt;div class=&quot;metadata plainlinks topicon&quot; id=&quot;protected-icon&quot; style=&quot;position:absolute; z-index:100; right:55px; top:10px;&quot;&gt;
+{{#tag:imagemap|
+Image:{{{image|{{#switch:{{lc:{{{type}}}}}
+ |full=Padlock.svg
+ |semi=Padlock-silver-medium.svg
+ |move=Padlock-olive.svg
+ |indef=Padlock-red.svg
+ |office=Padlock-black.svg
+ |create=Padlock-skyblue.svg
+ |#default=Transparent.gif
+}}}}}{{!}}20px{{!}}{{{icon-text|{{#switch:{{lc:{{{type}}}}}
+ |full=Fully protected
+ |semi=Semi-protected
+ |move=Move protected
+ |indef=Permanently protected
+ |create=Protected from creation
+ |office=Protected by the Wikimedia Office
+ |#default=&lt;!--null--&gt;
+}}}}}
+default [[{{{icon-link|Wikipedia:Protection policy#{{lc:{{{type}}}}}}}}|{{{icon-text|This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is {{#switch:{{lc:{{{type}}}}}
+ |semi=semi-
+ |move=move-
+ |indef=permanently&lt;nowiki&gt; &lt;/nowiki&gt;
+ |create=creation-
+ |office=&lt;!--null, but should this have a special tag?--&gt;
+ |full
+ |#default=&lt;!--null--&gt;
+}}protected{{#ifeq:{{lc:{{{type}}}}}|indef||{{#if:{{{expiry|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;until {{#time:F j, Y|{{{expiry}}}}}}}}}{{#if:{{{icon-reason|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;{{{icon-reason}}}}}.}}}]]
+desc none
+}}
+&lt;/div&gt;
+|&lt;!-- else, not small --&gt;
+{{mbox 
+| demospace = {{{demospace|}}}
+| type = protection
+| image = [[Image:{{{image|{{#switch:{{lc:{{{type}}}}}
+ |full=Padlock.svg
+ |semi=Padlock-silver-medium.svg
+ |move=Padlock-olive.svg
+ |indef=Padlock-red.svg
+ |office=Padlock-black.svg
+ |create=Padlock-skyblue.svg
+ |#default=Transparent.gif
+}}}}}|40px|{{{icon-text|This page is {{#switch:{{lc:{{{type}}}}}
+ |semi=semi-
+ |move=move-
+ |indef=permanently&lt;nowiki&gt; &lt;/nowiki&gt;
+ |create=creation-
+ |office=&lt;!--null, but should this have a special tag?--&gt;
+ |full
+ |#default=&lt;!--null--&gt;
+}}protected.}}}]]
+| text = '''{{{reason-text|{{#switch:{{lc:{{{type}}}}}
+ |full=This page is currently [[Wikipedia:This page is protected|protected]] from editing
+ |semi=Editing of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} by [[Wikipedia:User access levels#Autoconfirmed_users|new]] or [[Wikipedia:User access levels#Anonymous_users|unregistered]] users is currently [[Wikipedia:Protection policy|disabled]]
+ |move=This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is currently [[Wikipedia:This page is protected|protected]] from [[Help:Moving a page|page moves]]
+ |indef=This page is [[Wikipedia:This page is protected|protected]] from editing ''indefinitely''
+ |office=This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is currently [[Wikipedia:This page is protected|protected]] from editing
+ |create=[[Help:Starting a new page|Recreation]] of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} [[Wikipedia:This page is protected|has been disabled]]
+}}{{#ifeq:{{lc:{{{type}}}}}|indef||{{#if:{{{expiry|}}}|&amp;#32;until {{#time:[[F j]], [[Y]]|{{{expiry}}}}}}}}}{{{reason&lt;includeonly&gt;|&lt;/includeonly&gt;}}}.}}}'''&lt;br /&gt; {{{explanation-text|{{#ifeq:{{lc:{{{dispute}}}}}|yes|This protection is '''not''' an endorsement of the {{#ifeq:{{{type}}}|move|[{{fullurl:Special:Log|type=move&amp;page={{FULLPAGENAMEE}}}} current title]|[{{fullurl:{{FULLPAGENAMEE}}|action=history}} current version]}}.}} See the [[Wikipedia:Protection policy|protection policy]] and [{{fullurl:Special:Log|type=protect&amp;page={{FULLPAGENAMEE}}}} protection log] for more details. {{#switch:{{lc:{{{type}}}}}
+ |full|indef=Please discuss any changes on the [[{{TALKPAGENAME}}|talk page]]; you may use the {{tlx|editprotected}} template to ask an [[Wikipedia:Administrator|administrator]] to make the edit if it is supported by [[Wikipedia:Consensus|consensus]]. {{#ifeq:{{NAMESPACE}}|{{ns:8}}&lt;!--MediaWiki--&gt;||You may also [[Wikipedia:Requests for page protection|request]] that this page be unprotected.}}
+ |semi=If you cannot edit this {{#switch:{{NAMESPACE}}|{{ns:0}}=article|{{ns:6}}=image|#default=page}} and you wish to make a change, you can {{#ifeq:{{NAMESPACE}}|{{TALKSPACE}}||[[{{TALKPAGENAME}}|discuss changes on the talk page]],}} [[Wikipedia:Requests for page protection#Current requests for unprotection|request unprotection]], [[Special:Userlogin|log in]], or &lt;span class=&quot;plainlinks&quot;&gt;[http://en.wikipedia.org/w/index.php?title=Special:Userlogin&amp;type=signup &lt;span style=&quot;color:#002bb8;&quot; title=&quot;Sign in / create account&quot;&gt;create an account&lt;/span&gt;].
+ |move=The page may still be edited but cannot be moved until unprotected. Please discuss any suggested moves on the [[{{TALKPAGENAME}}|talk page]] or at [[Wikipedia:Requested moves]].  You can also [[Wikipedia:Requests for page protection|request]] that the page be unprotected.  
+ |office=If you are able to edit this page, please discuss all changes and additions on the [[{{TALKPAGENAME}}|talk page]] first. '''Do not remove protection from this article unless you are authorized by the Wikimedia Foundation to do so.'''
+ |create=Please see the {{#if:{{{xfd|}}}|'''[[{{{xfd}}}|deletion discussion]]''' or the}} [{{fullurl:Special:Log|type=delete&amp;page={{FULLPAGENAMEE}}}} deletion log] for details of why this page was deleted. If you would like to create a page at this title, you must first [[Wikipedia:Requests for page protection|request]] for it to be unprotected, or for the deleted material to be restored via [[Wikipedia:Deletion review|deletion review]].
+}}}}}
+}}
+}}&lt;!--End if small--&gt;&lt;includeonly&gt;{{#ifeq:{{lc:{{{categories|no}}}}}|no||{{{categories|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-template</title>
+    <id>10225116</id>
+    <revision>
+      <id>259940486</id>
+      <timestamp>2008-12-24T18:34:41Z</timestamp>
+      <contributor>
+        <username>Cenarium</username>
+        <id>5711305</id>
+      </contributor>
+      <comment>-spaces</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{pp-meta
+|type=indef
+|small={{{small|}}}
+|demospace={{{demospace|}}}
+|expiry=&lt;!--not applicable--&gt;
+|dispute=no
+|icon-text=This {{#ifeq:{{NAMESPACE}}|{{ns:6}}|image, included in a high-risk template or message,|high-risk template}} is indefinitely protected from editing to prevent vandalism.
+|reason-text=This {{#switch:{{NAMESPACE}}
+  |{{ns:image}}=image, used in one or more [[Wikipedia:High-risk templates|high-risk templates]] and/or [[Special:Allmessages|system messages]],
+  |#default=[[Wikipedia:High-risk templates|high-risk template]]
+}} has been [[Wikipedia:This page is protected|protected]] from editing to prevent [[Wikipedia:Vandalism|vandalism]]. {{#switch:{{NAMESPACE}}|{{ns:image}}=&lt;br /&gt;&lt;small&gt;'''Do not move this image''' to [[commons:|Wikimedia Commons]].&lt;/small&gt;}}
+|categories={{{categories|{{#ifeq:{{NAMESPACE}}|{{ns:10}}|[[Category:Protected templates|{{PAGENAME}}]]}}{{#ifeq:{{NAMESPACE}}|{{ns:6}}|[[Category:Protected images|{{PAGENAME}}]]}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|categories=no}}  &lt;!-- Show the large version --&gt;
+{{pp-template|small=yes}}      &lt;!-- Show the small version --&gt;
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect</title>
+    <id>1649987</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>260160146</id>
+      <timestamp>2008-12-26T11:10:25Z</timestamp>
+      <contributor>
+        <username>Ruslik0</username>
+        <id>1130897</id>
+      </contributor>
+      <comment>per editprotected request (see talk page)</comment>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot; redirects here. For {{#if: {{{2|}}}|{{{2}}}|other uses}}, see [[{{{3|{{{1}}} (disambiguation)}}}]]. {{#if: {{{4|}}}|For {{{4}}}, see [[{{{5|{{{4}}} (disambiguation)}}}]].}} {{#if: {{{6|}}}|For {{{6}}}, see [[{{{7|{{{6}}} (disambiguation)}}}]].}} }}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect2</title>
+    <id>3327170</id>
+    <revision>
+      <id>225281843</id>
+      <timestamp>2008-07-12T21:35:00Z</timestamp>
+      <contributor>
+        <ip>121.97.103.177</ip>
+      </contributor>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot; and &quot;{{{2}}}&quot; redirect here. For {{#if: {{{3|}}}|{{{3}}}|other uses}}, see [[{{{4|{{{1}}} (disambiguation)}}}]].}}&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect3</title>
+    <id>3664179</id>
+    <revision>
+      <id>260334645</id>
+      <timestamp>2008-12-27T16:01:58Z</timestamp>
+      <contributor>
+        <username>J.delanoy</username>
+        <id>2372780</id>
+      </contributor>
+      <minor/>
+      <comment>template</comment>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot; redirects here. {{{2}}}.}}&lt;noinclude&gt;
+{{documentation|Otheruses templates}}
+{{pp-semi-template|small=yes}}
+&lt;!--Other languages--&gt;
+[[Category:Disambiguation and redirection templates|Redirect3]]
+[[sl:Predloga:Preusmeritev3]]
+[[tl:Template:Redirect3]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect4</title>
+    <id>4019897</id>
+    <revision>
+      <id>217014469</id>
+      <timestamp>2008-06-04T06:41:47Z</timestamp>
+      <contributor>
+        <username>ClockworkSoul</username>
+        <id>137964</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Redirect4: cautionary protection - High-risk template [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot; and &quot;{{{2}}}&quot; redirect here. For {{{3|other uses}}}, see {{{4|[[{{{1}}} (disambiguation)]] and [[{{{2}}} (disambiguation)]]}}}.}}&lt;noinclude&gt;
+{{documentation|Otheruses templates}}
+
+[[Category:Disambiguation and redirection templates|Redirect4]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect5</title>
+    <id>17469185</id>
+    <revision>
+      <id>264471457</id>
+      <timestamp>2009-01-16T15:10:39Z</timestamp>
+      <contributor>
+        <username>Crohnie</username>
+        <id>3290566</id>
+      </contributor>
+      <comment>[[WP:UNDO|Undid]] revision 264471355 by [[Special:Contributions/Steve janet mcdonald|Steve janet mcdonald]] ([[User talk:Steve janet mcdonald|talk]])</comment>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot; redirects here. For {{#if: {{{2|}}}|{{{2}}}|other uses}}, see [[{{{3}}}]]{{#if: {{{4|}}}|. For {{{4}}}, see [[{{{5}}}]]|{{#if: {{{5|}}}|&amp;nbsp;and [[{{{5}}}]]|}}}}.}}&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect6</title>
+    <id>8134571</id>
+    <revision>
+      <id>226464356</id>
+      <timestamp>2008-07-18T15:43:54Z</timestamp>
+      <contributor>
+        <username>Thatcher</username>
+        <id>903149</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Redirect6: high use template [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{dablink|{{#if: {{{1|}}}|&quot;{{{1}}}&quot; redirects here.&amp;#32;&amp;#32;}}For {{#if: {{{2|}}}|{{{2}}}|other uses}}, see [[{{#if: {{{3|}}}|{{{3}}}|{{PAGENAME}} (disambiguation)}}]].  For {{#if: {{{4|}}}|{{{4}}}|other uses}}, see &lt;!-- Error: Double brackets treated as &lt;nowiki&gt;&lt;/nowiki&gt; here --&gt;[[{{#if: {{{5|}}}|{{{5}}}|{{{1}}} (disambiguation)}}]].}}&lt;noinclude&gt;
+{{documentation|Otheruses templates}}
+[[Category:Disambiguation and redirection templates|{{PAGENAME}}]]
+
+&lt;!--Other languages--&gt;
+[[sl:Predloga:Preusmeritev6]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Redirect8</title>
+    <id>19146200</id>
+    <revision>
+      <id>263853665</id>
+      <timestamp>2009-01-13T18:22:18Z</timestamp>
+      <contributor>
+        <username>MassimoAr</username>
+        <id>7556322</id>
+      </contributor>
+      <comment>Making second parameter optional</comment>
+      <text xml:space="preserve">{{dablink|&quot;{{{1}}}&quot;{{#if:{{{2|}}}|&amp;#32;and&amp;#32;&quot;{{{2}}}&quot;}} redirect{{#if:{{{2|}}}||s}} here.}}&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:See also</title>
+    <id>1721254</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>220433398</id>
+      <timestamp>2008-06-19T20:59:46Z</timestamp>
+      <contributor>
+        <username>PeterSymonds</username>
+        <id>505135</id>
+      </contributor>
+      <comment>update template per talk</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;:&lt;span class=&quot;boilerplate seealso&quot;&gt;''{{{altphrase|See also}}}: {{#if:{{{1|}}} |&lt;!--then:--&gt;[[:{{{1}}}|{{{l1|{{{1}}}}}}]] |&lt;!--else:--&gt;'''Error: [[Template:See also|Template must be given at least one article name]]''' 
+}}{{#if:{{{2|}}}|{{#if:{{{3|}}}|, |&amp;nbsp;and }} [[:{{{2}}}|{{{l2|{{{2}}}}}}]]
+}}{{#if:{{{3|}}}|{{#if:{{{4|}}}|, |,&amp;nbsp;and }} [[:{{{3}}}|{{{l3|{{{3}}}}}}]]
+}}{{#if:{{{4|}}}|{{#if:{{{5|}}}|, |,&amp;nbsp;and }} [[:{{{4}}}|{{{l4|{{{4}}}}}}]]
+}}{{#if:{{{5|}}}|{{#if:{{{6|}}}|, |,&amp;nbsp;and }} [[:{{{5}}}|{{{l5|{{{5}}}}}}]]
+}}{{#if:{{{6|}}}|{{#if:{{{7|}}}|, |,&amp;nbsp;and }} [[:{{{6}}}|{{{l6|{{{6}}}}}}]]
+}}{{#if:{{{7|}}}|{{#if:{{{8|}}}|, |,&amp;nbsp;and }} [[:{{{7}}}|{{{l7|{{{7}}}}}}]]
+}}{{#if:{{{8|}}}|{{#if:{{{9|}}}|, |,&amp;nbsp;and }} [[:{{{8}}}|{{{l8|{{{8}}}}}}]]
+}}{{#if:{{{9|}}}|{{#if:{{{10|}}}|, |,&amp;nbsp;and }} [[:{{{9}}}|{{{l9|{{{9}}}}}}]]
+}}{{#if:{{{10|}}}|{{#if:{{{11|}}}|, |,&amp;nbsp;and }} [[:{{{10}}}|{{{l10|{{{10}}}}}}]]
+}}{{#if:{{{11|}}}|{{#if:{{{12|}}}|, |,&amp;nbsp;and }} [[:{{{11}}}|{{{l11|{{{11}}}}}}]]
+}}{{#if:{{{12|}}}|{{#if:{{{13|}}}|, |,&amp;nbsp;and }} [[:{{{12}}}|{{{l12|{{{12}}}}}}]]
+}}{{#if:{{{13|}}}|{{#if:{{{14|}}}|, |,&amp;nbsp;and }} [[:{{{13}}}|{{{l13|{{{13}}}}}}]]
+}}{{#if:{{{14|}}}|{{#if:{{{15|}}}|, |,&amp;nbsp;and }} [[:{{{14}}}|{{{l14|{{{14}}}}}}]]
+}}{{#if:{{{15|}}}|,&amp;nbsp;and [[:{{{15}}}|{{{l15|{{{15}}}}}}]]
+}}{{#if:{{{16|}}}| &amp;mdash; '''&lt;br/&gt;Error: [[Template:See also|Too many links specified (maximum is 15)]]'''
+}}''&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Selfref</title>
+    <id>995731</id>
+    <restrictions>edit=autoconfirmed:move=autoconfirmed</restrictions>
+    <revision>
+      <id>256627733</id>
+      <timestamp>2008-12-08T14:51:39Z</timestamp>
+      <contributor>
+        <username>Ruslik0</username>
+        <id>1130897</id>
+      </contributor>
+      <comment>clean up</comment>
+      <text xml:space="preserve">{{#switch:{{{2|NONE}}}
+|NONE|hatnote|hat={{dablink|1=&lt;span class=&quot;plainlinks selfreference&quot;&gt;{{{1}}}&lt;/span&gt;}}
+|inline|=&lt;span class=&quot;plainlinks selfreference&quot;&gt;{{{1}}}&lt;/span&gt;
+}}&lt;!--
+ * Note to editors - matching the empty string for inline with &quot;|=&quot; is important!
+--&gt;&lt;noinclude&gt;
+{{pp-semi-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Template doc</title>
+    <id>9944662</id>
+    <revision>
+      <id>205878299</id>
+      <timestamp>2008-04-15T21:18:17Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>dbr</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Documentation]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Template doc page transcluded</title>
+    <id>7943545</id>
+    <revision>
+      <id>219726125</id>
+      <timestamp>2008-06-16T16:31:51Z</timestamp>
+      <contributor>
+        <username>Paul Erik</username>
+        <id>410906</id>
+      </contributor>
+      <minor/>
+      <comment>Reverted edits by [[Special:Contributions/1user2user3|1user2user3]] ([[User talk:1user2user3|talk]]) to last version by Gurch</comment>
+      <text xml:space="preserve">{{Documentation subpage|doc-notice=hide}}&lt;noinclude&gt;{{Tdeprecated|Template doc page transcluded|Documentation subpage|date=November 2007}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:The</title>
+    <id>17911587</id>
+    <revision>
+      <id>218920167</id>
+      <timestamp>2008-06-12T19:38:20Z</timestamp>
+      <contributor>
+        <username>Lenoxus</username>
+        <id>986499</id>
+      </contributor>
+      <minor/>
+      <comment>{{{2|}}}</comment>
+      <text xml:space="preserve">{{For3||{{{1}}}|{{{2|}}}}}
+&lt;noinclude&gt;{{doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:This</title>
+    <id>1827609</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>213064280</id>
+      <timestamp>2008-05-17T16:29:57Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <comment>moved to [[Template:This/doc]]</comment>
+      <text xml:space="preserve">{{otheruses4|{{{1}}}||{{{2|{{PAGENAME}} (disambiguation)}}}}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tl</title>
+    <id>1487430</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>265169678</id>
+      <timestamp>2009-01-19T22:28:09Z</timestamp>
+      <contributor>
+        <username>FT2</username>
+        <id>83667</id>
+      </contributor>
+      <comment>Self undo per talk page request</comment>
+      <text xml:space="preserve">{{[[Template:{{{1}}}|{{{1}}}]]}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tlx</title>
+    <id>4497810</id>
+    <revision>
+      <id>252422011</id>
+      <timestamp>2008-11-17T19:49:53Z</timestamp>
+      <contributor>
+        <username>TravisTX</username>
+        <id>427288</id>
+      </contributor>
+      <comment>[[WP:UNDO|Undid]] revision 252420543 by [[Special:Contributions/TravisTX|TravisTX]] ([[User talk:TravisTX|talk]]) never mind, was a problem elsewhere</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;font-family:monospace;&quot;&gt;&lt;nowiki&gt;{{&lt;/nowiki&gt;{{#if:{{{subst|}}}|[[Help:Substitution|subst]]:}}[[{{{LANG|}}}{{{SISTER|}}}{{ns:Template}}:{{{1|}}}|{{{1|}}}]]&lt;!--
+--&gt;{{#if:{{{2|}}}|
+&amp;#124;{{{2}}}
+}}&lt;!--
+--&gt;{{#if:{{{3|}}}|
+&amp;#124;{{{3}}}
+}}&lt;!--
+--&gt;{{#if:{{{4|}}}|
+&amp;#124;{{{4}}}
+}}&lt;!--
+--&gt;{{#if:{{{5|}}}|
+&amp;#124;{{{5}}}
+}}&lt;!--
+--&gt;{{#if:{{{6|}}}|
+&amp;#124;{{{6}}}
+}}&lt;!--
+--&gt;{{#if:{{{7|}}}|
+&amp;#124;{{{7}}}
+}}&lt;!--
+--&gt;{{#if:{{{8|}}}|
+&amp;#124;{{{8}}}
+}}&lt;!--
+--&gt;{{#if:{{{9|}}}|
+&amp;#124;{{{9}}}
+}}&lt;!--
+--&gt;{{#if:{{{10|}}}|
+&amp;#124;{{{10}}}
+}}&lt;!--
+--&gt;{{#if:{{{11|}}}|
+&amp;#124;{{{11}}}
+}}&lt;!--
+--&gt;{{#if:{{{12|}}}|
+&amp;#124;''...''
+}}&lt;nowiki&gt;}}&lt;/nowiki&gt;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{Tlx/doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Tnavbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>260038997</id>
+      <timestamp>2008-12-25T11:51:53Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>add &quot;navbar&quot; class for skinning</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&amp;nbsp;&lt;span class=&quot;noprint plainlinksneverexpand navbar&quot; style=&quot;white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;|&lt;!--else:
+--&gt;&lt;div class=&quot;noprint plainlinksneverexpand navbar&quot; style=&quot;background-color:transparent; padding:0; white-space:nowrap; font-weight:normal; font-size:xx-small; {{{fontstyle|}}}; {{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}} {{{style|}}}&quot;&gt;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{mini|}}}{{{miniv|}}}{{{plain|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;|&lt;!--else:
+--&gt;This box:&amp;nbsp;&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#ifeq:{{{miniv|}}}{{{viewplain|}}}|&lt;!--equals:--&gt;1|&lt;!--then:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{viewplain|}}}|view|v}}&lt;/span&gt;]]|&lt;!--else:
+--&gt;[[Template:{{{1}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot;&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[Template talk:{{{1}}}|&lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;Discussion about this template&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]{{#ifeq:{{{noedit}}}|1||&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{ns:10}}:{{{1}}}|action=edit}} &lt;span style=&quot;color:#002bb8;{{{fontstyle|}}};{{#if:{{{fontcolor|}}}|color:{{{fontcolor}}};}}&quot; title=&quot;You can edit this template. Please use the preview button before saving.&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]}}&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;&lt;!--
+--&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

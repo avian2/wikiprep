@@ -285,28 +285,31 @@ sub parseTemplateInvocation(\$\$\%) {
     # anyway the last assignment should override any previous ones.
     my ( $parameterName, $parameterValue ) = split(/=/, $param, 2);
 
-    if( defined( $parameterName ) ) {
-      if( defined( $parameterValue ) ) {
-        # This is a named parameter.
-        # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
-        # parameter ("2") is specified explicitly - this is handled transparently.
+    # $parameterName is undefined if $param is an empty string
+    if( not defined( $parameterName ) ) {
+      $parameterName = "";
+    }
 
-        $parameterName =~ s/\s+$//;
+    if( defined( $parameterValue ) ) {
+      # This is a named parameter.
+      # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
+      # parameter ("2") is specified explicitly - this is handled transparently.
+
+      $parameterName =~ s/\s+$//;
       
-        # if the value does not contain a link, trim whitespace
-        if ($doesNotContainLink) {
-          $parameterValue =~ s/^\s+//;
-        } else {
-          $parameterName =~ s/^\s+//;
-        }
-
-        $$refToParameterHash{$parameterName} = $parameterValue;
+      # if the value does not contain a link, trim whitespace
+      if ($doesNotContainLink) {
+        $parameterValue =~ s/^\s+//;
       } else {
-        # this is an unnamed parameter
-        $unnamedParameterCounter++;
-
-        $$refToParameterHash{$unnamedParameterCounter} = $param;
+        $parameterName =~ s/^\s+//;
       }
+
+      $$refToParameterHash{$parameterName} = $parameterValue;
+    } else {
+      # this is an unnamed parameter
+      $unnamedParameterCounter++;
+
+      $$refToParameterHash{$unnamedParameterCounter} = $param;
     }
   }
 }

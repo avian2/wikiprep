@@ -1,4 +1,4 @@
-use Test::More tests => 18;
+use Test::More tests => 29;
 use Wikiprep::templates qw( templateParameterRecursion splitOnTemplates parseTemplateInvocation );
 
 my $r;
@@ -72,3 +72,24 @@ is($name, "Infobox_University\n");
 # There is an unmatched [ in there that breaks template parsing.
 #is($paramHash{'website'}, 'http://www.uu.se');
 is($paramHash{'website'}, undef);
+
+$text = "about||the Alicante wine region|Alicante (DO)|the Spanish [[provincia]]|Alicante (province)";
+$name = '';
+%paramHash = ();
+
+&parseTemplateInvocation(\$text, \$name, \%paramHash);
+is($name, "about");
+is($paramHash{'=1='}, "");
+is($paramHash{'=2='}, "the Alicante wine region");
+is($paramHash{'=3='}, "Alicante (DO)");
+is($paramHash{'=4='}, "the Spanish [[provincia]]");
+is($paramHash{'=5='}, "Alicante (province)");
+is($paramHash{'1'}, "");
+is($paramHash{'2'}, "the Alicante wine region");
+is($paramHash{'3'}, "Alicante (DO)");
+is($paramHash{'4'}, "the Spanish [[provincia]]");
+is($paramHash{'5'}, "Alicante (province)");
+
+$text = "complex|[[link|anchor]]|{{nested|{{template|p}}\n|blah}}|bare_param";
+$name = '';
+%paramHash = ();

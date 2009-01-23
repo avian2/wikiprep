@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gum>
+<page id="1" orglength="95" newlength="2" stub="0" disambig="0" category="0" image="0">
+<title>Test</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates>
+<template id="945764">
+<include>
+<parameter name="1">{{#if: |This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is about .&amp;#32;&amp;#32;}}{{#if:the Alicante wine region|For the Alicante wine region, see {{#if:Alicante (DO)|[[Alicante (DO)]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;|For other uses, see {{#if:Alicante (DO)|[[Alicante (DO)]]|[[{{PAGENAME}} (disambiguation)]]}}.}}{{#if:the Alicante wine region|{{#if:the Spanish [[provincia]]|{{#ifeq:the Spanish [[provincia]]|1|For other uses, see {{#if:Alicante (province)|[[Alicante (province)]]|[[{{PAGENAME}} (disambiguation)]]}}.|For the Spanish [[provincia]], see {{#if:Alicante (province)|[[Alicante (province)]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:the Spanish [[provincia]]|{{#if:|{{#ifeq:|1|For other uses, see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.|For , see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:|{{#if:|{{#ifeq:|1|For other uses, see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.|For , see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}}}}}}}</parameter>
+</include>
+</template>
+<template id="2468023">
+<include>
+<parameter name="3">Alicante (DO)</parameter>
+<parameter name="2">the Alicante wine region</parameter>
+<parameter name="1"></parameter>
+<parameter name="4">the Spanish [[provincia]]</parameter>
+<parameter name="5">Alicante (province)</parameter>
+</include>
+</template>
+</templates><text>
+
+</text>
+</page>
+</gum>
