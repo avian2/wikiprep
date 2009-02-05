@@ -1151,12 +1151,12 @@ sub includeParserFunction(\$\%\%$\$) {
     &msg("DEBUG", "URL encoding string $result");
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
-  } elsif ( $$refToTemplateTitle eq "PAGENAME" ) {
+  } elsif ( lc $$refToTemplateTitle eq "pagename" ) {
     # FIXME: {{FULLPAGENAME}} returns full name of the page (including the 
     # namespace prefix. {{PAGENAME}} returns only the title.
     #
     # Also consider supporting {{SERVER}}, which is used to construct edit
-    # links in some stub templates (external URLs aren't remove properly
+    # links in some stub templates (external URLs aren't removed properly
     # without it)
     $result = $page->{title};
   }

@@ -33,6 +33,7 @@
     <revision>
 	    <text xml:space="preserve">
 		    {{PAGENAME}}
+		    {{pagename}}
 	    </text>
     </revision>
   </page>
