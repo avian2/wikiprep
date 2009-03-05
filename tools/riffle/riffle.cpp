@@ -6,6 +6,9 @@
 #include <string>
 #include <map>
 
+#include <sys/types.h>
+#include <dirent.h>
+
 using namespace std;
 
 #define PATH_LEN		1024
@@ -121,13 +124,27 @@ int scan_to_id(FILE *in, char *title_buff, char *id_buff)
 int scan_chunks(char *tracker_path)
 {
 	char path[PATH_LEN];
-	int n;
+	int n = 0;
 
-	for(n = 0; n < 10000; n++) {
-		snprintf(path, PATH_LEN, "%s/%04d", tracker_path, n);
+	DIR *chunk_dir = opendir(tracker_path);
+	if(chunk_dir == NULL) {
+		fprintf(stderr, "ERROR: Can't open %s\n", tracker_path);
+		return -1;
+	}
+
+	struct dirent *entry;
+	while( (entry = readdir(chunk_dir)) != NULL ) {
+
+		if( entry->d_type != DT_REG ) continue;
+
+		snprintf(path, PATH_LEN, "%s/%s", tracker_path, entry->d_name);
 
 		FILE *in = fopen(path, "r");
-		if(in == NULL) break;
+		if(in == NULL) {
+			fprintf(stderr, "WARNING: Can't open %s (ignoring)", 
+									path);
+			continue;
+		}
 
 		int r = scan_to_id(in, title_buffer, id_buffer);
 		if(r) {
@@ -144,7 +161,10 @@ int scan_chunks(char *tracker_path)
 		page_index[ string(id_buffer) ] = i;
 
 		fclose(in);
+		n++;
 	}
+
+	closedir(chunk_dir);
 
 	fprintf(stderr, "loaded info about %d updated pages\n", n);
 
