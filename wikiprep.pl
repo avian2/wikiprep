@@ -183,7 +183,6 @@ my $totalByteCount = 0;
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
 
-&loadNamespaces();
 &prescan();
 
 $out->lastLocalID($localIDCounter);
@@ -474,15 +473,7 @@ sub writeCategoryHierarchy() {
 }
 
 sub loadNamespaces() {
-  # re-open the input XML file
-  if ($file =~ /\.gz$/) {
-    open(INF, "gzip -dc $file|") or die "Cannot open $file: $!";
-  } elsif ($file =~ /\.bz2$/) {
-    open(INF, "bzip2 -dc $file|") or die "Cannot open $file: $!";
-  } else {
-    open(INF, "< $file") or die "Cannot open $file: $!";
-  }
-  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
+  my ($pages) = @_;
 
   # load namespaces
   my $refNamespaces = $pages->namespaces;
@@ -497,8 +488,6 @@ sub loadNamespaces() {
     &normalizeNamespace(\$namespaceName);
     $namespaces{$namespaceName} = $namespaceId;
   }
-
-  close(INF);
 }
 
 # build id <-> title mappings and redirection table,
@@ -514,6 +503,8 @@ sub prescan() {
   }
 
   my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
+
+  &loadNamespaces($pages);
 
   my $counter = 0;
   
