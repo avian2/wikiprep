@@ -200,6 +200,7 @@ sub newPage
   my $writer = $self->{gumWriter};
 
   $writer->startTag("page", id          => $page->{id},
+                            timestamp   => $page->{timestamp} || '',
                             orglength   => $page->{orgLength},
                             newlength   => $page->{newLength},
                             stub        => $page->{isStub},

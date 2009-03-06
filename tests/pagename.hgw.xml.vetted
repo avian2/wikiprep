@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="25" newlength="27" stub="0" categories="0" outlinks="0" urls="0">
+<page id="1" orglength="44" newlength="48" stub="0" categories="0" outlinks="0" urls="0">
 <title>Some page name</title>
 <categories></categories>
 <links></links>
@@ -35,6 +35,7 @@
 </urls>
 <text>
 
+		    Some page name
 		    Some page name
 	    
 </text>

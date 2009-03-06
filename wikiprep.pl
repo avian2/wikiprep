@@ -683,6 +683,7 @@ sub transform() {
     }
 
     $page->{id} = $mwpage->id;
+    $page->{timestamp} = $mwpage->timestamp;
 
     # next if( $id != 1192748);
 
