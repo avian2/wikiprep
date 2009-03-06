@@ -135,13 +135,16 @@ int scan_chunks(char *tracker_path)
 	struct dirent *entry;
 	while( (entry = readdir(chunk_dir)) != NULL ) {
 
-		if( entry->d_type != DT_REG ) continue;
+		if( ! strcmp(entry->d_name, ".") || ! strcmp(entry->d_name, "..") ) {
+			continue;
+		}
 
+		// if( entry->d_type != DT_REG ) continue;
 		snprintf(path, PATH_LEN, "%s/%s", tracker_path, entry->d_name);
 
 		FILE *in = fopen(path, "r");
 		if(in == NULL) {
-			fprintf(stderr, "WARNING: Can't open %s (ignoring)", 
+			fprintf(stderr, "WARNING: Can't open %s (ignoring)\n", 
 									path);
 			continue;
 		}
@@ -286,22 +289,34 @@ int main(int argc, char **argv) {
 		}
 	}
 
-	if(inf == NULL || outf == NULL || trackpath == NULL) {
+	if(trackpath == NULL) {
 		syntax();
 		exit(1);
 	}
 
-	FILE *in = fopen(inf, "r");
-	if(in == NULL) {
-		fprintf(stderr, "ERROR: Can't open: %s\n", inf);
-		perror(inf);
-		exit(1);
+	FILE *in;
+	
+	if(inf == NULL || ! strcmp(inf, "-") ) {
+		in = stdin;
+	} else {
+		in = fopen(inf, "r");
+		if(in == NULL) {
+			fprintf(stderr, "ERROR: Can't open: %s\n", inf);
+			perror(inf);
+			exit(1);
+		}
 	}
-	FILE *out = fopen(outf, "w");
-	if(out == NULL) {
-		fprintf(stderr, "ERROR: Can't open: %s\n", outf);
-		perror(inf);
-		exit(1);
+
+	FILE *out;
+	if(outf == NULL || ! strcmp(outf, "-") ) {
+		out = stdout;
+	} else {
+		out = fopen(outf, "w");
+		if(out == NULL) {
+			fprintf(stderr, "ERROR: Can't open: %s\n", outf);
+			perror(inf);
+			exit(1);
+		}
 	}
 
 	fprintf(stderr, "Scanning available updated pages...\n");
@@ -318,8 +333,12 @@ int main(int argc, char **argv) {
 		exit(1);
 	}
 
-	fclose(in);
-	fclose(out);
+	if(in != stdin) {
+		fclose(in);
+	}
+	if(out != stdout) {
+		fclose(out);
+	}
 
 	free(line_buffer);
 	free(line2_buffer);
