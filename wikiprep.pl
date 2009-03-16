@@ -1033,6 +1033,50 @@ sub instantiateTemplate($\%$) {
   return $result;  # return value
 }
 
+sub switchParserFunction {
+  # Code ported from ParserFunctions.php
+  # Documentation at http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions#.23switch:
+  
+  my ($refToRawParameterList, $page, $templateRecursionLevel) = @_;
+
+  my $primary = shift( @$refToRawParameterList );
+
+  my @parts;
+  my $found;
+  my $default;
+
+  for my $param (@$refToRawParameterList) {
+    @parts = split(/\s*=\s*/, $param, 2);
+    if( $#parts == 1 ) {
+      my $lvalue = &includeTemplates($page, $parts[0], $templateRecursionLevel + 1);
+      # Found "="
+      if( $found || $lvalue eq $primary ) {
+        # Found a match, return now
+        return $parts[1];
+      } elsif( $parts[0] =~ /^#default/ ) {
+        $default = $parts[1];
+      } 
+      # else wrong case, continue
+    } elsif( $#parts == 0 ) {
+      my $lvalue = &includeTemplates($page, $parts[0], $templateRecursionLevel + 1);
+      # Multiple input, single output
+      # If the value matches, set a flag and continue
+      if( $lvalue eq $primary ) {
+        $found = 1;
+      }
+    }
+  }
+  # Default case
+  # Check if the last item had no = sign, thus specifying the default case
+  if( $#parts == 0 ) {
+    return $parts[0];
+  } elsif( $default ) {
+    return $default;
+  } else {
+    return '';
+  }
+}
+
 sub includeParserFunction(\$\%\%$\$) {
   my ($refToTemplateTitle, $refToRawParameterList, $page, $templateRecursionLevel) = @_;
 
@@ -1113,6 +1157,8 @@ sub includeParserFunction(\$\%\%$\$) {
       } else {
         $result = " ";
       }
+    } elsif ( $functionName eq 'switch' ) {
+      $result = &switchParserFunction($refToRawParameterList, $page, $templateRecursionLevel);
     } elsif ( $functionName eq 'language' ) {
       # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
       # otherwise it returns the input value as is.
