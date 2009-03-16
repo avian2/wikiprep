@@ -1033,7 +1033,7 @@ sub instantiateTemplate($\%$) {
 }
 
 sub includeParserFunction(\$\%\%$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $page, $templateRecursionLevel, $refToResult) = @_;
+  my ($refToTemplateTitle, $refToParameterHash, $page, $templateRecursionLevel) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
