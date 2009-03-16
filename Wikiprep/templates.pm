@@ -232,7 +232,7 @@ sub splitTemplateInvocation($) {
 # Same goes if template parameters include other template invocations.
 
 sub parseTemplateInvocation(\$\$\%) {
-  my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash) = @_;
+  my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash, $refToRawParameterList) = @_;
 
   #my @parameters = &splitTemplateInvocation($$refToTemplateInvocation);
   my @parameters = &Wikiprep::ctemplates::splitTemplateInvocation($$refToTemplateInvocation);
@@ -249,7 +249,6 @@ sub parseTemplateInvocation(\$\$\%) {
   # ordinal position (1, 2, 3, ...).
 
   my $unnamedParameterCounter = 0;
-  my $parameterCounter = 0;
 
   # It's legal for unnamed parameters to be skipped, in which case they will get default
   # values (if available) during actual instantiation. That is {{template_name|a||c}} means
@@ -262,17 +261,15 @@ sub parseTemplateInvocation(\$\$\%) {
     my $doesNotContainLink = ($param !~ /\]\]/);
 
     # For parser functions we need unmodified parameters by position. For example:
-    # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in parameter 
-    # hash. Note that the key of the hash can't be generated any other way (parameter names can't 
-    # include '=' characters)
-    $parameterCounter++;
+    # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in a
+    # separate array.
 
     if ($doesNotContainLink) {
       $param =~ s/^\s+//;
       $param =~ s/\s+$//;
     } 
 
-    $$refToParameterHash{"=${parameterCounter}="} = $param;
+    push(@$refToRawParameterList, $param);
 
     # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
     # a link (to prevent possible gluing the link to the following text after template substitution)

@@ -47,34 +47,34 @@
 <template id="4148498">
 <include>
 <parameter name="date">2007-07-19</parameter>
-<parameter name="work">microsoft.com</parameter>
-<parameter name="author">MSFT Investor Relations</parameter>
 <parameter name="url">http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx</parameter>
+<parameter name="work">microsoft.com</parameter>
 <parameter name="title">"Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"</parameter>
+<parameter name="author">MSFT Investor Relations</parameter>
 <parameter name="publisher">Microsoft</parameter>
 <parameter name="accessdate">2007-08-15</parameter>
 </include>
 <include>
 <parameter name="date">2007-07-19</parameter>
-<parameter name="work">microsoft.com</parameter>
-<parameter name="author">MSFT Investor Relations</parameter>
 <parameter name="url">http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx</parameter>
+<parameter name="work">microsoft.com</parameter>
 <parameter name="title">"Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"</parameter>
+<parameter name="author">MSFT Investor Relations</parameter>
 <parameter name="publisher">Microsoft</parameter>
 <parameter name="accessdate">2007-08-15</parameter>
 </include>
 <include>
 <parameter name="date">2007-08-01</parameter>
-<parameter name="work">microsoft.com</parameter>
 <parameter name="url">http://www.microsoft.com/presspass/inside_ms.mspx</parameter>
+<parameter name="work">microsoft.com</parameter>
 <parameter name="title">"Fast Facts About Microsoft"</parameter>
 <parameter name="publisher">Microsoft</parameter>
 <parameter name="accessdate">2007-08-15</parameter>
 </include>
 <include>
 <parameter name="date">2007-08-01</parameter>
-<parameter name="work">microsoft.com</parameter>
 <parameter name="url">http://www.microsoft.com/presspass/inside_ms.mspx</parameter>
+<parameter name="work">microsoft.com</parameter>
 <parameter name="title">"Fast Facts About Microsoft"</parameter>
 <parameter name="publisher">Microsoft</parameter>
 <parameter name="accessdate">2007-08-15</parameter>
@@ -96,16 +96,16 @@
 </include>
 <include>
 <parameter name="date">[[2005-08-05]] </parameter>
-<parameter name="author">Matthew Fordahl</parameter>
 <parameter name="url">http://seattlepi.nwsource.com/business/235169_vistatest04.html</parameter>
+<parameter name="author">Matthew Fordahl</parameter>
 <parameter name="title">Beta version of Microsoft's Vista shows a lot of potential</parameter>
 <parameter name="publisher">Associated Press</parameter>
 <parameter name="accessdate">2006-09-02</parameter>
 </include>
 <include>
 <parameter name="date">[[2006-12-01]] </parameter>
-<parameter name="author">Daisuke Wakabayashi</parameter>
 <parameter name="url">http://in.tech.yahoo.com/061130/137/69vp5.html</parameter>
+<parameter name="author">Daisuke Wakabayashi</parameter>
 <parameter name="title">Microsoft launches Vista version of Windows</parameter>
 <parameter name="publisher">Reuters</parameter>
 <parameter name="accessdate">2007-07-11</parameter>
@@ -120,16 +120,16 @@
 </include>
 <include>
 <parameter name="date">[[2003-10-20]] </parameter>
-<parameter name="author">Todd Bishop</parameter>
 <parameter name="url">http://seattlepi.nwsource.com/business/144528_msftoffice20.html</parameter>
+<parameter name="author">Todd Bishop</parameter>
 <parameter name="title">Microsoft unveils Office 2003</parameter>
 <parameter name="publisher">Seattle Post-Intelligencer Reporter</parameter>
 <parameter name="accessdate">2007-07-11</parameter>
 </include>
 <include>
 <parameter name="date">[[2002-05-02]]</parameter>
-<parameter name="author">Patrick Thibodeau</parameter>
 <parameter name="url">http://www.pcworld.com/article/id,98003-page,1/article.html</parameter>
+<parameter name="author">Patrick Thibodeau</parameter>
 <parameter name="title">Can StarOffice Steal Users From Microsoft?</parameter>
 <parameter name="publisher">PC World</parameter>
 <parameter name="accessdate">2007-07-11</parameter>
@@ -172,11 +172,11 @@
 </include>
 <include>
 <parameter name="page">23</parameter>
+<parameter name="quote">MS, known to millions worldwide as the trademark for Bill Gates's Microsoft empire, has a dual meaning for retired Christchurch journalist John Brown.</parameter>
 <parameter name="date">1998-07-28</parameter>
 <parameter name="work">[[The Press]] </parameter>
-<parameter name="author">David Armstrong</parameter>
-<parameter name="quote">MS, known to millions worldwide as the trademark for Bill Gates's Microsoft empire, has a dual meaning for retired Christchurch journalist John Brown.</parameter>
 <parameter name="title">Special meaning for 'MS'</parameter>
+<parameter name="author">David Armstrong</parameter>
 </include>
 <include>
 <parameter name="first">Todd</parameter>
@@ -218,25 +218,25 @@
 <template id="1192206">
 <include>
 <parameter name="company_name">Microsoft Corporation</parameter>
-<parameter name="operating_income">{{profit}} US $18.52 billion (2007)&lt;ref name="2007financials" /&gt;</parameter>
-<parameter name="company_type"> [[Public company|Public]] ({{nasdaq2|MSFT}})
-</parameter>
-<parameter name="products"> [[Microsoft Windows]] &lt;br /&gt; [[Microsoft Office]] &lt;br /&gt; [[Microsoft Servers]] &lt;br /&gt; [[Microsoft Visual Studio|Developer Tools]] &lt;br /&gt; [[Microsoft Dynamics|Business Solutions]] &lt;br /&gt; [[Microsoft Game Studios|Games]] &amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp; [http://www.microsoft.com/games/] &lt;br /&gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;mkt=en-us] &lt;br /&gt; [[Windows Mobile]] &lt;br /&gt; [[Zune]][http://www.zune.net/en-US/]
-</parameter>
 <parameter name="num_employees">79,000 (2007)&lt;ref name="fastfacts"&gt;{{cite web|date=2007-08-01|url= http://www.microsoft.com/presspass/inside_ms.mspx|title="Fast Facts About Microsoft"|work=microsoft.com|publisher=Microsoft| accessdate=2007-08-15}}&lt;/ref&gt;</parameter>
+<parameter name="operating_income">{{profit}} US $18.52 billion (2007)&lt;ref name="2007financials" /&gt;</parameter>
 <parameter name="revenue">{{profit}} [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&lt;ref name="2007financials"&gt;{{cite web|author=MSFT Investor Relations|date=2007-07-19|url=http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx|title ="Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"|work=microsoft.com| publisher=Microsoft|accessdate=2007-08-15}}&lt;/ref&gt;
 </parameter>
-<parameter name="company_logo"> [[Image:Microsoft wordmark.svg|220px|]]
-</parameter>
 <parameter name="industry"> [[Computer software]] &lt;br /&gt; [[Publishing]] &lt;br /&gt; [[Research and development]] &lt;br /&gt; [[Computer hardware]] &lt;br /&gt; [[Console game|Video games]]
+</parameter>
+<parameter name="company_logo"> [[Image:Microsoft wordmark.svg|220px|]]
 </parameter>
 <parameter name="foundation"> [[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&lt;ref name="bbc-timeline"&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/business/5085630.stm|title=Bill Gates: A timeline|work=news.bbc.co.uk|publisher=[[BBC News]]| date=2006-06-15|accessdate=2007-08-15}}&lt;/ref&gt;
 </parameter>
 <parameter name="homepage">[http://www.microsoft.com/worldwide/ www.microsoft.com]</parameter>
 <parameter name="slogan">''Your potential. Our passion.''</parameter>
+<parameter name="company_type"> [[Public company|Public]] ({{nasdaq2|MSFT}})
+</parameter>
 <parameter name="location_country"> [[United States]]
 </parameter>
 <parameter name="net_income">{{profit}} US $14.06 billion (2007)&lt;ref name="2007financials" /&gt;</parameter>
+<parameter name="products"> [[Microsoft Windows]] &lt;br /&gt; [[Microsoft Office]] &lt;br /&gt; [[Microsoft Servers]] &lt;br /&gt; [[Microsoft Visual Studio|Developer Tools]] &lt;br /&gt; [[Microsoft Dynamics|Business Solutions]] &lt;br /&gt; [[Microsoft Game Studios|Games]] &amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp; [http://www.microsoft.com/games/] &lt;br /&gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;mkt=en-us] &lt;br /&gt; [[Windows Mobile]] &lt;br /&gt; [[Zune]][http://www.zune.net/en-US/]
+</parameter>
 <parameter name="location_city"> [[Redmond, Washington]]
 </parameter>
 <parameter name="key_people"> [[Bill Gates]], &lt;small&gt;[[Entrepreneur|Co-founder]] and [[Chairman#Types|Executive Chairman]][http://www.microsoft.com/presspass/exec/billg/bio.mspx]&lt;/small&gt;; &lt;br /&gt; [[Paul Allen]], &lt;small&gt;[[Entrepreneur|Co-founder]]&lt;/small&gt;;&lt;br /&gt; [[Steve Ballmer]], &lt;small&gt;[[Chief executive officer|CEO]]&lt;/small&gt;; &lt;br /&gt; [[Ray Ozzie]], &lt;small&gt;[[Software Architecture|Chief Software Architect]]&lt;/small&gt;

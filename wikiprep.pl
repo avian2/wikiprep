@@ -1006,13 +1006,14 @@ sub instantiateTemplate($\%$) {
 
   my $templateTitle;
   my %templateParams;
-  &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams);
+  my @rawTemplateParams;
+  &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams, \@rawTemplateParams);
 
   return "" unless(defined($templateTitle));
 
   $templateTitle = &includeTemplates($page, $templateTitle, $templateRecursionLevel + 1);
 
-  my $result = &includeParserFunction(\$templateTitle, \%templateParams, $page, $templateRecursionLevel);
+  my $result = &includeParserFunction(\$templateTitle, \@rawTemplateParams, $page, $templateRecursionLevel);
 
   # If this wasn't a parser function call, try to include a template.
   if ( not defined($result) ) {
@@ -1033,7 +1034,7 @@ sub instantiateTemplate($\%$) {
 }
 
 sub includeParserFunction(\$\%\%$\$) {
-  my ($refToTemplateTitle, $refToParameterHash, $page, $templateRecursionLevel) = @_;
+  my ($refToTemplateTitle, $refToRawParameterList, $page, $templateRecursionLevel) = @_;
 
   # Parser functions have the same syntax as templates, except their names start with a hash
   # and end with a colon. Everything after the first colon is the first argument.
@@ -1046,14 +1047,14 @@ sub includeParserFunction(\$\%\%$\$) {
 
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
-    $$refToParameterHash{'=0='} = &includeTemplates($page, $2, $templateRecursionLevel + 1);
+    unshift( @$refToRawParameterList, &includeTemplates($page, $2, $templateRecursionLevel + 1) );
 
     &msg("DEBUG", "Evaluating parser function #$functionName");
 
     if ( $functionName eq 'if' ) {
 
-      my $valueIfTrue = $$refToParameterHash{'=1='};
-      my $valueIfFalse = $$refToParameterHash{'=2='};
+      my $valueIfTrue = $$refToRawParameterList[1];
+      my $valueIfFalse = $$refToRawParameterList[2];
 
       # print LOGF "If condition: $2\n";
       # if ( defined($valueIfTrue) ) {
@@ -1063,7 +1064,7 @@ sub includeParserFunction(\$\%\%$\$) {
       #   print LOGF "If false: $valueIfFalse\n";
       # }
 
-      if ( length($$refToParameterHash{'=0='}) > 0 ) {
+      if ( length($$refToRawParameterList[0]) > 0 ) {
         # The {{#if:}} function is an if-then-else construct. The applied condition is 
         # "The condition string is non-empty". 
 
@@ -1081,12 +1082,12 @@ sub includeParserFunction(\$\%\%$\$) {
       }
     } elsif ( $functionName eq 'ifeq' ) {
 
-      my $valueIfTrue = $$refToParameterHash{'=2='};
-      my $valueIfFalse = $$refToParameterHash{'=3='};
+      my $valueIfTrue = $$refToRawParameterList[2];
+      my $valueIfFalse = $$refToRawParameterList[3];
 
       # Already has templates expanded.
-      my $lvalue = $$refToParameterHash{'=0='};
-      my $rvalue = $$refToParameterHash{'=1='};
+      my $lvalue = $$refToRawParameterList[0];
+      my $rvalue = $$refToRawParameterList[1];
 
       if ( defined($rvalue ) ) {
         $rvalue = &includeTemplates($page, $rvalue, $templateRecursionLevel + 1);
@@ -1116,7 +1117,7 @@ sub includeParserFunction(\$\%\%$\$) {
       # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
       # otherwise it returns the input value as is.
 
-      my $code = $$refToParameterHash{'=0='};
+      my $code = $$refToRawParameterList[0];
 
       $result = &languageName($code);
     } else {
@@ -1126,8 +1127,8 @@ sub includeParserFunction(\$\%\%$\$) {
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
 
-      if ( exists($$refToParameterHash{'1'}) && ( length($$refToParameterHash{'1'}) > 0 ) ) {
-        $result = $$refToParameterHash{'1'};
+      if ( exists($$refToRawParameterList[1]) && ( length($$refToRawParameterList[1]) > 0 ) ) {
+        $result = $$refToRawParameterList[1];
       } else {
         $result = " ";
       }
