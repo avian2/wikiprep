@@ -1115,13 +1115,13 @@ sub includeParserFunction(\$\%\%$\$) {
         if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
           $result = $valueIfTrue;
         } else {
-          $result = " ";
+          $result = "";
         }
       } else {
         if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
           $result = $valueIfFalse;
         } else {
-          $result = " ";
+          $result = "";
         }
       }
     } elsif ( $functionName eq 'ifeq' ) {
@@ -1145,17 +1145,17 @@ sub includeParserFunction(\$\%\%$\$) {
           if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
             $result = $valueIfTrue;
           } else {
-            $result = " ";
+            $result = "";
           }
         } else {
           if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
             $result = $valueIfFalse;
           } else {
-            $result = " ";
+            $result = "";
           }
         }
       } else {
-        $result = " ";
+        $result = "";
       }
     } elsif ( $functionName eq 'switch' ) {
       $result = &switchParserFunction($refToRawParameterList, $page, $templateRecursionLevel);
@@ -1176,7 +1176,7 @@ sub includeParserFunction(\$\%\%$\$) {
       if ( exists($$refToRawParameterList[1]) && ( length($$refToRawParameterList[1]) > 0 ) ) {
         $result = $$refToRawParameterList[1];
       } else {
-        $result = " ";
+        $result = "";
       }
     }
 

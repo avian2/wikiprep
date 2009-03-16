@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="385846" orglength="19461" newlength="12380" stub="0" categories="0" outlinks="1" urls="1">
+<page id="385846" orglength="19461" newlength="11783" stub="0" categories="0" outlinks="1" urls="1">
 <title>Kaon</title>
 <categories></categories>
 <links>16844189</links>
@@ -37,53 +37,41 @@ http://pdg.lbl.gov/2004/listings/mxxxcomb.html
 <text>
 
 
-In particle physics, a kaon (/ˈkeɪɒn/, also called K-meson and denoted quark=
-    q
+In particle physics, a kaon (/ˈkeɪɒn/, also called K-meson and denoted
 
 ) is any one of a group of four mesons distinguished by the fact that they carry a quantum number called strangeness. In the quark model they are understood to contain a single strange quark (or antiquark).
 
 <h1>Basic properties</h1>
 The four kaons are :
-#The negatively charged quark=
-    q
+#The negatively charged
 
 (containing a strange quark and an up antiquark) has mass 493.667±0.013 MeV and mean lifetime (1.2384±0.0024)×10 −8  seconds.
-#Its antiparticle, the positively charged quark=
-    q
+#Its antiparticle, the positively charged
 
-(containing an up quark and a strange antiquark) must  (by CPT invariance) have mass and lifetime equal to that of quark=
-    q
+(containing an up quark and a strange antiquark) must  (by CPT invariance) have mass and lifetime equal to that of
 
 . The mass difference is 0.032±0.090 MeV, consistent with zero. The difference in lifetime is (0.11±0.09)×10 −8  seconds.
-#The quark=
-    q
+#The
 
 (containing a down quark and a strange antiquark) has mass 497.648±0.022 MeV. It has mean squared charge radius of −0.076±0.018 fm 2 .
-#Its antiparticle quark=
-    q
+#Its antiparticle
 
 (containing a strange quark and a down antiquark) has the same mass. 
-It is clear from the quark model assignments that the kaons form two doublets of isospin; that is, they belong to the fundamental representation of SU(2) called the 2. One doublet of strangeness +1 contains the quark=
-    q
+It is clear from the quark model assignments that the kaons form two doublets of isospin; that is, they belong to the fundamental representation of SU(2) called the 2. One doublet of strangeness +1 contains the
 
-and the quark=
-    q
+and the
 
 . The antiparticles form the other doublet.
 
-Although the quark=
-    q
+Although the
 
-and its antiparticle quark=
-    q
+and its antiparticle
 
 are usually produced via the strong force, they decay weakly. Thus, once created the two are better thought of as composites of two weak eigenstates which have vastly different lifetimes:
-#The long-lived neutral kaon is called the quark=
-    q
+#The long-lived neutral kaon is called the
 
 (&quot;K-long&quot;), decays primarily into three pions, and has a mean lifetime of 5.18×10 −8  seconds.
-#The short-lived neutral kaon is called the quark=
-    q
+#The short-lived neutral kaon is called the
 
 (&quot;K-short&quot;), decays primarily into two pions, and has a mean lifetime 8.958×10 −11  seconds.
 
@@ -91,8 +79,7 @@ are usually produced via the strong force, they decay weakly. Thus, once created
 
 An experimental observation made in 1964 that K-longs rarely decay into two pions was the discovery of CP violation (see below).
 
-Main decay modes for quark=
-    q
+Main decay modes for
 
 :
 :
@@ -115,8 +102,7 @@ The decays were extremely slow; typical lifetimes are of the order of 10 −10  
 Two different decays were found for charged strange mesons:
 :
 
-Since the two final states have different parity it was thought that the initial states should also have different parities, and hence be two distinct particles. However, with increasingly precise measurements, there were found to be no difference between their masses and lifetimes, indicating that they are the same particle. This was known as the τ-θ puzzle. It was resolved only by the discovery of parity violation in weak interactions. Since the mesons decay through weak interactions, parity need not be conserved, and the two decays may be caused by the same particle, now called the quark=
-    q
+Since the two final states have different parity it was thought that the initial states should also have different parities, and hence be two distinct particles. However, with increasingly precise measurements, there were found to be no difference between their masses and lifetimes, indicating that they are the same particle. This was known as the τ-θ puzzle. It was resolved only by the discovery of parity violation in weak interactions. Since the mesons decay through weak interactions, parity need not be conserved, and the two decays may be caused by the same particle, now called the
 
 .
 
@@ -124,11 +110,9 @@ Since the two final states have different parity it was thought that the initial
 Initially it was thought that although parity was violated, CP (charge parity) symmetry was conserved. In order to understand the discovery of CP violation, it is necessary to understand the mixing of neutral kaons; this phenomenon does not require CP violation, but it is the context in which CP violation was first observed.
 
 <h2>Neutral kaon mixing</h2>
-<internal id="16844189">Two different neutral K mesons, carrying different strangeness, can turn from one into another through the weak interactions, since these interactions do not conserve strangeness. The strange quark in the quark=
-    q
+<internal id="16844189">Two different neutral K mesons, carrying different strangeness, can turn from one into another through the weak interactions, since these interactions do not conserve strangeness. The strange quark in the
 
-turns into a down quark by successively emitting two W-bosons of opposite charge. The down antiquark in the quark=
-    q
+turns into a down quark by successively emitting two W-bosons of opposite charge. The down antiquark in the
 
 turns into a strange antiquark by absorbing them.</internal>
 
@@ -143,110 +127,80 @@ The consequence of the matrix H being real is that the probabilities of the two 
 <h3>Mixing</h3>
 The eigenstates are obtained by diagonalizing this matrix. This gives new eigenvectors, which we can call K 1  which is the sum of the two states of opposite strangeness, and K 2 , which is the difference. The two are eigenstates of CP with opposite eigenvalues; K 1  has CP = +1, and K 2  has CP = -1 Since the two-pion final state also has CP = +1, only the K 1  can decay this way. The K 2  must decay into three pions. Since the mass of K 2  is just a little larger than the sum of the masses of three pions, this decay proceeds very slowly, about 600 times slower than the decay of K 1  into two pions. These two different modes of decay were observed by Leon Lederman and his coworkers in 1956, establishing the existence of the two weak eigenstates (states with definite lifetimes under decays via the weak force) of the neutral kaons.
 
-These two weak eigenstates are called the quark=
-    q
+These two weak eigenstates are called the
 
-(K-long) and quark=
-    q
+(K-long) and
 
-(K-short).  CP symmetry, which was assumed at the time, implies that quark=
-    q
+(K-short).  CP symmetry, which was assumed at the time, implies that
 
- = K 1  and quark=
-    q
+ = K 1  and
 
  = K 2 .
 
 <h3>Oscillation</h3>
-An initially pure beam of quark=
-    q
+An initially pure beam of
 
-will turn into its antiparticle while propagating, which will turn back into the original particle, and so on. This is called particle oscillation. On observing the weak decay into leptons, it was found that a quark=
-    q
+will turn into its antiparticle while propagating, which will turn back into the original particle, and so on. This is called particle oscillation. On observing the weak decay into leptons, it was found that a
 
-always decayed into an electron, whereas the antiparticle quark=
-    q
+always decayed into an electron, whereas the antiparticle
 
-decayed into the positron. The earlier analysis yielded a relation between the rate of electron and positron production from sources of pure quark=
-    q
+decayed into the positron. The earlier analysis yielded a relation between the rate of electron and positron production from sources of pure
 
-and its antiparticle quark=
-    q
+and its antiparticle
 
-. Analysis of the time dependence of this semileptonic decay showed the phenomenon of oscillation, and allowed the extraction of the mass splitting between the quark=
-    q
+. Analysis of the time dependence of this semileptonic decay showed the phenomenon of oscillation, and allowed the extraction of the mass splitting between the
 
-and quark=
-    q
+and
 
 . Since this is due to weak interactions it is very small, 10 −15  times the mass of each state.
 
 <h3>Regeneration</h3>
-A beam of neutral kaons decays in flight so that the short-lived quark=
-    q
+A beam of neutral kaons decays in flight so that the short-lived
 
-disappears, leaving a beam of pure long-lived quark=
-    q
+disappears, leaving a beam of pure long-lived
 
-. If this beam is shot into matter, then the quark=
-    q
+. If this beam is shot into matter, then the
 
-and its antiparticle quark=
-    q
+and its antiparticle
 
-interact differently with the nuclei. The quark=
-    q
+interact differently with the nuclei. The
 
-undergoes quasi-elastic scattering with nucleons, whereas its antiparticle can create hyperons. Due to the different interactions of the two components, quantum coherence between the two particles is lost. The emerging beam then contains different linear superpositions of the quark=
-    q
+undergoes quasi-elastic scattering with nucleons, whereas its antiparticle can create hyperons. Due to the different interactions of the two components, quantum coherence between the two particles is lost. The emerging beam then contains different linear superpositions of the
 
-and quark=
-    q
+and
 
-. Such a superposition is a mixture of quark=
-    q
+. Such a superposition is a mixture of
 
-and quark=
-    q
+and
 
-; the quark=
-    q
+; the
 
-is regenerated by passing a neutral kaon beam through matter. Regeneration was observed by Oreste Piccioni and his collaborators at Lawrence Berkeley National Laboratory. Soon thereafter, Robert Adair and his coworkers reported excess quark=
-    q
+is regenerated by passing a neutral kaon beam through matter. Regeneration was observed by Oreste Piccioni and his collaborators at Lawrence Berkeley National Laboratory. Soon thereafter, Robert Adair and his coworkers reported excess
 
 regeneration, thus opening a new chapter in this history.
 
 <h2>CP violation</h2>
-While trying to verify Adair&apos;s results, in 1964 James Cronin and Val Fitch of BNL found decays of quark=
-    q
+While trying to verify Adair&apos;s results, in 1964 James Cronin and Val Fitch of BNL found decays of
 
 into two pions (CP = +1). As explained in an earlier section, this required the assumed initial and final states to have different values of CP, and hence immediately suggested CP violation. Alternative explanations such as non-linear quantum mechanics and a new unobserved particle were soon ruled out, leaving CP violation as the only possibility. Cronin and Fitch received the Nobel Prize in Physics for this discovery in 1980.
 
-It turns out that although the quark=
-    q
+It turns out that although the
 
-and quark=
-    q
+and
 
 are weak eigenstates (because they have definite lifetimes for decay by way of the weak force), they are not quite CP eigenstates. Instead, for small ε (and up to normalization),
 
-:quark=
-    q
+:
 
 = K 2  + εK 1
 
-and similarly for quark=
-    q
+and similarly for
 
-. Thus occasionally the quark=
-    q
+. Thus occasionally the
 
-decays as a K 1  with CP = +1, and likewise the quark=
-    q
+decays as a K 1  with CP = +1, and likewise the
 
-can decay with CP = −1. This is known as indirect CP violation, CP violation due to mixing of quark=
-    q
+can decay with CP = −1. This is known as indirect CP violation, CP violation due to mixing of
 
 and its antiparticle. There is also a direct CP violation effect, in which the CP violation occurs during the decay itself. Both are present, because both mixing and decay arise from the same interaction with the W boson and thus have CP violation predicted by the CKM matrix.
 
