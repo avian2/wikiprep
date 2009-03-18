@@ -117,6 +117,7 @@ in parentheses are names of respective Debian packages):
 Parse::MediaWikiDump  (libparse-mediawikidump-perl)
 Regexp::Common        (libregexp-common-perl)
 Inline::C             (libinline-perl)
+XML::Writer           (libxml-writer-perl)
 
 If you can't use Inline::C, search for references to 'Wikiprep::ctemplates' in 
 the code and change them to 'Wikiprep::templates'. This will use equivalent 
