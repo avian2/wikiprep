@@ -10,7 +10,7 @@ use Exporter 'import';
 
 use Wikiprep::utils;
 
-our @EXPORT_OK = qw( templateParameterRecursion splitOnTemplates parseTemplateInvocation );
+our @EXPORT_OK = qw( templateParameterRecursion splitOnTemplates parseTemplateInvocation splitTemplateInvocation );
 
 my $maxParameterRecursionLevels = 10;
 

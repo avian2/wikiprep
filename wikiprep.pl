@@ -44,7 +44,6 @@ use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
 use Wikiprep::languages qw( languageName );
 use Wikiprep::templates qw( templateParameterRecursion parseTemplateInvocation );
-use Wikiprep::ctemplates qw( splitOnTemplates splitTemplateInvocation );
 use Wikiprep::lang qw( getLang );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::logger qw( msg );
@@ -68,6 +67,7 @@ my $showVersion = 0;
 my $dontExtractUrls = 0;
 my $logArgs = "";
 my $doCompress = 0;
+my $purePerl = 0;
 
 my $langCode = 'en';
 my $outputFormat = "legacy";
@@ -79,7 +79,8 @@ GetOptions('f=s' => \$file,
            'log=s' => \$logArgs,
            'compress' => \$doCompress,
            'lang=s' => \$langCode,
-           'format=s' => \$outputFormat);
+           'format=s' => \$outputFormat,
+           'pureperl=s' => \$purePerl);
 
 if ($showLicense) {
   if (-e $licenseFile) {
@@ -99,6 +100,13 @@ if (!defined($file)) {
 }
 if (! -e $file) {
   die "Input file '$file' cannot be opened for reading\n";
+}
+if ($purePerl) {
+  require 'Wikiprep/templates.pm';
+  Wikiprep::templates->import( qw( splitOnTemplates splitTemplateInvocation ) );
+} else {
+  require 'Wikiprep/ctemplates.pm';
+  Wikiprep::ctemplates->import( qw( splitOnTemplates splitTemplateInvocation ) );
 }
 
 my $startTime = time;
@@ -2221,6 +2229,11 @@ USAGE: $0 <options> -f <XML file with page dump>
    or  $0 -f pages_articles.xml.bz2
 
 Available options:
+  -pureperl      Use pure Perl implementation. This slows down
+                 processing, but can be useful if Inline::C
+                 isn't available. Note that the results of
+                 template parsing with this option may differ in 
+                 edge cases.
   -nourls        Don't extract external links (URLs) from pages. 
                  Reduces run-time by approximately one half.
   -log ARGS      Write a large log file with debug information.
