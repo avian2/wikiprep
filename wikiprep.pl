@@ -954,9 +954,8 @@ sub includeTemplates(\%$$) {
 
   my $invocation = 0;
   my $new_text = "";
-  my $token;
 
-  for $token ( &splitOnTemplates($text) ) {
+  for my $token ( &splitOnTemplates($text) ) {
     if( $invocation ) {
       $new_text .= &instantiateTemplate($token, $page, $templateRecursionLevel);
       $invocation = 0;
@@ -987,8 +986,7 @@ sub includeTemplates(\%$$) {
 sub instantiateTemplate($\%$) {
   my ($templateInvocation, $page, $templateRecursionLevel) = @_;
 
-  my $len = length( $templateInvocation );
-  if($len > 32767) {
+  if( length($templateInvocation) > 32767 ) {
     # Some {{#switch ... }} statements are excesivelly long and usually do not produce anything
     # useful. Plus they can cause segfauls in older versions of Perl.
 
@@ -996,11 +994,6 @@ sub instantiateTemplate($\%$) {
     return "";
   }
 
-  # Clean the invocation string: remove braces that were also matched by $RE{balanced} and 
-  # ignore optional whitespace before the template name.
-  
-  $templateInvocation =~ s/^\s*//;
-  
   &msg("DEBUG", "Template recursion level $templateRecursionLevel");
   &msg("DEBUG", "Instantiating template=$templateInvocation");
 
