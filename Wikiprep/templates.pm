@@ -9,7 +9,6 @@ use Regexp::Common;
 use Exporter 'import';
 
 use Wikiprep::utils;
-use Wikiprep::ctemplates;
 
 our @EXPORT_OK = qw( templateParameterRecursion splitOnTemplates parseTemplateInvocation );
 
@@ -216,7 +215,7 @@ sub splitTemplateInvocation($) {
 # This function will further parse a template invocation # (e.g. everything within two braces {{ ... }}) 
 # that has already been split into fields along |. It returns a hash of template parameters.
 
-sub parseTemplateInvocation(@%) {
+sub parseTemplateInvocation(\@\%) {
   my ($refToRawParameterList, $refToParameterHash) = @_;
 
   # Parameters can be either named or unnamed. In the latter case, their name is defined by their
