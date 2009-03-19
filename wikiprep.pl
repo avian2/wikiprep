@@ -44,7 +44,7 @@ use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
 use Wikiprep::languages qw( languageName );
 use Wikiprep::templates qw( templateParameterRecursion parseTemplateInvocation );
-use Wikiprep::ctemplates qw( splitOnTemplates );
+use Wikiprep::ctemplates qw( splitOnTemplates splitTemplateInvocation );
 use Wikiprep::lang qw( getLang );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::logger qw( msg );
@@ -1004,13 +1004,29 @@ sub instantiateTemplate($\%$) {
   &msg("DEBUG", "Template recursion level $templateRecursionLevel");
   &msg("DEBUG", "Instantiating template=$templateInvocation");
 
-  my $templateTitle;
-  my %templateParams;
-  my @rawTemplateParams;
-  &parseTemplateInvocation(\$templateInvocation, \$templateTitle, \%templateParams, \@rawTemplateParams);
+  # The template name extends up to the first pipeline symbol (if any).
+  # Template parameters go after the "|" symbol.
+  
+  # Template parameters often contain URLs, internal links, or just other useful text,
+  # whereas the template serves for presenting it in some nice way.
+  # Parameters are separated by "|" symbols. However, we cannot simply split the string
+  # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
+  # on those "|" symbols that are not inside [[...]]. 
+      
+  # Note that template name can also contain internal links (for example when template is a
+  # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
+  # the name of the template as for template parameters.
+  
+  # Same goes if template parameters include other template invocations.
 
-  return "" unless(defined($templateTitle));
+  # We also trim leading and trailing whitespace from parameter values.
 
+  my @rawTemplateParams = map { s/^\s+//; s/\s+$//; $_; } &splitTemplateInvocation($templateInvocation);
+  return "" unless @rawTemplateParams;
+  
+  # We now have the invocation string split up on | in the @rawTemplateParams list.
+  # String before the first "|" symbol is the title of the template.
+  my $templateTitle = shift(@rawTemplateParams);
   $templateTitle = &includeTemplates($page, $templateTitle, $templateRecursionLevel + 1);
 
   my $result = &includeParserFunction(\$templateTitle, \@rawTemplateParams, $page, $templateRecursionLevel);
@@ -1024,6 +1040,9 @@ sub instantiateTemplate($\%$) {
       &msg("WARNING", "Overriding template $templateTitle");
       return $overrideResult;
     }
+  
+    my %templateParams;
+    &parseTemplateInvocation(\@rawTemplateParams, \%templateParams);
 
     &includeTemplateText(\$templateTitle, \%templateParams, $page, \$result);
   }

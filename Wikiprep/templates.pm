@@ -213,74 +213,31 @@ sub splitTemplateInvocation($) {
   }
 }
 
-# This function will parse a template invocation (e.g. everything within two braces {{ ... }})
-# and return a template title and a hash of template parameters.
+# This function will further parse a template invocation # (e.g. everything within two braces {{ ... }}) 
+# that has already been split into fields along |. It returns a hash of template parameters.
 
-# The template name extends up to the first pipeline symbol (if any).
-# Template parameters go after the "|" symbol.
-
-# Template parameters often contain URLs, internal links, or just other useful text,
-# whereas the template serves for presenting it in some nice way.
-# Parameters are separated by "|" symbols. However, we cannot simply split the string
-# on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-# on those "|" symbols that are not inside [[...]]. 
-  
-# Note that template name can also contain internal links (for example when template is a
-# parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
-# the name of the template as for template parameters.
-
-# Same goes if template parameters include other template invocations.
-
-sub parseTemplateInvocation(\$\$\%) {
-  my ($refToTemplateInvocation, $refToTemplateTitle, $refToParameterHash, $refToRawParameterList) = @_;
-
-  #my @parameters = &splitTemplateInvocation($$refToTemplateInvocation);
-  my @parameters = &Wikiprep::ctemplates::splitTemplateInvocation($$refToTemplateInvocation);
-
-  # We now have the invocation string split up in the @parameters list.
-
-  # String before the first "|" symbol is the title of the template.
-  $$refToTemplateTitle = shift(@parameters);
-
-  # Template invocation does not contain any parameters
-  return unless($#parameters > -1);
+sub parseTemplateInvocation(@%) {
+  my ($refToRawParameterList, $refToParameterHash) = @_;
 
   # Parameters can be either named or unnamed. In the latter case, their name is defined by their
   # ordinal position (1, 2, 3, ...).
 
-  my $unnamedParameterCounter = 0;
+  my $unnamedParameterCounter = 1;
 
   # It's legal for unnamed parameters to be skipped, in which case they will get default
   # values (if available) during actual instantiation. That is {{template_name|a||c}} means
   # parameter 1 gets the value 'a', parameter 2 value is not defined, and parameter 3 gets the value 'c'.
   # This case is correctly handled by function 'split', and does not require any special handling.
-  my $param;
-  foreach $param (@parameters) {
-
-    # if the value does not contain a link, we can later trim whitespace
-    my $doesNotContainLink = ($param !~ /\]\]/);
-
-    # For parser functions we need unmodified parameters by position. For example:
-    # "{{#if: true | id=xxx }}" must expand to "id=xxx". So we store raw parameter values in a
-    # separate array.
-
-    if ($doesNotContainLink) {
-      $param =~ s/^\s+//;
-      $param =~ s/\s+$//;
-    } 
-
-    push(@$refToRawParameterList, $param);
-
-    # Spaces before or after a parameter value are normally ignored, UNLESS the parameter contains
-    # a link (to prevent possible gluing the link to the following text after template substitution)
+  foreach my $param (@$refToRawParameterList) {
 
     # Parameter values may contain "=" symbols, hence the parameter name extends up to
     # the first such symbol.
+    
     # It is legal for a parameter to be specified several times, in which case the last assignment
     # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
     # Therefore, we don't check if the parameter has been assigned a value before, because
     # anyway the last assignment should override any previous ones.
-    my ( $parameterName, $parameterValue ) = split(/=/, $param, 2);
+    my ( $parameterName, $parameterValue ) = split(/\s*=\s*/, $param, 2);
 
     # $parameterName is undefined if $param is an empty string
     if( not defined( $parameterName ) ) {
@@ -291,22 +248,12 @@ sub parseTemplateInvocation(\$\$\%) {
       # This is a named parameter.
       # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
       # parameter ("2") is specified explicitly - this is handled transparently.
-
-      $parameterName =~ s/\s+$//;
-      
-      # if the value does not contain a link, trim whitespace
-      if ($doesNotContainLink) {
-        $parameterValue =~ s/^\s+//;
-      } else {
-        $parameterName =~ s/^\s+//;
-      }
-
       $$refToParameterHash{$parameterName} = $parameterValue;
     } else {
       # this is an unnamed parameter
-      $unnamedParameterCounter++;
-
       $$refToParameterHash{$unnamedParameterCounter} = $param;
+
+      $unnamedParameterCounter++;
     }
   }
 }
