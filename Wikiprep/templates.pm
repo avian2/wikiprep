@@ -47,23 +47,21 @@ sub logPath(\$\$) {
 sub substituteParameter($\%) {
   my ($parameter, $refToParameterHash) = @_;
 
-  my $result;
-
   if ($parameter =~ /^([^|]*)\|(.*)$/) {
     # This parameter has a default value
     my $paramName = $1;
     my $defaultValue = $2;
 
     if ( defined($$refToParameterHash{$paramName}) ) {
-      $result = $$refToParameterHash{$paramName};  # use parameter value specified in template invocation
+      return $$refToParameterHash{$paramName};  # use parameter value specified in template invocation
     } else { # use the default value
-      $result = $defaultValue;
+      return $defaultValue;
     }
   } else {
     # parameter without a default value
 
     if ( defined($$refToParameterHash{$parameter}) ) {
-      $result = $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
+      return $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
     } else {
       # Parameter not specified in template invocation and does not have a default value -
       # do not perform substitution and keep the parameter in 3 braces
@@ -73,14 +71,12 @@ sub substituteParameter($\%) {
 
       # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
       # practice we get a lot less noise in the output if we expand them to zero-length strings.
-      $result = "";
+      return "";
     }
   }
 
   # Surplus parameters - i.e., those assigned values in template invocation but not used
   # in the template body - are simply ignored.
-
-  $result;  # return value
 }
 
 BEGIN {
@@ -130,8 +126,8 @@ my $paramRegex = qr/\{\{\{                              # Template parameter is 
 # parsing we have to make sure that the default value contains properly balanced 
 # braces.
 
-sub templateParameterRecursion(\$\$$) {
-	my ($refToText, $refToParameterHash, $parameterRecursionLevel) = @_;
+sub templateParameterRecursion(\$\%) {
+	my ($refToText, $refToParameterHash) = @_;
 
   my $parameterRecursionLevels = 0;
  
@@ -142,11 +138,7 @@ sub templateParameterRecursion(\$\$$) {
       $parameterRecursionLevels++;
   }
 
-  if($parameterRecursionLevels >= $maxParameterRecursionLevels) {
-    return 1
-  } else {
-    return 0
-  }
+  return $parameterRecursionLevels >= $maxParameterRecursionLevels;
 }
 
 }

@@ -1250,7 +1250,7 @@ sub includeTemplateText(\$\%\%\$$) {
     $$refToResult = $templates{$includedPageId};
 
     # Substitute template parameters
-    if( &templateParameterRecursion($refToResult, $refToParameterHash, 1) ) {
+    if( &templateParameterRecursion($refToResult, $refToParameterHash) ) {
       &msg("WARNING", "Maximum template parameter recursion level reached");
     }
 
@@ -1396,10 +1396,9 @@ sub collectWikiLink($$$\@\@$) {
 
   # just strip this initial colon (as well as any whitespace preceding it)
   $link =~ s/^\s*:?//;
-  if ( !$link ) {
-    # Empty link, bail out.
-    return "";
-  }
+  
+  # Bail out if empty link
+  return "" unless $link;
 
   $link = &resolveNamespaceAliases($link);
 
@@ -1410,27 +1409,23 @@ sub collectWikiLink($$$\@\@$) {
   # the pipeline symbol is present.
   my $alternativeTextAvailable = 0;
 
-  my $isImageLink = 0;
   my $interwikiRecognized = 0;
   my $interwikiTitle;
 
   my $imageNamespace = $langDB{'imageNamespace'};
-  if ($link =~ /^$imageNamespace:/) {
-    $isImageLink = 1;
-  }
+  my $isImageLink = ($link =~ /^$imageNamespace:/);
 
   # "-1" parameter permits empty trailing fields (important for pipeline masking)
   my @pipeFields = split(/\|/, $link, -1);
 
   # Text before the first "|" symbol contains link destination.
   $link = shift(@pipeFields);
-  if ( !$link ) {
-    # Empty link, bail out.
-    return "";
-  }
+  
+  # Bail out if empty link
+  return "" unless $link;
 
   # If the link contains a section reference, adjust the link to point to the page as a whole and
-  # exract the section
+  # extract the section
   my $section;
 
   ( $link, $section ) = split(/#/, $link, 2);
@@ -1512,7 +1507,7 @@ sub collectWikiLink($$$\@\@$) {
   # than one link (one for the day, another one for the year).
   my $dateRecognized = 0;
 
-  my $targetId = undef;
+  my $targetId;
 
   # Alternative text (specified after pipeline) blocks normalization of dates.
   # We also perform a quick check - if the link does not start with a digit,
