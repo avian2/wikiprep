@@ -1,6 +1,8 @@
 use Test::Simple tests => 13;
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
-use Wikiprep::lang qw( getLang );
+use Wikiprep::Config;
+
+Wikiprep::Config::init("enwiki");
 
 my ($t, $r);
 my @t;
@@ -63,7 +65,7 @@ Some text
 Some text here
 END
 ;
-&convertGalleryToLink(\$t, &getLang("en") );
+&convertGalleryToLink(\$t);
 ok($r eq $t);
 
 $t = <<END
@@ -87,7 +89,7 @@ invalid
 Some text here
 END
 ;
-&convertGalleryToLink(\$t, &getLang("en") );
+&convertGalleryToLink(\$t);
 ok($r eq $t);
 
 $t = <<END
@@ -122,7 +124,7 @@ $r = <<END
 [[w:Number|Number]]
 END
 ;
-&convertImagemapToLink(\$t, &getLang("en") );
+&convertImagemapToLink(\$t);
 ok($r eq $t);
 
 $t = <<END
@@ -138,5 +140,5 @@ $r = <<END
 [[w:Number|Number]]
 END
 ;
-&convertImagemapToLink(\$t, &getLang("en") );
+&convertImagemapToLink(\$t);
 ok($r eq $t);

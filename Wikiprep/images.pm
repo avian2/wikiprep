@@ -2,12 +2,14 @@
 
 package Wikiprep::images;
 
+use Wikiprep::Config;
+
 use strict;
 use Exporter 'import';
 our @EXPORT_OK = qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 
-sub convertGalleryToLink(\$\%) {
-  my ($refToText, $refToLangDB) = @_;
+sub convertGalleryToLink(\$) {
+  my ($refToText) = @_;
 
   # Galleries are delimited with <gallery> tags like this:
   #
@@ -22,31 +24,31 @@ sub convertGalleryToLink(\$\%) {
   1 while ( $$refToText =~ s/<gallery>
                              ([^<]*)
                              <\/gallery>
-                            /&convertOneGallery($1, $refToLangDB)/segx
+                            /&convertOneGallery($1)/segx
           );
 }
 
-sub convertOneGallery($\%) {
-  my ($galleryText, $refToLangDB) = @_;
+sub convertOneGallery($) {
+  my ($galleryText) = @_;
 
   # Take care of namespace aliases
 
-  while(my ($key, $value) = each(%{$refToLangDB->{'namespaceAliases'}})) {
+  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
       $galleryText =~ s/^\s*$key:/$value:/mig;
   }
   
   # Simply enclose each line that starts with Image: in [[ ... ]] and leave the links to be collected by
   # collectInternalLink()
   
-  my $imageNamespace = $refToLangDB->{'imageNamespace'};
+  my $imageNamespace = $Wikiprep::Config::imageNamespace;
 
   $galleryText =~ s/^\s*($imageNamespace:.*)\s*$/[[$1]]/mig;
 
   return $galleryText;
 }
 
-sub convertImagemapToLink(\$\%) {
-  my ($refToText, $refToLangDB) = @_;
+sub convertImagemapToLink(\$) {
+  my ($refToText) = @_;
 
   # Imagemaps are similar to galleries, except that include extra markup which must be removed.
   #
@@ -73,20 +75,20 @@ sub convertImagemapToLink(\$\%) {
   1 while ( $$refToText =~ s/<imagemap>
                              ([^<]*)      
                              <\/imagemap>
-                            /&convertOneImagemap($1, $refToLangDB)/segx
+                            /&convertOneImagemap($1)/segx
           );
 }
 
 sub convertOneImagemap($) {
-  my ($imagemapText, $refToLangDB) = @_;
+  my ($imagemapText) = @_;
   
   # Take care of namespace aliases
 
-  while(my ($key, $value) = each(%{$refToLangDB->{'namespaceAliases'}})) {
+  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
       $imagemapText =~ s/^\s*$key:/$value:/mig;
   }
 
-  my $imageNamespace = $refToLangDB->{'imageNamespace'};
+  my $imageNamespace = $Wikiprep::Config::imageNamespace;
 
   # Convert image specification to a link
   $imagemapText =~ s/^\s*($imageNamespace:.*)\s*$/[[$1]]/mig;
