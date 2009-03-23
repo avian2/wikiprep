@@ -1,4 +1,5 @@
 *.log
+*.profile
 *.templates
 *.external_anchors
 *.version
