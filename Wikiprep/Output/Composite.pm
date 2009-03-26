@@ -150,8 +150,19 @@ sub writeRedirects
 
   while(my ($fromTitle, $toTitle) = each(%$refToRedir)) {
 
-    my $fromId = $refToTitle2Id->{$fromTitle} || "unknown";
-    my $toId = $refToTitle2Id->{$toTitle} || "unknown";
+    my $fromId;
+    if( exists $refToTitle2Id->{$fromTitle} ) {
+      $fromId = $refToTitle2Id->{$fromTitle} 
+    } else {
+      $fromId = "unknown";
+    }
+
+    my $toId;
+    if( exists $refToTitle2Id->{$toTitle} ) {
+      $toId = $refToTitle2Id->{$toTitle} 
+    } else {
+      $toId = "unknown";
+    }
 
     if( exists( $refToTemplates->{$fromId} ) ) {
       next;
