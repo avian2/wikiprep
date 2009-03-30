@@ -41,15 +41,11 @@ use FindBin;
 use lib "$FindBin::Bin";
 
 use Wikiprep::Config;
-use Wikiprep::Namespace qw( isKnownNamespace loadNamespaces normalizeNamespace normalizeTitle isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages );
-use Wikiprep::Link qw( %title2id %redir resolveLink parseRedirect extractWikiLinks );
+use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
-use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
-use Wikiprep::languages qw( languageName );
-use Wikiprep::templates qw( templateParameterRecursion parseTemplateInvocation );
 use Wikiprep::css qw( removeMetadata );
-use Wikiprep::utils qw( trimWhitespaceBothSides encodeXmlChars getLinkIds removeDuplicatesAndSelf );
+use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf removeElements );
 
 use Wikiprep::Output::Legacy;
 use Wikiprep::Output::Composite;
@@ -68,7 +64,7 @@ my $showVersion = 0;
 my $dontExtractUrls = 0;
 my $logLevel = "notice";
 my $doCompress = 0;
-my $purePerl = 0;
+our $purePerl = 0;
 
 my $configName = 'enwiki';
 my $outputFormat = "legacy";
@@ -102,20 +98,12 @@ if (!defined($file)) {
 if (! -e $file) {
   die "Input file '$file' cannot be opened for reading\n";
 }
-if ($purePerl) {
-  require 'Wikiprep/templates.pm';
-  Wikiprep::templates->import( qw( splitOnTemplates splitTemplateInvocation ) );
-} else {
-  require 'Wikiprep/ctemplates.pm';
-  Wikiprep::ctemplates->import( qw( splitOnTemplates splitTemplateInvocation ) );
-}
 Wikiprep::Config::init($configName);
 
 my $startTime = time;
 
 ##### Global variables #####
 
-our %templates;         # template bodies for insertion
 my %catHierarchy;       # each category is associated with a list of its immediate descendants
 my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
@@ -172,14 +160,26 @@ LOG->add(
 binmode(STDOUT,  ':utf8');
 binmode(STDERR,  ':utf8');
 
+require Wikiprep::Link;
+use vars qw( %title2id %redir );
+Wikiprep::Link->import qw( %title2id %redir resolveLink parseRedirect extractWikiLinks );
+
+require Wikiprep::Templates; 
+use vars qw( %templates );
+Wikiprep::Templates->import qw( %templates includeTemplates );
+
+require Wikiprep::Related;
+Wikiprep::Related->import qw( identifyRelatedArticles );
+
+require Wikiprep::Disambig;
+Wikiprep::Disambig->import qw( isDisambiguation parseDisambig );
+
 &prescan();
 
 #$out->lastLocalID($localIDCounter);
 
 &Wikiprep::Link::prescanFinished();
-
-my $numTemplates = scalar( keys(%templates) );
-LOG->notice("Loaded $numTemplates templates");
+&Wikiprep::Templates::prescanFinished();
 
 &transform();
 
@@ -202,23 +202,6 @@ LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 
 
 
 ##### Subroutines #####
-
-sub isDisambiguation($) {
-  my ($page) = @_;
-
-  my $result = 0;
-
-  my $disambigTemplates = $Wikiprep::Config::disambigTemplates;
-  my $disambigTitle = $Wikiprep::Config::disambigTitle;
-
-  if ( ${$page->text} =~ /\{\{\s*$disambigTemplates\s*(?:\|.*)?\s*\}\}/ix ) {
-    $result = 1;
-  } elsif ( $page->title =~ /$disambigTitle/ix ) {
-    $result = 1;
-  }
-
-  return $result;
-}
 
 sub writeStatistics() {
   my $statCategoriesFile = "$filePath/$fileBasename.stat.categories";
@@ -313,59 +296,7 @@ sub prescan() {
 
     next unless &Wikiprep::Link::prescan(\$title, \$id, $mwpage);
 
-    my $templateNamespace = $Wikiprep::Config::templateNamespace;
-    if ($title =~ /^$templateNamespace:/) {
-      my $text = ${$mwpage->text};
-
-      $out->newTemplate($id, $title);
-
-      # We're storing template text for future inclusion, therefore,
-      # remove all <noinclude> text and keep all <includeonly> text
-      # (but eliminate <includeonly> tags per se).
-      # However, if <onlyinclude> ... </onlyinclude> parts are present,
-      # then only keep them and discard the rest of the template body.
-      # This is because using <onlyinclude> on a text fragment is
-      # equivalent to enclosing it in <includeonly> tags **AND**
-      # enclosing all the rest of the template body in <noinclude> tags.
-      # These definitions can easily span several lines, hence the "/s" modifiers.
-
-      # Remove comments (<!-- ... -->) from template text. This is best done as early as possible so
-      # that it doesn't slow down the rest of the code.
-      
-      # Note that comments must be removed before removing other XML tags,
-      # because some comments appear inside other tags (e.g. "<span <!-- comment --> class=...>"). 
-      
-      # Comments can easily span several lines, so we use the "/s" modifier.
-
-      $text =~ s/<!--(?:.*?)-->//sg;
-
-      # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
-      # MediaWiki extension they use that selects random text - wikiprep
-      # creates huge pages if we don't remove it)
-
-      # $text =~ s/<choose[^>]*>(?:.*?)<\/choose[^>]*>/ /sg;
-
-      my $onlyincludeAccumulator;
-      while ($text =~ /<onlyinclude>(.*?)<\/onlyinclude>/sg) {
-        my $onlyincludeFragment = $1;
-        $onlyincludeAccumulator .= "$onlyincludeFragment\n";
-      }
-      if ( defined($onlyincludeAccumulator)) {
-        $text = $onlyincludeAccumulator;
-      } else {
-        # If there are no <onlyinclude> fragments, simply eliminate
-        # <noinclude> fragments and keep <includeonly> ones.
-        $text =~ s/<noinclude\s*>.*?<\/noinclude\s*>/\n/sg;
-
-        # In case there are unterminated <noinclude> tags
-        $text =~ s/<noinclude\s*>.*$//sg;
-
-        $text =~ s/<includeonly\s*>(.*?)<\/includeonly\s*>/$1/sg;
-
-      }
-
-      $templates{$id} = $text;
-    }
+    &Wikiprep::Templates::prescan(\$title, \$id, $mwpage);
   }
 
   close(INF);
@@ -583,388 +514,6 @@ sub updateCategoryHierarchy($\@) {
   }
 }
 
-BEGIN {
-
-my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/s;
-my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
-
-# This function transcludes all templates in a given string and returns a fully expanded
-# text. 
-
-# It's called recursively, so we have a $templateRecursionLevel parameter to track the 
-# recursion depth and break out in case it gets too deep.
-
-sub includeTemplates(\%$$) {
-  my ($page, $text, $templateRecursionLevel) = @_;
-
-  if( $templateRecursionLevel > $Wikiprep::Config::maxTemplateRecursionLevels ) {
-
-    # Ignore this template if limit is reached 
-
-    # Since we limit the number of levels of template recursion, we might end up with several
-    # un-instantiated templates. In this case we simply eliminate them - however, we do so
-    # later, in function 'postprocessText()', after extracting categories, links and URLs.
-
-    LOG->info("maximum template recursion level reached");
-    return " ";
-  }
-
-  # Templates are frequently nested. Occasionally, parsing mistakes may cause template insertion
-  # to enter an infinite loop, for instance when trying to instantiate Template:Country
-  # {{country_{{{1}}}|{{{2}}}|{{{2}}}|size={{{size|}}}|name={{{name|}}}}}
-  # which is repeatedly trying to insert template "country_", which is again resolved to
-  # Template:Country. The straightforward solution of keeping track of templates that were
-  # already inserted for the current article would not work, because the same template
-  # may legally be used more than once, with different parameters in different parts of
-  # the article. Therefore, we simply limit the number of iterations of nested template
-  # inclusion.
-
-  # Note that this isn't equivalent to MediaWiki handling of template loops 
-  # (see http://meta.wikimedia.org/wiki/Help:Template), but it seems to be working well enough for us.
-  
-  my %nowikiChunksReplaced = ();
-  my %preChunksReplaced = ();
-
-  # Hide template invocations nested inside <nowiki> tags from the s/// operator. This prevents 
-  # infinite loops if templates include an example invocation in <nowiki> tags.
-
-  &extractTags(\$preRegex, \$text, \%preChunksReplaced);
-  &extractTags(\$nowikiRegex, \$text, \%nowikiChunksReplaced);
-
-  my $invocation = 0;
-  my $new_text = "";
-
-  for my $token ( &splitOnTemplates($text) ) {
-    if( $invocation ) {
-      $new_text .= &instantiateTemplate($token, $page, $templateRecursionLevel);
-      $invocation = 0;
-    } else {
-      $new_text .= $token;
-      $invocation = 1;
-    }
-  }
-
-  # $text =~ s/$templateRegex/&instantiateTemplate($1, $refToId, $refToTitle, $templateRecursionLevel)/segx;
-
-  &replaceTags(\$new_text, \%nowikiChunksReplaced);
-  &replaceTags(\$new_text, \%preChunksReplaced);
-
-  # print LOGF "Finished with templates level $templateRecursionLevel\n";
-  # print LOGF "#########\n\n";
-  # print LOGF "$text";
-  # print LOGF "#########\n\n";
-  
-  my $text_len = length $new_text;
-  LOG->debug("text length after templates level $templateRecursionLevel: $text_len bytes");
-  
-  return $new_text;
-}
-
-}
-
-sub instantiateTemplate($\%$) {
-  my ($templateInvocation, $page, $templateRecursionLevel) = @_;
-
-  if( length($templateInvocation) > 32767 ) {
-    # Some {{#switch ... }} statements are excesivelly long and usually do not produce anything
-    # useful. Plus they can cause segfauls in older versions of Perl.
-
-    LOG->info("ignoring long template invocation: $templateInvocation");
-    return "";
-  }
-
-  LOG->debug("template recursion level $templateRecursionLevel");
-  LOG->debug("instantiating template: $templateInvocation");
-
-  # The template name extends up to the first pipeline symbol (if any).
-  # Template parameters go after the "|" symbol.
-  
-  # Template parameters often contain URLs, internal links, or just other useful text,
-  # whereas the template serves for presenting it in some nice way.
-  # Parameters are separated by "|" symbols. However, we cannot simply split the string
-  # on "|" symbols, since these frequently appear inside internal links. Therefore, we split
-  # on those "|" symbols that are not inside [[...]]. 
-      
-  # Note that template name can also contain internal links (for example when template is a
-  # parser function: "{{#if:[[...|...]]|...}}". So we use the same mechanism for splitting out
-  # the name of the template as for template parameters.
-  
-  # Same goes if template parameters include other template invocations.
-
-  # We also trim leading and trailing whitespace from parameter values.
-
-  my @rawTemplateParams = map { s/^\s+//; s/\s+$//; $_; } &splitTemplateInvocation($templateInvocation);
-  return "" unless @rawTemplateParams;
-  
-  # We now have the invocation string split up on | in the @rawTemplateParams list.
-  # String before the first "|" symbol is the title of the template.
-  my $templateTitle = shift(@rawTemplateParams);
-  $templateTitle = &includeTemplates($page, $templateTitle, $templateRecursionLevel + 1);
-
-  my $result = &includeParserFunction(\$templateTitle, \@rawTemplateParams, $page, $templateRecursionLevel);
-
-  # If this wasn't a parser function call, try to include a template.
-  if ( not defined($result) ) {
-    &computeFullyQualifiedTemplateTitle(\$templateTitle);
-
-    my $overrideResult = $Wikiprep::Config::overrideTemplates{$templateTitle};
-    if(defined $overrideResult) {
-      LOG->info("overriding template: $templateTitle");
-      return $overrideResult;
-    }
-  
-    my %templateParams;
-    &parseTemplateInvocation(\@rawTemplateParams, \%templateParams);
-
-    &includeTemplateText(\$templateTitle, \%templateParams, $page, \$result);
-  }
-
-  $result = &includeTemplates($page, $result, $templateRecursionLevel + 1);
-
-  return $result;  # return value
-}
-
-sub switchParserFunction {
-  # Code ported from ParserFunctions.php
-  # Documentation at http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions#.23switch:
-  
-  my ($refToRawParameterList, $page, $templateRecursionLevel) = @_;
-
-  my $primary = shift( @$refToRawParameterList );
-
-  my @parts;
-  my $found;
-  my $default;
-
-  for my $param (@$refToRawParameterList) {
-    @parts = split(/\s*=\s*/, $param, 2);
-    if( $#parts == 1 ) {
-      my $lvalue = &includeTemplates($page, $parts[0], $templateRecursionLevel + 1);
-      # Found "="
-      if( $found || $lvalue eq $primary ) {
-        # Found a match, return now
-        return $parts[1];
-      } elsif( $parts[0] =~ /^#default/ ) {
-        $default = $parts[1];
-      } 
-      # else wrong case, continue
-    } elsif( $#parts == 0 ) {
-      my $lvalue = &includeTemplates($page, $parts[0], $templateRecursionLevel + 1);
-      # Multiple input, single output
-      # If the value matches, set a flag and continue
-      if( $lvalue eq $primary ) {
-        $found = 1;
-      }
-    }
-  }
-  # Default case
-  # Check if the last item had no = sign, thus specifying the default case
-  if( $#parts == 0 ) {
-    return $parts[0];
-  } elsif( $default ) {
-    return $default;
-  } else {
-    return '';
-  }
-}
-
-sub includeParserFunction(\$\%\%$\$) {
-  my ($refToTemplateTitle, $refToRawParameterList, $page, $templateRecursionLevel) = @_;
-
-  # Parser functions have the same syntax as templates, except their names start with a hash
-  # and end with a colon. Everything after the first colon is the first argument.
-
-  # Parser function invocation can span more than one line, hence the /s modifier
-
-  # http://meta.wikimedia.org/wiki/Help:ParserFunctions
-  
-  my $result = undef;
-
-  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
-    my $functionName = $1;
-    unshift( @$refToRawParameterList, &includeTemplates($page, $2, $templateRecursionLevel + 1) );
-
-    LOG->debug("evaluating parser function #$functionName");
-
-    if ( $functionName eq 'if' ) {
-
-      my $valueIfTrue = $$refToRawParameterList[1];
-      my $valueIfFalse = $$refToRawParameterList[2];
-
-      # print LOGF "If condition: $2\n";
-      # if ( defined($valueIfTrue) ) {
-      #   print LOGF "If true: $valueIfTrue\n";
-      # }
-      # if ( defined($valueIfFalse) ) {
-      #   print LOGF "If false: $valueIfFalse\n";
-      # }
-
-      if ( length($$refToRawParameterList[0]) > 0 ) {
-        # The {{#if:}} function is an if-then-else construct. The applied condition is 
-        # "The condition string is non-empty". 
-
-        if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
-          $result = $valueIfTrue;
-        } else {
-          $result = "";
-        }
-      } else {
-        if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
-          $result = $valueIfFalse;
-        } else {
-          $result = "";
-        }
-      }
-    } elsif ( $functionName eq 'ifeq' ) {
-
-      my $valueIfTrue = $$refToRawParameterList[2];
-      my $valueIfFalse = $$refToRawParameterList[3];
-
-      # Already has templates expanded.
-      my $lvalue = $$refToRawParameterList[0];
-      my $rvalue = $$refToRawParameterList[1];
-
-      if ( defined($rvalue ) ) {
-        $rvalue = &includeTemplates($page, $rvalue, $templateRecursionLevel + 1);
-
-        # lvalue is always defined
-        if ( $lvalue eq $rvalue ) {
-          # The {{#ifeq:}} function is an if-then-else construct. The applied condition is 
-          # "is rvalue equal to lvalue". Note that this does only string comparison while MediaWiki
-          # implementation also supports numerical comparissons.
-
-          if ( defined($valueIfTrue) && ( length($valueIfTrue) > 0 ) ) {
-            $result = $valueIfTrue;
-          } else {
-            $result = "";
-          }
-        } else {
-          if ( defined($valueIfFalse) && ( length($valueIfFalse) > 0 ) ) {
-            $result = $valueIfFalse;
-          } else {
-            $result = "";
-          }
-        }
-      } else {
-        $result = "";
-      }
-    } elsif ( $functionName eq 'switch' ) {
-      $result = &switchParserFunction($refToRawParameterList, $page, $templateRecursionLevel);
-    } elsif ( $functionName eq 'language' ) {
-      # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
-      # otherwise it returns the input value as is.
-
-      my $code = $$refToRawParameterList[0];
-
-      $result = &languageName($code);
-    } else {
-
-      LOG->info("function #$functionName not supported");
-
-      # Unknown function -- fall back by inserting first argument, if available. This seems
-      # to be the most sensible alternative in most cases (for example in #time and #date)
-
-      if ( exists($$refToRawParameterList[1]) && ( length($$refToRawParameterList[1]) > 0 ) ) {
-        $result = $$refToRawParameterList[1];
-      } else {
-        $result = "";
-      }
-    }
-
-    # print LOGF "Function returned: $result\n";
-
-  } elsif ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
-    # This function is used in some pages to construct links
-    # http://meta.wikimedia.org/wiki/Help:URL
-
-    $result = $1;
-    LOG->debug("URL encoding string: $result");
-
-    $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
-  } elsif ( lc $$refToTemplateTitle eq "pagename" ) {
-    # FIXME: {{FULLPAGENAME}} returns full name of the page (including the 
-    # namespace prefix. {{PAGENAME}} returns only the title.
-    #
-    # Also consider supporting {{SERVER}}, which is used to construct edit
-    # links in some stub templates (external URLs aren't removed properly
-    # without it)
-    $result = $page->{title};
-  }
-
-  return $result;
-}
-
-sub noteTemplateInclude(\$\%\%) {
-  my ($refToTemplateId, $page, $refToParameterHash) = @_;
-
-  my $templates = $page->{templates};
-  
-  $templates->{$$refToTemplateId} = [] unless( defined( $templates->{$$refToTemplateId} ) );
-
-  push( @{$templates->{$$refToTemplateId}}, $refToParameterHash );
-}
-
-sub includeTemplateText(\$\%\%\$$) {
-  my ($refToTemplateTitle, $refToParameterHash, $page, $refToResult) = @_;
-
-  &normalizeTitle($refToTemplateTitle);
-  my $includedPageId = &resolveLink($refToTemplateTitle);
-
-  if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
-
-    # Log which template has been included in which page with which parameters
-    &noteTemplateInclude(\$includedPageId, $page, $refToParameterHash);
-
-    # OK, perform the actual inclusion with parameter substitution. 
-
-    # First we retrieve the text of the template
-    $$refToResult = $templates{$includedPageId};
-
-    # Substitute template parameters
-    if( &templateParameterRecursion($refToResult, $refToParameterHash) ) {
-      LOG->info("maximum template parameter recursion level reached");
-    }
-
-  } else {
-    # The page being included cannot be identified - perhaps we skipped it (because currently
-    # we only allow for inclusion of pages in the Template namespace), or perhaps it's
-    # a variable name like {{NUMBEROFARTICLES}}. Just remove this inclusion directive and
-    # replace it with a space
-    LOG->info("template '$$refToTemplateTitle' is not available for inclusion");
-    $$refToResult = " ";
-  }
-}
-
-sub computeFullyQualifiedTemplateTitle(\$) {
-  my ($refToTemplateTitle) = @_;
-
-  # Determine the namespace of the page being included through the template mechanism
-
-  my $namespaceSpecified = 0;
-
-  if ($$refToTemplateTitle =~ /^:(.*)$/) {
-    # Leading colon by itself implies main namespace, so strip this colon
-    $$refToTemplateTitle = $1;
-    $namespaceSpecified = 1;
-  } elsif ($$refToTemplateTitle =~ /^([^:]*):/) {
-    # colon found but not in the first position - check if it designates a known namespace
-    my $prefix = $1;
-    &normalizeNamespace(\$prefix);
-    $namespaceSpecified = &isKnownNamespace(\$prefix);
-  }
-
-  # The case when the page title does not contain a colon at all also falls here.
-
-  if ($namespaceSpecified) {
-    # OK, the title of the page being included is fully qualified with a namespace
-  } else {
-    # The title of the page being included is NOT in the main namespace and lacks
-    # any other explicit designation of the namespace - therefore, it is resolved
-    # to the Template namespace (that's the default for the template inclusion mechanism).
-    $$refToTemplateTitle = $Wikiprep::Config::templateNamespace . ":" . $$refToTemplateTitle;
-  }
-}
-
 sub extractCategories(\%) {
   my ($page) = @_;
 
@@ -1059,7 +608,11 @@ BEGIN {
     if( exists( $urlProtocols{$urlProtocol} ) ) {
       push(@{$page->{bareUrls}}, $url);
 
-      my $anchorTrimmed = &trimWhitespaceBothSides($anchor);
+      my $anchorTrimmed = $anchor;
+
+      # Trim whitespace;
+      $anchorTrimmed =~ s/^\s+//;
+      $anchorTrimmed =~ s/\s+$//;
 
       # See if there is anything left of the anchor and log to file
       if( length( $anchorTrimmed ) > 0 ) {
@@ -1092,31 +645,6 @@ BEGIN {
       return "$url";
     }
   }
-}
-
-sub parseDisambig(\%) {
-	my ($page) = @_;
-
-  $page->{disambigLinks} = [];
-
-	for my $line ( split(/\n/, $page->{text}) ) {
-
-		if ( $line =~ /^\s*(?:
-					                (\*\*)|
-					                (\#\#)|
-                          (\:\#)|
-                          (\:\*)|
-                          (\#)|
-                          (\*)
-                        )/ix ) {
-
-      my @disambigLinks;
-
-      &extractWikiLinks(\$line, \@disambigLinks, undef);
-
-      push(@{$page->{disambigLinks}}, \@disambigLinks)
-		}
-	}
 }
 
 sub postprocessText(\$$$) {
@@ -1360,111 +888,6 @@ BEGIN {
   }
 
 } # end of BEGIN block
-
-# Removes elements of the second list from the first list.
-# For efficiency purposes, the second list is converted into a hash.
-sub removeElements(\@\@) {
-  my ($refToArray, $refToElementsToRemove) = @_;
-
-  my %elementsToRemove = ();
-  my @result;
-
-  # Construct the hash table for fast lookups
-  my $item;
-  foreach $item (@$refToElementsToRemove) {
-    $elementsToRemove{$item} = 1;
-  }
-
-  foreach $item (@$refToArray) {
-    if ( ! defined($elementsToRemove{$item}) ) {
-      push(@result, $item);
-    }
-  }
-
-  # overwrite the original array with the new one
-  @$refToArray = @result;
-}
-
-# There are 3 kinds of related links that we look for:
-# 1) Standalone (usually, at the beginning of the article or a section of it)
-#    Ex: Main articles: ...
-# 2) Inlined - text in parentheses inside the body of the article
-#    Ex: medicine (see also: [[Health]])
-# 3) Dedicated section
-#    Ex: == See also ==
-sub identifyRelatedArticles(\%) {
-  my ($page) = @_;
-
-  my $id = $page->{id};
-
-  # We split the text into a set of lines. This also creates a copy of the original text -
-  # this is important, since the function 'extractWikiLinks' modifies its argument,
-  # so we'd better use it on a copy of the real article body.
-  my @text = split("\n", $page->{text});
-  my $line;
-
-  my @relatedInternalLinks;
-
-  # Standalone
-  foreach $line (@text) {
-    # We require that stanalone designators occur at the beginning of the line
-    # (after at most a few characters, such as a whitespace or a colon),
-    # and not just anywhere in the line. Otherwise, we would collect as related
-    # those links that just happen to occur in the same line with an unrelated
-    # string that represents a standalone designator.
-    my $relatedRegex = $Wikiprep::Config::relatedWording_Standalone;
-    if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
-      my $str = $1; # We extract links from the rest of the line
-      LOG->debug("Related(S): $id => $str");
-      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
-    }
-  }
-
-  # Inlined (in parentheses)
-  foreach $line (@text) {
-    my $relatedRegex = $Wikiprep::Config::relatedWording_Inline;
-    while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
-      my $str = $1;
-      LOG->debug("Related(I): $id => $str");
-      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
-    }
-  }
-
-  # Section
-  # Sections can be at any level - "==", "===", "====" - it doesn't matter,
-  # so it suffices to look for two consecutive "=" signs
-  my $relatedSectionFound = 0;
-  foreach $line (@text) {
-    if ($relatedSectionFound) { # we're in the related section now
-      if ($line =~ /==(?:.*?)==/) { # we just encountered the next section - exit the loop
-        last;
-      } else { # collect the links from the current line
-        LOG->debug("Related(N): $id => $line");
-        # 'extractWikiLinks' may modify its argument ('$line'), but it's OK
-        # as we do not do any further processing to '$line' or '@text'
-        &extractWikiLinks(\$line, \@relatedInternalLinks, undef);
-      }
-    } else { # we haven't yet found the related section
-      if ($line =~ /==(.*?)==/) { # found some section header - let's check it
-        my $sectionHeader = $1;
-        my $relatedRegex = $Wikiprep::Config::relatedWording_Section;
-        if ($sectionHeader =~ /$relatedRegex/) {
-          $relatedSectionFound = 1;
-          next; # proceed to the next line
-        } else {
-          next; # unrelated section - just proceed to the next line
-        }
-      } else {
-        next; # just proceed to the next line - nothing to do
-      }
-    }
-  }
-
-  $page->{relatedArticles} = [];
-
-  &getLinkIds($page->{relatedArticles}, \@relatedInternalLinks);
-  &removeDuplicatesAndSelf($page->{relatedArticles}, $page->{id});
-}
 
 ########################################################################
 

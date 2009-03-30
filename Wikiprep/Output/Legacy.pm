@@ -5,9 +5,9 @@ package Wikiprep::Output::Legacy;
 use warnings;
 use strict;
 
+use File::Path;
+
 use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf );
-use Wikiprep::templates;
-use Wikiprep::interwiki;
 
 sub new 
 {
@@ -56,8 +56,8 @@ sub new
   $self->{templateIncDir} = $templateIncDir;
   $self->{interwikiDir} = $interwikiDir;
 
-  &Wikiprep::templates::prepare(\$templateIncDir);
-  &Wikiprep::interwiki::prepare(\$interwikiDir);
+  &_prepareTemplateIncDir(\$templateIncDir);
+  &_prepareInterwikiDir(\$interwikiDir);
 
   if( $params{COMPRESS} ) {
     open( $self->{outf}, "| gzip >$outputFile.gz") or 
@@ -313,7 +313,7 @@ sub _logTemplateIncludes
   my $templateIncDir = $self->{templateIncDir};
 
   while(my ($templateId, $log) = each(%{$page->{templates}})) {
-    my $path = &Wikiprep::templates::logPath(\$templateIncDir, \$templateId);
+    my $path = &_templateLogPath(\$templateIncDir, \$templateId);
 
     open(TEMPF, ">>$path") or die("$path: $!");
     binmode(TEMPF,  ':utf8');
@@ -422,6 +422,44 @@ sub _logDisambig
 
   	print {$self->{disambigf}} "\n";
   }
+}
+
+sub _prepareTemplateIncDir(\$) {
+  my ($refToTemplateIncDir) = @_;
+
+  mkdir($$refToTemplateIncDir);
+
+  my $n = 1;
+  do {
+    my $path = "$$refToTemplateIncDir/$n";
+    if( -d $path ) {
+      File::Path::rmtree($path, 0, 0);
+    }
+    mkdir("$$refToTemplateIncDir/$n");
+    $n++;
+  } while($n < 10);
+}
+
+sub _prepareInterwikiDir(\$) {
+  my ($refToInterwikiDir) = @_;
+
+  File::Path::rmtree($$refToInterwikiDir, 0, 0);
+  mkdir($$refToInterwikiDir);
+
+  for my $wiki ( @$Wikiprep::Config::interwikiList ) {
+	  $wiki = lc( $wiki );
+	  open( INTERF, ">$$refToInterwikiDir/$wiki" );
+    print( INTERF "# Line format: <Source page id>  <Target page title>\n\n\n" );
+	  close( INTERF );
+  }
+}
+
+sub _templateLogPath(\$\$) {
+  my ($refToTemplateIncDir, $refToTemplateId) = @_;
+
+  my $prefix = substr($$refToTemplateId, 0, 1);
+
+  return "$$refToTemplateIncDir/$prefix/$$refToTemplateId";
 }
 
 1;

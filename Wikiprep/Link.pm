@@ -10,7 +10,11 @@ use Hash::Util qw( lock_hash );
 
 use Wikiprep::Namespace qw( normalizeTitle isNamespaceOk isTitleOkForLocalPages resolveNamespaceAliases );
 use Wikiprep::images qw( parseImageParameters );
-use Wikiprep::interwiki qw( parseInterwiki );
+
+require Wikiprep::Interwiki;
+Wikiprep::Interwiki->import qw/ parseInterwiki /;
+
+require Wikiprep::Templates;
 
 use Log::Handler wikiprep => 'LOG';
 
@@ -211,12 +215,9 @@ sub resolveLink(\$) {
 sub resolvePageLink(\$) {
   my ($refToTitle) = @_;
 
-  #use Data::Dumper;
-  #print Dumper(\%main::templates);
-
   my $targetId = &resolveLink($refToTitle);
   if ( defined($targetId) ) {
-    if ( exists($main::templates{$targetId}) ) {
+    if ( exists($Wikiprep::Templates::templates{$targetId}) ) {
       LOG->info("ignoring link to a template '$$refToTitle'");
       return;
     }

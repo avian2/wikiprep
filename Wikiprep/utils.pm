@@ -4,20 +4,11 @@ package Wikiprep::utils;
 
 use strict;
 use Exporter 'import';
-our @EXPORT_OK = qw( trimWhitespaceBothSides encodeXmlChars getLinkIds removeDuplicatesAndSelf );
+our @EXPORT_OK = qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf removeElements );
 
 use Log::Handler wikiprep => 'LOG';
 
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
-
-# See http://www.perlmonks.org/?node_id=2258 for performance comparisson
-sub trimWhitespaceBothSides {
-  $_ = shift;
-  s/^\s+//;
-  s/\s+$//;
-
-  return $_;
-}
 
 sub encodeXmlChars(\$) {
   my ($refToStr) = @_;
@@ -60,4 +51,28 @@ sub removeDuplicatesAndSelf(\@$) {
   @$refToArray = @uniq;
 }
 
-1
+# Removes elements of the second list from the first list.
+# For efficiency purposes, the second list is converted into a hash.
+sub removeElements(\@\@) {
+  my ($refToArray, $refToElementsToRemove) = @_;
+
+  my %elementsToRemove = ();
+  my @result;
+
+  # Construct the hash table for fast lookups
+  my $item;
+  foreach $item (@$refToElementsToRemove) {
+    $elementsToRemove{$item} = 1;
+  }
+
+  foreach $item (@$refToArray) {
+    if ( ! defined($elementsToRemove{$item}) ) {
+      push(@result, $item);
+    }
+  }
+
+  # overwrite the original array with the new one
+  @$refToArray = @result;
+}
+
+1;

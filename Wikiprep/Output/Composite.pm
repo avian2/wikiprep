@@ -6,8 +6,6 @@ use warnings;
 use strict;
 
 use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf );
-use Wikiprep::templates;
-use Wikiprep::interwiki;
 
 use XML::Writer;
 use IO::File;
