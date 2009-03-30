@@ -1,7 +1,7 @@
 # Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
-5	1	9	A contemporary sketch of the conspirators. The Dutch artist, Crispijn van de Passe the Elder, probably never met any of the conspirators, but the sketch has become well-known nonetheless.
-2	1	235	Robert Catesby
-3	1	269	Guido Fawkes
-4	1	297	Thomas Winter
+5	1	8	A contemporary sketch of the conspirators. The Dutch artist, Crispijn van de Passe the Elder, probably never met any of the conspirators, but the sketch has become well-known nonetheless.
+2	1	234	Robert Catesby
+3	1	268	Guido Fawkes
+4	1	296	Thomas Winter
