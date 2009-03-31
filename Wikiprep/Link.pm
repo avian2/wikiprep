@@ -174,40 +174,38 @@ sub resolveLink(\$) {
     }
   }
 
-  if ( defined($targetTitle) ) {
-    if ( exists($title2id{$targetTitle}) ) {
+  return unless defined($targetTitle);
 
-      $targetId = $title2id{$targetTitle};
+  if ( exists($title2id{$targetTitle}) ) {
 
-    } else {
-      
-      # Among links to uninteresting namespaces this also ignores links that point to articles in 
-      # different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
-    	# significantly reduces memory usage.
+    $targetId = $title2id{$targetTitle};
 
-      if ( &isTitleOkForLocalPages(\$targetTitle) ) {
-
-        if ( exists($localTitle2id{$targetTitle}) ) {
-          $targetId = $localTitle2id{$targetTitle};
-        } else {
-
-          $targetId = $nextLocalID;
-          $nextLocalID++;
-
-          $localTitle2id{$targetTitle} = $targetId;
-
-          $main::out->newLocalID( $targetId, $targetTitle );
-
-          LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
-        }
-      } else {
-        LOG->info("link '$$refToTitle' was ignored");
-      }
-    }
-    return $targetId;
   } else {
-    return;
+    
+    # Among links to uninteresting namespaces this also ignores links that point to articles in 
+    # different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
+    # significantly reduces memory usage.
+
+    if ( &isTitleOkForLocalPages(\$targetTitle) ) {
+
+      if ( exists($localTitle2id{$targetTitle}) ) {
+        $targetId = $localTitle2id{$targetTitle};
+      } else {
+
+        $targetId = $nextLocalID;
+        $nextLocalID++;
+
+        $localTitle2id{$targetTitle} = $targetId;
+
+        $main::out->newLocalID( $targetId, $targetTitle );
+
+        LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
+      }
+    } else {
+      LOG->info("link '$$refToTitle' was ignored");
+    }
   }
+  return $targetId;
 }
 
 # Collects only links that do not point to a template (which besides normal and local pages
@@ -280,15 +278,6 @@ sub collectWikiLink($$$\@\@$) {
 
   # Link definitions may span over adjacent lines and therefore contain line breaks,
   # hence we use the /s modifier on most matchings.
-
-  # There are some special cases when the link may be preceded with a colon.
-  # Known cases:
-  # - Linking to a category (as opposed to actually assigning the current article
-  #   to a category) is performed using special syntax [[:Category:...]]
-  # - Linking to other languages, e.g., [[:fr:Wikipedia:Aide]]
-  #   (without the leading colon, the link will go to the side menu
-  # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
-  # In all such cases, we strip the leading colon.
 
   # just strip this initial colon (as well as any whitespace preceding it)
   $link =~ s/^\s*:?//;

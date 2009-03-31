@@ -7,7 +7,7 @@ use strict;
 use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
-our @EXPORT_OK = qw( normalizeTitle normalizeNamespace loadNamespaces isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages isKnownNamespace );
+our @EXPORT_OK = qw( normalizeTitle normalizeNamespace addNamespace loadNamespaces isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages isKnownNamespace );
 
 # List of known namespaces defined in the header of the XML file
 my %namespaces;
@@ -26,11 +26,8 @@ sub normalizeNamespace(\$) {
 # used throughout Wikiprep to uniquely identify pages, templates, categories, etc.
 #
 # It does not strip namespace declarations.
-#
-# FIXME defaultNamespace parameter (then replace computeFullyQualifiedTemplateTitle)
-
 sub normalizeTitle(\$) {
-  my ($refToStr) = @_;
+  my ($refToStr, $defaultNamespace) = @_;
 
   # remove leading whitespace and underscores
   $$refToStr =~ s/^[\s_]+//;
@@ -39,30 +36,57 @@ sub normalizeTitle(\$) {
   # replace sequences of whitespace and underscore chars with a single space
   $$refToStr =~ s/[\s_]+/ /g;
 
-  if ($$refToStr =~ /^([^:]*):(\s*)(\S(?:.*))/) {
-    my $prefix = $1;
-    my $optionalWhitespace = $2;
-    my $rest = $3;
+  # There are some special cases when the link may be preceded with a colon in the
+  # main namespace.
+  #
+  # Known cases:
+  # - Linking to a category (as opposed to actually assigning the current article
+  #   to a category) is performed using special syntax [[:Category:...]]
+  # - Linking to other languages, e.g., [[:fr:Wikipedia:Aide]]
+  #   (without the leading colon, the link will go to the side menu
+  # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
+  #
+  # In all such cases, we strip the leading colon.
+  $$refToStr =~ s/^:\s*// unless $defaultNamespace;
+  
+  # In other namespaces (e.g. Template), the leading colon forces the link to point
+  # to the main namespace.
 
-    my $namespaceCandidate = $prefix;
-    # this must be done before the call to 'isKnownNamespace'
-    &normalizeNamespace(\$namespaceCandidate); 
-    if ( &isKnownNamespace(\$namespaceCandidate) ) {
-      # If the prefix designates a known namespace, then it might follow by optional
-      # whitespace that should be removed to get the canonical page name
-      # (e.g., "Category:  Births" should become "Category:Births").
-      $$refToStr = $namespaceCandidate . ":" . ucfirst($rest);
+  if ($$refToStr =~ /^([^:]*):\s*(\S.*)/) {
+    my $namespaceCandidate = $1;
+    my $rest = $2;
+
+    if( $namespaceCandidate ) {
+      # this must be done before the call to 'isKnownNamespace'
+      &normalizeNamespace(\$namespaceCandidate); 
+      if( &isKnownNamespace(\$namespaceCandidate) ) {
+        # If the prefix designates a known namespace, then it might follow by optional
+        # whitespace that should be removed to get the canonical page name
+        # (e.g., "Category:  Births" should become "Category:Births").
+        $$refToStr = $namespaceCandidate . ":" . ucfirst($rest);
+      } else {
+        # No namespace, just capitalize first letter.
+        # If the part before the colon is not a known namespace, then we must not remove the space
+        # after the colon (if any), e.g., "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
+        # However, to get the canonical page name we must contract multiple spaces into one,
+        # because "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
+        if( $defaultNamespace ) {
+          $$refToStr = $defaultNamespace . ':' . ucfirst($$refToStr);
+        } else {
+          $$refToStr = ucfirst($$refToStr);
+        }
+      }
     } else {
-      # No namespace, just capitalize first letter.
-      # If the part before the colon is not a known namespace, then we must not remove the space
-      # after the colon (if any), e.g., "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
-      # However, to get the canonical page name we must contract multiple spaces into one,
-      # because "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
-      $$refToStr = ucfirst($prefix) . ":" . $optionalWhitespace . $rest;
+      # Leading colon means main namespace (strip the colon in that case)
+      $$refToStr = ucfirst($rest);
     }
   } else {
     # no namespace, just capitalize first letter
-    $$refToStr = ucfirst($$refToStr);
+    if( $defaultNamespace ) {
+      $$refToStr = $defaultNamespace . ':' . ucfirst($$refToStr);
+    } else {
+      $$refToStr = ucfirst($$refToStr);
+    }
   }
 }
 
@@ -70,7 +94,7 @@ sub normalizeTitle(\$) {
 # ===========================================================================================================
 
 # Load namespaces (during prescan)
-sub loadNamespaces() {
+sub loadNamespaces {
   my ($pages) = @_;
 
   # namespace names are case-insensitive, so we force them
@@ -85,6 +109,12 @@ sub loadNamespaces() {
   }
 
   lock_hash( %namespaces );
+}
+
+# For testing only
+sub addNamespace {
+  my ($namespace, $id) = @_;
+  $namespaces{$namespace} = $id;
 }
 
 # Namespace checking
