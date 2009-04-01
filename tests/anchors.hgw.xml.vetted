@@ -27,39 +27,39 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="206" newlength="226" stub="0" categories="0" outlinks="3" urls="0">
+<page id="1" orglength="206" newlength="329" stub="0" categories="0" outlinks="1" urls="0">
 <title>Gu</title>
 <categories></categories>
-<links>9 10 2</links>
+<links>2</links>
 <urls>
 </urls>
 <text>
-<internal id="9">Lepa slika</internal> nekaj teksta in se ena <internal id="9">druga slika</internal>. Pa se en link kar tako <internal id="10">krneki</internal>. Pa se en link na <internal id="2">Ga</internal> brez anchorja. 
+<link namespace="File" title="Hello1.jpg">Lepa slika</link> nekaj teksta in se ena <link namespace="File" title="Hello1.jpg">druga slika</link>. Pa se en link kar tako <link namespace="File" title="Hello2.jpg">krneki</link>. Pa se en link na <link id="2">Ga</link> brez anchorja. <link namespace="File" title="Hello1.jpg"></link>
 </text>
 </page>
-<page id="2" orglength="144" newlength="160" stub="0" categories="0" outlinks="2" urls="0">
+<page id="2" orglength="144" newlength="222" stub="0" categories="0" outlinks="0" urls="0">
 <title>Ga</title>
 <categories></categories>
-<links>9 10</links>
+<links></links>
 <urls>
 </urls>
 <text>
-<internal id="9">grda slika</internal> nekaj teksta in se ena <internal id="9">prva slika</internal>. Pa se en link kar tako <internal id="10">krneki</internal>
+<link namespace="File" title="Hello1.jpg">grda slika</link> nekaj teksta in se ena <link namespace="File" title="Hello1.jpg">prva slika</link>. Pa se en link kar tako <link namespace="File" title="Hello2.jpg">krneki</link>
 </text>
 </page>
-<page id="3" orglength="140" newlength="145" stub="0" categories="0" outlinks="2" urls="0">
+<page id="3" orglength="140" newlength="169" stub="0" categories="0" outlinks="1" urls="0">
 <title>Sony</title>
 <categories></categories>
-<links>11 2</links>
+<links>2</links>
 <urls>
 </urls>
 <text>
 
-      <internal id="11">A Sony Vaio FJ series without webcam</internal> is expanding the... <internal id="2">gulpgagluedanchor</internal>
+      <link namespace="File" title="Sony VAIO FJ76.JPG">A Sony Vaio FJ series without webcam</link>Sony is expanding the... <link id="2">gulpgagluedanchor</link>
       
 </text>
 </page>
-<page id="4" orglength="155" newlength="149" stub="0" categories="1" outlinks="3" urls="0">
+<page id="4" orglength="155" newlength="125" stub="0" categories="1" outlinks="3" urls="0">
 <title>Test2</title>
 <categories>8</categories>
 <links>6 7 5</links>
@@ -69,7 +69,7 @@
 
 	      Dummy
 	      Dummy2
-	      <internal id="5">Nested <internal id="6">anchors</internal> and some <internal id="7">more</internal></internal>
+	      <link id="5">Nested <link id="6">anchors</link> and some <link id="7">more</link></link>
 
 
 </text>

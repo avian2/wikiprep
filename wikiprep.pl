@@ -441,7 +441,12 @@ sub transform() {
     $page->{internalLinks} = [];
     $page->{interwikiLinks} = [];
 
-    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, $page->{interwikiLinks});
+    my @localPagesArray;
+
+    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, \@localPagesArray);
+
+    use Data::Dumper;
+    #print Dumper($page->{internalLinks});
 
     my @internalLinks;
     &getLinkIds(\@internalLinks, $page->{internalLinks});
@@ -451,7 +456,7 @@ sub transform() {
       &extractUrls($page);
     }
 
-    &postprocessText(\$page->{text}, 1, 1);
+    &postprocessText(\$page->{text}, \@localPagesArray);
 
     # text length AFTER all transformations
     $page->{newLength} = length($page->{text});
@@ -648,7 +653,7 @@ BEGIN {
 }
 
 sub postprocessText(\$$$) {
-  my ($refToText, $whetherToEncodeXmlChars, $whetherToPreserveInternalTags) = @_;
+  my ($refToText, $refToLocalPagesArray) = @_;
 
   # Eliminate all <includeonly> and <onlyinclude> fragments, because this text
   # will not be included anywhere, as we already handled all inclusion directives
@@ -730,11 +735,6 @@ sub postprocessText(\$$$) {
                                      # Replace with &logReplacedXmlEntity($1)
                                      # to log entity replacements.
 
-  if ($whetherToEncodeXmlChars) {
-    # encode text for XML
-    &encodeXmlChars($refToText);
-  }
-
   # NOTE that the following operations introduce XML tags, so they must appear
   # after the original text underwent character encoding with 'encodeXmlChars' !!
   
@@ -745,9 +745,13 @@ sub postprocessText(\$$$) {
   # unbalanced <h1> and <internal> tags. There are very few legitimate links that
   # we ignore because of this.
 
-  if( $whetherToPreserveInternalTags ) {
+  if( $refToLocalPagesArray ) {
+    
+    # encode text for XML
+    &encodeXmlChars($refToText);
+
     1 while( 
-      $$refToText =~ s/\.pAriD=&quot;([0-9]+)&quot;\.
+      $$refToText =~ s/\.pAriD=~(!?[0-9]+)~\.
                                                       (
                                                         (?:
                                                            (?!\.pAr)
@@ -755,13 +759,13 @@ sub postprocessText(\$$$) {
                                                            .
                                                         )*?
                                                       )
-                       \.pArenD\./<internal id="$1">$2<\/internal>/sgx );
+                       \.pArenD\./&link($1, $2, $refToLocalPagesArray)/segx);
   }
 
   # Remove any unreplaced magic words. This replace also removes tags, that for some
   # reason aren't properly nested (and weren't caught by replace above).
 
-  $$refToText =~ s/\.pAriD=(?:&quot;|")[0-9]+(?:&quot;|")\.//g;
+  $$refToText =~ s/\.pAriD=~!?[0-9]+~\.//g;
   $$refToText =~ s/\.pArenD\.//g;
 
   # Change markup for section headers.
@@ -774,6 +778,19 @@ sub postprocessText(\$$$) {
   $$refToText =~ s/^====(.*?)====/<h3>$1<\/h3>/mg;
   $$refToText =~ s/^===(.*?)===/<h2>$1<\/h2>/mg;
   $$refToText =~ s/^==(.*?)==/<h1>$1<\/h1>/mg;
+}
+
+sub link {
+  my ($id, $content, $refToLocalPagesArray) = @_;
+
+  if( $id =~ /^!([0-9]+)/ ) {
+    my ($namespace, $title) = @{$refToLocalPagesArray->[$1]};
+    &encodeXmlChars(\$namespace);
+    &encodeXmlChars(\$title);
+    return "<link namespace=\"$namespace\" title=\"$title\">$content</link>";
+  } else {
+    return "<link id=\"$id\">$content</link>";
+  }
 }
 
 sub logReplacedXmlEntity($) {

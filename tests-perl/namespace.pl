@@ -1,4 +1,4 @@
-use Test::More tests => 15;
+use Test::More tests => 16;
 use Wikiprep::Namespace qw( addNamespace normalizeTitle );
 
 addNamespace("", 0);
@@ -8,6 +8,9 @@ addNamespace("File", 2);
 my $a;
 
 $a = "Sandbox"; &normalizeTitle(\$a);
+is($a, "Sandbox");
+
+$a = " Sandbox "; &normalizeTitle(\$a);
 is($a, "Sandbox");
 
 $a = "sandBox"; &normalizeTitle(\$a);

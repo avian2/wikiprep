@@ -1,15 +1,5 @@
 # Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
-7	5	7	This is a cool image
-7	5	55	Another cool image
-7	5	107	Arg
 2	5	172	Gu
-3	5	194	
-8	5	129	Gu
-7	6	7	This is a cool image
-7	6	54	Another cool image
-7	6	105	Arg
 2	6	168	Gu
-3	6	190	
-8	6	129	Gu

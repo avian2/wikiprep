@@ -1,15 +1,7 @@
 # Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
-9	1	0	Lepa slika
-9	1	55	druga slika
-10	1	112	krneki
 2	1	164	Ga
-9	1	186	
-9	2	0	grda slika
-9	2	55	prva slika
-10	2	111	krneki
-11	3	7	A Sony Vaio FJ series without webcam
 2	3	109	gulpgagluedanchor
 6	4	65	anchors
 7	4	86	more

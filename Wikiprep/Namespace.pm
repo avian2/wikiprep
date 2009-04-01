@@ -8,7 +8,7 @@ use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
 our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle 
-                     addNamespace loadNamespaces isNamespaceOk resolveNamespaceAliases 
+                     addNamespace loadNamespaces isNamespaceOk 
                      isTitleOkForLocalPages isKnownNamespace );
 
 # List of known namespaces defined in the header of the XML file
@@ -22,6 +22,10 @@ sub normalizeNamespace(\$) {
 
   # Namespaces are always lowercase with capitalized first letter.
   $$refToStr = ucfirst( lc($$refToStr) );
+
+  if( exists($Wikiprep::Config::namespaceAliases{$$refToStr}) ) {
+    $$refToStr = $Wikiprep::Config::namespaceAliases{$$refToStr};
+  }
 }
 
 # This is the function for normalizing titles - It transforms page titles into a form that is
@@ -32,22 +36,21 @@ sub normalizeTitle {
   my ($refToStr, $defaultNamespace) = @_;
 
   my ($namespace, $title) = &normalizeNamespaceTitle($$refToStr, $defaultNamespace);
-  if( $namespace ) {
-    $$refToStr = $namespace . ":" . $title;
-  } else {
-    $$refToStr = $title;
-  }
+  $$refToStr = $namespace ? $namespace . ":" . $title : $title;
 }
 
 sub normalizeNamespaceTitle {
   my ($str, $defaultNamespace) = @_;
+  
+  # Link definitions may span over adjacent lines and therefore contain line breaks,
+  # hence we use the /s modifier on matchings.
 
   # remove leading whitespace and underscores
-  $str =~ s/^[\s_]+//;
+  $str =~ s/^[\s_]+//s;
   # remove trailing whitespace and underscores
-  $str =~ s/[\s_]+$//;
+  $str =~ s/[\s_]+$//s;
   # replace sequences of whitespace and underscore chars with a single space
-  $str =~ s/[\s_]+/ /g;
+  $str =~ s/[\s_]+/ /sg;
 
   # There are some special cases when the link may be preceded with a colon in the
   # main namespace.
@@ -60,12 +63,12 @@ sub normalizeNamespaceTitle {
   # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
   #
   # In all such cases, we strip the leading colon.
-  $str =~ s/^:\s*// unless $defaultNamespace;
+  $str =~ s/^:\s*//s unless $defaultNamespace;
   
   # In other namespaces (e.g. Template), the leading colon forces the link to point
   # to the main namespace.
 
-  if ($str =~ /^([^:]*):\s*(\S.*)/) {
+  if ($str =~ /^([^:]*):\s*(\S.*)/s) {
     my $namespaceCandidate = $1;
     my $rest = $2;
 
@@ -127,14 +130,6 @@ sub isKnownNamespace(\$) {
   my ($refToStr) = @_;
 
   return exists( $namespaces{$$refToStr} );  # return value
-}
-
-sub resolveNamespaceAliases(\$) {
-  my ($refToTitle) = @_;
-
-  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
-      $$refToTitle =~ s/^\s*$key:/$value:/mig;
-  }
 }
 
 sub isNamespaceOkForLocalPages(\$) {
