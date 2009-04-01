@@ -525,7 +525,7 @@ sub extractCategories(\%) {
 
   $page->{categories} = [];
 
-  $page->{text} =~ s/\[\[(?:\s*)($categoryNamespace:.*?)\]\]/&collectCategory($1, $page)/ieg;
+  $page->{text} =~ s/\[\[\s*($categoryNamespace:.*?)\]\]/&collectCategory($1, $page)/ieg;
 
   # We don't accumulate categories directly in a hash table, since this would not preserve
   # their original order of appearance.

@@ -1,4 +1,4 @@
-use Test::More tests => 11;
+use Test::More tests => 15;
 use Wikiprep::Namespace qw( addNamespace normalizeTitle );
 
 addNamespace("", 0);
@@ -39,3 +39,15 @@ is($a, "A: sandbox");
 
 $a = "A: Sandbox"; &normalizeTitle(\$a, "Template");
 is($a, "Template:A: Sandbox");
+
+$a = "Template: A"; &normalizeTitle(\$a, "Template");
+is($a, "Template:A");
+
+$a = ":Template: A"; &normalizeTitle(\$a, "Template");
+is($a, "Template: A");
+
+$a = "Template: A"; &normalizeTitle(\$a);
+is($a, "Template:A");
+
+$a = ":Template: A"; &normalizeTitle(\$a);
+is($a, "Template:A");
