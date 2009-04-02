@@ -8,11 +8,8 @@ use warnings;
 use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
-use Wikiprep::Namespace qw( normalizeTitle normalizeNamespaceTitle isNamespaceOk isTitleOkForLocalPages );
+use Wikiprep::Namespace qw( normalizeTitle normalizeNamespaceTitle isNamespaceOk );
 use Wikiprep::images qw( parseImageParameters );
-
-require Wikiprep::Interwiki;
-Wikiprep::Interwiki->import qw/ parseInterwiki /;
 
 require Wikiprep::Templates;
 
@@ -29,25 +26,12 @@ our %title2id;
 # Mapping from source page title to destination page title.
 our %redir;
 
-# These variables change during transform
-
-# Mapping from normalized page title to page ID (for "local" page IDs added by Wikiprep)
-my %localTitle2id;
-
-# ID assigned to the next local page (always larger than the largest ID in the dump)
-my $nextLocalID = 0;
-
 # Page title and redirects prescan
 # ===========================================================================================================
 
 sub prescan {
     my ($refToTitle, $refToId, $mwpage) = @_;
     
-    # During prescan set nextLocalID to be greater than any encountered Wikipedia page ID
-    if ($$refToId >= $nextLocalID) {
-      $nextLocalID = $$refToId + 1;
-    }
-
     if (length($$refToTitle) == 0) {
       # This is a defense against pages whose title only contains UTF-8 chars that
       # are reduced to an empty string. Right now I can think of one such case -
@@ -157,10 +141,10 @@ sub resolveLink(\$) {
   # safety precaution
   return if (length($$refToTitle) == 0);
 
-  my $targetId; # result
   my $targetTitle = $$refToTitle;
 
-  if ( exists($redir{$targetTitle}) ) { # this link is a redirect
+  if ( exists($redir{$targetTitle}) ) { 
+    # this link is a redirect
     $targetTitle = $redir{$targetTitle};
 
     # check if this is a double redirect
@@ -177,35 +161,11 @@ sub resolveLink(\$) {
   return unless defined($targetTitle);
 
   if ( exists($title2id{$targetTitle}) ) {
-
-    $targetId = $title2id{$targetTitle};
-
+    return $title2id{$targetTitle};
   } else {
-    
-    # Among links to uninteresting namespaces this also ignores links that point to articles in 
-    # different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
-    # significantly reduces memory usage.
-
-    if ( &isTitleOkForLocalPages(\$targetTitle) ) {
-
-      if ( exists($localTitle2id{$targetTitle}) ) {
-        $targetId = $localTitle2id{$targetTitle};
-      } else {
-
-        $targetId = $nextLocalID;
-        $nextLocalID++;
-
-        $localTitle2id{$targetTitle} = $targetId;
-
-        $main::out->newLocalID( $targetId, $targetTitle );
-
-        LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
-      }
-    } else {
-      LOG->info("link '$$refToTitle' was ignored");
-    }
+    LOG->info("link '$$refToTitle' cannot be matched to an known ID");
+    return;
   }
-  return $targetId;
 }
 
 # Collects only links that do not point to a template (which besides normal and local pages
@@ -226,7 +186,8 @@ sub resolvePageLink(\$) {
     #   media and sound files fall in this category
     # - Links to other languages, e.g., [[de:...]]
     # - Links to other Wiki projects, e.g., [[Wiktionary:...]]
-    LOG->info("unknown link '$$refToTitle'");
+    
+    #LOG->info("unknown link '$$refToTitle'");
   }
 
   return $targetId;
@@ -247,7 +208,7 @@ my $internalLinkRegex = qr/
                          /sx;
 
 sub extractWikiLinks {
-  my ($refToText, $refToAnchorTextArray, $refToLocalPagesArray) = @_;
+  my ($refToText, $refToAnchorTextArray, $refToInterwikiArray) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
@@ -265,12 +226,12 @@ sub extractWikiLinks {
   
   1 while ( $$refToText =~ s/$internalLinkRegex/&collectWikiLink($1, $2, $3, 
                                                                      $refToAnchorTextArray,
-                                                                     $refToLocalPagesArray,
+                                                                     $refToInterwikiArray,
                                                                      $-[0])/eg );
 }
 
 sub collectWikiLink($$$\@\@$) {
-  my ($prefix, $link, $suffix, $refToAnchorTextArray, $refToLocalPagesArray, $linkLocation) = @_;
+  my ($prefix, $link, $suffix, $refToAnchorTextArray, $refToInterwikiArray, $linkLocation) = @_;
 
   return "" unless $link;
 
@@ -286,11 +247,10 @@ sub collectWikiLink($$$\@\@$) {
   # Split link text into fields delimited by pipe characters. "-1" parameter to split permits
   # empty trailing fields (important for pipeline masking)
   my @pipeFields = split(/\|/, $link, -1);
-
-  my $xxx =$pipeFields[0];
+  my $firstField = shift @pipeFields;
 
   # The fields before the first pipe character is the link destination.
-  my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle(shift @pipeFields);
+  my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
 
   return "" unless $linkTitleSection;
 
@@ -298,6 +258,7 @@ sub collectWikiLink($$$\@\@$) {
   # before the hash is empty, it points to a section on the current page. 
   my ($linkTitle, $linkSection) = split(/\s*#/, $linkTitleSection, 2);
 
+  my $linkNamespaceTitle = $linkNamespace ? "$linkNamespace:$linkTitle" : $linkTitle;
 
   # First determine the anchor text. This is the blue underlined text that is seen in the browser 
   # in place of the [[...]] link.
@@ -322,7 +283,7 @@ sub collectWikiLink($$$\@\@$) {
       # first colon as well as any text in parentheses at the end of the link title.
       # However, pipeline masking is only invoked if the link does not contain a section 
       # reference, hence the additional condition in the 'if' statement.
-      $anchor = $link;
+      $anchor = $firstField;
       $anchor =~ s/^\s*[^:]*:\s*//s;
       $anchor =~ s/\s*\([^()]*\)\s*$//s;
     }
@@ -331,7 +292,7 @@ sub collectWikiLink($$$\@\@$) {
 
 
   # Now start finding the target page of the link.
-  my $targetId = &resolvePageLink(\$linkTitle);
+  my $targetId = &resolvePageLink(\$linkNamespaceTitle);
 
   # We log anchor text only if it would be visible in the web browser. This means that for an
   # link to an ordinary page we log the anchor whether an alternative text was available or not
@@ -362,16 +323,14 @@ sub collectWikiLink($$$\@\@$) {
   #    While this method is not fool-proof (there are regular pages in the main namespace
   #    that contain a colon in their title), we believe this is a reasonable tradeoff.
   if( not $targetId ) {
-    if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForLocalPages{$linkNamespace} ) ) {
+    if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForInterwikiLinks{$linkNamespace} ) ) {
 
-      push(@$refToLocalPagesArray, [ $linkNamespace, $linkTitle ]) if( $refToAnchorTextArray );
-
-      print "$linkNamespace '$linkTitle' '$xxx'\n";
+      push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if( $refToAnchorTextArray );
 
       $anchorStruct{targetNamespace} = $linkNamespace;
       $anchorStruct{targetTitle} = $linkTitle;
 
-      $targetId = "!$#$refToLocalPagesArray";
+      $targetId = "!$#$refToInterwikiArray";
 
     } elsif( $noAltText && $link =~ /:/ ) {
       $anchor = "";

@@ -4,7 +4,7 @@ package Wikiprep::revision;
 
 use strict;
 use Exporter 'import';
-our @EXPORT_OK = qw( getWikiprepRevision getDumpDate writeVersion );
+our @EXPORT_OK = qw( getWikiprepRevision getDumpDate getDatabaseName );
 use FindBin;
 
 sub getWikiprepRevision() {
@@ -60,19 +60,4 @@ sub getDatabaseName($) {
   }
 }
 
-sub writeVersion($$) {
-  my ($versionFile, $dumpFile) = @_;
-
-  open(VERSIONF, "> $versionFile") or die "Cannot open $versionFile: $!";
-
-  my $dumpDate = &getDumpDate($dumpFile);
-  my $dumpName = &getDatabaseName($dumpFile);
-  my $svnrev = &getWikiprepRevision();
-
-  print(VERSIONF "$dumpName-mediawiki-dump-date: $dumpDate\n");
-  print(VERSIONF "$dumpName-wikiprep-revision: $svnrev\n");
-
-  close(VERSIONF);
-}
-
-1
+1;

@@ -1,9 +1,7 @@
 use Test::More tests => 16;
-use Wikiprep::Namespace qw( addNamespace normalizeTitle );
+use Wikiprep::Namespace qw( loadNamespaces normalizeTitle );
 
-addNamespace("", 0);
-addNamespace("Template", 1);
-addNamespace("File", 2);
+loadNamespaces(undef, ["", "Template", "File"]);
 
 my $a;
 

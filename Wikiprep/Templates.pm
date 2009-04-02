@@ -36,7 +36,7 @@ sub prescan {
   if ($$refToTitle =~ /^$templateNamespace:/) {
     my $text = ${$mwpage->text};
 
-    $main::out->newTemplate($$refToId, $$refToTitle);
+    $main::output->newTemplate($$refToId, $$refToTitle);
 
     # We're storing template text for future inclusion, therefore,
     # remove all <noinclude> text and keep all <includeonly> text

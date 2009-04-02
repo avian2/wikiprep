@@ -34,18 +34,11 @@ sub new
   # across Wikipedia) 
   my $localPagesFile = "$basepath.local.xml";
 
-  # File containing the lowest local ID number (all pages with IDs larger than this
-  # are local)
-  my $localIDFile = "$basepath.min_local_id";
-
   # Information about redirects
   my $redirFile = "$basepath.redir.xml";
 
   # Information about template inclusion
   my $templateIncDir = "$basepath.templates";
-
-  # Information about template inclusion
-  my $interwikiDir = "$basepath.interwiki";
 
   my $templateIndexFile = "$templateIncDir/index";
 
@@ -54,10 +47,8 @@ sub new
   $self->{inputFile} = $inputFile;
   $self->{redirFile} = $redirFile;
   $self->{templateIncDir} = $templateIncDir;
-  $self->{interwikiDir} = $interwikiDir;
 
   &_prepareTemplateIncDir(\$templateIncDir);
-  &_prepareInterwikiDir(\$interwikiDir);
 
   if( $params{COMPRESS} ) {
     open( $self->{outf}, "| gzip >$outputFile.gz") or 
@@ -86,9 +77,6 @@ sub new
   open( $self->{disambigf}, "> $disambigPagesFile") or 
     die "Cannot open $disambigPagesFile: $!";
 
-  open( $self->{localidf}, "> $localIDFile") or 
-    die "Cannot open $localIDFile: $!";
-
   open( $self->{tempindexf}, "> $templateIndexFile") or
     die "Cannot open $templateIndexFile: $!";
 
@@ -99,7 +87,6 @@ sub new
   binmode( $self->{relatedf},   ':utf8');
   binmode( $self->{localf},     ':utf8');
   binmode( $self->{disambigf},  ':utf8');
-  binmode( $self->{localidf},   ':utf8');
   binmode( $self->{tempindexf}, ':utf8');
 
   print {$self->{anchorf}} "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
@@ -136,15 +123,6 @@ sub finish
 
   close($self->{disambigf});
   close($self->{tempindexf});
-}
-
-sub lastLocalID
-{
-  my $self = shift;
-  my ($localIDCounter) = @_;
-
-  print {$self->{localidf}} "$localIDCounter\n";
-  close( $self->{localidf} );
 }
 
 sub newLocalID
@@ -246,7 +224,6 @@ sub newPage
   my ($page) = @_;
 
   $self->_logAnchorText($page);
-  $self->_logInterwikiLinks($page);
   $self->_logTemplateIncludes($page);
   $self->_logRelatedArticles($page);
   $self->_logExternalAnchors($page);
@@ -289,19 +266,6 @@ sub _logExternalAnchors
     if( defined( $link->{anchor} ) ) {
       print {$self->{exanchorf}} "$page->{id}\t$link->{url}\t$link->{anchor}\n";
     }
-  }
-}
-
-sub _logInterwikiLinks 
-{
-  my $self = shift;
-  my ($page) = @_;
-
-  foreach my $link ( @{$page->{interwikiLinks}} ) {
-    open(INTERF, ">>$self->{interwikiDir}/$link->{targetWiki}");
-    binmode(INTERF, ':utf8');
-    print INTERF "$page->{id}\t$link->{targetTitle}\n";
-    close(INTERF);
   }
 }
 
@@ -438,20 +402,6 @@ sub _prepareTemplateIncDir(\$) {
     mkdir("$$refToTemplateIncDir/$n");
     $n++;
   } while($n < 10);
-}
-
-sub _prepareInterwikiDir(\$) {
-  my ($refToInterwikiDir) = @_;
-
-  File::Path::rmtree($$refToInterwikiDir, 0, 0);
-  mkdir($$refToInterwikiDir);
-
-  for my $wiki ( @$Wikiprep::Config::interwikiList ) {
-	  $wiki = lc( $wiki );
-	  open( INTERF, ">$$refToInterwikiDir/$wiki" );
-    print( INTERF "# Line format: <Source page id>  <Target page title>\n\n\n" );
-	  close( INTERF );
-  }
 }
 
 sub _templateLogPath(\$\$) {

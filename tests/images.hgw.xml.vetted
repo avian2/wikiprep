@@ -47,10 +47,10 @@ Something.
 
 </text>
 </page>
-<page id="5" orglength="289" newlength="346" stub="0" categories="0" outlinks="1" urls="0">
+<page id="5" orglength="289" newlength="322" stub="0" categories="0" outlinks="2" urls="0">
 <title>AlgeriA</title>
 <categories></categories>
-<links>2</links>
+<links>2 3</links>
 <urls>
 </urls>
 <text>
@@ -63,17 +63,17 @@ Something.
 
 <link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
 
-<link namespace="File" title="J.jpg"></link>
+<link id="3"></link>
 
 something
 		    something
 	    
 </text>
 </page>
-<page id="6" orglength="281" newlength="346" stub="0" categories="0" outlinks="1" urls="0">
+<page id="6" orglength="281" newlength="322" stub="0" categories="0" outlinks="2" urls="0">
 <title>AlgeriB</title>
 <categories></categories>
-<links>2</links>
+<links>2 3</links>
 <urls>
 </urls>
 <text>
@@ -86,7 +86,7 @@ something
 
 <link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
 
-<link namespace="File" title="J.jpg"></link>
+<link id="3"></link>
 
 something
 		    something

@@ -8,8 +8,7 @@ use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
 our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle 
-                     addNamespace loadNamespaces isNamespaceOk 
-                     isTitleOkForLocalPages isKnownNamespace );
+                     loadNamespaces isNamespaceOk isKnownNamespace );
 
 # List of known namespaces defined in the header of the XML file
 my %namespaces;
@@ -98,26 +97,28 @@ sub normalizeNamespaceTitle {
 
 # Load namespaces (during prescan)
 sub loadNamespaces {
-  my ($pages) = @_;
+  my ($pages, $extraNamespaces) = @_;
 
   # namespace names are case-insensitive, so we force them
   # to canonical form to facilitate future comparisons
-  for my $ns ( @{$pages->namespaces} ) {
+  if( $pages ) {
+    for my $ns ( @{$pages->namespaces} ) {
 
-    my $id = $ns->[0];
-    my $name = $ns->[1];
+      my $id = $ns->[0];
+      my $name = $ns->[1];
 
-    &normalizeNamespace(\$name);
-    $namespaces{$name} = $id;
+      &normalizeNamespace(\$name);
+      $namespaces{$name} = $id;
+    }
+  }
+
+  if( $extraNamespaces ) {
+    for my $ns ( @$extraNamespaces ) {
+      $namespaces{$ns} = undef;
+    }
   }
 
   lock_hash( %namespaces );
-}
-
-# For testing only
-sub addNamespace {
-  my ($namespace, $id) = @_;
-  $namespaces{$namespace} = $id;
 }
 
 # Namespace checking
@@ -130,30 +131,6 @@ sub isKnownNamespace(\$) {
   my ($refToStr) = @_;
 
   return exists( $namespaces{$$refToStr} );  # return value
-}
-
-sub isNamespaceOkForLocalPages(\$) {
-  my ($refToNamespace) = @_;
-
-  # We are only interested in image links, so main namespace is not OK.
-  my $result = 0;
-
-  if ($$refToNamespace ne '') {
-    if ( &isKnownNamespace($refToNamespace) ) {
-      $result = exists( $Wikiprep::Config::okNamespacesForLocalPages{$$refToNamespace} );
-    } else {
-      # A simple way to recognize most namespaces that link to translated articles. A better 
-      # way would be to store these namespaces in a hash.
-      if ( length($$refToNamespace) < 4 ) {
-        $result = 0
-      }
-
-      # the prefix before ":" in the page title is not a known namespace,
-      # therefore, the page belongs to the main namespace and is OK
-    }
-  }
-
-  $result; # return value
 }
 
 sub isNamespaceOk($\%) {
@@ -175,31 +152,6 @@ sub isNamespaceOk($\%) {
   }
 
   $result; # return value
-}
-
-sub isTitleOkForLocalPages(\$) {
-  my ($refToPageTitle) = @_;
-
-  my $namespaceOk = 0;
-
-  if ($$refToPageTitle =~ /^:.*$/) {
-    # Leading colon by itself implies main namespace
-    $namespaceOk = 0;
-
-  # Note that there must be at least one non-space character following the namespace specification
-  # for the page title to be valid. If there is none, then the link is considered to point to a
-  # page in the main namespace.
-
-  } elsif ($$refToPageTitle =~ /^([^:]*):\s*\S/) {
-    # colon found but not in the first position - check if it designates a known namespace
-    my $prefix = $1;
-    &normalizeNamespace(\$prefix);
-    $namespaceOk = &isNamespaceOkForLocalPages(\$prefix);
-  }
-
-  # The case when the page title does not contain a colon at all also falls here.
-
-  return $namespaceOk
 }
 
 1;

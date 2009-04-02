@@ -74,11 +74,28 @@ $relatedWording_Section = qr/Further(?:\s+)information|
                         'File' => 1
                     ); 
 
-# Pages in these namespaces that don't exist in the XML dump but have a link to it, 
-# get assigned a local ID. Broken links to other pages get ignored.
+# Interwiki links are links to another wiki (e.g. from Wikipedia article to an image on 
+# Wikimedia Commons or to a MemoryAlpha article).
+#
+# These links appear as internal links in the browser. Syntax is similar to MediaWiki namespaces: 
+# for example [[MemoryAlpha:Test]] or [[MemoryAlpha:Category:Test]].
 
-%okNamespacesForLocalPages = (
-                      'File' => 1
+# See http://meta.wikimedia.org/wiki/Interwiki_map for a comprehensive list of possible destinations. 
+
+# Only a few largest wikis are enabled here for performance reasons
+
+# If a namespace here overlaps with local namespace (e.g. File), the local namespace has
+# higher priority. If a local page does not exist in that namespace, the link is considered to be
+# interwiki.
+
+%okNamespacesForInterwikiLinks = (
+                      File           => 1,
+
+        		          Wookieepedia   => 1,
+                  		Memoryalpha    => 1,
+                  		Wowwiki        => 1,
+                  		Marveldatabase => 1,
+                  		Dcdatabase     => 1,
                     );
 
 # Namespace for categories.
@@ -110,21 +127,5 @@ $disambigTemplates = qr/disambiguation|
 # Regular expression that matches titles of disambiguation articles.
 
 $disambigTitle = qr/\(disambiguation\)/ix;
-
-# Interwiki links are links to another wiki (e. g. from Wikipedia article to a MemoryAlpha article)
-# that appear as internal links in the browser. Syntax is similar to MediaWiki namespaces: 
-# for example [[MemoryAlpha:Test]] or [[MemoryAlpha:Category:Test]].
-
-# See http://meta.wikimedia.org/wiki/Interwiki_map for a comprehensive list of possible destinations. 
-
-# Only a few largest wikis are enabled here for performance reasons
-
-$interwikiList = [
-        		"Wookieepedia",
-        		"MemoryAlpha",
-        		"WoWWiki",
-        		"MarvelDatabase",
-        		"DCDatabase",
-          ];
 
 1;
