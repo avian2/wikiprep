@@ -31,11 +31,11 @@ sub new
   $gumWriter->xmlDecl();
   $gumWriter->startTag("gum");
 
-  my $localFile = IO::File->new("> $basepath.local.xml");
-  my $localWriter = XML::Writer->new(OUTPUT => $localFile, DATA_MODE => 1, ENCODING => "utf-8",
+  my $interwikiFile = IO::File->new("> $basepath.interwiki.xml");
+  my $interwikiWriter = XML::Writer->new(OUTPUT => $interwikiFile, DATA_MODE => 1, ENCODING => "utf-8",
                                                                            UNSAFE => $unsafe );
-  $localWriter->xmlDecl();
-  $localWriter->startTag("pages");
+  $interwikiWriter->xmlDecl();
+  $interwikiWriter->startTag("pages");
 
   my $redirFile = IO::File->new("> $basepath.redir.xml");
   my $redirWriter = XML::Writer->new(OUTPUT => $redirFile, DATA_MODE => 1, ENCODING => "utf-8",
@@ -53,8 +53,8 @@ sub new
                 gumFile    => $gumFile,
                 gumWriter  => $gumWriter,
 
-                localFile    => $localFile,
-                localWriter  => $localWriter,
+                interwikiFile    => $interwikiFile,
+                interwikiWriter  => $interwikiWriter,
 
                 redirFile    => $redirFile,
                 redirWriter  => $redirWriter,
@@ -63,16 +63,13 @@ sub new
                 tmplWriter  => $tmplWriter,
              };
 
-  my $localIDFile = "$basepath.min_local_id";
-  open( $self->{localidFile}, "> $localIDFile") or 
-    die "Cannot open $localIDFile: $!";
-
   my $disambigFile = "$basepath.disambig";
   open( $self->{disambigFile}, "> $disambigFile") or 
     die "Cannot open $disambigFile: $!";
   binmode($self->{disambigFile}, ':utf8');
 
-  print {$self->{disambigFile}} "# Line format: <Disambig page id>  <Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
+  print {$self->{disambigFile}} "# Line format: <Disambig page id>  ",
+                                "<Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
 
   my $anchorFile = "$basepath.anchor_text";
   if( $params{COMPRESS} ) {
@@ -84,7 +81,33 @@ sub new
   }
   binmode($self->{anchorFile}, ':utf8');
 
-  print {$self->{anchorFile}} "# Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>\n\n\n";
+  print {$self->{anchorFile}} "# Line format: <Target page id>  <Source page id>  ",
+                              "<Anchor location within text>  ",
+                              "<Anchor text (up to the end of the line)>\n\n\n";
+
+  my $statCategoriesFile = "$basepath.stat.categories";
+  open( $self->{statCategoriesFile}, "> $statCategoriesFile") or
+    die "Cannot open $statCategoriesFile: $!";
+
+  print {$self->{statCategoriesFile}} 
+                  "# Line format: <CategoryId (= page id)>  <Number of pages in this category>\n",
+                  "# Here we count the *pages* that belong to this category, i.e., articles AND\n",
+                  "# sub-categories of this category (but not the articles in the sub-categories).\n",
+                  "\n\n";
+
+  my $statInlinksFile = "$basepath.stat.inlinks";
+  open( $self->{statInlinksFile}, "> $statInlinksFile") or
+    die "Cannot open $statInlinksFile: $!";
+
+  print {$self->{statInlinksFile}} 
+                  "# Line format: <Target page id>  <Number of links to it from other pages>\n\n\n";
+
+  my $catHierarchyFile = "$basepath.stat.inlinks";
+  open( $self->{catHierarchyFile}, "> $catHierarchyFile") or
+    die "Cannot open $catHierarchyFile: $!";
+
+  print {$self->{catHierarchyFile}} 
+                  "# Line format: <Category id>  <List of ids of immediate descendants>\n\n\n";
 
 	bless $self, $class;
 
@@ -99,9 +122,9 @@ sub finish
   $self->{gumWriter}->end();
   $self->{gumFile}->close();
 
-  $self->{localWriter}->endTag();
-  $self->{localWriter}->end();
-  $self->{localFile}->close();
+  $self->{interwikiWriter}->endTag();
+  $self->{interwikiWriter}->end();
+  $self->{interwikiFile}->close();
 
   $self->{redirWriter}->endTag();
   $self->{redirWriter}->end();
@@ -111,31 +134,12 @@ sub finish
   $self->{tmplWriter}->end();
   $self->{tmplFile}->close();
 
-  close( $self->{localidFile} );
-
   close( $self->{disambigFile} );
   close( $self->{anchorFile} );
-}
 
-sub lastLocalID
-{
-  my $self = shift;
-  my ($localIDCounter) = @_;
-
-  print {$self->{localidFile}} "$localIDCounter\n";
-}
-
-sub newLocalID
-{
-  my $self = shift;
-  my ($id, $title) = @_;
-
-  my $writer = $self->{localWriter};
-
-  $writer->startTag("page");
-  $writer->dataElement("id", $id);
-  $writer->dataElement("title", $title);
-  $writer->endTag("page");
+  close( $self->{statCategoriesFile} );
+  close( $self->{statInlinksFile} );
+  close( $self->{catHierarchyFile} );
 }
 
 # Save information about redirects into an XML-formatted file.
@@ -264,6 +268,47 @@ sub newPage
 
   $self->_logDisambig($page);
   $self->_logAnchorText($page);
+}
+
+sub writeStatistics {
+  my $self = shift;
+  my ($refToStatCategories, $refToStatIncomingLinks) = @_;
+
+  for my $cat ( keys(%$refToStatCategories) ) {
+    print {$self->{statCategoriesFile}} "$cat\t$refToStatCategories->{$cat}\n";
+  }
+
+  for my $destination ( keys(%$refToStatIncomingLinks) ) {
+    print {$self->{statInlinksFile}} "$destination\t$refToStatIncomingLinks->{$destination}\n";
+  }
+}
+
+sub writeCategoryHierarchy {
+  my $self = shift;
+  my ($refCatHierarchy) = @_;
+
+  for my $cat ( keys(%$refCatHierarchy) ) {
+    print {$self->{catHierarchyFile}} "$cat\t", join(" ", @{$refCatHierarchy->{$cat}}), "\n";
+  }
+}
+
+sub writeInterwiki
+{
+  my $self = shift;
+  my ($refToInterwiki) = @_;
+
+  my $writer = $self->{interwikiWriter};
+
+  while( my( $namespace, $titleArray ) = each( %$refToInterwiki ) ) {
+
+    $writer->startTag("namespace", name => $namespace);
+
+    for my $title (@$titleArray) {
+      $writer->emptyTag("page", title => $title);
+    }
+
+    $writer->endTag("namespace");
+  }
 }
 
 sub _logDisambig 

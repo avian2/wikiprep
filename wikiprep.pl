@@ -43,10 +43,12 @@ use Wikiprep::Link qw( %title2id %redir resolveLink parseRedirect extractWikiLin
 use Wikiprep::Related qw( identifyRelatedArticles );
 use Wikiprep::Disambig qw( isDisambiguation parseDisambig );
 use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk );
+use Wikiprep::Statistics qw( updateStatistics updateCategoryHierarchy 
+                             %statCategories %statIncomingLinks %catHierarchy );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
 use Wikiprep::revision qw( getWikiprepRevision getDumpDate getDatabaseName );
 use Wikiprep::css qw( removeMetadata );
-use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf removeElements );
+use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements );
 
 # Command line options
 my $optFile;
@@ -76,10 +78,6 @@ my $inputFileSuffix;
 # Needed for benchmarking and ETA calculation
 my $totalPageCount = 0;
 my $totalByteCount = 0;
-
-my %catHierarchy;       # each category is associated with a list of its immediate descendants
-my %statCategories;     # number of pages classified under each category
-my %statIncomingLinks;  # number of links incoming to each page
 
 sub parseOptions {
 
@@ -200,8 +198,8 @@ sub main {
 
   &transform();
 
-  &writeStatistics();
-  &writeCategoryHierarchy();
+  $output->writeStatistics(\%statCategories, \%statIncomingLinks);
+  $output->writeCategoryHierarchy(\%catHierarchy);
 
   $output->finish();
 
@@ -210,82 +208,26 @@ sub main {
   LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 60) % 60, $elapsed % 60) );
 }
 
-# Hogwarts needs the anchor text file to be sorted in the increading order of target page id.
-# The file is originally sorted by source page id (second field in each line).
-# We now use stable (-s) numeric (-n) sort on the first field (-k 1,1).
-# This way, the resultant file will be sorted on the target page id (first field) as primary key,
-# and on the source page id (second field) as secondary key.
-# system("sort -s -n -k 1,1 $anchorTextFile > $anchorTextFile.sorted");
-
-
 ##### Subroutines #####
 
-sub writeStatistics() {
-  my $statCategoriesFile = File::Spec->catfile($inputFilePath, "$inputFileBase.stat.categories");
-  my $statIncomingLinksFile = File::Spec->catfile($inputFilePath, "$inputFileBase.stat.inlinks");
+sub openFile {
+  my $fh;
 
-  open(STAT_CATS, "> $statCategoriesFile") or die "Cannot open $statCategoriesFile";
-  print STAT_CATS "# Line format: <CategoryId (= page id)>  <Number of pages in this category>\n",
-                  "# Here we count the *pages* that belong to this category, i.e., articles AND\n",
-                  "# sub-categories of this category (but not the articles in the sub-categories).\n",
-                  "\n\n";
-
-  my $cat;
-#  foreach $cat ( sort { $statCategories{$b} <=> $statCategories{$a} }
-#                 keys(%statCategories) ) {
-#    print STAT_CATS "$cat\t$statCategories{$cat}\n";
-#  }
-  foreach $cat ( keys(%statCategories) ) {
-    print STAT_CATS "$cat\t$statCategories{$cat}\n";
-  }
-  close(STAT_CATS);
-
-  open(STAT_INLINKS, "> $statIncomingLinksFile") or die "Cannot open $statIncomingLinksFile";
-  print STAT_INLINKS "# Line format: <Target page id>  <Number of links to it from other pages>\n\n\n";
-
-  my $destination;
-#  foreach $destination ( sort { $statIncomingLinks{$b} <=> $statIncomingLinks{$a} }
-#                         keys(%statIncomingLinks) ) {
-#    print STAT_INLINKS "$destination\t$statIncomingLinks{$destination}\n";
-#  }
-  foreach $destination ( keys(%statIncomingLinks) ) {
-    print STAT_INLINKS "$destination\t$statIncomingLinks{$destination}\n";
+  if ($optFile =~ /\.gz$/) {
+    open($fh, "gzip -dc $optFile|") or die "Cannot open $optFile: $!";
+  } elsif ($optFile =~ /\.bz2$/) {
+    open($fh, "bzip2 -dc $optFile|") or die "Cannot open $optFile: $!";
+  } else {
+    open($fh, "< $optFile") or die "Cannot open $optFile: $!";
   }
 
-  close(STAT_INLINKS);
-}
-
-sub writeCategoryHierarchy() {
-  my $catHierarchyFile = File::Spec->catfile($inputFilePath, "$inputFileBase.cat_hier");
-
-  open(CAT_HIER, "> $catHierarchyFile") or die "Cannot open $catHierarchyFile";
-  print CAT_HIER "# Line format: <Category id>  <List of ids of immediate descendants>\n\n\n";
-
-  my $cat;
-#  foreach $cat ( sort { $catHierarchy{$a} <=> $catHierarchy{$b} }
-#                 keys(%catHierarchy) ) {
-#    print CAT_HIER "$cat\t", join(" ", @{$catHierarchy{$cat}}), "\n";
-#  }
-  foreach $cat ( keys(%catHierarchy) ) {
-    print CAT_HIER "$cat\t", join(" ", @{$catHierarchy{$cat}}), "\n";
-  }
-
-  close(CAT_HIER);
+  return $fh;
 }
 
 # build id <-> title mappings and redirection table,
 # as well as load templates
 sub prescan() {
-  # re-open the input XML file
-  if ($optFile =~ /\.gz$/) {
-    open(INF, "gzip -dc $optFile|") or die "Cannot open $optFile: $!";
-  } elsif ($optFile =~ /\.bz2$/) {
-    open(INF, "bzip2 -dc $optFile|") or die "Cannot open $optFile: $!";
-  } else {
-    open(INF, "< $optFile") or die "Cannot open $optFile: $!";
-  }
-
-  my $pages = Parse::MediaWikiDump::Pages->new(\*INF);
+  my $pages = Parse::MediaWikiDump::Pages->new(&openFile);
 
   my @interwikiNamespaces = keys( %Wikiprep::Config::okNamespacesForInterwikiLinks );
   &loadNamespaces($pages, \@interwikiNamespaces );
@@ -317,21 +259,12 @@ sub prescan() {
     &Wikiprep::Templates::prescan(\$title, \$id, $mwpage);
   }
 
-  close(INF);
   LOG->info("prescanning complete ($counter pages)");
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
 }
 
 sub transform() {
-  # re-open the input XML file
-  if ($optFile =~ /\.gz$/) {
-    open(INF, "gzip -dc $optFile|") or die "Cannot open $optFile: $!";
-  } elsif ($optFile =~ /\.bz2$/) {
-    open(INF, "bzip2 -dc $optFile|") or die "Cannot open $optFile: $!";
-  } else {
-    open(INF, "< $optFile") or die "Cannot open $optFile: $!";
-  }
-  my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
+  my $mwpages = Parse::MediaWikiDump::Pages->new(&openFile);
 
   my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
   my $imageNamespace = $Wikiprep::Config::imageNamespace;
@@ -341,6 +274,8 @@ sub transform() {
 
   my $startTime = time - 1;
   my $lastDisplayTime = $startTime;
+
+  my %interwiki;
 
   my $mwpage;
   while (defined($mwpage = $mwpages->page)) {
@@ -402,7 +337,7 @@ sub transform() {
       
     # Comments can easily span several lines, so we use the "/s" modifier.
 
-    $text =~ s/<!--(?:.*?)-->//sg;
+    $text =~ s/<!--.*?-->//sg;
 
     # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
     # MediaWiki extension they use that selects random text - wikiprep
@@ -459,10 +394,6 @@ sub transform() {
     # to the file.
     &removeElements($page->{relatedArticles}, $page->{categories});
 
-    my @internalLinks;
-    &getLinkIds(\@internalLinks, $page->{internalLinks});
-    &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
-
     # We don't accumulate categories directly in a hash table, since this would not preserve
     # their original order of appearance.
     &removeDuplicatesAndSelf($page->{categories}, $page->{id});
@@ -476,10 +407,10 @@ sub transform() {
     # text length AFTER all transformations
     $page->{newLength} = length($page->{text});
 
-    &updateStatistics($page->{categories}, \@internalLinks);
+    &updateStatistics($page);
 
     if( $mwpage->namespace eq $categoryNamespace ) {
-      &updateCategoryHierarchy($page->{id}, $page->{categories});
+      &updateCategoryHierarchy($page);
       $page->{isCategory} = 1;
     } else {
       $page->{isCategory} = 0;
@@ -489,45 +420,23 @@ sub transform() {
 
     $output->newPage($page);
 
+    for my $interwikiPage (@interwikiArray) {
+      my ($namespace, $title) = @$interwikiPage;
+      if( exists( $interwiki{$namespace} ) ) {
+        push( @{$interwiki{$namespace}}, $title );
+      } else {
+        $interwiki{$namespace} = [ $title ];
+      }
+    }
+
     my $pageFinishedTime = time;
 
     LOG->info( sprintf("transforming page took %d seconds (ID %d)", $pageFinishedTime - $page->{startTime}, 
                $page->{id}) );
   }
   print "\n";
-  close(INF);
-}
 
-sub updateStatistics(\@\@) {
-  my ($refToCategories, $refToInternalLinks) = @_;
-
-  my $cat;
-  foreach $cat (@$refToCategories) {
-    $statCategories{$cat}++;
-  }
-
-  my $link;
-  foreach $link (@$refToInternalLinks) {
-    $statIncomingLinks{$link}++;
-  }
-}
-
-sub updateCategoryHierarchy($\@) {
-  # The list of categories passed as a parameter is actually the list of parent categories
-  # for the current category
-  my ($childId, $refToParentCategories) = @_;
-
-  my $parentCat;
-  foreach $parentCat (@$refToParentCategories) {
-    if ( exists($catHierarchy{$parentCat}) ) {
-      push(@{$catHierarchy{$parentCat}}, $childId);
-    } else {
-      # create a new array with '$childId' as the only child (for now) of '$parentCat'
-      my @arr;
-      push(@arr, $childId);
-      $catHierarchy{$parentCat} = [ @arr ];
-    }
-  }
+  $output->writeInterwiki(\%interwiki);
 }
 
 BEGIN {
@@ -787,7 +696,7 @@ BEGIN {
   #        b) Closed automatically by a === heading or some other markup
 
   my $tableOpeningSequence1 = qr{<table(?:                       # either just <table>
-                                          (?:\s+)(?:[^<>]*)      # or
+                                          \s+[^<>]*              # or
                                        )?>}ix;                   # "<table" followed by at least one space
                                                                  # (to prevent "<tablexxx"), followed by
                                                                  # some optional text, e.g., table parameters

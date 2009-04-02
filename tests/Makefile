@@ -81,6 +81,8 @@ clean:
 	rm -f *.tmpl.xml
 	rm -rf *.templates
 	rm -rf *.interwiki
+	rm -f *.interwiki.xml
+	rm -f *.profile
 
 compare:
 	./compare

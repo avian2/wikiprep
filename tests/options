@@ -1,3 +1,7 @@
 microsoft-new.xml: -format composite
 interwiki-new.xml: -format composite
 otheruses.xml: -format composite
+asse.xml: -format composite
+barzilla.xml: -format composite
+gallery.xml: -format composite
+images.xml: -format composite

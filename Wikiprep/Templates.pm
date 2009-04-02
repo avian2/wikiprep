@@ -56,7 +56,7 @@ sub prescan {
       
     # Comments can easily span several lines, so we use the "/s" modifier.
 
-    $text =~ s/<!--(?:.*?)-->//sg;
+    $text =~ s/<!--.*?-->//sg;
 
     # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
     # MediaWiki extension they use that selects random text - wikiprep
