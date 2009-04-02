@@ -438,17 +438,6 @@ sub transform() {
     # This function only examines the contents of '$text', but doesn't change it.
     &identifyRelatedArticles($page);
 
-    # We process categories directly, because '$page->categories' ignores
-    # categories inherited from included templates
-    &extractCategories($page);
-
-    # Categories are listed at the end of articles, and therefore may mistakenly
-    # be added to the list of related articles (which often appear in the last
-    # section such as "See also"). To avoid this, we explicitly remove all categories
-    # from the list of related links, and only then record the list of related links
-    # to the file.
-    &removeElements($page->{relatedArticles}, $page->{categories});
-
     &convertGalleryToLink(\$page->{text});
     &convertImagemapToLink(\$page->{text});
 
@@ -457,18 +446,26 @@ sub transform() {
     &removeMetadata(\$page->{text});
 
     $page->{internalLinks} = [];
-    $page->{interwikiLinks} = [];
+    $page->{categories} = [];
 
     my @interwikiArray;
 
-    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, \@interwikiArray);
-
-    use Data::Dumper;
-    #print Dumper($page->{internalLinks});
+    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, \@interwikiArray, $page->{categories});
+    
+    # Categories are listed at the end of articles, and therefore may mistakenly
+    # be added to the list of related articles (which often appear in the last
+    # section such as "See also"). To avoid this, we explicitly remove all categories
+    # from the list of related links, and only then record the list of related links
+    # to the file.
+    &removeElements($page->{relatedArticles}, $page->{categories});
 
     my @internalLinks;
     &getLinkIds(\@internalLinks, $page->{internalLinks});
     &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
+
+    # We don't accumulate categories directly in a hash table, since this would not preserve
+    # their original order of appearance.
+    &removeDuplicatesAndSelf($page->{categories}, $page->{id});
 
     if ( ! $optDontExtractUrls ) {
       &extractUrls($page);
@@ -481,18 +478,14 @@ sub transform() {
 
     &updateStatistics($page->{categories}, \@internalLinks);
 
-    if ($page->{title} =~ /^$categoryNamespace:/) {
+    if( $mwpage->namespace eq $categoryNamespace ) {
       &updateCategoryHierarchy($page->{id}, $page->{categories});
       $page->{isCategory} = 1;
     } else {
       $page->{isCategory} = 0;
     }
 
-    if ($page->{title} =~ /^$imageNamespace:/) {
-      $page->{isImage} = 1;
-    } else {
-      $page->{isImage} = 0;
-    }
+    $page->{isImage} = $mwpage->namespace eq $imageNamespace ? 1 : 0;
 
     $output->newPage($page);
 
@@ -535,47 +528,6 @@ sub updateCategoryHierarchy($\@) {
       $catHierarchy{$parentCat} = [ @arr ];
     }
   }
-}
-
-sub extractCategories(\%) {
-  my ($page) = @_;
-
-  # Remember that namespace names are case-insensitive, hence we're matching with "/i".
-  # The first parameter to 'collectCategory' is passed by value rather than by reference,
-  # because it might be dangerous to pass a reference to $1 in case it might get modified
-  # (with unclear consequences).
-  my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
-
-  $page->{categories} = [];
-
-  $page->{text} =~ s/\[\[\s*($categoryNamespace:.*?)\]\]/&collectCategory($1, $page)/ieg;
-
-  # We don't accumulate categories directly in a hash table, since this would not preserve
-  # their original order of appearance.
-  &removeDuplicatesAndSelf($page->{categories}, $page->{id});
-}
-
-sub collectCategory($\@) {
-  my ($catName, $page) = @_;
-
-  if ($catName =~ /^(.*)\|/) {
-    # Some categories contain a sort key, e.g., [[Category:Whatever|*]] or [[Category:Whatever| ]]
-    # In such a case, take only the category name itself.
-    $catName = $1;
-  }
-
-  &normalizeTitle(\$catName);
-
-  my $catId = &resolveLink(\$catName);
-  if ( defined($catId) ) {
-    push(@{$page->{categories}}, $catId);
-  } else {
-    LOG->info("unknown category '$catName'");
-  }
-
-  # The return value is just a space, because we remove categories from the text
-  # after we collected them
-  " ";
 }
 
 BEGIN {

@@ -108,16 +108,16 @@ sub parseRedirect($) {
                                                  #    "#" has special meaning with /x modifier)
                              (?:S|ED|ION)?       # The word may be in any of these forms,
                                                  #   i.e., REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION
-                             (?:\s*)             # optional whitespace
+                             \s*                 # optional whitespace
                              (?: :|\sTO|=)?      # optional colon, "TO" or "="
                                                  #   (in case of "TO", we expect a whitespace before it,
                                                  #    so that it's not glued to the preceding word)
-                             (?:\s*)             # optional whitespace
+                             \s*                 # optional whitespace
                              \[\[([^\]]*)\]\]    # the link itself
                             }ix ) {              # matching is case-insensitive, hence /i
     my $target = $1;
 
-    if ($target =~ /^(.*)#(?:.*)$/) {
+    if ($target =~ /^(.*)#.*$/) {
       # The link contains an anchor. Anchors are not allowed in REDIRECT pages, and therefore
       # we adjust the link to point to the page as a whole (that's how Wikipedia works).
       $target = $1;
@@ -208,7 +208,7 @@ my $internalLinkRegex = qr/
                          /sx;
 
 sub extractWikiLinks {
-  my ($refToText, $refToAnchorTextArray, $refToInterwikiArray) = @_;
+  my ($refToText, $refToAnchorTextArray, $refToInterwikiArray, $refToCategoryArray) = @_;
 
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
@@ -224,16 +224,17 @@ sub extractWikiLinks {
   # we extract links in several iterations of the while loop, while the link definition requires that
   # each pair [[...]] does not contain any opening braces.
   
-  1 while ( $$refToText =~ s/$internalLinkRegex/&collectWikiLink($1, $2, $3, 
+  1 while ( $$refToText =~ s/$internalLinkRegex/&collectWikiLink($1, $2, $3, $-[0],
                                                                      $refToAnchorTextArray,
                                                                      $refToInterwikiArray,
-                                                                     $-[0])/eg );
+                                                                     $refToCategoryArray)/eg );
 }
 
 sub collectWikiLink($$$\@\@$) {
-  my ($prefix, $link, $suffix, $refToAnchorTextArray, $refToInterwikiArray, $linkLocation) = @_;
+  my ($prefix, $link, $suffix, $linkLocation, 
+      $refToAnchorTextArray, $refToInterwikiArray, $refToCategoryArray) = @_;
 
-  return "" unless $link;
+  return $prefix . $suffix unless $link;
 
   # First check if this is a link to a date. Date links are normalized first, so this
   # function returns a string, that contains the normalized link (e.g. "[[July 4]]).
@@ -252,7 +253,7 @@ sub collectWikiLink($$$\@\@$) {
   # The fields before the first pipe character is the link destination.
   my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
 
-  return "" unless $linkTitleSection;
+  return $prefix . $suffix unless $linkTitleSection;
 
   # The link can contain a section reference after the hash character. If the part of the link 
   # before the hash is empty, it points to a section on the current page. 
@@ -260,7 +261,21 @@ sub collectWikiLink($$$\@\@$) {
 
   my $linkNamespaceTitle = $linkNamespace ? "$linkNamespace:$linkTitle" : $linkTitle;
 
-  # First determine the anchor text. This is the blue underlined text that is seen in the browser 
+  # Target page of the link.
+  my $targetId = &resolvePageLink(\$linkNamespaceTitle);
+
+  # If this is a link to category namespace, remove the link completely and 
+  if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::categoryNamespace ) {
+    if( $targetId ) {
+      push(@{$refToCategoryArray}, $targetId) if $refToCategoryArray;
+    } else {
+      LOG->info("unknown category '$linkTitle'");
+    }
+    return $prefix . $suffix;
+  }
+
+
+  # Determine the anchor text. This is the blue underlined text that is seen in the browser 
   # in place of the [[...]] link.
   my $anchor;
   my $noAltText;
@@ -290,9 +305,6 @@ sub collectWikiLink($$$\@\@$) {
     $anchor = $prefix . $anchor . $suffix;
   }
 
-
-  # Now start finding the target page of the link.
-  my $targetId = &resolvePageLink(\$linkNamespaceTitle);
 
   # We log anchor text only if it would be visible in the web browser. This means that for an
   # link to an ordinary page we log the anchor whether an alternative text was available or not
@@ -325,7 +337,7 @@ sub collectWikiLink($$$\@\@$) {
   if( not $targetId ) {
     if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForInterwikiLinks{$linkNamespace} ) ) {
 
-      push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if( $refToAnchorTextArray );
+      push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if $refToAnchorTextArray;
 
       $anchorStruct{targetNamespace} = $linkNamespace;
       $anchorStruct{targetTitle} = $linkTitle;
