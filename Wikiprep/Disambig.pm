@@ -45,7 +45,7 @@ sub parseDisambig(\%) {
 
       my @disambigLinks;
 
-      &extractWikiLinks(\$line, \@disambigLinks, undef);
+      &extractWikiLinks(\$line, \@disambigLinks);
 
       push(@{$page->{disambigLinks}}, \@disambigLinks)
 		}

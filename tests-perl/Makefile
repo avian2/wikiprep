@@ -5,7 +5,8 @@ TESTS = utils.pl \
 	languages.pl \
 	templates.pl \
 	ctemplates.pl \
-	css.pl
+	css.pl \
+	namespace.pl
 
 all: test
 

@@ -36,7 +36,7 @@ sub prescan {
   if ($$refToTitle =~ /^$templateNamespace:/) {
     my $text = ${$mwpage->text};
 
-    $main::out->newTemplate($$refToId, $$refToTitle);
+    $main::output->newTemplate($$refToId, $$refToTitle);
 
     # We're storing template text for future inclusion, therefore,
     # remove all <noinclude> text and keep all <includeonly> text
@@ -56,7 +56,7 @@ sub prescan {
       
     # Comments can easily span several lines, so we use the "/s" modifier.
 
-    $text =~ s/<!--(?:.*?)-->//sg;
+    $text =~ s/<!--.*?-->//sg;
 
     # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
     # MediaWiki extension they use that selects random text - wikiprep
@@ -240,40 +240,9 @@ sub parseTemplateInvocation(\@\%) {
   }
 }
 
-sub computeFullyQualifiedTemplateTitle(\$) {
-  my ($refToTemplateTitle) = @_;
-
-  # Determine the namespace of the page being included through the template mechanism
-
-  my $namespaceSpecified = 0;
-
-  if ($$refToTemplateTitle =~ /^:(.*)$/) {
-    # Leading colon by itself implies main namespace, so strip this colon
-    $$refToTemplateTitle = $1;
-    $namespaceSpecified = 1;
-  } elsif ($$refToTemplateTitle =~ /^([^:]*):/) {
-    # colon found but not in the first position - check if it designates a known namespace
-    my $prefix = $1;
-    &normalizeNamespace(\$prefix);
-    $namespaceSpecified = &isKnownNamespace(\$prefix);
-  }
-
-  # The case when the page title does not contain a colon at all also falls here.
-
-  if ($namespaceSpecified) {
-    # OK, the title of the page being included is fully qualified with a namespace
-  } else {
-    # The title of the page being included is NOT in the main namespace and lacks
-    # any other explicit designation of the namespace - therefore, it is resolved
-    # to the Template namespace (that's the default for the template inclusion mechanism).
-    $$refToTemplateTitle = $Wikiprep::Config::templateNamespace . ":" . $$refToTemplateTitle;
-  }
-}
-
 sub includeTemplateText(\$\%\%\$$) {
   my ($refToTemplateTitle, $refToParameterHash, $page, $refToResult) = @_;
 
-  &normalizeTitle($refToTemplateTitle);
   my $includedPageId = &Wikiprep::Link::resolveLink($refToTemplateTitle);
 
   if ( defined($includedPageId) && exists($templates{$includedPageId}) ) {
@@ -348,7 +317,7 @@ sub instantiateTemplate($\%$) {
 
   # If this wasn't a parser function call, try to include a template.
   if ( not defined($result) ) {
-    &computeFullyQualifiedTemplateTitle(\$templateTitle);
+    &normalizeTitle(\$templateTitle, $Wikiprep::Config::templateNamespace);
 
     my $overrideResult = $Wikiprep::Config::overrideTemplates{$templateTitle};
     if(defined $overrideResult) {

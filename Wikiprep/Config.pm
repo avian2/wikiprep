@@ -5,7 +5,7 @@ package Wikiprep::Config;
 use strict;
 
 use vars qw/ %namespaceAliases /;
-use vars qw/ %okNamespacesForPrescanning %okNamespacesForTransforming %okNamespacesForLocalPages /;
+use vars qw/ %okNamespacesForPrescanning %okNamespacesForTransforming %okNamespacesForInterwikiLinks /;
 use vars qw/ $categoryNamespace $templateNamespace $imageNamespace /;
 
 use vars qw/ $relatedWording_Standalone $relatedWording_Inline $relatedWording_Section /;

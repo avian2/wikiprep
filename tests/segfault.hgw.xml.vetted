@@ -28,17 +28,17 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="290" orglength="7675" newlength="4840" stub="0" categories="0" outlinks="20" urls="1">
+<page id="290" orglength="7675" newlength="4907" stub="0" categories="0" outlinks="0" urls="1">
 <title>A</title>
 <categories></categories>
-<links>17225313 17225314 17225315 17225316 17225317 17225318 17225319 17225320 17225321 17225322 17225323 17225324 17225325 17225326 17225327 17225328 17225329 17225330 17225331 17225312</links>
+<links></links>
 <urls>
 http://starbase.trincoll.edu/~crypto/resources/LetFreq.html
 </urls>
 <text>
 
 
-<internal id="17225313">Wiktionary</internal> 
+<link namespace="File" title="Wiktionary-logo-en.png">Wiktionary</link> 
  Look up A, a in Wiktionary, the free dictionary.
 
 The letter A is the first letter in the Latin alphabet. Its name in English is a &quot;a&quot;, Merriam-Webster&apos;s Third New International Dictionary of the English Language, Unabridged, (1993)  (pronounced  /eɪ/ 
@@ -59,7 +59,7 @@ The letter has two minuscule (lower-case) forms. The form used in most current h
 ). Both derive from the majuscule (capital) form. In Greek handwriting, it was common to join the left leg and horizontal stroke into a single loop, as demonstrated by the Uncial version shown. Many fonts then made the right leg vertical. In some of these, the serif that began the right leg stroke developed into an arc, resulting in the printed form, while in others it was dropped, resulting in the modern handwritten form.
 
 <h1> Usage </h1>
-<internal id="17225327">Typographic variants include a double-story and single-story a.</internal>
+<link namespace="File" title="LowercaseA.svg">Typographic variants include a double-story and single-story a.</link>
 In English, the letter &quot;A&quot; by itself usually denotes the near-open front unrounded vowel ( /æ/ 
 ) as in pad, the open back unrounded vowel ( /ɑː/ 
 ) as in father, or, in concert with a later orthographic vowel, the diphthong  /eɪ/ 
@@ -92,7 +92,7 @@ The morse code for A is   dit dah  or  a dot and a dash.
 The numeric character references in HTML and XML are &quot;  #65; &quot; and &quot;  #97; &quot; for upper and lower case respectively.
 
 <h1> See also </h1>
- <internal id="17225312"> </internal>
+ <link namespace="File" title="Wikisource-logo.svg"> </link>
  Wikisource has the text of the 1911 Encyclopædia Britannica article  A.
 
 Image:Commons-logo.svg|

@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="215" newlength="153" stub="0" categories="0" outlinks="0" urls="0">
+<page id="1" orglength="215" newlength="485" stub="0" categories="0" outlinks="0" urls="0">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -35,13 +35,13 @@
 </urls>
 <text>
 
-		    * A article at Memory Alpha, a Star Trek wiki
+		    * <link namespace="Memoryalpha" title="A">A</link> article at Memory Alpha, a Star Trek wiki
 
-MemoryAlpha: Test 
-		    Test
-		    MemoryAlpha:  category:  education
-		    test
-		    Sword
+<link namespace="Memoryalpha" title="Test">  MemoryAlpha: Test </link>
+		    <link namespace="Memoryalpha" title="Test">Test</link>
+		    <link namespace="Memoryalpha" title="Category: education">MemoryAlpha:  category:  education</link>
+		    <link namespace="Memoryalpha" title="Test">test</link>
+		    <link namespace="Wowwiki" title="Sword of a Thousand Truths">Sword</link>
 	    
 </text>
 </page>

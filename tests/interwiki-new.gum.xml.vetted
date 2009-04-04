@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <gum>
-<page id="1" timestamp="" orglength="215" newlength="153" stub="0" disambig="0" category="0" image="0">
+<page id="1" timestamp="" orglength="215" newlength="485" stub="0" disambig="0" category="0" image="0">
 <title>A</title>
 <categories></categories>
 <links></links>
 <related></related>
 <external></external>
-<interwiki>
-<link wiki="memoryalpha" title="A" />
-<link wiki="memoryalpha" title="Test" />
-<link wiki="memoryalpha" title="Test" />
-<link wiki="memoryalpha" title="Category:Education" />
-<link wiki="memoryalpha" title="Test" />
-<link wiki="wowwiki" title="Sword of a Thousand Truths" />
-</interwiki>
+<interwiki></interwiki>
 <templates>
 <template id="1090150">
 <include></include>
 </template>
 </templates><text>
-		    * A article at Memory Alpha, a Star Trek wiki
+		    * <link namespace="Memoryalpha" title="A">A</link> article at Memory Alpha, a Star Trek wiki
 
-MemoryAlpha: Test 
-		    Test
-		    MemoryAlpha:  category:  education
-		    test
-		    Sword
+<link namespace="Memoryalpha" title="Test">  MemoryAlpha: Test </link>
+		    <link namespace="Memoryalpha" title="Test">Test</link>
+		    <link namespace="Memoryalpha" title="Category: education">MemoryAlpha:  category:  education</link>
+		    <link namespace="Memoryalpha" title="Test">test</link>
+		    <link namespace="Wowwiki" title="Sword of a Thousand Truths">Sword</link>
 	    </text>
 </page>
 </gum>

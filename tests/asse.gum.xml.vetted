@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gum>
+<page id="157503" timestamp="2007-11-03T21:12:45Z" orglength="2414" newlength="1118" stub="1" disambig="0" category="0" image="0">
+<title>Asse</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external>
+<link url="http://www.asse.be/">www.asse.be</link>
+<link url="http://www.asse.be">Official website</link>
+<link url="http://joan-of-arc-studies.org/index.php?Gazetteer-Asse">Gazetteer Entry for Asse</link>
+</external>
+<interwiki></interwiki>
+<templates>
+<template id="5623267">
+<include>
+<parameter name="mayor">Koen Van Elsen ([[Christian Democratic &amp; Flemish|CD&amp;V]])</parameter>
+<parameter name="20-64">59.22</parameter>
+<parameter name="flag">Flag of Asse.svg</parameter>
+<parameter name="web">[http://www.asse.be/ www.asse.be]</parameter>
+<parameter name="map">AsseLocatie.png</parameter>
+<parameter name="community">{{BE-NL}}</parameter>
+<parameter name="lat_deg">50</parameter>
+<parameter name="nis">23002</parameter>
+<parameter name="picture-legend">Sint-Martinuskerk</parameter>
+<parameter name="lon_deg">04</parameter>
+<parameter name="majority">[[Christian Democratic and Flemish|CD&amp;V]], [[Flemish Liberals and Democrats|VLD]], [[Socialist Party – Different|SP.A]]</parameter>
+<parameter name="pyramid-date">01/01/2006</parameter>
+<parameter name="arms">Asse.jpg</parameter>
+<parameter name="province">{{BE-PROV-VB}}</parameter>
+<parameter name="lat_min">54</parameter>
+<parameter name="65">17.68</parameter>
+<parameter name="postal-codes">1730, 1731</parameter>
+<parameter name="picture">Assemartinuskerk.jpg</parameter>
+<parameter name="picture-width">260px</parameter>
+<parameter name="name">Asse</parameter>
+<parameter name="map-legend">Asse in the Province of [[Flemish Brabant]]</parameter>
+<parameter name="region">{{BE-REG-FLE}}</parameter>
+<parameter name="lon_min">12</parameter>
+<parameter name="foreigners">4.80</parameter>
+<parameter name="0-19">23.09</parameter>
+<parameter name="foreigners-date">01/07/2005</parameter>
+<parameter name="arrondissement">[[Halle-Vilvoorde administrative Arrondissement|Halle-Vilvoorde]]</parameter>
+<parameter name="telephone-area">052 - 02</parameter>
+</include>
+</template>
+</templates><text>
+
+Asse is a municipality located in the Belgian province of Flemish Brabant. The municipality comprises the towns of Asse proper, Bekkerzeel, Kobbegem, Mollem, Relegem and Zellik. On January 1 2006 Asse had a total population of 29,191. The total area is 49.64 km² which gives a population density of 588 inhabitants per km².
+
+The Hopduvel (Hopdevil) represents the storm that hit Asse-Ternat at the end of the month of August, 1970.  The hop vine crop, which was almost ready for harvest, was severely damaged when the hop vines were knocked to the ground. The &apos; hopduvel &apos; was invented by the hop farmers and was formalized by the founder of the “Hopduvelfeesten” (Hop Devil Festival), Eugeen Van den Broeck. Every year the Hopduvelfeesten is organised after the hop harvest in order to have a good harvest in the following years. This is symbolically done by burning the hopduvels that have been assembled by the local farmers and for which a contest is organised to elect the best (ugliest) Hopduvel.
+
+<h1> External links </h1>
+*  Official website  - Available only in Dutch
+*  Gazetteer Entry for Asse
+
+</text>
+</page>
+</gum>

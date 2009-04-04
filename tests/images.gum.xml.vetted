@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gum>
+<page id="2" timestamp="" orglength="10" newlength="10" stub="0" disambig="0" category="0" image="0">
+<title>Gu</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates></templates><text>Something.</text>
+</page>
+<page id="3" timestamp="" orglength="0" newlength="0" stub="0" disambig="0" category="0" image="1">
+<title>File:J.jpg</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates></templates><text></text>
+</page>
+<page id="5" timestamp="" orglength="289" newlength="322" stub="0" disambig="0" category="0" image="0">
+<title>AlgeriA</title>
+<categories></categories>
+<links>2 3</links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates></templates><text>
+		    <link namespace="File" title="Hello.jpg">This is a cool image</link>
+
+<link namespace="File" title="Hello.jpg">Another cool image</link>
+
+<link namespace="File" title="Hello.jpg">Arg</link>
+
+<link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
+
+<link id="3"></link>
+
+something
+		    something
+	    </text>
+</page>
+<page id="6" timestamp="" orglength="281" newlength="322" stub="0" disambig="0" category="0" image="0">
+<title>AlgeriB</title>
+<categories></categories>
+<links>2 3</links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates></templates><text>
+		    <link namespace="File" title="Hello.jpg">This is a cool image</link>
+
+<link namespace="File" title="Hello.jpg">Another cool image</link>
+
+<link namespace="File" title="Hello.jpg">Arg</link>
+
+<link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
+
+<link id="3"></link>
+
+something
+		    something
+	    </text>
+</page>
+</gum>

@@ -7,7 +7,8 @@ use strict;
 use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
-our @EXPORT_OK = qw( normalizeTitle normalizeNamespace loadNamespaces isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages isKnownNamespace );
+our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle 
+                     loadNamespaces isNamespaceOk isKnownNamespace );
 
 # List of known namespaces defined in the header of the XML file
 my %namespaces;
@@ -20,49 +21,74 @@ sub normalizeNamespace(\$) {
 
   # Namespaces are always lowercase with capitalized first letter.
   $$refToStr = ucfirst( lc($$refToStr) );
+
+  if( exists($Wikiprep::Config::namespaceAliases{$$refToStr}) ) {
+    $$refToStr = $Wikiprep::Config::namespaceAliases{$$refToStr};
+  }
 }
 
 # This is the function for normalizing titles - It transforms page titles into a form that is
 # used throughout Wikiprep to uniquely identify pages, templates, categories, etc.
 #
 # It does not strip namespace declarations.
-#
-# FIXME defaultNamespace parameter (then replace computeFullyQualifiedTemplateTitle)
+sub normalizeTitle {
+  my ($refToStr, $defaultNamespace) = @_;
 
-sub normalizeTitle(\$) {
-  my ($refToStr) = @_;
+  my ($namespace, $title) = &normalizeNamespaceTitle($$refToStr, $defaultNamespace);
+  $$refToStr = $namespace ? $namespace . ":" . $title : $title;
+}
+
+sub normalizeNamespaceTitle {
+  my ($str, $defaultNamespace) = @_;
+  
+  # Link definitions may span over adjacent lines and therefore contain line breaks,
+  # hence we use the /s modifier on matchings.
 
   # remove leading whitespace and underscores
-  $$refToStr =~ s/^[\s_]+//;
+  $str =~ s/^[\s_]+//s;
   # remove trailing whitespace and underscores
-  $$refToStr =~ s/[\s_]+$//;
+  $str =~ s/[\s_]+$//s;
   # replace sequences of whitespace and underscore chars with a single space
-  $$refToStr =~ s/[\s_]+/ /g;
+  $str =~ s/[\s_]+/ /sg;
 
-  if ($$refToStr =~ /^([^:]*):(\s*)(\S(?:.*))/) {
-    my $prefix = $1;
-    my $optionalWhitespace = $2;
-    my $rest = $3;
+  # There are some special cases when the link may be preceded with a colon in the
+  # main namespace.
+  #
+  # Known cases:
+  # - Linking to a category (as opposed to actually assigning the current article
+  #   to a category) is performed using special syntax [[:Category:...]]
+  # - Linking to other languages, e.g., [[:fr:Wikipedia:Aide]]
+  #   (without the leading colon, the link will go to the side menu
+  # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
+  #
+  # In all such cases, we strip the leading colon.
+  $str =~ s/^:\s*//s unless $defaultNamespace;
+  
+  # In other namespaces (e.g. Template), the leading colon forces the link to point
+  # to the main namespace.
 
-    my $namespaceCandidate = $prefix;
+  if ($str =~ /^([^:]*):\s*(\S.*)/s) {
+    my $namespaceCandidate = $1;
+    my $rest = $2;
+
     # this must be done before the call to 'isKnownNamespace'
     &normalizeNamespace(\$namespaceCandidate); 
-    if ( &isKnownNamespace(\$namespaceCandidate) ) {
+    if( &isKnownNamespace(\$namespaceCandidate) ) {
       # If the prefix designates a known namespace, then it might follow by optional
       # whitespace that should be removed to get the canonical page name
       # (e.g., "Category:  Births" should become "Category:Births").
-      $$refToStr = $namespaceCandidate . ":" . ucfirst($rest);
+      return $namespaceCandidate, ucfirst($rest);
     } else {
       # No namespace, just capitalize first letter.
       # If the part before the colon is not a known namespace, then we must not remove the space
       # after the colon (if any), e.g., "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
       # However, to get the canonical page name we must contract multiple spaces into one,
       # because "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
-      $$refToStr = ucfirst($prefix) . ":" . $optionalWhitespace . $rest;
+      return $defaultNamespace, ucfirst($str);
     }
   } else {
     # no namespace, just capitalize first letter
-    $$refToStr = ucfirst($$refToStr);
+    return $defaultNamespace, ucfirst($str);
   }
 }
 
@@ -70,18 +96,26 @@ sub normalizeTitle(\$) {
 # ===========================================================================================================
 
 # Load namespaces (during prescan)
-sub loadNamespaces() {
-  my ($pages) = @_;
+sub loadNamespaces {
+  my ($pages, $extraNamespaces) = @_;
 
   # namespace names are case-insensitive, so we force them
   # to canonical form to facilitate future comparisons
-  for my $ns ( @{$pages->namespaces} ) {
+  if( $pages ) {
+    for my $ns ( @{$pages->namespaces} ) {
 
-    my $id = $ns->[0];
-    my $name = $ns->[1];
+      my $id = $ns->[0];
+      my $name = $ns->[1];
 
-    &normalizeNamespace(\$name);
-    $namespaces{$name} = $id;
+      &normalizeNamespace(\$name);
+      $namespaces{$name} = $id;
+    }
+  }
+
+  if( $extraNamespaces ) {
+    for my $ns ( @$extraNamespaces ) {
+      $namespaces{$ns} = undef;
+    }
   }
 
   lock_hash( %namespaces );
@@ -97,38 +131,6 @@ sub isKnownNamespace(\$) {
   my ($refToStr) = @_;
 
   return exists( $namespaces{$$refToStr} );  # return value
-}
-
-sub resolveNamespaceAliases(\$) {
-  my ($refToTitle) = @_;
-
-  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
-      $$refToTitle =~ s/^\s*$key:/$value:/mig;
-  }
-}
-
-sub isNamespaceOkForLocalPages(\$) {
-  my ($refToNamespace) = @_;
-
-  # We are only interested in image links, so main namespace is not OK.
-  my $result = 0;
-
-  if ($$refToNamespace ne '') {
-    if ( &isKnownNamespace($refToNamespace) ) {
-      $result = exists( $Wikiprep::Config::okNamespacesForLocalPages{$$refToNamespace} );
-    } else {
-      # A simple way to recognize most namespaces that link to translated articles. A better 
-      # way would be to store these namespaces in a hash.
-      if ( length($$refToNamespace) < 4 ) {
-        $result = 0
-      }
-
-      # the prefix before ":" in the page title is not a known namespace,
-      # therefore, the page belongs to the main namespace and is OK
-    }
-  }
-
-  $result; # return value
 }
 
 sub isNamespaceOk($\%) {
@@ -150,31 +152,6 @@ sub isNamespaceOk($\%) {
   }
 
   $result; # return value
-}
-
-sub isTitleOkForLocalPages(\$) {
-  my ($refToPageTitle) = @_;
-
-  my $namespaceOk = 0;
-
-  if ($$refToPageTitle =~ /^:.*$/) {
-    # Leading colon by itself implies main namespace
-    $namespaceOk = 0;
-
-  # Note that there must be at least one non-space character following the namespace specification
-  # for the page title to be valid. If there is none, then the link is considered to point to a
-  # page in the main namespace.
-
-  } elsif ($$refToPageTitle =~ /^([^:]*):\s*\S/) {
-    # colon found but not in the first position - check if it designates a known namespace
-    my $prefix = $1;
-    &normalizeNamespace(\$prefix);
-    $namespaceOk = &isNamespaceOkForLocalPages(\$prefix);
-  }
-
-  # The case when the page title does not contain a colon at all also falls here.
-
-  return $namespaceOk
 }
 
 1;

@@ -46,7 +46,7 @@ sub identifyRelatedArticles(\%) {
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       LOG->debug("Related(S): $id => $str");
-      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
+      &extractWikiLinks(\$str, \@relatedInternalLinks);
     }
   }
 
@@ -56,7 +56,7 @@ sub identifyRelatedArticles(\%) {
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       LOG->debug("Related(I): $id => $str");
-      &extractWikiLinks(\$str, \@relatedInternalLinks, undef);
+      &extractWikiLinks(\$str, \@relatedInternalLinks);
     }
   }
 
@@ -72,7 +72,7 @@ sub identifyRelatedArticles(\%) {
         LOG->debug("Related(N): $id => $line");
         # 'extractWikiLinks' may modify its argument ('$line'), but it's OK
         # as we do not do any further processing to '$line' or '@text'
-        &extractWikiLinks(\$line, \@relatedInternalLinks, undef);
+        &extractWikiLinks(\$line, \@relatedInternalLinks);
       }
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
