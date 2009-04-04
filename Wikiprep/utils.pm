@@ -6,7 +6,7 @@ use strict;
 use Exporter 'import';
 our @EXPORT_OK = qw( trimWhitespaceBothSides encodeXmlChars getLinkIds removeDuplicatesAndSelf );
 
-use Wikiprep::logger qw( msg );
+use Log::Handler wikiprep => 'LOG';
 
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
 
@@ -49,8 +49,8 @@ sub removeDuplicatesAndSelf(\@$) {
   my $item;
   foreach $item (@$refToArray) {
     if ( defined($elementToRemove) && ($item == $elementToRemove) ) {
-      &msg("WARNING", "current page links or categorizes to itself - " . 
-                              "link discarded ($elementToRemove)");
+      LOG->info("current page links or categorizes to itself - " . 
+                             "link discarded ($elementToRemove)");
       next;
     }
     push(@uniq, $item) unless $seen{$item}++;

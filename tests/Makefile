@@ -60,7 +60,7 @@ all: test
 test: clean $(LOGS) compare
 
 %.log: %.xml
-	perl ../wikiprep.pl -log all $(OPTIONS) -f $< >/dev/null
+	perl ../wikiprep.pl -log debug $(OPTIONS) -f $< >/dev/null
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
