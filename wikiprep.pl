@@ -36,6 +36,7 @@ use Time::localtime;
 use Parse::MediaWikiDump;
 use Regexp::Common;
 use Log::Handler wikiprep => 'LOG';
+use Parallel::Iterator qw( iterate iterate_as_array );
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -315,26 +316,31 @@ sub transform() {
   }
   my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
 
-  my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
-  my $imageNamespace = $Wikiprep::Config::imageNamespace;
-
   my $processedPageCount = 0;
   my $processedByteCount = 0;
 
   my $startTime = time - 1;
   my $lastDisplayTime = $startTime;
 
-  my $mwpage;
-  while (defined($mwpage = $mwpages->page)) {
+  my $readerCounter = 0;
+
+  my $iter = sub {
+    my $page = $mwpages->page;
+    return unless $page;
+    return $readerCounter++, $page;
+  };
+
+#  my $page_iter = &iterate( \&transformOne, $iter );
+#  while( my ($index, $page) = $page_iter->() ) {
+  for my $page (&iterate_as_array( \&transformOne, $iter )) {
+
+    #use Data::Dumper;
+    #print Dumper($page);
 
     $processedPageCount++;
-    $processedByteCount += length(${$mwpage->text});
+    $processedByteCount += $page->{orgLength};
 
-    my $page = {};
-
-    $page->{startTime} = time;
-
-    if( $page->{startTime} - $lastDisplayTime > 5 ) {
+    if( time - $lastDisplayTime > 5 ) {
 
       $lastDisplayTime = $page->{startTime};
 
@@ -348,138 +354,151 @@ sub transform() {
       STDOUT->flush();
     }
 
-    $page->{id} = $mwpage->id;
-    $page->{timestamp} = $mwpage->timestamp;
-
-    # next if( $id != 1192748);
-
-    LOG->debug("transforming page (ID $page->{id})");
-
-    if ( defined( &parseRedirect($mwpage) ) ) {
-      next; # we've already loaded all redirects in the prescanning phase
-    }
-
-    if ( ! &isNamespaceOk( $mwpage->namespace, \%Wikiprep::Config::okNamespacesForTransforming) ) {
-      next; # we're only interested in pages from certain namespaces
-    }
-
-    my $title = $mwpage->title;
-    &normalizeTitle(\$title);
-
-    # see the comment about empty titles in function 'prescan'
-    if (length($title) == 0) {
-      LOG->debug("skipping page with empty title (ID $page->{id})");
-      next;
-    }
-
-    $page->{title} = $title;
-
-    my $text = ${$mwpage->text};
-
-    # text length BEFORE any transformations
-    $page->{orgLength} = length($text);
-
-    # Remove comments (<!-- ... -->) from text. This is best done as early as possible so
-    # that it doesn't slow down the rest of the code.
-      
-    # Comments can easily span several lines, so we use the "/s" modifier.
-
-    $text =~ s/<!--(?:.*?)-->//sg;
-
-    # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
-    # MediaWiki extension they use that selects random text - wikiprep
-    # creates huge pages if we don't remove it)
-
-    # $text =~ s/<choose[^>]*>(?:.*?)<\/choose[^>]*>/ /sg;
-
-    # The check for stub must be done BEFORE any further processing,
-    # because stubs indicators are templates, and templates are substituted.
-    if ( $text =~ m/stub}}/i ) {
-      $page->{isStub} = 1;
-    } else {
-      $page->{isStub} = 0;
-    }
-
-    $page->{text} = $text;
-
-    # Parse disambiguation pages before template substitution because disambig
-    # indicators are also templates.
-    if ( &isDisambiguation($mwpage) ) {
-      LOG->debug("parsing as a disambiguation page");
-
-      &parseDisambig($page);
-
-      $page->{isDisambig} = 1;
-    } else {
-      $page->{isDisambig} = 0;
-    }
-
-    $page->{templates} = {};
-    $page->{text} = &includeTemplates($page, $page->{text}, 0);
-
-    # This function only examines the contents of '$text', but doesn't change it.
-    &identifyRelatedArticles($page);
-
-    # We process categories directly, because '$page->categories' ignores
-    # categories inherited from included templates
-    &extractCategories($page);
-
-    # Categories are listed at the end of articles, and therefore may mistakenly
-    # be added to the list of related articles (which often appear in the last
-    # section such as "See also"). To avoid this, we explicitly remove all categories
-    # from the list of related links, and only then record the list of related links
-    # to the file.
-    &removeElements($page->{relatedArticles}, $page->{categories});
-
-    &convertGalleryToLink(\$page->{text});
-    &convertImagemapToLink(\$page->{text});
-
-    # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
-    # contain usable text for us.
-    &removeMetadata(\$page->{text});
-
-    $page->{internalLinks} = [];
-    $page->{interwikiLinks} = [];
-
-    &extractWikiLinks(\$page->{text}, $page->{internalLinks}, $page->{interwikiLinks});
-
-    my @internalLinks;
-    &getLinkIds(\@internalLinks, $page->{internalLinks});
-    &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
-
-    if ( ! $dontExtractUrls ) {
-      &extractUrls($page);
-    }
-
-    &postprocessText(\$page->{text}, 1, 1);
-
-    # text length AFTER all transformations
-    $page->{newLength} = length($page->{text});
-
-    &updateStatistics($page->{categories}, \@internalLinks);
-
-    if ($page->{title} =~ /^$categoryNamespace:/) {
-      &updateCategoryHierarchy($page->{id}, $page->{categories});
-      $page->{isCategory} = 1;
-    } else {
-      $page->{isCategory} = 0;
-    }
-
-    if ($page->{title} =~ /^$imageNamespace:/) {
-      $page->{isImage} = 1;
-    } else {
-      $page->{isImage} = 0;
-    }
-
-    $out->newPage($page);
-
-    my $pageFinishedTime = time;
-
-    LOG->info( sprintf("transforming page took %d seconds (ID %d)", $pageFinishedTime - $page->{startTime}, 
-               $page->{id}) );
+    $out->newPage($page) if exists $page->{text};
   }
+
   print "\n";
   close(INF);
+}
+
+sub transformOne {
+  my ($index, $mwpage) = @_;
+
+  my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
+  my $imageNamespace = $Wikiprep::Config::imageNamespace;
+
+  my $page = {};
+
+  $page->{startTime} = time;
+
+  my $text = ${$mwpage->text};
+
+  $page->{id} = $mwpage->id;
+  # text length BEFORE any transformations
+  $page->{orgLength} = length($text);
+
+  LOG->debug("transforming page (ID $page->{id})");
+
+  if ( defined( &parseRedirect($mwpage) ) ) {
+    return $page; # we've already loaded all redirects in the prescanning phase
+  }
+
+  if ( ! &isNamespaceOk( $mwpage->namespace, \%Wikiprep::Config::okNamespacesForTransforming) ) {
+    return $page; # we're only interested in pages from certain namespaces
+  }
+
+  my $title = $mwpage->title;
+  &normalizeTitle(\$title);
+
+  # see the comment about empty titles in function 'prescan'
+  if (length($title) == 0) {
+    LOG->debug("skipping page with empty title (ID $page->{id})");
+    return $page;
+  }
+
+  $page->{title} = $title;
+  $page->{timestamp} = $mwpage->timestamp;
+
+  # next if( $id != 1192748);
+
+  # Remove comments (<!-- ... -->) from text. This is best done as early as possible so
+  # that it doesn't slow down the rest of the code.
+    
+  # Comments can easily span several lines, so we use the "/s" modifier.
+
+  $text =~ s/<!--(?:.*?)-->//sg;
+
+  # Enable this to parse Uncyclopedia (<choose> ... </choose> is a
+  # MediaWiki extension they use that selects random text - wikiprep
+  # creates huge pages if we don't remove it)
+
+  # $text =~ s/<choose[^>]*>(?:.*?)<\/choose[^>]*>/ /sg;
+
+  # The check for stub must be done BEFORE any further processing,
+  # because stubs indicators are templates, and templates are substituted.
+  if ( $text =~ m/stub}}/i ) {
+    $page->{isStub} = 1;
+  } else {
+    $page->{isStub} = 0;
+  }
+
+  $page->{text} = $text;
+
+  # Parse disambiguation pages before template substitution because disambig
+  # indicators are also templates.
+  if ( &isDisambiguation($mwpage) ) {
+    LOG->debug("parsing as a disambiguation page");
+
+    &parseDisambig($page);
+
+    $page->{isDisambig} = 1;
+  } else {
+    $page->{isDisambig} = 0;
+  }
+
+  $page->{templates} = {};
+  $page->{text} = &includeTemplates($page, $page->{text}, 0);
+
+  # This function only examines the contents of '$text', but doesn't change it.
+  &identifyRelatedArticles($page);
+
+  # We process categories directly, because '$page->categories' ignores
+  # categories inherited from included templates
+  &extractCategories($page);
+
+  # Categories are listed at the end of articles, and therefore may mistakenly
+  # be added to the list of related articles (which often appear in the last
+  # section such as "See also"). To avoid this, we explicitly remove all categories
+  # from the list of related links, and only then record the list of related links
+  # to the file.
+  &removeElements($page->{relatedArticles}, $page->{categories});
+
+  &convertGalleryToLink(\$page->{text});
+  &convertImagemapToLink(\$page->{text});
+
+  # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
+  # contain usable text for us.
+  &removeMetadata(\$page->{text});
+
+  $page->{internalLinks} = [];
+  $page->{interwikiLinks} = [];
+
+  &extractWikiLinks(\$page->{text}, $page->{internalLinks}, $page->{interwikiLinks});
+
+  my @internalLinks;
+  &getLinkIds(\@internalLinks, $page->{internalLinks});
+  &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
+
+  if ( ! $dontExtractUrls ) {
+    &extractUrls($page);
+  }
+
+  &postprocessText(\$page->{text}, 1, 1);
+
+  # text length AFTER all transformations
+  $page->{newLength} = length($page->{text});
+
+  &updateStatistics($page->{categories}, \@internalLinks);
+
+  if ($page->{title} =~ /^$categoryNamespace:/) {
+    &updateCategoryHierarchy($page->{id}, $page->{categories});
+    $page->{isCategory} = 1;
+  } else {
+    $page->{isCategory} = 0;
+  }
+
+  if ($page->{title} =~ /^$imageNamespace:/) {
+    $page->{isImage} = 1;
+  } else {
+    $page->{isImage} = 0;
+  }
+
+  my $pageFinishedTime = time;
+
+  LOG->info( sprintf("transforming page took %d seconds (ID %d)", $pageFinishedTime - $page->{startTime}, 
+             $page->{id}) );
+
+  return $page;
 }
 
 sub updateStatistics(\@\@) {
