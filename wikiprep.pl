@@ -41,6 +41,7 @@ use FindBin;
 use lib "$FindBin::Bin";
 
 use Wikiprep::Config;
+use Wikiprep::Namespace qw( isKnownNamespace loadNamespaces normalizeNamespace normalizeTitle isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
@@ -113,8 +114,6 @@ Wikiprep::Config::init($configName);
 my $startTime = time;
 
 ##### Global variables #####
-
-my %namespaces;
 
 # Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
 #my %id2title;
@@ -214,58 +213,6 @@ LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 
 
 ##### Subroutines #####
 
-sub normalizeTitle(\$) {
-  my ($refToStr) = @_;
-
-  # remove leading whitespace and underscores
-  $$refToStr =~ s/^[\s_]+//;
-  # remove trailing whitespace and underscores
-  $$refToStr =~ s/[\s_]+$//;
-  # replace sequences of whitespace and underscore chars with a single space
-  $$refToStr =~ s/[\s_]+/ /g;
-
-  if ($$refToStr =~ /^([^:]*):(\s*)(\S(?:.*))/) {
-    my $prefix = $1;
-    my $optionalWhitespace = $2;
-    my $rest = $3;
-
-    my $namespaceCandidate = $prefix;
-    &normalizeNamespace(\$namespaceCandidate); # this must be done before the call to 'isKnownNamespace'
-    if ( &isKnownNamespace(\$namespaceCandidate) ) {
-      # If the prefix designates a known namespace, then it might follow by optional
-      # whitespace that should be removed to get the canonical page name
-      # (e.g., "Category:  Births" should become "Category:Births").
-      $$refToStr = $namespaceCandidate . ":" . ucfirst($rest);
-    } else {
-      # No namespace, just capitalize first letter.
-      # If the part before the colon is not a known namespace, then we must not remove the space
-      # after the colon (if any), e.g., "3001: The_Final_Odyssey" != "3001:The_Final_Odyssey".
-      # However, to get the canonical page name we must contract multiple spaces into one,
-      # because "3001:   The_Final_Odyssey" != "3001: The_Final_Odyssey".
-      $$refToStr = ucfirst($prefix) . ":" .
-                   (length($optionalWhitespace) > 0 ? " " : "") . $rest;
-    }
-  } else {
-    # no namespace, just capitalize first letter
-    $$refToStr = ucfirst($$refToStr);
-  }
-}
-
-sub normalizeNamespace(\$) {
-  my ($refToStr) = @_;
-
-  $$refToStr = ucfirst( lc($$refToStr) );
-}
-
-# Checks if the prefix of the page name before the colon is actually one of the
-# 16+2+2 namespaces defined in the XML file.
-# Assumption: the argument was already normalized using 'normalizeNamespace'
-sub isKnownNamespace(\$) {
-  my ($refToStr) = @_;
-
-  defined( $namespaces{$$refToStr} );  # return value
-}
-
 sub isDisambiguation($) {
   my ($page) = @_;
 
@@ -323,98 +270,6 @@ sub isRedirect($) {
   return undef;
 }
 
-sub isNamespaceOkForLocalPages(\$) {
-  my ($refToNamespace) = @_;
-
-  # We are only interested in image links, so main namespace is not OK.
-  my $result = 0;
-
-  if ($$refToNamespace ne '') {
-    if ( &isKnownNamespace($refToNamespace) ) {
-      $result = defined( $Wikiprep::Config::okNamespacesForLocalPages{$$refToNamespace} );
-    } else {
-      # A simple way to recognize most namespaces that link to translated articles. A better 
-      # way would be to store these namespaces in a hash.
-      if ( length($$refToNamespace) < 4 ) {
-        $result = 0
-      }
-
-      # the prefix before ":" in the page title is not a known namespace,
-      # therefore, the page belongs to the main namespace and is OK
-    }
-  }
-
-  $result; # return value
-}
-
-sub isNamespaceOkForPrescanning($) {
-  my ($page) = @_;
-
-  &isNamespaceOk($page, \%Wikiprep::Config::okNamespacesForPrescanning);
-}
-
-sub isNamespaceOkForTransforming($) {
-  my ($page) = @_;
-
-  &isNamespaceOk($page, \%Wikiprep::Config::okNamespacesForTransforming);
-}
-
-sub isNamespaceOk($\%) {
-  my ($page, $refToNamespaceHash) = @_;
-
-  my $result = 1;
-
-  # main namespace is OK, so we only check pages that belong to other namespaces
-
-  if ($page->namespace ne '') {
-    my $namespace = $page->namespace;
-    &normalizeNamespace(\$namespace);
-    if ( &isKnownNamespace(\$namespace) ) {
-      $result = defined( $$refToNamespaceHash{$namespace} );
-    } else {
-      # the prefix before ":" in the page title is not a known namespace,
-      # therefore, the page belongs to the main namespace and is OK
-    }
-  }
-
-  $result; # return value
-}
-
-sub resolveNamespaceAliases($) {
-  my ($targetId) = @_;
-
-  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
-      $targetId =~ s/^\s*$key:/$value:/mig;
-  }
-
-  return $targetId;  
-}
-
-sub isTitleOkForLocalPages(\$) {
-  my ($refToPageTitle) = @_;
-
-  my $namespaceOk = 0;
-
-  if ($$refToPageTitle =~ /^:.*$/) {
-    # Leading colon by itself implies main namespace
-    $namespaceOk = 0;
-
-  # Note that there must be at least one non-space character following the namespace specification
-  # for the page title to be valid. If there is none, then the link is considered to point to a
-  # page in the main namespace.
-
-  } elsif ($$refToPageTitle =~ /^([^:]*):\s*\S/) {
-    # colon found but not in the first position - check if it designates a known namespace
-    my $prefix = $1;
-    &normalizeNamespace(\$prefix);
-    $namespaceOk = &isNamespaceOkForLocalPages(\$prefix);
-  }
-
-  # The case when the page title does not contain a colon at all also falls here.
-
-  return $namespaceOk
-}
-
 sub writeStatistics() {
   my $statCategoriesFile = "$filePath/$fileBasename.stat.categories";
   my $statIncomingLinksFile = "$filePath/$fileBasename.stat.inlinks";
@@ -466,24 +321,6 @@ sub writeCategoryHierarchy() {
   }
 
   close(CAT_HIER);
-}
-
-sub loadNamespaces() {
-  my ($pages) = @_;
-
-  # load namespaces
-  my $refNamespaces = $pages->namespaces;
-
-  # namespace names are case-insensitive, so we force them
-  # to canonical form to facilitate future comparisons
-  my $ns;
-  foreach $ns (@$refNamespaces) {
-    my @namespaceData = @$ns;
-    my $namespaceId   = $namespaceData[0];
-    my $namespaceName = $namespaceData[1];
-    &normalizeNamespace(\$namespaceName);
-    $namespaces{$namespaceName} = $namespaceId;
-  }
 }
 
 # build id <-> title mappings and redirection table,
@@ -557,7 +394,7 @@ sub prescan() {
       next;
     }
 
-    if ( ! &isNamespaceOkForPrescanning($page) ) {
+    if ( ! &isNamespaceOk($page->namespace, \%Wikiprep::Config::okNamespacesForPrescanning) ) {
       next; # we're only interested in certain namespaces
     }
     # if we get here, then either the page belongs to the main namespace OR
@@ -682,7 +519,7 @@ sub transform() {
       next; # we've already loaded all redirects in the prescanning phase
     }
 
-    if ( ! &isNamespaceOkForTransforming($mwpage) ) {
+    if ( ! &isNamespaceOk( $mwpage->namespace, \%Wikiprep::Config::okNamespacesForTransforming) ) {
       next; # we're only interested in pages from certain namespaces
     }
 
@@ -1380,7 +1217,7 @@ sub collectWikiLink($$$\@\@$) {
   # Bail out if empty link
   return "" unless $link;
 
-  $link = &resolveNamespaceAliases($link);
+  &resolveNamespaceAliases(\$link);
 
   # Alternative text may be available after the pipeline symbol.
   # If the pipeline symbol is only used for masking parts of
@@ -1608,7 +1445,7 @@ sub resolveAndCollectInternalLink(\$) {
   } else {
     # Some cases in this category that obviously won't be resolved to legal ids:
     # - Links to namespaces that we don't currently handle
-    #   (other than those for which 'isNamespaceOK' returns true);
+    #   (other than those for which 'isNamespaceOk' returns true);
     #   media and sound files fall in this category
     # - Links to other languages, e.g., [[de:...]]
     # - Links to other Wiki projects, e.g., [[Wiktionary:...]]
