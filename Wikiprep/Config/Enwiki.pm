@@ -111,4 +111,20 @@ $disambigTemplates = qr/disambiguation|
 
 $disambigTitle = qr/\(disambiguation\)/ix;
 
+# Interwiki links are links to another wiki (e. g. from Wikipedia article to a MemoryAlpha article)
+# that appear as internal links in the browser. Syntax is similar to MediaWiki namespaces: 
+# for example [[MemoryAlpha:Test]] or [[MemoryAlpha:Category:Test]].
+
+# See http://meta.wikimedia.org/wiki/Interwiki_map for a comprehensive list of possible destinations. 
+
+# Only a few largest wikis are enabled here for performance reasons
+
+$interwikiList = [
+        		"Wookieepedia",
+        		"MemoryAlpha",
+        		"WoWWiki",
+        		"MarvelDatabase",
+        		"DCDatabase",
+          ];
+
 1;

@@ -1,4 +1,6 @@
 use Test::More tests => 1;
-use Wikiprep::utils qw( trimWhitespaceBothSides );
+use Wikiprep::utils qw( encodeXmlChars );
 
-is(&trimWhitespaceBothSides("  hello  "), "hello");
+my $t = "Hello & goodbye, world!";
+&encodeXmlChars(\$t);
+is($t, "Hello &amp; goodbye, world!");

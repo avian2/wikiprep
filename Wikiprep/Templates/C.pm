@@ -1,10 +1,3 @@
-
-package Wikiprep::ctemplates;
-
-use strict;
-use Exporter 'import';
-our @EXPORT_OK = qw( splitOnTemplates splitTemplateInvocation );
-
 # This module provides C implementation of two functions
 # (original Perl implementations can be found in templates.pm)
 #
@@ -187,4 +180,4 @@ void splitTemplateInvocation(SV *svi)
 
 END_C
 
-1
+1;
