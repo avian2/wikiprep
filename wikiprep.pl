@@ -39,12 +39,12 @@ use Regexp::Common;
 use FindBin;
 use lib "$FindBin::Bin";
 
+use Wikiprep::Config;
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
 use Wikiprep::languages qw( languageName );
 use Wikiprep::templates qw( templateParameterRecursion parseTemplateInvocation );
-use Wikiprep::lang qw( getLang );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::logger qw( msg );
 use Wikiprep::interwiki qw( parseInterwiki );
@@ -69,7 +69,7 @@ my $logArgs = "";
 my $doCompress = 0;
 my $purePerl = 0;
 
-my $langCode = 'en';
+my $configName = 'enwiki';
 my $outputFormat = "legacy";
 
 GetOptions('f=s' => \$file,
@@ -78,7 +78,7 @@ GetOptions('f=s' => \$file,
            'nourls' => \$dontExtractUrls,
            'log=s' => \$logArgs,
            'compress' => \$doCompress,
-           'lang=s' => \$langCode,
+           'config=s' => \$configName,
            'format=s' => \$outputFormat,
            'pureperl=s' => \$purePerl);
 
@@ -108,47 +108,9 @@ if ($purePerl) {
   require 'Wikiprep/ctemplates.pm';
   Wikiprep::ctemplates->import( qw( splitOnTemplates splitTemplateInvocation ) );
 }
+Wikiprep::Config::init($configName);
 
 my $startTime = time;
-
-my $refToLangDB = &getLang( $langCode );
-my %langDB = %$refToLangDB;
-
-##### Global definitions #####
-
-my %numMonthToNumDays = ( 1 => 31, 
-                          2 => 29, 
-                          3 => 31, 
-                          4 => 30, 
-                          5 => 31, 
-                          6 => 30, 
-                          7 => 31, 
-                          8 => 31, 
-                          9 => 30, 
-                          10 => 31, 
-                          11 => 30, 
-                          12 => 31);
-
-# Create a mapping from month name to the number of days in that month needed by normalizeDates()
-my %monthToNumDays;
-for my $num ( keys(%numMonthToNumDays) ) {
-  $monthToNumDays{ $langDB{'numberToMonth'}->{$num} } = $numMonthToNumDays{$num};
-}
-
-my $maxTemplateRecursionLevels = 10;
-my $maxTableRecursionLevels = 5;
-
-# We use a different (and faster) way of recursively including templates than MediaWiki. In most
-# cases this produces satisfactory results, however certain templates break our parser by resolving
-# to meta characters like {{ and |. These templates are used as hacks around escaping issues in 
-# Mediawiki and mostly concern wiki table syntax. Since we ignore content in tables we can safely
-# ignore these templates.
-#
-# See http://meta.wikimedia.org/wiki/Template:!
-#my %overrideTemplates = ('Template:!' => ' ', 'Template:!!' => ' ', 'Template:!-' => ' ',
-#                         'Template:-!' => ' ');
-
-my %overrideTemplates = ();
 
 ##### Global variables #####
 
@@ -283,8 +245,8 @@ sub isDisambiguation($) {
 
   my $result = 0;
 
-  my $disambigTemplates = $langDB{'disambigTemplates'};
-  my $disambigTitle = $langDB{'disambigTitle'};
+  my $disambigTemplates = $Wikiprep::Config::disambigTemplates;
+  my $disambigTitle = $Wikiprep::Config::disambigTitle;
 
   if ( ${$page->text} =~ /\{\{\s*$disambigTemplates\s*(?:\|.*)?\s*\}\}/ix ) {
     $result = 1;
@@ -343,7 +305,7 @@ sub isNamespaceOkForLocalPages(\$) {
 
   if ($$refToNamespace ne '') {
     if ( &isKnownNamespace($refToNamespace) ) {
-      $result = defined( $langDB{'okNamespacesForLocalPages'}->{$$refToNamespace} );
+      $result = defined( $Wikiprep::Config::okNamespacesForLocalPages{$$refToNamespace} );
     } else {
       # A simple way to recognize most namespaces that link to translated articles. A better 
       # way would be to store these namespaces in a hash.
@@ -362,13 +324,13 @@ sub isNamespaceOkForLocalPages(\$) {
 sub isNamespaceOkForPrescanning($) {
   my ($page) = @_;
 
-  &isNamespaceOk($page, $langDB{'okNamespacesForPrescanning'});
+  &isNamespaceOk($page, \%Wikiprep::Config::okNamespacesForPrescanning);
 }
 
 sub isNamespaceOkForTransforming($) {
   my ($page) = @_;
 
-  &isNamespaceOk($page, $langDB{'okNamespacesForTransforming'});
+  &isNamespaceOk($page, \%Wikiprep::Config::okNamespacesForTransforming);
 }
 
 sub isNamespaceOk($\%) {
@@ -395,7 +357,7 @@ sub isNamespaceOk($\%) {
 sub resolveNamespaceAliases($) {
   my ($targetId) = @_;
 
-  while(my ($key, $value) = each(%{$langDB{'namespaceAliases'}})) {
+  while(my ($key, $value) = each(%Wikiprep::Config::namespaceAliases)) {
       $targetId =~ s/^\s*$key:/$value:/mig;
   }
 
@@ -583,7 +545,7 @@ sub prescan() {
     $idexists{$id} = 'x';
     $title2id{$title} = $id;
 
-    my $templateNamespace = $langDB{'templateNamespace'};
+    my $templateNamespace = $Wikiprep::Config::templateNamespace;
     if ($title =~ /^$templateNamespace:/) {
       my $text = ${$page->text};
 
@@ -657,8 +619,8 @@ sub transform() {
   }
   my $mwpages = Parse::MediaWikiDump::Pages->new(\*INF);
 
-  my $categoryNamespace = $langDB{'categoryNamespace'};
-  my $imageNamespace = $langDB{'imageNamespace'};
+  my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
+  my $imageNamespace = $Wikiprep::Config::imageNamespace;
 
   my $processedPageCount = 0;
   my $processedByteCount = 0;
@@ -773,8 +735,8 @@ sub transform() {
     # to the file.
     &removeElements($page->{relatedArticles}, $page->{categories});
 
-    &convertGalleryToLink(\$page->{text}, $refToLangDB);
-    &convertImagemapToLink(\$page->{text}, $refToLangDB);
+    &convertGalleryToLink(\$page->{text});
+    &convertImagemapToLink(\$page->{text});
 
     # Remove <div class="metadata"> ... </div> and similar CSS classes that do not
     # contain usable text for us.
@@ -926,7 +888,7 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
 sub includeTemplates(\%$$) {
   my ($page, $text, $templateRecursionLevel) = @_;
 
-  if( $templateRecursionLevel > $maxTemplateRecursionLevels ) {
+  if( $templateRecursionLevel > $Wikiprep::Config::maxTemplateRecursionLevels ) {
 
     # Ignore this template if limit is reached 
 
@@ -1036,7 +998,7 @@ sub instantiateTemplate($\%$) {
   if ( not defined($result) ) {
     &computeFullyQualifiedTemplateTitle(\$templateTitle);
 
-    my $overrideResult = $overrideTemplates{$templateTitle};
+    my $overrideResult = $Wikiprep::Config::overrideTemplates{$templateTitle};
     if(defined $overrideResult) {
       &msg("WARNING", "Overriding template $templateTitle");
       return $overrideResult;
@@ -1290,7 +1252,7 @@ sub computeFullyQualifiedTemplateTitle(\$) {
     # The title of the page being included is NOT in the main namespace and lacks
     # any other explicit designation of the namespace - therefore, it is resolved
     # to the Template namespace (that's the default for the template inclusion mechanism).
-    $$refToTemplateTitle = $langDB{'templateNamespace'} . ":" . $$refToTemplateTitle;
+    $$refToTemplateTitle = $Wikiprep::Config::templateNamespace . ":" . $$refToTemplateTitle;
   }
 }
 
@@ -1301,7 +1263,7 @@ sub extractCategories(\%) {
   # The first parameter to 'collectCategory' is passed by value rather than by reference,
   # because it might be dangerous to pass a reference to $1 in case it might get modified
   # (with unclear consequences).
-  my $categoryNamespace = $langDB{'categoryNamespace'};
+  my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
 
   $page->{categories} = [];
 
@@ -1412,7 +1374,7 @@ sub collectWikiLink($$$\@\@$) {
   my $interwikiRecognized = 0;
   my $interwikiTitle;
 
-  my $imageNamespace = $langDB{'imageNamespace'};
+  my $imageNamespace = $Wikiprep::Config::imageNamespace;
   my $isImageLink = ($link =~ /^$imageNamespace:/);
 
   # "-1" parameter permits empty trailing fields (important for pipeline masking)
@@ -1657,8 +1619,8 @@ sub normalizeDates(\$\$\$\@$) {
     my $day = $1;
     my $month = ucfirst(lc($2));
 
-    if ( defined($monthToNumDays{$month}) &&
-         1 <= $day && $day <= $monthToNumDays{$month} ) {
+    if ( defined($Wikiprep::Config::monthToNumDays{$month}) &&
+         1 <= $day && $day <= $Wikiprep::Config::monthToNumDays{$month} ) {
       $dateRecognized = 1;
 
       $$refToLink = "$month $day";
@@ -1677,9 +1639,9 @@ sub normalizeDates(\$\$\$\@$) {
     my $monthNum = int($1);
     my $day = $2;
 
-    if ( defined($langDB{'numberToMonth'}->{$monthNum}) ) {
-      my $month = $langDB{'numberToMonth'}->{$monthNum};
-      if (1 <= $day && $day <= $monthToNumDays{$month}) {
+    if ( defined($Wikiprep::Config::numberToMonth{$monthNum}) ) {
+      my $month = $Wikiprep::Config::numberToMonth{$monthNum};
+      if (1 <= $day && $day <= $Wikiprep::Config::monthToNumDays{$month}) {
         $dateRecognized = 1;
 
         $$refToLink = "$month $day";
@@ -1703,9 +1665,9 @@ sub normalizeDates(\$\$\$\@$) {
     my $monthNum = int($2);
     my $day = $3;
 
-    if ( defined($langDB{'numberToMonth'}->{$monthNum}) ) {
-      my $month = $langDB{'numberToMonth'}->{$monthNum};
-      if (1 <= $day && $day <= $monthToNumDays{$month}) {
+    if ( defined($Wikiprep::Config::numberToMonth{$monthNum}) ) {
+      my $month = $Wikiprep::Config::numberToMonth{$monthNum};
+      if (1 <= $day && $day <= $Wikiprep::Config::monthToNumDays{$month}) {
         $dateRecognized = 1;
 
         $$refToLink = "$month $day";
@@ -2078,7 +2040,7 @@ BEGIN {
     # We only resolve nesting {| ... |} style tables, which are often nested in infoboxes and similar
     # templates.
 
-    while ( ($tableRecursionLevels < $maxTableRecursionLevels) &&
+    while ( ($tableRecursionLevels < $Wikiprep::Config::maxTableRecursionLevels) &&
             $$refToText =~ s/$tableSequence2/\n/g ) {
     
       $tableRecursionLevels++;
@@ -2149,7 +2111,7 @@ sub identifyRelatedArticles(\%) {
     # and not just anywhere in the line. Otherwise, we would collect as related
     # those links that just happen to occur in the same line with an unrelated
     # string that represents a standalone designator.
-    my $relatedRegex = $langDB{'relatedWording_Standalone'};
+    my $relatedRegex = $Wikiprep::Config::relatedWording_Standalone;
     if ($line =~ /^(?:.{0,5})($relatedRegex.*)$/) {
       my $str = $1; # We extract links from the rest of the line
       &msg("DEBUG", "Related(S): $id => $str");
@@ -2159,7 +2121,7 @@ sub identifyRelatedArticles(\%) {
 
   # Inlined (in parentheses)
   foreach $line (@text) {
-    my $relatedRegex = $langDB{'relatedWording_Inline'};
+    my $relatedRegex = $Wikiprep::Config::relatedWording_Inline;
     while ($line =~ /\((?:\s*)($relatedRegex.*?)\)/g) {
       my $str = $1;
       &msg("DEBUG", "Related(I): $id => $str");
@@ -2184,7 +2146,7 @@ sub identifyRelatedArticles(\%) {
     } else { # we haven't yet found the related section
       if ($line =~ /==(.*?)==/) { # found some section header - let's check it
         my $sectionHeader = $1;
-        my $relatedRegex = $langDB{'relatedWording_Section'};
+        my $relatedRegex = $Wikiprep::Config::relatedWording_Section;
         if ($sectionHeader =~ /$relatedRegex/) {
           $relatedSectionFound = 1;
           next; # proceed to the next line
