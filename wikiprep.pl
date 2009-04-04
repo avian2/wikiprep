@@ -42,6 +42,7 @@ use lib "$FindBin::Bin";
 
 use Wikiprep::Config;
 use Wikiprep::Namespace qw( isKnownNamespace loadNamespaces normalizeNamespace normalizeTitle isNamespaceOk resolveNamespaceAliases isTitleOkForLocalPages );
+use Wikiprep::Link qw( %title2id %redir resolveLink resolvePageLink parseRedirect );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 use Wikiprep::nowiki qw( replaceTags extractTags );
 use Wikiprep::revision qw( writeVersion );
@@ -115,22 +116,15 @@ my $startTime = time;
 
 ##### Global variables #####
 
-# Replaced global %id2title with %idexists in prescan() to reduce memory footprint.
-#my %id2title;
-my %title2id;
-my %redir;
-my %templates;          # template bodies for insertion
+our %templates;         # template bodies for insertion
 my %catHierarchy;       # each category is associated with a list of its immediate descendants
 my %statCategories;     # number of pages classified under each category
 my %statIncomingLinks;  # number of links incoming to each page
 
-# Counter for IDs assigned to nonexistent pages.
-my $localIDCounter = 1;
-
 my ($fileBasename, $filePath, $fileSuffix) = fileparse($file, ".xml", ".xml.gz", ".xml.bz2");
 $fileSuffix =~ s/\.gz$|\.bz2//;
 
-my $out;
+our $out;
 if( lc($outputFormat) eq 'legacy' ) {
   $out = Wikiprep::Output::Legacy->new("$filePath/$fileBasename", $file, COMPRESS => $doCompress);
 } elsif( lc($outputFormat) eq 'composite' ) {
@@ -181,13 +175,10 @@ binmode(STDERR,  ':utf8');
 
 &prescan();
 
-$out->lastLocalID($localIDCounter);
+#$out->lastLocalID($localIDCounter);
 
-my $numTitles = scalar( keys(%title2id) );
+&Wikiprep::Link::prescanFinished();
 
-LOG->notice("Loaded $numTitles titles");
-my $numRedirects = scalar( keys(%redir) );
-LOG->notice("Loaded $numRedirects redirects");
 my $numTemplates = scalar( keys(%templates) );
 LOG->notice("Loaded $numTemplates templates");
 
@@ -228,46 +219,6 @@ sub isDisambiguation($) {
   }
 
   return $result;
-}
-
-# The correct form to create a redirect is #REDIRECT [[ link ]],
-# and function 'Parse::MediaWikiDump::page->redirect' only supports this form.
-# However, it seems that Wikipedia can also tolerate a variety of other forms, such as
-# REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION, then an optional ":", optional "to" or optional "=".
-# Therefore, we use our own function to handle these cases as well.
-# If the page is a redirect, the function returns the title of the target page;
-# otherwise, it returns 'undef'.
-sub isRedirect($) {
-  my ($page) = @_;
-
-  # quick check
-  return undef if ( ${$page->text} !~ /^#REDIRECT/i );
-
-  if ( ${$page->text} =~ m{^\#REDIRECT         # Redirect must start with "#REDIRECT"
-                                               #   (the backslash is needed before "#" here, because
-                                               #    "#" has special meaning with /x modifier)
-                           (?:S|ED|ION)?       # The word may be in any of these forms,
-                                               #   i.e., REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION
-                           (?:\s*)             # optional whitespace
-                           (?: :|\sTO|=)?      # optional colon, "TO" or "="
-                                               #   (in case of "TO", we expect a whitespace before it,
-                                               #    so that it's not glued to the preceding word)
-                           (?:\s*)             # optional whitespace
-                           \[\[([^\]]*)\]\]    # the link itself
-                          }ix ) {              # matching is case-insensitive, hence /i
-    my $target = $1;
-
-    if ($target =~ /^(.*)\#(?:.*)$/) {
-      # The link contains an anchor. Anchors are not allowed in REDIRECT pages, and therefore
-      # we adjust the link to point to the page as a whole (that's how Wikipedia works).
-      $target = $1;
-    }
-
-    return $target;
-  }
-
-  # OK, it's probably either a malformed redirect link, or something else
-  return undef;
 }
 
 sub writeStatistics() {
@@ -343,69 +294,29 @@ sub prescan() {
   
   my %idexists;
 
-  my $page;
-
-  while (defined($page = $pages->page)) {
-    my $id = $page->id;
-
-    # During prescan set localIDCounter to be greater than any 
-    # encountered Wikipedia page ID
-    if ($id >= $localIDCounter) {
-      $localIDCounter = $id + 1;
-    }
+  my $mwpage;
+  while (defined($mwpage = $pages->page)) {
+    my $id = $mwpage->id;
 
     $counter++;
 
     $totalPageCount++;
-    $totalByteCount+=length(${$page->text});
+    $totalByteCount+=length(${$mwpage->text});
 
-    my $title = $page->title;
+    my $title = $mwpage->title;
     &normalizeTitle(\$title);
-
-    if (length($title) == 0) {
-      # This is a defense against pages whose title only contains UTF-8 chars that
-      # are reduced to an empty string. Right now I can think of one such case -
-      # <C2><A0> which represents the non-breaking space. In this particular case,
-      # this page is a redirect to [[Non-nreaking space]], but having in the system
-      # a redirect page with an empty title causes numerous problems, so we'll live
-      # happier without it.
-      LOG->debug("skipping page with empty title ($id)");
-      next;
-    }
 
     if ( exists($idexists{$id}) ) {
       LOG->warning("ID $id already encountered before (title $title)");
       next;
     }
-    if ( exists($title2id{$title}) ) {
-      # A page could have been encountered before with a different spelling.
-      # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
-      LOG->warning("title $title already encountered before (ID $id)");
-      next;
-    }
+    $idexists{$id} = 1;
 
-    my $redirect = &isRedirect($page);
-    if (defined($redirect)) {
-      &normalizeTitle(\$redirect);
-      next if (length($redirect) == 0); # again, same precaution here - see comments above
-      $redir{$title} = $redirect;
-
-      # nothing more to do for redirect pages
-      next;
-    }
-
-    if ( ! &isNamespaceOk($page->namespace, \%Wikiprep::Config::okNamespacesForPrescanning) ) {
-      next; # we're only interested in certain namespaces
-    }
-    # if we get here, then either the page belongs to the main namespace OR
-    # it belongs to one of the namespaces we're interested in
-
-    $idexists{$id} = 'x';
-    $title2id{$title} = $id;
+    next unless &Wikiprep::Link::prescan(\$title, \$id, $mwpage);
 
     my $templateNamespace = $Wikiprep::Config::templateNamespace;
     if ($title =~ /^$templateNamespace:/) {
-      my $text = ${$page->text};
+      my $text = ${$mwpage->text};
 
       $out->newTemplate($id, $title);
 
@@ -459,7 +370,6 @@ sub prescan() {
   }
 
   close(INF);
-  my $timeStr = &getTimeAsString();
   LOG->info("prescanning complete ($counter pages)");
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
 }
@@ -515,7 +425,7 @@ sub transform() {
 
     LOG->debug("transforming page (ID $page->{id})");
 
-    if ( defined( &isRedirect($mwpage) ) ) {
+    if ( defined( &parseRedirect($mwpage) ) ) {
       next; # we've already loaded all redirects in the prescanning phase
     }
 
@@ -672,61 +582,6 @@ sub updateCategoryHierarchy($\@) {
       $catHierarchy{$parentCat} = [ @arr ];
     }
   }
-}
-
-# Maps a title into the id, and performs redirection if necessary.
-# Assumption: the argument was already normalized using 'normalizeTitle'
-sub resolveLink(\$) {
-  my ($refToTitle) = @_;
-
-  # safety precaution
-  return undef if (length($$refToTitle) == 0);
-
-  my $targetId; # result
-  my $targetTitle = $$refToTitle;
-
-  if ( exists($redir{$$refToTitle}) ) { # this link is a redirect
-    $targetTitle = $redir{$$refToTitle};
-
-    # check if this is a double redirect
-    if ( exists($redir{$targetTitle}) ) {
-      my $secondRedirect = $redir{$targetTitle};
-      LOG->info("link '$$refToTitle' caused double redirection and was ignored: '" .
-                      "$$refToTitle' -> '$targetTitle' -> '$secondRedirect'");
-      $targetTitle = undef; # double redirects are not allowed and are ignored
-    } else {
-      LOG->debug("link '$$refToTitle' was redirected to '$targetTitle'");
-    }
-  }
-
-  if ( defined($targetTitle) ) {
-    if ( exists($title2id{$targetTitle}) ) {
-      $targetId = $title2id{$targetTitle};
-    } else {
-      # Among links to uninteresting namespaces this also ignores links that point to articles in 
-	    # different language Wikipedias. We aren't interested in these links (yet), plus ignoring them 
-    	# significantly reduces memory usage.
-
-      if ( ! &isTitleOkForLocalPages(\$targetTitle) ) {
-        LOG->info("link '$$refToTitle' was ignored");
-        $targetId = undef;
-      } else {
-      	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
-        $targetId = $localIDCounter;
-        $localIDCounter++;
-
-        $title2id{$targetTitle}=$targetId;
-
-        $out->newLocalID( $targetId, $targetTitle );
-
-        LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
-      }
-    }
-  } else {
-    $targetId = undef;
-  }
-
-  $targetId; # return value
 }
 
 BEGIN {
@@ -1338,7 +1193,7 @@ sub collectWikiLink($$$\@\@$) {
   if (! $dateRecognized and ! $interwikiRecognized ) {
     &normalizeTitle(\$link);
 
-    $targetId = &resolveAndCollectInternalLink(\$link);
+    $targetId = &resolvePageLink(\$link);
 
     # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
     # other languages). While these links are not resolved to valid pages, we also want
@@ -1430,31 +1285,6 @@ sub performPipelineMasking(\$\$) {
   }
 }
 
-# Collects only links that do not point to a template (which besides normal and local pages
-# also have an ID in %title2id hash.
-
-sub resolveAndCollectInternalLink(\$) {
-  my ($refToLink) = @_;
-
-  my $targetId = &resolveLink($refToLink);
-  if ( defined($targetId) ) {
-    if ( exists($templates{$targetId}) ) {
-      LOG->info("ignoring link to a template '$$refToLink'");
-      $targetId = undef;
-    }
-  } else {
-    # Some cases in this category that obviously won't be resolved to legal ids:
-    # - Links to namespaces that we don't currently handle
-    #   (other than those for which 'isNamespaceOk' returns true);
-    #   media and sound files fall in this category
-    # - Links to other languages, e.g., [[de:...]]
-    # - Links to other Wiki projects, e.g., [[Wiktionary:...]]
-    LOG->info("unknown link '$$refToLink'");
-  }
-
-  $targetId;  # return value
-}
-
 # Dates can appear in several formats
 # 1) [[July 20]], [[1969]]
 # 2) [[20 July]] [[1969]]
@@ -1481,7 +1311,7 @@ sub normalizeDates(\$\$\$\@$) {
       $$refToLink = "$month $day";
       $$refToResultText = "$month $day";
 
-      my $targetId = &resolveAndCollectInternalLink($refToLink);
+      my $targetId = &resolvePageLink($refToLink);
 
       $$refToTargetId = $targetId;
       push(@$refToAnchorTextArray, { targetId     => $targetId, 
@@ -1504,7 +1334,7 @@ sub normalizeDates(\$\$\$\@$) {
         # from the day that we're creating
         $$refToResultText = " $month $day";
 
-        my $targetId = &resolveAndCollectInternalLink($refToLink);
+        my $targetId = &resolvePageLink($refToLink);
         $$refToTargetId = $targetId; 
         push(@$refToAnchorTextArray, { targetId     => $targetId, 
                                        anchorText   => $$refToResultText,
@@ -1532,14 +1362,14 @@ sub normalizeDates(\$\$\$\@$) {
         my $targetId;
 
         # collect the link for the day
-        $targetId = &resolveAndCollectInternalLink($refToLink);
+        $targetId = &resolvePageLink($refToLink);
         $$refToTargetId = $targetId; 
         push(@$refToAnchorTextArray, { targetId     => $targetId, 
                                        anchorText   => $$refToLink,
                                        linkLocation => $linkLocation } );
 
         # collect the link for the year
-        $targetId = &resolveAndCollectInternalLink(\$year);
+        $targetId = &resolvePageLink(\$year);
         $$refToTargetId = $targetId; 
         push(@$refToAnchorTextArray, { targetId     => $targetId, 
                                        anchorText   => $year,
@@ -1932,11 +1762,6 @@ sub removeElements(\@\@) {
 
   # overwrite the original array with the new one
   @$refToArray = @result;
-}
-
-sub getTimeAsString() {
-  my $tm = localtime();
-  my $result = sprintf("%02d:%02d:%02d", $tm->hour, $tm->min, $tm->sec);
 }
 
 # There are 3 kinds of related links that we look for:
