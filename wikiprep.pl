@@ -56,6 +56,7 @@ my $optFile;
 my $optDontExtractUrls;
 my $optCompress;
 our $optPurePerl;
+my $optParallel;
 
 my $optConfigName = "enwiki";
 my $optOutputFormat = "legacy";
@@ -92,7 +93,8 @@ sub parseOptions {
              'compress'   => \$optCompress,
              'config=s'   => \$optConfigName,
              'format=s'   => \$optOutputFormat,
-             'pureperl=s' => \$optPurePerl );
+             'pureperl=s' => \$optPurePerl,
+             'parallel'   => \$optParallel );
 
 }
 
@@ -285,7 +287,14 @@ sub transform() {
     }
   };
 
-  for my $page (&iterate_as_array( \&transformOne, $pageIter )) {
+  my $iter;
+  if( $optParallel ) {
+    $iter = iterate(\&transformOne, $pageIter);
+  } else {
+    $iter = iterate( { workers => 0 }, \&transformOne, $pageIter);
+  }
+
+  while( my ($index, $page) = $iter->() ) {
 
     $processedPageCount++;
     $processedByteCount += $page->{orgLength};
@@ -838,6 +847,10 @@ Available options:
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
   -format FMT    Use output format FMT (default is legacy).
+  -parallel      Use parallel processing. This option will split 
+                 Wikiprep into multiple processes to make use of SMP.
+                 It slows down processing on a single CPU and
+                 makes order of pages in the output unpredictable.
 
 Available logging levels:
 
