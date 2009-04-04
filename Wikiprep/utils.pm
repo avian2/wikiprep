@@ -4,11 +4,13 @@ package Wikiprep::utils;
 
 use strict;
 use Exporter 'import';
+use Hash::Util qw( lock_hash );
 our @EXPORT_OK = qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf removeElements );
 
 use Log::Handler wikiprep => 'LOG';
 
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
+lock_hash(%XmlEntities);
 
 sub encodeXmlChars(\$) {
   my ($refToStr) = @_;
