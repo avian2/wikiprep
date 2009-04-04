@@ -182,12 +182,10 @@ sub resolveLink(\$) {
     	# significantly reduces memory usage.
 
       if ( &isTitleOkForLocalPages(\$targetTitle) ) {
-        lock %localTitle2id;
 
         if ( exists($localTitle2id{$targetTitle}) ) {
           $targetId = $localTitle2id{$targetTitle};
         } else {
-          lock $nextLocalID;
 
           $targetId = $nextLocalID;
           $nextLocalID++;
