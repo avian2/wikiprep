@@ -172,15 +172,22 @@ sub resolveLink(\$) {
     	# significantly reduces memory usage.
 
       if ( &isTitleOkForLocalPages(\$targetTitle) ) {
-      	# Assign a local ID otherwise and add the nonexistent page to %title2id hash
-        $targetId = $nextLocalID;
-        $nextLocalID++;
+        lock %localTitle2id;
 
-        $title2id{$targetTitle}=$targetId;
+        if ( exists($localTitle2id{$targetTitle}) ) {
+          $targetId = $localTitle2id{$targetTitle};
+        } else {
+          lock $nextLocalID;
 
-        $main::out->newLocalID( $targetId, $targetTitle );
+          $targetId = $nextLocalID;
+          $nextLocalID++;
 
-        LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
+          $localTitle2id{$targetTitle} = $targetId;
+
+          $main::out->newLocalID( $targetId, $targetTitle );
+
+          LOG->debug("link '$$refToTitle' cannot be matched to an known ID, assigning local ID");
+        }
       } else {
         LOG->info("link '$$refToTitle' was ignored");
       }
