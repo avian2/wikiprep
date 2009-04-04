@@ -56,7 +56,7 @@ my $optFile;
 my $optDontExtractUrls;
 my $optCompress;
 our $optPurePerl;
-my $optParallel;
+my $optParallel = 0;
 
 my $optConfigName = "enwiki";
 my $optOutputFormat = "legacy";
@@ -94,7 +94,7 @@ sub parseOptions {
              'config=s'   => \$optConfigName,
              'format=s'   => \$optOutputFormat,
              'pureperl=s' => \$optPurePerl,
-             'parallel'   => \$optParallel );
+             'parallel=i' => \$optParallel );
 
 }
 
@@ -266,7 +266,7 @@ sub prescan() {
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
 }
 
-sub transform() {
+sub transform {
   my $mwpages = Parse::MediaWikiDump::Pages->new(&openFile);
 
   my $processedPageCount = 0;
@@ -287,12 +287,7 @@ sub transform() {
     }
   };
 
-  my $iter;
-  if( $optParallel ) {
-    $iter = iterate(\&transformOne, $pageIter);
-  } else {
-    $iter = iterate( { workers => 0 }, \&transformOne, $pageIter);
-  }
+  my $iter = iterate( { workers => $optParallel }, \&transformOne, $pageIter);
 
   while( my ($index, $page) = $iter->() ) {
 
@@ -847,10 +842,11 @@ Available options:
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
   -format FMT    Use output format FMT (default is legacy).
-  -parallel      Use parallel processing. This option will split 
-                 Wikiprep into multiple processes to make use of SMP.
-                 It slows down processing on a single CPU and
-                 makes order of pages in the output unpredictable.
+  -parallel N    Use parallel worker processes. With this option
+                 Wikiprep can use multiple CPUs in the system to
+                 run faster. It slows down processing on a single 
+                 CPU and makes order of pages in the output 
+                 unpredictable.
 
 Available logging levels:
 
