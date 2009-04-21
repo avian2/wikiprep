@@ -34,9 +34,7 @@ use Getopt::Long;
 use Time::localtime;
 use Parse::MediaWikiDump;
 use Log::Handler wikiprep => 'LOG';
-
 use Parallel::Iterator qw( iterate iterate_as_array );
-use IO::Handle;
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -229,34 +227,9 @@ sub openFile {
   return $fh;
 }
 
-sub prescanIdCheckProcess {
-  my ($idcheck_rdr) = @_;
-
-  my %idexists;
-
-  # Don't execute any END blocks
-  use POSIX '_exit';
-  eval q{END { _exit 0 }};
-
-  # Worker loop
-  while ( defined( my $p = Parallel::Iterator::_get_obj( $idcheck_rdr ) ) ) {
-    my ($id, $title) = @$p;
-
-    if ( exists($idexists{$id}) ) {
-      LOG->warning("ID $id already encountered before (title $title)");
-    } else {
-      $idexists{$id} = undef;
-    }
-  }
-
-  close $idcheck_rdr;
-
-  CORE::exit;
-}
-
 # build id <-> title mappings and redirection table,
 # as well as load templates
-sub prescan {
+sub prescan() {
   my $pages = Parse::MediaWikiDump::Pages->new(&openFile);
 
   my @interwikiNamespaces = keys( %Wikiprep::Config::okNamespacesForInterwikiLinks );
@@ -264,18 +237,7 @@ sub prescan {
 
   my $counter = 0;
   
-  my ($idcheck_wtr, $idcheck_rdr) = map IO::Handle->new, 1..2;
-  pipe $idcheck_rdr, $idcheck_wtr or die "Can't open pipe: $!\n";
-
-  my $pid;
-  if( ! ($pid = fork) ) {
-    # child
-    close $idcheck_wtr;
-    &prescanIdCheckProcess($idcheck_rdr);
-  } else {
-    # parent
-    close $idcheck_rdr;
-  }
+  my %idexists;
 
   my $mwpage;
   while (defined($mwpage = $pages->page)) {
@@ -289,17 +251,16 @@ sub prescan {
     my $title = $mwpage->title;
     &normalizeTitle(\$title);
 
-    Parallel::Iterator::_put_obj( [ $id, $title ], $idcheck_wtr);
+    if ( exists($idexists{$id}) ) {
+      LOG->warning("ID $id already encountered before (title $title)");
+      next;
+    }
+    $idexists{$id} = 1;
 
     next unless &Wikiprep::Link::prescan(\$title, \$id, $mwpage);
 
     &Wikiprep::Templates::prescan(\$title, \$id, $mwpage);
   }
-
-  Parallel::Iterator::_put_obj(undef, $idcheck_wtr);
-
-  close $idcheck_wtr;
-  waitpid $pid, 0;
 
   LOG->info("prescanning complete ($counter pages)");
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
