@@ -244,13 +244,16 @@ sub mainPrescan
 
     $count++;
 
-    my $filesPerSecond = $count / (time - $startTime);
-    my $percentDone = $count * 100.0 / ($#filesToProcess + 1); 
-    my $secondsLeft = ( $#filesToProcess + 1 - $count ) / $filesPerSecond;
-    my $hoursLeft = $secondsLeft / 3600.0;
+    my $elapsed = time - $startTime;
+    if( $elapsed > 5 ) {
+      my $filesPerSecond = $count / $elapsed;
+      my $percentDone = $count * 100.0 / ($#filesToProcess + 1); 
+      my $secondsLeft = ( $#filesToProcess + 1 - $count ) / $filesPerSecond;
+      my $hoursLeft = $secondsLeft / 3600.0;
   
-    printf "At %.1f%% ETA %.1f hours \r", $percentDone, $hoursLeft;
-    STDOUT->flush();
+      printf "At %.1f%% ETA %.1f hours \r", $percentDone, $hoursLeft;
+      STDOUT->flush();
+    }
   }
 
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
