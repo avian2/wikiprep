@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 	FILE **files = malloc(sizeof(*files) * num_split);
 	for(n = 0; n < num_split; n++) {
 		char filename[1024];
-		sprintf(filename, "%s%04d", prefix, n);
+		sprintf(filename, "%s.%04d", prefix, n);
 
 		files[n] = fopen(filename, "w");
 

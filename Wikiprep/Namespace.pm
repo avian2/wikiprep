@@ -8,7 +8,7 @@ use Exporter 'import';
 use Hash::Util qw( lock_hash );
 
 our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle 
-                     loadNamespaces isNamespaceOk isKnownNamespace );
+                     loadNamespaces isNamespaceOk isKnownNamespace %namespaces );
 
 # List of known namespaces defined in the header of the XML file
 my %namespaces;

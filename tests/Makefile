@@ -79,6 +79,7 @@ clean:
 	rm -f *.version
 	rm -f *.gum.xml
 	rm -f *.tmpl.xml
+	rm -f *.redir.db *.title2id.db *.templates.db *.namespaces.db *.count.db
 	rm -rf *.templates
 	rm -rf *.interwiki
 	rm -f *.interwiki.xml

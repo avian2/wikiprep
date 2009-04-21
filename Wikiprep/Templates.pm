@@ -30,13 +30,13 @@ if ($main::purePerl) {
 }
 
 sub prescan {
-  my ($refToTitle, $refToId, $mwpage) = @_;
+  my ($refToTitle, $refToId, $mwpage, $output) = @_;
 
   my $templateNamespace = $Wikiprep::Config::templateNamespace;
   if ($$refToTitle =~ /^$templateNamespace:/) {
     my $text = ${$mwpage->text};
 
-    $main::output->newTemplate($$refToId, $$refToTitle);
+    $output->newTemplate($$refToId, $$refToTitle);
 
     # We're storing template text for future inclusion, therefore,
     # remove all <noinclude> text and keep all <includeonly> text

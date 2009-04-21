@@ -17,3 +17,8 @@
 *.gum.xml
 *.tmpl.xml
 *.interwiki.xml
+*.redir.db
+*.title2id.db
+*.templates.db
+*.namespaces.db
+*.count.db

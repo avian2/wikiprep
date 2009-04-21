@@ -5,146 +5,82 @@ package Wikiprep::Output::Composite;
 use warnings;
 use strict;
 
-use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf );
+use Wikiprep::utils qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf openOutputFile );
 
 use XML::Writer;
 use IO::File;
 
-sub new 
-{
+sub new {
 	my $class = shift;
 
-	my $basepath = shift;
-  my $inputFile = shift;
-  my %params = @_;
+	my ($inputFile, %options) = @_;
 
-  my $unsafe = not $params{DEBUG};
+  my $unsafe = not $options{DEBUG};
+  my $self = {};
 
-  my $gumFile;
-  if( $params{COMPRESS} ) {
-    $gumFile = IO::File->new("| gzip >$basepath.gum.xml.gz");
+  if($options{PRESCAN}) {
+
+    $self->{tmplFile} = openOutputFile($inputFile, ".tmpl.xml", %options, COMPRESS => 0);
+    $self->{tmplWriter} = XML::Writer->new( OUTPUT => $self->{tmplFile}, 
+                                            DATA_MODE => 1, 
+                                            ENCODING => "utf-8",
+                                            UNSAFE => $unsafe );
+    $self->{tmplWriter}->xmlDecl();
+    $self->{tmplWriter}->startTag("templates");
+
+    $self->{redirFile} = openOutputFile($inputFile, ".redir.xml", %options, COMPRESS => 0);
+    $self->{redirWriter} = XML::Writer->new(OUTPUT => $self->{redirFile}, 
+                                            DATA_MODE => 1,
+                                            ENCODING => "utf-8",
+                                            UNSAFE => $unsafe );
+  
+    $self->{redirWriter}->xmlDecl();
+    $self->{redirWriter}->startTag("redirects");
+
   } else {
-    $gumFile = IO::File->new("> $basepath.gum.xml");
+
+    $self->{gumFile} = openOutputFile($inputFile, ".gum.xml", %options);
+    $self->{gumWriter} = XML::Writer->new(OUTPUT => $self->{gumFile}, 
+                                          DATA_MODE => 1, 
+                                          ENCODING => "utf-8", 
+                                          UNSAFE => $unsafe );
+    $self->{gumWriter}->xmlDecl();
+    $self->{gumWriter}->startTag("gum");
+
+    $self->{disambigFile} = openOutputFile($inputFile, ".disambig", %options, COMPRESS => 0);
+
+    print {$self->{disambigFile}} "# Line format: <Disambig page id>  ",
+                                  "<Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
+
+    $self->{anchorFile} = openOutputFile($inputFile, ".anchor_text", %options);
+
+    print {$self->{anchorFile}} "# Line format: <Target page id>  <Source page id>  ",
+                                "<Anchor location within text>  ",
+                                "<Anchor text (up to the end of the line)>\n\n\n";
   }
-  my $gumWriter = XML::Writer->new(OUTPUT => $gumFile, DATA_MODE => 1, ENCODING => "utf-8", 
-                                                                       UNSAFE => $unsafe );
-  $gumWriter->xmlDecl();
-  $gumWriter->startTag("gum");
-
-  my $interwikiFile = IO::File->new("> $basepath.interwiki.xml");
-  my $interwikiWriter = XML::Writer->new(OUTPUT => $interwikiFile, DATA_MODE => 1, ENCODING => "utf-8",
-                                                                           UNSAFE => $unsafe );
-  $interwikiWriter->xmlDecl();
-  $interwikiWriter->startTag("pages");
-
-  my $redirFile = IO::File->new("> $basepath.redir.xml");
-  my $redirWriter = XML::Writer->new(OUTPUT => $redirFile, DATA_MODE => 1, ENCODING => "utf-8",
-                                                                           UNSAFE => $unsafe );
-  $redirWriter->xmlDecl();
-  $redirWriter->startTag("redirects");
-
-  my $tmplFile = IO::File->new("> $basepath.tmpl.xml");
-  my $tmplWriter = XML::Writer->new(OUTPUT => $tmplFile, DATA_MODE => 1, ENCODING => "utf-8",
-                                                                         UNSAFE => $unsafe );
-  $tmplWriter->xmlDecl();
-  $tmplWriter->startTag("templates");
-
-  my $self = { 
-                gumFile    => $gumFile,
-                gumWriter  => $gumWriter,
-
-                interwikiFile    => $interwikiFile,
-                interwikiWriter  => $interwikiWriter,
-
-                redirFile    => $redirFile,
-                redirWriter  => $redirWriter,
-
-                tmplFile    => $tmplFile,
-                tmplWriter  => $tmplWriter,
-             };
-
-  my $disambigFile = "$basepath.disambig";
-  open( $self->{disambigFile}, "> $disambigFile") or 
-    die "Cannot open $disambigFile: $!";
-  binmode($self->{disambigFile}, ':utf8');
-
-  print {$self->{disambigFile}} "# Line format: <Disambig page id>  ",
-                                "<Target page id (or \"undef\")> <Target anchor> ...\n\n\n";
-
-  my $anchorFile = "$basepath.anchor_text";
-  if( $params{COMPRESS} ) {
-    open( $self->{anchorFile}, "| gzip >$anchorFile.gz") or 
-      die "Cannot open to gzip: $anchorFile.gz: $!";
-  } else {
-    open( $self->{anchorFile}, "> $anchorFile") or 
-      die "Cannot open $anchorFile.gz: $!";
-  }
-  binmode($self->{anchorFile}, ':utf8');
-
-  print {$self->{anchorFile}} "# Line format: <Target page id>  <Source page id>  ",
-                              "<Anchor location within text>  ",
-                              "<Anchor text (up to the end of the line)>\n\n\n";
-
-  my $statCategoriesFile = "$basepath.stat.categories";
-  open( $self->{statCategoriesFile}, "> $statCategoriesFile") or
-    die "Cannot open $statCategoriesFile: $!";
-
-  print {$self->{statCategoriesFile}} 
-                  "# Line format: <CategoryId (= page id)>  <Number of pages in this category>\n",
-                  "# Here we count the *pages* that belong to this category, i.e., articles AND\n",
-                  "# sub-categories of this category (but not the articles in the sub-categories).\n",
-                  "\n\n";
-
-  my $statInlinksFile = "$basepath.stat.inlinks";
-  open( $self->{statInlinksFile}, "> $statInlinksFile") or
-    die "Cannot open $statInlinksFile: $!";
-
-  print {$self->{statInlinksFile}} 
-                  "# Line format: <Target page id>  <Number of links to it from other pages>\n\n\n";
-
-  my $catHierarchyFile = "$basepath.stat.inlinks";
-  open( $self->{catHierarchyFile}, "> $catHierarchyFile") or
-    die "Cannot open $catHierarchyFile: $!";
-
-  print {$self->{catHierarchyFile}} 
-                  "# Line format: <Category id>  <List of ids of immediate descendants>\n\n\n";
 
 	bless $self, $class;
 
-	return $self;
+ 	return $self;
 }
 
-sub finish
-{
+sub finish {
   my $self = shift;
 
-  $self->{gumWriter}->endTag();
-  $self->{gumWriter}->end();
-  $self->{gumFile}->close();
+  while( my ($name, $value) = each(%$self) ) {
+    if( $name =~ /Writer$/ ) {
+      $value->endTag;
+      $value->end;
+    }
+  }
 
-  $self->{interwikiWriter}->endTag();
-  $self->{interwikiWriter}->end();
-  $self->{interwikiFile}->close();
-
-  $self->{redirWriter}->endTag();
-  $self->{redirWriter}->end();
-  $self->{redirFile}->close();
-
-  $self->{tmplWriter}->endTag();
-  $self->{tmplWriter}->end();
-  $self->{tmplFile}->close();
-
-  close( $self->{disambigFile} );
-  close( $self->{anchorFile} );
-
-  close( $self->{statCategoriesFile} );
-  close( $self->{statInlinksFile} );
-  close( $self->{catHierarchyFile} );
+  while( my ($name, $value) = each(%$self) ) {
+    $value->close if( $name =~ /File$/ );
+  }
 }
 
 # Save information about redirects into an XML-formatted file.
-sub writeRedirects 
-{
+sub writeRedirects {
   my $self = shift;
   my ($refToRedir, $refToTitle2Id, $refToTemplates) = @_;
 
@@ -188,8 +124,7 @@ sub writeRedirects
   }
 }
 
-sub newTemplate 
-{
+sub newTemplate {
   my $self = shift;
   my ($id, $title) = @_;
 
@@ -201,8 +136,7 @@ sub newTemplate
   $writer->endTag("template");
 }
 
-sub newPage 
-{
+sub newPage {
   my $self = shift;
   my ($page) = @_;
 
@@ -268,47 +202,6 @@ sub newPage
 
   $self->_logDisambig($page);
   $self->_logAnchorText($page);
-}
-
-sub writeStatistics {
-  my $self = shift;
-  my ($refToStatCategories, $refToStatIncomingLinks) = @_;
-
-  for my $cat ( keys(%$refToStatCategories) ) {
-    print {$self->{statCategoriesFile}} "$cat\t$refToStatCategories->{$cat}\n";
-  }
-
-  for my $destination ( keys(%$refToStatIncomingLinks) ) {
-    print {$self->{statInlinksFile}} "$destination\t$refToStatIncomingLinks->{$destination}\n";
-  }
-}
-
-sub writeCategoryHierarchy {
-  my $self = shift;
-  my ($refCatHierarchy) = @_;
-
-  for my $cat ( keys(%$refCatHierarchy) ) {
-    print {$self->{catHierarchyFile}} "$cat\t", join(" ", @{$refCatHierarchy->{$cat}}), "\n";
-  }
-}
-
-sub writeInterwiki
-{
-  my $self = shift;
-  my ($refToInterwiki) = @_;
-
-  my $writer = $self->{interwikiWriter};
-
-  while( my( $namespace, $titleArray ) = each( %$refToInterwiki ) ) {
-
-    $writer->startTag("namespace", name => $namespace);
-
-    for my $title (@$titleArray) {
-      $writer->emptyTag("page", title => $title);
-    }
-
-    $writer->endTag("namespace");
-  }
 }
 
 sub _logDisambig 

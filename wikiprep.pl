@@ -34,7 +34,9 @@ use Getopt::Long;
 use Time::localtime;
 use Parse::MediaWikiDump;
 use Log::Handler wikiprep => 'LOG';
-use Parallel::Iterator qw( iterate iterate_as_array );
+use BerkeleyDB;
+use IO::Handle;
+use IO::Select;
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -43,20 +45,19 @@ use Wikiprep::Config;
 use Wikiprep::Link qw( %title2id %redir resolveLink parseRedirect extractWikiLinks );
 use Wikiprep::Related qw( identifyRelatedArticles );
 use Wikiprep::Disambig qw( isDisambiguation parseDisambig );
-use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk );
-use Wikiprep::Statistics qw( updateStatistics updateCategoryHierarchy 
-                             %statCategories %statIncomingLinks %catHierarchy );
+use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk %namespaces );
+#use Wikiprep::Statistics qw( updateStatistics updateCategoryHierarchy 
+#                             %statCategories %statIncomingLinks %catHierarchy );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
 use Wikiprep::revision qw( getWikiprepRevision getDumpDate getDatabaseName );
 use Wikiprep::css qw( removeMetadata );
-use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements );
+use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements openInputFile );
 
 # Command line options
 my $optFile;
 my $optDontExtractUrls;
 my $optCompress;
 our $optPurePerl;
-my $optParallel = 0;
 
 my $optConfigName = "enwiki";
 my $optOutputFormat = "legacy";
@@ -65,12 +66,15 @@ my $optLogLevel = "notice";
 my $optShowLicense;
 my $optShowVersion;
 
+my $optPrescan;
+my $optTransform;
+
 # Global constants
 my $licenseFile = "COPYING";
 my $VERSION = "3.0";
 
-# Object that takes care of writing output files
-our $output;
+# Class that takes care of writing output files
+my $outputClass;
 
 # Input file
 my $inputFilePath;
@@ -94,17 +98,26 @@ sub parseOptions {
              'config=s'   => \$optConfigName,
              'format=s'   => \$optOutputFormat,
              'pureperl=s' => \$optPurePerl,
-             'parallel=i' => \$optParallel );
+             'prescan'    => \$optPrescan,
+             'transform'  => \$optTransform );
 
+  # Ignore any file part number. We find parts
+  # to process automatically.
+  $optFile =~ s/\.[0-9]+$//;
+
+  if( not $optPrescan and not $optTransform ) {
+    $optPrescan = 1;
+    $optTransform = 1;
+  }
 }
 
 sub loadModules {
   eval { Wikiprep::Config::init($optConfigName) };
   die "Can't load config $optConfigName: $@" if $@;
 
-  my $outputType = sprintf("Wikiprep::Output::%s", ucfirst( lc( $optOutputFormat ) ) );
+  $outputClass = sprintf("Wikiprep::Output::%s", ucfirst( lc( $optOutputFormat ) ) );
 
-  my $outputModule = $outputType;
+  my $outputModule = $outputClass;
   $outputModule =~ s/::/\//g;
   $outputModule .= ".pm";
 
@@ -114,13 +127,30 @@ sub loadModules {
   eval { require $outputModule };
   die "Can't load support for output format $optOutputFormat: $@" if $@;
 
-  $output = $outputType->new( File::Spec->catfile($inputFilePath, $inputFileBase), 
-                              $optFile, 
-                              COMPRESS => $optCompress );
-
   require Wikiprep::Templates; 
   use vars qw( %templates );
   Wikiprep::Templates->import qw( %templates includeTemplates );
+}
+
+sub getFilesToProcess {
+
+  my @filesToProcess;
+
+  if( -f "$optFile.0000" ) {
+    my $n = 0;
+    while(1) {
+      my $filename = sprintf("%s.%04d", $optFile, $n);
+      last unless -f $filename;
+
+      push(@filesToProcess, [ $filename, $n ]);
+
+      $n++;
+    }
+  } elsif( -f $optFile ) {
+    push(@filesToProcess, [ $optFile, undef ] );
+  }
+
+  return @filesToProcess;
 }
 
 sub initLog {
@@ -192,45 +222,121 @@ sub main {
 
   my $startTime = time;
 
-  &prescan();
+  &mainPrescan() if $optPrescan;
 
-  &Wikiprep::Link::prescanFinished();
-  &Wikiprep::Templates::prescanFinished();
-
-  $output->writeRedirects(\%redir, \%title2id, \%templates);
-
-  &transform();
-
-  $output->writeStatistics(\%statCategories, \%statIncomingLinks);
-  $output->writeCategoryHierarchy(\%catHierarchy);
-
-  $output->finish();
+  &mainTransform() if $optTransform;
 
   my $elapsed = time - $startTime;
 
   LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 60) % 60, $elapsed % 60) );
 }
 
-##### Subroutines #####
+sub mainPrescan
+{
+  my @filesToProcess = &getFilesToProcess();
+  LOG->warning("No files to prescan") unless @filesToProcess;
 
-sub openFile {
-  my $fh;
+  my $output = $outputClass->new($optFile, COMPRESS => $optCompress, PRESCAN => 1);
 
-  if ($optFile =~ /\.gz$/) {
-    open($fh, "gzip -dc $optFile|") or die "Cannot open $optFile: $!";
-  } elsif ($optFile =~ /\.bz2$/) {
-    open($fh, "bzip2 -dc $optFile|") or die "Cannot open $optFile: $!";
-  } else {
-    open($fh, "< $optFile") or die "Cannot open $optFile: $!";
+  for my $el (@filesToProcess) {
+    my ($inputFile, $part) = @$el;
+
+    &prescan($inputFile, $output);
   }
 
-  return $fh;
+  LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
+
+  &Wikiprep::Link::prescanFinished();
+  &Wikiprep::Templates::prescanFinished();
+
+  $output->writeRedirects(\%redir, \%title2id, \%templates);
+
+  $output->finish;
+
+  &prescanSave();
+}
+
+sub mainTransform
+{
+  my @filesToProcess = &getFilesToProcess();
+  LOG->warning("No files to transform") unless @filesToProcess;
+
+  my @pipes;
+  my @workers;
+  my $select = IO::Select->new;
+
+  for my $el (@filesToProcess) {
+    my ($inputFile, $part) = @$el;
+
+    my $my_rdr = IO::Handle->new;
+    my $child_wtr = IO::Handle->new;
+    
+    pipe $my_rdr, $child_wtr;
+
+    if(my $pid = fork) {
+      # parent
+      close $child_wtr;
+      push(@workers, $pid);
+      $select->add($my_rdr);
+    } else {
+      #child
+      &prescanLoad();
+      my $output = $outputClass->new($inputFile, COMPRESS => $optCompress, TRANSFORM => 1, PART => $part);
+      &transform($inputFile, $output, $child_wtr);
+      $output->finish;
+      exit(0);
+    }
+  }
+
+  my $processedPageCount = 0;
+  my $processedByteCount = 0;
+
+  open(F, "<", File::Spec->catfile($inputFilePath, $inputFileBase . ".count.db"));
+  my $totalByteCount = <F>;
+  close(F);
+
+  my $startTime = time - 1;
+  my $lastDisplayTime = $startTime;
+
+  while($select->count) {
+    my @rdr = $select->can_read;
+    for my $rdr (@rdr) {
+      my $status = <$rdr>;
+
+      if($status eq "stop\n") {
+        $select->remove($rdr);
+        close $rdr;
+      } else {
+        $processedPageCount++;
+        $processedByteCount += $status;
+  
+        if( time - $lastDisplayTime > 5 ) {
+  
+          $lastDisplayTime = time;
+  
+          my $bytesPerSecond = $processedByteCount / ( $lastDisplayTime - $startTime );
+          my $percentDone = 100.0 * $processedByteCount / $totalByteCount;
+          my $secondsLeft = ( $totalByteCount - $processedByteCount ) / $bytesPerSecond;
+  
+          my $hoursLeft = $secondsLeft / 3600.0;
+  
+          printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
+          STDOUT->flush();
+        }
+      }
+    }
+  }
+
+  for my $pid (@workers) {
+    waitpid($pid, 0);
+  }
 }
 
 # build id <-> title mappings and redirection table,
 # as well as load templates
-sub prescan() {
-  my $pages = Parse::MediaWikiDump::Pages->new(&openFile);
+sub prescan {
+  my ($inputFile, $output) = @_;
+  my $pages = Parse::MediaWikiDump::Pages->new( &openInputFile($inputFile) );
 
   my @interwikiNamespaces = keys( %Wikiprep::Config::okNamespacesForInterwikiLinks );
   &loadNamespaces($pages, \@interwikiNamespaces );
@@ -259,79 +365,55 @@ sub prescan() {
 
     next unless &Wikiprep::Link::prescan(\$title, \$id, $mwpage);
 
-    &Wikiprep::Templates::prescan(\$title, \$id, $mwpage);
+    &Wikiprep::Templates::prescan(\$title, \$id, $mwpage, $output);
   }
 
   LOG->info("prescanning complete ($counter pages)");
-  LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
+}
+
+sub prescanSave {
+  for my $name ("title2id", "redir", "templates", "namespaces") {
+    my %db;
+    my $filename = File::Spec->catfile($inputFilePath, $inputFileBase . ".$name.db");
+    tie(%db, "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_TRUNCATE|DB_CREATE) or die $!;
+    %db = eval("%" . $name);
+    untie(%db);
+  }
+  open(F, ">", File::Spec->catfile($inputFilePath, $inputFileBase . ".count.db"));
+  print F "$totalByteCount";
+  close(F);
+}
+
+sub prescanLoad {
+  for my $name ("title2id", "redir", "templates", "namespaces") {
+    my $filename = File::Spec->catfile($inputFilePath, $inputFileBase . ".$name.db");
+    eval('%' . $name . ' = ()');
+    eval('tie(%' . $name . ', "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_RDONLY) or die $!;');
+  }
 }
 
 sub transform {
-  my $mwpages = Parse::MediaWikiDump::Pages->new(&openFile);
+  my ($inputFile, $output, $report) = @_;
+  my $mwpages = Parse::MediaWikiDump::Pages->new( &openInputFile($inputFile) );
 
-  my $processedPageCount = 0;
-  my $processedByteCount = 0;
+  while( my $mwpage = $mwpages->page ) {
 
-  my $startTime = time - 1;
-  my $lastDisplayTime = $startTime;
+    my $page = transformOne($mwpage);
 
-  my %interwiki;
-  my $readerCounter = 0;
-
-  my $pageIter = sub {
-    my $page = $mwpages->page;
-    if( $page ) {
-      return $readerCounter++, $page;
-    } else {
-      return;
-    }
-  };
-
-  my $iter = iterate( { workers => $optParallel }, \&transformOne, $pageIter);
-
-  while( my ($index, $page) = $iter->() ) {
-
-    $processedPageCount++;
-    $processedByteCount += $page->{orgLength};
-
-    if( time - $lastDisplayTime > 5 ) {
-
-      $lastDisplayTime = time;
-
-      my $bytesPerSecond = $processedByteCount / ( $lastDisplayTime - $startTime );
-      my $percentDone = 100.0 * $processedByteCount / $totalByteCount;
-      my $secondsLeft = ( $totalByteCount - $processedByteCount ) / $bytesPerSecond;
-
-      my $hoursLeft = $secondsLeft / 3600.0;
-
-      printf "At %.1f%% (%.0f bytes/s) ETA %.1f hours \r", $percentDone, $bytesPerSecond, $hoursLeft;
-      STDOUT->flush();
-    }
+    print $report $page->{orgLength}, "\n";
+    $report->flush;
 
     next unless exists $page->{text};
-    
-    &updateStatistics($page);
-    &updateCategoryHierarchy($page) if $page->{isCategory};
 
     $output->newPage($page);
-
-    for my $interwikiPage (@{$page->{interwiki}}) {
-      my ($namespace, $title) = @$interwikiPage;
-      if( exists( $interwiki{$namespace} ) ) {
-        push( @{$interwiki{$namespace}}, $title );
-      } else {
-        $interwiki{$namespace} = [ $title ];
-      }
-    }
-
   }
 
-  print "\n";
-  $output->writeInterwiki(\%interwiki);
+  print $report "stop\n";
+  $report->flush;
 }
 
 sub transformOne {
-  my ($index, $mwpage) = @_;
+  my ($mwpage) = @_;
 
   my $categoryNamespace = $Wikiprep::Config::categoryNamespace;
   my $imageNamespace = $Wikiprep::Config::imageNamespace;
@@ -842,11 +924,10 @@ Available options:
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
   -format FMT    Use output format FMT (default is legacy).
-  -parallel N    Use parallel worker processes. With this option
-                 Wikiprep can use multiple CPUs in the system to
-                 run faster. It slows down processing on a single 
-                 CPU and makes order of pages in the output 
-                 unpredictable.
+
+  -prescan       Prescan the dump.
+  -transform     Transform the dump.
+                 (default is to both prescan and transform).
 
 Available logging levels:
 
