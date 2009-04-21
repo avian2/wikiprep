@@ -211,10 +211,6 @@ sub main {
     exit 1;
   }
 
-  if(! -e $optFile ) {
-    die "Input file '$optFile' does not exist!\n";
-  }
-
   ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($optFile, ".xml", ".xml.gz", ".xml.bz2");
 
   &loadModules;
@@ -238,10 +234,23 @@ sub mainPrescan
 
   my $output = $outputClass->new($optFile, COMPRESS => $optCompress, PRESCAN => 1);
 
+  my $count = 0;
+  my $startTime = time;
+
   for my $el (@filesToProcess) {
     my ($inputFile, $part) = @$el;
 
     &prescan($inputFile, $output);
+
+    $count++;
+
+    my $filesPerSecond = $count / (time - $startTime);
+    my $percentDone = $count * 100.0 / ($#filesToProcess + 1); 
+    my $secondsLeft = ( $#filesToProcess + 1 - $count ) / $filesPerSecond;
+    my $hoursLeft = $secondsLeft / 3600.0;
+  
+    printf "At %.1f%% ETA %.1f hours \r", $percentDone, $hoursLeft;
+    STDOUT->flush();
   }
 
   LOG->notice("total $totalPageCount pages ($totalByteCount bytes)");
@@ -330,6 +339,8 @@ sub mainTransform
   for my $pid (@workers) {
     waitpid($pid, 0);
   }
+
+  print "\n";
 }
 
 # build id <-> title mappings and redirection table,
