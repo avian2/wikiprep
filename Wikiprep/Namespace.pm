@@ -10,6 +10,8 @@ use Hash::Util qw( lock_hash );
 our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle 
                      loadNamespaces isNamespaceOk isKnownNamespace %namespaces );
 
+use Log::Handler wikiprep => 'LOG';
+
 # List of known namespaces defined in the header of the XML file
 my %namespaces;
 
@@ -99,6 +101,8 @@ sub normalizeNamespaceTitle {
 sub loadNamespaces {
   my ($pages, $extraNamespaces) = @_;
 
+  my %new_namespaces;
+
   # namespace names are case-insensitive, so we force them
   # to canonical form to facilitate future comparisons
   if( $pages ) {
@@ -108,17 +112,26 @@ sub loadNamespaces {
       my $name = $ns->[1];
 
       &normalizeNamespace(\$name);
-      $namespaces{$name} = $id;
+      $new_namespaces{$name} = $id;
     }
   }
 
   if( $extraNamespaces ) {
     for my $ns ( @$extraNamespaces ) {
-      $namespaces{$ns} = undef;
+      $new_namespaces{$ns} = undef;
     }
   }
 
-  lock_hash( %namespaces );
+  if( %namespaces ) {
+    while( my ($name, $id) = each(%new_namespaces) ) {
+      unless(exists($namespaces{$name})) {
+        LOG->error("parts of the file have different namespace declarations ($name)");
+      }
+    }
+  } else {
+    %namespaces = %new_namespaces;
+    lock_hash( %namespaces );
+  }
 }
 
 # Namespace checking
