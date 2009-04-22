@@ -69,6 +69,8 @@ my $optShowVersion;
 my $optPrescan;
 my $optTransform;
 
+my $optParallel;
+
 # Global constants
 my $licenseFile = "COPYING";
 my $VERSION = "3.0";
@@ -99,7 +101,8 @@ sub parseOptions {
              'format=s'   => \$optOutputFormat,
              'pureperl=s' => \$optPurePerl,
              'prescan'    => \$optPrescan,
-             'transform'  => \$optTransform );
+             'transform'  => \$optTransform,
+             'parallel'   => \$optParallel);
 
   # Ignore any file part number. We find parts
   # to process automatically.
@@ -218,13 +221,35 @@ sub main {
 
   my $startTime = time;
 
-  &mainPrescan() if $optPrescan;
-
-  &mainTransform() if $optTransform;
+  if( $optPrescan ) {
+    if( $optParallel ) {
+      &mainPrescanParallel();
+    } else {
+      &mainPrescan();
+    }
+  }
+  
+  if( $optTransform ) {
+    if( $optParallel ) {
+      &mainTransformParallel();
+    } else {
+      &mainTransform();
+    }
+  }
 
   my $elapsed = time - $startTime;
 
   LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 60) % 60, $elapsed % 60) );
+}
+
+sub mainPrescanParallel {
+
+  if( my $pid = fork() ) {
+    waitpid($pid, 0);
+  } else {
+    &mainPrescan();
+    exit(0);
+  }
 }
 
 sub mainPrescan
@@ -268,8 +293,31 @@ sub mainPrescan
   &prescanSave();
 }
 
-sub mainTransform
-{
+sub mainTransform {
+
+  my @filesToProcess = &getFilesToProcess();
+  LOG->warning("No files to transform") unless @filesToProcess;
+
+  &prescanLoad();
+  open(F, "<", File::Spec->catfile($inputFilePath, $inputFileBase . ".count.db")) or die $!;
+  my $totalByteCount = <F>;
+  close(F);
+
+  for my $el (@filesToProcess) {
+    my ($inputFile, $part) = @$el;
+
+    my $child_wtr;
+    open($child_wtr, ">/dev/null");
+
+    my $output = $outputClass->new($inputFile, COMPRESS => $optCompress, TRANSFORM => 1, PART => $part);
+    &transform($inputFile, $output, $child_wtr);
+    $output->finish;
+
+    close $child_wtr;
+  }
+}
+
+sub mainTransformParallel {
   my @filesToProcess = &getFilesToProcess();
   LOG->warning("No files to transform") unless @filesToProcess;
 
@@ -292,10 +340,12 @@ sub mainTransform
       $select->add($my_rdr);
     } else {
       #child
+      close $my_rdr;
       &prescanLoad();
       my $output = $outputClass->new($inputFile, COMPRESS => $optCompress, TRANSFORM => 1, PART => $part);
       &transform($inputFile, $output, $child_wtr);
       $output->finish;
+      close $child_wtr;
       exit(0);
     }
   }
@@ -303,7 +353,7 @@ sub mainTransform
   my $processedPageCount = 0;
   my $processedByteCount = 0;
 
-  open(F, "<", File::Spec->catfile($inputFilePath, $inputFileBase . ".count.db"));
+  open(F, "<", File::Spec->catfile($inputFilePath, $inputFileBase . ".count.db")) or die $!;
   my $totalByteCount = <F>;
   close(F);
 
