@@ -13,7 +13,7 @@ our @EXPORT_OK = qw( normalizeTitle normalizeNamespace normalizeNamespaceTitle
 use Log::Handler wikiprep => 'LOG';
 
 # List of known namespaces defined in the header of the XML file
-my %namespaces;
+our %namespaces;
 
 # Title normalization
 # ===========================================================================================================
@@ -118,7 +118,7 @@ sub loadNamespaces {
 
   if( $extraNamespaces ) {
     for my $ns ( @$extraNamespaces ) {
-      $new_namespaces{$ns} = undef;
+      $new_namespaces{$ns} = "null"; # can't set undef here, because BerkeleyDB breaks on it.
     }
   }
 

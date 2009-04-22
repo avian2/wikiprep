@@ -26,6 +26,7 @@
 
 use strict;
 use warnings;
+use encoding 'utf8';
 
 use File::Basename;
 use File::Spec;
@@ -37,6 +38,7 @@ use Log::Handler wikiprep => 'LOG';
 use BerkeleyDB;
 use IO::Handle;
 use IO::Select;
+use Hash::Util qw( unlock_hash );
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -123,9 +125,6 @@ sub loadModules {
   my $outputModule = $outputClass;
   $outputModule =~ s/::/\//g;
   $outputModule .= ".pm";
-
-  binmode(STDOUT,  ':utf8');
-  binmode(STDERR,  ':utf8');
 
   eval { require $outputModule };
   die "Can't load support for output format $optOutputFormat: $@" if $@;
@@ -451,6 +450,7 @@ sub prescanSave {
 sub prescanLoad {
   for my $name ("title2id", "redir", "templates", "namespaces") {
     my $filename = File::Spec->catfile($inputFilePath, $inputFileBase . ".$name.db");
+    eval('unlock_hash %' . $name);
     eval('%' . $name . ' = ()');
     eval('tie(%' . $name . ', "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_RDONLY) or die $!;');
   }
