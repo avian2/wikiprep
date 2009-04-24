@@ -146,7 +146,7 @@ my $paramRegex = qr/\{\{\{                              # Template parameter is 
 sub templateParameterRecursion(\$\%) {
 	my ($refToText, $refToParameterHash) = @_;
 
-  my $parameterRecursionLevels = 0;
+  return unless $$refToText =~ /\{/;
 
   my $substituteParameter = sub {
     my $parameter = $1;
@@ -186,6 +186,9 @@ sub templateParameterRecursion(\$\%) {
 
   # We also require that the body of a parameter does not contain the paramet
   # (three successive opening braces - "\{\{\{"). We use negative lookahead t
+
+  my $parameterRecursionLevels = 0;
+
   while ( ($parameterRecursionLevels < $maxParameterRecursionLevels) &&
            $$refToText =~ s/$paramRegex/$substituteParameter->()/gesx) {
       $parameterRecursionLevels++;
