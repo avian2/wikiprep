@@ -47,11 +47,11 @@ sub normalizeNamespaceTitle {
   # hence we use the /s modifier on matchings.
 
   # remove leading whitespace and underscores
-  $str =~ s/^[ \f\n\r\t\v_]+//s;
+  $str =~ s/^[ \f\n\r\t_]+//s;
   # remove trailing whitespace and underscores
-  $str =~ s/[ \f\n\r\t\v_]+$//s;
+  $str =~ s/[ \f\n\r\t_]+$//s;
   # replace sequences of whitespace and underscore chars with a single space
-  $str =~ s/[ \f\n\r\t\v_]+/ /sg;
+  $str =~ s/[ \f\n\r\t_]+/ /sg;
 
   # There are some special cases when the link may be preceded with a colon in the
   # main namespace.
