@@ -190,6 +190,41 @@ void splitTemplateInvocation(SV *svi)
 	Inline_Stack_Done;
 }
 
+void substituteParameter(SV* svi, SV* params_ref)
+{
+	Inline_Stack_Vars;
+	Inline_Stack_Reset;
+
+	STRLEN input_len;
+	char* input = SvPV(svi, input_len);
+
+	HV* params = (HV*)SvRV(params_ref);
+
+	char* name_end = input;
+	while( *name_end != '\0' && *name_end != '|' ) name_end++;
+
+	if( *name_end == '\0' ) {
+		SV **r = hv_fetch(params, input, input_len, 0);
+		if(r == NULL) {
+			Inline_Stack_Push( sv_2mortal( newSVpv("", 0) ) );
+		} else {
+			Inline_Stack_Push( sv_mortalcopy(*r) );
+		}
+	} else {
+		SV **r = hv_fetch(params, input, name_end - input, 0);
+
+		if(r == NULL) {
+			Inline_Stack_Push( 
+				sv_2mortal( newSVpv(name_end + 1, input_len - (name_end - input) - 1) )
+			);
+		} else {
+			Inline_Stack_Push( sv_mortalcopy(*r) );
+		}
+	}
+
+	Inline_Stack_Done;
+}
+
 END_C
 
 1;

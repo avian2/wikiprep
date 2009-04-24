@@ -1,5 +1,5 @@
 use Data::Dumper;
-use Test::More tests => 109;
+use Test::More tests => 123;
 use encoding 'utf-8';
 
 package C;
@@ -222,3 +222,35 @@ $text = "|";
 is($cresult[0], "");
 is($cresult[1], "");
 compare(\@result, \@cresult);
+
+# ##################################################################################################
+
+my %params;
+
+%params = ();
+is( &C::substituteParameter       ("", \%params), "");
+is( &PurePerl::substituteParameter("", \%params), "");
+
+%params = ();
+is( &C::substituteParameter       ("a", \%params), "");
+is( &PurePerl::substituteParameter("a", \%params), "");
+
+%params = ();
+is( &C::substituteParameter	  ("a|", \%params), "");
+is( &PurePerl::substituteParameter("a|", \%params), "");
+
+%params = ();
+is( &C::substituteParameter       ("|", \%params), "");
+is( &PurePerl::substituteParameter("|", \%params), "");
+
+%params = ();
+is( &C::substituteParameter       ("a|a", \%params), "a");
+is( &PurePerl::substituteParameter("a|a", \%params), "a");
+
+%params = ( a => 'b' );
+is( &C::substituteParameter       ("a|a", \%params), "b");
+is( &PurePerl::substituteParameter("a|a", \%params), "b");
+
+%params = ( a => 'b' );
+is( &C::substituteParameter       (" a|a", \%params), "a");
+is( &PurePerl::substituteParameter(" a|a", \%params), "a");

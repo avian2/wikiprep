@@ -143,46 +143,10 @@ my $paramRegex = qr/\{\{\{                              # Template parameter is 
 # parsing we have to make sure that the default value contains properly balanced 
 # braces.
 
-sub templateParameterRecursion(\$\%) {
+sub templateParameterRecursion {
 	my ($refToText, $refToParameterHash) = @_;
 
   return unless $$refToText =~ /\{/;
-
-  my $substituteParameter = sub {
-    my $parameter = $1;
-
-    if ($parameter =~ /^([^|]*)\|(.*)$/) {
-      # This parameter has a default value
-      # my $paramName = $1;
-      # my $defaultValue = $2;
-
-      if ( exists($$refToParameterHash{$1}) ) {
-        # use parameter value specified in template invocation
-        return $$refToParameterHash{$1};  
-      } else { # use the default value
-        return $2;
-      }
-    } else {
-      # parameter without a default value
-
-      if ( exists($$refToParameterHash{$parameter}) ) {
-        return $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
-      } else {
-        # Parameter not specified in template invocation and does not have a default value -
-        # do not perform substitution and keep the parameter in 3 braces
-        # (these are Wiki rules for templates, see  http://meta.wikimedia.org/wiki/Help:Template ).
-
-        # $result = "{{{$parameter}}}";
-
-        # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
-        # practice we get a lot less noise in the output if we expand them to zero-length strings.
-        return "";
-      }
-    }
-
-    # Surplus parameters - i.e., those assigned values in template invocation but not used
-    # in the template body - are simply ignored.
-  };
 
   # We also require that the body of a parameter does not contain the paramet
   # (three successive opening braces - "\{\{\{"). We use negative lookahead t
@@ -190,7 +154,7 @@ sub templateParameterRecursion(\$\%) {
   my $parameterRecursionLevels = 0;
 
   while ( ($parameterRecursionLevels < $maxParameterRecursionLevels) &&
-           $$refToText =~ s/$paramRegex/$substituteParameter->()/gesx) {
+           $$refToText =~ s/$paramRegex/&substituteParameter($1, $refToParameterHash)/gesx) {
       $parameterRecursionLevels++;
   }
 

@@ -97,4 +97,40 @@ sub splitOnTemplates($) {
   return @retval;
 }
 
+sub substituteParameter {
+  my ($parameter, $refToParameterHash) = @_;
+
+  if ($parameter =~ /^([^|]*)\|(.*)$/) {
+    # This parameter has a default value
+    # my $paramName = $1;
+    # my $defaultValue = $2;
+
+    if ( exists($$refToParameterHash{$1}) ) {
+      # use parameter value specified in template invocation
+      return $$refToParameterHash{$1};  
+    } else { # use the default value
+      return $2;
+    }
+  } else {
+    # parameter without a default value
+
+    if ( exists($$refToParameterHash{$parameter}) ) {
+      return $$refToParameterHash{$parameter};  # use parameter value specifi
+    } else {
+      # Parameter not specified in template invocation and does not have a de
+      # do not perform substitution and keep the parameter in 3 braces
+      # (these are Wiki rules for templates, see  http://meta.wikimedia.org/w
+
+      # $result = "{{{$parameter}}}";
+
+      # MediaWiki syntax indeed says that unspecified parameters should remai
+      # practice we get a lot less noise in the output if we expand them to z
+      return "";
+    }
+  }
+
+  # Surplus parameters - i.e., those assigned values in template invocation b
+  # in the template body - are simply ignored.
+};
+
 1;
