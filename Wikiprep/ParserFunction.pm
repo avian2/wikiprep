@@ -40,8 +40,7 @@ my %parserFunctions = (
                 my ($page, $templateRecursionLevel, $lvalue, $rvalue, $valueIfTrue, $valueIfFalse) = @_;
 
                 if ( defined($rvalue ) ) {
-                  $rvalue = &Wikiprep::Templates::includeTemplates($page, $rvalue, 
-                                                                   $templateRecursionLevel + 1);
+                  &Wikiprep::Templates::includeTemplates($page, \$rvalue, $templateRecursionLevel + 1);
 
                   # lvalue is always defined
                   if ( $lvalue eq $rvalue ) {
@@ -81,8 +80,8 @@ my %parserFunctions = (
               for my $param (@parameterList) {
                 @parts = split(/\s*=\s*/, $param, 2);
                 if( $#parts == 1 ) {
-                  my $lvalue = &Wikiprep::Templates::includeTemplates($page, $parts[0], 
-                                                                      $templateRecursionLevel + 1);
+                  my $lvalue = $parts[0];
+                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1);
                   # Found "="
                   if( $found || $lvalue eq $primary ) {
                     # Found a match, return now
@@ -92,8 +91,8 @@ my %parserFunctions = (
                   } 
                   # else wrong case, continue
                 } elsif( $#parts == 0 ) {
-                  my $lvalue = &Wikiprep::Templates::includeTemplates($page, $parts[0], 
-                                                                      $templateRecursionLevel + 1);
+                  my $lvalue = $parts[0];
+                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1);
                   # Multiple input, single output
                   # If the value matches, set a flag and continue
                   if( $lvalue eq $primary ) {
@@ -133,10 +132,12 @@ sub includeParserFunction(\$\%\%$\$) {
   
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
-    unshift( @$refToRawParameterList, &Wikiprep::Templates::includeTemplates($page, $2, 
-                                                                             $templateRecursionLevel + 1) );
+    my $firstParam = $2;
+    &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1);
 
-    LOG->debug("evaluating parser function #$functionName");
+    unshift( @$refToRawParameterList, $firstParam );
+
+    LOG->debug("evaluating parser function #", $functionName);
 
     my $func = $parserFunctions{$functionName};
 
@@ -162,7 +163,7 @@ sub includeParserFunction(\$\%\%$\$) {
     # http://meta.wikimedia.org/wiki/Help:URL
 
     my $result = $1;
-    LOG->debug("URL encoding string: $result");
+    LOG->debug("URL encoding string: ", $result);
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
 

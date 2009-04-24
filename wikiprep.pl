@@ -420,6 +420,10 @@ sub prescan {
     my $title = $mwpage->title;
     &normalizeTitle(\$title);
 
+    if( $title ne $mwpage->title ) {
+      LOG->warning("Normalization error: '$title' != '", $mwpage->title, "'");
+    }
+
     if ( exists($idexists{$id}) ) {
       LOG->warning("ID $id already encountered before (title $title)");
       next;
@@ -553,7 +557,7 @@ sub transformOne {
   }
 
   $page->{templates} = {};
-  $page->{text} = &includeTemplates($page, $page->{text}, 0);
+  &includeTemplates($page, \$page->{text}, 0);
 
   # This function only examines the contents of '$text', but doesn't change it.
   &identifyRelatedArticles($page);

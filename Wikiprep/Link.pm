@@ -230,7 +230,7 @@ sub extractWikiLinks {
                                                                      $refToCategoryArray)/eg );
 }
 
-sub collectWikiLink($$$\@\@$) {
+sub collectWikiLink {
   my ($prefix, $link, $suffix, $linkLocation, 
       $refToAnchorTextArray, $refToInterwikiArray, $refToCategoryArray) = @_;
 
@@ -247,8 +247,7 @@ sub collectWikiLink($$$\@\@$) {
 
   # Split link text into fields delimited by pipe characters. "-1" parameter to split permits
   # empty trailing fields (important for pipeline masking)
-  my @pipeFields = split(/\|/, $link, -1);
-  my $firstField = shift @pipeFields;
+  my ($firstField, @pipeFields) = split(/\|/, $link, -1);
 
   # The fields before the first pipe character is the link destination.
   my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
@@ -273,7 +272,6 @@ sub collectWikiLink($$$\@\@$) {
     }
     return $prefix . $suffix;
   }
-
 
   # Determine the anchor text. This is the blue underlined text that is seen in the browser 
   # in place of the [[...]] link.
@@ -346,7 +344,7 @@ sub collectWikiLink($$$\@\@$) {
 
     } elsif( $noAltText && $link =~ /:/ ) {
       $anchor = "";
-      LOG->info("Discarding text for link '$link'");
+      LOG->info("Discarding text for link '", $link, "'");
     }
   } else {
     $anchorStruct{targetId} = $targetId;
@@ -359,7 +357,7 @@ sub collectWikiLink($$$\@\@$) {
 
   my $retval;
   if( $targetId ) {
-    $retval = ".pAriD=~$targetId~.$anchor.pArenD."; 
+    $retval = ".pAriD=~" . $targetId . "~." . $anchor . ".pArenD."; 
   } else {
     $retval = $anchor;
   }
