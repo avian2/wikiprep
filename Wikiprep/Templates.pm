@@ -194,7 +194,9 @@ sub templateParameterRecursion(\$\%) {
       $parameterRecursionLevels++;
   }
 
-  return $parameterRecursionLevels >= $maxParameterRecursionLevels;
+  if( $parameterRecursionLevels >= $maxParameterRecursionLevels ) {
+    LOG->info("maximum template parameter recursion level reached");
+  }
 }
 
 }
@@ -264,9 +266,7 @@ sub includeTemplateText(\$\%\%\$$) {
     $$refToResult = $templates{$includedPageId};
 
     # Substitute template parameters
-    if( &templateParameterRecursion($refToResult, $refToParameterHash) ) {
-      LOG->info("maximum template parameter recursion level reached");
-    }
+    &templateParameterRecursion($refToResult, $refToParameterHash);
 
   } else {
     # The page being included cannot be identified - perhaps we skipped it (because currently
