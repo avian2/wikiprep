@@ -399,7 +399,8 @@ sub mainTransformParallel {
 # as well as load templates
 sub prescan {
   my ($inputFile, $output) = @_;
-  my $pages = Parse::MediaWikiDump::Pages->new( &openInputFile($inputFile) );
+  my $fh = &openInputFile($inputFile);
+  my $pages = Parse::MediaWikiDump::Pages->new( $fh );
 
   my @interwikiNamespaces = keys( %Wikiprep::Config::okNamespacesForInterwikiLinks );
   &loadNamespaces($pages, \@interwikiNamespaces );
@@ -436,6 +437,8 @@ sub prescan {
   }
 
   LOG->info("prescanning complete ($counter pages)");
+
+  close($fh);
 }
 
 sub prescanSave {
@@ -462,7 +465,8 @@ sub prescanLoad {
 
 sub transform {
   my ($inputFile, $output, $report) = @_;
-  my $mwpages = Parse::MediaWikiDump::Pages->new( &openInputFile($inputFile) );
+  my $fh = &openInputFile($inputFile);
+  my $mwpages = Parse::MediaWikiDump::Pages->new( $fh );
 
   while( my $mwpage = $mwpages->page ) {
 
@@ -478,6 +482,8 @@ sub transform {
 
   print $report "stop\n";
   $report->flush;
+
+  close($fh);
 }
 
 sub transformOne {
@@ -536,7 +542,7 @@ sub transformOne {
 
   # The check for stub must be done BEFORE any further processing,
   # because stubs indicators are templates, and templates are substituted.
-  if ( $text =~ m/stub}}/i ) {
+  if ( $text =~ /stub\}\}/i ) {
     $page->{isStub} = 1;
   } else {
     $page->{isStub} = 0;
