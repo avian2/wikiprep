@@ -421,10 +421,6 @@ sub prescan {
     my $title = $mwpage->title;
     &normalizeTitle(\$title);
 
-    if( $title ne $mwpage->title ) {
-      LOG->warning("Normalization error: '$title' != '", $mwpage->title, "'");
-    }
-
     if ( exists($idexists{$id}) ) {
       LOG->warning("ID $id already encountered before (title $title)");
       next;

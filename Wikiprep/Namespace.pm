@@ -47,11 +47,11 @@ sub normalizeNamespaceTitle {
   # hence we use the /s modifier on matchings.
 
   # remove leading whitespace and underscores
-  $str =~ s/^[\s_]+//s;
+  $str =~ s/^[ \f\n\r\t\v_]+//s;
   # remove trailing whitespace and underscores
-  $str =~ s/[\s_]+$//s;
+  $str =~ s/[ \f\n\r\t\v_]+$//s;
   # replace sequences of whitespace and underscore chars with a single space
-  $str =~ s/[\s_]+/ /sg;
+  $str =~ s/[ \f\n\r\t\v_]+/ /sg;
 
   # There are some special cases when the link may be preceded with a colon in the
   # main namespace.
@@ -64,12 +64,12 @@ sub normalizeNamespaceTitle {
   # - Linking directly to the description page of an image, e.g., [[:Image:wiki.png]]
   #
   # In all such cases, we strip the leading colon.
-  $str =~ s/^:\s*//s unless $defaultNamespace;
+  $str =~ s/^: *//s unless $defaultNamespace;
   
   # In other namespaces (e.g. Template), the leading colon forces the link to point
   # to the main namespace.
 
-  if ($str =~ /^([^:]*):\s*(\S.*)/s) {
+  if ($str =~ /^([^:]*): *(\S.*)/s) {
     my $namespaceCandidate = $1;
     my $rest = $2;
 
