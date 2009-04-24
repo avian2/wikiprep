@@ -96,45 +96,10 @@ sub prescanFinished {
 
 # Template parameter substitution
 
-sub substituteParameter($\%) {
-  my ($parameter, $refToParameterHash) = @_;
-
-  if ($parameter =~ /^([^|]*)\|(.*)$/) {
-    # This parameter has a default value
-    my $paramName = $1;
-    my $defaultValue = $2;
-
-    if ( defined($$refToParameterHash{$paramName}) ) {
-      return $$refToParameterHash{$paramName};  # use parameter value specified in template invocation
-    } else { # use the default value
-      return $defaultValue;
-    }
-  } else {
-    # parameter without a default value
-
-    if ( defined($$refToParameterHash{$parameter}) ) {
-      return $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
-    } else {
-      # Parameter not specified in template invocation and does not have a default value -
-      # do not perform substitution and keep the parameter in 3 braces
-      # (these are Wiki rules for templates, see  http://meta.wikimedia.org/wiki/Help:Template ).
-
-      # $result = "{{{$parameter}}}";
-
-      # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
-      # practice we get a lot less noise in the output if we expand them to zero-length strings.
-      return "";
-    }
-  }
-
-  # Surplus parameters - i.e., those assigned values in template invocation but not used
-  # in the template body - are simply ignored.
-}
-
 BEGIN {
 
 my $paramRegex = qr/\{\{\{                              # Template parameter is enclosed in three braces
-                                ( [^{}]*                # Parameter name shouldn't contain braces (i.e.
+                                ( [^|{}]*               # Parameter name shouldn't contain braces (i.e.
                                                         # other unexpanded parameters)
                                   (?:
                                     \|                  # Optionally, the default value may be specified
@@ -182,11 +147,47 @@ sub templateParameterRecursion(\$\%) {
 	my ($refToText, $refToParameterHash) = @_;
 
   my $parameterRecursionLevels = 0;
- 
+
+  my $substituteParameter = sub {
+    my $parameter = $1;
+
+    if ($parameter =~ /^([^|]*)\|(.*)$/) {
+      # This parameter has a default value
+      # my $paramName = $1;
+      # my $defaultValue = $2;
+
+      if ( exists($$refToParameterHash{$1}) ) {
+        # use parameter value specified in template invocation
+        return $$refToParameterHash{$1};  
+      } else { # use the default value
+        return $2;
+      }
+    } else {
+      # parameter without a default value
+
+      if ( exists($$refToParameterHash{$parameter}) ) {
+        return $$refToParameterHash{$parameter};  # use parameter value specified in template invocation
+      } else {
+        # Parameter not specified in template invocation and does not have a default value -
+        # do not perform substitution and keep the parameter in 3 braces
+        # (these are Wiki rules for templates, see  http://meta.wikimedia.org/wiki/Help:Template ).
+
+        # $result = "{{{$parameter}}}";
+
+        # MediaWiki syntax indeed says that unspecified parameters should remain unexpanded, however in
+        # practice we get a lot less noise in the output if we expand them to zero-length strings.
+        return "";
+      }
+    }
+
+    # Surplus parameters - i.e., those assigned values in template invocation but not used
+    # in the template body - are simply ignored.
+  };
+
   # We also require that the body of a parameter does not contain the paramet
   # (three successive opening braces - "\{\{\{"). We use negative lookahead t
   while ( ($parameterRecursionLevels < $maxParameterRecursionLevels) &&
-           $$refToText =~ s/$paramRegex/&substituteParameter($1, $refToParameterHash)/gesx) {
+           $$refToText =~ s/$paramRegex/$substituteParameter->()/gesx) {
       $parameterRecursionLevels++;
   }
 

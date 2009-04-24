@@ -210,6 +210,150 @@ my $internalLinkRegex = qr/
 sub extractWikiLinks {
   my ($refToText, $refToAnchorTextArray, $refToInterwikiArray, $refToCategoryArray) = @_;
 
+  my $collectWikiLink = sub {
+    my $prefix = $1;
+    my $link = $2;
+    my $suffix = $3;
+
+    return $prefix . $suffix unless $link;
+
+    my $linkLocation = $-[0];
+
+    # First check if this is a link to a date. Date links are normalized first, so this
+    # function returns a string, that contains the normalized link (e.g. "[[July 4]]).
+    
+    # Since we replace links in a loop in extractWikiLinks(), these will get picked up on
+    # later iterations.
+    if( $link =~ /^\s*\d/ and my $dates = &normalizeDates(\$link) ) {
+      return $prefix . $dates . $suffix;
+    }
+
+    # Split link text into fields delimited by pipe characters. "-1" parameter to split permits
+    # empty trailing fields (important for pipeline masking)
+    my ($firstField, @pipeFields) = split(/\|/, $link, -1);
+
+    # The fields before the first pipe character is the link destination.
+    my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
+
+    return $prefix . $suffix unless $linkTitleSection;
+
+    # The link can contain a section reference after the hash character. If the part of the link 
+    # before the hash is empty, it points to a section on the current page. 
+    my ($linkTitle, $linkSection) = split(/\s*#/, $linkTitleSection, 2);
+
+    my $linkNamespaceTitle = $linkNamespace ? "$linkNamespace:$linkTitle" : $linkTitle;
+
+    # Target page of the link.
+    my $targetId = &resolvePageLink(\$linkNamespaceTitle);
+
+    # If this is a link to category namespace, remove the link completely and 
+    if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::categoryNamespace ) {
+      if( $targetId ) {
+        push(@{$refToCategoryArray}, $targetId) if $refToCategoryArray;
+      } else {
+        LOG->info("unknown category '$linkTitle'");
+      }
+      return $prefix . $suffix;
+    }
+
+    # Determine the anchor text. This is the blue underlined text that is seen in the browser 
+    # in place of the [[...]] link.
+    my $anchor;
+    my $noAltText;
+    my $noGlue;
+    
+    if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::imageNamespace ) {
+      # Image links must be parsed separately, since they can contain multiple pipe delimited
+      # fields that set thumbnail size and style in addition to the anchor string (in this case
+      # the anchor string is the short caption that appears below the thumbnail).
+      $anchor = &parseImageParameters(\@pipeFields);
+      $noGlue = 1;
+    } else {
+      $anchor = pop(@pipeFields);
+      if( not defined $anchor ) {
+        # the link text does not contain the pipeline, so take it as-is
+        $anchor = $link;
+        $noAltText = 1;
+      } elsif( $anchor eq "" and not $linkSection ) {
+        # If the "|" symbol is not followed by some text, then it masks everything before the
+        # first colon as well as any text in parentheses at the end of the link title.
+        # However, pipeline masking is only invoked if the link does not contain a section 
+        # reference, hence the additional condition in the 'if' statement.
+        $anchor = $firstField;
+        $anchor =~ s/^\s*[^:]*:\s*//s;
+        $anchor =~ s/\s*\([^()]*\)\s*$//s;
+      }
+      $anchor = $prefix . $anchor . $suffix;
+    }
+
+
+    # We log anchor text only if it would be visible in the web browser. This means that for an
+    # link to an ordinary page we log the anchor whether an alternative text was available or not
+    # (in which case Wikipedia shows just the name of the page).
+    
+    # Note that for a link to an image that has no alternative text, we log an empty string.
+    # This is important because otherwise the linkLocation wouldn't get stored.
+
+    my %anchorStruct = ( anchorText   => $anchor,
+                         linkLocation => $linkLocation );
+
+    # anchor text doesn't need escaping of XML characters,
+    # hence the second function parameter is undefined
+    &main::postprocessText(\$anchorStruct{anchorText});
+
+    # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
+    # other languages). While these links are not resolved to valid pages, we also want
+    # to ignore their text. However, simply discarding the text of all links that cannot
+    # be resolved would be overly aggressive, as authors frequently define phrases as links
+    # to articles that don't yet exist, in the hope that they will be added later.
+    # Therefore, we formulate the following conditions that must hold simultaneously
+    # for discarding the text of a link:
+    # 1) the link was not resolved to a valid id
+    # 2) the link does not contain alternative text (if it did, then the text is probably
+    #    important enough to be retained)
+    # 3) the link contains a colon - this is a very simple heuristics for identifying links to
+    #    other Wiki projects, other languages, or simply other namespaces within current Wikipedia.
+    #    While this method is not fool-proof (there are regular pages in the main namespace
+    #    that contain a colon in their title), we believe this is a reasonable tradeoff.
+    if( not $targetId ) {
+      if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForInterwikiLinks{$linkNamespace} ) ) {
+
+        push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if $refToAnchorTextArray;
+
+        $anchorStruct{targetNamespace} = $linkNamespace;
+        $anchorStruct{targetTitle} = $linkTitle;
+
+        $targetId = "!$#$refToInterwikiArray";
+
+      } elsif( $noAltText && $link =~ /:/ ) {
+        $anchor = "";
+        LOG->info("Discarding text for link '", $link, "'");
+      }
+    } else {
+      $anchorStruct{targetId} = $targetId;
+    }
+
+    push(@$refToAnchorTextArray, \%anchorStruct);
+
+    # Mark internal links with special magic words that are later converted to XML tags
+    # in postprocessText()
+
+    my $retval;
+    if( defined($targetId) ) {
+      $retval = ".pAriD=~" . $targetId . "~." . $anchor . ".pArenD."; 
+    } else {
+      $retval = $anchor;
+    }
+
+    # In case we didn't add prefix and suffix to the anchor, add them here so 
+    # they don't get lost.
+    if( $noGlue ) {
+      return $prefix . $retval . $suffix;
+    } else {
+      return $retval;
+    }
+  };
+
   # For each internal link outgoing from the current article we create an entry in
   # the AnchorTextArray (a reference to an anonymous hash) that contains target id and anchor 
   # text associated with it.
@@ -224,147 +368,7 @@ sub extractWikiLinks {
   # we extract links in several iterations of the while loop, while the link definition requires that
   # each pair [[...]] does not contain any opening braces.
   
-  1 while ( $$refToText =~ s/$internalLinkRegex/&collectWikiLink($1, $2, $3, $-[0],
-                                                                     $refToAnchorTextArray,
-                                                                     $refToInterwikiArray,
-                                                                     $refToCategoryArray)/eg );
-}
-
-sub collectWikiLink {
-  my ($prefix, $link, $suffix, $linkLocation, 
-      $refToAnchorTextArray, $refToInterwikiArray, $refToCategoryArray) = @_;
-
-  return $prefix . $suffix unless $link;
-
-  # First check if this is a link to a date. Date links are normalized first, so this
-  # function returns a string, that contains the normalized link (e.g. "[[July 4]]).
-  
-  # Since we replace links in a loop in extractWikiLinks(), these will get picked up on
-  # later iterations.
-  if( $link =~ /^\s*\d/ and my $dates = &normalizeDates(\$link) ) {
-    return $prefix . $dates . $suffix;
-  }
-
-  # Split link text into fields delimited by pipe characters. "-1" parameter to split permits
-  # empty trailing fields (important for pipeline masking)
-  my ($firstField, @pipeFields) = split(/\|/, $link, -1);
-
-  # The fields before the first pipe character is the link destination.
-  my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
-
-  return $prefix . $suffix unless $linkTitleSection;
-
-  # The link can contain a section reference after the hash character. If the part of the link 
-  # before the hash is empty, it points to a section on the current page. 
-  my ($linkTitle, $linkSection) = split(/\s*#/, $linkTitleSection, 2);
-
-  my $linkNamespaceTitle = $linkNamespace ? "$linkNamespace:$linkTitle" : $linkTitle;
-
-  # Target page of the link.
-  my $targetId = &resolvePageLink(\$linkNamespaceTitle);
-
-  # If this is a link to category namespace, remove the link completely and 
-  if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::categoryNamespace ) {
-    if( $targetId ) {
-      push(@{$refToCategoryArray}, $targetId) if $refToCategoryArray;
-    } else {
-      LOG->info("unknown category '$linkTitle'");
-    }
-    return $prefix . $suffix;
-  }
-
-  # Determine the anchor text. This is the blue underlined text that is seen in the browser 
-  # in place of the [[...]] link.
-  my $anchor;
-  my $noAltText;
-  my $noGlue;
-  
-  if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::imageNamespace ) {
-    # Image links must be parsed separately, since they can contain multiple pipe delimited
-    # fields that set thumbnail size and style in addition to the anchor string (in this case
-    # the anchor string is the short caption that appears below the thumbnail).
-    $anchor = &parseImageParameters(\@pipeFields);
-    $noGlue = 1;
-  } else {
-    $anchor = pop(@pipeFields);
-    if( not defined $anchor ) {
-      # the link text does not contain the pipeline, so take it as-is
-      $anchor = $link;
-      $noAltText = 1;
-    } elsif( $anchor eq "" and not $linkSection ) {
-      # If the "|" symbol is not followed by some text, then it masks everything before the
-      # first colon as well as any text in parentheses at the end of the link title.
-      # However, pipeline masking is only invoked if the link does not contain a section 
-      # reference, hence the additional condition in the 'if' statement.
-      $anchor = $firstField;
-      $anchor =~ s/^\s*[^:]*:\s*//s;
-      $anchor =~ s/\s*\([^()]*\)\s*$//s;
-    }
-    $anchor = $prefix . $anchor . $suffix;
-  }
-
-
-  # We log anchor text only if it would be visible in the web browser. This means that for an
-  # link to an ordinary page we log the anchor whether an alternative text was available or not
-  # (in which case Wikipedia shows just the name of the page).
-  
-  # Note that for a link to an image that has no alternative text, we log an empty string.
-  # This is important because otherwise the linkLocation wouldn't get stored.
-
-  my %anchorStruct = ( anchorText   => $anchor,
-                       linkLocation => $linkLocation );
-
-  # anchor text doesn't need escaping of XML characters,
-  # hence the second function parameter is undefined
-  &main::postprocessText(\$anchorStruct{anchorText});
-
-  # Wikipedia pages contain many links to other Wiki projects (especially Wikipedia in
-  # other languages). While these links are not resolved to valid pages, we also want
-  # to ignore their text. However, simply discarding the text of all links that cannot
-  # be resolved would be overly aggressive, as authors frequently define phrases as links
-  # to articles that don't yet exist, in the hope that they will be added later.
-  # Therefore, we formulate the following conditions that must hold simultaneously
-  # for discarding the text of a link:
-  # 1) the link was not resolved to a valid id
-  # 2) the link does not contain alternative text (if it did, then the text is probably
-  #    important enough to be retained)
-  # 3) the link contains a colon - this is a very simple heuristics for identifying links to
-  #    other Wiki projects, other languages, or simply other namespaces within current Wikipedia.
-  #    While this method is not fool-proof (there are regular pages in the main namespace
-  #    that contain a colon in their title), we believe this is a reasonable tradeoff.
-  if( not $targetId ) {
-    if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForInterwikiLinks{$linkNamespace} ) ) {
-
-      push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if $refToAnchorTextArray;
-
-      $anchorStruct{targetNamespace} = $linkNamespace;
-      $anchorStruct{targetTitle} = $linkTitle;
-
-      $targetId = "!$#$refToInterwikiArray";
-
-    } elsif( $noAltText && $link =~ /:/ ) {
-      $anchor = "";
-      LOG->info("Discarding text for link '", $link, "'");
-    }
-  } else {
-    $anchorStruct{targetId} = $targetId;
-  }
-
-  push(@$refToAnchorTextArray, \%anchorStruct);
-
-  # Mark internal links with special magic words that are later converted to XML tags
-  # in postprocessText()
-
-  my $retval;
-  if( $targetId ) {
-    $retval = ".pAriD=~" . $targetId . "~." . $anchor . ".pArenD."; 
-  } else {
-    $retval = $anchor;
-  }
-
-  # In case we didn't add prefix and suffix to the anchor, add them here so 
-  # they don't get lost.
-  return $noGlue ? $prefix . $retval . $suffix : $retval;
+  1 while ( $$refToText =~ s/$internalLinkRegex/$collectWikiLink->()/eg );
 }
 
 # Dates can appear in several formats
