@@ -304,9 +304,9 @@ sub instantiateTemplate {
   # Same goes if template parameters include other template invocations.
 
   # We also trim leading and trailing whitespace from parameter values.
+  
+  my ($templateTitle, @rawTemplateParams) = &splitTemplateInvocation($$refToTemplateInvocation);
 
-  my ($templateTitle, @rawTemplateParams) = map { s/^\s+//; s/\s+$//; $_; } 
-                                            &splitTemplateInvocation($$refToTemplateInvocation);
   return "" unless defined $templateTitle;
   
   # We now have the invocation string split up on | in the @rawTemplateParams list.

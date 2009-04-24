@@ -1,5 +1,5 @@
 use Data::Dumper;
-use Test::More tests => 93;
+use Test::More tests => 109;
 use encoding 'utf-8';
 
 package C;
@@ -196,5 +196,29 @@ $text = "}|";
 @cresult = &C::splitTemplateInvocation($text);
 @result = &PurePerl::splitTemplateInvocation($text);
 is($cresult[0], "}");
+is($cresult[1], "");
+compare(\@result, \@cresult);
+
+$text = " \t\n";
+@cresult = &C::splitTemplateInvocation($text);
+@result = &PurePerl::splitTemplateInvocation($text);
+is($cresult[0], "");
+compare(\@result, \@cresult);
+
+$text = "  |  a  ||   |  b  |  ";
+@cresult = &C::splitTemplateInvocation($text);
+@result = &PurePerl::splitTemplateInvocation($text);
+is($cresult[0], "");
+is($cresult[1], "a");
+is($cresult[2], "");
+is($cresult[3], "");
+is($cresult[4], "b");
+is($cresult[5], "");
+compare(\@result, \@cresult);
+
+$text = "|";
+@cresult = &C::splitTemplateInvocation($text);
+@result = &PurePerl::splitTemplateInvocation($text);
+is($cresult[0], "");
 is($cresult[1], "");
 compare(\@result, \@cresult);

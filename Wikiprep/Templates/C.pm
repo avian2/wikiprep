@@ -116,10 +116,28 @@ void splitOnTemplates(SV *svi) {
 	Inline_Stack_Done;
 }
 
+inline SV* _extract(SV *svi, char *start, char *end)
+{
+	/* Eat trailing whitespace (ASCII-only) */
+	while( isspace(*(end - 1)) && end > start ) end--;
+
+	char save = *end;
+	*end = '\0';
+					
+	/* Eat leading whitespace (ASCII-only) */
+	while( isspace(*start) && *start != '\0' ) start++;
+
+	SV *sv = sv_2mortal( newSVpvn(start, end - start) );
+	if( SvUTF8( svi ) ) SvUTF8_on(sv);
+
+	*end = save;
+
+	return sv;
+}
+
 void splitTemplateInvocation(SV *svi) 
 {
 	char *input = SvPV_nolen(svi);
-	SV *sv;
 
 	Inline_Stack_Vars;
 	Inline_Stack_Reset;
@@ -143,11 +161,7 @@ void splitTemplateInvocation(SV *svi)
 				break;
 			case '|':
 				if(brace == 0 && square == 0) {
-					*cur = '\0';
-					sv = sv_2mortal( newSVpvn(param_start, cur - param_start) );
-					if( SvUTF8( svi ) ) SvUTF8_on(sv);
-					Inline_Stack_Push( sv );
-					*cur = '|';
+					Inline_Stack_Push( _extract(svi, param_start, cur) );
 
 					param_start = cur + 1;
 				}
@@ -171,9 +185,7 @@ void splitTemplateInvocation(SV *svi)
 
 	end2:
 
-	sv = sv_2mortal( newSVpvn(param_start, cur - param_start) );
-	if( SvUTF8( svi ) ) SvUTF8_on(sv);
-	Inline_Stack_Push( sv );
+	Inline_Stack_Push( _extract(svi, param_start, cur) );
 
 	Inline_Stack_Done;
 }

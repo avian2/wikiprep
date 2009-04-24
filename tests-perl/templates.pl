@@ -73,7 +73,7 @@ $text = "Infobox_University\n|name          = Uppsala University\n|native_name  
 $name = shift(@rawParamList);
 &Wikiprep::Templates::parseTemplateInvocation(\@rawParamList, \%paramHash);
 
-is($name, "Infobox_University\n");
+is($name, "Infobox_University");
 
 # There is an unmatched [ in there that breaks template parsing.
 #is($paramHash{'website'}, 'http://www.uu.se');

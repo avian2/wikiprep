@@ -6,7 +6,7 @@ sub _splitTemplateInvocationFast($) {
 
   my ($refToTemplateInvocation) = @_;
 
-  return split(/\|/, $$refToTemplateInvocation);
+  return map { s/^\s+//; s/\s+$//; $_; } split(/\|/, $$refToTemplateInvocation);
 }
 
 sub _splitTemplateInvocationSlow($) {
@@ -31,6 +31,8 @@ sub _splitTemplateInvocationSlow($) {
 
       # Unnested "|" means we store the contents of the accumulator into a new parameter
 
+      $accumulator =~ s/^\s+//;
+      $accumulator =~ s/\s+$//;
       push(@parameters, $accumulator);
       $accumulator = "";
     } else {
@@ -46,6 +48,9 @@ sub _splitTemplateInvocationSlow($) {
       $accumulator .= $token;
     }
   }
+
+  $accumulator =~ s/^\s+//;
+  $accumulator =~ s/\s+$//;
   push(@parameters, $accumulator);
 
   return @parameters;
