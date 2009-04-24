@@ -34,6 +34,7 @@
 	    <text xml:space="preserve">
 		    abc[[Ga|def]]ghi 
 		    avš[[Ga|def]]ghžč
+		    {{gb}}
 	    </text>
     </revision>
   </page>
@@ -45,6 +46,13 @@
 		    some text 
 		    illegal characters here -> 􏿿ef
 	    </text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Gb</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">đđđĐĐĐ</text>
     </revision>
   </page>
 </mediawiki>
