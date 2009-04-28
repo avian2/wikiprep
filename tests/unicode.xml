@@ -34,6 +34,7 @@
 	    <text xml:space="preserve">
 		    abc[[Ga|def]]ghi 
 		    avš[[Ga|def]]ghžč
+		    {{null|ž}}
 		    {{gb}}
 	    </text>
     </revision>
@@ -52,7 +53,14 @@
     <title>Template:Gb</title>
     <id>3</id>
     <revision>
-	    <text xml:space="preserve">đđđĐĐĐ</text>
+	    <text xml:space="preserve">đđđĐĐĐ {{null|ž}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Null</title>
+    <id>4</id>
+    <revision>
+	    <text xml:space="preserve">{{{1}}}</text>
     </revision>
   </page>
 </mediawiki>

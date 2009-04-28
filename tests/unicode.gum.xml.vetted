@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gum>
+<page id="1" timestamp="" orglength="84" newlength="103" stub="0" disambig="0" category="0" image="0">
+<title>Gu</title>
+<categories></categories>
+<links>2</links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates>
+<template id="4">
+<include>
+<parameter name="1">ž</parameter>
+</include>
+<include>
+<parameter name="1">ž</parameter>
+</include>
+</template>
+<template id="3">
+<include></include>
+</template>
+</templates><text>
+		    <link id="2">abcdefghi</link> 
+		    <link id="2">avšdefghžč</link>
+		    ž
+		    đđđĐĐĐ ž
+	    </text>
+</page>
+<page id="2" timestamp="" orglength="60" newlength="63" stub="0" disambig="0" category="0" image="0">
+<title>Ga</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external></external>
+<interwiki></interwiki>
+<templates></templates><text>
+		    some text 
+		    illegal characters here -&gt; 􏿿ef
+	    </text>
+</page>
+</gum>

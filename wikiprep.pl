@@ -453,9 +453,13 @@ sub prescanSave {
 sub prescanLoad {
   for my $name ("title2id", "redir", "templates", "namespaces") {
     my $filename = File::Spec->catfile($inputFilePath, $inputFileBase . ".$name.db");
+    my $db;
     eval('unlock_hash %' . $name);
     eval('%' . $name . ' = ()');
-    eval('tie(%' . $name . ', "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_RDONLY) or die $!;');
+    eval('$db = tie(%' . $name . 
+         ', "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_RDONLY) or die $!;');
+
+    $db->filter_fetch_value( sub { $_ = Encode::decode('utf-8', $_) } );
   }
 }
 

@@ -5,3 +5,4 @@ asse.xml: -format composite
 barzilla.xml: -format composite
 gallery.xml: -format composite
 images.xml: -format composite
+unicode.xml: -format composite
