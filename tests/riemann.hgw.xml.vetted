@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="2198016" orglength="9694" newlength="7537" stub="0" categories="0" outlinks="0" urls="2">
+<page id="2198016" orglength="9694" newlength="7525" stub="0" categories="0" outlinks="0" urls="2">
 <title>Zeta function universality</title>
 <categories></categories>
 <links></links>
@@ -36,12 +36,12 @@ http://xxx.lanl.gov/abs/chao-dyn/9406003
 http://secamlocal.ex.ac.uk/people/staff/mrwatkin/zeta/voronin.htm
 </urls>
 <text>
-<link namespace="File" title="Voronin universality theorem.png">Any non-vanishing holomorphic function f defined on the strip can be approximated by the  -function.</link>
+<w namespace="File" title="Voronin universality theorem.png">Any non-vanishing holomorphic function f defined on the strip can be approximated by the  -function.</w>
 In mathematics, the universality of zeta-functions is the remarkable property of the Riemann zeta-function and other, similar, functions, such as the Dirichlet L-functions, to approximate arbitrary non-vanishing holomorphic functions arbitrarily well.
 
 The universality of the Riemann zeta function was first proven by Sergei Mikhailovitch Voronin in 1975 Voronin, S.M. (1975) &quot;Theorem on the Universality of the Riemann Zeta Function.&quot; Izv. Akad. Nauk SSSR, Ser. Matem. 39 pp.475-486. Reprinted in Math. USSR Izv. 9, 443-445, 1975  and is sometimes known as Voronin&apos;s Universality Theorem.
 
-<link namespace="File" title="Voronin-3.png">The Riemann zeta function on the strip 1/2 &lt; Re(s) &lt; 1; 103 &lt; Im(s) &lt; 109.</link> 
+<w namespace="File" title="Voronin-3.png">The Riemann zeta function on the strip 1/2 &lt; Re(s) &lt; 1; 103 &lt; Im(s) &lt; 109.</w> 
 <h1>Formal statement</h1>
 A mathematically precise statement of universality for the Riemann zeta-function  (s) follows.
 

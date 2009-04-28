@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="82762" orglength="27238" newlength="15504" stub="0" categories="0" outlinks="0" urls="10">
+<page id="82762" orglength="27238" newlength="15468" stub="0" categories="0" outlinks="0" urls="10">
 <title>1984 Summer Olympics</title>
 <categories></categories>
 <links></links>
@@ -48,8 +48,8 @@ http://select.nytimes.com/gst/abstract.html?res=FA0B13FA3F5C0C738DDDA10894DC484D
 
 Music sample:
 
-<link namespace="File" title="John Williams Olympic Theme.ogg">&quot;Olympic Fanfare and Theme&quot;</link>
-<link namespace="File" title="John Williams Olympic Theme.ogg">noicon</link>
+<w namespace="File" title="John Williams Olympic Theme.ogg">&quot;Olympic Fanfare and Theme&quot;</w>
+<w namespace="File" title="John Williams Olympic Theme.ogg">noicon</w>
  composed by John Williams for the 1984 Summer Olympics in Los Angeles 
  Problems listening to the file? See media help.
 
@@ -139,17 +139,17 @@ See the medal winners, ordered by sport:
 * Tennis
 
 <h1>Medal count</h1>
-<link namespace="File" title="Fritz Ligges Bronzemedaille 1984.jpg">Team show jumping bronze medal handed out at the 1984 Summer Games</link>
+<w namespace="File" title="Fritz Ligges Bronzemedaille 1984.jpg">Team show jumping bronze medal handed out at the 1984 Summer Games</w>
 : Main article: 1984 Summer Olympics medal count
 
 These are the top medal-collecting nations for the 1984 Games. (Host country is highlighted) and (Highest amount in bold).
 
 <h1>Participating nations</h1>
-<link namespace="File" title="1984 Olympic games countries.PNG">Participating nations</link>
+<w namespace="File" title="1984 Olympic games countries.PNG">Participating nations</w>
 Athletes from 140 nations competed at the Los Angeles Games:
 
 <h1>Boycotting countries</h1>
-<link namespace="File" title="Olympic boycotts 1976 1980 1984.PNG">Boycotting countries shown in red and orange</link>
+<w namespace="File" title="Olympic boycotts 1976 1980 1984.PNG">Boycotting countries shown in red and orange</w>
 
 14 Countries took part in the Soviet led boycott of the 1984 Olympic Games :
 *
@@ -204,7 +204,7 @@ McDonalds ran a promotion entitled &quot;When the U.S. Wins, You Win&quot; where
 * 1984 Summer Olympics   Los Angeles, California, U.S.   Soviet-led boycott
 
 <h1>External links</h1>
- <link namespace="File" title="Commons-logo.svg"></link>
+ <w namespace="File" title="Commons-logo.svg"></w>
  Wikimedia Commons has media related to:
   1984 Summer Olympics
 

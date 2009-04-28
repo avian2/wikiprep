@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <gum>
-<page id="1" timestamp="" orglength="215" newlength="485" stub="0" disambig="0" category="0" image="0">
+<page id="1" timestamp="" orglength="215" newlength="449" stub="0" disambig="0" category="0" image="0">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -13,13 +13,13 @@
 <include></include>
 </template>
 </templates><text>
-		    * <link namespace="Memoryalpha" title="A">A</link> article at Memory Alpha, a Star Trek wiki
+		    * <w namespace="Memoryalpha" title="A">A</w> article at Memory Alpha, a Star Trek wiki
 
-<link namespace="Memoryalpha" title="Test">  MemoryAlpha: Test </link>
-		    <link namespace="Memoryalpha" title="Test">Test</link>
-		    <link namespace="Memoryalpha" title="Category: education">MemoryAlpha:  category:  education</link>
-		    <link namespace="Memoryalpha" title="Test">test</link>
-		    <link namespace="Wowwiki" title="Sword of a Thousand Truths">Sword</link>
+<w namespace="Memoryalpha" title="Test">  MemoryAlpha: Test </w>
+		    <w namespace="Memoryalpha" title="Test">Test</w>
+		    <w namespace="Memoryalpha" title="Category: education">MemoryAlpha:  category:  education</w>
+		    <w namespace="Memoryalpha" title="Test">test</w>
+		    <w namespace="Wowwiki" title="Sword of a Thousand Truths">Sword</w>
 	    </text>
 </page>
 </gum>

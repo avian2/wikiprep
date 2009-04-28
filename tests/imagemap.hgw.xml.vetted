@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="2155" newlength="424" stub="0" categories="0" outlinks="3" urls="0">
+<page id="1" orglength="2155" newlength="400" stub="0" categories="0" outlinks="3" urls="0">
 <title>A</title>
 <categories></categories>
 <links>2 3 4</links>
@@ -36,10 +36,10 @@
 <text>
 
 
-<link namespace="File" title="Gunpow1.jpg">A contemporary sketch of the conspirators. The Dutch artist, Crispijn van de Passe the Elder, probably never met any of the conspirators, but the sketch has become well-known nonetheless.</link>
-<link id="2">Robert Catesby</link>
-<link id="3">Guido Fawkes</link>
-<link id="4">Thomas Winter</link>
+<w namespace="File" title="Gunpow1.jpg">A contemporary sketch of the conspirators. The Dutch artist, Crispijn van de Passe the Elder, probably never met any of the conspirators, but the sketch has become well-known nonetheless.</w>
+<a id="2">Robert Catesby</a>
+<a id="3">Guido Fawkes</a>
+<a id="4">Thomas Winter</a>
 Thomas Percy
 John Wright
 Christopher Wright

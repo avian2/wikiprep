@@ -844,9 +844,9 @@ sub linkTag {
     my ($namespace, $title) = @{$refToInterwikiArray->[$1]};
     &encodeXmlChars(\$namespace);
     &encodeXmlChars(\$title);
-    return "<link namespace=\"$namespace\" title=\"$title\">$content</link>";
+    return "<w namespace=\"$namespace\" title=\"$title\">$content</w>";
   } else {
-    return "<link id=\"$id\">$content</link>";
+    return "<a id=\"$id\">$content</a>";
   }
 }
 

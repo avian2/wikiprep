@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="371" newlength="681" stub="0" categories="0" outlinks="5" urls="0">
+<page id="1" orglength="371" newlength="561" stub="0" categories="0" outlinks="5" urls="0">
 <title>A</title>
 <categories></categories>
 <links>2 3 4 5 6</links>
@@ -35,27 +35,27 @@
 </urls>
 <text>
 
-<link id="2">October 15</link>, <link id="3">1982</link>
-<link id="2">October 15</link> <link id="3">1982</link>
-<link id="3">1982</link>-<link id="2">October 15</link>
-<link id="2">October 15</link>, <link id="3">1982</link>
-<link id="4">October 15, 1982</link>
+<a id="2">October 15</a>, <a id="3">1982</a>
+<a id="2">October 15</a> <a id="3">1982</a>
+<a id="3">1982</a>-<a id="2">October 15</a>
+<a id="2">October 15</a>, <a id="3">1982</a>
+<a id="4">October 15, 1982</a>
 
-July 4, <link id="5">2000</link>
-July 4, <link id="5">2000</link>
-<link id="5">2000</link>-July 4
-<link id="5">2000</link>-July 04
-July 4, <link id="5">2000</link>
-July 04, <link id="5">2000</link>
+July 4, <a id="5">2000</a>
+July 4, <a id="5">2000</a>
+<a id="5">2000</a>-July 4
+<a id="5">2000</a>-July 04
+July 4, <a id="5">2000</a>
+July 04, <a id="5">2000</a>
 
 October 16, 1983
 October 16 1983
 1983-October 16
 October 16, 1983
 
-15October <link id="3">1982</link>
-<link id="6">October 5</link> <link id="3">1982</link>
-<link id="6">October 5</link> <link id="3">1982</link>
+15October <a id="3">1982</a>
+<a id="6">October 5</a> <a id="3">1982</a>
+<a id="6">October 5</a> <a id="3">1982</a>
 	    
 </text>
 </page>

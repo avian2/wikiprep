@@ -23,7 +23,7 @@
 		    x
 	    </text>
 </page>
-<page id="5" timestamp="" orglength="603" newlength="881" stub="0" disambig="0" category="0" image="0">
+<page id="5" timestamp="" orglength="603" newlength="803" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links>1</links>
@@ -31,21 +31,21 @@
 <external></external>
 <interwiki></interwiki>
 <templates></templates><text>
-		    <link namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </link>
-<link namespace="File" title="Flevoland-Position.png"></link>
-<link namespace="File" title="Friesland-Position.png"><link id="1">Friesland</link> is beautiful</link>
-<link namespace="File" title="Gelderland-Position.png"></link>
-<link namespace="File" title="Groningen-Position.png"></link>
-<link namespace="File" title="Limburg-Position.png"></link>
-<link namespace="File" title="Noord Brabant-Position.png"></link>
-<link namespace="File" title="Noord Holland-Position.png"></link>
-<link namespace="File" title="Overijssel-Position.png"></link>
-<link namespace="File" title="Zuid Holland-Position.png">South Holland, the most crowded province</link>
-<link namespace="File" title="Utrecht-Position.png"></link>
-<link namespace="File" title="Zeeland-Position.png"></link>
+		    <w namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </w>
+<w namespace="File" title="Flevoland-Position.png"></w>
+<w namespace="File" title="Friesland-Position.png"><a id="1">Friesland</a> is beautiful</w>
+<w namespace="File" title="Gelderland-Position.png"></w>
+<w namespace="File" title="Groningen-Position.png"></w>
+<w namespace="File" title="Limburg-Position.png"></w>
+<w namespace="File" title="Noord Brabant-Position.png"></w>
+<w namespace="File" title="Noord Holland-Position.png"></w>
+<w namespace="File" title="Overijssel-Position.png"></w>
+<w namespace="File" title="Zuid Holland-Position.png">South Holland, the most crowded province</w>
+<w namespace="File" title="Utrecht-Position.png"></w>
+<w namespace="File" title="Zeeland-Position.png"></w>
 	    </text>
 </page>
-<page id="4" timestamp="" orglength="594" newlength="881" stub="0" disambig="0" category="0" image="0">
+<page id="4" timestamp="" orglength="594" newlength="803" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriB</title>
 <categories></categories>
 <links>1</links>
@@ -53,18 +53,18 @@
 <external></external>
 <interwiki></interwiki>
 <templates></templates><text>
-		    <link namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </link>
-<link namespace="File" title="Flevoland-Position.png"></link>
-<link namespace="File" title="Friesland-Position.png"><link id="1">Friesland</link> is beautiful</link>
-<link namespace="File" title="Gelderland-Position.png"></link>
-<link namespace="File" title="Groningen-Position.png"></link>
-<link namespace="File" title="Limburg-Position.png"></link>
-<link namespace="File" title="Noord Brabant-Position.png"></link>
-<link namespace="File" title="Noord Holland-Position.png"></link>
-<link namespace="File" title="Overijssel-Position.png"></link>
-<link namespace="File" title="Zuid Holland-Position.png">South Holland, the most crowded province</link>
-<link namespace="File" title="Utrecht-Position.png"></link>
-<link namespace="File" title="Zeeland-Position.png"></link>
+		    <w namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </w>
+<w namespace="File" title="Flevoland-Position.png"></w>
+<w namespace="File" title="Friesland-Position.png"><a id="1">Friesland</a> is beautiful</w>
+<w namespace="File" title="Gelderland-Position.png"></w>
+<w namespace="File" title="Groningen-Position.png"></w>
+<w namespace="File" title="Limburg-Position.png"></w>
+<w namespace="File" title="Noord Brabant-Position.png"></w>
+<w namespace="File" title="Noord Holland-Position.png"></w>
+<w namespace="File" title="Overijssel-Position.png"></w>
+<w namespace="File" title="Zuid Holland-Position.png">South Holland, the most crowded province</w>
+<w namespace="File" title="Utrecht-Position.png"></w>
+<w namespace="File" title="Zeeland-Position.png"></w>
 	    </text>
 </page>
 </gum>

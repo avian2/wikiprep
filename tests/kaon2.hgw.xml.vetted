@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="385846" orglength="19461" newlength="11788" stub="0" categories="0" outlinks="0" urls="1">
+<page id="385846" orglength="19461" newlength="11776" stub="0" categories="0" outlinks="0" urls="1">
 <title>Kaon</title>
 <categories></categories>
 <links></links>
@@ -75,7 +75,7 @@ are usually produced via the strong force, they decay weakly. Thus, once created
 
 (&quot;K-short&quot;), decays primarily into two pions, and has a mean lifetime 8.958×10 −11  seconds.
 
-(See discussion of <link id="385846">neutral kaon mixing</link> below.)
+(See discussion of <a id="385846">neutral kaon mixing</a> below.)
 
 An experimental observation made in 1964 that K-longs rarely decay into two pions was the discovery of CP violation (see below).
 
@@ -110,11 +110,11 @@ Since the two final states have different parity it was thought that the initial
 Initially it was thought that although parity was violated, CP (charge parity) symmetry was conserved. In order to understand the discovery of CP violation, it is necessary to understand the mixing of neutral kaons; this phenomenon does not require CP violation, but it is the context in which CP violation was first observed.
 
 <h2>Neutral kaon mixing</h2>
-<link namespace="File" title="Kkbar.png">Two different neutral K mesons, carrying different strangeness, can turn from one into another through the weak interactions, since these interactions do not conserve strangeness. The strange quark in the
+<w namespace="File" title="Kkbar.png">Two different neutral K mesons, carrying different strangeness, can turn from one into another through the weak interactions, since these interactions do not conserve strangeness. The strange quark in the
 
 turns into a down quark by successively emitting two W-bosons of opposite charge. The down antiquark in the
 
-turns into a strange antiquark by absorbing them.</link>
+turns into a strange antiquark by absorbing them.</w>
 
 Since neutral kaons carry strangeness, they cannot be their own antiparticles. There must be then two different neutral kaons, differing by two units of strangeness. The question was then how to establish the presence of these two mesons. The solution used a phenomenon called neutral particle oscillations, by which these two kinds of mesons can turn from one into another through the weak interactions, which cause them to decay into pions (see the adjacent figure).
 

@@ -19,7 +19,7 @@
 <interwiki></interwiki>
 <templates></templates><text></text>
 </page>
-<page id="5" timestamp="" orglength="289" newlength="322" stub="0" disambig="0" category="0" image="0">
+<page id="5" timestamp="" orglength="289" newlength="286" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links>2 3</links>
@@ -27,21 +27,21 @@
 <external></external>
 <interwiki></interwiki>
 <templates></templates><text>
-		    <link namespace="File" title="Hello.jpg">This is a cool image</link>
+		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
 
-<link namespace="File" title="Hello.jpg">Another cool image</link>
+<w namespace="File" title="Hello.jpg">Another cool image</w>
 
-<link namespace="File" title="Hello.jpg">Arg</link>
+<w namespace="File" title="Hello.jpg">Arg</w>
 
-<link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
+<w namespace="File" title="Juhu.jpg"><a id="2">Gu</a></w>
 
-<link id="3"></link>
+<a id="3"></a>
 
 something
 		    something
 	    </text>
 </page>
-<page id="6" timestamp="" orglength="281" newlength="322" stub="0" disambig="0" category="0" image="0">
+<page id="6" timestamp="" orglength="281" newlength="286" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriB</title>
 <categories></categories>
 <links>2 3</links>
@@ -49,15 +49,15 @@ something
 <external></external>
 <interwiki></interwiki>
 <templates></templates><text>
-		    <link namespace="File" title="Hello.jpg">This is a cool image</link>
+		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
 
-<link namespace="File" title="Hello.jpg">Another cool image</link>
+<w namespace="File" title="Hello.jpg">Another cool image</w>
 
-<link namespace="File" title="Hello.jpg">Arg</link>
+<w namespace="File" title="Hello.jpg">Arg</w>
 
-<link namespace="File" title="Juhu.jpg"><link id="2">Gu</link></link>
+<w namespace="File" title="Juhu.jpg"><a id="2">Gu</a></w>
 
-<link id="3"></link>
+<a id="3"></a>
 
 something
 		    something
