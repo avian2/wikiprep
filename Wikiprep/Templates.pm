@@ -254,7 +254,7 @@ sub instantiateTemplate {
   }
 
   LOG->debug("template recursion level ", $templateRecursionLevel);
-  LOG->debug("instantiating template: ", $refToTemplateInvocation);
+  LOG->debug("instantiating template: ", $$refToTemplateInvocation);
 
   # The template name extends up to the first pipeline symbol (if any).
   # Template parameters go after the "|" symbol.

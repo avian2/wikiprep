@@ -54,7 +54,7 @@ sub prescan {
 
       # A page could have been encountered before with a different spelling.
       # Examples: &nbsp; = <C2><A0> (nonbreakable space), &szlig; = <C3><9F> (German Eszett ligature)
-      LOG->warning("title $$refToTitle already encountered before (ID $$refToId)");
+      LOG->warning("title $$refToTitle (ID $$refToId) already encountered before (ID ", $title2id{$refToTitle}, ")");
       return;
     }
 
