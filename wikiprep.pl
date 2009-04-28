@@ -998,10 +998,11 @@ Available options:
   -lang LANG     Use language other than English. LANG is Wikipedia
                  language prefix (e.g. 'sl' for 'slwiki').
   -format FMT    Use output format FMT (default is legacy).
-
   -prescan       Prescan the dump.
   -transform     Transform the dump.
                  (default is to both prescan and transform).
+  -parallel      Run in multiple, parallel processes. (see 
+                 documentation)
 
 Available logging levels:
 
