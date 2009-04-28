@@ -459,7 +459,9 @@ sub prescanLoad {
     eval('$db = tie(%' . $name . 
          ', "BerkeleyDB::Hash", -Filename => $filename, -Flags => DB_RDONLY) or die $!;');
 
-    $db->filter_fetch_value( sub { $_ = Encode::decode('utf-8', $_) } );
+    if( $name eq "templates" || $name eq "redir" ) {
+      $db->filter_fetch_value( sub { $_ = Encode::decode('utf-8', $_) } );
+    }
   }
 }
 
