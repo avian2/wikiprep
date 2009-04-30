@@ -13,6 +13,44 @@ use Log::Handler wikiprep => 'LOG';
 
 our @EXPORT_OK = qw( includeParserFunction );
 
+# Magic words behave like built-in templates that take no parameters.
+
+# {{FULLPAGENAME}} returns full name of the page (including the 
+# namespace prefix. {{PAGENAME}} returns only the title.
+
+# Also consider supporting {{SERVER}}, which is used to construct edit
+# links in some stub templates (external URLs aren't removed properly
+# without it)
+
+my %magicWords = (
+
+  # {{pagename}} returns the name of the current page. 
+  # Only capitalizations below work.
+
+  'pagename' => sub {
+                  my ($page) = @_;
+                  return $page->{title};
+                },
+  'Pagename' => sub {
+                  my ($page) = @_;
+                  return $page->{title};
+                },
+  'PAGENAME' => sub {
+                  my ($page) = @_;
+                  return $page->{title};
+                },
+
+  # Extra 'E' means the result is URL encoded. 
+
+  'FULLPAGENAMEE' => sub {
+                  my ($page) = @_;
+
+                  my $result = $page->{title};
+                  $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
+                  return $result;
+                },
+);
+
 my %parserFunctions = (
 
 	'if'	=>  sub {
@@ -135,22 +173,19 @@ sub includeParserFunction(\$\%\%$\$) {
     my $firstParam = $2;
     &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1);
 
-    unshift( @$refToRawParameterList, $firstParam );
-
     LOG->debug("evaluating parser function #", $functionName);
 
-    my $func = $parserFunctions{$functionName};
-
-    if( $func ) {
-      return &$func($page, $templateRecursionLevel, @$refToRawParameterList);
+    if( exists($parserFunctions{$functionName}) ) {
+      return $parserFunctions{$functionName}->($page, $templateRecursionLevel, 
+                                               $firstParam, @$refToRawParameterList);
     } else {
       LOG->info("function #$functionName not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
 
-      if ( exists($$refToRawParameterList[1]) && ( length($$refToRawParameterList[1]) > 0 ) ) {
-        return $$refToRawParameterList[1];
+      if ( exists($$refToRawParameterList[0]) && ( length($$refToRawParameterList[0]) > 0 ) ) {
+        return $$refToRawParameterList[0];
       } else {
         return "";
       }
@@ -158,7 +193,9 @@ sub includeParserFunction(\$\%\%$\$) {
 
     # print LOGF "Function returned: $result\n";
 
-  } elsif ( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
+  } elsif( exists($magicWords{$$refToTemplateTitle}) ) {
+    return $magicWords{$$refToTemplateTitle}->($page);
+  } elsif( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
     # This function is used in some pages to construct links
     # http://meta.wikimedia.org/wiki/Help:URL
 
@@ -168,17 +205,9 @@ sub includeParserFunction(\$\%\%$\$) {
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
 
     return $result;
-  } elsif ( lc $$refToTemplateTitle eq "pagename" ) {
-    # FIXME: {{FULLPAGENAME}} returns full name of the page (including the 
-    # namespace prefix. {{PAGENAME}} returns only the title.
-    #
-    # Also consider supporting {{SERVER}}, which is used to construct edit
-    # links in some stub templates (external URLs aren't removed properly
-    # without it)
-    return $page->{title};
+  } else {
+    return undef;
   }
-
-  return undef;
 }
 
 1;
