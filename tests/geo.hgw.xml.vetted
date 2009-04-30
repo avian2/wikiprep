@@ -2,9 +2,9 @@
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
-    <generator>MediaWiki 1.12alpha</generator>
+    <generator>MediaWiki 1.15alpha</generator>
     <case>first-letter</case>
-      <namespaces>
+    <namespaces>
       <namespace key="-2">Media</namespace>
       <namespace key="-1">Special</namespace>
       <namespace key="0" />
@@ -14,7 +14,7 @@
       <namespace key="4">Wikipedia</namespace>
       <namespace key="5">Wikipedia talk</namespace>
       <namespace key="6">File</namespace>
-      <namespace key="7">Image talk</namespace>
+      <namespace key="7">File talk</namespace>
       <namespace key="8">MediaWiki</namespace>
       <namespace key="9">MediaWiki talk</namespace>
       <namespace key="10">Template</namespace>
@@ -27,21 +27,15 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="215" newlength="454" stub="0" categories="0" outlinks="0" urls="0">
-<title>A</title>
+<page id="1021663" orglength="61" newlength="71" stub="0" categories="0" outlinks="0" urls="1">
+<title>Uppsala Municipality</title>
 <categories></categories>
 <links></links>
 <urls>
+http://stable.toolserver.org/geohack/geohack.php?pagename=Uppsala%20Municipality&amp;params=59_52_N_17_38_E_region:SE_type:adm2nd
 </urls>
 <text>
-
-		    * <w namespace="Memoryalpha" title="A">A</w> article at Memory Alpha, a Star Trek wiki
-		    <w namespace="Memoryalpha" title="Test">  MemoryAlpha: Test </w>
-		    <w namespace="Memoryalpha" title="Test">Test</w>
-		    <w namespace="Memoryalpha" title="Category: education">MemoryAlpha:  category:  education</w>
-		    <w namespace="Memoryalpha" title="Test">test</w>
-		    <w namespace="Wowwiki" title="Sword of a Thousand Truths">Sword</w>
-	    
+  Coordinates:      59°52′N   17°38′E    ﻿ / ﻿    °S  °W  ﻿ /  ;       
 </text>
 </page>
 </mediawiki>

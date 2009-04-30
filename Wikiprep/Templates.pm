@@ -74,7 +74,7 @@ sub prescan {
     } else {
       # If there are no <onlyinclude> fragments, simply eliminate
       # <noinclude> fragments and keep <includeonly> ones.
-      $text =~ s/<noinclude\s*>.*?<\/noinclude\s*>/\n/sg;
+      $text =~ s/<noinclude\s*>.*?<\/noinclude\s*>//sg;
 
       # In case there are unterminated <noinclude> tags
       $text =~ s/<noinclude\s*>.*$//sg;

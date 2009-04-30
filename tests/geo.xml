@@ -1,0 +1,668 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.15alpha</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">File</namespace>
+      <namespace key="7">File talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Uppsala Municipality</title>
+    <id>1021663</id>
+    <revision>
+      <id>284334806</id>
+      <timestamp>2009-04-17T01:51:56Z</timestamp>
+      <contributor>
+        <username>DerBorg</username>
+        <id>5965514</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">{{coord|59|52|N|17|38|E|region:SE_type:adm2nd|display=title}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coor URL</title>
+    <id>7125964</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>226506221</id>
+      <timestamp>2008-07-18T19:58:20Z</timestamp>
+      <contributor>
+        <username>Magnus Manske</username>
+        <id>4</id>
+      </contributor>
+      <comment>Switching to stable toolserver</comment>
+      <text xml:space="preserve">http://stable.toolserver.org/geohack/geohack.php?pagename={{FULLPAGENAMEE}}&amp;params=&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add cats and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coord</title>
+    <id>10118245</id>
+    <revision>
+      <id>270957146</id>
+      <timestamp>2009-02-15T20:26:35Z</timestamp>
+      <contributor>
+        <username>Docu</username>
+        <id>8029</id>
+      </contributor>
+      <comment>from [[Template_talk:Coord#Minor_fix_-_.7B.7B.7B10.7D.7D.7D|#Minor fix - {{{10}}}]]</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{Coord/display/{{{display|inline}}}|1={{Coord/input/{{#ifeq:{{{4|}}}||dec|{{#if:{{#switch:{{{4}}}{{{8}}}|NE|NW|SE|SW=y}}|dms|{{#if:{{#switch:{{{3}}}{{{6}}}|NE|NW|SE|SW=y}}|dm|{{#if:{{#switch:{{{2}}}{{{4}}}|NE|NW|SE|SW=y}}|d|ERROR}}}}}}}}|1={{{1|}}}|2={{{2|}}}|3={{{3|}}}|4={{{4|}}}|5={{{5|}}}|6={{{6|}}}|7={{{7|}}}|8={{{8|}}}|9={{{9|}}}|10={{{10|}}}|format={{{format|}}}|name={{{name|}}}}}}}&lt;!-- 
+ --&gt;{{#ifeq:{{{region|XYZ}}}|XYZ||[[Category:Coord template needing repair|R{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;{{#ifeq:{{{type|XYZ}}}|XYZ||[[Category:Coord template needing repair|T{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;{{#ifeq:{{{scale|XYZ}}}|XYZ||[[Category:Coord template needing repair|S{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coord/display/title</title>
+    <id>10512620</id>
+    <revision>
+      <id>249166637</id>
+      <timestamp>2008-11-02T11:00:21Z</timestamp>
+      <contributor>
+        <username>Docu</username>
+        <id>8029</id>
+      </contributor>
+      <minor/>
+      <comment>as [[Template:Coord/display/inline,title|coord/display/inline,title]]</comment>
+      <text xml:space="preserve">&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span id=&quot;coordinates&quot;&gt;[[Geographic coordinate system|Coordinates]]: {{{1}}}&lt;/span&gt;&lt;/span&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc|Template:Coord/sub doc}}[[Category:Coord template]][[sl:Predloga:Koord/prikaži/naslov]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coord/dms2dec</title>
+    <id>10117934</id>
+    <revision>
+      <id>192770367</id>
+      <timestamp>2008-02-20T10:10:33Z</timestamp>
+      <contributor>
+        <username>Riana</username>
+        <id>127798</id>
+      </contributor>
+      <comment>{{pp-template}}</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{#switch:{{{1}}}|N|E=1|S|W=-1}}*({{{2|0}}}+({{{3|0}}}+{{{4|0}}}/60)/60) round {{{precdec|{{#if:{{{4|}}}|5|{{#if:{{{3|}}}|3|0}}}}+{{precision1|{{{4|{{{3|{{{2}}}}}}}}}}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc}}[[Category:Coord template]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coord/input/dm</title>
+    <id>10512014</id>
+    <revision>
+      <id>286937415</id>
+      <timestamp>2009-04-29T22:21:48Z</timestamp>
+      <contributor>
+        <username>Docu</username>
+        <id>8029</id>
+      </contributor>
+      <minor/>
+      <comment>upd. as per [[Template_talk:Coord#Format_of_coordinates_in_quote|talk]] (job queue length	=5</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{Coord/link|dms-lat={{{1}}}°{{{2}}}′{{{3}}}|dms-long={{{4}}}°{{{5}}}′{{{6}}}|dec-lat={{coord/dms2dec|{{{3}}}|{{{1}}}|{{{2}}}}}|dec-long={{coord/dms2dec|{{{6}}}|{{{4}}}|{{{5}}}}}|param={{{1}}}_{{{2}}}_{{{3}}}_{{{4}}}_{{{5}}}_{{{6}}}_{{{7|}}}|default={{#if:{{{format|}}}|{{{format}}}|dms}}|name={{{name|}}}}}&lt;!-- 
+ --&gt;{{#if:{{{8|}}}|[[Category:Coord template needing repair|#{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;{{#ifexpr:{{{2}}}&lt;60||[[Category:Coord template needing repair|'{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;{{#ifexpr:{{{5}}}&lt;60||[[Category:Coord template needing repair|'{{PAGENAME}}]]}}&lt;!-- 
+ --&gt;&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc|Template:Coord/sub doc}}[[Category:Coord template]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Coord/link</title>
+    <id>10116259</id>
+    <revision>
+      <id>270956946</id>
+      <timestamp>2009-02-15T20:25:27Z</timestamp>
+      <contributor>
+        <username>Docu</username>
+        <id>8029</id>
+      </contributor>
+      <comment>from [[Template_talk:Coord#Formatting_preferences|#Formatting_preferences]] and [[Template_talk:Coord#Span_title|#Span_title]]</comment>
+      <text xml:space="preserve">&lt;span class=&quot;plainlinksneverexpand&quot;&gt;[{{Coor URL}}{{{param}}}{{#if:{{{name|}}}|&amp;title={{urlencode:{{{name}}}}}}} &lt;span class=&quot;{{#ifeq:{{{default|}}}|dec|geo-nondefault|geo-default}}&quot;&gt;&lt;span class=&quot;geo-dms&quot; title=&quot;Maps, aerial photos, and other data for this location&quot;&gt;&lt;span class=&quot;latitude&quot;&gt;{{{dms-lat}}}&lt;/span&gt; &lt;span class=&quot;longitude&quot;&gt;{{{dms-long}}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;geo-multi-punct&quot;&gt;﻿ / ﻿&lt;/span&gt;&lt;span class=&quot;{{#ifeq:{{{default|}}}|dec|geo-default|geo-nondefault}}&quot;&gt;{{#if:{{{name|}}}|&lt;span class=&quot;vcard&quot;&gt;|}}&lt;span class=&quot;geo-dec&quot; title=&quot;Maps, aerial photos, and other data for this location&quot;&gt;{{{dec-lat-display|{{#ifexpr:{{{dec-lat}}}&lt;0|{{Coord/negzeropad|{{{dec-lat}}}|{{#expr:abs{{{dec-lat}}}}}}}°S|{{{dec-lat}}}°N}}}}} {{{dec-long-display|{{#ifexpr:{{{dec-long}}}&lt;0|{{Coord/negzeropad|{{{dec-long}}}|{{#expr:abs{{{dec-long}}}}}}}°W|{{{dec-long}}}°E}}}}}&lt;/span&gt;&lt;span style=&quot;display:none&quot;&gt;﻿ / &lt;span class=&quot;geo&quot;&gt;{{{dec-lat}}}; {{{dec-long}}}&lt;/span&gt;&lt;/span&gt;{{#if:{{{name|}}}|&lt;span style=&quot;display:none&quot;&gt;﻿ (&lt;span class=&quot;fn org&quot;&gt;{{{name|}}}&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;|}}&lt;/span&gt;]&lt;/span&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}[[Category:Coord template]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Infobox Kommun2</title>
+    <id>2439020</id>
+    <revision>
+      <id>276576492</id>
+      <timestamp>2009-03-11T19:39:09Z</timestamp>
+      <contributor>
+        <username>Jensapag</username>
+        <id>4423501</id>
+      </contributor>
+      <minor/>
+      <comment>Width:30%</comment>
+      <text xml:space="preserve">{| class=&quot;infobox vcard&quot; width=&quot;30%&quot; style=&quot;font-size:95%;&quot;
+
+|- class=&quot;fn org&quot; style=&quot;color:#fff; background:#B22222; font-size:larger; text-align:center;&quot;
+! colspan=&quot;2&quot; | {{{fullname}}}
+
+|- align=center
+| style=&quot;font-size:smaller;&quot; colspan=&quot;2&quot; |{{#if: {{{coatofarms|}}}|{{{coatofarms}}}}}
+
+|- align=center
+| style=&quot;font-size:smaller;&quot; colspan=&quot;2&quot; |{{#if: {{{logo|}}}|{{{logo}}}}}
+
+|- class=&quot;adr&quot; style=&quot;vertical-align:top;&quot;
+| width=&quot;30%&quot; | '''[[Counties of Sweden|County]]'''
+| &lt;span class=&quot;region&quot;&gt;{{{county}}}&lt;/span&gt;
+
+|- style=&quot;vertical-align:top;&quot;
+| '''[[Provinces of Sweden|Province]]'''
+| {{{province}}}
+
+|- class=&quot;note&quot; style=&quot;vertical-align:top;&quot;
+| '''[[Administrative centre|Seat]]'''
+| {{{capital}}}
+
+|- align=&quot;center&quot;
+| style=&quot;font-size:smaller;&quot; colspan=2 |{{#if: {{{map|}}}|{{{map}}}}}
+
+|- class=&quot;note&quot; style=&quot;vertical-align:top;&quot;
+| style=&quot;white-space: nowrap;&quot; | '''[[Population]]'''&lt;br&gt;&amp;nbsp;&amp;bull; Total&lt;br&gt;
+| {{#if:{{{populationrank|&lt;noinclude&gt;-&lt;/noinclude&gt;}}}|
+[[List of municipalities of Sweden|{{{populationrank}}}]] of 290
+}}&lt;br /&gt; {{{population}}}
+
+|- class=&quot;note&quot; style=&quot;vertical-align:top;&quot;
+| style=&quot;white-space: nowrap;&quot; | '''[[Area]]'''&lt;br&gt;&amp;nbsp;&amp;bull; Total area&lt;br&gt;&amp;nbsp;&amp;bull; Land area&lt;br&gt;&amp;nbsp;&amp;bull; Water area
+| {{#if:{{{arearank|&lt;noinclude&gt;-&lt;/noinclude&gt;}}}|
+[[List of municipalities of Sweden|{{{arearank}}}]] of 290
+}} &lt;br /&gt; {{{area}}}&lt;br /&gt; {{#if: {{{arealand|}}}|{{{arealand}}}}}&lt;br /&gt; {{#if: {{{areawater|}}}|{{{areawater}}}}}
+
+|- style=&quot;vertical-align:top;&quot;
+| style=&quot;white-space: nowrap;&quot; | '''[[Population density|Density]]'''&lt;br&gt;&amp;nbsp;&amp;bull; Total
+| {{#if:{{{densityrank|&lt;noinclude&gt;-&lt;/noinclude&gt;}}}|
+[[List of municipalities of Sweden|{{{densityrank}}}]] of 290
+}}&lt;br /&gt; {{{populationdensity}}}
+
+|- class=&quot;note&quot; style=&quot;vertical-align:top;&quot;
+| '''[[Kommunkod|Municipal code]]'''
+| {{{code}}}
+
+|- style=&quot;vertical-align:top;&quot;
+| '''[[Website]]'''
+| {{{website|}}}
+
+|- align=&quot;left&quot; style=&quot;vertical-align:top; font-size:smaller;&quot;
+! colspan=&quot;2&quot; | {{{footnotes|{{#if: {{{population_as_of|}}}| Population as of {{{population_as_of}}}|}}}}}
+|}&lt;noinclude&gt;
+
+{{Documentation, template}}
+
+[[Category:Geography infobox templates|Kommun2]]
+
+[[bg:Шаблон:Общини в Швеция]]
+[[sv:Mall:Kommunfakta]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Localities in Uppsala Municipality</title>
+    <id>17209026</id>
+    <revision>
+      <id>270395084</id>
+      <timestamp>2009-02-13T07:15:18Z</timestamp>
+      <contributor>
+        <username>Muniswede</username>
+        <id>4424790</id>
+      </contributor>
+      <text xml:space="preserve">{{Navbox
+|name = Localities in Uppsala Municipality
+|title = [[Urban areas in Sweden|Localities]] in [[Uppsala Municipality]], [[Uppsala County]], [[Sweden]]
+|group1 = Localities:
+|list1  = [[Almunge]] {{·}} [[Bälinge, Uppsala Municipality|Bälinge]] {{·}} [[Bärby]] {{·}} [[Björklinge]] {{·}} [[Gåvsta]] {{·}} [[Gunsta]] {{·}} [[Håga ]] {{·}} [[Järlåsa]] {{·}} [[Knutby]] {{·}} [[Läby]] {{·}} [[Länna, Uppsala Municipality|Länna]] {{·}} [[Lövstalöt]] {{·}} [[Ramstalund]] {{·}} [[Sävja]] {{·}} [[Skoby]] (part of) {{·}} [[Skölsta]] {{·}} [[Skyttorp]] {{·}} [[Storvreta]] {{·}} [[Uppsala]] (seat) {{·}} [[Vänge]] {{·}} [[Vårdsätra]] {{·}} [[Vattholma]] {{·}} [[Ytternäs och Vreta]]
+}}&lt;noinclude&gt;
+[[Category:Sweden locality templates|Uppsala]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>284858174</id>
+      <timestamp>2009-04-19T19:18:42Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <minor/>
+      <comment>moved [[Template:Tnavbar]] to [[Template:Navbar]]:&amp;#32;now works in all namespaces</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&amp;nbsp;&lt;span|&lt;div}} class=&quot;noprint plainlinksneverexpand navbar&quot; style=&quot;background:none; padding:0; font-weight:normal;{{{fontstyle|}}}; font-size:xx-small; {{{style|}}}&quot;&gt;&lt;!--
+
+--&gt;{{#if:{{{mini|}}}{{{plain|}}}|&lt;!--nothing--&gt;|&lt;!--else:
+--&gt;This box:&amp;#32;}}&lt;!--
+
+--&gt;{{#if:{{{brackets|}}}|&amp;#91;}}&lt;!--
+
+--&gt;[[{{transclude|{{{1}}}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&lt;!--
+
+--&gt;&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[{{TALKPAGENAME:{{transclude|{{{1}}}}}}}|&lt;span title=&quot;Discussion about this template&quot; style=&quot;{{{fontstyle|}}}&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&lt;!--
+
+--&gt;{{#if:{{{noedit|}}}|&lt;!--nothing--&gt;|&lt;!--else:
+--&gt;&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{transclude|{{{1}}}}}|action=edit}}&lt;span title=&quot;Edit this template&quot; style=&quot;{{{fontstyle|}}};&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{brackets|}}}|]}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>285299667</id>
+      <timestamp>2009-04-21T19:56:55Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>expand redirect</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=&lt;/div&gt;|none=|#default=&lt;table class=&quot;navbox&quot; cellspacing=&quot;0&quot; &lt;!--
+ --&gt;style=&quot;{{{bodystyle|}}};{{{style|}}}&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:2px;&quot;&gt;}}&lt;!--
+
+--&gt;&lt;table cellspacing=&quot;0&quot; class=&quot;nowraplinks {{#if:{{{title|}}}|{{#switch:{{{state|}}}|plain|off=|&lt;!--
+ --&gt;#default=collapsible {{#if:{{{state|}}}|{{{state}}}|autocollapse}}}}}} {{#switch:{{{border|{{{1|}}}}}}|&lt;!--
+ --&gt;subgroup|child|none=navbox-subgroup&quot; style=&quot;width:100%;{{{bodystyle|}}};{{{style|}}}|&lt;!--
+ --&gt;#default=&quot; style=&quot;width:100%;background:transparent;color:inherit}};{{{innerstyle|}}};&quot;&gt;&lt;!--
+
+
+
+---Title and Navbar---
+--&gt;{{#if:{{{title|}}}|&lt;tr&gt;{{#if:{{{titlegroup|}}}|&lt;!--
+ --&gt;&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{titlegroupstyle|}}}&quot;&gt;{{{titlegroup|}}}&lt;/td&gt;&lt;!--
+ --&gt;&lt;th style=&quot;border-left:2px solid #fdfdfd;width:100%;|&lt;th style=&quot;}}{{{basestyle|}}};{{{titlestyle|}}}&quot; &lt;!--
+ --&gt;colspan={{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}{{#if:{{{titlegroup|}}}|-1}}}} &lt;!--
+ --&gt;class=&quot;navbox-title&quot;&gt;&lt;!--
+
+--&gt;{{#if:{{#switch:{{{navbar|}}}|plain|off=1}}&lt;!--
+ --&gt;{{#if:{{{name|}}}||{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=1}}}}|&lt;!--
+ --&gt;{{#ifeq:{{{navbar|}}}|off|{{#ifeq:{{{state|}}}|plain|&lt;div style=&quot;float:right;width:6em;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}|&lt;!--
+ --&gt;{{#ifeq:{{{state|}}}|plain||&lt;div style=&quot;float:left; width:6em;text-align:left;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}}}|&lt;!--
+ --&gt;&lt;div style=&quot;float:left; width:6em;text-align:left;&quot;&gt;&lt;!--
+ --&gt;{{navbar|{{{name}}}|fontstyle={{{basestyle|}}};{{{titlestyle|}}};border:none;|mini=1}}&lt;!--
+ --&gt;&lt;/div&gt;{{#ifeq:{{{state|}}}|plain|&lt;div style=&quot;float:right;width:6em;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}}}&lt;!--
+
+ --&gt;&lt;span style=&quot;font-size:{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=100|#default=110}}%;&quot;&gt;&lt;!--
+ --&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Above---
+--&gt;{{#if:{{{above|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+ --&gt;&lt;tr&gt;&lt;td class=&quot;navbox-abovebelow&quot; style=&quot;{{{basestyle|}}};{{{abovestyle|}}}&quot; &lt;!--
+ --&gt;colspan=&quot;{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}&quot;&gt;{{{above}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Body---
+
+---First group/list and images---
+--&gt;{{#if:{{{list1|}}}|{{#if:{{{title|}}}{{{above|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|&lt;!--
+ --&gt;&lt;td style=&quot;width:0%;padding:0px 2px 0px 0px;{{{imageleftstyle|}}}&quot; &lt;!--
+ --&gt;rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}}&gt;&lt;!--
+ --&gt;{{{imageleft}}}&lt;/td&gt;}}&lt;!--
+
+ --&gt;{{#if:{{{group1|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group1style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group1}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list1style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{list1padding|{{{listpadding|0em 0.25em}}}}}}&quot;&gt;{{{list1}}}&lt;/div&gt;&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;!--
+ --&gt;&lt;td style=&quot;width:0%;padding:0px 0px 0px 2px;{{{imagestyle|}}}&quot; &lt;!--
+ --&gt;rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}}&gt;&lt;!--
+ --&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Remaining groups/lists---
+
+--&gt;{{#if:{{{list2|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}|&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group2|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group2style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group2}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list2style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list2}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list3|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}{{{list2|}}}|&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group3|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group3style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group3}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list3style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list3}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list4|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group4|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group4style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group4}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list4style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list4}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list5|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group5|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group5style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group5}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list5style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list5}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list6|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group6|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group6style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group6}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list6style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list6}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list7|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group7|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group7style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group7}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list7style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list7}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list8|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group8|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group8style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group8}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list8style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list8}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list9|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group9|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group9style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group9}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list9style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list9}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list10|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group10|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group10style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group10}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list10style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list10}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list11|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group11|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group11style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group11}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list11style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list11}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list12|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group12|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group12style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group12}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list12style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list12}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list13|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group13|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group13style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group13}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list13style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list13}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list14|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group14|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group14style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group14}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list14style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list14}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list15|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group15|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group15style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group15}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list15style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list15}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list16|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group16|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group16style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group16}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list16style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list16}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list17|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group17|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group17style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group17}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list17style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list17}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list18|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group18|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group18style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group18}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list18style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list18}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list19|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group19|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group19style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group19}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list19style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list19}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list20|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group20|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group20style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group20}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left:2px solid #fdfdfd;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list20style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list20}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+---Below---
+--&gt;{{#if:{{{below|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}{{{list2|}}}{{{list3|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+ --&gt;&lt;tr&gt;&lt;td class=&quot;navbox-abovebelow&quot; style=&quot;{{{basestyle|}}};{{{belowstyle|}}}&quot; &lt;!--
+ --&gt;colspan=&quot;{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}&quot;&gt;{{{below}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+--&gt;&lt;/table&gt;{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=&lt;div&gt;|none=|#default=&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;}}&lt;!--
+
+--&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/tz</title>
+    <id>10761529</id>
+    <revision>
+      <id>163679482</id>
+      <timestamp>2007-10-10T23:08:17Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <comment>protected template notice</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{precision/tz/1|x{{{1}}}|x{{#expr:{{{1}}}+0}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision/tz/1</title>
+    <id>10761531</id>
+    <revision>
+      <id>163679488</id>
+      <timestamp>2007-10-10T23:08:21Z</timestamp>
+      <contributor>
+        <username>Zzuuzz</username>
+        <id>365454</id>
+      </contributor>
+      <comment>protected template notice</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#switch:{{{1}}}|{{{2}}}|{{{2}}}.=0|{{{2}}}0|{{{2}}}.0=1|{{{2}}}00|{{{2}}}.00=2|{{{2}}}000|{{{2}}}.000=3|{{{2}}}0000|{{{2}}}.0000=4|{{{2}}}00000|{{{2}}}.00000=5|0}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Precision1</title>
+    <id>10530588</id>
+    <revision>
+      <id>168653823</id>
+      <timestamp>2007-11-02T02:58:42Z</timestamp>
+      <contributor>
+        <username>Bryan Derksen</username>
+        <id>66</id>
+      </contributor>
+      <comment>moving categorization to doc page</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#expr:{{#ifeq:{{{1}}}|0|0|{{#ifexpr:{{{1}}} round 0={{{1}}}|0|{{#ifexpr:{{{1}}} round 1={{{1}}}|1|{{#ifexpr:{{{1}}} round 2={{{1}}}|2|{{#ifexpr:{{{1}}} round 3={{{1}}}|3|{{#ifexpr:{{{1}}} round 4={{{1}}}|4|{{#ifexpr:{{{1}}} round 5={{{1}}}|5|6}}}}}}}}}}}}}}+{{precision/tz|{{{1}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;{{pp-template}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <revision>
+      <id>246409010</id>
+      <timestamp>2008-10-20T01:28:44Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Adding div classes per editprotected on talk by [[User:Anomie|Anomie]] using change from http://en.wikipedia.org/w/index.php?title=User:Anomie/Sandbox3&amp;diff=244821255&amp;oldid=244820528</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small {{#if: {{{colwidth|}}} | references-column-width | {{#iferror: {{#ifexpr: {{{1|1}}}&gt;1 | references-column-count references-column-count-{{{1}}} }} }} }}&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; column-count:{{{1}}};&quot; }} }}&gt;
+{{#tag:references||group={{{group|}}}}}&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Transclude</title>
+    <id>21843384</id>
+    <revision>
+      <id>275377931</id>
+      <timestamp>2009-03-06T12:09:04Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Transclude: [[WP:HRT|Highly visible template]] ([edit=sysop] (indefinite) [move=sysop] (indefinite))</comment>
+      <text xml:space="preserve">{{#switch: {{NAMESPACE: {{{1}}} }}
+ |#default = {{FULLPAGENAME: {{{1}}} }} &lt;!-- eg &quot;User:Foo&quot; --&gt;
+ |{{ns:0}} = 
+    {{#ifeq: {{NAMESPACE: {{{1}}} }} | {{NAMESPACE: Template{{{1}}} }}
+      | Template:{{{1}}}            &lt;!-- no leading colon, eg &quot;Foo&quot; --&gt;
+      | {{PAGENAME: {{{1}}} }}      &lt;!-- leading colon, eg &quot;:Foo&quot;, so we want the article --&gt;
+    }}
+}}&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Uppsala County</title>
+    <id>477324</id>
+    <revision>
+      <id>285331445</id>
+      <timestamp>2009-04-21T22:41:46Z</timestamp>
+      <contributor>
+        <username>DerBorg</username>
+        <id>5965514</id>
+      </contributor>
+      <minor/>
+      <comment>fix</comment>
+      <text xml:space="preserve">{{navbox
+|name  = Uppsala County
+|title = [[Municipalities of Sweden|Municipalities]] and seats of [[Uppsala County]]
+|image = [[File:Uppsala läns vapen.png|30px|Coat of arms of Uppsala County]]
+
+|group1 = Municipalities
+|list1 = [[Älvkarleby Municipality|Älvkarleby]]{{·}} [[Enköping Municipality|Enköping]]{{·}} [[Håbo Municipality|Håbo]]{{·}} [[Heby Municipality|Heby]]{{·}} [[Knivsta Municipality|Knivsta]]{{·}} [[Östhammar Municipality|Östhammar]]{{·}} [[Tierp Municipality|Tierp]]{{·}} [[Uppsala Municipality|Uppsala]]
+
+|group2 = Municipal seats
+|list2 = [[Bålsta]]{{·}} [[Enköping]]{{·}} [[Heby]]{{·}} [[Knivsta]]{{·}} [[Östhammar]]{{·}} [[Skutskär]]{{·}} [[Tierp]]{{·}} [[Uppsala]]
+
+|below = [[Counties of Sweden]]{{·}} [[Sweden]]
+}}&lt;noinclude&gt;
+
+[[Category:Sweden municipality templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·</title>
+    <id>7599646</id>
+    <revision>
+      <id>238885972</id>
+      <timestamp>2008-09-16T21:04:35Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Removed unneeded includeonly tags, and changed from using the redirect {{template doc}} to directly using {{documentation}}.</comment>
+      <text xml:space="preserve">&lt;span style=&quot;font-weight:bold;&quot;&gt;&amp;nbsp;·&lt;/span&gt; &lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

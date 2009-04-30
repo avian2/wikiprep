@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <gum>
-<page id="1" timestamp="" orglength="95" newlength="2" stub="0" disambig="0" category="0" image="0">
+<page id="1" timestamp="" orglength="95" newlength="1" stub="0" disambig="0" category="0" image="0">
 <title>Test</title>
 <categories></categories>
 <links></links>
@@ -23,8 +23,6 @@
 <parameter name="5">Alicante (province)</parameter>
 </include>
 </template>
-</templates><text>
-
-</text>
+</templates><text> </text>
 </page>
 </gum>

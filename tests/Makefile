@@ -51,7 +51,8 @@ LOGS =	images.log \
 	interwiki-new.log \
 	headings.log \
 	dblredir.log \
-	otheruses.log
+	otheruses.log \
+	geo.log
 
 OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 
