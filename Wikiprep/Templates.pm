@@ -373,10 +373,7 @@ sub includeTemplates {
   &replaceTags($refToText, \%nowikiChunksReplaced);
   &replaceTags($refToText, \%preChunksReplaced);
 
-  # print LOGF "Finished with templates level $templateRecursionLevel\n";
-  # print LOGF "#########\n\n";
-  # print LOGF "$text";
-  # print LOGF "#########\n\n";
+  # LOG->debug("##### $new_text");
   
   my $text_len = length $new_text;
   LOG->debug("text length after templates level ", $templateRecursionLevel, ": ", $text_len, " bytes");
