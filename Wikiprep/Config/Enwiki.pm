@@ -122,7 +122,8 @@ $disambigTemplates = qr/disambiguation|
                         schooldis|
                         hospitaldis|
                         mathdab|
-                        numberdis/ix;
+                        numberdis|
+                        given name/ix;
 
 # Regular expression that matches titles of disambiguation articles.
 
