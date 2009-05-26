@@ -62,7 +62,7 @@ test: clean $(LOGS) compare
 
 %.log: %.xml
 	perl ../wikiprep.pl -log debug $(OPTIONS) -f $<
-	for n in `basename $< .xml`*.xml; do xmllint --noout $$n; done
+	for n in `basename $< .xml`*.xml; do xmllint --noout $$n || exit 1; done
 clean:
 	rm -f *.anchor_text
 	rm -f *.anchor_text.sorted
