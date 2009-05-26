@@ -232,6 +232,11 @@ sub extractWikiLinks {
     # empty trailing fields (important for pipeline masking)
     my ($firstField, @pipeFields) = split(/\|/, $link, -1);
 
+    # Nested link before the first | is illegal.
+    if( $firstField =~ /\.pAriD=~/ ) {
+      return $prefix . $link . $suffix;
+    }
+
     # The fields before the first pipe character is the link destination.
     my ($linkNamespace, $linkTitleSection) = &normalizeNamespaceTitle($firstField);
 

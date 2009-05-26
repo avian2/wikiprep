@@ -54,6 +54,10 @@
 
 		    [[Image:Juhu.jpg|100px|[[Gu]]|right]]
 
+		    <!-- broken syntax should still generate valid XML -->
+		    [[Image:Juhu.jpg[[Gu]]]]
+		    [[Gu[[Gu]]]]
+
 		    [[Image:J.jpg|]]
 
 		    [[Image:]]
@@ -74,6 +78,10 @@
 		    [[File:Hello.jpg|100px|Arg|left]]
 
 		    [[File:Juhu.jpg|100px|[[Gu]]|right]]
+
+		    <!-- broken syntax should still generate valid XML -->
+		    [[File:Juhu.jpg[[Gu]]]]
+		    [[Gu[[Gu]]]]
 
 		    [[File:J.jpg|]]
 

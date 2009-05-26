@@ -19,7 +19,7 @@
 <interwiki></interwiki>
 <templates></templates><text></text>
 </page>
-<page id="5" timestamp="" orglength="289" newlength="286" stub="0" disambig="0" category="0" image="0">
+<page id="5" timestamp="" orglength="347" newlength="343" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links>2 3</links>
@@ -35,13 +35,16 @@
 
 <w namespace="File" title="Juhu.jpg"><a id="2">Gu</a></w>
 
+Image:Juhu.<a id="2">jpgGu</a>
+		    <a id="2">GuGu</a>
+
 <a id="3"></a>
 
 something
 		    something
 	    </text>
 </page>
-<page id="6" timestamp="" orglength="281" newlength="286" stub="0" disambig="0" category="0" image="0">
+<page id="6" timestamp="" orglength="338" newlength="342" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriB</title>
 <categories></categories>
 <links>2 3</links>
@@ -56,6 +59,9 @@ something
 <w namespace="File" title="Hello.jpg">Arg</w>
 
 <w namespace="File" title="Juhu.jpg"><a id="2">Gu</a></w>
+
+File:Juhu.<a id="2">jpgGu</a>
+		    <a id="2">GuGu</a>
 
 <a id="3"></a>
 
