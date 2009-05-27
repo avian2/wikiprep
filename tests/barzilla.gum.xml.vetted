@@ -7,7 +7,9 @@
 <links></links>
 <related></related>
 <external></external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Barzillaclark.jpg" loc="317" />
+</interwiki>
 <templates>
 <template id="1432586">
 <include>

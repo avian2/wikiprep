@@ -11,7 +11,13 @@
 <link url="http://www.asse.be">Official website</link>
 <link url="http://joan-of-arc-studies.org/index.php?Gazetteer-Asse">Gazetteer Entry for Asse</link>
 </external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Flag of Asse.svg" loc="337" />
+<link namespace="File" title="Assemartinuskerk.jpg" loc="454" />
+<link namespace="File" title="Asse.jpg" loc="608" />
+<link namespace="File" title="Flag of Belgium (civil).svg" loc="904" />
+<link namespace="File" title="AsseLocatie.png" loc="656" />
+</interwiki>
 <templates>
 <template id="5623267">
 <include>

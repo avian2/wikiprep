@@ -25,7 +25,12 @@
 <links>2 3</links>
 <related></related>
 <external></external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Hello.jpg" loc="7" />
+<link namespace="File" title="Hello.jpg" loc="55" />
+<link namespace="File" title="Hello.jpg" loc="107" />
+<link namespace="File" title="Juhu.jpg" loc="132" />
+</interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
 
@@ -50,7 +55,12 @@ something
 <links>2 3</links>
 <related></related>
 <external></external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Hello.jpg" loc="7" />
+<link namespace="File" title="Hello.jpg" loc="54" />
+<link namespace="File" title="Hello.jpg" loc="105" />
+<link namespace="File" title="Juhu.jpg" loc="132" />
+</interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
 

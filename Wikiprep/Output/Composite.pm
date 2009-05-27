@@ -174,9 +174,12 @@ sub newPage {
   $writer->endTag("external");
 
   $writer->startTag("interwiki");
-  for my $link (@{$page->{interwikiLinks}}) {
-      $writer->emptyTag("link", wiki  => $link->{targetWiki},
-                                title => $link->{targetTitle} );
+  for my $link (@{$page->{wikiLinks}}) {
+      if( exists( $link->{targetNamespace} ) ) {
+        $writer->emptyTag("link", namespace => $link->{targetNamespace},
+                                  title     => $link->{targetTitle},
+                                  loc       => $link->{linkLocation} );
+      }
   }
   $writer->endTag("interwiki");
 

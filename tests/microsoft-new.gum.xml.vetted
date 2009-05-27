@@ -42,7 +42,10 @@
 <link url="http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx" />
 <link url="http://www.microsoft.com/presspass/inside_ms.mspx" />
 </external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Microsoft wordmark.svg" loc="255" />
+<link namespace="File" title="Microsoft logo.svg" loc="12622" />
+</interwiki>
 <templates>
 <template id="4148498">
 <include>

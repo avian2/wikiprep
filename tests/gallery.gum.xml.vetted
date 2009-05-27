@@ -29,7 +29,20 @@
 <links>1</links>
 <related></related>
 <external></external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Flevoland-Position.png" loc="90" />
+<link namespace="File" title="Gelderland-Position.png" loc="239" />
+<link namespace="File" title="Groningen-Position.png" loc="273" />
+<link namespace="File" title="Limburg-Position.png" loc="305" />
+<link namespace="File" title="Noord Brabant-Position.png" loc="335" />
+<link namespace="File" title="Noord Holland-Position.png" loc="372" />
+<link namespace="File" title="Overijssel-Position.png" loc="408" />
+<link namespace="File" title="Utrecht-Position.png" loc="537" />
+<link namespace="File" title="Zeeland-Position.png" loc="567" />
+<link namespace="File" title="Drenthe-Position.png" loc="7" />
+<link namespace="File" title="Friesland-Position.png" loc="97" />
+<link namespace="File" title="Zuid Holland-Position.png" loc="370" />
+</interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </w>
 <w namespace="File" title="Flevoland-Position.png"></w>
@@ -52,7 +65,20 @@ File:Friesland-Position.<a id="1">pngFriesland</a> is beautiful
 <links>1</links>
 <related></related>
 <external></external>
-<interwiki></interwiki>
+<interwiki>
+<link namespace="File" title="Flevoland-Position.png" loc="90" />
+<link namespace="File" title="Gelderland-Position.png" loc="239" />
+<link namespace="File" title="Groningen-Position.png" loc="273" />
+<link namespace="File" title="Limburg-Position.png" loc="305" />
+<link namespace="File" title="Noord Brabant-Position.png" loc="335" />
+<link namespace="File" title="Noord Holland-Position.png" loc="372" />
+<link namespace="File" title="Overijssel-Position.png" loc="408" />
+<link namespace="File" title="Utrecht-Position.png" loc="537" />
+<link namespace="File" title="Zeeland-Position.png" loc="567" />
+<link namespace="File" title="Drenthe-Position.png" loc="7" />
+<link namespace="File" title="Friesland-Position.png" loc="97" />
+<link namespace="File" title="Zuid Holland-Position.png" loc="370" />
+</interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Drenthe-Position.png">Drenthe, the least crowded province   </w>
 <w namespace="File" title="Flevoland-Position.png"></w>
