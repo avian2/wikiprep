@@ -187,13 +187,13 @@ sub newPage {
   while(my ($templateId, $log) = each(%{$page->{templates}})) {
     $writer->startTag("template", id => $templateId);
     for my $refToParameterHash (@$log) {
-      $writer->startTag("include");
+      $writer->startTag("incl");
       while( my ($parameter, $value) = each(%$refToParameterHash) ) {
         if($parameter !~ /^=/) {
-          $writer->dataElement("parameter", $value, name => $parameter)
+          $writer->dataElement("param", $value, name => $parameter)
         }
       }
-      $writer->endTag("include");
+      $writer->endTag("incl");
     }
     $writer->endTag("template");
   }

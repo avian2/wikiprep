@@ -20,36 +20,36 @@
 </interwiki>
 <templates>
 <template id="5623267">
-<include>
-<parameter name="mayor">Koen Van Elsen ([[Christian Democratic &amp; Flemish|CD&amp;V]])</parameter>
-<parameter name="20-64">59.22</parameter>
-<parameter name="flag">Flag of Asse.svg</parameter>
-<parameter name="web">[http://www.asse.be/ www.asse.be]</parameter>
-<parameter name="map">AsseLocatie.png</parameter>
-<parameter name="community">{{BE-NL}}</parameter>
-<parameter name="lat_deg">50</parameter>
-<parameter name="nis">23002</parameter>
-<parameter name="picture-legend">Sint-Martinuskerk</parameter>
-<parameter name="lon_deg">04</parameter>
-<parameter name="majority">[[Christian Democratic and Flemish|CD&amp;V]], [[Flemish Liberals and Democrats|VLD]], [[Socialist Party – Different|SP.A]]</parameter>
-<parameter name="pyramid-date">01/01/2006</parameter>
-<parameter name="arms">Asse.jpg</parameter>
-<parameter name="province">{{BE-PROV-VB}}</parameter>
-<parameter name="lat_min">54</parameter>
-<parameter name="65">17.68</parameter>
-<parameter name="postal-codes">1730, 1731</parameter>
-<parameter name="picture">Assemartinuskerk.jpg</parameter>
-<parameter name="picture-width">260px</parameter>
-<parameter name="name">Asse</parameter>
-<parameter name="map-legend">Asse in the Province of [[Flemish Brabant]]</parameter>
-<parameter name="region">{{BE-REG-FLE}}</parameter>
-<parameter name="lon_min">12</parameter>
-<parameter name="foreigners">4.80</parameter>
-<parameter name="0-19">23.09</parameter>
-<parameter name="foreigners-date">01/07/2005</parameter>
-<parameter name="arrondissement">[[Halle-Vilvoorde administrative Arrondissement|Halle-Vilvoorde]]</parameter>
-<parameter name="telephone-area">052 - 02</parameter>
-</include>
+<incl>
+<param name="mayor">Koen Van Elsen ([[Christian Democratic &amp; Flemish|CD&amp;V]])</param>
+<param name="20-64">59.22</param>
+<param name="flag">Flag of Asse.svg</param>
+<param name="web">[http://www.asse.be/ www.asse.be]</param>
+<param name="map">AsseLocatie.png</param>
+<param name="community">{{BE-NL}}</param>
+<param name="lat_deg">50</param>
+<param name="nis">23002</param>
+<param name="picture-legend">Sint-Martinuskerk</param>
+<param name="lon_deg">04</param>
+<param name="majority">[[Christian Democratic and Flemish|CD&amp;V]], [[Flemish Liberals and Democrats|VLD]], [[Socialist Party – Different|SP.A]]</param>
+<param name="pyramid-date">01/01/2006</param>
+<param name="arms">Asse.jpg</param>
+<param name="province">{{BE-PROV-VB}}</param>
+<param name="lat_min">54</param>
+<param name="65">17.68</param>
+<param name="postal-codes">1730, 1731</param>
+<param name="picture">Assemartinuskerk.jpg</param>
+<param name="picture-width">260px</param>
+<param name="name">Asse</param>
+<param name="map-legend">Asse in the Province of [[Flemish Brabant]]</param>
+<param name="region">{{BE-REG-FLE}}</param>
+<param name="lon_min">12</param>
+<param name="foreigners">4.80</param>
+<param name="0-19">23.09</param>
+<param name="foreigners-date">01/07/2005</param>
+<param name="arrondissement">[[Halle-Vilvoorde administrative Arrondissement|Halle-Vilvoorde]]</param>
+<param name="telephone-area">052 - 02</param>
+</incl>
 </template>
 </templates><text>
 

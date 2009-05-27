@@ -10,15 +10,15 @@
 <interwiki></interwiki>
 <templates>
 <template id="4">
-<include>
-<parameter name="1">ž</parameter>
-</include>
-<include>
-<parameter name="1">ž</parameter>
-</include>
+<incl>
+<param name="1">ž</param>
+</incl>
+<incl>
+<param name="1">ž</param>
+</incl>
 </template>
 <template id="3">
-<include></include>
+<incl></incl>
 </template>
 </templates><text>
 		    <a id="2">abcdefghi</a> 

@@ -12,67 +12,67 @@
 </interwiki>
 <templates>
 <template id="1432586">
-<include>
-<parameter name="spouse">Ethel Peck</parameter>
-<parameter name="successor">[[C. A. Bottolfsen]]</parameter>
-<parameter name="predecessor">[[C. Ben Ross]]</parameter>
-<parameter name="term_start">[[January 4]], [[1937]]</parameter>
-<parameter name="profession">[[Engineer]]</parameter>
-<parameter name="caption"></parameter>
-<parameter name="order">16&lt;sup&gt;th&lt;/sup&gt;</parameter>
-<parameter name="religion">[[Methodism|Methodist]]</parameter>
-<parameter name="birth_place">{{flagicon|Indiana}} [[Hendricks County, Indiana|Hendricks County]], [[Indiana]]</parameter>
-<parameter name="name">Barzilla W. Clark</parameter>
-<parameter name="death_date">{{death date and age|1943|9|21|1880|12|22}}</parameter>
-<parameter name="party">[[Democratic Party (United States)|Democrat]]</parameter>
-<parameter name="residence">[[idaho Falls, Idaho|Idaho Falls]]</parameter>
-<parameter name="birth_date">{{birth date|1880|12|22|mf=y}}</parameter>
-<parameter name="death_place">{{flagicon|Idaho}} [[Idaho Falls, Idaho|Idaho Falls]], [[Idaho]]</parameter>
-<parameter name="footnotes"></parameter>
-<parameter name="image">Barzillaclark.jpg</parameter>
-<parameter name="lieutenant">[[Charles C. Gossett]]</parameter>
-<parameter name="office">Governor of Idaho</parameter>
-<parameter name="term_end">[[January 2]], [[1939]]</parameter>
-</include>
+<incl>
+<param name="spouse">Ethel Peck</param>
+<param name="successor">[[C. A. Bottolfsen]]</param>
+<param name="predecessor">[[C. Ben Ross]]</param>
+<param name="term_start">[[January 4]], [[1937]]</param>
+<param name="profession">[[Engineer]]</param>
+<param name="caption"></param>
+<param name="order">16&lt;sup&gt;th&lt;/sup&gt;</param>
+<param name="religion">[[Methodism|Methodist]]</param>
+<param name="birth_place">{{flagicon|Indiana}} [[Hendricks County, Indiana|Hendricks County]], [[Indiana]]</param>
+<param name="name">Barzilla W. Clark</param>
+<param name="death_date">{{death date and age|1943|9|21|1880|12|22}}</param>
+<param name="party">[[Democratic Party (United States)|Democrat]]</param>
+<param name="residence">[[idaho Falls, Idaho|Idaho Falls]]</param>
+<param name="birth_date">{{birth date|1880|12|22|mf=y}}</param>
+<param name="death_place">{{flagicon|Idaho}} [[Idaho Falls, Idaho|Idaho Falls]], [[Idaho]]</param>
+<param name="footnotes"></param>
+<param name="image">Barzillaclark.jpg</param>
+<param name="lieutenant">[[Charles C. Gossett]]</param>
+<param name="office">Governor of Idaho</param>
+<param name="term_end">[[January 2]], [[1939]]</param>
+</incl>
 </template>
 <template id="4459157">
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
-<include></include>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
 </template>
 </templates><text>
 
