@@ -72,6 +72,8 @@
 	      [[Dummy]]
 	      [[Dummy|Dummy2]]
 	      [[Nested|Nested [[anchors]] and some [[more]]]]
+	      [[Sony|With
+newline and	tab]]
 
 	      [[Category:Bogus|This should be invisible]]
       </text>
