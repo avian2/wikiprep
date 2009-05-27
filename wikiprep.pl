@@ -581,6 +581,10 @@ sub transformOne {
   $page->{categories} = [];
   $page->{interwiki} = [];
 
+  if ( ! $optDontExtractUrls ) {
+    &extractUrls($page);
+  }
+
   &extractWikiLinks(\$page->{text}, $page->{wikiLinks}, $page->{interwiki}, $page->{categories});
     
   # Categories are listed at the end of articles, and therefore may mistakenly
@@ -593,10 +597,6 @@ sub transformOne {
   # We don't accumulate categories directly in a hash table, since this would not preserve
   # their original order of appearance.
   &removeDuplicatesAndSelf($page->{categories}, $page->{id});
-
-  if ( ! $optDontExtractUrls ) {
-    &extractUrls($page);
-  }
 
   &postprocessText(\$page->{text}, $page->{interwiki});
 

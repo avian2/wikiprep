@@ -72,6 +72,7 @@
 	      [[Dummy]]
 	      [[Dummy|Dummy2]]
 	      [[Nested|Nested [[anchors]] and some [[more]]]]
+	      [[Sony|With an [http://example.com external link] ]]
 	      [[Sony|With
 newline and	tab]]
 

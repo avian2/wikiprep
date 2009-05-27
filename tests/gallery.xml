@@ -65,6 +65,12 @@
 			    Image:Utrecht-Position.png
 			    Image:Zeeland-Position.png
 		    &lt;/gallery&gt;
+
+			Image:B.png|Not part of the gallery
+
+		    &lt;gallery&gt;
+		    	Image:A.png
+		    &lt;/gallery&gt;
 	    </text>
     </revision>
   </page>
