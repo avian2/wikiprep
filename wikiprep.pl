@@ -577,13 +577,13 @@ sub transformOne {
   # contain usable text for us.
   &removeMetadata(\$page->{text});
 
-  $page->{wikiLinks} = [];
-  $page->{categories} = [];
-  $page->{interwiki} = [];
-
   if ( ! $optDontExtractUrls ) {
     &extractUrls($page);
   }
+
+  $page->{wikiLinks} = [];
+  $page->{categories} = [];
+  $page->{interwiki} = [];
 
   &extractWikiLinks(\$page->{text}, $page->{wikiLinks}, $page->{interwiki}, $page->{categories});
     
@@ -637,7 +637,7 @@ BEGIN {
   # the first whitespace to the end of the bracketed expression.
 
   # Note that no whitespace is allowed before the URL.
-  my $urlSequence1 = qr/\[($urlRegex)(.*?)\]/;
+  my $urlSequence1 = qr/\[($urlRegex)\s*(.*?)\]/;
 
   # Implicit links are normal text that is recognized as a valid URL.
   my $urlSequence2 = qr/($urlRegex)/;

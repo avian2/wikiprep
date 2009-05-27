@@ -59,17 +59,19 @@
       
 </text>
 </page>
-<page id="4" orglength="192" newlength="149" stub="0" categories="1" outlinks="4" urls="0">
+<page id="4" orglength="252" newlength="193" stub="0" categories="1" outlinks="4" urls="1">
 <title>Test2</title>
 <categories>8</categories>
 <links>6 7 3 5</links>
 <urls>
+http://example.com
 </urls>
 <text>
 
 	      Dummy
 	      Dummy2
 	      <a id="5">Nested <a id="6">anchors</a> and some <a id="7">more</a></a>
+	      <a id="3">With an external link </a>
 	      <a id="3">With
 newline and	tab</a>
 

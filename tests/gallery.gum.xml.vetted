@@ -23,7 +23,7 @@
 		    x
 	    </text>
 </page>
-<page id="5" timestamp="" orglength="661" newlength="867" stub="0" disambig="0" category="0" image="0">
+<page id="5" timestamp="" orglength="754" newlength="944" stub="0" disambig="0" category="0" image="0">
 <title>AlgeriA</title>
 <categories></categories>
 <links>1</links>
@@ -37,8 +37,9 @@
 <link namespace="File" title="Noord Brabant-Position.png" loc="335"></link>
 <link namespace="File" title="Noord Holland-Position.png" loc="372"></link>
 <link namespace="File" title="Overijssel-Position.png" loc="408"></link>
-<link namespace="File" title="Utrecht-Position.png" loc="537"></link>
-<link namespace="File" title="Zeeland-Position.png" loc="567"></link>
+<link namespace="File" title="Utrecht-Position.png" loc="536"></link>
+<link namespace="File" title="Zeeland-Position.png" loc="566"></link>
+<link namespace="File" title="A.png" loc="643"></link>
 <link namespace="File" title="Drenthe-Position.png" loc="7">Drenthe, the least crowded province   </link>
 <link namespace="File" title="Friesland-Position.png" loc="97">Friesland is beautiful</link>
 <link namespace="File" title="Zuid Holland-Position.png" loc="370">South Holland, the most crowded province</link>
@@ -57,6 +58,10 @@ File:Friesland-Position.<a id="1">pngFriesland</a> is beautiful
 <w namespace="File" title="Zuid Holland-Position.png">South Holland, the most crowded province</w>
 <w namespace="File" title="Utrecht-Position.png"></w>
 <w namespace="File" title="Zeeland-Position.png"></w>
+
+Image:B.png|Not part of the gallery
+
+<w namespace="File" title="A.png"></w>
 	    </text>
 </page>
 <page id="4" timestamp="" orglength="651" newlength="867" stub="0" disambig="0" category="0" image="0">
@@ -73,8 +78,8 @@ File:Friesland-Position.<a id="1">pngFriesland</a> is beautiful
 <link namespace="File" title="Noord Brabant-Position.png" loc="335"></link>
 <link namespace="File" title="Noord Holland-Position.png" loc="372"></link>
 <link namespace="File" title="Overijssel-Position.png" loc="408"></link>
-<link namespace="File" title="Utrecht-Position.png" loc="537"></link>
-<link namespace="File" title="Zeeland-Position.png" loc="567"></link>
+<link namespace="File" title="Utrecht-Position.png" loc="536"></link>
+<link namespace="File" title="Zeeland-Position.png" loc="566"></link>
 <link namespace="File" title="Drenthe-Position.png" loc="7">Drenthe, the least crowded province   </link>
 <link namespace="File" title="Friesland-Position.png" loc="97">Friesland is beautiful</link>
 <link namespace="File" title="Zuid Holland-Position.png" loc="370">South Holland, the most crowded province</link>

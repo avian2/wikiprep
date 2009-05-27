@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="1061" newlength="636" stub="0" categories="0" outlinks="0" urls="13">
+<page id="1" orglength="1061" newlength="633" stub="0" categories="0" outlinks="0" urls="13">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -59,25 +59,25 @@ These aren&apos;t recognized as valid links by MediaWiki:
 
 Some valid anchors:
 
-5.  some text
-		    6.  some text 
-		    7.  mail me
+5. some text
+		    6. some text 
+		    7. mail me
 
 This is a bit broken markup:
 
 MediaWiki parses BikerMice 2006 as anchor
 
-7a.  2006&apos;&apos;
+7a. 2006&apos;&apos;
 
 In this case 2006&apos;&apos; is anchor, rest is URL
 
-7b.  2006&apos;&apos;
+7b. 2006&apos;&apos;
 
 Increasingly broken markup:
 
 8. |some text
-		    9.  some text 
-		   10.  some [ text ]
+		    9. some [[text] ]
+		   10. some [ text ]
 		   11.
 
 some text
