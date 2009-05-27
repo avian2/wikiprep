@@ -219,13 +219,13 @@ sub _logDisambig
 
     for my $anchor (@$disambigLinks) {
       if( defined( $anchor->{'targetId'} ) ) {
-        print $file "\t$anchor->{'targetId'}";
+        print $file "\t", $anchor->{'targetId'};
       } else {
         print $file "\tundef";
       }
       my $anchorText = $anchor->{'anchorText'};
       $anchorText =~ s/\t/ /g;
-      print $file "\t$anchorText";
+      print $file "\t", $anchorText;
     }
 
   	print $file "\n";
@@ -239,17 +239,23 @@ sub _logAnchorText
 
   # We remove the links that point from the page to itself.
   foreach my $AnchorArrayEntry (@{$page->{internalLinks}}) {
-    my $targetId = $AnchorArrayEntry->{targetId};
-    my $anchorText = $AnchorArrayEntry->{anchorText};
-    my $linkLocation = $AnchorArrayEntry->{linkLocation};
 
-    if (defined($targetId) and $targetId != $page->{id}) {
+    next unless( exists( $AnchorArrayEntry->{targetId} ) );
+
+    my $targetId = $AnchorArrayEntry->{targetId};
+    if ($targetId != $page->{id}) {
+
+      my $anchorText = $AnchorArrayEntry->{anchorText};
+
       $anchorText =~ s/\n/ /g;  # replace all newlines with spaces
 
-      $anchorText =~ s/^\s*//g;  # remove leading and trainling whitespace
-      $anchorText =~ s/\s*$//g;
+      $anchorText =~ s/^\s*//;  # remove leading and trainling whitespace
+      $anchorText =~ s/\s*$//;
 
-      print {$self->{anchorFile}} "$targetId\t$page->{id}\t$linkLocation\t$anchorText\n";
+      print {$self->{anchorFile}} $targetId, "\t", 
+                                  $page->{id}, "\t",
+                                  $AnchorArrayEntry->{linkLocation}, "\t",
+                                  $anchorText, "\n";
     }
   }
 }
