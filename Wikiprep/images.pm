@@ -22,7 +22,7 @@ sub convertGalleryToLink(\$) {
   # links in [[ ... ]] markup.
 
   1 while ( $$refToText =~ s/<gallery>
-                             ([^<]*)
+                             (.*?)
                              <\/gallery>
                             /&convertOneGallery($1)/segx
           );
