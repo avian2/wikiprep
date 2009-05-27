@@ -12,11 +12,11 @@
 <link url="http://joan-of-arc-studies.org/index.php?Gazetteer-Asse">Gazetteer Entry for Asse</link>
 </external>
 <interwiki>
-<link namespace="File" title="Flag of Asse.svg" loc="337" />
-<link namespace="File" title="Assemartinuskerk.jpg" loc="454" />
-<link namespace="File" title="Asse.jpg" loc="608" />
-<link namespace="File" title="Flag of Belgium (civil).svg" loc="904" />
-<link namespace="File" title="AsseLocatie.png" loc="656" />
+<link namespace="File" title="Flag of Asse.svg" loc="337">Municipal flag</link>
+<link namespace="File" title="Assemartinuskerk.jpg" loc="454">Sint-Martinuskerk</link>
+<link namespace="File" title="Asse.jpg" loc="608">Coat of arms</link>
+<link namespace="File" title="Flag of Belgium (civil).svg" loc="904"></link>
+<link namespace="File" title="AsseLocatie.png" loc="656">Asse in the Province of Flemish Brabant</link>
 </interwiki>
 <templates>
 <template id="5623267">

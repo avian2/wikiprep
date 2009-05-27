@@ -8,12 +8,12 @@
 <related></related>
 <external></external>
 <interwiki>
-<link namespace="Memoryalpha" title="A" loc="9" />
-<link namespace="Memoryalpha" title="Test" loc="89" />
-<link namespace="Memoryalpha" title="Test" loc="120" />
-<link namespace="Memoryalpha" title="Category: education" loc="152" />
-<link namespace="Memoryalpha" title="Test" loc="197" />
-<link namespace="Wowwiki" title="Sword of a Thousand Truths" loc="225" />
+<link namespace="Memoryalpha" title="A" loc="9">A</link>
+<link namespace="Memoryalpha" title="Test" loc="89">  MemoryAlpha: Test </link>
+<link namespace="Memoryalpha" title="Test" loc="120">Test</link>
+<link namespace="Memoryalpha" title="Category: education" loc="152">MemoryAlpha:  category:  education</link>
+<link namespace="Memoryalpha" title="Test" loc="197">test</link>
+<link namespace="Wowwiki" title="Sword of a Thousand Truths" loc="225">Sword</link>
 </interwiki>
 <templates>
 <template id="1090150">

@@ -176,9 +176,10 @@ sub newPage {
   $writer->startTag("interwiki");
   for my $link (@{$page->{wikiLinks}}) {
       if( exists( $link->{targetNamespace} ) ) {
-        $writer->emptyTag("link", namespace => $link->{targetNamespace},
-                                  title     => $link->{targetTitle},
-                                  loc       => $link->{linkLocation} );
+        $writer->dataElement("link", $link->{anchorText},
+                                     namespace => $link->{targetNamespace},
+                                     title     => $link->{targetTitle},
+                                     loc       => $link->{linkLocation} );
       }
   }
   $writer->endTag("interwiki");

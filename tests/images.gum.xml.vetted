@@ -26,10 +26,10 @@
 <related></related>
 <external></external>
 <interwiki>
-<link namespace="File" title="Hello.jpg" loc="7" />
-<link namespace="File" title="Hello.jpg" loc="55" />
-<link namespace="File" title="Hello.jpg" loc="107" />
-<link namespace="File" title="Juhu.jpg" loc="132" />
+<link namespace="File" title="Hello.jpg" loc="7">This is a cool image</link>
+<link namespace="File" title="Hello.jpg" loc="55">Another cool image</link>
+<link namespace="File" title="Hello.jpg" loc="107">Arg</link>
+<link namespace="File" title="Juhu.jpg" loc="132">Gu</link>
 </interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
@@ -56,10 +56,10 @@ something
 <related></related>
 <external></external>
 <interwiki>
-<link namespace="File" title="Hello.jpg" loc="7" />
-<link namespace="File" title="Hello.jpg" loc="54" />
-<link namespace="File" title="Hello.jpg" loc="105" />
-<link namespace="File" title="Juhu.jpg" loc="132" />
+<link namespace="File" title="Hello.jpg" loc="7">This is a cool image</link>
+<link namespace="File" title="Hello.jpg" loc="54">Another cool image</link>
+<link namespace="File" title="Hello.jpg" loc="105">Arg</link>
+<link namespace="File" title="Juhu.jpg" loc="132">Gu</link>
 </interwiki>
 <templates></templates><text>
 		    <w namespace="File" title="Hello.jpg">This is a cool image</w>
