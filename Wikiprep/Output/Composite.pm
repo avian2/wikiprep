@@ -141,7 +141,7 @@ sub newPage {
   my ($page) = @_;
 
   my @internalLinks;
-  &getLinkIds(\@internalLinks, $page->{internalLinks});
+  &getLinkIds(\@internalLinks, $page->{wikiLinks});
   &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
   my $writer = $self->{gumWriter};
@@ -238,7 +238,7 @@ sub _logAnchorText
   my ($page) = @_;
 
   # We remove the links that point from the page to itself.
-  foreach my $AnchorArrayEntry (@{$page->{internalLinks}}) {
+  foreach my $AnchorArrayEntry (@{$page->{wikiLinks}}) {
 
     next unless( exists( $AnchorArrayEntry->{targetId} ) );
 

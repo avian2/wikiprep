@@ -76,7 +76,7 @@ sub getLinkIds(\@\@) {
   my ($refToLinkIds, $refToInternalLinks) = @_;
 
   for my $link (@$refToInternalLinks) {
-    if( defined( $link->{targetId} ) ) {
+    if( exists( $link->{targetId} ) ) {
       push(@$refToLinkIds, $link->{targetId});
     }
   }

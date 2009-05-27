@@ -577,11 +577,11 @@ sub transformOne {
   # contain usable text for us.
   &removeMetadata(\$page->{text});
 
-  $page->{internalLinks} = [];
+  $page->{wikiLinks} = [];
   $page->{categories} = [];
   $page->{interwiki} = [];
 
-  &extractWikiLinks(\$page->{text}, $page->{internalLinks}, $page->{interwiki}, $page->{categories});
+  &extractWikiLinks(\$page->{text}, $page->{wikiLinks}, $page->{interwiki}, $page->{categories});
     
   # Categories are listed at the end of articles, and therefore may mistakenly
   # be added to the list of related articles (which often appear in the last

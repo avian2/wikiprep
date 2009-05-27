@@ -154,7 +154,7 @@ sub _logAnchorText
   my ($page) = @_;
 
   # We remove the links that point from the page to itself.
-  foreach my $AnchorArrayEntry (@{$page->{internalLinks}}) {
+  foreach my $AnchorArrayEntry (@{$page->{wikiLinks}}) {
     my $targetId = $AnchorArrayEntry->{targetId};
     my $anchorText = $AnchorArrayEntry->{anchorText};
     my $linkLocation = $AnchorArrayEntry->{linkLocation};
@@ -222,7 +222,7 @@ sub _writePage
   my $numCategories = scalar(@{$page->{categories}});
 
   my @internalLinks;
-  &getLinkIds(\@internalLinks, $page->{internalLinks});
+  &getLinkIds(\@internalLinks, $page->{wikiLinks});
   &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
   my @urls;

@@ -32,7 +32,7 @@ sub updateStatistics {
 
   my @internalLinks;
 
-  &getLinkIds(\@internalLinks, $page->{internalLinks});
+  &getLinkIds(\@internalLinks, $page->{wikiLinks});
   &removeDuplicatesAndSelf(\@internalLinks, $page->{id});
 
   for my $link (@internalLinks) {
