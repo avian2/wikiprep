@@ -323,13 +323,16 @@ sub extractWikiLinks {
     if( not $targetId ) {
       if( $linkNamespace and exists( $Wikiprep::Config::okNamespacesForInterwikiLinks{$linkNamespace} ) ) {
 
-        push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]) if $refToAnchorTextArray;
+        if( $refToInterwikiArray ) {
+          push(@$refToInterwikiArray, [ $linkNamespace, $linkTitle ]);
 
-        $anchorStruct{targetNamespace} = $linkNamespace;
-        $anchorStruct{targetTitle} = $linkTitle;
+          $anchorStruct{targetNamespace} = $linkNamespace;
+          $anchorStruct{targetTitle} = $linkTitle;
 
-        $targetId = "!$#$refToInterwikiArray";
-
+          $targetId = "!$#$refToInterwikiArray";
+        } else {
+          $anchor = "";
+        }
       } elsif( $noAltText && $link =~ /:/ ) {
         $anchor = "";
         LOG->info("Discarding text for link '", $link, "'");
