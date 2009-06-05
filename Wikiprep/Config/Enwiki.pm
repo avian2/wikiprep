@@ -44,6 +44,13 @@ $relatedWording_Standalone = qr/Main(?:\s+)article(?:s?)|
                                 See(?:\s+)also|
                                 For(?:\s+)(?:more|further)/ix;
 
+# {{Int:Lang}} appears to expand to the language setting of the browser.
+# Set it to "en" here so that the multilanguage templates expand properly.
+
+%overrideTemplates = (
+                        'Template:Int:Lang' => 'en'
+                     );
+
 ## For(?:\s+)more(?:\s+)(?:background|details)(?:\s+)on(?:\s+)this(?:\s+)topic,(?:\s+)see
                   
 # Can appear anywhere in text, but must be enclosed in parentheses.
