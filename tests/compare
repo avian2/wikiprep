@@ -12,8 +12,10 @@ for vettedfile in *.vetted; do
 
 	if diff -u "$vettedfile" "$basefile"; then
 		good=$(($good+1))
-#	else
-#		mv "$basefile" "$vettedfile"
+	else
+		if [ "$1" = "fix" ]; then
+			mv "$basefile" "$vettedfile"
+		fi
 	fi
 done
 
