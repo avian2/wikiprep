@@ -18,10 +18,6 @@ our @EXPORT_OK = qw( includeParserFunction );
 # {{FULLPAGENAME}} returns full name of the page (including the 
 # namespace prefix. {{PAGENAME}} returns only the title.
 
-# Also consider supporting {{SERVER}}, which is used to construct edit
-# links in some stub templates (external URLs aren't removed properly
-# without it)
-
 my %magicWords = (
 
   # {{pagename}} returns the name of the current page. 
@@ -48,6 +44,10 @@ my %magicWords = (
                   my $result = $page->{title};
                   $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
                   return $result;
+                },
+
+  'SERVER' => sub {
+                  return "http://wikiprep.example.com";
                 },
 );
 
