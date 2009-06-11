@@ -122,6 +122,7 @@ $imageNamespace = 'File';
 $disambigTemplates = qr/disambiguation|
                         disambig|
                         disambig-cleanup|
+                        disamb|
                         dab|
                         hndis|
                         surname|
