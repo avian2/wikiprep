@@ -896,7 +896,7 @@ BEGIN {
                                  #  "<table border=0> aaa <table> bbb </table> ccc </table>"
                                  #  $1 is NOT extended to be "> aaa <table"
 
-  my $tableClosingSequence1 = qr/<\/table>/i;
+  my $tableClosingSequence1 = qr/<\/table\s*>/i;
 #  my $nonNestedTableRegex1 =
 #    qr{$tableOpeningSequence1            # opening sequence
 #       (

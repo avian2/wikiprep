@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<gum>
+<page id="12617206" timestamp="2009-03-11T22:46:44Z" orglength="582" newlength="121" stub="1" disambig="0" category="0" image="0">
+<title>Limnotilapia</title>
+<categories></categories>
+<links></links>
+<related></related>
+<external>
+<link url="http://wikiprep.example.com/w/index.php?stub&amp;title=Limnotilapia&amp;action=edit">expanding it</link>
+</external>
+<interwiki>
+<link namespace="File" title="Sagalgm0.png" loc="3326"></link>
+</interwiki>
+<templates>
+<template id="12033623">
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+<incl>
+<param name="1">[[Animalia]]</param>
+</incl>
+</template>
+<template id="4459157">
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+<incl></incl>
+</template>
+<template id="689990">
+<incl>
+<param name="tribus">[[Tropheini]]</param>
+<param name="familia">[[Cichlidae]]</param>
+<param name="genus">'''''Limnotilapia'''''</param>
+<param name="name">Limnotilapia</param>
+<param name="ordo">[[Perciformes]]</param>
+<param name="classis">[[Actinopterygii]]</param>
+<param name="image"></param>
+<param name="regnum">[[Animalia]]</param>
+<param name="subfamilia">[[Pseudocrenilabrinae]]</param>
+<param name="phylum">[[Chordata]]</param>
+</incl>
+</template>
+<template id="7557501">
+<incl></incl>
+</template>
+</templates><text>
+
+Limnotilapia is a genus of fish in the Cichlidae family. 
+It contains the following species:
+* Limnotilapia dardennii
+
+</text>
+</page>
+</gum>

@@ -6,3 +6,4 @@ barzilla.xml: -format composite
 gallery.xml: -format composite
 images.xml: -format composite
 unicode.xml: -format composite
+stub.xml: -format composite
