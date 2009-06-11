@@ -637,7 +637,7 @@ BEGIN {
   # the first whitespace to the end of the bracketed expression.
 
   # Note that no whitespace is allowed before the URL.
-  my $urlSequence1 = qr/\[($urlRegex)\s*(.*?)\]/;
+  my $urlSequence1 = qr/\[($urlRegex)(.*?)\]/;
 
   # Implicit links are normal text that is recognized as a valid URL.
   my $urlSequence2 = qr/($urlRegex)/;
@@ -684,7 +684,7 @@ BEGIN {
       } else {
         push(@{$page->{externalLinks}}, { url => $url } );
       }
-      return $anchor;
+      return $anchorTrimmed;
     } else {
       # Return the original string, just like MediaWiki does.
       return "[$url$anchor]";
