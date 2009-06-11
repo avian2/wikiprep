@@ -249,12 +249,12 @@ sub instantiateTemplate {
     # Some {{#switch ... }} statements are excesivelly long and usually do not produce anything
     # useful. Plus they can cause segfauls in older versions of Perl.
 
-    LOG->info("ignoring long template invocation: ", $refToTemplateInvocation);
+    LOG->info("ignoring long template invocation: " . $refToTemplateInvocation);
     return "";
   }
 
-  LOG->debug("template recursion level ", $templateRecursionLevel);
-  LOG->debug("instantiating template: ", $$refToTemplateInvocation);
+  LOG->debug("template recursion level " . $templateRecursionLevel);
+  LOG->debug("instantiating template: " . $$refToTemplateInvocation);
 
   # The template name extends up to the first pipeline symbol (if any).
   # Template parameters go after the "|" symbol.
@@ -290,7 +290,7 @@ sub instantiateTemplate {
     &normalizeTitle(\$templateTitle, $Wikiprep::Config::templateNamespace);
 
     if(exists $Wikiprep::Config::overrideTemplates{$templateTitle}) {
-      LOG->info("overriding template: ", $templateTitle);
+      LOG->info("overriding template: " . $templateTitle);
       return $Wikiprep::Config::overrideTemplates{$templateTitle};
     }
   
@@ -376,7 +376,7 @@ sub includeTemplates {
   # LOG->debug("##### $new_text");
   
   my $text_len = length $new_text;
-  LOG->debug("text length after templates level ", $templateRecursionLevel, ": ", $text_len, " bytes");
+  LOG->debug("text length after templates level " . $templateRecursionLevel . ": " . $text_len . " bytes");
 }
 
 1;

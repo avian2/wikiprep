@@ -173,13 +173,13 @@ sub includeParserFunction(\$\%\%$\$) {
     my $firstParam = $2;
     &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1);
 
-    LOG->debug("evaluating parser function #", $functionName);
+    LOG->debug("evaluating parser function #" . $functionName);
 
     if( exists($parserFunctions{$functionName}) ) {
       return $parserFunctions{$functionName}->($page, $templateRecursionLevel, 
                                                $firstParam, @$refToRawParameterList);
     } else {
-      LOG->info("function #$functionName not supported");
+      LOG->info("function #" . $functionName . "not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
@@ -200,7 +200,7 @@ sub includeParserFunction(\$\%\%$\$) {
     # http://meta.wikimedia.org/wiki/Help:URL
 
     my $result = $1;
-    LOG->debug("URL encoding string: ", $result);
+    LOG->debug("URL encoding string: " . $result);
 
     $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
 
