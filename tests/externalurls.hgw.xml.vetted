@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="1061" newlength="633" stub="0" categories="0" outlinks="0" urls="13">
+<page id="1" orglength="1061" newlength="632" stub="0" categories="0" outlinks="0" urls="13">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -60,7 +60,7 @@ These aren&apos;t recognized as valid links by MediaWiki:
 Some valid anchors:
 
 5. some text
-		    6. some text 
+		    6. some text
 		    7. mail me
 
 This is a bit broken markup:
