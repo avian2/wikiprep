@@ -1,5 +1,5 @@
 splitwiki: splitwiki.c
-	gcc -Wall -O2 -o $@ $<
+	gcc -Wall -O2 -lz -o $@ $<
 
 clean:
 	rm -f splitwiki

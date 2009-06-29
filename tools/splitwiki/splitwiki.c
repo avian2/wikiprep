@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
+#include <zlib.h>
 
 #define MAXLINELEN	(5 * 1024 * 1024)
 
@@ -30,7 +31,7 @@ void syntax()
 	exit(0);
 }
 
-void split(int num_split, FILE *files[]) {
+void split(int num_split, gzFile *files[]) {
 
 	int file = -1;
 
@@ -49,9 +50,9 @@ void split(int num_split, FILE *files[]) {
 
 		if(file == -1) {
 			int n;
-			for(n = 0; n < num_split; n++) fputs(buffer, files[n]);
+			for(n = 0; n < num_split; n++) gzputs(files[n], buffer);
 		} else {
-			fputs(buffer, files[file]);
+			gzputs(files[file], buffer);
 
 		}
 
@@ -74,12 +75,12 @@ int main(int argc, char *argv[]) {
 
 	char *prefix = argv[2];
 
-	FILE **files = malloc(sizeof(*files) * num_split);
+	gzFile **files = malloc(sizeof(*files) * num_split);
 	for(n = 0; n < num_split; n++) {
 		char filename[1024];
-		sprintf(filename, "%s.%04d", prefix, n);
+		sprintf(filename, "%s.%04d.gz", prefix, n);
 
-		files[n] = fopen(filename, "w");
+		files[n] = gzopen(filename, "w");
 
 		if( files[n] == NULL ) {
 			printf("%s: %s\n", filename, strerror(errno));
@@ -90,7 +91,7 @@ int main(int argc, char *argv[]) {
 	split(num_split, files);
 
 	for(n = 0; n < num_split; n++) {
-		fclose(files[n]);
+		gzclose(files[n]);
 	}
 
 	free(files);
