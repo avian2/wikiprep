@@ -8,12 +8,12 @@ our @EXPORT_OK = qw( removeMetadata );
 
 BEGIN {
 
-my $cssClassesToRemove = "metadata|dablink|sisterproject";
+my $cssClassesToRemove = "metadata|dablink|sisterproject|longitude|latitude|geo-multi-punct|geo-dec|geo";
 
 my $cssClassesRegex = qr/
-		<div\s[^<>]*class="(?:[^"]*\s)?(?:$cssClassesToRemove)(?:\s[^"]*)?"[^<>]*>
+		<(:?div|span)\s[^<>]*class="(?:[^"]*\s)?(?:$cssClassesToRemove)(?:\s[^"]*)?"[^<>]*>
 			[^<>]*
-		<\/div>
+		<\/(?:div|span)>
 		/ix;
 
 
