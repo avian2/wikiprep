@@ -6,7 +6,7 @@ use strict;
 use Exporter 'import';
 use Hash::Util qw( lock_hash );
 our @EXPORT_OK = qw( encodeXmlChars getLinkIds removeDuplicatesAndSelf removeElements 
-                     openOutputFile outputFilename openInputFile );
+                     openOutputFile outputFilename openInputFile @inputFileSuffixes );
 
 use File::Basename;
 use File::Spec;
@@ -17,13 +17,12 @@ use Log::Handler wikiprep => 'LOG';
 my %XmlEntities = ('&' => 'amp', '"' => 'quot', "'" => 'apos', '<' => 'lt', '>' => 'gt');
 lock_hash(%XmlEntities);
 
+our @inputFileSuffixes = ( ".xml", ".xml.gz", ".xml.bz2", ".xml.0000", ".xml.0000.gz", ".xml.0000.bz2" );
+
 sub outputFilename {
   my ($inputFile, $outputFileSuffix, %options) = @_;
 
-  $inputFile =~ s/\.[0-9]+$//;
-
-  my ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($inputFile, 
-                                                                    ".xml", ".xml.gz", ".xml.bz2");
+  my ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($inputFile, @inputFileSuffixes);
 
   my $outputFile = File::Spec->catfile($inputFilePath, $inputFileBase . $outputFileSuffix);
 

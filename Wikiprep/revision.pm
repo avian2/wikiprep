@@ -43,7 +43,7 @@ sub getWikiprepRevision() {
 sub getDumpDate($) {
   my ($dumpFile) = @_;
 
-  if($dumpFile =~ /[a-z]+-([0-9a-z_]+)-pages-articles.xml(?:.gz|.bz2)?$/) {
+  if($dumpFile =~ /[a-z]+-([0-9a-z_]+)-pages-articles.xml/) {
     return $1;
   } else {
     return "unknown";
@@ -53,7 +53,7 @@ sub getDumpDate($) {
 sub getDatabaseName($) {
   my ($dumpFile) = @_;
 
-  if($dumpFile =~ /([a-z]+)-[0-9a-z_]+-pages-articles.xml(?:.gz|.bz2)?$/) {
+  if($dumpFile =~ /([a-z]+)-[0-9a-z_]+-pages-articles.xml/) {
     return $1;
   } else {
     return "unknown";

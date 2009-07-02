@@ -53,7 +53,8 @@ use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk %namespa
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
 use Wikiprep::revision qw( getWikiprepRevision getDumpDate getDatabaseName );
 use Wikiprep::css qw( removeMetadata );
-use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements openInputFile );
+use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements openInputFile 
+                        @inputFileSuffixes);
 
 # Command line options
 my $optFile;
@@ -106,10 +107,6 @@ sub parseOptions {
              'transform'  => \$optTransform,
              'parallel'   => \$optParallel);
 
-  # Ignore any file part number. We find parts
-  # to process automatically.
-  $optFile =~ s/\.[0-9]+$//;
-
   if( not $optPrescan and not $optTransform ) {
     $optPrescan = 1;
     $optTransform = 1;
@@ -138,10 +135,14 @@ sub getFilesToProcess {
 
   my @filesToProcess;
 
-  if( -f "$optFile.0000" ) {
+  if( $optFile =~ /^(.*?)\.0000(\.[a-z]+)?$/ ) {
+    my $base = $1;
+    my $suffix = $2;
+
     my $n = 0;
     while(1) {
-      my $filename = sprintf("%s.%04d", $optFile, $n);
+      my $filename = sprintf("%s.%04d", $base, $n);
+      $filename .= $suffix if $suffix;
       last unless -f $filename;
 
       push(@filesToProcess, [ $filename, $n ]);
@@ -213,7 +214,7 @@ sub main {
     exit 1;
   }
 
-  ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($optFile, ".xml", ".xml.gz", ".xml.bz2");
+  ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($optFile, @inputFileSuffixes);
 
   &loadModules;
   &initLog;
