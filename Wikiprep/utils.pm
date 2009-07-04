@@ -22,6 +22,7 @@ our @inputFileSuffixes = ( ".xml", ".xml.gz", ".xml.bz2", ".xml.0000", ".xml.000
 sub outputFilename {
   my ($inputFile, $outputFileSuffix, %options) = @_;
 
+  $inputFile =~ s/.xml\.[0-9]+($|\.gz|\.bz2)/.xml$1/;
   my ($inputFileBase, $inputFilePath, $inputFileSuffix) = fileparse($inputFile, @inputFileSuffixes);
 
   my $outputFile = File::Spec->catfile($inputFilePath, $inputFileBase . $outputFileSuffix);
