@@ -1,0 +1,1987 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.16alpha-wmf</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">File</namespace>
+      <namespace key="7">File talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>ASCII</title>
+    <id>586</id>
+    <revision>
+      <id>304447834</id>
+      <timestamp>2009-07-27T09:41:25Z</timestamp>
+      <contributor>
+        <username>Keka</username>
+        <id>311949</id>
+      </contributor>
+      <comment>adding the iana preferred name, at a prominent place and before the first mention of US-ASCII in prose</comment>
+      <text xml:space="preserve">{{main|Control character}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Character encoding</title>
+    <id>16934333</id>
+    <revision>
+      <id>304610167</id>
+      <timestamp>2009-07-28T03:45:40Z</timestamp>
+      <contributor>
+        <username>UTF-8</username>
+        <id>154197</id>
+      </contributor>
+      <comment>Split the Miscellaneous section.  Sort some other groups for easier searching.</comment>
+      <text xml:space="preserve">{{Navbox
+|name=Character encoding
+|title=[[Character encoding]]s
+|status=autocollapse
+
+|above= [[:Category:Character sets]]
+
+|group2= Early standards
+|list2 = [[ASCII]]{{·}} [[ISO/IEC 646]]/[[ISO/IEC 6429]]{{·}} [[ISO/IEC 6937]]/[[T.61 (ITU-T recommendation)|T.61]]
+
+|group3= [[ISO/IEC 8859]]
+|list3 = [[ISO/IEC 8859-1|-1]]{{·}} [[ISO/IEC 8859-2|-2]]{{·}} [[ISO/IEC 8859-3|-3]]{{·}} [[ISO/IEC 8859-4|-4]]{{·}} [[ISO/IEC 8859-5|-5]]{{·}} [[ISO/IEC 8859-6|-6]]{{·}} [[ISO/IEC 8859-7|-7]]{{·}} [[ISO/IEC 8859-8|-8]]{{·}} [[ISO/IEC 8859-9|-9]]{{·}} [[ISO/IEC 8859-10|-10]]{{·}} [[ISO/IEC 8859-11|-11]]{{·}} [[ISO/IEC 8859-12|-12]]{{·}} [[ISO/IEC 8859-13|-13]]{{·}} [[ISO/IEC 8859-14|-14]]{{·}} [[ISO/IEC 8859-15|-15]]{{·}} [[ISO/IEC 8859-16|-16]]
+
+|group4= Bibliographic use
+|list4 = [[ANSEL]]{{•}} ISO&amp;nbsp;5426{{\}} 5426-2{{\}} 5427{{\}} 5428{{\}} [[ISO 6438|6438]]{{\}} 6861{{\}} 6862{{\}} 10585{{\}} 10586{{\}} 10754{{\}} 11822
+
+|group5= National standards
+|list5 = [[ArmSCII]]{{·}} [[ISCII]]{{·}} [[KPS 9566]]{{·}} [[KS X 1001]]{{·}} [[Perso-Arabic Script Code for Information Interchange|PASCII]]{{·}} [[TIS-620]]{{·}} [[TSCII]]{{·}} [[VISCII]]{{·}} [[YUSCII]]
+
+|group6= [[Extended_Unix_Code|EUC]]
+|list6 = [[EUC-CN|CN]]{{·}} [[EUC-JP|JP]]{{·}} [[EUC-KR|KR]]{{·}} [[EUC-TW|TW]]
+
+|group7= [[ISO/IEC 2022]]
+|list7 = CN{{·}} JP{{·}} KR{{·}} [[CCCII]]{{·}} [[CNS 11643]]
+
+|group8= [[:Category:Mac OS character encodings|MacOS codepages]]
+&lt;!-- reference http://developer.apple.com/documentation/Carbon/Conceptual/ProgWithTECM/tecmgr_encnames/tecmgr_encnames.html --&gt;
+|list8 = {{nowrap begin}}[[MacArabic encoding|Arabic]]{{·w}} [[Macintosh Central European encoding|CentralEurRoman]]{{·w}} ChineseSimp{{\}} [[EUC-CN]]{{·w}} ChineseTrad{{\}} [[Big5]]{{·w}} Croatian{{·w}} [[MacCyrillic encoding|Cyrillic]]{{·w}} Devanagari{{·w}} Dingbats{{·w}} Farsi{{·w}} Greek{{·w}} Gujarati{{·w}} Gurmukhi{{·w}} Hebrew{{·w}} [[MacIceland|Icelandic]]{{·w}} Japanese{{\}} [[Shift JIS|ShiftJIS]]{{·w}} Korean{{\}} [[EUC-KR]]{{·w}} [[Macroman|Roman]]{{·w}} Romanian{{·w}} Symbol{{·w}} Thai{{\}} [[TIS-620]]{{·w}} Turkish{{·w}} Ukrainian{{nowrap end}}
+
+|group9= [[:Category:DOS code pages|DOS codepages]]
+|list9 = [[code page 437|437]]{{·}} [[code page 720|720]]{{·}} [[code page 737|737]]{{·}} [[code page 775|775]]{{·}} [[code page 850|850]]{{·}} [[code page 852|852]]{{·}} [[code page 855|855]]{{·}} [[code page 857|857]]{{·}} [[code page 858|858]]{{·}} [[code page 860|860]]{{·}} [[code page 861|861]]{{·}} [[code page 862|862]]{{·}} [[code page 863|863]]{{·}} [[code page 864|864]]{{·}} [[code page 865|865]]{{·}} [[code page 866|866]]{{·}} [[code page 869|869]]{{·}} [[KOI character encodings|KOI8]]{{·}} [[Kamenický encoding|Kamenický]]{{·}} [[Mazovia encoding|Mazovia]]{{·}} [[Iran System encoding standard|Iran System]]
+
+|group10= [[:Category:Windows code pages|Windows codepages]]
+|list10 = [[Windows-874|874]]{{\}} [[TIS-620]]{{·}} [[code page 932|932]]{{\}} [[Shift JIS|ShiftJIS]]{{·}} [[code page 936|936]]{{\}} [[GBK]]{{·}} [[code page 949|949]]{{\}} [[EUC-KR]]{{·}} [[code page 950|950]]{{\}} [[Big5]]{{·}} [[Windows-1250|1250]]{{·}} [[Windows-1251|1251]]{{·}} [[Windows-1252|1252]]{{·}} [[Windows-1253|1253]]{{·}} [[Windows-1254|1254]]{{·}} [[Windows-1255|1255]]{{·}} [[Windows-1256|1256]]{{·}} [[Windows-1257|1257]]{{·}} [[Windows-1258|1258]]{{·}} [[code page 1361|1361]]{{·}} [[Windows-54936|54936]]{{\}} [[GB 18030|GB18030]]
+
+|group11= [[:Category:EBCDIC code pages|EBCDIC codepages]]
+|list11 = {{nowrap begin}}[[EBCDIC 1047|1047]]{{·w}} 
+[[EBCDIC 037|37/1140]]{{·w}} 273/1141{{·w}} 277/1142{{·w}} 278/1143{{·w}} 280/1144{{·w}} 284/1145{{·w}} [[EBCDIC 285|285/1146]]{{·w}} 297/1147{{·w}} [[EBCDIC 500|500/1148]]{{·w}} 871/1149{{·w}} 1025/1154{{·w}}1026/1155{{·w}} 1112/1156{{·w}} 1122/1157{{·w}} 1123/1158{{·w}} 838/1160{{·w}} 1130/1164{{·w}} 875/9067{{·w}} 420/16804{{·w}} 424/12712{{·w}} [[code page 930|930/1390]]{{·w}} 933/1364{{·w}} 937/1371{{·w}} 935/1388{{·w}} 939/1399{{nowrap end}}
+
+|group12= Platform specific
+|list12 = [[ATASCII]]{{·}} [[CDC display code]]{{·}} [[DEC Radix-50]]{{·}} [[GSM 03.38]]{{·}} [[HP roman8]]{{·}} [[PETSCII]]{{·}} [[TI calculator character sets]]{{·}} [[ZX Spectrum character set]]
+
+|group13= [[Unicode]]{{\}} [[ISO/IEC 10646]]
+|list13 = [[UTF-8]]{{·}} [[UTF-16/UCS-2]]{{·}} [[UTF-32/UCS-4]]{{·}} [[UTF-7]]{{·}} [[UTF-EBCDIC]]{{·}} [[GB 18030]]{{·}} [[Standard_Compression_Scheme_for_Unicode|SCSU]]{{·}} [[BOCU-1]]
+
+|group14= Miscellaneous codepages
+|list14 = [[GOST 10859]]{{·}} [[HKSCS]]{{·}} [[HZ_(character_encoding)|HZ]]{{·}} [[code page 1133|IBM code page 1133]]{{·}} [[TRON (encoding)|TRON]]
+
+|group15= Miscellaneous topics
+|list15 = [[ASCII art]]{{·}} [[Baudot code]]{{·}} [[C0 and C1 control codes]]{{·}} [[charset detection]]{{·}} [[control character]]{{·}} [[Fieldata]]{{·}} [[Han unification]]{{·}} [[legacy encoding]]{{·}} [[mojibake]]{{·}} [[Morse code]]{{·}} [[sixbit code pages]]
+
+}}&lt;noinclude&gt;
+
+[[Category:Character encoding|*]]
+[[Category:Computing templates|{{PAGENAME}}]] 
+
+[[ru:Шаблон:Кодировки символов]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Citation/core</title>
+    <id>8941610</id>
+    <revision>
+      <id>299507415</id>
+      <timestamp>2009-06-30T13:57:35Z</timestamp>
+      <contributor>
+        <username>Crum375</username>
+        <id>1365432</id>
+      </contributor>
+      <comment>moving non-periodical titles url link inside quotes, per request; revert if needed</comment>
+      <text xml:space="preserve">&lt;cite style=&quot;font-style:normal&quot; class=&quot;{{{Citation class|}}}&quot;
+{{
+  #if:{{{Ref|}}}
+  |{{#ifeq:{{{Ref|}}}|none||id=&quot;{{anchorencode:{{{Ref|}}}}}&quot;}}
+  |{{#if:{{{Surname1|}}}{{{EditorSurname1|}}}
+    |id=&quot;CITEREF{{anchorencode:{{#if:{{{Surname1|}}}
+      |{{{Surname1}}}{{{Surname2|}}}{{{Surname3|}}}{{{Surname4|}}}
+      |{{{EditorSurname1|}}}{{{EditorSurname2|}}}{{{EditorSurname3|}}}{{{EditorSurname4|}}}
+    }}{{{Year|{{{Date|}}}}}}}}&quot;
+  }}
+}}&gt;{{
+&lt;!--============  Author or editor and date  ============--&gt;
+  #if:{{{Surname1|}}}
+  |{{
+     #if: {{{Authorlink1|}}}
+     |[[{{{Authorlink1}}} |{{{Surname1}}}{{
+        #if: {{{Given1|}}}
+        |, {{{Given1}}}
+      }}]]
+     |{{{Surname1}}}{{
+        #if: {{{Given1|}}}
+        |, {{{Given1}}}
+      }}
+   }}{{
+     #if: {{{Surname2|}}}
+     |{{
+        #if: {{{Surname3|}}}
+        |&lt;nowiki&gt;; &lt;/nowiki&gt;
+        |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+      }}{{
+        #if: {{{Authorlink2|}}}
+        |[[{{{Authorlink2}}} |{{{Surname2}}}{{
+           #if: {{{Given2|}}}
+           |, {{{Given2}}}
+         }}]]
+        |{{{Surname2}}}{{
+           #if: {{{Given2|}}}
+           |, {{{Given2}}}
+         }}
+      }}{{
+        #if: {{{Surname3|}}}
+        |{{
+           #if: {{{Surname4|}}}
+           |&lt;nowiki&gt;; &lt;/nowiki&gt;
+           |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+         }}{{
+           #if: {{{Authorlink3|}}}
+           |[[{{{Authorlink3}}} |{{{Surname3}}}{{
+              #if: {{{Given3|}}}
+              |, {{{Given3}}}
+            }}]]
+           |{{{Surname3}}}{{
+              #if: {{{Given3|}}}
+              |, {{{Given3}}}
+            }}
+         }}{{
+           #if:{{{Surname4|}}}
+           |{{
+              #if: {{{Surname5|}}}
+              |&lt;nowiki&gt;; &lt;/nowiki&gt;
+              |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+            }}{{
+              #if: {{{Authorlink4|}}}
+              |[[{{{Authorlink4}}} |{{{Surname4}}}{{
+                 #if: {{{Given4|}}}
+                 |, {{{Given4}}}
+               }}]]
+              |{{{Surname4}}}{{
+                 #if: {{{Given4|}}}
+                 |, {{{Given4}}}
+               }}
+            }}{{
+              #if:{{{Surname5|}}}
+              |{{
+                 #if: {{{Surname6|}}}
+                 |&lt;nowiki&gt;; &lt;/nowiki&gt;
+                 |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+               }}{{
+                 #if: {{{Authorlink5|}}}
+                 |[[{{{Authorlink5}}} |{{{Surname5}}}{{
+                    #if: {{{Given5|}}}
+                    |, {{{Given5}}}
+                  }}]]
+                 |{{{Surname5}}}{{
+                    #if: {{{Given5|}}}
+                    |, {{{Given5}}}
+                  }}
+               }}{{
+                 #if:{{{Surname6|}}}
+                 |{{
+                    #if: {{{Surname7|}}}
+                    |&lt;nowiki&gt;; &lt;/nowiki&gt;
+                    |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+                  }}{{
+                    #if: {{{Authorlink6|}}}
+                    |[[{{{Authorlink6}}} |{{{Surname6}}}{{
+                       #if: {{{Given6|}}}
+                       |, {{{Given6}}}
+                     }}]]
+                    |{{{Surname6}}}{{
+                       #if: {{{Given6|}}}
+                       |, {{{Given6}}}
+                     }}
+                  }}{{
+                    #if:{{{Surname7|}}}
+                    |{{
+                       #if: {{{Surname8|}}}
+                       |&lt;nowiki&gt;; &lt;/nowiki&gt;
+                       |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+                     }}{{
+                       #if: {{{Authorlink7|}}}
+                       |[[{{{Authorlink7}}} |{{{Surname7}}}{{
+                          #if: {{{Given7|}}}
+                          |, {{{Given7}}}
+                        }}]]
+                       |{{{Surname7}}}{{
+                          #if: {{{Given7|}}}
+                          |, {{{Given7}}}
+                        }}
+                     }}{{
+                       #if:{{{Surname8|}}}
+                       |{{
+                          #if: {{{Surname9|}}}
+                          |&lt;nowiki&gt;; &lt;/nowiki&gt;
+                          |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+                        }}{{
+                          #if: {{{Authorlink8|}}}
+                          |[[{{{Authorlink8}}} |{{{Surname8}}}{{
+                             #if: {{{Given8|}}}
+                             |, {{{Given8}}}
+                           }}]]
+                          |{{{Surname8}}}{{
+                             #if: {{{Given8|}}}
+                             |, {{{Given8}}}
+                           }}
+                        }}{{
+                          #if:{{{Surname9|}}}
+                          |&lt;nowiki&gt;; &lt;/nowiki&gt;&amp;#32;''et al''.
+                        }}
+                     }}
+                  }}
+               }}
+            }}
+         }}
+      }}
+   }}{{
+     #if: {{{Date|}}}
+     |&amp;#32;({{{Date}}}){{
+       #if:{{{YearNote|}}}
+     |&amp;#32;[{{{YearNote}}}]
+     }}
+   }}
+  |{{&lt;!-- ============== No author: display editors first == --&gt;
+     #if: {{{EditorSurname1|}}}
+     |{{
+        #if: {{{Editorlink1|}}}
+        |[[{{{Editorlink1}}} |{{{EditorSurname1}}}{{
+           #if: {{{EditorGiven1|}}}
+           |, {{{EditorGiven1}}}
+         }}]]
+        |{{{EditorSurname1}}}{{
+           #if: {{{EditorGiven1|}}}
+           |, {{{EditorGiven1}}}
+         }}
+      }}{{
+        #if: {{{EditorSurname2|}}}
+        |{{
+          #if: {{{EditorSurname3|}}}
+          |&lt;nowiki&gt;; &lt;/nowiki&gt;
+          |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+        }}{{
+           #if: {{{Editorlink2|}}}
+           |[[{{{Editorlink2}}} |{{{EditorSurname2}}}{{
+              #if: {{{EditorGiven2|}}}
+              |, {{{EditorGiven2}}}
+            }}]]
+           |{{{EditorSurname2}}}{{
+              #if: {{{EditorGiven2|}}}
+              |, {{{EditorGiven2}}}
+            }}
+         }}{{
+           #if: {{{EditorSurname3|}}}
+           |{{
+              #if: {{{EditorSurname4|}}}
+              |&lt;nowiki&gt;; &lt;/nowiki&gt;
+              |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+            }}{{
+              #if: {{{Editorlink3|}}}
+              |[[{{{Editorlink3}}} |{{{EditorSurname3}}}{{
+                 #if: {{{EditorGiven3|}}}
+                 |, {{{EditorGiven3}}}
+               }}]]
+              |{{{EditorSurname3}}}{{
+                 #if: {{{EditorGiven3|}}}
+                 |, {{{EditorGiven3}}}
+               }}
+            }}{{
+              #if:{{{EditorSurname4|}}}
+              |&amp;#32;et al.
+            }}
+         }}
+       }}, ed{{#if:{{{EditorSurname2|}}}|s}}{{#ifeq:{{{Sep|,}}}|.||.}}{{
+        #if: {{{Date|}}}
+        |&amp;#32;({{{Date}}}){{
+         #if:{{{YearNote|}}}
+       |&amp;#32;[{{{YearNote}}}]
+       }}
+      }}
+   }}
+}}{{
+&lt;!--============  Title of included work  ============--&gt;
+  #if: {{{IncludedWorkTitle|}}}
+   {{
+     #if:{{{Periodical|}}}||{{#if:{{{TransItalic|}}}||{{{TransTitle|}}}}}
+   }}
+  |{{
+     #if:{{{Surname1|}}}{{{EditorSurname1|}}} 
+     |{{{Sep|,}}}&amp;#32; 
+   }}{{#if:{{{Periodical|}}}||&quot;}}{{Link
+     | 1={{
+           #if: {{{IncludedWorkURL|}}}
+           |{{{IncludedWorkURL}}}
+           |{{
+              #if: {{{URL|}}}
+              |{{{URL}}}
+&lt;!-- Only link URL if to a free full text - as at PubMedCentral (PMC)--&gt;
+              |{{
+                 #if: {{{PMC|}}}
+                 |http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}}
+               }}
+            }} 
+         }}
+     | 2={{
+           #if: {{{Periodical|}}}
+           |''{{{IncludedWorkTitle}}}''
+           |{{{IncludedWorkTitle|}}}{{
+        #if: {{{TransTitle|}}}
+        |{{#if: {{{IncludedWorkTitle|}}}|&amp;#32;}}&amp;#91;{{{TransTitle}}}&amp;#93;}}
+         }}
+   }}{{#if:{{{Periodical|}}}||&quot;}}
+}}{{
+&lt;!--============  Place (if different than PublicationPlace) ============--&gt;
+  #if: {{{Place|}}}
+  |{{
+     #ifeq: {{{Place|}}} | {{{PublicationPlace|}}}
+     |
+     |{{
+        #if: {{{Surname1|}}}{{{EditorSurname1|}}}{{{IncludedWorkTitle|}}}{{{Periodical|}}}
+        |{{{Sep|,}}} written at {{{Place}}}
+      }}
+   }}
+}}{{
+&lt;!--============  Editor of compilation  ============--&gt;
+  #if: {{{EditorSurname1|}}}
+  |{{
+     #if: {{{Surname1|}}}
+     |{{{Sep|,}}} {{
+        #if: {{{IncludedWorkTitle|}}}
+        |in&amp;#32;
+      }}{{
+        #if: {{{Editorlink1|}}}
+        |[[{{{Editorlink1}}} |{{{EditorSurname1}}}{{
+           #if: {{{EditorGiven1|}}}
+           |, {{{EditorGiven1}}}
+         }}]]
+        |{{{EditorSurname1}}}{{
+           #if: {{{EditorGiven1|}}}
+           |, {{{EditorGiven1}}}
+         }}}}{{
+        #if: {{{EditorSurname2|}}}
+        |{{
+          #if: {{{EditorSurname3|}}}
+            |&lt;nowiki&gt;; &lt;/nowiki&gt;
+            |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+          }}{{
+           #if: {{{Editorlink2|}}}
+           |[[{{{Editorlink2}}}|{{{EditorSurname2}}}{{
+              #if: {{{EditorGiven2|}}}
+              |, {{{EditorGiven2}}}
+            }}]]
+           |{{{EditorSurname2}}}{{
+              #if: {{{EditorGiven2|}}}
+              |, {{{EditorGiven2}}}
+            }}
+         }}{{
+           #if: {{{EditorSurname3|}}}
+           |{{
+              #if: {{{EditorSurname4|}}}
+              |&lt;nowiki&gt;; &lt;/nowiki&gt;
+              |{{#if:{{{amp|}}}|&amp;#32;&amp;amp;&amp;#32;|&lt;nowiki&gt;; &lt;/nowiki&gt;}}
+            }}{{
+              #if: {{{Editorlink3|}}}
+              |[[{{{Editorlink3}}}|{{{EditorSurname3}}}{{
+                 #if: {{{EditorGiven3|}}}
+                 |, {{{EditorGiven3}}}
+               }}]]
+              |{{{EditorSurname3}}}{{
+                 #if: {{{EditorGiven3|}}}
+                 |, {{{EditorGiven3}}}
+               }}
+            }}{{
+              #if:{{{EditorSurname4|}}}
+              |&amp;#32;et al.
+            }}
+         }}
+      }}{{
+        #if: {{{IncludedWorkTitle|}}}
+        |
+        |{{{Sep|,}}} ed{{#if:{{{EditorSurname2|}}}|s}}{{#ifeq:{{{Sep|,}}}|.||.}}
+      }}
+   }}
+}}{{
+  &lt;!--============  Periodicals  ============--&gt;
+  #if: {{{Periodical|}}}
+  |{{
+     #if: {{{Surname1|}}}{{{EditorSurname1|}}}
+     |{{{Sep|,}}}&amp;#32;}}{{
+     #if: {{{Title|}}}{{{TransTitle|}}}
+     |&quot;{{Link
+        | 1={{
+              #if: {{{IncludedWorkTitle|}}}
+              |{{
+                 #if: {{{IncludedWorkURL|}}}
+                 |{{
+                    #if: {{{URL|}}}
+                    |{{{URL}}}
+                    |{{ 
+                       #if: {{{PMC|}}} 
+                       |  http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}}
+                     }} 
+                  }}
+               }}
+              |{{
+                 #if: {{{URL|}}}
+                 |{{{URL}}}
+                 | {{ 
+                       #if: {{{PMC|}}} 
+                       |  http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}}
+                    }} 
+                  
+               }}
+            }}
+        | 2={{{Title}}}{{
+        #if: {{{TransTitle|}}}
+        |{{#if: {{{Title|}}}|&amp;#32;}}&amp;#91;{{{TransTitle}}}&amp;#93;}}
+      }}&quot;{{
+        #if: {{{TitleNote|}}}
+        |{{{Sep|,}}}&amp;#32;{{{TitleNote}}}
+      }} 
+   }}
+}}{{
+ #if:{{{language|}}} 
+   | &amp;#32;(in {{{language}}})
+ }}{{#if:{{{format|}}}
+   |&amp;#32;({{{format}}})
+ }}{{
+   #if: {{{Periodical|}}}|{{
+       #if:{{{IncludedWorkTitle|}}}{{{Title|}}}{{{TransTitle|}}}|{{{Sep|,}}}&amp;#32;}}''{{{Periodical}}}''{{
+     #if: {{{Series|}}}
+     |{{{Sep|,}}} {{{Series}}}
+   }}{{
+     #if: {{{PublicationPlace|}}}
+     |{{
+        #if: {{{Publisher|}}}
+        |&amp;#32;({{{PublicationPlace}}}&lt;nowiki&gt;: &lt;/nowiki&gt;{{{Publisher}}})
+        |&amp;#32;({{{PublicationPlace}}})
+      }}
+     |{{
+        #if: {{{Publisher|}}}
+        |&amp;#32;({{{Publisher}}})
+      }}
+   }}{{
+     #if: {{{Volume|}}}
+     |&amp;#32;'''{{{Volume}}}'''{{
+        #if: {{{Issue|}}}
+        |&amp;#32;({{{Issue}}})
+      }}
+     |{{
+        #if: {{{Issue|}}}
+        |&amp;#32;({{{Issue}}})
+      }}
+   }}{{
+     #if: {{{At|}}}
+     |&lt;nowiki&gt;: &lt;/nowiki&gt; {{{At}}}
+   }}
+  |{{
+     &lt;!--============ Anything else with a title, including books ============--&gt;
+     #if: {{{Title|}}}{{{TransItalic|}}}
+     |{{
+        #if: {{{Surname1|}}}{{{EditorSurname1|}}}{{{IncludedWorkTitle|}}}{{{Periodical|}}}
+        |{{{Sep|,}}}&amp;#32;|&amp;#32;
+      }}{{Italiclink
+        | 1={{
+              #if: {{{IncludedWorkTitle|}}}
+              |{{
+                 #if: {{{IncludedWorkURL|}}}
+                 |{{
+                    #if: {{{URL|}}}
+                    |{{{URL}}}
+                    |{{ 
+                       #if: {{{PMC|}}} 
+                       |  http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}}
+                     }} 
+                  }}
+               }}
+              |{{
+                 #if: {{{URL|}}}
+                 |{{{URL}}}
+                 |{{ 
+                    #if: {{{PMC|}}} 
+                    |  http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}}       
+                  }}
+               }}
+            }}
+        | 2={{{Title|}}}{{
+        #if:{{{TransItalic|}}}|&amp;#32;&amp;#91;{{{TransItalic}}}&amp;#93;}}
+      }}}}{{
+        #if: {{{Series|}}}
+        |{{{Sep|,}}} {{{Series}}}
+      }}{{
+        #if: {{{Volume|}}}
+        |{{{Sep|,}}} '''{{{Volume}}}'''
+      }}{{
+        #if: {{{Other|}}} 
+        |{{{Sep|,}}} {{{Other|}}}
+      }}{{
+        #if: {{{Edition|}}}
+        |&amp;#32;({{{Edition}}} ed.)
+      }}{{
+        #if: {{{PublicationPlace|}}}
+        |{{{Sep|,}}} {{{PublicationPlace}}}
+      }}{{
+        #if: {{{Publisher|}}}
+        |{{
+           #if: {{{PublicationPlace|}}}
+           |&lt;nowiki&gt;:&lt;/nowiki&gt;
+           |{{{Sep|,}}}
+         }} {{{Publisher}}}
+      }}
+   }}{{
+&lt;!--============ Date (if no author/editor) ============--&gt;
+  #if: {{{Surname1|}}}{{{EditorSurname1|}}}
+  |
+  |{{
+     #if: {{{Date|}}}
+     |{{{Sep|,}}} {{{Date}}}{{
+       #if:{{{YearNote|}}}
+     |&amp;#32;[{{{YearNote}}}]
+     }}
+   }}
+}}{{
+&lt;!--============ Publication date ============--&gt;
+  #if: {{{PublicationDate|}}}
+  |{{
+     #ifeq: {{{PublicationDate|}}} | {{{Date|}}}
+     |
+     |{{
+        #if: {{{EditorSurname1|}}}
+        |{{
+           #if: {{{Surname1|}}}
+           |{{{Sep|,}}} {{{PublicationDate}}}
+           |&amp;#32;(published {{{PublicationDate}}})
+         }}
+        |{{
+           #if: {{{Periodical|}}}
+           |{{{Sep|,}}} {{{PublicationDate}}}
+           |&amp;#32;(published {{{PublicationDate}}})
+         }}
+      }}
+   }}
+}}{{
+&lt;!--============ Page within included work ============--&gt;
+  #if: {{{Periodical|}}}
+  |
+  |{{
+     #if: {{{At|}}}
+     |{{{Sep|,}}} {{{At}}}
+   }}
+}}{{
+&lt;!--===============DOI================--&gt;
+#if:{{{DOI|}}} 
+  |{{{Sep|,}}} [[Digital object identifier|doi]]:{{#if: {{{DoiBroken|}}} 
+     | {{#tag:nowiki|{{{DOI}}}}} (inactive {{{DoiBroken|}}}) {{#ifeq: {{NAMESPACE}} | {{ns:0}} | [[Category:Pages with DOIs broken since {{#time: Y | {{{DoiBroken|}}} }}]] }}
+     | &lt;span class=&quot;neverexpand&quot;&gt;[http://dx.doi.org/{{urlencode:{{{DOI}}}}} {{#tag:nowiki|{{{DOI}}}}}]&lt;/span&gt;
+    }}
+}}{{
+&lt;!--============ Misc. Identifier ============--&gt;
+  #if: {{{ID|}}}
+  |{{{Sep|,}}} {{{ID}}}
+}}{{
+&lt;!--============ ISBN ============--&gt;
+  #if: {{{ISBN|}}}
+  |{{{Sep|,}}} ISBN {{{ISBN}}}
+}}{{
+&lt;!--============ ISSN ============--&gt;
+  #if: {{{ISSN|}}}
+  |{{{Sep|,}}} [[International Standard Serial Number|ISSN]] [http://worldcat.org/issn/{{{ISSN}}} {{{ISSN}}}]
+}}{{
+&lt;!--============ OCLC ============--&gt;
+  #if: {{{OCLC|}}}
+  |{{{Sep|,}}} [[Online Computer Library Center|OCLC]] [http://worldcat.org/oclc/{{urlencode:{{{OCLC}}}}} {{{OCLC}}}]
+}}{{
+&lt;!--============ PMID ============--&gt; 
+  #if: {{{PMID|}}} 
+  |{{{Sep|,}}} PMID {{{PMID}}} 
+}}{{ 
+&lt;!--============ PMC ============--&gt; 
+  #if: {{{PMC|}}} 
+  |{{#if: {{{URL|}}}
+     |{{{Sep|,}}} [[PubMed Central|PMC]]: [http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pmcentrez&amp;artid={{{PMC}}} {{{PMC}}}]
+   }}
+}}{{ 
+&lt;!--============ BIBCODE ============--&gt; 
+  #if: {{{Bibcode|}}} 
+  |{{{Sep|,}}} [[Bibcode]]:&amp;nbsp;[http://adsabs.harvard.edu/abs/{{{Bibcode}}} {{{Bibcode}}}]
+}}{{
+&lt;!--============ Archive data, etc ===========--&gt;
+  #if: {{{Archive|}}}
+  |{{{Sep|,}}} {{{Archive}}}
+  |{{
+    #if:{{{OriginalURL|}}}
+    |{{{Sep|,}}} {{#ifeq:{{{Sep}}}|.|A|a}}rchived from {{link|{{{OriginalURL}}}|the original}}{{
+      #if:{{{ArchiveDate|}}}
+      |&amp;#32;on {{{ArchiveDate}}}
+      |. {{citation error|You must specify the date the archive was made using the {{para|archivedate}} parameter}} 
+      }}
+    |{{#if:{{{ArchiveDate|}}}|{{{Sep|,}}} {{#ifeq:{{{Sep}}}|.|A|a}}rchived on {{{ArchiveDate}}}; {{citation error|no {{para|url}} specified}}}}
+   }}
+}}{{ 
+&lt;!--============ URL and AccessDate ============--&gt;
+  #if: {{{URL|{{{IncludedWorkURL|}}}}}}
+  |{{
+     #if: {{{Title|}}}{{{IncludedWorkTitle|}}}{{{TransTitle|}}}
+     |&lt;span class=&quot;printonly&quot;&gt;{{{Sep|,}}} {{
+                                      #if: {{{IncludedWorkURL|}}}
+                                      |{{{IncludedWorkURL}}}
+                                      |{{{URL}}}
+                                    }}&lt;/span&gt;
+     |{{{Sep|,}}} {{
+              #if: {{{IncludedWorkURL|}}}
+              |{{{IncludedWorkURL}}}
+              |{{{URL}}}
+            }}
+   }}{{
+     #if: {{{AccessDate|}}}
+     | &lt;span class=&quot;reference-accessdate&quot;&gt;{{#ifeq:{{{Sep|,}}}|,|,&amp;#32;r|.&amp;#32;R}}etrieved on {{{AccessDate}}}&lt;/span&gt;
+     }}
+}}{{#if:{{{laysummary|}}} 
+  |{{{Sep|,}}} [{{{laysummary}}} Lay summary]{{#if: {{{laysource|}}}|&amp;nbsp;&amp;ndash;&amp;nbsp;''{{{laysource}}}''}}
+}}{{#if:{{{laydate|}}}
+  | &amp;#32;({{{laydate}}})
+}}{{#if:{{{quote|}}}
+  |{{{Sep|,}}} &amp;#32;&quot;{{{quote}}}&quot;
+}}{{{PS|}}}&lt;/cite&gt;&lt;!--
+
+=== This is a COinS tag (http://ocoins.info), which allows automated tools to parse the citation information: ===
+
+--&gt;&lt;span
+    class=&quot;Z3988&quot;
+    title=&quot;ctx_ver=Z39.88-2004&amp;rft_val_fmt={{urlencode:info:ofi/fmt:kev:mtx:}}{{
+      #if: {{{Periodical|}}}
+      |journal&amp;rft.genre=article&amp;rft.atitle={{urlencode:{{{Title|}}}}}&amp;rft.jtitle={{urlencode:{{{Periodical|}}}}}
+      |book{{
+         #if: {{{IncludedWorkTitle|}}}
+         |&amp;rft.genre=bookitem&amp;rft.btitle={{urlencode:{{{IncludedWorkTitle|}}}}}&amp;rft.atitle={{urlencode:{{{Title|}}}}}
+         |&amp;rft.genre=book&amp;rft.btitle={{urlencode:{{{Title|}}}}}
+       }}
+    }}{{
+     #if: {{{Surname1|}}} |&amp;rft.aulast={{urlencode:{{{Surname1}}}}}{{
+       #if: {{{Given1|}}} |&amp;rft.aufirst={{urlencode:{{{Given1}}}}}
+     }}
+   }}{{
+     #if: {{{Surname1|}}} |&amp;rft.au={{urlencode:{{{Surname1}}}}}{{
+       #if: {{{Given1|}}} |{{urlencode:, {{{Given1}}}}}
+     }}
+   }}{{
+     #if: {{{Surname2|}}} |&amp;rft.au={{urlencode:{{{Surname2}}}}}{{
+       #if: {{{Given2|}}} |{{urlencode:, {{{Given2}}}}}
+     }}
+   }}{{
+     #if: {{{Surname3|}}} |&amp;rft.au={{urlencode:{{{Surname3}}}}}{{
+       #if: {{{Given3|}}} |{{urlencode:, {{{Given3}}}}}
+     }}
+   }}{{
+     #if: {{{Surname4|}}} |&amp;rft.au={{urlencode:{{{Surname4}}}}}{{
+       #if: {{{Given4|}}} |{{urlencode:, {{{Given4}}}}}
+     }}
+   }}{{
+     #if: {{{Surname5|}}} |&amp;rft.au={{urlencode:{{{Surname5}}}}}{{
+       #if: {{{Given5|}}} |{{urlencode:, {{{Given5}}}}}
+     }}
+   }}{{
+     #if: {{{Surname6|}}} |&amp;rft.au={{urlencode:{{{Surname6}}}}}{{
+       #if: {{{Given6|}}} |{{urlencode:, {{{Given6}}}}}
+     }}
+   }}{{
+     #if: {{{Surname7|}}} |&amp;rft.au={{urlencode:{{{Surname7}}}}}{{
+       #if: {{{Given7|}}} |{{urlencode:, {{{Given7}}}}}
+     }}
+   }}{{
+     #if: {{{Surname8|}}} |&amp;rft.au={{urlencode:{{{Surname8}}}}}{{
+       #if: {{{Given8|}}} |{{urlencode:, {{{Given8}}}}}
+     }}
+   }}{{
+     #if: {{{Surname9|}}} |&amp;rft.au={{urlencode:{{{Surname9}}}}}{{
+       #if: {{{Given9|}}} |{{urlencode:, {{{Given9}}}}}
+     }}
+    }}{{
+      #if: {{{Date|}}} |&amp;rft.date={{urlencode:{{{Date}}}}}
+    }}{{
+      #if: {{{Series|}}} |&amp;rft.series={{urlencode:{{{Series}}}}} 
+    }}{{
+      #if: {{{Volume|}}} |&amp;rft.volume={{urlencode:{{{Volume}}}}}
+    }}{{
+      #if: {{{Issue|}}} |&amp;rft.issue={{urlencode:{{{Issue}}}}}
+    }}{{
+      #if: {{{At|}}} |&amp;rft.pages={{urlencode:{{{At}}}}}
+    }}{{
+      #if: {{{Edition|}}} |&amp;rft.edition={{urlencode:{{{Edition}}}}}
+    }}{{
+      #if: {{{PublicationPlace|}}} |&amp;rft.place={{urlencode:{{{PublicationPlace}}}}}
+    }}{{
+      #if: {{{Publisher|}}} |&amp;rft.pub={{urlencode:{{{Publisher}}}}}
+    }}{{
+      #if: {{{DOI|}}} |&amp;rft_id=info:doi/{{urlencode:{{{DOI}}}}}
+    }}{{
+      #if: {{{PMID|}}} |&amp;rft_id=info:pmid/{{urlencode:{{{PMID}}}}}
+    }}{{
+      #if: {{{Bibcode|}}} |&amp;rft_id=info:bibcode/{{urlencode:{{{Bibcode}}}}}
+    }}{{
+      #if: {{{OCLC|}}} |&amp;rft_id=info:oclcnum/{{urlencode:{{{OCLC}}}}}
+    }}{{
+      #if: {{{ISBN|}}} |&amp;rft.isbn={{urlencode:{{{ISBN}}}}}
+    }}{{
+      #if: {{{ISSN|}}} |&amp;rft.issn={{urlencode:{{{ISSN}}}}}
+    }}{{
+      #if: {{{URL|{{{IncludedWorkURL|}}}}}} |&amp;rft_id={{urlencode:{{{URL|{{{IncludedWorkURL|}}}}}}}}
+    }}&amp;rfr_id=info:sid/en.wikipedia.org:{{FULLPAGENAMEE}}&quot;&gt;&lt;span style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite book</title>
+    <id>4086375</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>298608091</id>
+      <timestamp>2009-06-25T19:00:14Z</timestamp>
+      <contributor>
+        <username>Crum375</username>
+        <id>1365432</id>
+      </contributor>
+      <comment>updated for improved support for translated chapter and title</comment>
+      <text xml:space="preserve">{{Citation/core
+ |Citation class=book
+  |Surname1 = {{{last|{{{surname|{{{last1|{{{surname1|{{{author1|{{{author|{{{authors|{{{author|}}}}}}}}}}}}}}}}}}}}}}}}
+  |Surname2 = {{{last2|{{{surname2|{{{author2|{{{coauthor|{{{coauthors|}}}}}}}}}}}}}}}
+  |Surname3 = {{{last3|{{{surname3|{{{author3|}}}}}}}}}
+  |Surname4 = {{{last4|{{{surname4|{{{author4|}}}}}}}}}
+  |Surname5 = {{{last5|{{{surname5|{{{author5|}}}}}}}}}
+  |Surname6 = {{{last6|{{{surname6|{{{author6|}}}}}}}}}
+  |Surname7 = {{{last7|{{{surname7|{{{author7|}}}}}}}}}
+  |Surname8 = {{{last8|{{{surname8|{{{author8|}}}}}}}}}
+  |Surname9 = {{{last9|{{{surname9|{{{author9|}}}}}}}}}
+  |Given1 = {{{first1|{{{given1|{{{first|{{{given|}}}}}}}}}}}}
+  |Given2 = {{{first2|{{{given2|}}}}}}
+  |Given3 = {{{first3|{{{given3|}}}}}}
+  |Given4 = {{{first4|{{{given4|}}}}}}
+  |Given5 = {{{first5|{{{given5|}}}}}}
+  |Given6 = {{{first6|{{{given6|}}}}}}
+  |Given7 = {{{first7|{{{given7|}}}}}}
+  |Given8 = {{{first8|{{{given8|}}}}}}
+  |Given9 = {{{first9|{{{given9|}}}}}}
+  |Authorlink1 = {{{author-link|{{{author1-link|{{{authorlink|{{{authorlink1|}}}}}}}}}}}}
+  |Authorlink2 = {{{author2-link|{{{authorlink2|}}}}}}
+  |Authorlink3 = {{{author3-link|{{{authorlink3|}}}}}}
+  |Authorlink4 = {{{author4-link|{{{authorlink4|}}}}}}
+  |Authorlink5 = {{{author5-link|{{{authorlink5|}}}}}}
+  |Authorlink6 = {{{author6-link|{{{authorlink6|}}}}}}
+  |Authorlink7 = {{{author7-link|{{{authorlink7|}}}}}}
+  |Authorlink8 = {{{author8-link|{{{authorlink8|}}}}}}
+  |Authorlink9 = {{{author9-link|{{{authorlink9|}}}}}}
+  |Year={{{year|{{    &lt;!-- attempt to derive year from date, if possible --&gt;
+             #if: {{{date|}}}
+             |{{
+                #iferror:{{#time:Y|{{{date|}}} }}
+                |{{#iferror:{{#time:Y|{{{publication-date|einval}}} }}||{{#time:Y|{{{publication-date|}}} }}}}
+                |{{#time:Y|{{{date|}}} }}
+              }}
+             |{{{publication-date|}}} &lt;!-- last resort --&gt;
+           }}
+        }}}
+  |YearNote = {{{origyear|}}}
+  |Date = {{#if:{{{date|}}}|{{{date}}}|{{{day|}}} {{{month|}}} {{{year|{{{publication-date|}}}}}}}}
+  |Title={{{title|}}}
+  |TransTitle={{{trans_chapter|}}}
+  |TransItalic={{{trans_title|}}}
+  |URL={{{url|}}}
+  |Series={{{series|}}}
+  |Volume = {{{volume|}}}
+  |Issue = {{{issue|{{{number|}}}}}}
+  |At = {{
+          #if: {{{journal|{{{periodical|{{{newspaper|{{{magazine|}}}}}}}}}}}}
+          |{{{pages|{{{page|{{{at|}}}}}}}}}
+          |{{
+             #if: {{{page|}}}
+             |{{#if:{{{nopp|}}}||p.&amp;nbsp;}}{{{page}}}
+             |{{
+                #if: {{{pages|}}}
+                |{{#if:{{{nopp|}}}||pp.&amp;nbsp;}}{{{pages}}}
+                |{{{at|}}}
+              }}
+           }}
+        }}
+  |IncludedWorkTitle = {{{chapter|{{{contribution|}}}}}}
+  |IncludedWorkURL = {{{chapter-url|{{{chapterurl|{{{contribution-url|}}}}}}}}}
+  |Other = {{{others|}}}
+  |Edition = {{{edition|}}}
+  |Place = {{{place|{{{location|}}}}}}
+  |PublicationPlace = {{{publication-place|{{{place|{{{location|}}}}}}}}}
+  |Publisher = {{{publisher|}}}
+  |PublicationDate = {{{publication-date|}}}
+  |EditorSurname1 = {{{editor-last|{{{editor-surname|{{{editor1-last|{{{editor1-surname|{{{editor|{{{editors|}}}}}}}}}}}}}}}}}}
+  |EditorSurname2 = {{{editor2-last|{{{editor2-surname|}}}}}}
+  |EditorSurname3 = {{{editor3-last|{{{editor3-surname|}}}}}}
+  |EditorSurname4 = {{{editor4-last|{{{editor4-surname|}}}}}}
+  |EditorGiven1 = {{{editor-first|{{{editor-given|{{{editor1-first|{{{editor1-given|}}}}}}}}}}}}
+  |EditorGiven2={{{editor2-first|{{{editor2-given|}}}}}}
+  |EditorGiven3={{{editor3-first|{{{editor3-given|}}}}}}
+  |EditorGiven4={{{editor4-first|{{{editor4-given|}}}}}}
+  |Editorlink1={{{editor-link|{{{editor1-link|}}}}}}
+  |Editorlink2={{{editor2-link|}}}
+  |Editorlink3={{{editor3-link|}}}
+  |Editorlink4={{{editor4-link|}}}
+  |language = {{{language|{{{in|}}}}}}
+  |format = {{{format|}}}
+  |ID={{{id|{{{ID|}}}}}}
+  |ISBN={{{isbn|{{{ISBN|}}}}}}
+  |OCLC={{{oclc|{{{OCLC|}}}}}}
+  |Bibcode={{{bibcode|}}}
+  |DOI={{{doi|{{{DOI|}}}}}}
+  |DoiBroken={{{doi_brokendate|}}}
+  |AccessDate={{{access-date|{{{accessdate|}}}}}}
+  |DateFormat={{{dateformat|none}}}
+  |quote = {{{quote|}}}
+  |laysummary = {{{laysummary|}}}
+  |laydate = {{{laydate|}}}
+  |Ref={{{ref|}}}
+  |Sep = {{{separator|{{{seperator|.}}}}}}
+  |PS = {{#if:{{{quote|}}}||{{{postscript|.}}}}}
+  |amp = {{{lastauthoramp|}}}
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite news</title>
+    <id>4321630</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>298175610</id>
+      <timestamp>2009-06-23T18:42:05Z</timestamp>
+      <contributor>
+        <username>Crum375</username>
+        <id>1365432</id>
+      </contributor>
+      <comment>test - should not affect other params except trans_title</comment>
+      <text xml:space="preserve">{{Citation/core
+  |Citation class=news
+  |Surname1 = {{{last|{{{surname|{{{last1|{{{surname1|{{{author1|{{{author|{{{authors|{{{author|}}}}}}}}}}}}}}}}}}}}}}}}
+  |Surname2 = {{{last2|{{{surname2|{{{author2|{{{coauthor|{{{coauthors|}}}}}}}}}}}}}}}
+  |Surname3 = {{{last3|{{{surname3|{{{author3|}}}}}}}}}
+  |Surname4 = {{{last4|{{{surname4|{{{author4|}}}}}}}}}
+  |Surname5 = {{{last5|{{{surname5|{{{author5|}}}}}}}}}
+  |Surname6 = {{{last6|{{{surname6|{{{author6|}}}}}}}}}
+  |Surname7 = {{{last7|{{{surname7|{{{author7|}}}}}}}}}
+  |Surname8 = {{{last8|{{{surname8|{{{author8|}}}}}}}}}
+  |Surname9 = {{{last9|{{{surname9|{{{author9|}}}}}}}}}
+  |Given1 = {{{first1|{{{given1|{{{first|{{{given|}}}}}}}}}}}}
+  |Given2 = {{{first2|{{{given2|}}}}}}
+  |Given3 = {{{first3|{{{given3|}}}}}}
+  |Given4 = {{{first4|{{{given4|}}}}}}
+  |Given5 = {{{first5|{{{given5|}}}}}}
+  |Given6 = {{{first6|{{{given6|}}}}}}
+  |Given7 = {{{first7|{{{given7|}}}}}}
+  |Given8 = {{{first8|{{{given8|}}}}}}
+  |Given9 = {{{first9|{{{given9|}}}}}}
+  |Authorlink1 = {{{author-link|{{{author1-link|{{{authorlink|{{{authorlink1|}}}}}}}}}}}}
+  |Authorlink2 = {{{author2-link|{{{authorlink2|}}}}}}
+  |Authorlink3 = {{{author3-link|{{{authorlink3|}}}}}}
+  |Authorlink4 = {{{author4-link|{{{authorlink4|}}}}}}
+  |Authorlink5 = {{{author5-link|{{{authorlink5|}}}}}}
+  |Authorlink6 = {{{author6-link|{{{authorlink6|}}}}}}
+  |Authorlink7 = {{{author7-link|{{{authorlink7|}}}}}}
+  |Authorlink8 = {{{author8-link|{{{authorlink8|}}}}}}
+  |Authorlink9 = {{{author9-link|{{{authorlink9|}}}}}}
+  |Year={{{year|{{    &lt;!-- attempt to derive year from date, if possible --&gt;
+             #if: {{{date|}}}
+             |{{
+                #iferror:{{#time:Y|{{{date|}}} }}
+                |{{#iferror:{{#time:Y|{{{publication-date|einval}}} }}||{{#time:Y|{{{publication-date|}}} }}}}
+                |{{#time:Y|{{{date|}}} }}
+              }}
+             |{{{publication-date|}}} &lt;!-- last resort --&gt;
+           }}
+        }}}
+  |Date = {{#if:{{{date|}}}|{{{date}}}|{{{day|}}} {{{month|}}} {{{year|{{{publication-date|}}}}}}}}
+  |DateFormat = {{{dateformat|}}}
+  |Title={{#if:{{{journal|{{{periodical|{{{newspaper|{{{magazine|{{{work|}}}}}}}}}}}}}}}|{{{title|}}}}}
+  |TransTitle={{{trans_title|}}}
+  |URL={{#if:{{{archiveurl|}}}|{{{archiveurl}}}|{{{url|}}}}}
+  |Series={{{agency|}}}
+  |Periodical = {{{journal|{{{periodical|{{{newspaper|{{{magazine|{{{work|}}}}}}}}}}}}}}}
+  |Volume = {{{volume|}}}
+  |Issue = {{{issue|{{{number|}}}}}}
+  |At = {{
+           #if: {{{page|}}}
+           |p.&amp;nbsp;{{{page}}}
+           |{{
+              #if: {{{pages|}}}
+              |pp.&amp;nbsp;{{{pages}}}
+              |{{{at|}}}
+            }}
+         }}
+  |IncludedWorkTitle = {{#if:{{{journal|{{{periodical|{{{newspaper|{{{magazine|{{{work|}}}}}}}}}}}}}}}||{{{title|}}}}}
+  |IncludedWorkURL = {{{chapter-url|{{{chapterurl|{{{contribution-url|}}}}}}}}}
+  |Edition = {{{edition|}}}
+  |Place = {{{place|{{{location|}}}}}}
+  |PublicationPlace = {{{publication-place|{{{place|{{{location|}}}}}}}}}
+  |Publisher = {{{publisher|}}}
+  |PublicationDate = {{{publication-date|}}}
+  |language = {{{language|{{{in|}}}}}}
+  |format = {{{format|}}}
+  |ID={{{id|{{{ID|}}}}}}
+  |ISBN={{{isbn|{{{ISBN|}}}}}}
+  |ISSN={{{issn|{{{ISSN|}}}}}}
+  |OCLC={{{oclc|{{{OCLC|}}}}}}
+  |PMID={{{pmid|{{{PMID|}}}}}}
+  |PMC={{{pmc|{{{PMC|}}}}}}
+  |Bibcode={{{bibcode|}}}
+  |DOI={{{doi|{{{DOI|}}}}}}
+  |AccessDate={{#if:{{{accessdate|}}}|{{{accessdate}}}|{{
+    #if:{{{accessdaymonth|}}}|{{{accessdaymonth}}} {{{accessyear|}}}|{{
+      #if:{{{accessmonthday|}}}|{{{accessmonthday}}} {{{accessyear|}}}|
+      {{{accessday|}}} {{{accessmonth|}}} {{{accessyear|}}}
+      }}
+    }}
+   }}
+  |laysummary = {{{laysummary|}}}
+  |laydate = {{{laydate|}}}
+  |quote = {{{quote|}}}
+  |PS={{#if:{{{quote|}}}||.}} 
+  |Ref={{{ref|}}}
+  |Sep = {{#ifeq:{{{separator|{{{seperator}}} }}}|;|&amp;#059;|{{{separator|{{{seperator|.}}} }}} }}
+  |ArchiveDate = {{{archivedate|}}}
+  |OriginalURL = {{#if:{{{archiveurl|}}}|{{ #if:{{{url|}}}|{{{url}}} }} }}
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Cite web</title>
+    <id>4148498</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>298683040</id>
+      <timestamp>2009-06-26T03:42:43Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <minor/>
+      <comment>fix again...</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{Citation/core
+  |Citation class=web
+  |Surname1 = {{#if:{{{last|}}}
+                |{{{last}}}
+                |{{#if:{{{last1|}}}
+                   |{{{last1}}}
+                   |{{{author|}}} 
+                 }}
+              }}
+  |Surname2 = {{#if:{{{last2|}}}|{{{last2}}}|{{{coauthors|}}}}}
+  |Surname3 = {{{last3|}}}
+  |Surname4 = {{{last4|}}}
+  |Surname5 = {{{last5|}}}
+  |Surname6 = {{{last6|}}}
+  |Surname7 = {{{last7|}}}
+  |Surname8 = {{{last8|}}}
+  |Surname9 = {{{last9|}}}
+  |Given1 = {{#if:{{{first|}}}|{{{first}}}|{{{first1|}}}}}
+  |Given2 = {{{first2|}}}
+  |Given3 = {{{first3|}}}
+  |Given4 = {{{first4|}}}
+  |Given5 = {{{first5|}}}
+  |Given6 = {{{first6|}}}
+  |Given7 = {{{first7|}}}
+  |Given8 = {{{first8|}}}
+  |Given9 = {{{first9|}}}
+  |Authorlink1 = {{#if:{{{authorlink|}}}|{{{authorlink}}}|{{{authorlink1|}}}}}
+  |Authorlink2 = {{{authorlink2|}}}
+  |Authorlink3 = {{{authorlink3|}}}
+  |Authorlink4 = {{{authorlink4|}}}
+  |Authorlink5 = {{{authorlink5|}}}
+  |Authorlink6 = {{{authorlink6|}}}
+  |Authorlink7 = {{{authorlink7|}}}
+  |Authorlink8 = {{{authorlink8|}}}
+  |Authorlink9 = {{{authorlink9|}}}
+  |Year={{#if:{{{year|}}}|{{{year}}}    &lt;!-- attempt to derive year from date, if possible --&gt;
+          |{{#if: {{{date|}}}
+             |{{#iferror: {{#time:Y|{{{date|}}} }}
+                |{{#iferror:{{#time:Y|{{{publication-date|einval}}} }}||{{#time:Y|{{{publication-date|}}} }}}}
+                |{{#time:Y|{{{date|}}} }}
+              }}
+             |{{{publication-date|}}} &lt;!-- last resort --&gt;
+           }}
+        }}
+  |Date = {{#if:{{{date|}}}|{{{date}}}|{{{day|}}} {{{month|}}} {{#if:{{{year|}}}|{{{year}}}|{{{publication-date|}}}}}}}
+  |Title={{{work|}}}
+  |TransTitle={{{trans_title|}}}
+  |At = {{#if:{{{page|}}}|{{{page}}}|{{#if:{{{pages|}}}|{{{pages|}}}|{{{at|}}} }} }}
+  |IncludedWorkTitle = {{#if:{{{url|}}}|{{#if:{{{title|}}}|{{{title}}}|
+{{#if:{{{trans_title|}}}||
+{{Citation error|no {{para|title}} specified|cite web}}}}|{{Citation error|no {{para|url}} specified|cite web}}}}}}
+  |IncludedWorkURL = {{#if:{{{archiveurl|}}}|{{{archiveurl|}}}|{{{url|}}}}}
+  |PublicationPlace = {{{location|}}}
+  |Publisher = {{{publisher|}}}
+  |language = {{{language|}}}
+  |format = {{{format|}}}
+  |DOI={{{doi|{{{DOI|}}}}}}
+  |AccessDate={{#if:{{{accessdate|}}}|{{#if: {{{accessyear|}}}|{{{accessdate}}} {{{accessyear}}}|{{{accessdate}}}}}|{{
+    #if:{{{accessdaymonth|}}}|{{{accessdaymonth}}} {{{accessyear|}}}|{{
+      #if:{{{accessmonthday|}}}|{{{accessmonthday}}} {{{accessyear|}}}|
+      {{{accessday|}}} {{{accessmonth|}}} {{{accessyear|}}}
+      }}
+    }}
+   }}
+  |DateFormat={{#if:{{{dateformat|}}}|{{{dateformat}}}|none}}
+  |quote = {{{quote|}}}
+  |Ref={{{ref|}}}
+  |Sep = {{#ifeq:{{{separator|{{{seperator}}} }}}|;|&amp;#059;|{{{separator|{{{seperator|.}}} }}} }}
+  |PS={{#if:{{{quote|}}}||{{{postscript|.}}}}}
+  |OriginalURL = {{#if:{{{archiveurl|}}}|{{{url|}}}}}
+  |ArchiveDate= {{{archivedate|}}}
+}}{{#if:{{{accessdaymonth|}}}{{{accessmonthday|}}}|[[Category:Cite web templates using unusual accessdate parameters|{{FULLPAGENAME}}]]}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-template}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Clear</title>
+    <id>1239772</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>184591535</id>
+      <timestamp>2008-01-15T22:55:40Z</timestamp>
+      <contributor>
+        <username>CesarB</username>
+        <id>7410</id>
+      </contributor>
+      <minor/>
+      <comment>rv needless addition of an unneeded semicolon</comment>
+      <text xml:space="preserve">&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dablink</title>
+    <id>945764</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>161709751</id>
+      <timestamp>2007-10-02T02:43:39Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;div class=&quot;dablink&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Italiclink</title>
+    <id>23097940</id>
+    <revision>
+      <id>298665133</id>
+      <timestamp>2009-06-26T01:25:40Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <comment>rv - perf</comment>
+      <text xml:space="preserve">''{{#if: {{{1|}}}
+    | [{{{1}}} {{{2|}}}]
+    | &lt;span&gt;{{{2|}}}&lt;/span&gt;
+}}''&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Link</title>
+    <id>1761154</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>298651702</id>
+      <timestamp>2009-06-25T23:48:30Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <comment>rv substr addition - insane</comment>
+      <text xml:space="preserve">{{#if: {{{1|}}} 
+  | [{{{1}}} {{{2|}}}] 
+  | {{{2|}}} 
+}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Link FA</title>
+    <id>2658806</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>268308168</id>
+      <timestamp>2009-02-03T19:36:31Z</timestamp>
+      <contributor>
+        <username>RockMFR</username>
+        <id>2362410</id>
+      </contributor>
+      <minor/>
+      <comment>bad</comment>
+      <text xml:space="preserve">&lt;span id=&quot;interwiki-{{{1}}}-fa&quot;&gt;&lt;/span&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Main</title>
+    <id>1208356</id>
+    <restrictions>move=sysop:edit=sysop</restrictions>
+    <revision>
+      <id>273749063</id>
+      <timestamp>2009-02-27T22:32:00Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Converting to use {{rellink}}</comment>
+      <text xml:space="preserve">{{rellink|extraclasses=noprint relarticle mainarticle|Main article{{#if:{{{2|}}}|s}}: [[{{{1}}}|{{{l1|{{{1}}}}}}]]{{#if:{{{2| }}}
+ |{{#if:{{{3|}}}|,&amp;#32;|&amp;#32;and&amp;#32;}}[[{{{2}}}|{{{l2|{{{2}}}}}}]]}}{{#if:{{{3|}}}
+ |{{#if:{{{4|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{3}}}|{{{l3|{{{3}}}}}}]]}}{{#if:{{{4|}}}
+ |{{#if:{{{5|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{4}}}|{{{l4|{{{4}}}}}}]]}}{{#if:{{{5|}}}
+ |{{#if:{{{6|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{5}}}|{{{l5|{{{5}}}}}}]]}}{{#if:{{{6|}}}
+ |{{#if:{{{7|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{6}}}|{{{l6|{{{6}}}}}}]]}}{{#if:{{{7|}}}
+ |{{#if:{{{8|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{7}}}|{{{l7|{{{7}}}}}}]]}}{{#if:{{{8|}}}
+ |{{#if:{{{9|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{8}}}|{{{l8|{{{8}}}}}}]]}}{{#if:{{{9|}}}
+ |{{#if:{{{10|}}}|,&amp;#32;|,&amp;#32;and&amp;#32;}}[[{{{9}}}|{{{l9|{{{9}}}}}}]]}}{{#if:{{{10|}}}
+ |, and [[{{{10}}}|{{{l10|{{{10}}}}}}]]}}''{{#if:{{{11| }}}|&amp;#32; (too many parameters in &amp;#123;&amp;#123;[[Template:main|main]]&amp;#125;&amp;#125;)}}}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{template doc}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbar</title>
+    <id>5277509</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>298552649</id>
+      <timestamp>2009-06-25T13:01:04Z</timestamp>
+      <contributor>
+        <username>MSGJ</username>
+        <id>42630</id>
+      </contributor>
+      <minor/>
+      <comment>reword for consistency with other span titles</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{nodiv|}}}|&amp;nbsp;&lt;span|&lt;div}} class=&quot;noprint plainlinks navbar&quot; style=&quot;background:none; padding:0; font-weight:normal;{{{fontstyle|}}}; font-size:xx-small; {{{style|}}}&quot;&gt;&lt;!--
+
+--&gt;{{#if:{{{mini|}}}{{{plain|}}}|&lt;!--nothing--&gt;|&lt;!--else:
+--&gt;This box:&amp;#32;}}&lt;!--
+
+--&gt;{{#if:{{{brackets|}}}|&amp;#91;}}&lt;!--
+
+--&gt;[[{{transclude|{{{1}}}}}|&lt;span title=&quot;View this template&quot; style=&quot;{{{fontstyle|}}}&quot;&gt;&lt;!--
+--&gt;{{#if:{{{mini|}}}|v|view}}&lt;/span&gt;]]&lt;!--
+
+--&gt;&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[[{{TALKPAGENAME:{{transclude|{{{1}}}}}}}|&lt;span title=&quot;Discuss this template&quot; style=&quot;{{{fontstyle|}}}&quot;&gt;{{#if:{{{mini|}}}|d|talk}}&lt;/span&gt;]]&lt;!--
+
+--&gt;{{#if:{{{noedit|}}}|&lt;!--nothing--&gt;|&lt;!--else:
+--&gt;&amp;nbsp;&lt;span style=&quot;font-size:80%;&quot;&gt;•&lt;/span&gt;&amp;nbsp;[{{fullurl:{{transclude|{{{1}}}}}|action=edit}}&lt;span title=&quot;Edit this template&quot; style=&quot;{{{fontstyle|}}};&quot;&gt;{{#if:{{{mini|}}}|e|edit}}&lt;/span&gt;]&lt;!--
+--&gt;}}&lt;!--
+
+--&gt;{{#if:{{{brackets|}}}|]}}&lt;!--
+
+--&gt;{{#if:{{{nodiv|}}}|&lt;!--then:
+--&gt;&lt;/span&gt;&amp;nbsp;|&lt;!--else:
+--&gt;&lt;/div&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Navbox</title>
+    <id>995954</id>
+    <revision>
+      <id>305046752</id>
+      <timestamp>2009-07-30T09:51:54Z</timestamp>
+      <contributor>
+        <username>MSGJ</username>
+        <id>42630</id>
+      </contributor>
+      <minor/>
+      <comment>add titleclass and bodyclass parameters, per request on talk page</comment>
+      <text xml:space="preserve">&lt;!--
+
+Please do not edit without discussion first as this is a VERY complex template.
+
+--&gt;{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=&lt;/div&gt;|none=|#default=&lt;table class=&quot;navbox {{{bodyclass|}}}&quot; cellspacing=&quot;0&quot; &lt;!--
+ --&gt;style=&quot;{{{bodystyle|}}};{{{style|}}}&quot;&gt;&lt;tr&gt;&lt;td style=&quot;padding:2px;&quot;&gt;}}&lt;!--
+
+--&gt;&lt;table cellspacing=&quot;0&quot; class=&quot;nowraplinks {{#if:{{{title|}}}|{{#switch:{{{state|}}}|plain|off=|&lt;!--
+ --&gt;#default=collapsible {{#if:{{{state|}}}|{{{state}}}|autocollapse}}}}}} {{#switch:{{{border|{{{1|}}}}}}|&lt;!--
+ --&gt;subgroup|child|none=navbox-subgroup&quot; style=&quot;width:100%;{{{bodystyle|}}};{{{style|}}}|&lt;!--
+ --&gt;#default=&quot; style=&quot;width:100%;background:transparent;color:inherit}};{{{innerstyle|}}};&quot;&gt;&lt;!--
+
+
+
+---Title and Navbar---
+--&gt;{{#if:{{{title|}}}|&lt;tr&gt;{{#if:{{{titlegroup|}}}|&lt;!--
+ --&gt;&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{titlegroupstyle|}}}&quot;&gt;{{{titlegroup|}}}&lt;/td&gt;&lt;!--
+ --&gt;&lt;th style=&quot;border-left:2px solid #fdfdfd;width:100%;|&lt;th style=&quot;}}{{{basestyle|}}};{{{titlestyle|}}}&quot; &lt;!--
+ --&gt;colspan={{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}{{#if:{{{titlegroup|}}}|-1}}}} &lt;!--
+ --&gt;class=&quot;navbox-title&quot;&gt;&lt;!--
+
+--&gt;{{#if:{{#switch:{{{navbar|}}}|plain|off=1}}&lt;!--
+ --&gt;{{#if:{{{name|}}}||{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=1}}}}|&lt;!--
+ --&gt;{{#ifeq:{{{navbar|}}}|off|{{#ifeq:{{{state|}}}|plain|&lt;div style=&quot;float:right;width:6em;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}|&lt;!--
+ --&gt;{{#ifeq:{{{state|}}}|plain||&lt;div style=&quot;float:left; width:6em;text-align:left;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}}}|&lt;!--
+ --&gt;&lt;div style=&quot;float:left; width:6em;text-align:left;&quot;&gt;&lt;!--
+ --&gt;{{Navbar|{{{name}}}|fontstyle={{{basestyle|}}};{{{titlestyle|}}};border:none;|mini=1}}&lt;!--
+ --&gt;&lt;/div&gt;{{#ifeq:{{{state|}}}|plain|&lt;div style=&quot;float:right;width:6em;&quot;&gt;&amp;nbsp;&lt;/div&gt;}}}}&lt;!--
+
+ --&gt;&lt;span class=&quot;{{{titleclass|}}}&quot; style=&quot;font-size:{{#switch:{{{border|{{{1|}}}}}}|subgroup|child|none=100|#default=110}}%;&quot;&gt;&lt;!--
+ --&gt;{{{title}}}&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Above---
+--&gt;{{#if:{{{above|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+ --&gt;&lt;tr&gt;&lt;td class=&quot;navbox-abovebelow&quot; style=&quot;{{{basestyle|}}};{{{abovestyle|}}}&quot; &lt;!--
+ --&gt;colspan=&quot;{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}&quot;&gt;{{{above}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Body---
+
+---First group/list and images---
+--&gt;{{#if:{{{list1|}}}|{{#if:{{{title|}}}{{{above|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+
+--&gt;{{#if:{{{imageleft|}}}|&lt;!--
+ --&gt;&lt;td style=&quot;width:0%;padding:0px 2px 0px 0px;{{{imageleftstyle|}}}&quot; &lt;!--
+ --&gt;rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}}&gt;&lt;!--
+ --&gt;{{{imageleft}}}&lt;/td&gt;}}&lt;!--
+
+ --&gt;{{#if:{{{group1|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group1style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group1}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list1style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{list1padding|{{{listpadding|0em 0.25em}}}}}}&quot;&gt;{{{list1}}}&lt;/div&gt;&lt;/td&gt;&lt;!--
+
+--&gt;{{#if:{{{image|}}}|&lt;!--
+ --&gt;&lt;td style=&quot;width:0%;padding:0px 0px 0px 2px;{{{imagestyle|}}}&quot; &lt;!--
+ --&gt;rowspan={{#expr:1{{#if:{{{list2|}}}|+2}}{{#if:{{{list3|}}}|+2}}{{#if:{{{list4|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list5|}}}|+2}}{{#if:{{{list6|}}}|+2}}{{#if:{{{list7|}}}|+2}}{{#if:{{{list8|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list9|}}}|+2}}{{#if:{{{list10|}}}|+2}}{{#if:{{{list11|}}}|+2}}{{#if:{{{list12|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list13|}}}|+2}}{{#if:{{{list14|}}}|+2}}{{#if:{{{list15|}}}|+2}}{{#if:{{{list16|}}}|+2}}&lt;!--
+ --&gt;{{#if:{{{list17|}}}|+2}}{{#if:{{{list18|}}}|+2}}{{#if:{{{list19|}}}|+2}}{{#if:{{{list20|}}}|+2}}}}&gt;&lt;!--
+ --&gt;{{{image}}}&lt;/td&gt;}}&lt;!--
+
+--&gt;&lt;/tr&gt;}}&lt;!--
+
+
+
+---Remaining groups/lists---
+
+--&gt;{{#if:{{{list2|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}|&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group2|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group2style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group2}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list2style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list2}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list3|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}{{{list2|}}}|&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group3|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group3style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group3}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list3style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list3}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list4|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group4|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group4style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group4}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list4style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list4}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list5|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group5|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group5style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group5}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list5style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list5}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list6|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group6|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group6style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group6}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list6style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list6}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list7|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group7|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group7style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group7}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list7style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list7}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list8|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group8|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group8style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group8}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list8style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list8}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list9|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group9|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group9style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group9}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list9style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list9}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list10|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group10|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group10style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group10}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list10style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list10}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list11|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group11|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group11style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group11}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list11style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list11}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list12|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group12|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group12style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group12}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list12style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list12}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list13|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group13|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group13style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group13}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list13style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list13}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list14|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group14|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group14style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group14}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list14style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list14}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list15|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group15|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group15style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group15}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list15style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list15}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list16|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group16|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group16style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group16}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list16style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list16}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list17|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group17|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group17style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group17}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list17style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list17}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list18|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group18|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group18style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group18}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list18style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list18}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list19|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group19|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group19style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group19}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{oddstyle|}}};{{{list19style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|even|{{{evenodd|odd}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list19}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+--&gt;{{#if:{{{list20|}}}|&lt;!--
+ --&gt;&lt;tr style=&quot;height:2px&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;!--
+ --&gt;{{#if:{{{group20|}}}|&lt;td class=&quot;navbox-group&quot; style=&quot;{{{basestyle|}}};{{{groupstyle|}}};{{{group20style|}}}&quot;&gt;&lt;!--
+ --&gt;{{{group20}}}&lt;/td&gt;&lt;td style=&quot;text-align:left;border-left-width:2px;border-left-style:solid;|&lt;td colspan=2 style=&quot;}}&lt;!--
+ --&gt;width:100%;padding:0px;{{{liststyle|}}};{{{evenstyle|}}};{{{list20style|}}}&quot; &lt;!--
+ --&gt;class=&quot;navbox-list navbox-{{#ifeq:{{{evenodd|}}}|swap|odd|{{{evenodd|even}}}}}&quot;&gt;&lt;!--
+ --&gt;&lt;div style=&quot;padding:{{{listpadding|0em 0.25em}}}&quot;&gt;{{{list20}}}&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+---Below---
+--&gt;{{#if:{{{below|}}}|&lt;!--
+ --&gt;{{#if:{{{title|}}}{{{above|}}}{{{list1|}}}{{{list2|}}}{{{list3|}}}|&lt;tr style=&quot;height:2px;&quot;&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+ --&gt;&lt;tr&gt;&lt;td class=&quot;navbox-abovebelow&quot; style=&quot;{{{basestyle|}}};{{{belowstyle|}}}&quot; &lt;!--
+ --&gt;colspan=&quot;{{#expr:2{{#if:{{{imageleft|}}}|+1}}{{#if:{{{image|}}}|+1}}}}&quot;&gt;{{{below}}}&lt;/td&gt;&lt;/tr&gt;}}&lt;!--
+
+
+--&gt;&lt;/table&gt;{{#switch:{{{border|{{{1|}}}}}}|subgroup|child=&lt;div&gt;|none=|#default=&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;}}&lt;!--
+
+--&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap begin</title>
+    <id>12884936</id>
+    <revision>
+      <id>206118171</id>
+      <timestamp>2008-04-16T22:23:25Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Changed to {{pp-template|small=yes}} since now fully protected.</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;span style=&quot;white-space:nowrap&quot;&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}} 
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nowrap end</title>
+    <id>12884962</id>
+    <revision>
+      <id>206115977</id>
+      <timestamp>2008-04-16T22:11:06Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Changed to {{pp-template|small=yes}} since now fully protected.</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&lt;/span&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses</title>
+    <id>693634</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161704458</id>
+      <timestamp>2007-10-02T02:11:32Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">{{Otheruses4|||{{{1|{{PAGENAME}} (disambiguation)}}}}}&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Otheruses4</title>
+    <id>2468023</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>216419000</id>
+      <timestamp>2008-06-01T15:48:10Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <comment>display &quot;this page...&quot; outside ns:0, per editprotected</comment>
+      <text xml:space="preserve">{{dablink|{{#if: {{{1|}}}|This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is about {{{1}}}.&amp;#32;&amp;#32;}}{{#if:{{{2|}}}|For {{{2}}}, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;|For other uses, see {{#if:{{{3|}}}|[[{{{3}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.}}{{#if:{{{2|}}}|{{#if:{{{4|}}}|{{#ifeq:{{{4}}}|1|For other uses, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{4}}}, see {{#if:{{{5|}}}|[[{{{5}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{4|}}}|{{#if:{{{6|}}}|{{#ifeq:{{{6}}}|1|For other uses, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{6}}}, see {{#if:{{{7|}}}|[[{{{7}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:{{{6|}}}|{{#if:{{{8|}}}|{{#ifeq:{{{8}}}|1|For other uses, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.|For {{{8}}}, see {{#if:{{{9|}}}|[[{{{9}}}]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}}}}}}}}}&lt;noinclude&gt;{{pp-template|small=yes}}{{template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-meta</title>
+    <id>13371038</id>
+    <revision>
+      <id>301739559</id>
+      <timestamp>2009-07-12T19:39:57Z</timestamp>
+      <contributor>
+        <username>TheDJ</username>
+        <id>244887</id>
+      </contributor>
+      <comment>imagemap is no longer necessary here. good riddence</comment>
+      <text xml:space="preserve">{{#ifeq:{{#switch:{{lc:{{{type}}}}}
+  |move=&lt;!--
+ --&gt;{{#ifeq:
+      {{#switch:{{lc:{{{demolevel|undefined}}}}}
+        |semi
+        |autoconfirmed=autoconfirmed
+        |administrator
+        |full
+        |sysop=sysop
+        |undefined={{PROTECTIONLEVEL:move}}
+        |#default=&lt;!--fallback value: null
+   --&gt;}}
+      |sysop|yes|no
+    }}
+  |create=&lt;!--
+ --&gt;{{#if:
+      {{#switch:{{lc:{{{demolevel|undefined}}}}}
+        |semi
+        |autoconfirmed=autoconfirmed
+        |administrator
+        |full
+        |sysop=sysop
+        |undefined={{PROTECTIONLEVEL:create}}
+        |#default=&lt;!--fallback value: null
+   --&gt;}}
+      |yes|no
+    }}
+|#default&lt;!--includes all other types--&gt;=&lt;!--
+ --&gt;{{#if:
+      {{#switch:{{lc:{{{demolevel|undefined}}}}}
+        |semi
+        |autoconfirmed=autoconfirmed
+        |administrator
+        |full
+        |sysop=sysop
+        |undefined={{PROTECTIONLEVEL:edit}}
+        |#default=&lt;!--fallback value: null
+   --&gt;}}
+      |{{#ifeq:{{#switch:{{lc:{{{disallowlevel|}}}}}
+                 |semi
+                 |autoconfirmed=autoconfirmed
+                 |administrator
+                 |full
+                 |sysop=sysop
+                 |#default=&lt;!--fallback value: null--&gt;}}
+         |{{#switch:{{lc:{{{demolevel|undefined}}}}}
+            |semi
+            |autoconfirmed=autoconfirmed
+            |administrator
+            |full
+            |sysop=sysop
+            |undefined={{PROTECTIONLEVEL:edit}}
+            |#default=&lt;!--fallback value: null
+       --&gt;}}
+         |no|yes
+       }}
+   |no}}
+}}|yes|{{#ifeq:{{lc:{{{small|}}}}}|yes|
+&lt;div class=&quot;metadata topicon&quot; id=&quot;protected-icon&quot; style=&quot;display:none; right:55px;&quot;&gt;[[Image:{{{image|{{#switch:{{lc:{{{type}}}}}
+ |full=Padlock.svg
+ |semi=Padlock-silver-medium.svg
+ |move=Padlock-olive.svg
+ |indef=Padlock-red.svg
+ |office=Padlock-black.svg
+ |create=Padlock-skyblue.svg
+ |#default=Transparent.gif
+}}}}}|20px|link={{{icon-link|Wikipedia:Protection policy#{{lc:{{{type}}}}}}}}|{{{icon-text|This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is {{#switch:{{lc:{{{type}}}}}
+ |semi=semi-
+ |move=move-
+ |indef=permanently&lt;nowiki&gt; &lt;/nowiki&gt;
+ |create=creation-
+ |office=&lt;!--null, but should this have a special tag?--&gt;
+ |full
+ |#default=&lt;!--null--&gt;
+}}protected{{#ifeq:{{lc:{{{type}}}}}|indef||{{#if:{{{expiry|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;until {{#time:F j, Y|{{{expiry}}}}}}}}}{{#if:{{{icon-reason|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;{{{icon-reason}}}}}.}}}]]&lt;/div&gt;
+|&lt;!-- else, not small --&gt;
+{{mbox 
+| demospace = {{{demospace|}}}
+| type = protection
+| image = [[Image:{{{image|{{#switch:{{lc:{{{type}}}}}
+ |full=Padlock.svg
+ |semi=Padlock-silver-medium.svg
+ |move=Padlock-olive.svg
+ |indef=Padlock-red.svg
+ |office=Padlock-black.svg
+ |create=Padlock-skyblue.svg
+ |#default=Transparent.gif
+}}}}}|40px|{{{icon-text|This page is {{#switch:{{lc:{{{type}}}}}
+ |semi=semi-
+ |move=move-
+ |indef=permanently&lt;nowiki&gt; &lt;/nowiki&gt;
+ |create=creation-
+ |office=&lt;!--null, but should this have a special tag?--&gt;
+ |full
+ |#default=&lt;!--null--&gt;
+}}protected.}}}]]
+| text = '''{{{reason-text|{{#switch:{{lc:{{{type}}}}}
+ |full=This page is currently [[Wikipedia:This page is protected|protected]] from editing
+ |semi=Editing of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} by [[Wikipedia:User access levels#Autoconfirmed_users|new]] or [[Wikipedia:User access levels#Anonymous_users|unregistered]] users is currently [[Wikipedia:Protection policy|disabled]]
+ |move=This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is currently [[Wikipedia:This page is protected|protected]] from [[Help:Moving a page|page moves]]
+ |indef=This page is [[Wikipedia:This page is protected|protected]] from editing ''indefinitely''
+ |office=This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is currently [[Wikipedia:This page is protected|protected]] from editing
+ |create=[[Help:Starting a new page|Recreation]] of this {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} [[Wikipedia:This page is protected|has been disabled]]
+}}{{#ifeq:{{lc:{{{type}}}}}|indef||{{#if:{{{expiry|}}}|&amp;#32;until {{#time:[[F j]], [[Y]]|{{{expiry}}}}}}}}}{{{reason&lt;includeonly&gt;|&lt;/includeonly&gt;}}}.}}}'''&lt;br /&gt; {{{explanation-text|{{#ifeq:{{lc:{{{dispute}}}}}|yes|This protection is '''not''' an endorsement of the {{#ifeq:{{{type}}}|move|[{{fullurl:Special:Log|type=move&amp;page={{FULLPAGENAMEE}}}} current title]|[{{fullurl:{{FULLPAGENAMEE}}|action=history}} current version]}}.}} See the [[Wikipedia:Protection policy|protection policy]] and [{{fullurl:Special:Log|type=protect&amp;page={{FULLPAGENAMEE}}}} protection log] for more details. {{#switch:{{lc:{{{type}}}}}
+ |full|indef=Please discuss any changes on the [[{{TALKPAGENAME}}|talk page]]; you may use the {{tlx|editprotected}} template to ask an [[Wikipedia:Administrator|administrator]] to make the edit if it is supported by [[Wikipedia:Consensus|consensus]]. {{#ifeq:{{NAMESPACE}}|{{ns:8}}&lt;!--MediaWiki--&gt;||You may also [[Wikipedia:Requests for page protection|request]] that this page be unprotected.}}
+ |semi=If you cannot edit this {{#switch:{{NAMESPACE}}|{{ns:0}}=article|{{ns:6}}=image|#default=page}} and you wish to make a change, you can {{#ifeq:{{NAMESPACE}}|{{TALKSPACE}}||[[Template:Editsemiprotected|request an edit]], [[{{TALKPAGENAME}}|discuss changes on the talk page]],}} [[Wikipedia:Requests for page protection#Current requests for unprotection|request unprotection]], [[Special:Userlogin|log in]], or &lt;span class=&quot;plainlinks&quot;&gt;[http://en.wikipedia.org/w/index.php?title=Special:Userlogin&amp;type=signup &lt;span style=&quot;color:#002bb8;&quot; title=&quot;Sign in / create account&quot;&gt;create an account&lt;/span&gt;].
+ |move=The page may still be edited but cannot be moved until unprotected. Please discuss any suggested moves on the [[{{TALKPAGENAME}}|talk page]] or at [[Wikipedia:Requested moves]].  You can also [[Wikipedia:Requests for page protection|request]] that the page be unprotected.  
+ |office=If you are able to edit this page, please discuss all changes and additions on the [[{{TALKPAGENAME}}|talk page]] first. '''Do not remove protection from this article unless you are authorized by the Wikimedia Foundation to do so.'''
+ |create=Please see the {{#if:{{{xfd|}}}|'''[[{{{xfd}}}|deletion discussion]]''' or the}} [{{fullurl:Special:Log|type=delete&amp;page={{FULLPAGENAMEE}}}} deletion log] for details of why this page was deleted. If you would like to create a page at this title, you must first [[Wikipedia:Requests for page protection|request]] for it to be unprotected, or contact the administrator who deleted the page for the deleted material to be restored. If unsuccessful, you can use [[Wikipedia:Deletion review|deletion review]].
+}}}}}
+}}
+}}|[[Category:Wikipedia pages with incorrect protection templates]]}}&lt;!--End if small--&gt;&lt;includeonly&gt;{{#ifeq:{{lc:{{{categories|no}}}}}|no||{{{categories|}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pp-move-vandalism</title>
+    <id>15823330</id>
+    <revision>
+      <id>274965409</id>
+      <timestamp>2009-03-04T17:38:23Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Refining demolevel defaulting scheme to enable the undefined case since, as I earlier forgot, templates cannot be passed parameters by ParserFunctions.</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{pp-meta
+|type=move
+|small={{{small|}}}
+|demospace={{{demospace|}}}
+|demolevel={{{demolevel|undefined}}}
+|expiry={{{expiry|}}}
+|dispute=yes&lt;!--to enable disclaimer against title endorsement--&gt;
+|reason=&amp;#32;due to [[Wikipedia:Vandalism|vandalism]]
+|icon-reason=due to vandalism
+|categories={{{categories|{{#switch: {{NAMESPACE}}
+ | {{ns:2}}
+ | {{ns:3}} = [[Category:Wikipedia move-protected user and user talk pages|{{PAGENAME}}]]
+ | {{ns:4}}
+ | {{ns:12}} = [[Category:Wikipedia move-protected project pages|{{PAGENAME}}]]
+ | {{ns:100}} = [[Category:Wikipedia move-protected portals|{{PAGENAME}}]]
+ | {{ns:10}} = [[Category:Wikipedia move-protected pages|{{PAGENAME}}]]
+ | #default = {{talk other|[[Category:Wikipedia move-protected talk pages|{{PAGENAME}}]]|[[Category:Wikipedia pages move-protected due to vandalism|{{PAGENAME}}]]}}}}}}}}}&lt;/includeonly&gt;&lt;noinclude&gt;
+{{pp-move-vandalism|demospace=main|categories=no}}{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Pron-en</title>
+    <id>13847663</id>
+    <revision>
+      <id>290299594</id>
+      <timestamp>2009-05-16T12:22:43Z</timestamp>
+      <contributor>
+        <username>Kwamikagami</username>
+        <id>93143</id>
+      </contributor>
+      <text xml:space="preserve">&lt;onlyinclude&gt;pronounced &lt;span title=&quot;Pronunciation in the International Phonetic Alphabet (IPA)&quot; class=&quot;IPA&quot;&gt;[[WP:IPA for English|/{{{1}}}/]]&lt;/span&gt;&lt;small&gt;{{#if:{{{2|}}}|&amp;nbsp;([[File:Speaker Icon.svg|13px|link=:Media:{{{2|}}}]] [[:Media:{{{2|}}}|listen]])}}&lt;/small&gt;&lt;/onlyinclude&gt;
+{{pp-template|small=yes}}
+
+==Example==
+
+This code:
+
+: &lt;code&gt;&lt;nowiki&gt;A battleship, {{pron-en|ˈbætəlʃɪp}}, is ...&lt;/nowiki&gt;&lt;/code&gt;
+
+will display:
+
+: A battleship, {{pron-en|ˈbætəlʃɪp}}, is ...
+
+==Usage==
+{{usage of IPA templates}}
+
+&lt;!-- PLEASE ADD CATEGORIES BELOW THIS LINE, THANKS. --&gt;
+
+[[Category:IPA templates|{{PAGENAME}}]]
+
+&lt;!-- PLEASE ADD INTERWIKIS BELOW THIS LINE, THANKS. --&gt;
+&lt;noinclude&gt;
+[[ar:PronEng]]
+[[tl:Template:PronEng]]
+[[simple:Template:IPA-en]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:PronEng</title>
+    <id>17225311</id>
+    <redirect />
+    <revision>
+      <id>222773568</id>
+      <timestamp>2008-07-01T01:20:21Z</timestamp>
+      <contributor>
+        <username>Cenarium</username>
+        <id>5711305</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:PronEng: redirect to a [[WP:HRT|high risk template]] [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:Pron-en]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Reflist</title>
+    <id>7585648</id>
+    <revision>
+      <id>246409010</id>
+      <timestamp>2008-10-20T01:28:44Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Adding div classes per editprotected on talk by [[User:Anomie|Anomie]] using change from http://en.wikipedia.org/w/index.php?title=User:Anomie/Sandbox3&amp;diff=244821255&amp;oldid=244820528</comment>
+      <text xml:space="preserve">&lt;div class=&quot;references-small {{#if: {{{colwidth|}}} | references-column-width | {{#iferror: {{#ifexpr: {{{1|1}}}&gt;1 | references-column-count references-column-count-{{{1}}} }} }} }}&quot; {{#if: {{{colwidth|}}}| style=&quot;-moz-column-width:{{{colwidth}}}; column-width:{{{colwidth}}};&quot; | {{#if: {{{1|}}}| style=&quot;-moz-column-count:{{{1}}}; column-count:{{{1}}};&quot; }} }}&gt;
+{{#tag:references||group={{{group|}}}}}&lt;/div&gt;&lt;noinclude&gt;{{pp-template|small=yes}}{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Rellink</title>
+    <id>21737712</id>
+    <revision>
+      <id>280802448</id>
+      <timestamp>2009-03-31T05:05:28Z</timestamp>
+      <contributor>
+        <username>Nihiltres</username>
+        <id>236191</id>
+      </contributor>
+      <comment>Removed code now fully redundant to Common.css (iPod edit)</comment>
+      <text xml:space="preserve">&lt;div class=&quot;rellink{{#if:{{{extraclasses|}}}|&lt;nowiki&gt; &lt;/nowiki&gt;{{{extraclasses}}}}}&quot;&gt;{{{1}}}&lt;/div&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Talk other</title>
+    <id>17220513</id>
+    <revision>
+      <id>223459968</id>
+      <timestamp>2008-07-04T04:35:16Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Removing the &quot;return 'talk'/'other' when no parameter&quot; function, since not used, not needed and causes problems in some situations.</comment>
+      <text xml:space="preserve">{{#switch:
+  &lt;!--If no or empty &quot;demospace&quot; parameter then detect namespace--&gt;
+  {{#if:{{{demospace|}}} 
+  | {{lc: {{{demospace}}} }}    &lt;!--Use lower case &quot;demospace&quot;--&gt;
+  | {{#ifeq:{{NAMESPACE}}|{{TALKSPACE}}
+    | talk
+    | other
+    }} 
+  }}
+| talk     = {{{1|}}}
+| other
+| #default = {{{2|}}}
+}}&lt;!--End switch--&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Transclude</title>
+    <id>21843384</id>
+    <revision>
+      <id>275377931</id>
+      <timestamp>2009-03-06T12:09:04Z</timestamp>
+      <contributor>
+        <username>Happy-melon</username>
+        <id>994084</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:Transclude: [[WP:HRT|Highly visible template]] ([edit=sysop] (indefinite) [move=sysop] (indefinite))</comment>
+      <text xml:space="preserve">{{#switch: {{NAMESPACE: {{{1}}} }}
+ |#default = {{FULLPAGENAME: {{{1}}} }} &lt;!-- eg &quot;User:Foo&quot; --&gt;
+ |{{ns:0}} = 
+    {{#ifeq: {{NAMESPACE: {{{1}}} }} | {{NAMESPACE: Template{{{1}}} }}
+      | Template:{{{1}}}            &lt;!-- no leading colon, eg &quot;Foo&quot; --&gt;
+      | {{PAGENAME: {{{1}}} }}      &lt;!-- leading colon, eg &quot;:Foo&quot;, so we want the article --&gt;
+    }}
+}}&lt;noinclude&gt;
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Unicode</title>
+    <id>943744</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>161709716</id>
+      <timestamp>2007-10-02T02:43:25Z</timestamp>
+      <contributor>
+        <username>Pathoschild</username>
+        <id>240994</id>
+      </contributor>
+      <minor/>
+      <comment>{{documentation}}</comment>
+      <text xml:space="preserve">&lt;span class=&quot;Unicode&quot;&gt;{{{1}}}&lt;/span&gt;&lt;noinclude&gt;
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:\</title>
+    <id>16258728</id>
+    <revision>
+      <id>225393691</id>
+      <timestamp>2008-07-13T13:12:27Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Adding template {{Documentation}} so we can protect this template.</comment>
+      <text xml:space="preserve">&amp;nbsp;/ &lt;noinclude&gt;
+
+{{pp-semi-template|small=yes}}
+{{Documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·</title>
+    <id>7599646</id>
+    <revision>
+      <id>238885972</id>
+      <timestamp>2008-09-16T21:04:35Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Removed unneeded includeonly tags, and changed from using the redirect {{template doc}} to directly using {{documentation}}.</comment>
+      <text xml:space="preserve">&lt;span style=&quot;font-weight:bold;&quot;&gt;&amp;nbsp;·&lt;/span&gt; &lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·w</title>
+    <id>15943978</id>
+    <redirect />
+    <revision>
+      <id>206128379</id>
+      <timestamp>2008-04-16T23:23:25Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <minor/>
+      <comment>Protected Template:·w: Used on 27000 pages. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">#REDIRECT [[Template:·wrap]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:·wrap</title>
+    <id>12885137</id>
+    <revision>
+      <id>206124472</id>
+      <timestamp>2008-04-16T23:00:00Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Changed to {{pp-template|small=yes}} since now fully protected. Moved documentation and category to /doc subpage.</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;&amp;nbsp;&lt;b&gt;·&lt;/b&gt;&lt;/span&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:•</title>
+    <id>8005706</id>
+    <revision>
+      <id>238885995</id>
+      <timestamp>2008-09-16T21:04:43Z</timestamp>
+      <contributor>
+        <username>Davidgothberg</username>
+        <id>109101</id>
+      </contributor>
+      <comment>Removed unneeded includeonly tags.</comment>
+      <text xml:space="preserve">&amp;nbsp;&amp;bull; &lt;noinclude&gt;
+
+{{pp-template|small=yes}}
+{{documentation}}
+&lt;!-- Add categories and interwikis to the /doc subpage, not here! --&gt;
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

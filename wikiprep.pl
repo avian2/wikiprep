@@ -761,7 +761,9 @@ sub postprocessText(\$$$) {
   # Remove any other <...> tags - but keep the text they enclose
   # (the tags are replaced with spaces to prevent adjacent pieces of text
   # from being glued together).
-  $$refToText =~ s/<\/?[a-z][^<>]*?>/ /sg;
+  
+  # Repeat the substitution, since we can have <div class="<nowiki> </nowiki>">
+  1 while ($$refToText =~ s/<\/?[a-z][^<>]*?>/ /sg);
 
   # Change markup on bold/italics emphasis. We probably don't need to distinguish
   # these 3 types of emphasis, so we just replace all of them with a generic <em> tag.

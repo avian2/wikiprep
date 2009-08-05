@@ -53,7 +53,8 @@ LOGS =	images.log \
 	dblredir.log \
 	otheruses.log \
 	geo.log \
-	stub.log
+	stub.log \
+	mainarticle.log
 
 OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 
