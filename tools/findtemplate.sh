@@ -2,29 +2,29 @@
 
 if [ "$#" -lt "2" ]; then
 	cat<<END
-Find templates that support a named parameter
+Find templates that have a named parameter
 SYNTAX: findtemplates path_to_template_dir named_parameter
 
-Example: findtemplates enwiki-20080312-pages-articles.templates isbn
+Example: findtemplates enwiki-20080312-pages-articles.xml isbn
 END
 	exit 0
 fi
 
-TEMPLATEDIR="$1"
+XMLPATH="$1"
 PARAMNAME="$2"
+
+GUMPATH=`echo "$XMLPATH" | sed -e 's/\.xml/.gum.xml/'`
+TMPLPATH=`echo "$XMLPATH" | sed -e 's/\.xml/.tmpl.xml/'`
 
 OLDDIR=`pwd`
 
-cd "$TEMPLATEDIR"
-
-grep -rci "^$PARAMNAME = " 1 2 3 4 5 6 7 8 9 | (
+zcat "$GUMPATH"*gz | sed -ne "/^<template id=/{s/[^0-9]//g;h};/^<param name=\"$PARAMNAME\">/I{g;p}" | sort | uniq -c | sort -n | (
 	while read T; do
-		TEMPLATEID=`echo $T | sed -e 's/^.*\///' | sed -e 's/:[0-9]\+$//'`
-		TEMPLATETITLE=`grep "^$TEMPLATEID[^0-9]" index`
-		PAGENUM=`echo $T | sed -e 's/^.*://'`
+		TMPLNUM=`echo $T | awk '{ print $1 }'`
+		TMPLID=`echo $T | awk '{ print $2 }'`
 
-		if [ "x$PAGENUM" != "x0" ]; then
-			echo "$TEMPLATETITLE ($PAGENUM)"
-		fi
+		TMPLTITLE=`grep -B1 "$TMPLID" "$TMPLPATH" | head -n1 | sed -e 's/<[^<]\+>//g'`
+
+		printf "%8d %s\n" "$TMPLNUM" "$TMPLTITLE"
 	done
 )
