@@ -1000,8 +1000,9 @@ Available options:
                  file. With LEVEL set to "debug", the log can get
                  approximately 3-4 times larger than the XML dump.
   -compress      Enable compression on some of the output files.
-  -lang LANG     Use language other than English. LANG is Wikipedia
-                 language prefix (e.g. 'sl' for 'slwiki').
+  -config CONFIG Use a different configuration (see Perl modules 
+                 in Wikiprep/Config). Default is for English
+                 Wikipedia.
   -format FMT    Use output format FMT (default is legacy).
   -prescan       Prescan the dump.
   -transform     Transform the dump.
