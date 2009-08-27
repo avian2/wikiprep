@@ -836,10 +836,10 @@ sub postprocessText(\$$$) {
   # is prefixed with "^" to make sure it begins at the beginning of the line.
   # Since the text (e.g., article body) may contains multiple lines, we use
   # the "/m" modifier to allow matching "^" at embedded "\n" positions.
-  $$refToText =~ s/^=====(.*?)=====/<h4>$1<\/h4>/mg;
-  $$refToText =~ s/^====(.*?)====/<h3>$1<\/h3>/mg;
-  $$refToText =~ s/^===(.*?)===/<h2>$1<\/h2>/mg;
-  $$refToText =~ s/^==(.*?)==/<h1>$1<\/h1>/mg;
+  $$refToText =~ s/^=====(.*?)=====(\s*)$/<h4>$1<\/h4>$2/mg;
+  $$refToText =~ s/^====(.*?)====(\s*)$/<h3>$1<\/h3>$2/mg;
+  $$refToText =~ s/^===(.*?)===(\s*)$/<h2>$1<\/h2>$2/mg;
+  $$refToText =~ s/^==(.*?)==(\s*)$/<h1>$1<\/h1>$2/mg;
 }
 
 sub linkTag {

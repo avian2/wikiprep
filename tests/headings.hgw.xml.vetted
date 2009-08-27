@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="52" newlength="63" stub="0" categories="0" outlinks="1" urls="0">
+<page id="1" orglength="71" newlength="105" stub="0" categories="0" outlinks="1" urls="0">
 <title>A</title>
 <categories></categories>
 <links>2</links>
@@ -41,6 +41,8 @@ B
 <h1> <a id="2">B</a> </h1>
 
 <h1> B </h1> 
+
+== A <w namespace="File" title="=="></w>
 	    
 </text>
 </page>
