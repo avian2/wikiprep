@@ -834,7 +834,7 @@ sub postprocessText(\$$$) {
   # Note that section headers may only begin at the very first position in the line
   # (not even after a space). Therefore, each header markup in the following commands
   # is prefixed with "^" to make sure it begins at the beginning of the line.
-  # Since the text (e.g., article body) may contains multiple lines, we use
+  # Since the text (e.g., article body) may contain multiple lines, we use
   # the "/m" modifier to allow matching "^" at embedded "\n" positions.
   $$refToText =~ s/^=====(.*?)=====(\s*)$/<h4>$1<\/h4>$2/mg;
   $$refToText =~ s/^====(.*?)====(\s*)$/<h3>$1<\/h3>$2/mg;
