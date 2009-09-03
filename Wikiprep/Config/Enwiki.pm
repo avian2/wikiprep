@@ -124,6 +124,7 @@ $disambigTemplates = qr/disambiguation|
                         disambig-cleanup|
                         disamb|
                         dab|
+                        shipindex|
                         hndis|
                         surname|
                         geodis|
