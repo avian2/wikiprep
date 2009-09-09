@@ -78,7 +78,8 @@ my %parserFunctions = (
                 my ($page, $templateRecursionLevel, $lvalue, $rvalue, $valueIfTrue, $valueIfFalse) = @_;
 
                 if ( defined($rvalue ) ) {
-                  &Wikiprep::Templates::includeTemplates($page, \$rvalue, $templateRecursionLevel + 1);
+                  &Wikiprep::Templates::includeTemplates($page, \$rvalue, $templateRecursionLevel + 1)
+                    if $rvalue =~ /\{/;
 
                   # lvalue is always defined
                   if ( $lvalue eq $rvalue ) {
@@ -111,26 +112,27 @@ my %parserFunctions = (
 
               my $primary = shift( @parameterList );
 
-              my @parts;
+              my $lvalue;
+              my $rvalue;
               my $found;
               my $default;
 
               for my $param (@parameterList) {
-                @parts = split(/\s*=\s*/, $param, 2);
-                if( $#parts == 1 ) {
-                  my $lvalue = $parts[0];
-                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1);
+                ($lvalue, $rvalue) = split(/\s*=\s*/, $param, 2);
+                if( $rvalue ) {
+                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1)
+                    if $lvalue =~ /\{/;
                   # Found "="
                   if( $found || $lvalue eq $primary ) {
                     # Found a match, return now
-                    return $parts[1];
-                  } elsif( $parts[0] =~ /^#default/ ) {
-                    $default = $parts[1];
+                    return $rvalue;
+                  } elsif( $lvalue =~ /^#default/ ) {
+                    $default = $rvalue;
                   } 
                   # else wrong case, continue
-                } elsif( $#parts == 0 ) {
-                  my $lvalue = $parts[0];
-                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1);
+                } elsif( $lvalue ) {
+                  &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1)
+                    if $lvalue =~ /\{/;
                   # Multiple input, single output
                   # If the value matches, set a flag and continue
                   if( $lvalue eq $primary ) {
@@ -140,8 +142,8 @@ my %parserFunctions = (
               }
               # Default case
               # Check if the last item had no = sign, thus specifying the default case
-              if( $#parts == 0 ) {
-                return $parts[0];
+              if( !$rvalue ) {
+                return $lvalue;
               } elsif( $default ) {
                 return $default;
               } else {
@@ -171,7 +173,8 @@ sub includeParserFunction(\$\%\%$\$) {
   if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
     my $firstParam = $2;
-    &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1);
+    &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1)
+      if $firstParam =~ /\{/;
 
     LOG->debug("evaluating parser function #" . $functionName);
 

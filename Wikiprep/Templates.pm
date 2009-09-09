@@ -281,7 +281,8 @@ sub instantiateTemplate {
   # String before the first "|" symbol is the title of the template and is stored in
   # $templateTitle.
   
-  &includeTemplates($page, \$templateTitle, $templateRecursionLevel + 1);
+  &includeTemplates($page, \$templateTitle, $templateRecursionLevel + 1) 
+    if $templateTitle =~ /\{/;
 
   my $result = &includeParserFunction(\$templateTitle, \@rawTemplateParams, $page, $templateRecursionLevel);
 
@@ -300,7 +301,8 @@ sub instantiateTemplate {
     &includeTemplateText(\$templateTitle, \%templateParams, $page, \$result);
   }
 
-  &includeTemplates($page, \$result, $templateRecursionLevel + 1);
+  &includeTemplates($page, \$result, $templateRecursionLevel + 1)
+    if $result =~ /\{/;
 
   return $result;  # return value
 }
@@ -316,8 +318,6 @@ my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
 
 sub includeTemplates {
   my ($page, $refToText, $templateRecursionLevel) = @_;
-
-  return unless $$refToText =~ /\{/;
 
   if( $templateRecursionLevel > $Wikiprep::Config::maxTemplateRecursionLevels ) {
 
