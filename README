@@ -117,12 +117,17 @@ Regexp::Common        (libregexp-common-perl)
 Inline::C             (libinline-perl)
 XML::Writer           (libxml-writer-perl)
 BerkeleyDB            (libberkeleydb-perl)
+Log::Handler          (liblog-handler-perl)
+Parallel::Iterator
 
 If you can't use Inline::C for some reason, run wikiprep with "-pureperl" flag 
 and it will use the (roughly) equivalent pure Perl implementations.
 
 If you want to process gzip or bzip2 compressed dumps you will need gzip and
 bzip2 installed. Gzip is also required for the -compress option.
+
+To run unit tests you will also need xmllint utility (shipped with libxml2,
+libxml2-utils)
 
 
 2.2 Hardware
