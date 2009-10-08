@@ -34,7 +34,7 @@ sub prescan {
 
   my $templateNamespace = $Wikiprep::Config::templateNamespace;
   if ($$refToTitle =~ /^$templateNamespace:/) {
-    my $text = ${$mwpage->text};
+    my $text = ${$mwpage->text} || '';
 
     $output->newTemplate($$refToId, $$refToTitle);
 

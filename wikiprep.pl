@@ -401,7 +401,9 @@ sub mainTransformParallel {
 sub prescan {
   my ($inputFile, $output) = @_;
   my $fh = &openInputFile($inputFile);
-  my $pages = Parse::MediaWikiDump::Pages->new( $fh );
+
+  my $pmwd = Parse::MediaWikiDump->new;
+  my $pages = $pmwd->pages( $fh );
 
   my @interwikiNamespaces = keys( %Wikiprep::Config::okNamespacesForInterwikiLinks );
   &loadNamespaces($pages, \@interwikiNamespaces );
@@ -411,13 +413,13 @@ sub prescan {
   my %idexists;
 
   my $mwpage;
-  while (defined($mwpage = $pages->page)) {
+  while (defined($mwpage = $pages->next)) {
     my $id = $mwpage->id;
 
     $counter++;
 
     $totalPageCount++;
-    $totalByteCount+=length(${$mwpage->text});
+    $totalByteCount += length(${$mwpage->text}) if defined ${$mwpage->text};
 
     my $title = $mwpage->title;
     &normalizeTitle(\$title);
@@ -469,9 +471,11 @@ sub prescanLoad {
 sub transform {
   my ($inputFile, $output, $report) = @_;
   my $fh = &openInputFile($inputFile);
-  my $mwpages = Parse::MediaWikiDump::Pages->new( $fh );
 
-  while( my $mwpage = $mwpages->page ) {
+  my $pmwd = Parse::MediaWikiDump->new;
+  my $mwpages = $pmwd->pages( $fh );
+
+  while( my $mwpage = $mwpages->next ) {
 
     my $page = transformOne($mwpage);
 
@@ -499,7 +503,7 @@ sub transformOne {
 
   $page->{startTime} = time;
 
-  my $text = ${$mwpage->text};
+  my $text = ${$mwpage->text} || '';
 
   $page->{id} = $mwpage->id;
   # text length BEFORE any transformations
@@ -555,7 +559,7 @@ sub transformOne {
 
   # Parse disambiguation pages before template substitution because disambig
   # indicators are also templates.
-  if ( &isDisambiguation($mwpage) ) {
+  if ( &isDisambiguation($page) ) {
     LOG->debug("parsing as a disambiguation page");
 
     &parseDisambig($page);
