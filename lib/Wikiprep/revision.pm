@@ -11,7 +11,7 @@ sub getWikiprepRevision() {
   my $version;
 
   my $topdir = $FindBin::Bin;
-  $topdir =~ s/tests-perl\/?//;
+  $topdir =~ s/t\/?//;
 
   # First try SVN...
   if( open(VERSION, "svnversion $topdir|") ) {

@@ -1,5 +1,5 @@
 use Benchmark 'cmpthese';
-use templates;
+use Wikiprep::templates;
 use ctemplates;
 
 $text = <<'END';
