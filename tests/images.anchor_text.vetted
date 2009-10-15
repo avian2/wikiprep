@@ -1,10 +1,10 @@
 # Line format: <Target page id>  <Source page id>  <Anchor location within text>  <Anchor text (up to the end of the line)>
 
 
-2	5	172	Gu
-2	5	214	jpgGu
-2	5	234	GuGu
-3	5	252	
+2	5	203	Gu
+2	5	245	jpgGu
+2	5	265	GuGu
+3	5	283	
 2	6	168	Gu
 2	6	209	jpgGu
 2	6	229	GuGu

@@ -1,4 +1,4 @@
-use Test::Simple tests => 13;
+use Test::More tests => 16;
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 use Wikiprep::Config;
 
@@ -48,6 +48,18 @@ ok($r eq "");
 @t = split(/\|/, "10px| ");
 $r = &parseImageParameters(\@t);
 ok($r eq " ");
+
+@t = split(/\|/, "framed|an");
+$r = &parseImageParameters(\@t);
+is($r, "an");
+
+@t = split(/\|/, "frame|an");
+$r = &parseImageParameters(\@t);
+is($r, "an");
+
+@t = split(/\|/, "alt=alt|an");
+$r = &parseImageParameters(\@t);
+is($r, "an");
 
 $t = <<END
 Some text

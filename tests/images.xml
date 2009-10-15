@@ -50,7 +50,7 @@
 
 		    [[Image:Hello.jpg|Another cool image|100px]]
 
-		    [[Image:Hello.jpg|100px|Arg|left]]
+		    [[Image:Hello.jpg|100px|alt=Some alt text|link=AlgeriB|Arg|left]]
 
 		    [[Image:Juhu.jpg|100px|[[Gu]]|right]]
 

@@ -108,6 +108,8 @@ sub convertOneImagemap($) {
 # Note that the anchor text can be on any location, not just after the last |. This means we have to
 # check all image parameters and select the one that looks the most like anchor text.
 
+# See also http://en.wikipedia.org/wiki/Wikipedia:Extended_image_syntax
+
 # refToImageParameters is a reference to an array that holds the string split around | symbols.
 sub parseImageParameters(\@) {
   my ($refToImageParameters) = @_;
@@ -119,14 +121,17 @@ sub parseImageParameters(\@) {
     # http://en.wikipedia.org/wiki/Wikipedia:Image_markup
 
     # Ignore size specifications like "250x250px" or "250px"
-    if ( $parameter =~ /^\s*[0-9x]+px\s*$/i) {
-      next;
-    }
+    next if $parameter =~ /^\s*[0-9x]+px\s*$/i;
 
     # Location and type specifications
-    if ( $parameter =~ /^\s*(?:left|right|center|none|thumb|thumbnail|frame|border)\s*$/i) {
-      next;
-    }
+    next if $parameter =~ /^\s*(?:  left|right|center|none|
+                                    thumb(?:nail)?|frame(?:less|d)?|
+                                    border|
+                                    baseline|middle|sub|super|text-top|text-bottom|top|bottom)\s*$/isx;
+
+    # Link and alt specifications
+    # FIXME: Would it be useful to store this link?
+    next if $parameter =~ /^\s*(?:alt|link)=/i;
 
     push @candidateAnchors, $parameter;
   }
