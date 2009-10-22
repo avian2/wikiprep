@@ -972,20 +972,20 @@ BEGIN {
 sub printUsage()
 {
   print <<END
-Wikiprep version $VERSION, Copyright (C) 2007 Evgeniy Gabrilovich
+Wikiprep version $VERSION, Copyright (C) Evgeniy Gabrilovich, Tomaz Solc
 
 Wikiprep comes with ABSOLUTELY NO WARRANTY; for details type 
-'$0 -license'.
+'wikiprep -license'.
 
 This is free software, and you are welcome to redistribute it
-under certain conditions; type '$0 -license' for details.
+under certain conditions; type 'wikiprep -license' for details.
 
-Type '$0 -version' for version information.
+Type 'wikiprep -version' for version information.
 
-USAGE: $0 <options> -f <XML file with page dump>
+USAGE: wikiprep <options> -f <XML file with page dump>
 
- e.g.  $0 -f pages_articles.xml
-   or  $0 -f pages_articles.xml.bz2
+ e.g.  wikiprep -f pages_articles.xml
+   or  wikiprep -f pages_articles.xml.bz2
 
 Available options:
   -pureperl      Use pure Perl implementation. This slows down
