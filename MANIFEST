@@ -23,7 +23,7 @@ lib/Wikiprep/utils.pm
 Makefile.PL
 MANIFEST			This list of files
 README
-t/bench.pl
+COPYING
 t/cases.t
 t/cases/anchors.anchor_text.vetted
 t/cases/anchors.hgw.xml.vetted
