@@ -2,7 +2,8 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
 	NAME		=> "Wikiprep",
-	EXE_FILES	=> [ 'bin/wikiprep' ]
+	EXE_FILES	=> [ 'bin/wikiprep' ],
+	VERSION_FROM	=> "bin/wikiprep"
 );
 
 #all: test

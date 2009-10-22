@@ -51,7 +51,7 @@ use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk %namespa
 #use Wikiprep::Statistics qw( updateStatistics updateCategoryHierarchy 
 #                             %statCategories %statIncomingLinks %catHierarchy );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
-use Wikiprep::revision qw( getWikiprepRevision getDumpDate getDatabaseName );
+use Wikiprep::revision qw( getDumpDate getDatabaseName );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements openInputFile 
                         @inputFileSuffixes);
@@ -76,7 +76,7 @@ my $optParallel;
 
 # Global constants
 my $licenseFile = "COPYING";
-my $VERSION = "3.0";
+our $VERSION = '3.01';
 
 # Class that takes care of writing output files
 my $outputClass;
@@ -186,11 +186,10 @@ sub initLog {
       filter_message  => qr/transforming page took/,
     } );
 
-  my $revision = &getWikiprepRevision;
   my $dumpDate = &getDumpDate($optFile);
   my $dumpName = &getDatabaseName($optFile);
 
-  LOG->info( "This is Wikiprep $VERSION ($revision)" );
+  LOG->info( "This is Wikiprep $VERSION" );
   LOG->info( "Processing $dumpName version $dumpDate" );
 }
 
