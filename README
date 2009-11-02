@@ -118,7 +118,6 @@ Inline::C             (libinline-perl)
 XML::Writer           (libxml-writer-perl)
 BerkeleyDB            (libberkeleydb-perl)
 Log::Handler          (liblog-handler-perl)
-Parallel::Iterator
 
 If you can't use Inline::C for some reason, run wikiprep with "-pureperl" flag 
 and it will use the (roughly) equivalent pure Perl implementations.
