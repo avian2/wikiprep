@@ -12,7 +12,6 @@ WriteMakefile(
 				'XML::Writer'		=> 0,           
 				'BerkeleyDB'		=> 0,
 				'Log::Handler'		=> 0,
-				'Parallel::Iterator'	=> '1.00',
 			},
 
 	($] >= 5.005 ?
