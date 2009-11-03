@@ -360,12 +360,19 @@ sub mainTransformParallel {
   my $startTime = time - 1;
   my $lastDisplayTime = $startTime;
 
+  my $workersDied = 0;
+
   while($select->count) {
     my @rdr = $select->can_read;
     for my $rdr (@rdr) {
       my $status = <$rdr>;
 
-      if($status eq "stop\n") {
+      if(not defined($status)) {
+        LOG->error("One of the workers died! Results will be incomplete!");
+        $workersDied++;
+        $select->remove($rdr);
+        close $rdr;
+      } elsif($status eq "stop\n") {
         $select->remove($rdr);
         close $rdr;
       } else {
@@ -394,6 +401,10 @@ sub mainTransformParallel {
   }
 
   print "\n";
+
+  if($workersDied) {
+    LOG->error("Total $workersDied workers died during transform! Results are incomplete!");
+  }
 }
 
 # build id <-> title mappings and redirection table,
