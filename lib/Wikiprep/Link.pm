@@ -100,6 +100,8 @@ sub prescanFinished {
 sub parseRedirect($) {
   my ($mwpage) = @_;
 
+  return unless defined ${$mwpage->text};
+
   # quick check
   return if ( ${$mwpage->text} !~ /^#REDIRECT/i );
 

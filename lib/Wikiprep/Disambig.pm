@@ -18,9 +18,9 @@ sub isDisambiguation($) {
   my $disambigTemplates = $Wikiprep::Config::disambigTemplates;
   my $disambigTitle = $Wikiprep::Config::disambigTitle;
 
-  if ( ${$page->text} =~ /\{\{\s*$disambigTemplates\s*(?:\|.*)?\s*\}\}/ix ) {
+  if ( $page->{text} =~ /\{\{\s*$disambigTemplates\s*(?:\|.*)?\s*\}\}/ix ) {
     $result = 1;
-  } elsif ( $page->title =~ /$disambigTitle/ix ) {
+  } elsif ( $page->{title} =~ /$disambigTitle/ix ) {
     $result = 1;
   }
 
