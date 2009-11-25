@@ -76,7 +76,7 @@ my $optParallel;
 
 # Global constants
 my $licenseFile = "COPYING";
-our $VERSION = '3.01';
+our $VERSION = '3.02';
 
 # Class that takes care of writing output files
 my $outputClass;
