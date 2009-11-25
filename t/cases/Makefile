@@ -58,12 +58,14 @@ LOGS =	images.log \
 
 OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 
+TOPDIR="../.."
+
 all: test
 
 test: clean $(LOGS) compare
 
 %.log: %.xml
-	perl ../wikiprep.pl -log debug $(OPTIONS) -f $<
+	perl -I$(TOPDIR)/lib $(TOPDIR)/bin/wikiprep -log debug $(OPTIONS) -f $<
 	for n in `basename $< .xml`*.xml; do xmllint --noout $$n || exit 1; done
 clean:
 	rm -f *.anchor_text

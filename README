@@ -149,18 +149,33 @@ Using a split dump and 4 processes, the same dataset takes around 35 hours.
 3. Usage
 ========
 
+
+3.1 Installation
+
+Run the following commands from the top of the Wikiprep distribution:
+
+$ perl Makefile.PL
+$ make
+$ make test (optional)
+
+And as root:
+
+$ make install
+
+
+3.2 Running
+
 The most common command to start Wikiprep on an XML dump you downloaded
 from Wikimedia:
 
-$ perl wikiprep.pl -format composite -compress \
-  -f enwiki-20090306-pages-articles.xml.bz2
+$ wikiprep -format composite -compress -f enwiki-20090306-pages-articles.xml.bz2
 
 This will produce a number of files in the same directory as the dump.
 
 
 Alternatively, run the following to get a list of other available options:
 
-$ perl wikiprep.pl
+$ wikiprep
 
 To run regression tests included in the distribution, run:
 
@@ -290,3 +305,7 @@ on the mailing list.
 If you need to customize Wikiprep for a specific language, copy
 Wikiprep/Config/Enwiki.pm and change fields there. You can then use your
 new config with -language option.
+
+To run a test on just a particular test case, run for example:
+
+$ perl t/cases.t t/cases/infobox.xml

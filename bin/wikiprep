@@ -51,7 +51,7 @@ use Wikiprep::Namespace qw( loadNamespaces normalizeTitle isNamespaceOk %namespa
 #use Wikiprep::Statistics qw( updateStatistics updateCategoryHierarchy 
 #                             %statCategories %statIncomingLinks %catHierarchy );
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink );
-use Wikiprep::revision qw( getWikiprepRevision getDumpDate getDatabaseName );
+use Wikiprep::revision qw( getDumpDate getDatabaseName );
 use Wikiprep::css qw( removeMetadata );
 use Wikiprep::utils qw( encodeXmlChars removeDuplicatesAndSelf removeElements openInputFile 
                         @inputFileSuffixes);
@@ -76,7 +76,7 @@ my $optParallel;
 
 # Global constants
 my $licenseFile = "COPYING";
-my $VERSION = "3.0";
+our $VERSION = '3.01';
 
 # Class that takes care of writing output files
 my $outputClass;
@@ -186,11 +186,10 @@ sub initLog {
       filter_message  => qr/transforming page took/,
     } );
 
-  my $revision = &getWikiprepRevision;
   my $dumpDate = &getDumpDate($optFile);
   my $dumpName = &getDatabaseName($optFile);
 
-  LOG->info( "This is Wikiprep $VERSION ($revision)" );
+  LOG->info( "This is Wikiprep $VERSION" );
   LOG->info( "Processing $dumpName version $dumpDate" );
 }
 
@@ -988,20 +987,20 @@ BEGIN {
 sub printUsage()
 {
   print <<END
-Wikiprep version $VERSION, Copyright (C) 2007 Evgeniy Gabrilovich
+Wikiprep version $VERSION, Copyright (C) Evgeniy Gabrilovich, Tomaz Solc
 
 Wikiprep comes with ABSOLUTELY NO WARRANTY; for details type 
-'$0 -license'.
+'wikiprep -license'.
 
 This is free software, and you are welcome to redistribute it
-under certain conditions; type '$0 -license' for details.
+under certain conditions; type 'wikiprep -license' for details.
 
-Type '$0 -version' for version information.
+Type 'wikiprep -version' for version information.
 
-USAGE: $0 <options> -f <XML file with page dump>
+USAGE: wikiprep <options> -f <XML file with page dump>
 
- e.g.  $0 -f pages_articles.xml
-   or  $0 -f pages_articles.xml.bz2
+ e.g.  wikiprep -f pages_articles.xml
+   or  wikiprep -f pages_articles.xml.bz2
 
 Available options:
   -pureperl      Use pure Perl implementation. This slows down
