@@ -6,7 +6,7 @@ WriteMakefile(
 	VERSION_FROM	=> "bin/wikiprep",
 
 	PREREQ_PM	=> {
-				'Parse::MediaWikiDump'	=> 0,
+				'Parse::MediaWikiDump'	=> '0.90',
 				'Regexp::Common'	=> 0,
 				'Inline::C'		=> 0,
 				'XML::Writer'		=> 0,           
