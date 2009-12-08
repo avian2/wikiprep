@@ -7,6 +7,7 @@ use warnings;
 
 use Exporter 'import';
 
+use Wikiprep::Namespace qw( normalizeNamespaceTitle );
 use Wikiprep::languages qw( languageName );
 
 use Log::Handler wikiprep => 'LOG';
@@ -18,25 +19,45 @@ our @EXPORT_OK = qw( includeParserFunction );
 # {{FULLPAGENAME}} returns full name of the page (including the 
 # namespace prefix. {{PAGENAME}} returns only the title.
 
+sub magicPagename {
+  my ($page) = @_;
+
+  # FIXME: This is slow - consider making a specialized function for
+  # splitting off namespace when the title is already normalized.
+  my ($namespace, $title) = &normalizeNamespaceTitle($page->{title});
+  return $title;
+}
+
 my %magicWords = (
 
   # {{pagename}} returns the name of the current page. 
   # Only capitalizations below work.
 
-  'pagename' => sub {
+  'pagename' => \&magicPagename,
+  'Pagename' => \&magicPagename,
+  'PAGENAME' => \&magicPagename,
+
+  'NAMESPACE' => sub {
                   my ($page) = @_;
-                  return $page->{title};
+
+                  my ($namespace, $title) = &normalizeNamespaceTitle($page->{title}, '');
+                  return $namespace;
                 },
-  'Pagename' => sub {
-                  my ($page) = @_;
-                  return $page->{title};
-                },
-  'PAGENAME' => sub {
+
+  'FULLPAGENAME' => sub {
                   my ($page) = @_;
                   return $page->{title};
                 },
 
   # Extra 'E' means the result is URL encoded. 
+  
+  'PAGENAMEE' => sub {
+                  my ($page) = @_;
+
+                  my ($namespace, $title) = &normalizeNamespaceTitle($page->{title});
+                  $title =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
+                  return $title;
+                },
 
   'FULLPAGENAMEE' => sub {
                   my ($page) = @_;

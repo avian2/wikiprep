@@ -1,4 +1,4 @@
-<mediawiki>
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="en">
   <siteinfo>
     <sitename>Wikipedia</sitename>
     <base>http://en.wikipedia.org/wiki/Main_Page</base>
@@ -27,17 +27,30 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="44" newlength="48" stub="0" categories="0" outlinks="0" urls="0">
-<title>Some page name</title>
-<categories></categories>
-<links></links>
-<urls>
-</urls>
-<text>
-
-		    Some page name
-		    Some page name
-	    
-</text>
-</page>
+  <page>
+    <title>Some page name</title>
+    <id>1</id>
+    <revision>
+	    <text xml:space="preserve">{{PAGENAME}}
+{{Pagename}}
+{{pagename}}
+{{NAMESPACE}}
+{{FULLPAGENAME}}
+{{PAGENAMEE}}
+{{FULLPAGENAMEE}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>File:Some file name</title>
+    <id>2</id>
+    <revision>
+	    <text xml:space="preserve">{{PAGENAME}}
+{{Pagename}}
+{{pagename}}
+{{NAMESPACE}}
+{{FULLPAGENAME}}
+{{PAGENAMEE}}
+{{FULLPAGENAMEE}}</text>
+    </revision>
+  </page>
 </mediawiki>

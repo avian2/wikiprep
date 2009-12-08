@@ -1,5 +1,11 @@
 Revision history for Wikiprep
 
+3.03    
+	* {{PAGENAME}} correctly evaluates to page title without
+	  namespace prefix.
+	* Support for {{NAMESPACE}}, {{FULLPAGENAME}} and 
+	  {{PAGENAMEE}} magic words.
+
 3.02	Nov 25, 2009
 	* Support for Parse::MediaWikiDump >= 0.90
 
