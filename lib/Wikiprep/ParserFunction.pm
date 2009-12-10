@@ -205,13 +205,16 @@ sub includeParserFunction(\$\%\%$\$) {
   
   if ( $$refToTemplateTitle =~ /^(#?[a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
-    my $firstParam = $2;
-    &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1)
-      if $firstParam =~ /\{/;
 
     LOG->debug("evaluating parser function " . $functionName);
 
     if( exists($parserFunctions{$functionName}) ) {
+
+      my $firstParam = $2;
+
+      &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1)
+        if $firstParam =~ /\{/;
+
       return $parserFunctions{$functionName}->($page, $templateRecursionLevel, 
                                                $firstParam, @$refToRawParameterList);
     } else {
@@ -220,7 +223,7 @@ sub includeParserFunction(\$\%\%$\$) {
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
 
-      if ( exists($$refToRawParameterList[0]) && ( length($$refToRawParameterList[0]) > 0 ) ) {
+      if ( exists($$refToRawParameterList[0]) ) {
         return $$refToRawParameterList[0];
       } else {
         return "";
