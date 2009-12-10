@@ -781,7 +781,7 @@ sub postprocessText(\$$$) {
   # from being glued together).
   
   # Repeat the substitution, since we can have <div class="<nowiki> </nowiki>">
-  1 while ($$refToText =~ s/<\/?[a-z][^<>]*?>/ /sg);
+  1 while ($$refToText =~ s/<\/?[a-z][^<>]*?>/ /sgi);
 
   # Change markup on bold/italics emphasis. We probably don't need to distinguish
   # these 3 types of emphasis, so we just replace all of them with a generic <em> tag.
