@@ -74,7 +74,7 @@ my %magicWords = (
 
 my %parserFunctions = (
 
-	'if'	=>  sub {
+	'#if'	=> sub {
           				my ($page, $templateRecursionLevel, $testValue, $valueIfTrue, $valueIfFalse) = @_;
 
                   if ( length($testValue) > 0 ) {
@@ -94,7 +94,7 @@ my %parserFunctions = (
                     }
                   }
                 },
-  'ifeq'  => sub {
+  '#ifeq' => sub {
                 # lvalue has templates expanded.
                 my ($page, $templateRecursionLevel, $lvalue, $rvalue, $valueIfTrue, $valueIfFalse) = @_;
 
@@ -125,7 +125,7 @@ my %parserFunctions = (
                 }
               },
 
- 'switch' => sub {
+ '#switch' => sub {
               my ($page, $templateRecursionLevel, @parameterList) = @_; 
 
               # Code ported from ParserFunctions.php
@@ -172,12 +172,24 @@ my %parserFunctions = (
               }
             },
 
-  language => sub {
+  '#language' => sub {
               # {{#language: code}} gives the language name of selected RFC 3066 language codes, 
               # otherwise it returns the input value as is.
 
               my ($page, $templateRecursionLevel, $langCode) = @_;
               return &languageName($langCode) || '';
+            },
+
+  'urlencode' => sub {
+              # This function is used in some pages to construct links
+              # http://meta.wikimedia.org/wiki/Help:URL
+              
+              my ($page, $templateRecursionLevel, $string) = @_;
+
+              LOG->debug("URL encoding string: " . $string);
+
+              $string =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
+              return $string;
             },
 );
 
@@ -191,19 +203,19 @@ sub includeParserFunction(\$\%\%$\$) {
 
   # http://meta.wikimedia.org/wiki/Help:ParserFunctions
   
-  if ( $$refToTemplateTitle =~ /^\#([a-z]+):\s*(.*?)\s*$/s ) {
+  if ( $$refToTemplateTitle =~ /^(#?[a-z]+):\s*(.*?)\s*$/s ) {
     my $functionName = $1;
     my $firstParam = $2;
     &Wikiprep::Templates::includeTemplates($page, \$firstParam, $templateRecursionLevel + 1)
       if $firstParam =~ /\{/;
 
-    LOG->debug("evaluating parser function #" . $functionName);
+    LOG->debug("evaluating parser function " . $functionName);
 
     if( exists($parserFunctions{$functionName}) ) {
       return $parserFunctions{$functionName}->($page, $templateRecursionLevel, 
                                                $firstParam, @$refToRawParameterList);
     } else {
-      LOG->info("function #" . $functionName . "not supported");
+      LOG->info("function " . $functionName . "not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
@@ -219,16 +231,6 @@ sub includeParserFunction(\$\%\%$\$) {
 
   } elsif( exists($magicWords{$$refToTemplateTitle}) ) {
     return $magicWords{$$refToTemplateTitle}->($page);
-  } elsif( $$refToTemplateTitle =~ /^urlencode:\s*(.*)/ ) {
-    # This function is used in some pages to construct links
-    # http://meta.wikimedia.org/wiki/Help:URL
-
-    my $result = $1;
-    LOG->debug("URL encoding string: " . $result);
-
-    $result =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
-
-    return $result;
   } else {
     return undef;
   }
