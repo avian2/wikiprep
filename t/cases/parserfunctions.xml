@@ -54,6 +54,8 @@ a|true|false}} should be true</text>
 	    <text xml:space="preserve">
 		    {{{{#if:true|B|C}}}}
 		    {{{{#if:true|B|C}}|greeting=Hello world}}
+
+		    {{lc: HeLlO WoRlD }}
 	    </text>
     </revision>
   </page>

@@ -42,7 +42,7 @@ true should be true
 true should be true
 </text>
 </page>
-<page id="1" orglength="81" newlength="36" stub="0" categories="0" outlinks="0" urls="0">
+<page id="1" orglength="109" newlength="49" stub="0" categories="0" outlinks="0" urls="0">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -52,6 +52,8 @@ true should be true
 
 		    Howdy
 		    Hello world
+
+hello world
 	    
 </text>
 </page>

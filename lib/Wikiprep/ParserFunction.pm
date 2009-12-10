@@ -191,6 +191,12 @@ my %parserFunctions = (
               $string =~ s/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg;
               return $string;
             },
+
+  'lc' => sub {
+              my ($page, $templateRecursionLevel, $string) = @_;
+
+              return lc($string);
+            },
 );
 
 sub includeParserFunction(\$\%\%$\$) {
