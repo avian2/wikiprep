@@ -197,6 +197,22 @@ my %parserFunctions = (
 
               return lc($string);
             },
+
+  'ucfirst' => sub {
+              my ($page, $templateRecursionLevel, $string) = @_;
+
+              return ucfirst($string);
+            },
+
+  'int' => sub {
+              my ($page, $templateRecursionLevel, $string) = @_;
+
+              if ($string eq 'Lang') {
+                return 'en';
+              } else {
+                return $string;
+              }
+            },
 );
 
 sub includeParserFunction(\$\%\%$\$) {
