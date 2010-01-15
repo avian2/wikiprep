@@ -224,7 +224,7 @@ sub includeParserFunction(\$\%\%$\$) {
       return $parserFunctions{$functionName}->($page, $templateRecursionLevel, 
                                                $firstParam, @$refToRawParameterList);
     } else {
-      LOG->info("function " . $functionName . "not supported");
+      LOG->info("function " . $functionName . " not supported");
 
       # Unknown function -- fall back by inserting first argument, if available. This seems
       # to be the most sensible alternative in most cases (for example in #time and #date)
