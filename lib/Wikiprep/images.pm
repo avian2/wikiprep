@@ -121,7 +121,8 @@ sub parseImageParameters(\@) {
     # http://en.wikipedia.org/wiki/Wikipedia:Image_markup
 
     # Ignore size specifications like "250x250px" or "250px"
-    next if $parameter =~ /^\s*[0-9x]+px\s*$/i;
+    # Note that MediaWiki also accepts duplicated "px"
+    next if $parameter =~ /^\s*[0-9x]+px(?:px)?\s*$/i;
 
     # Location and type specifications
     next if $parameter =~ /^\s*(?:  left|right|center|none|

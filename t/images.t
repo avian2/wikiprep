@@ -1,4 +1,4 @@
-use Test::More tests => 16;
+use Test::More tests => 18;
 use Wikiprep::images qw( convertGalleryToLink convertImagemapToLink parseImageParameters );
 use Wikiprep::Config;
 
@@ -17,7 +17,17 @@ $r = &parseImageParameters(\@t);
 
 ok($r eq "anchor text");
 
+@t = split(/\|/, "240x240pxpx|a");
+$r = &parseImageParameters(\@t);
+
+ok($r eq "a");
+
 @t = split(/\|/, "100px|left|an");
+$r = &parseImageParameters(\@t);
+
+ok($r eq "an");
+
+@t = split(/\|/, "100pxpx|left|an");
 $r = &parseImageParameters(\@t);
 
 ok($r eq "an");
