@@ -66,4 +66,11 @@ a|true|false}} should be true</text>
 	    <text xml:space="preserve">{{{greeting|Howdy}}}</text>
     </revision>
   </page>
+  <page>
+    <title>Lang</title>
+    <id>3</id>
+    <revision>
+	    <text xml:space="preserve">{{int:Lang}} {{int:Foo}}</text>
+    </revision>
+  </page>
 </mediawiki>

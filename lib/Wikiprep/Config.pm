@@ -16,6 +16,8 @@ use vars qw/ %numberToMonth %monthToNumDays /;
 
 use vars qw/ $maxTemplateRecursionLevels $maxTableRecursionLevels %overrideTemplates /;
 
+use vars qw/ $intLang /;
+
 $maxTemplateRecursionLevels = 10;
 $maxTableRecursionLevels = 5;
 
@@ -31,6 +33,9 @@ $maxTableRecursionLevels = 5;
 #                       'Template:-!' => ' ');
 
 %overrideTemplates = ();
+
+# String returned by the {{int:Lang}} parser function (default interface language in MediaWiki)
+$intLang = 'en';
 
 my %numMonthToNumDays = ( 1  => 31, 2  => 29, 
                           3  => 31, 4  => 30, 

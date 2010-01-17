@@ -9,6 +9,7 @@ use Exporter 'import';
 
 use Wikiprep::Namespace qw( normalizeNamespaceTitle );
 use Wikiprep::languages qw( languageName );
+use Wikiprep::Config;
 
 use Log::Handler wikiprep => 'LOG';
 
@@ -208,7 +209,7 @@ my %parserFunctions = (
               my ($page, $templateRecursionLevel, $string) = @_;
 
               if ($string eq 'Lang') {
-                return 'en';
+                return $Wikiprep::Config::intLang;
               } else {
                 return $string;
               }
