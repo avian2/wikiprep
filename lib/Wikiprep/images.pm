@@ -132,7 +132,7 @@ sub parseImageParameters(\@) {
 
     # Link and alt specifications
     # FIXME: Would it be useful to store this link?
-    next if $parameter =~ /^\s*(?:alt|link)=/i;
+    next if $parameter =~ /^\s*(?:alt|link|upright|thumb(?:nail)?)=/i;
 
     push @candidateAnchors, $parameter;
   }
