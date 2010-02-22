@@ -119,8 +119,8 @@ t/cases/options
 t/cases/order.xml
 t/cases/otheruses.gum.xml.vetted
 t/cases/otheruses.xml
-t/cases/pagename.hgw.xml.vetted
-t/cases/pagename.xml
+t/cases/magicwords.hgw.xml.vetted
+t/cases/magicwords.xml
 t/cases/parserfunctions.hgw.xml.vetted
 t/cases/parserfunctions.xml
 t/cases/redir.xml
