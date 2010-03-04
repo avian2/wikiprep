@@ -144,6 +144,7 @@ t/cases/tibet.xml
 t/cases/unicode.anchor_text.vetted
 t/cases/unicode.gum.xml.vetted
 t/cases/unicode.xml
+t/cases/urlencode.hgw.xml.vetted
 t/cases/urlencode.xml
 t/cases/whitespace.hgw.xml.vetted
 t/cases/whitespace.xml
