@@ -1,9 +1,12 @@
 Revision history for Wikiprep
 
-3.03    
+3.03    Mar 4, 2010
+	* Recognize upright, thumbnail image parameters.
+	* Ignore suffix pxpx in image sizes, just like MediaWiki.
+	* Configurable output of {{int:Lang}} parser function.
 	* {{PAGENAME}} correctly evaluates to page title without
 	  namespace prefix.
-	* Support for {{lc:}} parser function.
+	* Support for {{lc:}}, {{ucfirst}} parser function.
 	* Support for {{NAMESPACE}}, {{FULLPAGENAME}} and 
 	  {{PAGENAMEE}} magic words.
 
