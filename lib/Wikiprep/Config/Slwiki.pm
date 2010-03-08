@@ -7,7 +7,7 @@ use encoding 'utf-8';
 
 # Names of months as used by MediaWiki for date links
 %numberToMonth = (
-                      1 => 'Januuar', 
+                      1 => 'Januar', 
                       2 => 'Februar', 
                       3 => 'Marec', 
                       4 => 'April',
