@@ -124,6 +124,7 @@ t/cases/magicwords.xml
 t/cases/parserfunctions.hgw.xml.vetted
 t/cases/parserfunctions.xml
 t/cases/redir.xml
+t/cases/redir.redir.xml.vetted
 t/cases/related.related_links.vetted
 t/cases/related.xml
 t/cases/riemann.hgw.xml.vetted

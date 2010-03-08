@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<redirects>
+<redirect>
+<from>
+<id>unknown</id>
+<title>Redir1</title>
+</from>
+<to>
+<id>100</id>
+<title>Dest</title>
+</to>
+</redirect>
+<redirect>
+<from>
+<id>unknown</id>
+<title>Redir3</title>
+</from>
+<to>
+<id>100</id>
+<title>Dest</title>
+</to>
+</redirect>
+</redirects>
