@@ -100,32 +100,22 @@ sub prescanFinished {
 sub parseRedirect($) {
   my ($mwpage) = @_;
 
-  return unless defined ${$mwpage->text};
-
   # quick check
-  return if ( ${$mwpage->text} !~ /^#REDIRECT/i );
+  if( defined(${$mwpage->text}) && ( ${$mwpage->text} =~ $Wikiprep::Config::isRedirect ) ) {
 
-  if ( ${$mwpage->text} =~ m{^\#REDIRECT         # Redirect must start with "#REDIRECT"
-                                                 #   (the backslash is needed before "#" here, because
-                                                 #    "#" has special meaning with /x modifier)
-                             (?:S|ED|ION)?       # The word may be in any of these forms,
-                                                 #   i.e., REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION
-                             \s*                 # optional whitespace
-                             (?: :|\sTO|=)?      # optional colon, "TO" or "="
-                                                 #   (in case of "TO", we expect a whitespace before it,
-                                                 #    so that it's not glued to the preceding word)
-                             \s*                 # optional whitespace
-                             \[\[([^\]]*)\]\]    # the link itself
-                            }ix ) {              # matching is case-insensitive, hence /i
-    my $target = $1;
+    if ( ${$mwpage->text} =~ $Wikiprep::Config::parseRedirect) {
+      my $target = $1;
 
-    if ($target =~ /^(.*)#.*$/) {
-      # The link contains an anchor. Anchors are not allowed in REDIRECT pages, and therefore
-      # we adjust the link to point to the page as a whole (that's how Wikipedia works).
-      $target = $1;
+      if ($target =~ /^(.*)#.*$/) {
+        # The link contains an anchor. Anchors are not allowed in REDIRECT pages, and therefore
+        # we adjust the link to point to the page as a whole (that's how Wikipedia works).
+        return $1;
+      } else {
+        return $target;
+      }
+    } else {
+      LOG->info("redirect page " . $mwpage->title . " matched isRedirect, but not parseRedirect!");
     }
-
-    return $target;
   }
 
   # OK, it's probably either a malformed redirect link, or something else

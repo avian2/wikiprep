@@ -99,4 +99,23 @@ $disambigTemplates = qr/razločitev|
 
 $disambigTitle = qr/\(razločitev\)/ix;
 
+# Regular expression that matches article text if the article is a redirect.
+
+$isRedirect = qr/^#(?:REDIRECT|PREUSMERITEV)/i;
+
+# Regular expression that extracts the title the redirect points to. Note that this 
+# is only used if $isRedirect matches the text of the redirect page.
+
+$parseRedirect = qr/^\#(?:                          
+                            REDIRECT(?:S|ED|ION)?|
+                            PREUSMERITEV
+                       )
+                    \s*                 # optional whitespace
+                    (?: :|\sTO|=)?      # optional colon, "TO" or "="
+                                        #   (in case of "TO", we expect a whitespace before it,
+                                        #    so that it's not glued to the preceding word)
+                    \s*                 # optional whitespace
+                    \[\[([^\]]*)\]\]    # the link itself
+                   /ix;
+
 1;
