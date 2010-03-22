@@ -41,4 +41,16 @@
       <text xml:space="preserve">XXX &lt;nowiki&gt;blah {{disambig}}&lt;/nowiki&gt;</text>
     </revision>
   </page>
+  <page>
+    <title>Empty tag</title>
+    <id>3</id>
+    <revision>
+       <text xml:space="preserve">
+	       &lt;nowiki /&gt; &lt;nowiki /&gt;
+	       Should be evaluated: {{#if:true|correct}}
+	       &lt;nowiki&gt;
+	       Should not be evaluated: {{#if:true|wrong}}
+	       &lt;/nowiki&gt;</text>
+    </revision>
+  </page>
 </mediawiki>

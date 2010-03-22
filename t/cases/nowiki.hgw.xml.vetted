@@ -37,4 +37,19 @@
 Foo XXX  blah    bar
 </text>
 </page>
+<page id="3" orglength="167" newlength="68" stub="0" categories="0" outlinks="0" urls="0">
+<title>Empty tag</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+
+Should be evaluated: correct
+
+Should not be evaluated:  
+	        
+</text>
+</page>
 </mediawiki>
