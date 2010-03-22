@@ -22,7 +22,6 @@ LOGS =	images.log \
 	div.log \
 	languages.log \
 	barzilla.log \
-	pagename.log \
 	ifeq.log \
 	asse.log \
 	hurt.log \
