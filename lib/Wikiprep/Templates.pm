@@ -146,8 +146,6 @@ my $paramRegex = qr/\{\{\{                              # Template parameter is 
 sub templateParameterRecursion {
 	my ($refToText, $refToParameterHash) = @_;
 
-  return unless $$refToText =~ /\{/;
-
   # We also require that the body of a parameter does not contain the paramet
   # (three successive opening braces - "\{\{\{"). We use negative lookahead t
 
@@ -232,7 +230,7 @@ sub includeTemplateText(\$\%\%\$$) {
     $$refToResult = $templates{$includedPageId};
 
     # Substitute template parameters
-    &templateParameterRecursion($refToResult, $refToParameterHash);
+    &templateParameterRecursion($refToResult, $refToParameterHash) if $$refToResult =~ /\{/;
 
   } else {
     # The page being included cannot be identified - perhaps we skipped it (because currently
