@@ -1,9 +1,10 @@
 # vim:sw=2:tabstop=2:expandtab
 
+use encoding 'utf-8';
 
 # Names of months as used by MediaWiki for date links
 
-%numberToMonth = {
+%numberToMonth = (
     1 => 'Январь', 
     2 => 'Февраль', 
     3 => 'Март', 
@@ -16,7 +17,7 @@
     10 => 'Октябрь', 
     11 => 'Ноябрь', 
     12 => 'Декабрь'
-};
+);
 
 # Aliases for namespaces. Link [[Image:X]] is identical to [[File:X]]. XML dump file
 # contains only pages in the File: namespace.
@@ -69,18 +70,18 @@ $relatedWording_Section =
 
 # We only process pages in these namespaces + the main namespace (which has an empty name)
 
-%okNamespacesForPrescanning = {
+%okNamespacesForPrescanning = (
     'Шаблон' => 1, 
     'Категория' => 1, 
     'Изображение' => 1
-};
+);
 
 # Pages in these namespaces end up in the final hgw.xml file.
 
-%okNamespacesForTransforming = {
+%okNamespacesForTransforming = (
     'Категория' => 1, 
     'Изображение' => 1
-};
+);
 
 # Interwiki links are links to another wiki (e.g. from Wikipedia article to an image on 
 # Wikimedia Commons or to a MemoryAlpha article).
@@ -143,7 +144,24 @@ $disambigTemplates =
 
 # Regular expression that matches titles of disambiguation articles.
 
-$disambigTitle =
-    qr/\(значения\)/ix;
+$disambigTitle = qr/\(значения\)/ix;
                       
+# Regular expression that matches article text if the article is a redirect.
+
+$isRedirect = qr/^#REDIRECT/i;
+
+# Regular expression that extracts the title the redirect points to. Note that this 
+# is only used if $isRedirect matches the text of the redirect page.
+
+$parseRedirect = qr/^\#REDIRECT         # Redirect must start with "#REDIRECT"
+                    (?:S|ED|ION)?       # The word may be in any of these forms,
+                                        #   i.e., REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION
+                    \s*                 # optional whitespace
+                    (?: :|\sTO|=)?      # optional colon, "TO" or "="
+                                        #   (in case of "TO", we expect a whitespace before it,
+                                        #    so that it's not glued to the preceding word)
+                    \s*                 # optional whitespace
+                    \[\[([^\]]*)\]\]    # the link itself
+                   /ix;
+
 1;
