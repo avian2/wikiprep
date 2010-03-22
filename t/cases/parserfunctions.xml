@@ -73,4 +73,20 @@ a|true|false}} should be true</text>
 	    <text xml:space="preserve">{{int:Lang}} {{int:Foo}}</text>
     </revision>
   </page>
+  <page>
+    <title>Switch</title>
+    <id>4</id>
+    <revision>
+    <text xml:space="preserve">{{#switch:content
+|   
+| speedy
+| delete
+| content
+| style
+| move
+| protection
+| notice     = 
+| #default   = &lt;div style="text-align: center;"&gt;This message box is using an invalid "type=content" parameter and needs fixing.&lt;/div&gt;[[Category:Wikipedia message box parameter needs fixing|{{main other|Main:}}{{FULLPAGENAME}}]]}}</text>
+    </revision>
+  </page>
 </mediawiki>

@@ -141,7 +141,7 @@ my %parserFunctions = (
 
               for my $param (@parameterList) {
                 ($lvalue, $rvalue) = split(/\s*=\s*/, $param, 2);
-                if( $rvalue ) {
+                if( defined $rvalue ) {
                   &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1)
                     if $lvalue =~ /\{/;
                   # Found "="
@@ -152,7 +152,7 @@ my %parserFunctions = (
                     $default = $rvalue;
                   } 
                   # else wrong case, continue
-                } elsif( $lvalue ) {
+                } elsif( defined $lvalue ) {
                   &Wikiprep::Templates::includeTemplates($page, \$lvalue, $templateRecursionLevel + 1)
                     if $lvalue =~ /\{/;
                   # Multiple input, single output
