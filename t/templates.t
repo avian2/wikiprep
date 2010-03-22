@@ -1,4 +1,4 @@
-use Test::More tests => 36;
+use Test::More tests => 41;
 use Wikiprep::Templates;
 
 my $r;
@@ -38,7 +38,7 @@ is($text, ":''Further information: [[Foo]]{{#if: |,}}{{#if: |&amp;nbsp;and}}");
 
 # parseTemplateInvocation
 
-$text = "simple|a|b=c";
+$text = "simple|a|b=c|d = e";
 %paramHash = ();
 
 @rawParamList = &Wikiprep::Templates::splitTemplateInvocation($text);
@@ -48,8 +48,10 @@ $name = shift(@rawParamList);
 is($name, "simple");
 is($rawParamList[0], "a");
 is($rawParamList[1], "b=c");
+is($rawParamList[2], "d = e");
 is($paramHash{'1'}, "a");
 is($paramHash{'b'}, "c");
+is($paramHash{'d'}, "e");
 
 $text = "complex|[[link|anchor]]|{{nested|{{template|p}}\n|blah}}|bare_param";
 %paramHash = ();
@@ -112,3 +114,37 @@ is($rawParamList[2], "bare_param");
 is($paramHash{'1'}, "[[link|anchor]]");
 is($paramHash{'2'}, "{{nested|{{template|p}}\n|blah}}");
 is($paramHash{'3'}, "bare_param");
+
+$text = <<END;
+selfref|{{side box
+| position = {{{position|}}}
+| image    = [[Image:Office-book.svg|30px|alt=Wikipedia Books|link=Wikipedia:Books]]
+| text     = '''''[[Book:{{{1|{{PAGENAME}}}}}|Book:{{{2|{{{1|{{PAGENAME}}}}}}}}]]'''''&lt;!--
+--&gt;{{#if:{{{3|}}}
+    |&lt;p&gt;'''''[[Book:{{{3|{{PAGENAME}}}}}|Book:{{{4|{{{3|{{PAGENAME}}}}}}}}]]'''''
+    |
+   }}&lt;!--
+--&gt;{{#if:{{{5|}}}
+    |&lt;p&gt;'''''[[Book:{{{5|{{PAGENAME}}}}}|Book:{{{6|{{{5|{{PAGENAME}}}}}}}}]]'''''
+    |
+   }}&lt;!--
+--&gt;{{#if:{{{7|}}}
+    |&lt;p&gt;'''''[[Book:{{{7|{{PAGENAME}}}}}|Book:{{{8|{{{7|{{PAGENAME}}}}}}}}]]'''''
+    |
+   }}&lt;!--
+--&gt;{{#if:{{{9|}}}
+    |&lt;p&gt;'''''[[Book:{{{9|{{PAGENAME}}}}}|Book:{{{10|{{{9|{{PAGENAME}}}}}}}}]]'''''
+    |
+   }}
+| below    = &lt;small&gt;[[WP:Books|Books]] are collections of articles which can be downloaded or ordered in print.&lt;/small&gt;
+}}|inline
+END
+%paramHash = ();
+
+@rawParamList = &Wikiprep::Templates::splitTemplateInvocation($text);
+$name = shift(@rawParamList);
+&Wikiprep::Templates::parseTemplateInvocation(\@rawParamList, \%paramHash);
+
+is($name, "selfref");
+is($rawParamList[1], "inline");
+is($paramHash{'2'}, "inline");

@@ -116,4 +116,28 @@
 	    </text>
     </revision>
   </page>
+
+  <page>
+    <title>Template:Nested1</title>
+    <id>8</id>
+    <revision>
+	    <text xml:space="preserve">1:{{{1}}}, 2:{{{2}}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Nested2</title>
+    <id>9</id>
+    <revision>
+	    <text xml:space="preserve">A</text>
+    </revision>
+  </page>
+  <page>
+    <title>10</title>
+    <id>10</id>
+    <revision>
+	    <text xml:space="preserve">
+		    {{nested1|{{nested2|a=a|b=b}}|X}}
+	    </text>
+    </revision>
+  </page>
 </mediawiki>

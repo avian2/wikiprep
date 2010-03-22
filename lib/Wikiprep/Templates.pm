@@ -189,14 +189,16 @@ sub parseTemplateInvocation(\@\%) {
     # takes precedence. Example: "{{t|a|b|c|2=B}}" is equivalent to "{{t|a|B|c}}".
     # Therefore, we don't check if the parameter has been assigned a value before, because
     # anyway the last assignment should override any previous ones.
+    
+    # Raw parameters may contain unexpanded template invocations, so we must make sure that the part
+    # before the first "=" doesn't contain a "|" symbol - in that case this is an unnamed parameter.
+
     my ( $parameterName, $parameterValue ) = split(/\s*=\s*/, $param, 2);
 
     # $parameterName is undefined if $param is an empty string
-    if( not defined( $parameterName ) ) {
-      $parameterName = "";
-    }
+    $parameterName = "" unless defined $parameterName; 
 
-    if( defined( $parameterValue ) ) {
+    if( $parameterName !~ /\|/ && defined $parameterValue ) {
       # This is a named parameter.
       # This case also handles parameter assignments like "2=xxx", where the number of an unnamed
       # parameter ("2") is specified explicitly - this is handled transparently.
