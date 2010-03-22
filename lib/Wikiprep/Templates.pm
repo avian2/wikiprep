@@ -307,8 +307,8 @@ sub instantiateTemplate {
   return $result;  # return value
 }
 
-my $nowikiRegex = qr/(<\s*nowiki[^<>]*>.*?<\s*\/nowiki[^<>]*>)/s;
-my $preRegex = qr/(<\s*pre[^<>]*>.*?<\s*\/pre[^<>]*>)/s;
+my $nowikiRegex = qr/(<nowiki[^<>]*>.*?<\/nowiki[^<>]*>)/s;
+my $preRegex = qr/(<pre[^<>]*>.*?<\/pre[^<>]*>)/s;
 
 # This function transcludes all templates in a given string and returns a fully expanded
 # text. 
