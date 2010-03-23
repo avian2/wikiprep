@@ -140,4 +140,20 @@
 	    </text>
     </revision>
   </page>
+
+  <page>
+    <title>Template:Nested3</title>
+    <id>11</id>
+    <revision>
+	    <text xml:space="preserve">X{{{1}}}X</text>
+    </revision>
+  </page>
+  <page>
+    <title>12</title>
+    <id>12</id>
+    <revision>
+	    <text xml:space="preserve">{{nested3|A{{{1}}}A{{{1}}}A{{{1}}}A}}</text>
+    </revision>
+  </page>
+
 </mediawiki>

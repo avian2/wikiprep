@@ -143,11 +143,17 @@ my $paramRegex = qr/\{\{\{                              # Template parameter is 
 # parsing we have to make sure that the default value contains properly balanced 
 # braces.
 
+# If the parameter value contains an unevaluated parameter reference, this could
+# lead to an infinite loop. To prevent that we:
+#
+#   a) clean parameters coming directly from article pages in includeTemplates 
+#      (parameters from subsequent template invocations will have already passed the 
+#      templateParameterRecursion at least once)
+#
+#   b) limit recursion depth, just in case.
+
 sub templateParameterRecursion {
 	my ($refToText, $refToParameterHash) = @_;
-
-  # We also require that the body of a parameter does not contain the paramet
-  # (three successive opening braces - "\{\{\{"). We use negative lookahead t
 
   my $parameterRecursionLevels = 0;
 
@@ -159,8 +165,6 @@ sub templateParameterRecursion {
   if( $parameterRecursionLevels >= $maxParameterRecursionLevels ) {
     LOG->info("maximum template parameter recursion level reached");
   }
-}
-
 }
 
 # This function will further parse a template invocation # (e.g. everything within two braces {{ ... }}) 
@@ -359,6 +363,9 @@ sub includeTemplates {
 
   for my $token ( &splitOnTemplates($$refToText) ) {
     if( $invocation ) {
+      # Remove and {{{...}}} parameter references in the page itself.
+      $token =~ s/$paramRegex//gsx if $templateRecursionLevel == 0;
+
       $new_text .= &instantiateTemplate(\$token, $page, $templateRecursionLevel);
       $invocation = 0;
     } else {
@@ -378,6 +385,8 @@ sub includeTemplates {
   
   my $text_len = length $new_text;
   LOG->debug("text length after templates level " . $templateRecursionLevel . ": " . $text_len . " bytes");
+}
+
 }
 
 1;
