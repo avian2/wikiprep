@@ -1,5 +1,12 @@
 Revision history for Wikiprep
 
+3.04	Mar 24, 2010
+	* Clean parameter references ({{{...}}}) when used outside
+	  of templates.
+	* Fix parsing unnamed template parameters when they contain
+	  nested templates.
+	* Fix bug in parsing empty <nowiki /> tags.
+
 3.03    Mar 4, 2010
 	* Recognize upright, thumbnail image parameters.
 	* Ignore suffix pxpx in image sizes, just like MediaWiki.
