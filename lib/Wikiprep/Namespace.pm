@@ -53,6 +53,9 @@ sub normalizeNamespaceTitle {
   # replace sequences of whitespace and underscore chars with a single space
   $str =~ s/[ \f\n\r\t_]+/ /sg;
 
+  # Silently strip LRM, RLM (see docs/title.txt in MediaWiki)
+  $str =~ s/[\x{200e}\x{200f}]//g;
+
   # There are some special cases when the link may be preceded with a colon in the
   # main namespace.
   #

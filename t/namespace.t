@@ -1,4 +1,4 @@
-use Test::More tests => 16;
+use Test::More tests => 17;
 use Wikiprep::Namespace qw( loadNamespaces normalizeTitle );
 
 loadNamespaces(undef, ["", "Template", "File"]);
@@ -52,3 +52,6 @@ is($a, "Template:A");
 
 $a = ":Template: A"; &normalizeTitle(\$a);
 is($a, "Template:A");
+
+$a = "Kitedge.jpg\x{200e}"; &normalizeTitle(\$a);
+is($a, "Kitedge.jpg");
