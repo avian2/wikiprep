@@ -1,0 +1,83 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.12alpha</generator>
+    <case>first-letter</case>
+      <namespaces>
+      <namespace key="-2">Media</namespace>
+      <namespace key="-1">Special</namespace>
+      <namespace key="0" />
+      <namespace key="1">Talk</namespace>
+      <namespace key="2">User</namespace>
+      <namespace key="3">User talk</namespace>
+      <namespace key="4">Wikipedia</namespace>
+      <namespace key="5">Wikipedia talk</namespace>
+      <namespace key="6">File</namespace>
+      <namespace key="7">Image talk</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">MediaWiki talk</namespace>
+      <namespace key="10">Template</namespace>
+      <namespace key="11">Template talk</namespace>
+      <namespace key="12">Help</namespace>
+      <namespace key="13">Help talk</namespace>
+      <namespace key="14">Category</namespace>
+      <namespace key="15">Category talk</namespace>
+      <namespace key="100">Portal</namespace>
+      <namespace key="101">Portal talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="100" orglength="33" newlength="1" stub="0" categories="2" outlinks="0" urls="0">
+<title>Category:Guano</title>
+<categories>2 3</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+ 
+</text>
+</page>
+<page id="2" orglength="31" newlength="23" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Gu</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Something%20%20%20dddd.
+</text>
+</page>
+<page id="3" orglength="31" newlength="23" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Blah</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+Something%20%20%20dddd.
+</text>
+</page>
+<page id="4" orglength="18" newlength="1" stub="0" categories="1" outlinks="0" urls="0">
+<title>Category:X</title>
+<categories>3</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+.
+</text>
+</page>
+<page id="5" orglength="159" newlength="99" stub="0" categories="2" outlinks="0" urls="0">
+<title>Page</title>
+<categories>3 2</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+These are proper article categories:  
+These are just links to categories: Category:X Guano
+      
+</text>
+</page>
+</mediawiki>

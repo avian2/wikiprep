@@ -1,0 +1,1552 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.4/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.4/ http://www.mediawiki.org/xml/export-0.4.xsd" version="0.4" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikimedia Commons</sitename>
+    <base>http://commons.wikimedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.16wmf4</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Commons</namespace>
+      <namespace key="5" case="first-letter">Commons talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Creator</namespace>
+      <namespace key="101" case="first-letter">Creator talk</namespace>
+      <namespace key="102" case="first-letter">TimedText</namespace>
+      <namespace key="103" case="first-letter">TimedText talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Category:Theatre</title>
+    <id>152</id>
+    <revision>
+      <id>34760012</id>
+      <timestamp>2010-01-30T22:35:32Z</timestamp>
+      <contributor>
+        <username>Bohème</username>
+        <id>326047</id>
+      </contributor>
+      <minor/>
+      <comment>linkfix</comment>
+      <text xml:space="preserve">[[Image:P culture.svg|right|150px]]
+'''''Please categorize images into subcategories listed below'''''
+* '''''Playwrights''''', '''''directors''''' and '''''actors''''' are collected under [[:Category:Theatrical occupations|Professions]].
+* Images relating to '''''plays''''', '''''dramas''''' and the '''''written word''''' are collected under the [[:Category:Drama|Drama]] subcategory.
+* Images relating to '''''types of practical production''''' are collected under the [[:Category:Theatrical genres|Theatrical genres]] subcategory.
+* Pictures of '''''specific productions''''' should be categorized under relevant [[:Category:Theatre by country|Theatre by country]] category.
+
+&lt;categorytree&gt;Theatre&lt;/categorytree&gt;
+{{categoryTOC}}
+
+{{Sisterheader}}
+{{Sisterwikipedia|
+ |de:| |Kategorie:Theater|
+ |en:| |Category:Theatre|
+ |eo:| |Kategorio:Teatro|
+ |fr:| |Catégorie:Théâtre|
+}}&lt;!--
+{{Sisterwiktionary|
+ |de:| |Kategorie:Esperanto|
+ |en:| |Category:Esperanto language|
+ |eo:| |Kategorio:EO|
+ |fr:| |Catégorie:espéranto|
+ |it:| |Categoria:Parole in esperanto|
+ |la:| |Categoria:Lingua Esperantica|
+ |nl:| |Categorie:Woorden in het Esperanto|
+ |pl:| |Kategoria:esperanto (indeks)|
+ |pt:| |Categoria:Esperanto|
+ |sv:| |Kategori:Esperanto|
+}}--&gt;&lt;!--
+{{Sisterwikiquote|
+}}--&gt;
+{{Sisterwikibooks|
+ |en:| |Category:Theatre|
+}}
+{{Sisterwikisource|
+ |fr:| |Catégorie:Théâtre|
+}}
+{{Sistercommons| |:{{NAMESPACE}}:{{PAGENAME}} }}
+{{Sisterend}}
+
+[[Category:Entertainment]]
+[[Category:Literature]]
+[[Category:Performing arts]]
+
+[[an:Categoría:Teyatro]]
+[[ar:تصنيف:مسرح]]
+[[bg:Категория:Театър]]
+[[bs:Kategorija:Teatar]]
+[[ca:Categoria:Teatre]]
+[[cs:Kategorie:Divadlo]]
+[[cy:Categori:Theatr]]
+[[da:Kategori:Teater]]
+[[de:Kategorie:Theater]]
+[[el:Κατηγορία:Θέατρο]]
+[[en:Category:Theatre]]
+[[eo:Kategorio:Teatro]]
+[[es:Categoría:Teatro]]
+[[et:Kategooria:Teater]]
+[[eu:Kategoria:Antzerkia]]
+[[fi:Luokka:Teatteri]]
+[[fr:Catégorie:Théâtre]]
+[[gl:Category:Teatro]]
+[[he:קטגוריה:תיאטרון]]
+[[hr:Kategorija:Kazalište]]
+[[hu:Kategória:Színházművészet]]
+[[ia:Categoria:Theatro]]
+[[it:Categoria:Teatro]]
+[[ja:Category:演劇]]
+[[ka:კატეგორია:თეატრი]]
+[[ko:분류:연극]]
+[[ku:Kategorî:Şano]]
+[[lb:Category:Theater]]
+[[lt:Kategorija:Teatras]]
+[[lv:Kategorija:Teātris]]
+[[mt:Category:Teatru]]
+[[nap:Categoria:Tiatro]]
+[[nl:Categorie:Toneel]]
+[[nn:Kategori:Teater]]
+[[no:Kategori:Teater]]
+[[oc:Categoria:Teatre]]
+[[os:Категори:Театр]]
+[[pl:Kategoria:Teatr]]
+[[pt:Categoria:Teatro]]
+[[ro:Categorie:Teatru]]
+[[ru:Категория:Театр]]
+[[scn:Category:Tiatru]]
+[[sk:Kategória:Divadlo]]
+[[sl:Kategorija:Gledališče]]
+[[sv:Kategori:Teater]]
+[[tr:Kategori:Tiyatro]]
+[[uk:Категорія:Театр]]
+[[vi:Thể loại:Nhà hát]]
+[[wa:Categoreye:Teyåte]]
+[[yi:קאַטעגאָריע:טעאטער]]
+[[zh:Category:戏剧]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Entertainment</title>
+    <id>14567</id>
+    <revision>
+      <id>37807303</id>
+      <timestamp>2010-04-19T00:19:08Z</timestamp>
+      <contributor>
+        <username>Stefan64</username>
+        <id>3857</id>
+      </contributor>
+      <comment>Undo revision 37804371 by [[Special:Contributions/84.160.199.201|84.160.199.201]] ([[User talk:84.160.199.201|talk]])</comment>
+      <text xml:space="preserve">{{Sisterheader}}
+{{Sisterwikipedia|
+
+ |en:|b|Category:Entertainment|
+ |pt:| |Categoria:Entretenimento|
+ |es:| |Categoria:Entretenimiento|
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+}}
+{{Sisterwiktionary|
+ |en:|b|Category:Entertainment|
+ |pt:| |Categoria:Entretenimento|
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+}}
+{{Sistercommons| |:Category:Entertainment}}
+{{Sisterend}}
+
+[[Category:Culture|Entertainment]]
+[[Category:Service industries|Entertainment]]
+
+[[en:Category:Entertainment]]
+[[af:Kategorie:Vermaak]]
+[[ar:تصنيف:ترفيه]]
+[[ast:Categoría:Entretenimientu]]
+[[az:Kateqoriya:Əyləncə]]
+[[map-bms:Kategori:Hiburan]]
+[[be-x-old:Катэгорыя:Забавы]]
+[[bs:Kategorija:Zabava]]
+[[bg:Категория:Забавление]]
+[[ca:Categoria:Entreteniment]]
+[[cs:Kategorie:Zábava a volný čas]]
+[[cy:Categori:Adloniant]]
+[[da:Kategori:Underholdning]]
+[[et:Kategooria:Meelelahutus]]
+[[es:Categoría:Entretenimiento]]
+[[eo:Kategorio:Distrado]]
+[[fa:رده:سرگرمی‌ها]]
+[[fr:Catégorie:Divertissement]]
+[[gv:Ronney:Eunysseyrys]]
+[[gl:Categoría:Entretemento]]
+[[ko:분류:오락]]
+[[hy:Կատեգորիա:Զվարճություն]]
+[[io:Kategorio:Mondumo]]
+[[id:Kategori:Hiburan]]
+[[ia:Categoria:Intertenimento]]
+[[is:Flokkur:Afþreying]]
+[[it:Categoria:Intrattenimento]]
+[[he:קטגוריה:בידור]]
+[[ka:კატეგორია:გართობა]]
+[[kw:Category:Didhan]]
+[[sw:Jamii:Burudani]]
+[[ht:Kategori:Divètisman]]
+[[lv:Kategorija:Izklaide]]
+[[lt:Kategorija:Pramogos]]
+[[mk:Категорија:Забава]]
+[[ml:വര്‍ഗ്ഗം:വിനോദം]]
+[[mt:Kategorija:Divertiment]]
+[[ms:Kategori:Hiburan]]
+[[nl:Categorie:Amusement]]
+[[nds-nl:Kattegerie:Amusement]]
+[[ja:Category:娯楽]]
+[[no:Kategori:Underholdning]]
+[[nn:Kategori:Underhaldning]]
+[[km:ចំនាត់ថ្នាក់ក្រុម:កំសាន្ត]]
+[[pl:Kategoria:Rozrywki]]
+[[pt:Categoria:Entretenimento]]
+[[ro:Categorie:Divertisment]]
+[[ru:Категория:Развлечения]]
+[[sah:Категория:Аралдьыйыы]]
+[[se:Category:Suohttasat]]
+[[sq:Kategoria:Argëtime]]
+[[simple:Category:Entertainment]]
+[[sk:Kategória:Zábava]]
+[[sl:Kategorija:Zabava]]
+[[szl:Kategoria:Rozrywki]]
+[[sr:Категорија:Забава]]
+[[su:Kategori:Hiburan]]
+[[fi:Luokka:Viihde]]
+[[th:หมวดหมู่:การบันเทิง]]
+[[tr:Kategori:Eğlence]]
+[[uk:Категорія:Розваги]]
+[[vec:Categoria:Intratenimento]]
+[[vi:Thể loại:Giải trí]]
+[[fiu-vro:Katõgooria:Meelelahutus]]
+[[zh-classical:Category:娛樂]]
+[[yi:קאַטעגאָריע:פארוויילונג]]
+[[zh-yue:Category:娛樂]]
+[[bat-smg:Kateguorėjė:Pramuogas]]
+[[zh:Category:娱乐]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Literature</title>
+    <id>15040</id>
+    <revision>
+      <id>36721844</id>
+      <timestamp>2010-03-21T16:04:47Z</timestamp>
+      <contributor>
+        <username>CGN2010</username>
+        <id>1034221</id>
+      </contributor>
+      <text xml:space="preserve">{{Sisterheader}}
+{{Sisterwikipedia|
+ |de:| |Kategorie:Literatur|
+ |en:| |Category:Literature|
+ |es:| |Categoría:Literatura|
+ |fr:| |Catégorie:Littérature|
+ |hr:| |Kategorija:Književnost|
+ |ja:| |Category:文学|
+ |nl:| |Categorie:Literatuur|
+ |uk:| |Категорія:Література|
+}}
+{{Sisterwikiquote|
+ |bs:| |Category:Književnost|
+ |el:| |Κατηγορία:Λογοτεχνία|
+ |fi:| |Luokka:Kirjallisuus|
+ |fr:| |Catégorie:Littérature|
+ |hu:| |Kategória:Irodalom|
+ |it:| |Categoria:Letteratura|
+ |lt:| |Kategorija:Literatūra|
+ |no:| |Kategori:Litteratur|
+ |pl:| |Kategoria:Literatura|
+ |ro:| |Categorie:Literatură|
+ |ru:| |Категория:Литература|
+ |tr:| |Kategori:Edebiyat|
+}}
+{{Sisterwikisource|
+ |en:| |Category:Literature|
+ |es:| |Categoría:Literatura|
+ |fr:| |Catégorie:Littérature|
+ |nl:| |Categorie:Literatuur|
+}}
+{{Sisterwikibooks|
+ |de:| |Kategorie:Literatur|
+}}
+{{Sistercommons| |:Category:Literature}}
+{{Sisterend}}
+{{-}}
+{{ja|'''文学'''に関するカテゴリ。}}
+{{uk|Література}}
+
+[[Category:Art| Literature]]
+[[Category:Humanities and art]]
+[[Category:Book market]]
+
+[[en:Category:Literature]]
+[[af:Kategorie:Letterkunde]]
+[[als:Kategorie:Literatur]]
+[[ar:تصنيف:أدب]]
+[[an:Categoría:Literatura]]
+[[frp:Catègorie:Litèratura]]
+[[ast:Categoría:Lliteratura]]
+[[gn:Ñemohenda:Ñe'ẽporãhaipyre]]
+[[az:Kateqoriya:Ədəbiyyat]]
+[[zh-min-nan:Category:Bûn-ha̍k]]
+[[map-bms:Kategori:Sastra]]
+[[ba:Категория:Әҙәбиәт]]
+[[be:Катэгорыя:Літаратура]]
+[[be-x-old:Катэгорыя:Літаратура]]
+[[bar:Kategorie:Literatur]]
+[[bs:Kategorija:Književnost]]
+[[br:Rummad:Lennegezh]]
+[[bg:Категория:Литература]]
+[[ca:Categoria:Literatura]]
+[[ceb:Kategoriya:Katitikan]]
+[[cs:Kategorie:Literatura]]
+[[cbk-zam:Categoría:Literatura]]
+[[co:Category:Littiratura]]
+[[cy:Categori:Llenyddiaeth]]
+[[da:Kategori:Litteratur]]
+[[de:Kategorie:Literatur]]
+[[dsb:Kategorija:Literatura]]
+[[et:Kategooria:Kirjandus]]
+[[el:Κατηγορία:Λογοτεχνία]]
+[[es:Categoría:Literatura]]
+[[eo:Kategorio:Literaturo]]
+[[ext:Category:Literatura]]
+[[eu:Kategoria:Literatura]]
+[[fa:رده:ادبیات]]
+[[fo:Bólkur:Bókmentir]]
+[[fr:Catégorie:Littérature]]
+[[fy:Kategory:Literatuer]]
+[[ga:Catagóir:Litríocht]]
+[[gd:Category:Litreachas]]
+[[gl:Categoría:Literatura]]
+[[gu:શ્રેણી:સાહિત્ય]]
+[[ko:분류:문학]]
+[[hi:श्रेणी:साहित्य]]
+[[hsb:Kategorija:Literatura]]
+[[hr:Kategorija:Književnost]]
+[[io:Kategorio:Literaturo]]
+[[ilo:Category:Literatura]]
+[[bpy:থাক:সাহিত্য]]
+[[id:Kategori:Sastra]]
+[[ia:Categoria:Litteratura]]
+[[ie:Category:Litteratura]]
+[[os:Категори:Литературæ]]
+[[is:Flokkur:Bókmenntir]]
+[[it:Categoria:Letteratura]]
+[[he:קטגוריה:ספרות]]
+[[jv:Kategori:Sastra]]
+[[ka:კატეგორია:ლიტერატურა]]
+[[kw:Category:Lyenn]]
+[[sw:Jamii:Fasihi]]
+[[ku:Kategorî:Wêje]]
+[[lad:Categoría:Literatura]]
+[[la:Categoria:Litterae]]
+[[lv:Kategorija:Literatūra]]
+[[lb:Kategorie:Literatur]]
+[[lt:Kategorija:Literatūra]]
+[[li:Categorie:Literatuur]]
+[[ln:Catégorie:Mikanda]]
+[[lmo:Categoria:Literatüra]]
+[[hu:Kategória:Irodalom]]
+[[mk:Категорија:Книжевност]]
+[[ml:വര്‍ഗ്ഗം:സാഹിത്യം]]
+[[mt:Kategorija:Letteratura]]
+[[ms:Kategori:Kesusasteraan]]
+[[cdo:Category:Ùng-hŏk]]
+[[mn:Ангилал:Утга зохиол]]
+[[nl:Categorie:Literatuur]]
+[[nds-nl:Kattegerie:Literatuur]]
+[[new:पुचः:साहित्य]]
+[[ja:Category:文学]]
+[[nap:Categurìa:Litteratura]]
+[[no:Kategori:Litteratur]]
+[[nn:Kategori:Litteratur]]
+[[nrm:Category:Littéthatuthe]]
+[[oc:Categoria:Literatura]]
+[[pms:Categorìa:Literatura]]
+[[nds:Kategorie:Literatur]]
+[[pl:Kategoria:Literatura]]
+[[pnt:Κατηγορίαν:Λογοτεχνίαν]]
+[[pt:Categoria:Literatura]]
+[[crh:Kategoriya:Edebiyat]]
+[[ro:Categorie:Literatură]]
+[[qu:Katiguriya:Simi kapchiy]]
+[[ru:Категория:Литература]]
+[[sc:Categoria:Literadura]]
+[[sq:Kategoria:Letërsi]]
+[[scn:Catigurìa:Littiratura]]
+[[simple:Category:Literature]]
+[[sk:Kategória:Literatúra]]
+[[sl:Kategorija:Književnost]]
+[[szl:Kategoria:Literatura]]
+[[sr:Категорија:Књижевност]]
+[[sh:Kategorija:Književnost]]
+[[su:Kategori:Sastra]]
+[[fi:Luokka:Kirjallisuus]]
+[[sv:Kategori:Litteratur]]
+[[tl:Kaurian:Panitikan]]
+[[kab:Taggayt:Tasekla]]
+[[roa-tara:Category:Letterature]]
+[[tt:Törkem:Ädäbiät]]
+[[tet:Kategoria:Literatura]]
+[[th:หมวดหมู่:วรรณกรรม]]
+[[tr:Kategori:Edebiyat]]
+[[tk:Category:Edebiýat]]
+[[udm:Категория:Литература]]
+[[uk:Категорія:Література]]
+[[ur:زمرہ:ادب]]
+[[vec:Categoria:Łiteratura]]
+[[vi:Thể loại:Văn học]]
+[[vo:Klad:Literat]]
+[[fiu-vro:Katõgooria:Kirändüs]]
+[[vls:Categorie:Literatuur]]
+[[war:Category:Literatura]]
+[[yi:קאַטעגאָריע:ליטעראטור]]
+[[zh-yue:Category:文學]]
+[[bat-smg:Kateguorėjė:Literatūra]]
+[[zh:Category:文学]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Performing arts</title>
+    <id>15043</id>
+    <revision>
+      <id>36721819</id>
+      <timestamp>2010-03-21T16:04:15Z</timestamp>
+      <contributor>
+        <username>CGN2010</username>
+        <id>1034221</id>
+      </contributor>
+      <text xml:space="preserve">[[Category:Art| Performing]]
+
+[[af:Kategorie:Uitvoerende kuns]]
+[[ar:تصنيف:فنون الأداء]]
+[[be:Катэгорыя:Сцэнічнае мастацтва]]
+[[be-x-old:Катэгорыя:Сцэнічнае мастацтва]]
+[[bg:Категория:Сценични изкуства]]
+[[ca:Categoria:Arts escèniques]]
+[[cy:Categori:Celfyddydau perfformio]]
+[[de:Kategorie:Darstellende Kunst]]
+[[en:Category:Performing arts]]
+[[es:Categoría:Artes escénicas]]
+[[eu:Kategoria:Arte eszenikoak]]
+[[fr:Catégorie:Arts du spectacle]]
+[[he:קטגוריה:אמנות הבמה]]
+[[hr:Kategorija:Scenska umjetnost]]
+[[hu:Kategória:Előadó-művészet]]
+[[id:Kategori:Seni pertunjukan]]
+[[it:Categoria:Arti performative]]
+[[ja:Category:舞台芸術]]
+[[ka:კატეგორია:საშემსრულებლო ხელოვნება]]
+[[ko:분류:공연 예술]]
+[[li:Kategorie:Podiumkunste]]
+[[lv:Kategorija:Skatuves māksla]]
+[[nds:Kategorie:Dorstellende Kunst]]
+[[nl:Categorie:Podiumkunsten]]
+[[oc:Categoria:Arts de l'espectacle]]
+[[pt:Categoria:Artes cénicas]]
+[[ro:Categorie:Arte scenice]]
+[[ru:Категория:Сценическое искусство]]
+[[sh:Category:Scenska umjetnost]]
+[[sl:Kategorija:Scenske umetnosti]]
+[[sv:Kategori:Scenkonst]]
+[[tr:Kategori:Sahne ve gösteri sanatları]]
+[[uk:Категорія:Сценічне мистецтво]]
+[[vi:Thể loại:Nghệ thuật trình diễn]]
+[[zh:Category:表演藝術]]
+[[zh-yue:Category:表演藝術]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Theatrical occupations</title>
+    <id>8958638</id>
+    <revision>
+      <id>34070436</id>
+      <timestamp>2010-01-11T08:31:16Z</timestamp>
+      <contributor>
+        <username>Foroa</username>
+        <id>115481</id>
+      </contributor>
+      <minor/>
+      <comment>added [[Category:People by occupation]] using [[Help:Gadget-HotCat|HotCat]]</comment>
+      <text xml:space="preserve">[[Image:P culture.svg|right|150px]]
+[[Category:Theatre| Professions]]
+[[Category:People by occupation]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Theatrical genres</title>
+    <id>686584</id>
+    <revision>
+      <id>7419878</id>
+      <timestamp>2007-09-07T17:34:34Z</timestamp>
+      <contributor>
+        <username>DionysosProteus</username>
+        <id>184723</id>
+      </contributor>
+      <text xml:space="preserve">[[Image:P culture.svg|right|150px]]
+[[Category:Theatre|Genres]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Theatre by country</title>
+    <id>686578</id>
+    <revision>
+      <id>37946550</id>
+      <timestamp>2010-04-22T13:23:45Z</timestamp>
+      <contributor>
+        <username>Bohème</username>
+        <id>326047</id>
+      </contributor>
+      <minor/>
+      <comment>cat</comment>
+      <text xml:space="preserve">{{By country category|Theatre}}[[Image:P culture.svg|right|150px]]
+[[Category:Art by country|*Theatre]]
+
+[[an:Categoría:Teyatro por país]]
+[[ar:تصنيف:مسرح حسب البلد]]
+[[be-x-old:Катэгорыя:Тэатар па краінах]]
+[[cy:Categori:Theatr yn ôl gwlad]]
+[[de:Kategorie:Theater nach Staat]]
+[[el:Κατηγορία:Θέατρο ανά χώρα]]
+[[en:Category:Theatre by country]]
+[[es:Categoría:Teatro por país]]
+[[fr:Catégorie:Théâtre par pays]]
+[[he:קטגוריה:תיאטרון לפי מדינות]]
+[[is:Flokkur:Leiklist eftir löndum]]
+[[ja:Category:各国の演劇]]
+[[ko:분류:나라별 연극]]
+[[mk:Категорија:Театар по земја]]
+[[oc:Categoria:Teatre per país]]
+[[pt:Categoria:Teatro por país]]
+[[ru:Категория:Театр по странам]]
+[[sk:Kategória:Divadlo podľa štátu]]
+[[sl:Kategorija:Gledališče po državah]]
+[[vi:Thể loại:Sân khấu theo quốc gia]]
+[[uk:Категорія:Театр за країною]]
+[[zh:Category:各国戏剧]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:CategoryTOC</title>
+    <id>34446</id>
+    <revision>
+      <id>36943997</id>
+      <timestamp>2010-03-27T19:20:51Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <minor/>
+      <comment>m</comment>
+      <text xml:space="preserve">&lt;center&gt;
+{| id=&quot;toc&quot; class=&quot;{{#if:{{{boxclass|}}}|{{{boxclass}}}|}} plainlinks&quot;
+|-
+| halign=&quot;center&quot; | '''{{LangSwitch
+  |en=Index
+  |pl=Indeks
+}}:''' || &amp;nbsp; 
+| align=&quot;center&quot; | [{{fullurl:{{FULLPAGENAME}}}} *] - [{{fullurl:{{FULLPAGENAME}}|from=A}} A] - [{{fullurl:{{FULLPAGENAME}}|from=B}} B] - [{{fullurl:{{FULLPAGENAME}}|from=C}} C] - [{{fullurl:{{FULLPAGENAME}}|from=D}} D] - [{{fullurl:{{FULLPAGENAME}}|from=E}} E] - [{{fullurl:{{FULLPAGENAME}}|from=F}} F] - [{{fullurl:{{FULLPAGENAME}}|from=G}} G] - [{{fullurl:{{FULLPAGENAME}}|from=H}} H] - [{{fullurl:{{FULLPAGENAME}}|from=I}} I] - [{{fullurl:{{FULLPAGENAME}}|from=J}} J] - [{{fullurl:{{FULLPAGENAME}}|from=K}} K] - [{{fullurl:{{FULLPAGENAME}}|from=L}} L] - [{{fullurl:{{FULLPAGENAME}}|from=M}} M] - [{{fullurl:{{FULLPAGENAME}}|from=N}} N] - [{{fullurl:{{FULLPAGENAME}}|from=O}} O] - [{{fullurl:{{FULLPAGENAME}}|from=P}} P] - [{{fullurl:{{FULLPAGENAME}}|from=Q}} Q] - [{{fullurl:{{FULLPAGENAME}}|from=R}} R] - [{{fullurl:{{FULLPAGENAME}}|from=S}} S] - [{{fullurl:{{FULLPAGENAME}}|from=T}} T] - [{{fullurl:{{FULLPAGENAME}}|from=U}} U] - [{{fullurl:{{FULLPAGENAME}}|from=V}} V] - [{{fullurl:{{FULLPAGENAME}}|from=W}} W] - [{{fullurl:{{FULLPAGENAME}}|from=X}} X] - [{{fullurl:{{FULLPAGENAME}}|from=Y}} Y] - [{{fullurl:{{FULLPAGENAME}}|from=Z}} Z]&lt;br /&gt;
+[{{fullurl:{{FULLPAGENAME}}|from=0}} 0–9] - [{{fullurl:{{FULLPAGENAME}}|from=a}} a] - [{{fullurl:{{FULLPAGENAME}}|from=b}} b] - [{{fullurl:{{FULLPAGENAME}}|from=c}} c] - [{{fullurl:{{FULLPAGENAME}}|from=d}} d] - [{{fullurl:{{FULLPAGENAME}}|from=e}} e] - [{{fullurl:{{FULLPAGENAME}}|from=f}} f] - [{{fullurl:{{FULLPAGENAME}}|from=g}} g] - [{{fullurl:{{FULLPAGENAME}}|from=h}} h] - [{{fullurl:{{FULLPAGENAME}}|from=i}} i] - [{{fullurl:{{FULLPAGENAME}}|from=j}} j] - [{{fullurl:{{FULLPAGENAME}}|from=k}} k] - [{{fullurl:{{FULLPAGENAME}}|from=l}} l] - [{{fullurl:{{FULLPAGENAME}}|from=m}} m] - [{{fullurl:{{FULLPAGENAME}}|from=n}} n] - [{{fullurl:{{FULLPAGENAME}}|from=o}} o] - [{{fullurl:{{FULLPAGENAME}}|from=p}} p] - [{{fullurl:{{FULLPAGENAME}}|from=q}} q] - [{{fullurl:{{FULLPAGENAME}}|from=r}} r] - [{{fullurl:{{FULLPAGENAME}}|from=s}} s] - [{{fullurl:{{FULLPAGENAME}}|from=t}} t] - [{{fullurl:{{FULLPAGENAME}}|from=u}} u] - [{{fullurl:{{FULLPAGENAME}}|from=v}} v] - [{{fullurl:{{FULLPAGENAME}}|from=w}} w] - [{{fullurl:{{FULLPAGENAME}}|from=x}} x] - [{{fullurl:{{FULLPAGENAME}}|from=y}} y] - [{{fullurl:{{FULLPAGENAME}}|from=z}} z] - [{{fullurl:{{FULLPAGENAME}}|from=~}} ~]
+|}
+&lt;/center&gt;&lt;noinclude&gt;
+{{documentation}}
+
+See also: [[Template:LargeCategoryTOC]], [[Template:CategoryTOC/de]], [[Template:CategoryTOC/hu]], [[Template:CategoryTOC/pl]], [[Template:CategoryTOC/ru]], [[Template:CategoryTOC/uk]]
+
+[[Category:TOC templates|CategoryTOC]]
+
+[[af:Sjabloon:CategoryTOC]]
+[[ar:قالب:فهرس تصنيف]]
+[[ast:Plantilla:CategoryTOC]]
+[[id:Templat:CategoryTOC]]
+[[su:Citakan:CategoryTOC]]
+[[bar:Vorlage:KategorieTOC]]
+[[bg:Шаблон:CategoryTOC]]
+[[ca:Plantilla:CategoryTOC]]
+[[cy:Nodyn:CategoryTOC]]
+[[de:Vorlage:KategorieTOC]]
+[[et:Mall:CategoryTOC]]
+[[el:Πρότυπο:CategoryTOC]]
+[[en:Template:CategoryTOC]]
+[[es:Plantilla:CategoryTOC]]
+[[eo:Ŝablono:TOCcat]]
+[[fa:الگو:فهرست رده]]
+[[fr:Modèle:Sommaire compact catégorie]]
+[[fy:Berjocht:CategoryTOC]]
+[[hr:Predložak:CategoryTOC]]
+[[io:Template:CategoryTOC]]
+[[is:Snið:CategoryTOC]]
+[[ku:Şablon:CategoryTOC]]
+[[la:Formula:CategoryTOC]]
+[[lv:Veidne:CategoryTOC]]
+[[lb:Template:CategoryTOC]]
+[[lt:Šablonas:CategoryTOC]]
+[[hu:Sablon:CatAZ]]
+[[mk:Шаблон:Категориски азбучник]]
+[[nl:Sjabloon:CategorieTOC]]
+[[ja:Template:CategoryTOC]]
+[[no:Mal:KategoriTOC]]
+[[nn:Mal:CategoryTOC]]
+[[oc:Modèl:CategoryTOC]]
+[[pl:Szablon:Spis treści kategoria]]
+[[pt:Predefinição:Índice cat]]
+[[ro:Format:TOCcat]]
+[[ru:Шаблон:Индекс категории]]
+[[sq:Stampa:CategoryTOC1]]
+[[simple:Template:CategoryTOC]]
+[[sk:Šablóna:CategoryTOC]]
+[[sl:Predloga:CategoryTOC]]
+[[sv:Mall:KategoriTOC]]
+[[tt:Ürnäk:CategoryTOC]]
+[[tr:Şablon:CategoryTOC]]
+[[uk:Шаблон:CategoryTOC]]
+[[wa:Modele:CategoryTOC]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:If defined call4</title>
+    <id>319625</id>
+    <revision>
+      <id>12667438</id>
+      <timestamp>2008-07-08T03:10:15Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:If defined call4]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{template call4|1={{{2}}}|1{{{1}}}=void3|2={{{3}}}|3={{{4}}}|4={{{5}}}|5={{{6}}}}}&lt;noinclude&gt;[[Category:Function templates|{{PAGENAME}}]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:LangSwitch</title>
+    <id>6296689</id>
+    <revision>
+      <id>38894379</id>
+      <timestamp>2010-05-07T18:26:20Z</timestamp>
+      <contributor>
+        <username>Slomox</username>
+        <id>770</id>
+      </contributor>
+      <comment>+hmn, hm, chk</comment>
+      <text xml:space="preserve">{{#switch: {{#if: {{{{{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}}|}}} | {{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}} | {{#if: {{{{{GetFallback|{{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}}}}|}}} | {{GetFallback|{{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}}}} | {{#if: {{{{{GetFallback2|{{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}}}}|}}} | {{GetFallback2|{{#if: {{{lang|}}} |{{{lang}}}|{{int:Lang}}}}}} | en }} }} }}
+|aa={{{aa|}}}
+|ab={{{ab|}}}
+|ace={{{ace|}}}
+|ae={{{ae|}}}
+|af={{{af|}}}
+|ak={{{ak|}}}
+|aln={{{aln|}}}
+|als={{{als|}}}
+|am={{{am|}}}
+|an={{{an|}}}
+|ang={{{ang|}}}
+|ar={{{ar|}}}
+|arc={{{arc|}}}
+|arn={{{arn|}}}
+|arv={{{arv|}}}
+|arz={{{arz|}}}
+|as={{{as|}}}
+|ast={{{ast|}}}
+|av={{{av|}}}
+|avk={{{avk|}}}
+|ay={{{ay|}}}
+|az={{{az|}}}
+|ba={{{ba|}}}
+|bar={{{bar|}}}
+|bat-smg={{{bat-smg|}}}
+|bcc={{{bcc|}}}
+|bcl={{{bcl|}}}
+|bcr={{{bcr|}}}
+|be={{{be|}}}
+|be-x-old={{{be-x-old|}}}
+|be-tarask={{{be-tarask|}}}
+|bg={{{bg|}}}
+|bh={{{bh|}}}
+|bi={{{bi|}}}
+|bm={{{bm|}}}
+|bn={{{bn|}}}
+|bo={{{bo|}}}
+|bpy={{{bpy|}}}
+|br={{{br|}}}
+|bs={{{bs|}}}
+|bto={{{bto|}}}
+|bug={{{bug|}}}
+|byp={{{byp|}}}
+|bxr={{{bxr|}}}
+|ca={{{ca|}}}
+|cbk-zam={{{cbk-zam|}}}
+|cdo={{{cdo|}}}
+|ce={{{ce|}}}
+|ceb={{{ceb|}}}
+|ch={{{ch|}}}
+|chk={{{chk|}}}
+|cho={{{cho|}}}
+|chr={{{chr|}}}
+|chy={{{chy|}}}
+|co={{{co|}}}
+|cop={{{cop|}}}
+|cr={{{cr|}}}
+|crh={{{crh|}}}
+|crh-cyrl={{{crh-cyrl|}}}
+|crh-latn={{{crh-latn|}}}
+|cs={{{cs|}}}
+|csb={{{csb|}}}
+|cu={{{cu|}}}
+|cv={{{cv|}}}
+|cy={{{cy|}}}
+|da={{{da|}}}
+|de={{{de|}}}
+|de-formal={{{de-formal|}}}
+|diq={{{diq|}}}
+|dsb={{{dsb|}}}
+|dv={{{dv|}}}
+|dz={{{dz|}}}
+|ee={{{ee|}}}
+|el={{{el|}}}
+|eml={{{eml|}}}
+|en-gb={{{en-gb|}}}
+|eo={{{eo|}}}
+|es={{{es|}}}
+|et={{{et|}}}
+|eu={{{eu|}}}
+|ext={{{ext|}}}
+|fa={{{fa|}}}
+|ff={{{ff|}}}
+|fi={{{fi|}}}
+|fiu-vro={{{fiu-vro|}}}
+|fj={{{fj|}}}
+|fo={{{fo|}}}
+|fr={{{fr|}}}
+|frc={{{frc|}}}
+|frp={{{frp|}}}
+|fur={{{fur|}}}
+|fy={{{fy|}}}
+|ga={{{ga|}}}
+|gag={{{gag|}}}
+|gan={{{gan|}}}
+|gd={{{gd|}}}
+|gl={{{gl|}}}
+|glk={{{glk|}}}
+|gn={{{gn|}}}
+|got={{{got|}}}
+|grc={{{grc|}}}
+|gsw={{{gsw|}}}
+|gu={{{gu|}}}
+|gv={{{gv|}}}
+|ha={{{ha|}}}
+|hak={{{hak|}}}
+|haw={{{haw|}}}
+|he={{{he|}}}
+|hi={{{hi|}}}
+|hif={{{hif|}}}
+|hif-deva={{{hif-deva|}}}
+|hif-latn={{{hif-latn|}}}
+|hil={{{hil|}}}
+|hm={{{hm|}}}
+|hmn={{{hmn|}}}
+|ho={{{ho|}}}
+|hr={{{hr|}}}
+|hsb={{{hsb|}}}
+|ht={{{ht|}}}
+|hu={{{hu|}}}
+|hy={{{hy|}}}
+|hz={{{hz|}}}
+|ia={{{ia|}}}
+|id={{{id|}}}
+|ie={{{ie|}}}
+|ig={{{ig|}}}
+|ii={{{ii|}}}
+|ik={{{ik|}}}
+|ike-cans={{{ike-cans|}}}
+|ike-latn={{{ike-latn|}}}
+|ikt={{{ikt|}}}
+|ilo={{{ilo|}}}
+|inh={{{inh|}}}
+|io={{{io|}}}
+|is={{{is|}}}
+|it={{{it|}}}
+|iu={{{iu|}}}
+|ja={{{ja|}}}
+|jbo={{{jbo|}}}
+|jut={{{jut|}}}
+|jv={{{jv|}}}
+|ka={{{ka|}}}
+|kaa={{{kaa|}}}
+|kab={{{kab|}}}
+|kg={{{kg|}}}
+|ki={{{ki|}}}
+|kj={{{kj|}}}
+|kk={{{kk|}}}
+|kk-arab={{{kk-arab|}}}
+|kk-cyrl={{{kk-cyrl|}}}
+|kk-latn={{{kk-latn|}}}
+|kk-cn={{{kk-cn|}}}
+|kk-kz={{{kk-kz|}}}
+|kk-tr={{{kk-tr|}}}
+|kl={{{kl|}}}
+|km={{{km|}}}
+|kn={{{kn|}}}
+|ko={{{ko|}}}
+|kr={{{kr|}}}
+|kri={{{kri|}}}
+|krj={{{krj|}}}
+|ks={{{ks|}}}
+|ksh={{{ksh|}}}
+|ku={{{ku|}}}
+|ku-arab={{{ku-arab|}}}
+|ku-latn={{{ku-latn|}}}
+|kv={{{kv|}}}
+|kw={{{kw|}}}
+|ky={{{ky|}}}
+|la={{{la|}}}
+|lad={{{lad|}}}
+|lb={{{lb|}}}
+|lbe={{{lbe|}}}
+|lez={{{lez|}}}
+|lfn={{{lfn|}}}
+|lg={{{lg|}}}
+|li={{{li|}}}
+|lij={{{lij|}}}
+|lld={{{lld|}}}
+|lmo={{{lmo|}}}
+|ln={{{ln|}}}
+|lo={{{lo|}}}
+|loz={{{loz|}}}
+|lt={{{lt|}}}
+|lu={{{lu|}}}
+|lv={{{lv|}}}
+|lzz={{{lzz|}}}
+|mad={{{mad|}}}
+|mai={{{mai|}}}
+|map-bms={{{map-bms|}}}
+|mc={{{mc|}}}
+|mdf={{{mdf|}}}
+|mg={{{mg|}}}
+|mh={{{mh|}}}
+|mi={{{mi|}}}
+|mk={{{mk|}}}
+|ml={{{ml|}}}
+|mn={{{mn|}}}
+|mo={{{mo|}}}
+|mr={{{mr|}}}
+|ms={{{ms|}}}
+|mt={{{mt|}}}
+|mus={{{mus|}}}
+|mwl={{{mwl|}}}
+|my={{{my|}}}
+|myv={{{myv|}}}
+|mzn={{{mzn|}}}
+|na={{{na|}}}
+|nah={{{nah|}}}
+|nan={{{nan|}}}
+|nap={{{nap|}}}
+|nb={{{nb|}}}
+|nd={{{nd|}}}
+|nds={{{nds|}}}
+|nds-nl={{{nds-nl|}}}
+|ne={{{ne|}}}
+|new={{{new|}}}
+|ng={{{ng|}}}
+|niu={{{niu|}}}
+|nl={{{nl|}}}
+|nn={{{nn|}}}
+|no={{{no|}}}
+|non={{{non|}}}
+|nov={{{nov|}}}
+|nr={{{nr|}}}
+|nrm={{{nrm|}}}
+|nso={{{nso|}}}
+|nv={{{nv|}}}
+|ny={{{ny|}}}
+|oc={{{oc|}}}
+|och={{{och|}}}
+|oj={{{oj|}}}
+|om={{{om|}}}
+|or={{{or|}}}
+|os={{{os|}}}
+|pa={{{pa|}}}
+|pag={{{pag|}}}
+|pam={{{pam|}}}
+|pap={{{pap|}}}
+|pdc={{{pdc|}}}
+|pdt={{{pdt|}}}
+|pfl={{{pfl|}}}
+|pi={{{pi|}}}
+|pih={{{pih|}}}
+|pl={{{pl|}}}
+|plm={{{plm|}}}
+|pms={{{pms|}}}
+|pnt={{{pnt|}}}
+|ps={{{ps|}}}
+|pt={{{pt|}}}
+|pt-br={{{pt-br|}}}
+|qu={{{qu|}}}
+|rif={{{rif|}}}
+|rm={{{rm|}}}
+|rmy={{{rmy|}}}
+|rn={{{rn|}}}
+|ro={{{ro|}}}
+|roa-rup={{{roa-rup|}}}
+|roa-tara={{{roa-tara|}}}
+|ru={{{ru|}}}
+|ruq={{{ruq|}}}
+|ruq-cyrl={{{ruq-cyrl|}}}
+|ruq-grek={{{ruq-grek|}}}
+|ruq-latn={{{ruq-latn|}}}
+|rw={{{rw|}}}
+|sa={{{sa|}}}
+|sah={{{sah|}}}
+|sc={{{sc|}}}
+|scn={{{scn|}}}
+|sco={{{sco|}}}
+|sd={{{sd|}}}
+|sdc={{{sdc|}}}
+|se={{{se|}}}
+|sei={{{sei|}}}
+|ses={{{ses|}}}
+|sg={{{sg|}}}
+|sh={{{sh|}}}
+|shi={{{shi|}}}
+|si={{{si|}}}
+|simple={{{simple|}}}
+|sk={{{sk|}}}
+|sl={{{sl|}}}
+|sm={{{sm|}}}
+|sma={{{sma|}}}
+|sn={{{sn|}}}
+|so={{{so|}}}
+|sq={{{sq|}}}
+|sr={{{sr|}}}
+|sr-ec={{{sr-ec|}}}
+|sr-el={{{sr-el|}}}
+|srn={{{srn|}}}
+|ss={{{ss|}}}
+|st={{{st|}}}
+|stq={{{stq|}}}
+|su={{{su|}}}
+|sv={{{sv|}}}
+|sw={{{sw|}}}
+|szl={{{szl|}}}
+|ta={{{ta|}}}
+|te={{{te|}}}
+|tet={{{tet|}}}
+|tg={{{tg|}}}
+|tg-cyrl={{{tg-cyrl|}}}
+|tg-latn={{{tg-latn|}}}
+|th={{{th|}}}
+|ti={{{ti|}}}
+|tk={{{tk|}}}
+|tl={{{tl|}}}
+|tlh={{{tlh|}}}
+|tn={{{tn|}}}
+|to={{{to|}}}
+|tpi={{{tpi|}}}
+|tr={{{tr|}}}
+|ts={{{ts|}}}
+|tt={{{tt|}}}
+|tt-cyrl={{{tt-cyrl|}}}
+|tt-latn={{{tt-latn|}}}
+|ttt={{{ttt|}}}
+|tum={{{tum|}}}
+|tw={{{tw|}}}
+|ty={{{ty|}}}
+|tyv={{{tyv|}}}
+|tzm={{{tzm|}}}
+|udm={{{udm|}}}
+|ug={{{ug|}}}
+|uk={{{uk|}}}
+|ur={{{ur|}}}
+|uz={{{uz|}}}
+|ve={{{ve|}}}
+|vec={{{vec|}}}
+|vi={{{vi|}}}
+|vls={{{vls|}}}
+|vo={{{vo|}}}
+|vrm={{{vrm|}}}
+|wa={{{wa|}}}
+|war={{{war|}}}
+|wo={{{wo|}}}
+|wuu={{{wuu|}}}
+|xal={{{xal|}}}
+|xh={{{xh|}}}
+|xmf={{{xmf|}}}
+|yao={{{yao|}}}
+|yap={{{yap|}}}
+|ydd={{{ydd|}}}
+|yi={{{yi|}}}
+|yo={{{yo|}}}
+|yue={{{yue|}}}
+|yux={{{yux|}}}
+|za={{{za|}}}
+|zea={{{zea|}}}
+|zh={{{zh|}}}
+|zh-classical={{{zh-classical|}}}
+|zh-cn={{{zh-cn|}}}
+|zh-hans={{{zh-hans|}}}
+|zh-hant={{{zh-hant|}}}
+|zh-hk={{{zh-hk|}}}
+|zh-min-nan={{{zh-min-nan|}}}
+|zh-mo={{{zh-mo|}}}
+|zh-my={{{zh-my|}}}
+|zh-sg={{{zh-sg|}}}
+|zh-tw={{{zh-tw|}}}
+|zh-yue={{{zh-yue|}}}
+|zu={{{zu|}}}
+|en
+|#default={{{en|}}}
+}}&lt;noinclude&gt;
+{{Documentation}}
+[[Category:Function templates]]
+[[Category:Internationalization templates]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sistercommons</title>
+    <id>324214</id>
+    <revision>
+      <id>18726168</id>
+      <timestamp>2009-02-24T12:27:57Z</timestamp>
+      <contributor>
+        <username>Putnik</username>
+        <id>57009</id>
+      </contributor>
+      <minor/>
+      <comment>alt-text</comment>
+      <text xml:space="preserve">| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Commons-logo.svg|14px|Commons]]&lt;br /&gt;[[{{{2}}}|Commons]]&lt;noinclude&gt;
+
+
+----
+For an example see  [[:Category:CommonsRoot]].
+
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterend</title>
+    <id>319013</id>
+    <revision>
+      <id>12667443</id>
+      <timestamp>2008-07-08T03:10:36Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:Sisterend]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">|}&lt;noinclude&gt;
+==Notes==
+&lt;br&gt;'''Part of Sisterlinks project'''&lt;br&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br&gt; {{WikiPtmp}}
+[[Category:Interwiki link templates]]
+[[Category:Interwiki utility templates]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterheader</title>
+    <id>319009</id>
+    <revision>
+      <id>13413765</id>
+      <timestamp>2008-08-09T13:55:01Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <comment>convert box to interwiki link / rm old cat</comment>
+      <text xml:space="preserve">{| border=&quot;1&quot; style=&quot;float: right; margin-left: 1em; margin-bottom: 0.5em;  border: #99B3FF solid 1px; background: #F1F8F1;  border-collapse: collapse;&quot; |
+! colspan=&quot;10&quot; | {{NAMESPACE}} {{PAGENAME}} on [[wmf:Our projects|sister projects]]:
+|-&lt;noinclude&gt;
+
+[[Category:Interwiki link templates]]
+
+[[en:Template:Sisterheader]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwiki</title>
+    <id>319348</id>
+    <revision>
+      <id>12667444</id>
+      <timestamp>2008-07-08T03:10:42Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:Sisterwiki]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{#switch:{{{3}}}|b=&lt;b&gt;|r=&lt;font color=&quot;red&quot;&gt;}}[[{{{1}}}{{{2}}}{{{4}}}|{{{2}}}]]{{#switch:{{{3}}}|b=&lt;/b&gt;|r=&lt;/font&gt;}} &amp;nbsp;&lt;noinclude&gt;
+==Notes==
+&lt;br&gt;'''Part of Sisterlinks project'''&lt;br&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br /&gt; {{WikiPtmp}}
+[[Category:Interwiki link templates]]
+[[Category:Interwiki utility templates]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwikibooks</title>
+    <id>321817</id>
+    <revision>
+      <id>36673482</id>
+      <timestamp>2010-03-20T21:05:46Z</timestamp>
+      <contributor>
+        <username>Finavon</username>
+        <id>15275</id>
+      </contributor>
+      <comment>sort</comment>
+      <text xml:space="preserve">| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Wikibooks-logo.svg|18px|Wikibooks]]&lt;br /&gt;Wikibooks&lt;br /&gt;
+{{sisterwikis|b:|{{{2|}}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}}|{{{9|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}}|{{{13|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}}|{{{17|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}}|{{{21|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}}|{{{25|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}}|{{{29|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}}|{{{33|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}}|{{{37|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}}|{{{41|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}}|{{{45|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}}|{{{49|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}}|{{{53|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}}|{{{57|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}}|{{{61|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}}|{{{65|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}}|{{{69|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}}|{{{73|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}}|{{{77|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}}|{{{81|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}}|{{{85|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}}|{{{89|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}}|{{{93|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}}|{{{97|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}}|{{{101|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}}|{{{105|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}}|{{{109|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}}|{{{113|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}}|{{{117|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}}|{{{121|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}}|{{{125|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}}|{{{129|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}}|{{{133|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}}|{{{137|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}}|{{{141|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}}|{{{145|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}}|{{{149|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}}|{{{153|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}}|{{{157|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}}|{{{161|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}}|{{{165|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}}|{{{169|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}}|{{{173|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}}|{{{177|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}}|{{{181|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}}|{{{185|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}}|{{{189|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}}|{{{193|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}}|{{{197|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;noinclude&gt;
+==Notes==
+&lt;br&gt;'''Part of Sisterlinks project'''&lt;br&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br&gt;{{WikiPtmp}}
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Interwiki utility templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwikipedia</title>
+    <id>319011</id>
+    <revision>
+      <id>18726146</id>
+      <timestamp>2009-02-24T12:26:49Z</timestamp>
+      <contributor>
+        <username>Putnik</username>
+        <id>57009</id>
+      </contributor>
+      <minor/>
+      <comment>alt-text</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br&gt;{{WikiPtmp|Sisterwikipedia|Sisterwikipedia}}
+[[Category:Interwiki link templates]]
+[[Category:Interwiki utility templates]]
+&lt;/noinclude&gt;&lt;includeonly&gt;| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Wikipedia-logo.png|20px|Wikipedia]] Wikipedia&lt;br /&gt; 
+{{sisterwikis|w:|{{{2|}}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}}|{{{9|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}}|{{{13|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}}|{{{17|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}}|{{{21|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}}|{{{25|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}}|{{{29|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}}|{{{33|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}}|{{{37|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}}|{{{41|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}}|{{{45|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}}|{{{49|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}}|{{{53|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}}|{{{57|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}}|{{{61|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}}|{{{65|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}}|{{{69|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}}|{{{73|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}}|{{{77|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}}|{{{81|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}}|{{{85|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}}|{{{89|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}}|{{{93|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}}|{{{97|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}}|{{{101|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}}|{{{105|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}}|{{{109|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}}|{{{113|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}}|{{{117|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}}|{{{121|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}}|{{{125|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}}|{{{129|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}}|{{{133|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}}|{{{137|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}}|{{{141|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}}|{{{145|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}}|{{{149|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}}|{{{153|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}}|{{{157|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}}|{{{161|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}}|{{{165|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}}|{{{169|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}}|{{{173|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}}|{{{177|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}}|{{{181|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}}|{{{185|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}}|{{{189|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}}|{{{193|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}}|{{{197|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;br /&gt;
+See more at interwikilinks &lt;sup&gt;[[w:Help:Interlanguage links|(?)]]&lt;/sup&gt;&lt;/includeonly&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwikis</title>
+    <id>321729</id>
+    <revision>
+      <id>12667437</id>
+      <timestamp>2008-07-08T03:10:09Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:Sisterwikis]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{if defined call4|{{{2|}}}|sisterwiki|{{{1|}}}|{{{2|}}}|{{{3|}}}|{{{4|}}} }}{{if defined call4|{{{6|}}}|sisterwiki|{{{1|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}} }}{{if defined call4|{{{10|}}}|sisterwiki|{{{1|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}} }}{{if defined call4|{{{14|}}}|sisterwiki|{{{1|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}} }}{{if defined call4|{{{18|}}}|sisterwiki|{{{1|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}} }}{{if defined call4|{{{22|}}}|sisterwiki|{{{1|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}} }}{{if defined call4|{{{26|}}}|sisterwiki|{{{1|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}} }}{{if defined call4|{{{30|}}}|sisterwiki|{{{1|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}} }}{{if defined call4|{{{34|}}}|sisterwiki|{{{1|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}} }}{{if defined call4|{{{38|}}}|sisterwiki|{{{1|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}} }}{{if defined call4|{{{42|}}}|sisterwiki|{{{1|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}} }}{{if defined call4|{{{46|}}}|sisterwiki|{{{1|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}} }}{{if defined call4|{{{50|}}}|sisterwiki|{{{1|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}} }}{{if defined call4|{{{54|}}}|sisterwiki|{{{1|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}} }}{{if defined call4|{{{58|}}}|sisterwiki|{{{1|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}} }}{{if defined call4|{{{62|}}}|sisterwiki|{{{1|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}} }}{{if defined call4|{{{66|}}}|sisterwiki|{{{1|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}} }}{{if defined call4|{{{70|}}}|sisterwiki|{{{1|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}} }}{{if defined call4|{{{74|}}}|sisterwiki|{{{1|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}} }}{{if defined call4|{{{78|}}}|sisterwiki|{{{1|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}} }}{{if defined call4|{{{82|}}}|sisterwiki|{{{1|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}} }}{{if defined call4|{{{86|}}}|sisterwiki|{{{1|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}} }}{{if defined call4|{{{90|}}}|sisterwiki|{{{1|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}} }}{{if defined call4|{{{94|}}}|sisterwiki|{{{1|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}} }}{{if defined call4|{{{98|}}}|sisterwiki|{{{1|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}} }}{{if defined call4|{{{102|}}}|sisterwiki|{{{1|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}} }}{{if defined call4|{{{106|}}}|sisterwiki|{{{1|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}} }}{{if defined call4|{{{110|}}}|sisterwiki|{{{1|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}} }}{{if defined call4|{{{114|}}}|sisterwiki|{{{1|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}} }}{{if defined call4|{{{118|}}}|sisterwiki|{{{1|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}} }}{{if defined call4|{{{122|}}}|sisterwiki|{{{1|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}} }}{{if defined call4|{{{126|}}}|sisterwiki|{{{1|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}} }}{{if defined call4|{{{130|}}}|sisterwiki|{{{1|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}} }}{{if defined call4|{{{134|}}}|sisterwiki|{{{1|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}} }}{{if defined call4|{{{138|}}}|sisterwiki|{{{1|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}} }}{{if defined call4|{{{142|}}}|sisterwiki|{{{1|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}} }}{{if defined call4|{{{146|}}}|sisterwiki|{{{1|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}} }}{{if defined call4|{{{150|}}}|sisterwiki|{{{1|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}} }}{{if defined call4|{{{154|}}}|sisterwiki|{{{1|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}} }}{{if defined call4|{{{158|}}}|sisterwiki|{{{1|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}} }}{{if defined call4|{{{162|}}}|sisterwiki|{{{1|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}} }}{{if defined call4|{{{166|}}}|sisterwiki|{{{1|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}} }}{{if defined call4|{{{170|}}}|sisterwiki|{{{1|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}} }}{{if defined call4|{{{174|}}}|sisterwiki|{{{1|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}} }}{{if defined call4|{{{178|}}}|sisterwiki|{{{1|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}} }}{{if defined call4|{{{182|}}}|sisterwiki|{{{1|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}} }}{{if defined call4|{{{186|}}}|sisterwiki|{{{1|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}} }}{{if defined call4|{{{190|}}}|sisterwiki|{{{1|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}} }}{{if defined call4|{{{194|}}}|sisterwiki|{{{1|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}} }}{{if defined call4|{{{198|}}}|sisterwiki|{{{1|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;noinclude&gt;
+
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwikisource</title>
+    <id>321822</id>
+    <revision>
+      <id>36673584</id>
+      <timestamp>2010-03-20T21:07:51Z</timestamp>
+      <contributor>
+        <username>Finavon</username>
+        <id>15275</id>
+      </contributor>
+      <comment>sort</comment>
+      <text xml:space="preserve">| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Wikisource-logo.svg|18px|Wikisource]]&lt;br /&gt;Wikisource&lt;br /&gt;
+{{sisterwikis|s:|{{{2|}}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}}|{{{9|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}}|{{{13|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}}|{{{17|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}}|{{{21|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}}|{{{25|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}}|{{{29|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}}|{{{33|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}}|{{{37|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}}|{{{41|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}}|{{{45|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}}|{{{49|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}}|{{{53|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}}|{{{57|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}}|{{{61|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}}|{{{65|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}}|{{{69|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}}|{{{73|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}}|{{{77|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}}|{{{81|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}}|{{{85|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}}|{{{89|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}}|{{{93|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}}|{{{97|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}}|{{{101|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}}|{{{105|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}}|{{{109|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}}|{{{113|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}}|{{{117|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}}|{{{121|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}}|{{{125|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}}|{{{129|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}}|{{{133|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}}|{{{137|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}}|{{{141|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}}|{{{145|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}}|{{{149|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}}|{{{153|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}}|{{{157|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}}|{{{161|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}}|{{{165|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}}|{{{169|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}}|{{{173|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}}|{{{177|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}}|{{{181|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}}|{{{185|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}}|{{{189|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}}|{{{193|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}}|{{{197|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;noinclude&gt;
+==Notes==
+&lt;br&gt;'''Part of Sisterlinks project'''&lt;br&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br&gt;{{WikiPtmp}}
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Interwiki utility templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Template call4</title>
+    <id>319628</id>
+    <revision>
+      <id>12667440</id>
+      <timestamp>2008-07-08T03:10:27Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:Template call4]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">{{{{{1}}}|{{{2}}}|{{{3}}}|{{{4}}}|{{{5}}}}}&lt;noinclude&gt;
+
+[[Category:Function templates|{{PAGENAME}}]]
+
+[[en:Template:Template call4]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Void3</title>
+    <id>319636</id>
+    <revision>
+      <id>12667439</id>
+      <timestamp>2008-07-08T03:10:21Z</timestamp>
+      <contributor>
+        <username>Gmaxwell</username>
+        <id>4614</id>
+      </contributor>
+      <minor/>
+      <comment>Protected &quot;[[Template:Void3]]&quot;: Full protecting widely used template. [edit=sysop:move=sysop]</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;[[Category:Function templates|{{PAGENAME}}]]&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwiktionary</title>
+    <id>321809</id>
+    <revision>
+      <id>36673668</id>
+      <timestamp>2010-03-20T21:09:39Z</timestamp>
+      <contributor>
+        <username>Finavon</username>
+        <id>15275</id>
+      </contributor>
+      <comment>sort</comment>
+      <text xml:space="preserve">| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Wiktionary-logo-en.svg|17px|Wiktionary]]&lt;br /&gt;Wiktionary&lt;br /&gt;
+{{sisterwikis|wikt:|{{{2|}}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}}|{{{9|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}}|{{{13|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}}|{{{17|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}}|{{{21|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}}|{{{25|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}}|{{{29|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}}|{{{33|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}}|{{{37|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}}|{{{41|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}}|{{{45|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}}|{{{49|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}}|{{{53|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}}|{{{57|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}}|{{{61|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}}|{{{65|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}}|{{{69|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}}|{{{73|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}}|{{{77|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}}|{{{81|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}}|{{{85|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}}|{{{89|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}}|{{{93|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}}|{{{97|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}}|{{{101|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}}|{{{105|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}}|{{{109|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}}|{{{113|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}}|{{{117|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}}|{{{121|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}}|{{{125|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}}|{{{129|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}}|{{{133|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}}|{{{137|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}}|{{{141|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}}|{{{145|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}}|{{{149|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}}|{{{153|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}}|{{{157|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}}|{{{161|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}}|{{{165|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}}|{{{169|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}}|{{{173|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}}|{{{177|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}}|{{{181|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}}|{{{185|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}}|{{{189|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}}|{{{193|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}}|{{{197|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;noinclude&gt;
+==Notes==
+&lt;br&gt;'''Part of Sisterlinks project'''&lt;br&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br&gt;{{WikiPtmp}}
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Interwiki utility templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:-</title>
+    <id>3648972</id>
+    <revision>
+      <id>28688939</id>
+      <timestamp>2009-09-14T13:20:01Z</timestamp>
+      <contributor>
+        <username>The Evil IP address</username>
+        <id>450356</id>
+      </contributor>
+      <minor/>
+      <comment>move to /doc</comment>
+      <text xml:space="preserve">&lt;br style=&quot;clear:both&quot; /&gt;&lt;noinclude&gt;
+{{documentation}}
+
+[[Category:Typing-aid templates|{{PAGENAME}}]]
+[[Category:Formatting templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Description</title>
+    <id>163449</id>
+    <revision>
+      <id>20843650</id>
+      <timestamp>2009-04-30T12:58:33Z</timestamp>
+      <contributor>
+        <username>Slomox</username>
+        <id>770</id>
+      </contributor>
+      <comment>make the template one-line again to allow using it in lists; this will break some pages with wiki syntax (like headings) in the params, use &lt;nowiki/&gt; at the start of the parameter if that is the case</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{#if:{{{inline|}}}|&lt;span class=&quot;description {{{1}}}&quot; lang=&quot;{{{4|{{{1}}}}}}&quot;&gt;|&lt;div class=&quot;description {{{1}}}&quot; lang=&quot;{{{4|{{{1}}}}}}&quot;&gt;}}&lt;span class=&quot;language {{{1}}}&quot; title=&quot;{{{name|{{{3|}}}}}}&quot;&gt;'''{{#language:{{{1}}}}}{{{5|}}}:'''&lt;/span&gt; {{{2|}}}{{#if:{{{inline|}}}|&lt;/span&gt;|&lt;/div&gt;}}&lt;/includeonly&gt;&lt;noinclude&gt;
+----
+Parameters:
+*1=wikicode for the language and name of the CSS formating class (mandatory)
+*2=description text (optional, default is empty)
+*3=title for tooltip (optional, default is empty)
+**name=alternative parameter name for parameter 3
+*4=standard code for lang tag in HTML (optional, default is same as parameter 1)
+*5=extension text shown after the language name before colon (optional, default is empty)
+*inline=optional, default is empty string. When set to any value different from an empty string, forces the template to be displayed inline, so that it does not break the current paragraph (i.e. that makes possible to put several descriptions side by side on a single line)
+
+[[Category:Internationalization templates]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Ja</title>
+    <id>124859</id>
+    <revision>
+      <id>13260951</id>
+      <timestamp>2008-08-03T12:28:13Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <comment>update</comment>
+      <text xml:space="preserve">{{description|ja|2={{{1|}}}|inline={{{inline|}}}}}&lt;noinclude&gt;{{internationalization template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Sisterwikiquote</title>
+    <id>321814</id>
+    <revision>
+      <id>36673563</id>
+      <timestamp>2010-03-20T21:07:23Z</timestamp>
+      <contributor>
+        <username>Finavon</username>
+        <id>15275</id>
+      </contributor>
+      <comment>sort</comment>
+      <text xml:space="preserve">| valign=&quot;top&quot; align=&quot;center&quot; | [[File:Wikiquote-logo.svg|16px|Wikiquote]]&lt;br /&gt;Wikiquote&lt;br /&gt;
+{{sisterwikis|q:|{{{2|}}}|{{{3|}}}|{{{4|}}}|{{{5|}}}|{{{6|}}}|{{{7|}}}|{{{8|}}}|{{{9|}}}|{{{10|}}}|{{{11|}}}|{{{12|}}}|{{{13|}}}|{{{14|}}}|{{{15|}}}|{{{16|}}}|{{{17|}}}|{{{18|}}}|{{{19|}}}|{{{20|}}}|{{{21|}}}|{{{22|}}}|{{{23|}}}|{{{24|}}}|{{{25|}}}|{{{26|}}}|{{{27|}}}|{{{28|}}}|{{{29|}}}|{{{30|}}}|{{{31|}}}|{{{32|}}}|{{{33|}}}|{{{34|}}}|{{{35|}}}|{{{36|}}}|{{{37|}}}|{{{38|}}}|{{{39|}}}|{{{40|}}}|{{{41|}}}|{{{42|}}}|{{{43|}}}|{{{44|}}}|{{{45|}}}|{{{46|}}}|{{{47|}}}|{{{48|}}}|{{{49|}}}|{{{50|}}}|{{{51|}}}|{{{52|}}}|{{{53|}}}|{{{54|}}}|{{{55|}}}|{{{56|}}}|{{{57|}}}|{{{58|}}}|{{{59|}}}|{{{60|}}}|{{{61|}}}|{{{62|}}}|{{{63|}}}|{{{64|}}}|{{{65|}}}|{{{66|}}}|{{{67|}}}|{{{68|}}}|{{{69|}}}|{{{70|}}}|{{{71|}}}|{{{72|}}}|{{{73|}}}|{{{74|}}}|{{{75|}}}|{{{76|}}}|{{{77|}}}|{{{78|}}}|{{{79|}}}|{{{80|}}}|{{{81|}}}|{{{82|}}}|{{{83|}}}|{{{84|}}}|{{{85|}}}|{{{86|}}}|{{{87|}}}|{{{88|}}}|{{{89|}}}|{{{90|}}}|{{{91|}}}|{{{92|}}}|{{{93|}}}|{{{94|}}}|{{{95|}}}|{{{96|}}}|{{{97|}}}|{{{98|}}}|{{{99|}}}|{{{100|}}}|{{{101|}}}|{{{102|}}}|{{{103|}}}|{{{104|}}}|{{{105|}}}|{{{106|}}}|{{{107|}}}|{{{108|}}}|{{{109|}}}|{{{110|}}}|{{{111|}}}|{{{112|}}}|{{{113|}}}|{{{114|}}}|{{{115|}}}|{{{116|}}}|{{{117|}}}|{{{118|}}}|{{{119|}}}|{{{120|}}}|{{{121|}}}|{{{122|}}}|{{{123|}}}|{{{124|}}}|{{{125|}}}|{{{126|}}}|{{{127|}}}|{{{128|}}}|{{{129|}}}|{{{130|}}}|{{{131|}}}|{{{132|}}}|{{{133|}}}|{{{134|}}}|{{{135|}}}|{{{136|}}}|{{{137|}}}|{{{138|}}}|{{{139|}}}|{{{140|}}}|{{{141|}}}|{{{142|}}}|{{{143|}}}|{{{144|}}}|{{{145|}}}|{{{146|}}}|{{{147|}}}|{{{148|}}}|{{{149|}}}|{{{150|}}}|{{{151|}}}|{{{152|}}}|{{{153|}}}|{{{154|}}}|{{{155|}}}|{{{156|}}}|{{{157|}}}|{{{158|}}}|{{{159|}}}|{{{160|}}}|{{{161|}}}|{{{162|}}}|{{{163|}}}|{{{164|}}}|{{{165|}}}|{{{166|}}}|{{{167|}}}|{{{168|}}}|{{{169|}}}|{{{170|}}}|{{{171|}}}|{{{172|}}}|{{{173|}}}|{{{174|}}}|{{{175|}}}|{{{176|}}}|{{{177|}}}|{{{178|}}}|{{{179|}}}|{{{180|}}}|{{{181|}}}|{{{182|}}}|{{{183|}}}|{{{184|}}}|{{{185|}}}|{{{186|}}}|{{{187|}}}|{{{188|}}}|{{{189|}}}|{{{190|}}}|{{{191|}}}|{{{192|}}}|{{{193|}}}|{{{194|}}}|{{{195|}}}|{{{196|}}}|{{{197|}}}|{{{198|}}}|{{{199|}}}|{{{200|}}} }}&lt;noinclude&gt;
+==Notes==
+&lt;br /&gt;'''Part of Sisterlinks project'''&lt;br /&gt;Example: [[:Category:CommonsRoot]] For futher info: [[Template talk:Sisterlinks]]&lt;br /&gt;{{WikiPtmp}}
+[[Category:Interwiki link templates|{{PAGENAME}}]]
+[[Category:Interwiki utility templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Uk</title>
+    <id>354045</id>
+    <revision>
+      <id>13262204</id>
+      <timestamp>2008-08-03T13:27:00Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <minor/>
+      <comment>updating / adding {{internationalization template doc}}  using [[Project:AutoWikiBrowser|AWB]]</comment>
+      <text xml:space="preserve">{{description|uk|2={{{1|}}}|inline={{{inline|}}}}}&lt;noinclude&gt;{{internationalization template doc}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Autotranslate</title>
+    <id>5238522</id>
+    <revision>
+      <id>18077417</id>
+      <timestamp>2009-01-31T22:58:49Z</timestamp>
+      <contributor>
+        <username>Slomox</username>
+        <id>770</id>
+      </contributor>
+      <comment>Fallback, see discussion</comment>
+      <text xml:space="preserve">&lt;includeonly&gt;{{{{{base|}}}/{{Fallback|{{{base|}}}}}|1={{{1|}}}|2={{{2|}}}|3={{{3|}}}|4={{{4|}}}|5={{{5|}}}|6={{{6|}}}|7={{{7|}}}|8={{{8|}}}|9={{{9|}}}}}{{#ifeq: {{FULLPAGENAME}} | Template:{{{base|}}} | [[Category:Autotranslated templates|{{PAGENAME}}]]}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+{{documentation}}
+
+[[Category:Autotranslated templates| *]]
+
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:By country category</title>
+    <id>5743039</id>
+    <revision>
+      <id>33935671</id>
+      <timestamp>2010-01-08T13:47:28Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <minor/>
+      <text xml:space="preserve">{{Autotranslate|1={{{1|}}}|base=By country category}}&lt;includeonly&gt;
+{{#ifeq:{{NAMESPACE}}|Category|
+{{#if:{{{1|}}}|
+[[Category:Categories by country by alphabet|{{ucfirst:{{{1|}}}}}]] [[Category:{{ucfirst:{{{1|}}}}}| Country]] |
+[[Category:Categories by country by alphabet]]
+}}
+[[Category:Meta categories]]
+}}&lt;/includeonly&gt;&lt;noinclude&gt;
+
+
+{{In category|Categories by country by alphabet|Meta categories}}
+
+== Usage ==
+*Add {{tlp|By country category|subject}} to a by country category.
+*For example [[:Category:Buildings by country]] contains {{tlp|By country category|Buildings}}.
+*In the example, the template generates a &lt;nowiki&gt;[[Category:Categories by country by alphabet|Buildings by country]]&lt;/nowiki&gt;, &lt;nowiki&gt;[[Category:Buildings| Country]]&lt;/nowiki&gt; (space before Country) and &lt;nowiki&gt;[[Category:Meta categories]]&lt;/nowiki&gt;
+
+'''See also:''' 
+* {{tl|MetaCat}} - more general version of this template
+* {{tl|By year category}}
+
+Please use those instead when appropriate.
+
+[[Category:Category header templates|{{PAGENAME}}]]
+[[Category:Category maintenance templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:By country category/fr</title>
+    <id>5933415</id>
+    <revision>
+      <id>18973445</id>
+      <timestamp>2009-03-06T15:52:42Z</timestamp>
+      <contributor>
+        <username>Multichill</username>
+        <id>115072</id>
+      </contributor>
+      <comment>{{translated tag|header}}</comment>
+      <text xml:space="preserve">{{By country category/layout
+|text='''''Ceci est une catégorie par pays.''''' Cette catégorie ne devrait contenir que des sous-catégories. Les images devraient se trouver soit dans la sous-catégorie du pays correspondant, soit dans la {{#if:{{{1|}}}|[[:Category:{{{1|}}}|catégorie mère]]|catégorie mère}}.
+|lang=fr
+}}&lt;noinclude&gt;
+{{translated tag|header}}
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:By country category/lang</title>
+    <id>5776692</id>
+    <revision>
+      <id>37378050</id>
+      <timestamp>2010-04-07T13:39:19Z</timestamp>
+      <contributor>
+        <username>Prillen</username>
+        <id>180269</id>
+      </contributor>
+      <minor/>
+      <comment>+ no</comment>
+      <text xml:space="preserve">&lt;span style=&quot;font-size:x-small;line-height:140%&quot; class=&quot;plainlinks&quot;&gt;
+&lt;!----&gt;[{{fullurl:Template:By country category/be-tarask}} {{#language:be-tarask}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/ca}} {{#language:ca}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/cs}} {{#language:cs}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/de}} {{#language:de}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/en}} {{#language:en}}]&amp;nbsp;|
+&lt;!----&gt;[{{fullurl:Template:By country category/es}} {{#language:es}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/fi}} {{#language:fi}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/fr}} {{#language:fr}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/hu}} {{#language:hu}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/it}} {{#language:it}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/ja}} {{#language:ja}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/ko}} {{#language:ko}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/mk}} {{#language:mk}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/nds}} {{#language:nds}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/nl}} {{#language:nl}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/no}} {{#language:no}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/nn}} {{#language:nn}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/pl}} {{#language:pl}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/ru}} {{#language:ru}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/sk}} {{#language:sk}}]&amp;nbsp;| 
+&lt;!----&gt;[{{fullurl:Template:By country category/sv}} {{#language:sv}}]&amp;nbsp;| 
+&lt;!----&gt;{{edit|Template:By country category/lang}}
+&lt;/span&gt;&lt;noinclude&gt;
+[[Category:Language link templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:By country category/layout</title>
+    <id>5776673</id>
+    <revision>
+      <id>35908394</id>
+      <timestamp>2010-02-27T16:59:17Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <minor/>
+      <comment>smaller img; padding</comment>
+      <text xml:space="preserve">{| class=&quot;layouttemplate&quot; style=&quot;direction:{{dir|{{{lang}}}}};clear:both;width:100%;border:1px solid #88a;background:#f7f8ff;border-collapse:2px;border-spacing:1px;&quot;
+| style=&quot;padding:2px 4px;&quot; | [[File:Zeichen 101.svg|32px|link=]]
+|{{lang|{{{lang|}}}|{{{text|empty}}}}}
+|-
+| colspan=&quot;2&quot; |
+----
+{{By country category/lang}}
+|}&lt;noinclude&gt;
+
+[[Category:Formatting templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Dir</title>
+    <id>4508797</id>
+    <revision>
+      <id>26928945</id>
+      <timestamp>2009-08-20T13:51:11Z</timestamp>
+      <contributor>
+        <username>The Evil IP address</username>
+        <id>450356</id>
+      </contributor>
+      <minor/>
+      <comment>Changed protection level for &quot;[[Template:Dir]]&quot;: rm cascading, not necessary ([edit=sysop] (indefinite) [move=sysop] (indefinite))</comment>
+      <text xml:space="preserve">&lt;noinclude&gt;{{heavily used template}}&lt;/noinclude&gt;{{#switch:{{{1}}}|ar|arc|arz|bcc|bqi|dv|fa|fa-af|glk|ha|he|kk-arab|kk-cn|ks|ku|ku-arab|mzn|prd|ps|sd|ur|ydd|yi=rtl|ltr}}&lt;noinclude&gt;
+{{documentation}}
+
+[[Category:Internationalization templates|{{PAGENAME}}]]
+[[Category:Function templates|{{PAGENAME}}]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Edit</title>
+    <id>16121</id>
+    <restrictions>edit=sysop:move=sysop</restrictions>
+    <revision>
+      <id>29273923</id>
+      <timestamp>2009-09-26T04:02:13Z</timestamp>
+      <contributor>
+        <username>Rocket000</username>
+        <id>41662</id>
+      </contributor>
+      <comment>aha, found it! this was what caused the potd to display wrong: a carriage return = a space in MW, so when you have {{edit|...}}&amp;amp;nbsp;text it breaks anyway (2 spaces = 1 sp. and breaking wins)</comment>
+      <text xml:space="preserve">&lt;small class=&quot;plainlinks&quot;&gt;[{{fullurl:{{{1}}}|action=edit}} +/−]&lt;/small&gt;&lt;noinclude&gt;{{documentation}}&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Fallback</title>
+    <id>5779530</id>
+    <revision>
+      <id>21668251</id>
+      <timestamp>2009-05-24T23:13:44Z</timestamp>
+      <contributor>
+        <username>Slomox</username>
+        <id>770</id>
+      </contributor>
+      <minor/>
+      <comment>no typing-aid</comment>
+      <text xml:space="preserve">{{#ifexist: Template:{{{1|}}}/{{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}} | {{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}} | {{#ifexist: Template:{{{1|}}}/{{GetFallback|{{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}}}} | {{GetFallback|{{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}}}} | {{#ifexist: Template:{{{1|}}}/{{GetFallback2|{{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}}}} | {{GetFallback2|{{#if: {{{2|}}} |{{{2}}}|{{int:Lang}}}}}} | {{CONTENTLANGUAGE}} }} }} }}&lt;noinclude&gt;
+
+{{documentation}}
+[[Category:Localisation templates]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Lang</title>
+    <id>611438</id>
+    <revision>
+      <id>20059528</id>
+      <timestamp>2009-04-08T19:32:14Z</timestamp>
+      <contributor>
+        <username>Slomox</username>
+        <id>770</id>
+      </contributor>
+      <comment>doc</comment>
+      <text xml:space="preserve">&lt;span lang=&quot;{{{1}}}&quot; xml:lang=&quot;{{{1}}}&quot; class=&quot;description {{{1}}}&quot;&gt;{{{2}}}&lt;/span&gt;&lt;noinclude&gt;
+{{Documentation}}
+
+[[Category:Internationalization templates]]
+&lt;/noinclude&gt;</text>
+    </revision>
+  </page>
+</mediawiki>

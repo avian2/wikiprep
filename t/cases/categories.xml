@@ -83,4 +83,15 @@
       <text xml:space="preserve">[[Category:Blah]].</text>
     </revision>
   </page>
+  <page>
+    <title>Page</title>
+    <id>5</id>
+    <revision>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <text xml:space="preserve">
+These are proper article categories: [[Category:Blah]] [[Category:Gu|Gu]]
+These are just links to categories: [[:Category:X]] [[:Category:Guano|Guano]]
+      </text>
+    </revision>
+  </page>
 </mediawiki>

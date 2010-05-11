@@ -1,0 +1,127 @@
+<mediawiki>
+  <siteinfo>
+    <sitename>Wikimedia Commons</sitename>
+    <base>http://commons.wikimedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.16wmf4</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Commons</namespace>
+      <namespace key="5" case="first-letter">Commons talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Creator</namespace>
+      <namespace key="101" case="first-letter">Creator talk</namespace>
+      <namespace key="102" case="first-letter">TimedText</namespace>
+      <namespace key="103" case="first-letter">TimedText talk</namespace>
+    </namespaces>
+  </siteinfo>
+<page id="152" orglength="2731" newlength="489" stub="0" categories="3" outlinks="0" urls="0">
+<title>Category:Theatre</title>
+<categories>14567 15040 15043</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+<w namespace="File" title="P culture.svg"></w>
+Please categorize images into subcategories listed below
+* Playwrights, directors and actors are collected under Professions.
+* Images relating to plays, dramas and the written word are collected under the Drama subcategory.
+* Images relating to types of practical production are collected under the Theatrical genres subcategory.
+* Pictures of specific productions should be categorized under relevant Theatre by country category.
+
+Theatre
+
+
+</text>
+</page>
+<page id="14567" orglength="2762" newlength="2" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Entertainment</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+
+
+</text>
+</page>
+<page id="15040" orglength="4441" newlength="48" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Literature</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+
+日本語:  文学に関するカテゴリ。 
+  Українська:  Література
+
+
+</text>
+</page>
+<page id="15043" orglength="1214" newlength="2" stub="0" categories="0" outlinks="0" urls="0">
+<title>Category:Performing arts</title>
+<categories></categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+
+
+</text>
+</page>
+<page id="8958638" orglength="103" newlength="48" stub="0" categories="1" outlinks="0" urls="0">
+<title>Category:Theatrical occupations</title>
+<categories>152</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+<w namespace="File" title="P culture.svg"></w>
+
+
+</text>
+</page>
+<page id="686584" orglength="63" newlength="47" stub="0" categories="1" outlinks="0" urls="0">
+<title>Category:Theatrical genres</title>
+<categories>152</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+<w namespace="File" title="P culture.svg"></w>
+
+</text>
+</page>
+<page id="686578" orglength="828" newlength="50" stub="0" categories="1" outlinks="0" urls="0">
+<title>Category:Theatre by country</title>
+<categories>152</categories>
+<links></links>
+<urls>
+</urls>
+<text>
+
+
+<w namespace="File" title="P culture.svg"></w>
+
+
+</text>
+</page>
+</mediawiki>

@@ -243,14 +243,22 @@ sub extractWikiLinks {
     # Target page of the link.
     my $targetId = &resolvePageLink(\$linkNamespaceTitle);
 
-    # If this is a link to category namespace, remove the link completely and 
     if( $linkNamespace and $linkNamespace eq $Wikiprep::Config::categoryNamespace ) {
-      if( $targetId ) {
-        push(@{$refToCategoryArray}, $targetId) if $refToCategoryArray;
+      if( $firstField =~ /^\s*:/ ) {
+        # A link to the category namespace with a ':' prefix is a normal link to the category
+        # page. 
+        my $anchor = pop(@pipeFields);
+        ($anchor = $link) =~ s/^\s*:// if not defined $anchor;
+        return $prefix . $anchor . $suffix;
       } else {
-        LOG->info("unknown category '$linkTitle'");
+        # Otherwise, add the resolved ID to the list of article's categories.
+        if( $targetId ) {
+          push(@{$refToCategoryArray}, $targetId) if $refToCategoryArray;
+        } else {
+          LOG->info("unknown category '$linkTitle'");
+        }
+        return $prefix . $suffix;
       }
-      return $prefix . $suffix;
     }
 
     # Determine the anchor text. This is the blue underlined text that is seen in the browser 

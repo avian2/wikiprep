@@ -40,9 +40,12 @@ t/cases/barzilla.xml
 t/cases/carbon.hgw.xml.vetted
 t/cases/carbon.xml
 t/cases/categories.xml
+t/cases/categories.hgw.xml.vetted
 t/cases/citebook.xml
 t/cases/citeweb.hgw.xml.vetted
 t/cases/citeweb.xml
+t/cases/commons-theatre.xml
+t/cases/commons-theatre.hgw.xml.vetted
 t/cases/compare
 t/cases/coord.hgw.xml.vetted
 t/cases/coord.xml
