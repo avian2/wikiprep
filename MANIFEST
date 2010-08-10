@@ -31,6 +31,8 @@ t/cases/anchors.hgw.xml.vetted
 t/cases/anchors.xml
 t/cases/anchorspace.anchor_text.vetted
 t/cases/anchorspace.xml
+t/cases/apple.xml
+t/cases/apple.gum.xml.vetted
 t/cases/asse.anchor_text.vetted
 t/cases/asse.gum.xml.vetted
 t/cases/asse.xml
