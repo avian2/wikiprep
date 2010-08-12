@@ -164,7 +164,7 @@ my %parserFunctions = (
               }
               # Default case
               # Check if the last item had no = sign, thus specifying the default case
-              if( !$rvalue ) {
+              if( ! defined $rvalue ) {
                 return $lvalue;
               } elsif( $default ) {
                 return $default;

@@ -89,4 +89,14 @@ a|true|false}} should be true</text>
 | #default   = &lt;div style="text-align: center;"&gt;This message box is using an invalid "type=content" parameter and needs fixing.&lt;/div&gt;[[Category:Wikipedia message box parameter needs fixing|{{main other|Main:}}{{FULLPAGENAME}}]]}}</text>
     </revision>
   </page>
+  <page>
+    <title>Switch2</title>
+    <id>5</id>
+    <revision>
+      <text xml:space="preserve">{{#switch:[[Unitarianism|Unitarian]]
+   | [[Armenian Apostolic Church]] = 16
+   | [[Mekhitarist Order]] = 16
+   | #default = }}</text>
+     </revision>
+   </page>
 </mediawiki>
