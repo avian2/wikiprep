@@ -294,6 +294,11 @@ sub instantiateTemplate {
   if ( not defined($result) ) {
     &normalizeTitle(\$templateTitle, $Wikiprep::Config::templateNamespace);
 
+    for my $param (@rawTemplateParams) {
+      &includeTemplates($page, \$param, $templateRecursionLevel + 1)
+        if $param =~ /\{/;
+    }
+
     if(exists $Wikiprep::Config::overrideTemplates{$templateTitle}) {
       LOG->info("overriding template: " . $templateTitle);
       return $Wikiprep::Config::overrideTemplates{$templateTitle};
