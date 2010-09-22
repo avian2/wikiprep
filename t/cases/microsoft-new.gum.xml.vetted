@@ -58,23 +58,6 @@
 <param name="accessdate">2007-08-15</param>
 </incl>
 <incl>
-<param name="date">2007-07-19</param>
-<param name="url">http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx</param>
-<param name="work">microsoft.com</param>
-<param name="title">"Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"</param>
-<param name="author">MSFT Investor Relations</param>
-<param name="publisher">Microsoft</param>
-<param name="accessdate">2007-08-15</param>
-</incl>
-<incl>
-<param name="date">2007-08-01</param>
-<param name="url">http://www.microsoft.com/presspass/inside_ms.mspx</param>
-<param name="work">microsoft.com</param>
-<param name="title">"Fast Facts About Microsoft"</param>
-<param name="publisher">Microsoft</param>
-<param name="accessdate">2007-08-15</param>
-</incl>
-<incl>
 <param name="date">2007-08-01</param>
 <param name="url">http://www.microsoft.com/presspass/inside_ms.mspx</param>
 <param name="work">microsoft.com</param>
@@ -214,24 +197,21 @@
 <incl></incl>
 <incl></incl>
 <incl></incl>
-<incl></incl>
-<incl></incl>
-<incl></incl>
 </template>
 <template id="1192206">
 <incl>
 <param name="company_name">Microsoft Corporation</param>
-<param name="num_employees">79,000 (2007)&lt;ref name="fastfacts"&gt;{{cite web|date=2007-08-01|url= http://www.microsoft.com/presspass/inside_ms.mspx|title="Fast Facts About Microsoft"|work=microsoft.com|publisher=Microsoft| accessdate=2007-08-15}}&lt;/ref&gt;</param>
-<param name="operating_income">{{profit}} US $18.52 billion (2007)&lt;ref name="2007financials" /&gt;</param>
-<param name="revenue">{{profit}} [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&lt;ref name="2007financials"&gt;{{cite web|author=MSFT Investor Relations|date=2007-07-19|url=http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx|title ="Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"|work=microsoft.com| publisher=Microsoft|accessdate=2007-08-15}}&lt;/ref&gt;</param>
+<param name="num_employees">79,000 (2007)&lt;ref name="fastfacts"&gt;[http://www.microsoft.com/presspass/inside_ms.mspx "Fast Facts About Microsoft"].&amp;#32;''microsoft.com''.&amp;#32;Microsoft&amp;#32;([[2007-08-01]]).&amp;#32;Retrieved on [[2007-08-15]].&lt;/ref&gt;</param>
+<param name="operating_income">&lt;span style="color: #0c0; font-size: larger;"&gt;▲&lt;/span&gt; US $18.52 billion (2007)&lt;ref name="2007financials" /&gt;</param>
+<param name="revenue">&lt;span style="color: #0c0; font-size: larger;"&gt;▲&lt;/span&gt; [[United States dollar|US $]]51.12 [[1000000000 (number)|billion]] (2007)&lt;ref name="2007financials"&gt;MSFT Investor Relations&amp;#32;([[2007-07-19]]).&amp;#32;[http://www.microsoft.com/msft/earnings/FY07/earn_rel_q4_07.mspx "Microsoft Fourth Quarter FY 2007 Earnings Release: Microsoft’s Annual Revenue Surpasses $50 Billion"].&amp;#32;''microsoft.com''.&amp;#32;Microsoft.&amp;#32;Retrieved on [[2007-08-15]].&lt;/ref&gt;</param>
 <param name="industry">[[Computer software]] &lt;br /&gt; [[Publishing]] &lt;br /&gt; [[Research and development]] &lt;br /&gt; [[Computer hardware]] &lt;br /&gt; [[Console game|Video games]]</param>
 <param name="company_logo">[[Image:Microsoft wordmark.svg|220px|]]</param>
-<param name="foundation">[[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&lt;ref name="bbc-timeline"&gt;{{cite news| url=http://news.bbc.co.uk/2/hi/business/5085630.stm|title=Bill Gates: A timeline|work=news.bbc.co.uk|publisher=[[BBC News]]| date=2006-06-15|accessdate=2007-08-15}}&lt;/ref&gt;</param>
+<param name="foundation">[[Albuquerque, New Mexico]], [[United States|USA]] ([[April 4]] [[1975]])&lt;ref name="bbc-timeline"&gt;"[http://news.bbc.co.uk/2/hi/business/5085630.stm Bill Gates: A timeline]", ''news.bbc.co.uk'', [[BBC News]], [[2006-06-15]].&amp;#32;Retrieved on [[2007-08-15]].&lt;span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=newspaperArticle&amp;rft.subject=News&amp;rft.title=Bill%20Gates%3A%20A%20timeline&amp;rft.identifier=http%3A%2F%2Fnews%2Ebbc%2Eco%2Euk%2F2%2Fhi%2Fbusiness%2F5085630%2Estm&amp;rft.source=news%2Ebbc%2Eco%2Euk&amp;rft.publisher=%5B%5BBBC%20News%5D%5D&amp;rft.date=2006%2D06%2D15"&gt;&amp;nbsp;&lt;/span&gt;&lt;/ref&gt;</param>
 <param name="homepage">[http://www.microsoft.com/worldwide/ www.microsoft.com]</param>
 <param name="slogan">''Your potential. Our passion.''</param>
-<param name="company_type">[[Public company|Public]] ({{nasdaq2|MSFT}})</param>
+<param name="company_type">[[Public company|Public]] ([[NASDAQ]]:&amp;nbsp;[http://quotes.nasdaq.com/asp/SummaryQuote.asp?symbol=MSFT&amp;selected=MSFT MSFT])</param>
 <param name="location_country">[[United States]]</param>
-<param name="net_income">{{profit}} US $14.06 billion (2007)&lt;ref name="2007financials" /&gt;</param>
+<param name="net_income">&lt;span style="color: #0c0; font-size: larger;"&gt;▲&lt;/span&gt; US $14.06 billion (2007)&lt;ref name="2007financials" /&gt;</param>
 <param name="products">[[Microsoft Windows]] &lt;br /&gt; [[Microsoft Office]] &lt;br /&gt; [[Microsoft Servers]] &lt;br /&gt; [[Microsoft Visual Studio|Developer Tools]] &lt;br /&gt; [[Microsoft Dynamics|Business Solutions]] &lt;br /&gt; [[Microsoft Game Studios|Games]] &amp; [[Xbox]][http://www.microsoft.com/xbox/] &amp; [http://www.microsoft.com/games/] &lt;br /&gt; [[Windows Live]][http://help.live.com/help.aspx?project=tou&amp;mkt=en-us] &lt;br /&gt; [[Windows Mobile]] &lt;br /&gt; [[Zune]][http://www.zune.net/en-US/]</param>
 <param name="location_city">[[Redmond, Washington]]</param>
 <param name="key_people">[[Bill Gates]], &lt;small&gt;[[Entrepreneur|Co-founder]] and [[Chairman#Types|Executive Chairman]][http://www.microsoft.com/presspass/exec/billg/bio.mspx]&lt;/small&gt;; &lt;br /&gt; [[Paul Allen]], &lt;small&gt;[[Entrepreneur|Co-founder]]&lt;/small&gt;;&lt;br /&gt; [[Steve Ballmer]], &lt;small&gt;[[Chief executive officer|CEO]]&lt;/small&gt;; &lt;br /&gt; [[Ray Ozzie]], &lt;small&gt;[[Software Architecture|Chief Software Architect]]&lt;/small&gt;</param>

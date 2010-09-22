@@ -11,7 +11,7 @@
 <templates>
 <template id="945764">
 <incl>
-<param name="1">{{#if: |This {{#ifeq:{{NAMESPACE}}|{{ns:0}}|article|page}} is about .&amp;#32;&amp;#32;}}{{#if:the Alicante wine region|For the Alicante wine region, see {{#if:Alicante (DO)|[[Alicante (DO)]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;|For other uses, see {{#if:Alicante (DO)|[[Alicante (DO)]]|[[{{PAGENAME}} (disambiguation)]]}}.}}{{#if:the Alicante wine region|{{#if:the Spanish [[provincia]]|{{#ifeq:the Spanish [[provincia]]|1|For other uses, see {{#if:Alicante (province)|[[Alicante (province)]]|[[{{PAGENAME}} (disambiguation)]]}}.|For the Spanish [[provincia]], see {{#if:Alicante (province)|[[Alicante (province)]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:the Spanish [[provincia]]|{{#if:|{{#ifeq:|1|For other uses, see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.|For , see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}{{#if:|{{#if:|{{#ifeq:|1|For other uses, see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.|For , see {{#if:|[[]]|[[{{PAGENAME}} (disambiguation)]]}}.&amp;#32;&amp;#32;}}}}}}}}}}</param>
+<param name="1">For the Alicante wine region, see [[Alicante (DO)]].&amp;#32;&amp;#32;For the Spanish [[provincia]], see [[Alicante (province)]].&amp;#32;&amp;#32;</param>
 </incl>
 </template>
 <template id="2468023">
