@@ -173,3 +173,4 @@ tools/riffle/riffle.cpp
 tools/samplewiki/README
 tools/samplewiki/samplewiki.c
 tools/splitwiki/splitwiki.c
+tools/splitwiki/Makefile
