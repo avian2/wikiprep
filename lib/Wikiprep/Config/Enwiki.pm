@@ -140,12 +140,12 @@ $disambigTitle = qr/\(disambiguation\)/ix;
 
 # Regular expression that matches article text if the article is a redirect.
 
-$isRedirect = qr/^#REDIRECT/i;
+$isRedirect = qr/^\s*#REDIRECT/i;
 
 # Regular expression that extracts the title the redirect points to. Note that this 
 # is only used if $isRedirect matches the text of the redirect page.
 
-$parseRedirect = qr/^\#REDIRECT         # Redirect must start with "#REDIRECT"
+$parseRedirect = qr/^\s*\#REDIRECT      # Redirect must start with "#REDIRECT"
                     (?:S|ED|ION)?       # The word may be in any of these forms,
                                         #   i.e., REDIRECT|REDIRECTS|REDIRECTED|REDIRECTION
                     \s*                 # optional whitespace

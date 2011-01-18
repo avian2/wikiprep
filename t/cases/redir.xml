@@ -52,6 +52,25 @@
     </revision>
   </page>
   <page>
+    <title>Redir with newlines</title>
+    <id>4</id>
+    <revision>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <text xml:space="preserve">
+#REDIRECT [[Dest]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Redir with trailing text</title>
+    <id>5</id>
+    <revision>
+      <timestamp>2007-06-06T23:05:07Z</timestamp>
+      <text xml:space="preserve">#REDIRECT [[Dest]]
+      
+Some text here that should be ignored.</text>
+    </revision>
+  </page>
+  <page>
     <title>Dest</title>
     <id>100</id>
     <revision>

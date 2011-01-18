@@ -13,7 +13,37 @@
 <redirect>
 <from>
 <id>unknown</id>
+<title>Redir2</title>
+</from>
+<to>
+<id>100</id>
+<title>Dest</title>
+</to>
+</redirect>
+<redirect>
+<from>
+<id>unknown</id>
+<title>Redir with trailing text</title>
+</from>
+<to>
+<id>100</id>
+<title>Dest</title>
+</to>
+</redirect>
+<redirect>
+<from>
+<id>unknown</id>
 <title>Redir3</title>
+</from>
+<to>
+<id>100</id>
+<title>Dest</title>
+</to>
+</redirect>
+<redirect>
+<from>
+<id>unknown</id>
+<title>Redir with newlines</title>
 </from>
 <to>
 <id>100</id>
