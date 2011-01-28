@@ -109,8 +109,9 @@ Currently implemented MediaWiki functionality:
 
 2.1 Software
 
-You need a recent version of Perl 5 with the following modules installed (names
-in parentheses are names of respective Debian packages):
+You need a recent version of Perl 5 compiled for a 64 bit architecture with
+the following modules installed (names in parentheses are names of respective
+Debian packages):
 
 Parse::MediaWikiDump  (libparse-mediawikidump-perl)
 Regexp::Common        (libregexp-common-perl)
@@ -131,18 +132,21 @@ libxml2-utils)
 
 2.2 Hardware
 
-English Wikipedia is big. Don't underestimate it. 
+English Wikipedia is big and is getting bigger, so requirements below
+slowly grow over time.
 
-As of April 2009, Wikiprep output takes approximately 15 GB of hard disk
-space (with -compress and with default logging). Debug log takes 20 GB or
-more.
+As of January 2011, Wikiprep output takes approximately 22 GB of hard disk
+space (with -compress, -format composite and default logging). Debug log 
+takes 20 GB or more.
 
-2 GB RAM is minimum, but 4 GB or more is recommended for decent performance.
+Prescan phase requires a little over 4 GB of memory in a single Perl
+process (hence the requirement for a 64 bit version of Perl). In transform
+phase Wikiprep requires 100 to 200 MB per Perl process (but 4 GB or more
+is recommended for decent performance due to OS caching BDB tables)
 
-On a 4 core 2.4 GHz AMD Opteron with 16 GB of RAM it takes approximately 
-120 hours to process the complete English Wikipedia with a single thread.
-
-Using a split dump and 4 processes, the same dataset takes around 35 hours.
+On a dual 6 core 2.6 GHz AMD Opteron with 32 GB of RAM and 12 parallel
+processes it takes approximately 16 hours to process English Wikipedia dump
+from 15 January 2011
 
 
 
