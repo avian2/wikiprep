@@ -55,7 +55,8 @@ LOGS =	images.log \
 	stub.log \
 	mainarticle.log \
 	magicwords.log \
-	commons-theatre.log
+	commons-theatre.log \
+	apple.log
 
 OPTIONS=$(shell grep "^$<:" options | sed -e 's/^[^:]*://')
 
