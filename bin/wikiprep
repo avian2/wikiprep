@@ -647,8 +647,8 @@ BEGIN {
   my %urlProtocols = ( 'http' => 1, 'https' => 1, 'ftp' => 1, 'irc' => 1, 'gopher' => 1, 'telnet' => 1, 
                        'nntp' => 1, 'worldwind' => 1, 'mailto' => 1, 'news' => 1 );
 
-  # A regex that matches all valid URLs. The first group is
-  my $urlRegex = qr/[a-z]+:(?:[\w!\$\&\'()*+,-.\/:;=?\@\_`~]|%[a-fA-F0-9]{2})+/;
+  # A regex that matches all valid URLs.
+  my $urlRegex = qr/[a-z]+:(?:[\w!\$\&\'()*+,-.\/:;=?\@\_`~#]|%[a-fA-F0-9]{2})+/;
 
   # MediaWiki supports two kinds of external links: implicit and explicit.
 

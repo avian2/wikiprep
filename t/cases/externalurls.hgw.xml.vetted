@@ -27,7 +27,7 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="1" orglength="1061" newlength="632" stub="0" categories="0" outlinks="0" urls="13">
+<page id="1" orglength="1196" newlength="685" stub="0" categories="0" outlinks="0" urls="14">
 <title>A</title>
 <categories></categories>
 <links></links>
@@ -38,6 +38,7 @@ http://7.example.com
 mailto:tomaz@example.com
 http://www.youtube.com/user/BikerMice2006&apos;&apos;BikerMice
 http://www.youtube.com/user/BikerMice2006&apos;BikerMice
+http://aus.worldfootball.net/spieler_profil/daniel-aliffi/#redirect
 http://5.example.com
 http://8.example.com
 http://9.example.com
@@ -72,6 +73,10 @@ MediaWiki parses BikerMice 2006 as anchor
 In this case 2006&apos;&apos; is anchor, rest is URL
 
 7b. 2006&apos;&apos;
+
+URL with a section reference
+
+7c. worldfootball.net
 
 Increasingly broken markup:
 

@@ -27,12 +27,12 @@
       <namespace key="101">Portal talk</namespace>
     </namespaces>
   </siteinfo>
-<page id="385846" orglength="19461" newlength="12131" stub="0" categories="0" outlinks="0" urls="1">
+<page id="385846" orglength="19461" newlength="12116" stub="0" categories="0" outlinks="0" urls="1">
 <title>Kaon</title>
 <categories></categories>
 <links></links>
 <urls>
-http://pdg.lbl.gov/2004/listings/mxxxcomb.html
+http://pdg.lbl.gov/2004/listings/mxxxcomb.html#mesonsstrange
 </urls>
 <text>
 
@@ -120,7 +120,7 @@ and similarly for  K    S   . Thus occasionally the  K    L    decays as a K 1  
 
 <h1>References and external links</h1>
 
-*#mesonsstrange Particle data group on strange mesons
+*Particle data group on strange mesons
 *The quark model, by J.J.J. Kokkedee
 * 
 *CP violation, by I.I. Bigi and A.I. Sanda (Cambridge University Press, 2000) ISBN 0-521-44349-0

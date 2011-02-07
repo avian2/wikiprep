@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <gum>
-<page id="856" timestamp="2010-08-10T06:43:22Z" orglength="92724" newlength="66081" stub="0" disambig="0" category="0" image="0">
+<page id="856" timestamp="2010-08-10T06:43:22Z" orglength="92724" newlength="66056" stub="0" disambig="0" category="0" image="0">
 <title>Apple Inc.</title>
 <categories></categories>
 <links></links>
@@ -33,7 +33,7 @@
 <link url="http://web.archive.org/web/20070326115844/http://staging.computerhistory.org/exhibits/highlights/apple1.shtml">"Computer History Museum (ComputerHistory.org)"</link>
 <link url="http://www.g4tv.com/gamemakers/episodes/3781/Apple_II.html">Game Makers (TV Show)</link>
 <link url="http://www.macmothership.com/gallery/newads7/1976apple1.jpg">"Picture of original ad featuring US666.66 price"</link>
-<link url="http://phx.corporate-ir.net/phoenix.zhtml?c=107357&amp;p=irol-faq">#corpinfo1 Apple Investor Relations FAQ</link>
+<link url="http://phx.corporate-ir.net/phoenix.zhtml?c=107357&amp;p=irol-faq#corpinfo1">Apple Investor Relations FAQ</link>
 <link url="http://money.cnn.com/1998/01/06/technology/apple_chrono/">"Apple Chronology"</link>
 <link url="http://ca.encarta.msn.com/encyclopedia_761552652/apple_inc_.html">Apple Inc.</link>
 <link url="http://www.webcitation.org/query?id=1257008017205735">Archived</link>
@@ -51,8 +51,8 @@
 <link url="http://desktoppub.about.com/cs/beginners/f/when_dtp.htm">"When was desktop publishing invented?"</link>
 <link url="http://lowendmac.com/orchard/06/john-sculley-years-apple.html">Growing Apple with the Macintosh: The Sculley years</link>
 <link url="http://lowendmac.com/orchard/05/powerbook-origin-1991.html">Birth of the PowerBook: How Apple took over the portable market in 1991</link>
-<link url="http://apple2history.org/history/ah11.html">#11 "Apple II History Chap 11"</link>
-<link url="http://apple2history.org/history/ah11.html">#08 "Apple II History Chap 11"</link>
+<link url="http://apple2history.org/history/ah11.html#11">"Apple II History Chap 11"</link>
+<link url="http://apple2history.org/history/ah11.html#08">"Apple II History Chap 11"</link>
 <link url="http://www.roughlydrafted.com/RD/Q4.06/3EC02E78-FD4D-4CDF-92A0-9C4CBDFAB3D2.html">"1990–1995: Why the World Went Windows"</link>
 <link url="http://lowendmac.com/orchard/06/apple-vs-microsoft.html">The Apple vs. Microsoft GUI lawsuit</link>
 <link url="http://lowendmac.com/orchard/06/michael-spindler-apple.html">"Michael Spindler: The Peter Principle at Apple"</link>
@@ -214,8 +214,8 @@
 <link url="http://edition.cnn.com/2006/SHOWBIZ/02/02/eye.ent.commercials/" />
 <link url="http://findarticles.com/p/articles/mi_hb197/is_200401/ai_n5556112" />
 <link url="http://desktoppub.about.com/cs/beginners/f/when_dtp.htm" />
-<link url="http://apple2history.org/history/ah11.html" />
-<link url="http://apple2history.org/history/ah11.html" />
+<link url="http://apple2history.org/history/ah11.html#11" />
+<link url="http://apple2history.org/history/ah11.html#08" />
 <link url="http://www.roughlydrafted.com/RD/Q4.06/3EC02E78-FD4D-4CDF-92A0-9C4CBDFAB3D2.html" />
 <link url="http://lowendmac.com/orchard/06/michael-spindler-apple.html" />
 <link url="http://www.roughlydrafted.com/RD/Home/B8DA34A3-333B-4204-BDF3-E74608998702.html" />
@@ -304,35 +304,35 @@
 </external>
 <interwiki>
 <link namespace="File" title="Apple-logo.png" loc="353"></link>
-<link namespace="File" title="Apple TV.jpg" loc="85805">Apple TV</link>
-<link namespace="File" title="Wiktionary-logo-en.svg" loc="156913">Search Wiktionary</link>
-<link namespace="File" title="Wikibooks-logo.svg" loc="157083">Search Wikibooks</link>
-<link namespace="File" title="Wikiquote-logo.svg" loc="157241">Search Wikiquote</link>
-<link namespace="File" title="Wikisource-logo.svg" loc="157400">Search Wikisource</link>
-<link namespace="File" title="Commons-logo.svg" loc="157565">Search Commons</link>
-<link namespace="File" title="Wikinews-logo.svg" loc="157709">Search Wikinews</link>
-<link namespace="File" title="Wikiversity-logo-Snorky.svg" loc="157866">Search Wikiversity</link>
-<link namespace="File" title="Office-book.svg" loc="158180"></link>
-<link namespace="File" title="SF From Marin Highlands3.jpg" loc="158712"></link>
-<link namespace="File" title="Factory 1b.svg" loc="158943"></link>
-<link namespace="File" title="Apple Mac.png" loc="159134"></link>
-<link namespace="File" title="Symbol book class2.svg" loc="169821"> Wikipedia book</link>
-<link namespace="File" title="Folder Hexagonal Icon.svg" loc="169919"> Category</link>
-<link namespace="File" title="Portal-puzzle.svg" loc="170020"> Portal</link>
-<link namespace="File" title="Symbol information vote.svg" loc="170114"> Project page</link>
-<link namespace="File" title="Video-x-generic.svg" loc="170230"> File</link>
-<link namespace="File" title="Symbol template class.svg" loc="170324"> Template</link>
+<link namespace="File" title="Apple TV.jpg" loc="85780">Apple TV</link>
+<link namespace="File" title="Wiktionary-logo-en.svg" loc="156888">Search Wiktionary</link>
+<link namespace="File" title="Wikibooks-logo.svg" loc="157058">Search Wikibooks</link>
+<link namespace="File" title="Wikiquote-logo.svg" loc="157216">Search Wikiquote</link>
+<link namespace="File" title="Wikisource-logo.svg" loc="157375">Search Wikisource</link>
+<link namespace="File" title="Commons-logo.svg" loc="157540">Search Commons</link>
+<link namespace="File" title="Wikinews-logo.svg" loc="157684">Search Wikinews</link>
+<link namespace="File" title="Wikiversity-logo-Snorky.svg" loc="157841">Search Wikiversity</link>
+<link namespace="File" title="Office-book.svg" loc="158155"></link>
+<link namespace="File" title="SF From Marin Highlands3.jpg" loc="158687"></link>
+<link namespace="File" title="Factory 1b.svg" loc="158918"></link>
+<link namespace="File" title="Apple Mac.png" loc="159109"></link>
+<link namespace="File" title="Symbol book class2.svg" loc="169796"> Wikipedia book</link>
+<link namespace="File" title="Folder Hexagonal Icon.svg" loc="169894"> Category</link>
+<link namespace="File" title="Portal-puzzle.svg" loc="169995"> Portal</link>
+<link namespace="File" title="Symbol information vote.svg" loc="170089"> Project page</link>
+<link namespace="File" title="Video-x-generic.svg" loc="170205"> File</link>
+<link namespace="File" title="Symbol template class.svg" loc="170299"> Template</link>
 <link namespace="File" title="Apple I.jpg" loc="17600">The Apple I, Apple's first product. Sold as an assembled circuit board, it lacked basic features such as a keyboard, monitor, and case. The owner of this unit added a keyboard and a wooden case.</link>
-<link namespace="File" title="Ad apple 1984.jpg" loc="28706">The heroine from Apple's "1984" ad, set in a dystopian future modeled after the George Orwell novel Nineteen Eighty-Four, set the tone for the introduction of the Macintosh.</link>
-<link namespace="File" title="Macintosh 128k transparency.png" loc="29556">The first Macintosh, released in 1984.</link>
-<link namespace="File" title="Macintosh portable.jpg" loc="37600">The Macintosh Portable was Apple's first "portable" Macintosh computer, released in 1989.</link>
-<link namespace="File" title="Newton-IMG 0320 cleanup.JPG" loc="43592">The Newton was Apple's first foray into the PDA markets, as well as one of the first in the industry. Despite being a financial flop at the time of its release, it helped pave the way for the Palm Pilot and Apple's own iPhone and iPad in the future.</link>
-<link namespace="File" title="Apple store fifth avenue.jpg" loc="51480">The entrance of the Apple Store on Fifth Avenue in New York City is a glass cube, housing a cylindrical elevator and a spiral staircase that leads into the subterranean store.</link>
-<link namespace="File" title="MacBook Pro.jpg" loc="54808"> The MacBook Pro (15.4" widescreen) was Apple's first laptop with an Intel microprocessor. It was announced in January 2006 and is aimed at the professional market.</link>
-<link namespace="File" title="IPad, iPhone, MacBook Pro.jpg" loc="62430"> The Mac, iPad, and iPhone now form the core of Apple's business.</link>
-<link namespace="File" title="Mac Mini 2010.jpg" loc="67837">The Mac mini.</link>
-<link namespace="File" title="IPod Nano 4G black crop.jpg" loc="71434">iPod Nano</link>
-<link namespace="File" title="Infinite Loop Apple.jpg" loc="107976">Company headquarters on Infinite Loop in Cupertino, California.</link>
+<link namespace="File" title="Ad apple 1984.jpg" loc="28695">The heroine from Apple's "1984" ad, set in a dystopian future modeled after the George Orwell novel Nineteen Eighty-Four, set the tone for the introduction of the Macintosh.</link>
+<link namespace="File" title="Macintosh 128k transparency.png" loc="29545">The first Macintosh, released in 1984.</link>
+<link namespace="File" title="Macintosh portable.jpg" loc="37589">The Macintosh Portable was Apple's first "portable" Macintosh computer, released in 1989.</link>
+<link namespace="File" title="Newton-IMG 0320 cleanup.JPG" loc="43567">The Newton was Apple's first foray into the PDA markets, as well as one of the first in the industry. Despite being a financial flop at the time of its release, it helped pave the way for the Palm Pilot and Apple's own iPhone and iPad in the future.</link>
+<link namespace="File" title="Apple store fifth avenue.jpg" loc="51455">The entrance of the Apple Store on Fifth Avenue in New York City is a glass cube, housing a cylindrical elevator and a spiral staircase that leads into the subterranean store.</link>
+<link namespace="File" title="MacBook Pro.jpg" loc="54783"> The MacBook Pro (15.4" widescreen) was Apple's first laptop with an Intel microprocessor. It was announced in January 2006 and is aimed at the professional market.</link>
+<link namespace="File" title="IPad, iPhone, MacBook Pro.jpg" loc="62405"> The Mac, iPad, and iPhone now form the core of Apple's business.</link>
+<link namespace="File" title="Mac Mini 2010.jpg" loc="67812">The Mac mini.</link>
+<link namespace="File" title="IPod Nano 4G black crop.jpg" loc="71409">iPod Nano</link>
+<link namespace="File" title="Infinite Loop Apple.jpg" loc="107951">Company headquarters on Infinite Loop in Cupertino, California.</link>
 </interwiki>
 <templates>
 <template id="17686267">
@@ -11683,7 +11683,7 @@ For reasons as various as its philosophy of comprehensive aesthetic design to it
 <w namespace="File" title="Apple I.jpg">The Apple I, Apple&apos;s first product. Sold as an assembled circuit board, it lacked basic features such as a keyboard, monitor, and case. The owner of this unit added a keyboard and a wooden case.</w>
 Apple was established on April 1, 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne,  Linzmayer, Ronald W. (1999).  Apple Confidential: The Real Story of Apple Computer, Inc. . No Starch Press .  .        to sell the Apple I personal computer kit. They were hand-built by Wozniak  &quot;IOL Technology – Co-founder tells his side of Apple story&quot; .  .         &quot;NPR : A Chat with Computing Pioneer Steve Wozniak&quot; .  .        and first shown to the public at the Homebrew Computer Club. Wozniak, Stephen. Homebrew and How the Apple Came to Be, Digital Deli. Retrieved on March 2, 2007.  The Apple I was sold as a motherboard (with CPU, RAM, and basic textual-video chips)—less than what is today considered a complete personal computer. Kahney, Leander. Rebuilding an Apple From the Past, Wired, November 19, 2002.  The Apple I went on sale in July 1976 and was market-priced at $666.66 ($NaN in   dollars, adjusted for inflation.)  Consumer Price Index (estimate) 1800–2008. Federal Reserve Bank of Minneapolis. Retrieved March 8, 2010.    &quot;BBC News: History of Technology&quot; .   . Retrieved 2008 .         &quot;Computer History Museum (ComputerHistory.org)&quot; .   . Retrieved 2008 .        Game Makers (TV Show): Apple II. Originally aired January 6, 2005.   &quot;Picture of original ad featuring US666.66 price&quot; .  .        Wozniak, Steven: &quot;iWoz&quot;, page 180. W. W. Norton, 2006. ISBN 978-0-393-06143-7
 
-Apple was incorporated January 3, 1977 #corpinfo1 Apple Investor Relations FAQ, Apple inc. Retrieved on March 2, 2007.  without Wayne, who sold his share of the company back to Jobs and Wozniak for $800. Multi-millionaire Mike Markkula provided essential business expertise and funding of $250,000 during the incorporation of Apple.  &quot;Apple Chronology&quot;.  Fortune  (CNN). January 6, 1998 .   . Retrieved September 11, 2008 .        &quot;Apple Inc.    dead link    &quot; MSN Encarta. Retrieved on March 2, 2007. Archived October 31, 2009.
+Apple was incorporated January 3, 1977 Apple Investor Relations FAQ, Apple inc. Retrieved on March 2, 2007.  without Wayne, who sold his share of the company back to Jobs and Wozniak for $800. Multi-millionaire Mike Markkula provided essential business expertise and funding of $250,000 during the incorporation of Apple.  &quot;Apple Chronology&quot;.  Fortune  (CNN). January 6, 1998 .   . Retrieved September 11, 2008 .        &quot;Apple Inc.    dead link    &quot; MSN Encarta. Retrieved on March 2, 2007. Archived October 31, 2009.
 
 The Apple II was introduced on April 16, 1977 at the first West Coast Computer Faire. It differed from its major rivals, the TRS-80 and Commodore PET, because it came with color graphics and an open architecture. While early models used ordinary cassette tapes as storage devices, they were superseded by the introduction of a 5 1/4 inch floppy disk drive and interface, the Disk II.  Steven Weyhrich (April 21, 2002). &quot;Apple II History Chapter 4&quot; .   . Retrieved August 18, 2008 .    
 
@@ -11719,7 +11719,7 @@ Following the success of the Macintosh LC, Apple introduced the Centris line, a 
 
 During this time Apple experimented with a number of other failed consumer targeted products including digital cameras, portable CD audio players, speakers, video consoles, and TV appliances. Enormous resources were also invested in the problem-plagued Newton division based on John Sculley&apos;s unrealistic market forecasts. Ultimately, all of this proved too-little-too-late for Apple as their market share and stock prices continued to slide.
 
-Apple saw the Apple II series as too expensive to produce, while taking away sales from the low end Macintosh.  #11 &quot;Apple II History Chap 11&quot; . #11  . Retrieved 2008 .        In 1990, Apple released the Macintosh LC with a single expansion slot for the Apple IIe Card to migrate Apple II users to the Macintosh platform.  #08 &quot;Apple II History Chap 11&quot; . #08  . Retrieved 2008 .        Apple stopped selling the Apple IIe in 1993.
+Apple saw the Apple II series as too expensive to produce, while taking away sales from the low end Macintosh.  &quot;Apple II History Chap 11&quot; .   . Retrieved 2008 .        In 1990, Apple released the Macintosh LC with a single expansion slot for the Apple IIe Card to migrate Apple II users to the Macintosh platform.  &quot;Apple II History Chap 11&quot; .   . Retrieved 2008 .        Apple stopped selling the Apple IIe in 1993.
 
 Microsoft continued to gain market share with Windows, focusing on delivering software to cheap commodity personal computers while Apple was delivering a richly engineered, but expensive, experience.  &quot;1990–1995: Why the World Went Windows&quot; .   . Retrieved 2008 .        Apple relied on high profit margins and never developed a clear response. Instead they sued Microsoft for using a graphical user interface similar to the Apple Lisa in Apple Computer, Inc. v. Microsoft Corporation. Hormby, Thomas. The Apple vs. Microsoft GUI lawsuit, Low End Mac, August 25, 2006. Retrieved on March 2, 2007.  The lawsuit dragged on for years before it was thrown out of court. At the same time, a series of major product flops and missed deadlines sullied Apple&apos;s reputation, and Sculley was replaced by Michael Spindler.  &quot;Michael Spindler: The Peter Principle at Apple&quot; .   . Retrieved 2008 .    
 
