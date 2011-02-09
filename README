@@ -186,7 +186,7 @@ To run regression tests included in the distribution, run:
 $ make test
 
 
-3.1 Parallel processing
+3.3 Parallel processing
 
 Wikiprep is capable of using multiple CPUs, however in order to do this
 you must provide it with a split XML dump.
@@ -217,6 +217,23 @@ multiple machines and start Wikiprep separately on each machine.
 It's also possible to only run prescan once on a single machine and then 
 distribute .db files it creates to other machines where only transform
 part is started.
+
+
+3.4 Parsing MediaWiki dumps other than English Wikipedia
+
+All language and site-specific settings are located in Perl modules under
+/lib/Wikiprep/Config. The configuration used can be chosen via the -config
+command line parameter (default is Enwiki.pm)
+
+Wikiprep distribution includes configurations for Wikipedia in various
+languages. These were contributed by Wikiprep users and can be outdated or
+incomplete. At the moment the only configuration that is thoroughly tested
+before each release is the English Wikipedia config. Patches are always
+welcome.
+
+To add support for a new language or MediaWiki installation, copy Enwiki.pm
+to a new file (the convention is to use the same name as is used in naming
+Wikimedia dumps) and adjust the values within.
 
 
 
