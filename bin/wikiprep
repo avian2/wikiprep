@@ -39,6 +39,7 @@ use BerkeleyDB;
 use IO::Handle;
 use IO::Select;
 use Hash::Util qw( unlock_hash );
+use POSIX qw(WIFEXITED WEXITSTATUS);
 
 use FindBin;
 use lib "$FindBin::Bin";
@@ -89,6 +90,9 @@ my $inputFileSuffix;
 # Needed for benchmarking and ETA calculation
 my $totalPageCount = 0;
 my $totalByteCount = 0;
+
+# Exit status
+my $finalExitStatus = 0;
 
 sub parseOptions {
 
@@ -228,7 +232,7 @@ sub main {
     &mainForkAndPrescan();
   }
   
-  if( $optTransform ) {
+  if( !$finalExitStatus && $optTransform ) {
     if( $optParallel ) {
       &mainTransformParallel();
     } else {
@@ -239,12 +243,25 @@ sub main {
   my $elapsed = time - $startTime;
 
   LOG->notice( sprintf("Processing took %d:%02d:%02d", $elapsed/3600, ($elapsed / 60) % 60, $elapsed % 60) );
+
+  exit($finalExitStatus);
 }
 
 sub mainForkAndPrescan {
 
   if( my $pid = fork() ) {
     waitpid($pid, 0);
+    my $prescanStatus = $?;
+    if( WIFEXITED($prescanStatus) ) {
+      my $exitStatus = WEXITSTATUS($prescanStatus);
+      if( $exitStatus != 0 ) {
+        LOG->error("Prescan process $pid exited with error status $exitStatus. Stopping.");
+        $finalExitStatus = $exitStatus;
+      }
+    } else {
+      LOG->error("Prescan process $pid crashed");
+      $finalExitStatus = 1;
+    }
   } else {
     &mainPrescan();
     exit(0);
@@ -397,12 +414,24 @@ sub mainTransformParallel {
 
   for my $pid (@workers) {
     waitpid($pid, 0);
+    my $workerStatus = $?;
+    if( WIFEXITED($workerStatus) ) {
+      my $exitStatus = WEXITSTATUS($workerStatus);
+      if( $exitStatus != 0 ) {
+        LOG->error("Transform process $pid exited with error status $exitStatus.");
+        $finalExitStatus = 1;
+      }
+    } else {
+      LOG->error("Transform process $pid crashed");
+      $finalExitStatus = 1;
+    }
   }
 
   print "\n";
 
   if($workersDied) {
     LOG->error("Total $workersDied workers died during transform! Results are incomplete!");
+    $finalExitStatus = 1;
   }
 }
 
