@@ -158,6 +158,8 @@ t/cases/window.disambig.vetted
 t/cases/window.xml
 t/cases/xmlcomments.hgw.xml.vetted
 t/cases/xmlcomments.xml
+t/cases/mac.xml
+t/cases/mac.gum.xml.vetted
 t/css.t
 t/ctemplates.t
 t/images.t

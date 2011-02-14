@@ -8,3 +8,4 @@ images.xml: -format composite
 unicode.xml: -format composite
 stub.xml: -format composite
 apple.xml: -format composite
+mac.xml: -format composite

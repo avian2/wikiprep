@@ -73,7 +73,7 @@ my %magicWords = (
                 },
 );
 
-my %parserFunctions = (
+our %parserFunctions = (
 
 	'#if'	=> sub {
           				my ($page, $templateRecursionLevel, $testValue, $valueIfTrue, $valueIfFalse) = @_;
@@ -214,7 +214,61 @@ my %parserFunctions = (
                 return $string;
               }
             },
+
+  'padleft' => sub {
+              my ($page, $templateRecursionLevel, $string, $length, $padding) = @_;
+              if (defined $length) {
+                  &Wikiprep::Templates::includeTemplates($page, \$length, $templateRecursionLevel + 1)
+                    if $length =~ /\{/;
+              }
+              $length = 0 unless $length;
+
+              if (defined $padding) {
+                  &Wikiprep::Templates::includeTemplates($page, \$padding, $templateRecursionLevel + 1)
+                    if $padding =~ /\{/;
+              }
+              $padding = '0' unless $padding;
+
+              return generatePadding($string, $length, $padding) . $string;
+            },
+
+  'padright' => sub {
+              my ($page, $templateRecursionLevel, $string, $length, $padding) = @_;
+              if (defined $length) {
+                  &Wikiprep::Templates::includeTemplates($page, \$length, $templateRecursionLevel + 1)
+                    if $length =~ /\{/;
+              }
+              $length = 0 unless $length;
+
+              if (defined $padding) {
+                  &Wikiprep::Templates::includeTemplates($page, \$padding, $templateRecursionLevel + 1)
+                    if $padding =~ /\{/;
+              }
+              $padding = '0' unless $padding;
+
+              return $string . generatePadding($string, $length, $padding);
+            },
 );
+
+sub generatePadding {
+  my ($string, $length, $padding) = @_;
+  my $lengthOfPadding = length($padding);
+
+  # The remaining length to add counts down to 0 as padding is added
+  $length = ($length > 500 ? 500 : $length) - length($string);
+  
+  # $finalPadding is just $padding repeated enough times so that
+  # mb_strlen( $string ) + mb_strlen( $finalPadding ) == $length
+  my $finalPadding = '';
+  while ( $length > 0 ) {
+    # If $length < $lengthofPadding, truncate $padding so we get the
+    # exact length desired.
+    $finalPadding .= substr($padding, 0, $length);
+    $length -= $lengthOfPadding;
+  }
+
+  return $finalPadding;
+}
 
 sub includeParserFunction(\$\%\%$\$) {
   my ($refToTemplateTitle, $refToRawParameterList, $page, $templateRecursionLevel) = @_;
