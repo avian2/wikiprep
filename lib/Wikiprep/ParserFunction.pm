@@ -254,6 +254,12 @@ sub generatePadding {
   my ($string, $length, $padding) = @_;
   my $lengthOfPadding = length($padding);
 
+  if ($length =~ /^\s*([0-9]+)/) {
+    $length = $1;
+  } else { 
+    $length = 0;
+  }
+
   # The remaining length to add counts down to 0 as padding is added
   $length = ($length > 500 ? 500 : $length) - length($string);
   
