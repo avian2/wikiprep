@@ -7,6 +7,16 @@
 	  MediaWiki syntax preprocessor and information extractor
 
 
+			      ==============
+
+NOTE: Code in this repository has been unmaintained for several years.  It is
+known to have problems with newer Wikipedia dumps and Perl versions.  I no
+longer have at hand datasets and processing power necessary to run Wikiprep.
+Hence I am not able to help with any problems.  -- Tomaz Solc
+
+			      ==============
+
+
 
 Content
 =======
